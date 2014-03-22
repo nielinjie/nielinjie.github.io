@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>一场似非而是的DSL（后传） - 聂同学</title>
+  <meta name="author" content="nielinjie">
+
+  
+  <meta name="description" content="这是后传，不是正传，主要写设计结果和实现的一些细节，不喜请无视。 DSL的一个片段如最后的代码所示，基本上满足了我们的要求—— 片段完整地描述了一个特征，包括扩展点、扩展等等各方面的信息。实例中，dynamicProperty、show、mail是三个不同的扩展点， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2013/09/02/dsl-post">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">聂同学</a></h1>
+  
+    <h2>一个程序猿和架狗师的博客</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:nielinjie.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">一场似非而是的DSL（后传）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-02T21:36:38+08:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>这是后传，不是正传，主要写设计结果和实现的一些细节，不喜请无视。</p>
+
+<!-- more -->
+
+
+<p>DSL的一个片段如最后的代码所示，基本上满足了我们的要求——</p>
+
+<ul>
+<li>片段完整地描述了一个特征，包括扩展点、扩展等等各方面的信息。实例中，<code>dynamicProperty</code>、<code>show</code>、<code>mail</code>是三个不同的扩展点，大括号里面的内容是当某个业务差异时填入扩展点的具体扩展逻辑。而这个业务差异，由<code>condition</code>描述。</li>
+<li>不存在片段中和片段间来回引用穿梭等影响阅读完整性的问题。</li>
+<li>不同方面的内容描述形式一致。比如动态属性dynamicProperty和邮件策略mail是不同的特征，背后的业务知识是很不同的，但这里体现为统一的描述形式。</li>
+<li>聚焦于业务概念，噪音很少。这个片段看上去，除了表示范围的大小括号外，基本上全部是业务概念。</li>
+</ul>
+
+
+<p>讲一些实现细节——</p>
+
+<ul>
+<li>DSL的实现基于Groovy的<code>ObjectGraphBuilder</code>。</li>
+<li>示例代码中的<code>dsl</code>就是<code>ObjectGraphBuilder</code>的一个实例，<code>requirement</code>构建顶层的bean。</li>
+<li>类似于<code>requirement{}</code>以及内嵌的<code>dynamicProperty{…}</code>都是一些普通的groovy方法调用，通过groovy的动态调用机制赋予这次调用一些逻辑，以<code>dynamictProperty</code>为例：
+
+<ul>
+<li>实例化一个类，根据方法名计算这个类的类名。这个例子里就是类<code>DynamicProperty</code>。</li>
+<li>将这个实例set到上级bean的适当属性上，这个属性也是根据方法的名字计算得到的。这个例子就是属性<code>dynamicProperty</code>。</li>
+</ul>
+</li>
+<li>上述的根据方法名计算类名和属性的办法是<code>ObjectGraphBuilder</code>原生的，比较简陋，需要做一些定制，<code>ObjectGraphBuilder</code>提供了定制的接口，分别是<code>ClassNameResolver</code>和<code>RelationNameResolver</code>。我们对简单的计算办法做了补充：
+
+<ul>
+<li>类名搜寻策略，原生的计算只有硬匹配，就是只能设置一个包名，每个方法名直接加在包名后面就得出类名。这个策略在我们这里完全行不通，因为我们这里的很多类，不是固定在某个已知的包里面的，比如扩展和扩展点，这些类是具体的，类名来自于具体逻辑所在的包，散布在整个系统。对此我们引入了类名搜索机制，在整个系统的包空间搜索需要的类。另外一方面，我们借助reflection，从上层bean的属性类型，得到需要的类。</li>
+<li>属性搜寻策略，在原生的名字匹配的基础上，我们结合类型匹配，也就是根据类名对应策略得到的类名反过来匹配上层bean的属性类型，找到这个属性。比如<code>dynamicProperty</code>这个方法，上层的bean是没有一个叫“dynamicProperty”的属性的，但有个<code>Feature</code>类型的属性。<code>dynamicProperty</code>方法实例化<code>DynamicProperty</code>类，它是<code>Feature</code>的子类，可以匹配。</li>
+<li>上述两个搜索策略都考虑了集合属性的情况，名字经过简单地单复数转化，读取类型时通过泛型的集合的参数类型读取。</li>
+<li>有一种特殊情况，搜寻类名和搜寻属性的策略会相互影响，我们希望有一种特殊的策略能把两个搜索过程独立开。我们约定一种特殊的方法名字形式：<code>propertya$classb</code>，这样我们根据<code>propertya</code>计算属性，<code>classb</code>计算类名。更特殊的情况比如代码中的<code>$selectorRenderer</code>，只计算类名不计算属性，表示这里只实例化bean，不做上层bean的属性设置。这中特殊策略为DSL的编写带来了方便，但其实不是一种业务策略，在DSL的角度看来其实是一种噪音，我们尽量避免使用。</li>
+</ul>
+</li>
+<li>相关的代码不多，已经放到github，供参考。<a href="https://github.com/nielinjie/dslOGB">https://github.com/nielinjie/dslOGB</a>。其中用于扫描classpath的依赖包<code>com.google.classpath</code>来自于介里：<a href="https://code.google.com/p/classpath-explorer/">https://code.google.com/p/classpath-explorer/</a>。</li>
+</ul>
+
+
+<p>代码：</p>
+
+<pre><code>dsl.requirement{
+    name('isStock')
+    description('是否关联交易')
+    condition(exp:'(owner.sortId==1 || owner.sortId==11 ) &amp;&amp; owner.taskComp.contains("PA002")')
+    dynamicProperty{
+        name('isStockTrade')
+        cName('关联交易')
+        type(java.lang.String.class)
+        stringValidator()
+        stringEditor()
+        maxLength(10)
+        minLength(1)
+        isRequired(true)
+        defaultValue(true)
+        renderMap(key:'writable',value:$selectorRenderer())
+        renderMap(key:'readOnly')
+        activeEvent{
+            change('var ....')
+        }
+    }
+
+    show{
+        flag(function:'submitTask',flag:'writable')
+        flag(function:'approval',flag:'readOnly')
+    }
+
+    mail{
+        handleMap(key:'New_Submit',value:'mailHandle')
+        handleMap(key:'Edit_Submit',value:'mailHandle')
+    }
+}
+</code></pre>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-02T21:36:38+08:00" pubdate data-updated="true">Sep 2<span>nd</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dsl/'>DSL</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nielinjie.github.io/blog/2013/09/02/dsl-post/" data-via="" data-counturl="http://nielinjie.github.io/blog/2013/09/02/dsl-post/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/09/01/dsl3/" title="Previous Post: 一场似非而是的DSL（三）">&laquo; 一场似非而是的DSL（三）</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/03/22/new-blog-site/" title="Next Post: 博客搬家了">博客搬家了 &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/22/new-blog-site/">博客搬家了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/02/dsl-post/">一场似非而是的DSL（后传）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl3/">一场似非而是的DSL（三）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl2/">一场似非而是的DSL（二）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL（一）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - nielinjie -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -9,8 +9,7 @@
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。 感谢octopress, 感谢芝明同学，感谢github。听说github正在遭受dos攻击，祝好运。 期间只遇到一个编码问题，如下。感谢这位同学的博客，问题很快解决了。
-http://fedcuit. &hellip;">
+  <meta name="description" content="看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。 感谢octopress, 感谢芝明同学（http://zhaozhiming.github.io ），感谢github。听说github正在遭受ddos攻击，祝好运。 期间只遇到一个编码问题，如下。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -94,7 +93,10 @@ http://fedcuit. &hellip;">
 
 <div class="entry-content"><p>看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。</p>
 
-<p>感谢octopress, 感谢芝明同学，感谢github。听说github正在遭受dos攻击，祝好运。</p>
+<!-- more -->
+
+
+<p>感谢octopress, 感谢芝明同学（<a href="http://zhaozhiming.github.io">http://zhaozhiming.github.io</a> ），感谢github。听说github正在遭受ddos攻击，祝好运。</p>
 
 <p>期间只遇到一个编码问题，如下。感谢这位同学的博客，问题很快解决了。
 <a href="http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/">http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/</a>
@@ -122,28 +124,28 @@ http://fedcuit. &hellip;">
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>  ➜  octopress git:(source) ✗ rake generate
-</span><span class='line'>  ## Generating Site with Jekyll
-</span><span class='line'>  identical source/stylesheets/screen.css
-</span><span class='line'>  Configuration from /Users/nielinjie/Projects/octopress/_config.yml
-</span><span class='line'>  Building site: source -&gt; public
-</span><span class='line'>  YAML Exception reading 2014-03-22-new-blog-site.markdown: invalid byte sequence in US-ASCII
-</span><span class='line'>  /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) ✗ rake generate
+</span><span class='line'>## Generating Site with Jekyll
+</span><span class='line'>identical source/stylesheets/screen.css
+</span><span class='line'>Configuration from /Users/nielinjie/Projects/octopress/_config.yml
+</span><span class='line'>Building site: source -&gt; public
+</span><span class='line'>YAML Exception reading 2014-03-22-new-blog-site.markdown: invalid byte sequence in US-ASCII
+</span><span class='line'>/Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -190,6 +192,8 @@ http://fedcuit. &hellip;">
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2013/09/02/dsl-post/" title="Previous Post: 一场似非而是的DSL（后传）">&laquo; 一场似非而是的DSL（后传）</a>
+      
       
     </p>
   </footer>
@@ -205,6 +209,22 @@ http://fedcuit. &hellip;">
     
       <li class="post">
         <a href="/blog/2014/03/22/new-blog-site/">博客搬家了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/02/dsl-post/">一场似非而是的DSL（后传）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl3/">一场似非而是的DSL（三）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl2/">一场似非而是的DSL（二）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL（一）</a>
       </li>
     
   </ul>

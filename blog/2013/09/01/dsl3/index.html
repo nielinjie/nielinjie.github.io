@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>一场似非而是的DSL（三） - 聂同学</title>
+  <meta name="author" content="nielinjie">
+
+  
+  <meta name="description" content="上回说到，可读和全局，是我们的DSL形式要解决的主要问题。 全局，要求DSL结构要精练，同时最好是层级结构，避免指针引用。
+可读，要求DSL能以一种形式表达各个不同的业务方面，所以这个形式必须相当通用。 此时那个最纠结的问题出现了：“相当通用”的DSL是不是D S L？毕竟，“通用”在一端， &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2013/09/01/dsl3">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">聂同学</a></h1>
+  
+    <h2>一个程序猿和架狗师的博客</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:nielinjie.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">一场似非而是的DSL（三）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-01T21:36:38+08:00" pubdate data-updated="true">Sep 1<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>上回说到，可读和全局，是我们的DSL形式要解决的主要问题。</p>
+
+<!-- more -->
+
+
+<ul>
+<li>全局，要求DSL结构要精练，同时最好是层级结构，避免指针引用。</li>
+<li>可读，要求DSL能以一种形式表达各个不同的业务方面，所以这个形式必须相当通用。</li>
+</ul>
+
+
+<p>此时那个最纠结的问题出现了：“相当通用”的DSL是不是D <strong><em>S</em></strong> L？毕竟，“通用”在一端，S在另一端。</p>
+
+<p>幸运的是：我们决定先找到这个DSL再讨论它是不是真正的DSL。</p>
+
+<p>既然需要相当通用，我们决定从通用的配置形式出发，我们的办法是——</p>
+
+<ol>
+<li>清理要描述的对象，明确其结构和关系，形成确定的业务模型。在这里就是“特征机制“涉及到的知识层的各个概念，比如特征、扩展点、扩展等。这个工作其实在“特征机制”设计期就已经完成了。</li>
+<li>保证知识层业务模型的可读性，在我们Java系统中，就表现为相关的类（特征、扩展点、扩展等，包括抽象的类和具体的类），它们的类名和属性名、关系名都准确精练、可读。</li>
+<li><p>然后我们使用一种通用的配置形式将这些类实例化（一些javabean），并关联在一起。这时候发现，我们的DSL，基本上等同于描述Bean图的DSL。</p>
+
+<p> 这种配置方式是很常见的，有很多实现方法：</p>
+
+<ul>
+<li>Spring Bean XML：这个形式简单直白，通用性非常强，但过于冗长了些，很难满足全局性要求。噪音很多，很难说可读。</li>
+<li>定制namespace的Spring Bean XML和其他简单的XML：粗略一看是个好主意，比上面的办法在体积和噪音两个方面都改善挺多。但仔细看看不对，要保证通用性，这种方法只能退化为前一种。</li>
+<li>Json：形式上比较简洁，噪音比较少，基本已经满足要求。只是需要在配置中补充一些类型信息，而且处理这些信息需要自己实现，比较繁琐。</li>
+<li>YAML：跟Json相似，类型信息方面实现上简洁些。</li>
+<li>Groovy ObjectGraphBuilder：当我们已经开始深入研究YAML的实现细节的时候，回忆到世界上还有这个，各方面都符合要求。</li>
+</ul>
+</li>
+</ol>
+
+
+<p>至此，我们基本上找到了符合要求的DSL形式，期间也花了很多时间来思考那个纠结的问题：“相当通用”的DSL是不是DSL？现在，我们的回答是：这个DSL就是我们想要的DSL。我们认为——</p>
+
+<ul>
+<li>作为一门语言，其通用或者专用，主要是从使用者的视角来衡量，而不是从设计者、实现者的视角。虽然我们用通用的形式设计、用通用的方法实现这个dsl，但使用者撰写、维护时能接触到的，都是专有业务领域的概念，很少有领域之外的噪音。</li>
+<li>任何定义，都是为作用服务的。我们选择DSL，是由于它的作用，而不是它的定义。如果一个东西被用作DSL，则它就是DSL。</li>
+</ul>
+
+
+<p>一场似非而是的DSL的故事就是这样，如果有同学对我们这个DSL具体是怎样的有兴趣，可以要求我写故事后传……</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-01T21:36:38+08:00" pubdate data-updated="true">Sep 1<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/dsl/'>DSL</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nielinjie.github.io/blog/2013/09/01/dsl3/" data-via="" data-counturl="http://nielinjie.github.io/blog/2013/09/01/dsl3/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/09/01/dsl2/" title="Previous Post: 一场似非而是的DSL（二）">&laquo; 一场似非而是的DSL（二）</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/09/02/dsl-post/" title="Next Post: 一场似非而是的DSL（后传）">一场似非而是的DSL（后传） &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/22/new-blog-site/">博客搬家了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/02/dsl-post/">一场似非而是的DSL（后传）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl3/">一场似非而是的DSL（三）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl2/">一场似非而是的DSL（二）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL（一）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - nielinjie -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

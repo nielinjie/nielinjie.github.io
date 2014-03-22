@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-03-22T21:09:07+08:00</updated>
+  <updated>2014-03-22T22:41:32+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -20,7 +20,10 @@
     <id>http://nielinjie.github.io/blog/2014/03/22/new-blog-site</id>
     <content type="html"><![CDATA[<p>看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。</p>
 
-<p>感谢octopress, 感谢芝明同学，感谢github。听说github正在遭受dos攻击，祝好运。</p>
+<!-- more -->
+
+
+<p>感谢octopress, 感谢芝明同学（<a href="http://zhaozhiming.github.io">http://zhaozhiming.github.io</a> ），感谢github。听说github正在遭受ddos攻击，祝好运。</p>
 
 <p>期间只遇到一个编码问题，如下。感谢这位同学的博客，问题很快解决了。
 <a href="http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/">http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/</a>
@@ -48,28 +51,773 @@
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>  ➜  octopress git:(source) ✗ rake generate
-</span><span class='line'>  ## Generating Site with Jekyll
-</span><span class='line'>  identical source/stylesheets/screen.css
-</span><span class='line'>  Configuration from /Users/nielinjie/Projects/octopress/_config.yml
-</span><span class='line'>  Building site: source -&gt; public
-</span><span class='line'>  YAML Exception reading 2014-03-22-new-blog-site.markdown: invalid byte sequence in US-ASCII
-</span><span class='line'>  /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
-</span><span class='line'>      from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
-</span><span class='line'>      from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) ✗ rake generate
+</span><span class='line'>## Generating Site with Jekyll
+</span><span class='line'>identical source/stylesheets/screen.css
+</span><span class='line'>Configuration from /Users/nielinjie/Projects/octopress/_config.yml
+</span><span class='line'>Building site: source -&gt; public
+</span><span class='line'>YAML Exception reading 2014-03-22-new-blog-site.markdown: invalid byte sequence in US-ASCII
+</span><span class='line'>/Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
+</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
+</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一场似非而是的DSL（后传）]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/09/02/dsl-post/"/>
+    <updated>2013-09-02T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/09/02/dsl-post</id>
+    <content type="html"><![CDATA[<p>这是后传，不是正传，主要写设计结果和实现的一些细节，不喜请无视。</p>
+
+<!-- more -->
+
+
+<p>DSL的一个片段如最后的代码所示，基本上满足了我们的要求——</p>
+
+<ul>
+<li>片段完整地描述了一个特征，包括扩展点、扩展等等各方面的信息。实例中，<code>dynamicProperty</code>、<code>show</code>、<code>mail</code>是三个不同的扩展点，大括号里面的内容是当某个业务差异时填入扩展点的具体扩展逻辑。而这个业务差异，由<code>condition</code>描述。</li>
+<li>不存在片段中和片段间来回引用穿梭等影响阅读完整性的问题。</li>
+<li>不同方面的内容描述形式一致。比如动态属性dynamicProperty和邮件策略mail是不同的特征，背后的业务知识是很不同的，但这里体现为统一的描述形式。</li>
+<li>聚焦于业务概念，噪音很少。这个片段看上去，除了表示范围的大小括号外，基本上全部是业务概念。</li>
+</ul>
+
+
+<p>讲一些实现细节——</p>
+
+<ul>
+<li>DSL的实现基于Groovy的<code>ObjectGraphBuilder</code>。</li>
+<li>示例代码中的<code>dsl</code>就是<code>ObjectGraphBuilder</code>的一个实例，<code>requirement</code>构建顶层的bean。</li>
+<li>类似于<code>requirement{}</code>以及内嵌的<code>dynamicProperty{…}</code>都是一些普通的groovy方法调用，通过groovy的动态调用机制赋予这次调用一些逻辑，以<code>dynamictProperty</code>为例：
+
+<ul>
+<li>实例化一个类，根据方法名计算这个类的类名。这个例子里就是类<code>DynamicProperty</code>。</li>
+<li>将这个实例set到上级bean的适当属性上，这个属性也是根据方法的名字计算得到的。这个例子就是属性<code>dynamicProperty</code>。</li>
+</ul>
+</li>
+<li>上述的根据方法名计算类名和属性的办法是<code>ObjectGraphBuilder</code>原生的，比较简陋，需要做一些定制，<code>ObjectGraphBuilder</code>提供了定制的接口，分别是<code>ClassNameResolver</code>和<code>RelationNameResolver</code>。我们对简单的计算办法做了补充：
+
+<ul>
+<li>类名搜寻策略，原生的计算只有硬匹配，就是只能设置一个包名，每个方法名直接加在包名后面就得出类名。这个策略在我们这里完全行不通，因为我们这里的很多类，不是固定在某个已知的包里面的，比如扩展和扩展点，这些类是具体的，类名来自于具体逻辑所在的包，散布在整个系统。对此我们引入了类名搜索机制，在整个系统的包空间搜索需要的类。另外一方面，我们借助reflection，从上层bean的属性类型，得到需要的类。</li>
+<li>属性搜寻策略，在原生的名字匹配的基础上，我们结合类型匹配，也就是根据类名对应策略得到的类名反过来匹配上层bean的属性类型，找到这个属性。比如<code>dynamicProperty</code>这个方法，上层的bean是没有一个叫“dynamicProperty”的属性的，但有个<code>Feature</code>类型的属性。<code>dynamicProperty</code>方法实例化<code>DynamicProperty</code>类，它是<code>Feature</code>的子类，可以匹配。</li>
+<li>上述两个搜索策略都考虑了集合属性的情况，名字经过简单地单复数转化，读取类型时通过泛型的集合的参数类型读取。</li>
+<li>有一种特殊情况，搜寻类名和搜寻属性的策略会相互影响，我们希望有一种特殊的策略能把两个搜索过程独立开。我们约定一种特殊的方法名字形式：<code>propertya$classb</code>，这样我们根据<code>propertya</code>计算属性，<code>classb</code>计算类名。更特殊的情况比如代码中的<code>$selectorRenderer</code>，只计算类名不计算属性，表示这里只实例化bean，不做上层bean的属性设置。这中特殊策略为DSL的编写带来了方便，但其实不是一种业务策略，在DSL的角度看来其实是一种噪音，我们尽量避免使用。</li>
+</ul>
+</li>
+<li>相关的代码不多，已经放到github，供参考。<a href="https://github.com/nielinjie/dslOGB">https://github.com/nielinjie/dslOGB</a>。其中用于扫描classpath的依赖包<code>com.google.classpath</code>来自于介里：<a href="https://code.google.com/p/classpath-explorer/">https://code.google.com/p/classpath-explorer/</a>。</li>
+</ul>
+
+
+<p>代码：</p>
+
+<pre><code>dsl.requirement{
+    name('isStock')
+    description('是否关联交易')
+    condition(exp:'(owner.sortId==1 || owner.sortId==11 ) &amp;&amp; owner.taskComp.contains("PA002")')
+    dynamicProperty{
+        name('isStockTrade')
+        cName('关联交易')
+        type(java.lang.String.class)
+        stringValidator()
+        stringEditor()
+        maxLength(10)
+        minLength(1)
+        isRequired(true)
+        defaultValue(true)
+        renderMap(key:'writable',value:$selectorRenderer())
+        renderMap(key:'readOnly')
+        activeEvent{
+            change('var ....')
+        }
+    }
+
+    show{
+        flag(function:'submitTask',flag:'writable')
+        flag(function:'approval',flag:'readOnly')
+    }
+
+    mail{
+        handleMap(key:'New_Submit',value:'mailHandle')
+        handleMap(key:'Edit_Submit',value:'mailHandle')
+    }
+}
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一场似非而是的DSL（三）]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/09/01/dsl3/"/>
+    <updated>2013-09-01T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/09/01/dsl3</id>
+    <content type="html"><![CDATA[<p>上回说到，可读和全局，是我们的DSL形式要解决的主要问题。</p>
+
+<!-- more -->
+
+
+<ul>
+<li>全局，要求DSL结构要精练，同时最好是层级结构，避免指针引用。</li>
+<li>可读，要求DSL能以一种形式表达各个不同的业务方面，所以这个形式必须相当通用。</li>
+</ul>
+
+
+<p>此时那个最纠结的问题出现了：“相当通用”的DSL是不是D <strong><em>S</em></strong> L？毕竟，“通用”在一端，S在另一端。</p>
+
+<p>幸运的是：我们决定先找到这个DSL再讨论它是不是真正的DSL。</p>
+
+<p>既然需要相当通用，我们决定从通用的配置形式出发，我们的办法是——</p>
+
+<ol>
+<li>清理要描述的对象，明确其结构和关系，形成确定的业务模型。在这里就是“特征机制“涉及到的知识层的各个概念，比如特征、扩展点、扩展等。这个工作其实在“特征机制”设计期就已经完成了。</li>
+<li>保证知识层业务模型的可读性，在我们Java系统中，就表现为相关的类（特征、扩展点、扩展等，包括抽象的类和具体的类），它们的类名和属性名、关系名都准确精练、可读。</li>
+<li><p>然后我们使用一种通用的配置形式将这些类实例化（一些javabean），并关联在一起。这时候发现，我们的DSL，基本上等同于描述Bean图的DSL。</p>
+
+<p> 这种配置方式是很常见的，有很多实现方法：</p>
+
+<ul>
+<li>Spring Bean XML：这个形式简单直白，通用性非常强，但过于冗长了些，很难满足全局性要求。噪音很多，很难说可读。</li>
+<li>定制namespace的Spring Bean XML和其他简单的XML：粗略一看是个好主意，比上面的办法在体积和噪音两个方面都改善挺多。但仔细看看不对，要保证通用性，这种方法只能退化为前一种。</li>
+<li>Json：形式上比较简洁，噪音比较少，基本已经满足要求。只是需要在配置中补充一些类型信息，而且处理这些信息需要自己实现，比较繁琐。</li>
+<li>YAML：跟Json相似，类型信息方面实现上简洁些。</li>
+<li>Groovy ObjectGraphBuilder：当我们已经开始深入研究YAML的实现细节的时候，回忆到世界上还有这个，各方面都符合要求。</li>
+</ul>
+</li>
+</ol>
+
+
+<p>至此，我们基本上找到了符合要求的DSL形式，期间也花了很多时间来思考那个纠结的问题：“相当通用”的DSL是不是DSL？现在，我们的回答是：这个DSL就是我们想要的DSL。我们认为——</p>
+
+<ul>
+<li>作为一门语言，其通用或者专用，主要是从使用者的视角来衡量，而不是从设计者、实现者的视角。虽然我们用通用的形式设计、用通用的方法实现这个dsl，但使用者撰写、维护时能接触到的，都是专有业务领域的概念，很少有领域之外的噪音。</li>
+<li>任何定义，都是为作用服务的。我们选择DSL，是由于它的作用，而不是它的定义。如果一个东西被用作DSL，则它就是DSL。</li>
+</ul>
+
+
+<p>一场似非而是的DSL的故事就是这样，如果有同学对我们这个DSL具体是怎样的有兴趣，可以要求我写故事后传……</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一场似非而是的DSL（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/09/01/dsl2/"/>
+    <updated>2013-09-01T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/09/01/dsl2</id>
+    <content type="html"><![CDATA[<p>接演前文，我们这个任务是找到描述“特征”这个业务的语言——就是DSL，其实也就是找个合适的形式来写配置。不错，让我们看看如何找这个合适的形式。</p>
+
+<!-- more -->
+
+
+<p>前文已经说过，对这个DSL的形式，我们有几个要求：</p>
+
+<ul>
+<li>全局的：我们希望一个特征的所有内容，能够一次看到。</li>
+<li>动态的：可以在系统运行中加入、删除或者修改一个特征。</li>
+<li>可读的：我们希望运营人员甚至业务人员可以看懂甚至修改这些特征。</li>
+<li>容错的：系统能帮助修改者发现并改正描述中的错位。</li>
+</ul>
+
+
+<p>我们一一来看这些要求：</p>
+
+<ul>
+<li>动态的：比较容易做到。我们只要不把配置放在静态的配置文件就可以了。放入数据库，或者可读写的文件系统都可以。主要涉及到DSL的管理、使用问题，与DSL本身的结构没有多大关系。</li>
+<li>容错的：稍微难一点。但我们只要对每个DSL段修改后运行一个校验方法，在一个DSL段导入到系统之前，对它进行校验，给出错误信息就可以了。</li>
+<li>全局的：更难一点了。回想一下前文介绍的“特征“的定义，它就是DSL要描述的对象。这个对象比较复杂。
+
+<blockquote><p>描述了当何种<strong>业务差异</strong>的情况下，需要在哪些个<strong>扩展点</strong>填入哪些个<strong>扩展</strong>。</p></blockquote>
+
+<p>  一个特征，包括了业务差异、扩展点、扩展，有好几个方面的信息。要把它们放入到同一个DSL片段（比如一个文件或一条数据库记录）中，除了各个方面的体量都不能太大，还得适当地表达出它们之间的联系。如果片段总体体积很大，超出了人们的阅读能力，或者人们阅读的时候，需要跟着很多引用、指针之类的到处跳来跳去，那显然我们的全局性要求就没有达到。</p></li>
+<li>可读的：很难。正如前一点要求提到的，我们需要正确地表达出扩展点、扩展这些信息。如果仔细想一下就能意识到，扩展点与扩展点、扩展与扩展，可能是非常不同的。比如有个扩展点，是决定一个文档中有哪些字段的，另有一个扩展点，是决定一个文档在某个状态下可以被采取什么动作的。这些东西风马牛不相及，需要描述的内容非常不同，要如何才能给它们一个统一的描述形式呢？</li>
+</ul>
+
+
+<p>全局和可读，是我们这个DSL设计要重点解决的问题。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[一场似非而是的DSL（一）]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/09/01/dsl1/"/>
+    <updated>2013-09-01T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/09/01/dsl1</id>
+    <content type="html"><![CDATA[<p>设计这套DSL的过程中，一直纠结的是：这到底是不是真正的DSL？</p>
+
+<!-- more -->
+
+
+<p>这套DSL，是为公司办公系统的“特征机制”设计的。</p>
+
+<p>所谓“特征”，是对业务差异的一个建模。</p>
+
+<p>我们的办公系统同时为多个不同的业务机构、外部系统、不同的文档类型服务，不同的机构、不同的外部系统、不同的文档类型带来了不同的业务差异逻辑。这些差异化的业务逻辑，带来了系统大部分的复杂性、不稳定性。处理通用逻辑与差异逻辑的关系，成了我们这个系统架构的主要挑战之一。应对的原则很明确，就是将差异逻辑与通用逻辑分开，使其互不影响，分别进化。架构上典型的模式——按通用性分层。</p>
+
+<p>“特征机制”就是我们对这个模式的一个实现，简述一下：</p>
+
+<ul>
+<li>我们把系统逻辑中可能发生扩展的点称为<strong>扩展点</strong>。</li>
+<li>不同的<strong>业务差异</strong>，通过在扩展点上填入适当的<strong>扩展</strong>来实现专用逻辑。</li>
+<li>所谓<strong>特征</strong>，就是一条知识，描述了当在何种<strong>业务差异</strong>的处理中，需要在哪些个扩展点填入哪些个<strong>扩展</strong>。</li>
+<li>所谓<strong>特征机制</strong>，就是当系统运行到一个扩展点的时候，查找到正确的特征，填入正确的扩展并运行的机制。</li>
+</ul>
+
+
+<p>容易发现，特征机制要发挥作用，需要有一个机制来描述所有的特征，这就是特征机制的知识层，对这个描述机制要求是：</p>
+
+<ul>
+<li><p>全局的：我们希望一个特征的所有内容，能够一次看到。如前所述：</p>
+
+<blockquote><p>一条知识，描述了当何种<strong>业务差异</strong>的情况下，需要在哪些个<strong>扩展点</strong>填入哪些个<strong>扩展</strong>。</p></blockquote></li>
+<li>动态的：可以在系统运行中加入、删除或者修改一个<strong>特征</strong>。</li>
+<li>可读的：我们希望运营人员甚至业务人员可以看懂并修改这些<strong>特征</strong>。</li>
+<li>容错的：系统能帮助修改者发现并改正描述中的错误。</li>
+</ul>
+
+
+<p>这些要求并不容易，幸好我们设计这个机制的时候已经将知识层与操作层分离，可以分别进化。先做好操作层，保证机制可以运行，后续再逐渐改善简陋的知识层。目前的知识层，是spring bean配置文件，整个特征机制可以运行，但上述的描述机制要求一条也没有达到。</p>
+
+<p>于是便有了这一场DSL。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[能不能建立去中心化的言论机制？]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/08/20/distribute-saying/"/>
+    <updated>2013-08-20T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/08/20/distribute-saying</id>
+    <content type="html"><![CDATA[<p>在《知乎》问的这个问题，不知道有没有人一起来讨论。</p>
+
+<!-- more -->
+
+
+<h2>有没有办法？</h2>
+
+<ul>
+<li>去中心化后人们如何建立联系？- 通过利用现有的网络资源，建立分散式的存储和通信。比如用户端间直连、在现有言论平台发布某些信息、在paas、iaas上快速建立发布节点、利用传统p2p文件分享机制传递文件形式的信息。</li>
+<li>去中心化后人们如何建立信任？- 类似于GPG的签名机制，熟人间传递公钥识别陌生人。</li>
+<li>去中心化后人们如何建立秩序？- 私密的言论圈，秩序由用户自己负责。</li>
+<li>……</li>
+</ul>
+
+
+<h2>有没有意义？</h2>
+
+<ul>
+<li>现有中心言论平台充斥混乱、谎言、压制。</li>
+<li>人们有权接受和发送自己选择的信息。</li>
+<li>……</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[我们的新前端]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/02/25/our-new-front-end/"/>
+    <updated>2013-02-25T21:27:49+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/02/25/our-new-front-end</id>
+    <content type="html"><![CDATA[<p>公司历史悠久的B/S办公系（称为E系统）统需要添加移动支持。</p>
+
+<!-- more -->
+
+
+<p>根据前期决策，公司范围将以hybrid形式作为现有系统“移动化”的标准模式。公司将有专门团队开发外层壳体，作为一个具体应用，我们提供自己的页面，只要这些网页适合手机显示。</p>
+
+<p>所以我们准备新开一个项目，开发本系统适于手机的页面。</p>
+
+<p>初步架构已经完成：</p>
+
+<h2>整体结构</h2>
+
+<h4>SinglePageApplication</h4>
+
+<p>采用趋向于SinglePageApplication风格是一项比较早确定的决策。即将大部分的展示逻辑都部署到浏览器端。这和公司里面现在大量存在的类似于Spring MVC的结构非常不同。但我们认为这个风格意义很明显：</p>
+
+<ul>
+<li>用户体验提升</li>
+<li>移动互联网环境下性能要求</li>
+<li>展示逻辑集中控制</li>
+</ul>
+
+
+<p>虽然在现今互联网很常见，但在公司的环境中，这种风格还比较新。开发设计人员对这个风格并不熟悉，我们需要特别注意由此带来的风险，在后面“前端结构和技术”一节，将提到的一些决策，都能帮助减轻这个风险。</p>
+
+<h4>REST</h4>
+
+<p>理解REST的含义特别是必要性并不容易。</p>
+
+<p>最近有一个项目，同样是OnePageApplication风格，前期准备实践REST风格，但由于大家并没有理解REST含义，架构执行过程中也没有进行修正，最终成为了JSON-RCP风格接口。</p>
+
+<p>在本公司架构师之间，对REST的理解也不尽相同。很多架构师更多的思考如何使用，对于“为何要使用”这个关键问题反而思考得比较少。</p>
+
+<p>在新的项目中，我们在尽量使用REST风格接口的同时，并不强求其纯粹的风格，相反，我们将通过这次实践着重思考REST的意义，特别是对我们这个企业，在这个既有环境中的意义。</p>
+
+<h4>业务逻辑</h4>
+
+<p>E系统的既有结构是Web和App各部署到一组节点，相互分离的结构，理论上讲，业务逻辑全部部署于App层，我们只要重新开发我们的Web层，即可完全利用既有的业务逻辑。但实际情况是，很多业务逻辑被放到了web层。这不是既有架构的初衷。出现这种情况的原因应该是：</p>
+
+<ul>
+<li>开发（包括设计人员）人员知道有这个架构决策，不知道为何有这个决策。当架构执行力度降低的时候，开发人员按照自己的想法和当时环境的短期要求来组织逻辑。</li>
+<li>系统采用Transaction script风格架构，以功能为主线条组织业务逻辑，同时又以功能为单位管理需求、开发过程，这进一步加剧了开发人员在当前功能的自由随意。</li>
+</ul>
+
+
+<p>我们对E系统的层次规划类似于DDD常用的四层<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，我们希望系统的业务逻辑能全部封装在业务层（应用层或者领域层），通过REST或者其他形式的接口暴露给展示层。在项目范围内，我们将在业务层中重写一些以前在展示层的业务逻辑。同时，另一个项目正在致力于重新布置整个E系统的代码结构，两个项目如何配合，将是我们需要小心处理的问题。</p>
+
+<h2>前端结构与技术</h2>
+
+<h4>模式和框架</h4>
+
+<p>展示逻辑将全部部署于浏览器端，我们需要考虑如何组织这些逻辑。</p>
+
+<p>MVC（或者其变体，我们不做区分）简单有效，开发人员比较熟悉，没有不使用的理由。我们考察了一些相关框架，最后落脚于下面两个：</p>
+
+<ul>
+<li>Backbone &ndash; 简单直白，社区活跃。虽然核心框架中不包含composite view、data binding等功能，但相关插件都有，可以方便的自由组合。</li>
+<li>Ember &ndash; 功能丰富，特别是如果配合ember data，基本可以一站式解决所有问题。缺点是比较新，特别是ember data还不是“Production Ready”，遇到问题不一定能快速解决。</li>
+</ul>
+
+
+<p>我们倾向于Backbone，核心框架再按需配备一些周边挂件。对于不熟悉相关领域的开发人员，这种风格相对容易学习。</p>
+
+<h4>语言基础</h4>
+
+<p>以Js作为语言开发大规模复杂逻辑，开发人员并不熟悉，需要一些支持：</p>
+
+<ul>
+<li>模块化：模块化对于大规模的开发来说是必不可少的，但以前的开发人员却并不熟悉。这次我们选择Requirejs或者Seajs，将强制执行它们带来的模块机制。两者区别不大，就支持一下国货吧。</li>
+<li>OO：Mootools带来类似extends、implement等OO特征，让习惯Java的开发人员非常顺手。但Backbone有自己的一点诸如继承的机制，如何协调两者关系，相关细节需要和开发人员一起研究讨论，建立示例代码。</li>
+<li>单元测试：此类工具种类繁多，没有一一研究比较，只要有一个可用的就可以了。Qunit，必要的时候配合JSTestDriver。</li>
+<li>遗留代码：遗留代码如何融入到上述的模块化机制，是一个还没有解决的问题。可能直接shim，也可能手工对每个文件逐个重新包装。两者优劣，需要继续研究。</li>
+</ul>
+
+
+<h4>响应式？</h4>
+
+<p>使用一套响应式的页面还是大屏、小屏各用一套页面？还是两套吧。</p>
+
+<ul>
+<li>我们已经有了一套适用于pc web的大屏页面，其可用性久经考验。</li>
+<li>我们不一定有足够的技术能力完成一套可用的响应式页面。</li>
+<li>我们可以在新的一套页面中逐步加入响应式特性，一步步替代老的pc web页面。个人认为这是迟早的事，以后的屏幕，存在多种大小，多种分辨率，很难简单分为大屏、小屏两套。</li>
+</ul>
+
+
+<h4>JQuery、HTML5、CSS3？</h4>
+
+<p>这些欢型的局部实现问题，留给前端工程师。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>四层=展示层+业务层+数据层，其中，业务层=应用层+领域层<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WD My Book Live 作为下载机]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/01/23/wd-download-machine/"/>
+    <updated>2013-01-23T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/01/23/wd-download-machine</id>
+    <content type="html"><![CDATA[<p>入了一个家用存储设备： <a href="http://www.360buy.com/product/502047.html">西部数据（WD）My Book Live 3.5英寸家庭网络硬盘3TB(WDBACG0030HCH)</a> 京东号称降价￥400，现在入看来还是比较合算的。</p>
+
+<!-- more -->
+
+
+<p>本来只是作为一个纯粹的硬盘来入手的。入了以后才发现可以用来下载。很好，可以不用开着下载电脑也不错。</p>
+
+<h3>一、BT下载</h3>
+
+<p>首先想到的是BT下载，也是网上提到比较多的。</p>
+
+<p>网上的相关指南非常多（<a href="http://bbs.weiphone.com/read-htm-tid-5033256.html">比如这个</a>），大同小异，一般先装好fpkmgr，再安装Transmission。很容易，依葫芦画瓢没有遇到任何问题。</p>
+
+<p>但问题是效果不佳，在我的网络环境中，即使yyets上的热门影片往往只能数十K的速度，远远称不上理想。对于BT下载并不精通，初步看了下原因，貌似Tracker好多都连不上。不知道是种子本身的原因还是Transmission配置的原因。反正跟以前用电脑挂迅雷比起来差太远，不实用。</p>
+
+<h3>二、aria2和迅雷离线下载</h3>
+
+<p>这种方式是利用aria2下载迅雷离线中已经下载好的内容，相当于“取回本地”操作。</p>
+
+<ul>
+<li>安装aria2，网上有很多例子，一般是使用optware安装<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。需要注意的是，optware自己的repository里面的aria2非常老，貌似是1.4的版本，最大的问题是没有rpc支持，远程控制不方便，比如不能使用后面提到的YAAW。我的办法是先安装这个版本，把依赖都自动装好，然后网上找了个1.15版本的文件<a href="http://pan.baidu.com/share/link?shareid=139721&amp;uk=2033032603">2</a>，直接替换掉1.4的文件。目前为止，运行得不错。</li>
+<li>对迅雷离线页面的简单hack，从页面提取URL供aria2 http下载。有写好的js和插件。<a href="http://blog.binux.me/ThunderLixianExporter/">3</a></li>
+<li>使用YAAW添加下载任务和管理下载过程。<a href="http://blog.binux.me/yaaw/">4</a></li>
+</ul>
+
+
+<p>这种方式效果很好，宽带带宽基本占满，可以支持迅雷离线所支持的一切合适，比如http、ftp、bt、donkey、磁链等等。家人也可以随时把下载要求直接放入迅雷离线，后续统一拿到本地。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>网上教程大多是要自己先安装optware。而我的机器里面已经有了optware，不知道是出厂带来的还是安装fpkmgr时候安装的。只需要把他（ipkg）加入到path中即可。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[这些年写过的代码（一）]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/01/23/code/"/>
+    <updated>2013-01-23T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/01/23/code</id>
+    <content type="html"><![CDATA[<p>2012年的最后两天，终于完成了一个久拖不决的任务：把几年来写过的代码review了一番。</p>
+
+<!-- more -->
+
+
+<p>这里记录的都是业余时间写的代码，它们往往都是以（企图）解决生活中的一个实际问题开始的，然后变成了当时流行的技术的试验场。这种情况下，最后当然往往把最初要解决的那个问题抛之脑后，无法挽回其烂尾命运。</p>
+
+<h2>一、爬虫</h2>
+
+<p>这是web爬虫程序。这个程序要解决的问题起源于从某个在线看书网站批量下载小说章节。后续又有批量下载mm图片的兴趣，使这个程序源远流长。
+在这个问题中，程序逻辑主要集中在几个问题——</p>
+
+<ul>
+<li>爬虫线程管理：网络内容获取是耗时和不确定的io操作，需要管理其状态。同时爬虫往往是从前一个爬虫衍生的，所以所有爬虫线程中，既有并列关系的线程，也有先后关系的线程。</li>
+<li>爬虫群中间状态管理：爬虫群不一定能一次完成所有想要内容的获取，需要把中间状态保存下来，同时由于web内容是持续更新的，爬虫群也需要支持发现和获取更新的操作，这也要求记录中间状态。显然，中间状态必须在多个爬虫线程间共享。</li>
+<li>内容对象：爬虫群从web中获得的内容需要按照业务意义进行组织，形成一个对象团。这个对象团不同于爬虫群中间状态，也往往不直接对应于所爬过的网站结构。</li>
+<li>爬虫行进路线：这个爬虫不是对页面上所有的链接进行跟进，而是根据网站结构，有目的的爬向有意义的内容，是有路线图的。以下载小说为例，第一个页面是排行榜，我们爬向某本书的链接而不是爬向广告，同样，到了具体的内容页面，我们尽量爬向“下一页”而不是“下一章”。</li>
+<li>上述四点，前两个问题是所有爬行任务都一样的，后两个问题是每个爬行任务不同的，是对爬行任务的描述。这两个层面，分别是操作层和知识层，如何处理他们的联系，也是一个重要问题。</li>
+</ul>
+
+
+<p>这个程序我这里有groovy版、clojure版、scala版。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<p>最初是groovy<a href="http://groovy.codehaus.org">0</a>版，是直接从批量下载小说的需求引出的。</p>
+
+<ul>
+<li>groovy是我接触过的第一个jvm上的语言，闭包、动态特性和适度的magic，在某些场合非常合用。</li>
+<li>groovy有称之为“builder”的风格，比如有xmlBuilder、httpBuilder……，类似Object Literal，简洁好用。</li>
+<li>grovvy有现成的查询html中某些节点的工具。</li>
+<li>有个griffon<a href="http://griffon.codehaus.org">1</a>，是仿照grails<a href="http://grails.org">2</a>的思想做的swing下的mvc框架。</li>
+<li>这个版本以java内置的线程池管理线程。</li>
+<li>这个版本没有区分操作层与知识层，没有考虑底层逻辑有可能被其他爬行任务服用的问题，没有从概念上区分中间状态对象、网站结构对象和内容对象。以网站结构对象为中心驱动：从一个结构对象中得到爬行线程对象，也从中抽取内容对象。</li>
+</ul>
+
+
+<p>然后是clojure<a href="http://clojure.org">3</a>版</p>
+
+<ul>
+<li>clojure是我见过的第一个把并发支持宣称为语言特性的一门语言。</li>
+<li>clojure的lisp语法非常引人入胜。</li>
+<li>当时对clojure没有对象（那时候想办法用record模拟，但别扭）这个特征非常迷惑，觉得没有对象咋能写程序呢？当然就更没办法去想什么操作层、知识层等等……</li>
+<li>clojure的agent<a href="http://clojure.org/agents">4</a>，及其watch，非常适合爬行的底层逻辑。很方便的自动管理爬行线程间的并列、先后关系。</li>
+<li>由于对FP<a href="http://en.wikipedia.org/wiki/Functional_programming">5</a>风格的不熟悉，不知道如何以这种风格去抽象逻辑层次，这个版本只实现了有限的底层逻辑。</li>
+</ul>
+
+
+<p>然后是scala<a href="http://www.scala-lang.org">6</a>版本，有好几个scala版本</p>
+
+<ul>
+<li>scala是个好语言。很多观点认为它有点太难学。不过我认为，如果你还没有完全学会，那你就像用java一样使用它，逐步领悟它的不同和强大之处。</li>
+<li>sbt<a href="http://www.scala-sbt.org">7</a>好用。但有时候稍微复杂了点。只有最简单的情况可以声明式配置，稍微负载的情况就需要进行编程。</li>
+<li>从scalaz<a href="http://code.google.com/p/scalaz/">8</a>我真正开始学习FP，有兴趣的同学可以详细读一下scalaz的例子的源代码。生活在 OO<a href="http://en.wikipedia.org/wiki/Object-oriented_programming">9</a>、imperative<a href="http://en.wikipedia.org/wiki/Imperative_programming">10</a> 世界的同学将会感到耳目一新，逐渐感到OO乃至imperative在某些方面相对乏力<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</li>
+<li>第一个版本我纠结于如何实现对象在线程间共享，我采用的策略是不共享，把公共对象封装在actor<a href="http://www.scala-lang.org/node/242">11</a>之下，由actor机制实现线程间通讯，不是所有线程都直接访问公共对象。现在scala已经吸纳了akka<a href="http://akka.io">12</a>的actor实现，比以前更加强大了。</li>
+<li>第一个版本还研究了如何抽象在一个大对象中访问、修改某个深层属性，那时候不知道有Lens<a href="https://blog.stackmob.com/2012/02/an-introduction-to-lenses-in-scalaz/">15</a>这种模式。</li>
+<li>第一个版本开始意识到操作层和知识层的不同，同时由于scala的OO、FP混合特性，我可以自如的进行抽象建模，两个层次完全分开。当面临不同的爬行任务，我只需定义新的内容对象和爬虫行进路线。</li>
+<li>这里虽然没有进一步抽象出DSL<a href="http://en.wikipedia.org/wiki/Domain-specific_language">13</a>，但对DSL和其在scala的实现办法进行了一些研究，Internal DSL<a href="http://martinfowler.com/bliki/DomainSpecificLanguage.html">14</a>方面，scala没有groovy容易；但由于几个方便的工具，External DSL<a href="http://martinfowler.com/bliki/DomainSpecificLanguage.html">14</a>反倒是比较方便 —— 比如Kiama<a href="http://kiama.googlecode.com">16</a>、Parboiled<a href="https://github.com/sirthias/parboiled/wiki/parboiled-for-Scala">17</a></li>
+<li>第二个版本出现在我发现STM<a href="http://nbronson.github.com/scala-stm/">20</a>在scala也有实现的时候，除了大对象共享方式不同，其他跟第一个版本大同小异。</li>
+<li>第三个版本出现在我迷恋上Applicative、Monad、Arrow<a href="http://www.haskell.org/haskellwiki/Typeclassopedia">18</a> 、Iteratee<a href="http://www.haskell.org/haskellwiki/Enumerator_and_iteratee">19</a>等FP模式<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>的时候，我感到OO的编程模式丑陋而无法忍受，我要Lens，大对象要不可变、线程要被隐藏在并发模型之后、爬行任务的生成要实现Iteratee模式，总之我想以FP的“优雅”的方式实现这个程序。结果是，还没写完……。</li>
+<li>我意识到自己在强迫自己使用不一样的、不熟悉的、听上去很牛的编程风格，只领略这些风格的不同和神奇，而没有认真思考这种不同有没有真正带来好处。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></li>
+</ul>
+
+
+<p>最后有个Android版本，原本想实现在android上的爬行，并且开始探索scala在android上运行的可行性。但这个版本由于我迅速成为果粉而无疾而终。</p>
+
+<p>（待续）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>已经相当长时间没有关注groovy、grails、griffon、clojure的相关内容了，观点可能过期。scala相关的略好些。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>将FP跟OO、Imperative对立并不严密。但这里不打算仔细区别这个，我这里的OO、Impaerative指的通常的java、c#、c/c++之类的“主流”语言。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>这里列出的都是Haskell的地址，因为Haskell有页面集中说明这些东西是啥。实际操作中还是用的scalaz实现版本。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>我这样说完全不是指我反对FP风格。实际上我非常喜欢这种风格。我的意思只是，在学习的时候，需要更多的思考。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[语录：关于企业中公用类库和框架的管理]]></title>
+    <link href="http://nielinjie.github.io/blog/2013/01/01/said-20130101/"/>
+    <updated>2013-01-01T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2013/01/01/said-20130101</id>
+    <content type="html"><![CDATA[<p>关于企业中公用类库和框架的管理，在微博上与同行讨论，记录如下<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，也是我对公司的P框架的期待。</p>
+
+<!-- more -->
+
+
+<p>人说孩子要教的人多，管的人少。类库和框架也一样，整个企业都要对他作出贡献，但要有一两个靠谱的人始终负责管理，维护好它的定位、规划好它的方向，平衡好通用和合用、稳定和进化的关系。</p>
+
+<p>我期待中的管理者将采用这样的管理策略——</p>
+
+<ul>
+<li><p>新特性应该由任何使用这个库的用户按自己的需要开发并提交；管理者要做的是决定哪些特性并入master流。任何用户也可以维护适应自己需求的流，但这些流都是从master流分支而出。</p></li>
+<li><p>创新团队<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>维护自己的流（可能不止一个，按特征簇分开）。其中的新特性由使用者按自己的需求试用。验证后，交由管理者决定是否并入master流。</p></li>
+<li><p>master流不一定只有一个，可以按使用模式或特征簇分成多个流。这些流以及它们之间的关系，由管理者定义和维护。</p></li>
+<li><p>管理团队并不干预用户对框架的使用模式，由使用现场的架构要求决定。如果使用现场没有特殊要求，则可优先从master流中选择使用模式。</p></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>有整理，比如去除了一些使讨论通顺的口水话。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>他们推动框架的变化的动机是业界的技术趋势，而不是现场需求。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[语录：REST]]></title>
+    <link href="http://nielinjie.github.io/blog/2012/12/05/said-20121205/"/>
+    <updated>2012-12-05T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2012/12/05/said-20121205</id>
+    <content type="html"><![CDATA[<p>不是REST就别说是REST，可以说是json-rcp，又不丢人。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[语录：架构维护者的职责]]></title>
+    <link href="http://nielinjie.github.io/blog/2012/12/03/said-20121203/"/>
+    <updated>2012-12-03T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2012/12/03/said-20121203</id>
+    <content type="html"><![CDATA[<p>目前最优不等于可以接受。架构维护者的职责就是守住一条底线，难点在于这时候你要对抗的往往不是敌人而是战友。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于REST风格的讨论（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2012/10/29/rest2/"/>
+    <updated>2012-10-29T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2012/10/29/rest2</id>
+    <content type="html"><![CDATA[<p>参与到讨论中的架构师只有两三位。看来公司内对REST有看法的同学并不多。邮件如下。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<!-- more -->
+
+
+<p>其中，XN是这次公司里负责研究和介绍REST的主要人员，通过讨论，我理解这次侧重于研究的是<strong>展示逻辑部署于浏览器端</strong>这种应用模式，以及如何以这种模式替换目前广泛使用的类似SpringMVC的服务器端展示逻辑。其中浏览器到服务器端的HTTP接口，用到了类似REST形式。对于REST本身的内涵和意义，这次并没有作为重点关注。</p>
+
+<h3>答复: 关于REST风格 &ndash; NLJ（我）</h3>
+
+<p>感谢大家参加讨论，对XN和CH的观点回复如下，供大家批评。</p>
+
+<ul>
+<li>缓存
+
+<ul>
+<li><p>我理解缓存是REST最基本的优点之一。</p></li>
+<li><p>“在WEB层框架上处理全局的数据缓存是不合适的”这个观点是同意的，没有异议，但我理解也不应该在框架层禁用缓存，比如XN在先前的邮件中提到的“所有REST请求与.do是一样的，都禁用浏览器缓存的，这个是由一个拦截器来完成的。”</p></li>
+<li><p>“是否使用缓存”跟“XX框架是否有控制缓存实现”是两个层面的事情，我理解不能因为Spring3REST框架不支持控制缓存就禁用缓存。我们都知道缓存是由HTTP 头控制的，就算是最基本的直接写servlet也是可以操作HTTP头的。</p></li>
+<li><p>前面CH提到的缓存安全性跟cookie一样，这个有点问题。</p>
+
+<ul>
+<li><p>缓存不仅仅指浏览器上的缓存，还包括整个HTTP链路上的缓存，比如proxy上的，所以不像cookie只存在于某个人私人的机器上。</p></li>
+<li><p>Cookie一般不会存放实际业务数据，比较多是些id、token之类的，即使泄露，风险也比较小。</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>会话
+
+<ul>
+<li>看来大家意见没有明显的差异。</li>
+</ul>
+</li>
+<li>资源
+
+<ul>
+<li><p>资源的划分，是个业务问题。而DTO，Form，表，Service这些都是实现问题。在划分资源时是不会看到实现上的任何概念的。如果划分的结果，一个资源的范围和Form（或者DTO，表）一样，那也仅仅是巧合而已。</p></li>
+<li><p>我理解划分资源通常是设计REST接口的时候，其依据是业务实体和业务过程对业务实体的使用，而不是某个系统某个功能对它的使用方式。因为一个资源不是为一个系统一个功能服务的，而是为一个业务一个企业服务的，它不知道使用它的会是谁，会是什么方式。</p></li>
+<li><p>“各类终端(IOS/html/android)等的Form应该是统一的”这个不太理解，我理解即使在同一个平台上，不同的操作上下文中，也存在同一个业务对象映射到不同Form的情况。比如一个订单，有可能在一个页面上被扼要展示，在另一个页面上却详细展示，在可打印页面上又是另一种展示方式。Form的概念，完全是一个展示逻辑的概念，不是业务逻辑的概念。</p></li>
+</ul>
+</li>
+<li>HTTP远程调用
+
+<ul>
+<li>既然作出了PF-REST，为什么不是推广REST？是因为REST不是我们的方向，还是感觉现阶段实现不了？</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>答复: 关于REST风格 &ndash; XN</h3>
+
+<ul>
+<li><p>缓存</p>
+
+<p>我所理解的REST，它是与MVC一样，是一个基于HTTP协议的WEB层框架。在WEB层框架上处理全局的数据缓存是不合适的，比较多的是会话级别的(HTTPSession)。</p>
+
+<p>数据缓存本身涉及数据完整性，是要很小心地控制的。</p>
+
+<p>通过HTTP响应头控制浏览器的缓存，Spring3REST好像没有相应实现，还是我没有发现？其它的REST框架有实现？是否有例子？</p></li>
+<li><p>会话</p>
+
+<p>实际情况是，会话级别的缓存不可避免，大部分在应用需要登陆，至少uid需要缓存的。</p></li>
+<li><p>资源</p>
+
+<p>首先，资源抽象依据是什么？DTO？表?
+如果是DTO或表，那要Services干什么?</p>
+
+<p>所以PF-REST提出以Form表单为抽象依据，各类终端(IOS/html/android)等的Form应该是统一的。</p></li>
+<li><p>HTTP远程调用</p>
+
+<p>其实，PF推广的就是基于接口、REST风格的前后端分工开发模式，以区别MVC开发模式，不是推广REST本身，一切还是HTTP协议。</p></li>
+</ul>
+
+
+<h3>答复: 关于REST风格 &ndash; CH</h3>
+
+<p>没有去听这个分享，就我理解对于缓存部分有些看法：</p>
+
+<ul>
+<li><p>服务端缓存</p>
+
+<p>我同意NLJ的说法，没有一概而论不适合缓存的情况,能缓存的数据都是指允许在缓存更新周期内不一致的数据，</p>
+
+<p>数据自身属性决定是否适合缓存，和REST不REST有啥关系呢？</p>
+
+<p>具体做法上，直接利用Spring的基于方法参数的缓存和REST结合最合适，比如URL中有一部分代表方法，有一部分代表参数，在REST的实现方法中调用Service接口时传入这个参数，就可以把缓存做这个Service的接口方法上。</p></li>
+<li><p>客户端缓存</p>
+
+<p>REST接口一般返回JSON或者XML，这个json或者xml实际是可以当作普通图片这样的资源缓存在浏览器缓存中，只要服务端有控制Etag和失效日期，这样的话重复请求时服务端返回304，实际结果是直接来自于IE缓存的。</p>
+
+<p>至于安全性，我觉得这个和cookie在IE中存放是一个级别的，既然cookie都可以，那么这个缓存为啥不可以？</p></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>邮件按时间倒序，已经对人名和涉及到公司的专用名字做了更改。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[关于REST风格的讨论]]></title>
+    <link href="http://nielinjie.github.io/blog/2012/10/25/rest/"/>
+    <updated>2012-10-25T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2012/10/25/rest</id>
+    <content type="html"><![CDATA[<p>近来，公司有关同事对REST风格和在企业应用中的使用（特别是b/s架构的应用中用于浏览器端于服务器端通信）做了研究，并提出了应用模式。但有些想法我个人并不认同，于是向公司架构师邮件列表发出了讨论邮件，现在也把邮件内容<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>贴在这里，希望与大家讨论批评，后续会持续将其他架构师的回复追加进来。</p>
+
+<!-- more -->
+
+
+<p>大家好——</p>
+
+<p>最近XN做了关于PF REST风格接口的分享。逐渐也会有些项目采用这样的架构模式。</p>
+
+<p>最近也对REST做了些学习，有些相关的想法，想跟大家讨论下，请大家批评。</p>
+
+<p>Ps：由于时间冲突没有参加这个分享，如果这些问题大家已经充分讨论过了，请大家原谅，有空的话告知一下讨论结果。</p>
+
+<h3>缓存</h3>
+
+<ul>
+<li><p>PF-REST框架不使用HTTP缓存。跟XN讨论了下，XN认为为了保证客户机和服务器数据一致， 所有HTTP方法，包括get，都不宜使用缓存，所以在框架级别禁止了HTTP缓存。</p>
+
+<p>这里有一点不同意见，我认为缓存是否会破坏数据一致，要由具体的应用场景决定，例如，有些场景，很多数据是不需要修改的，（比如需要展示“行政机构树”），这时候，get这些数据的缓存完全不会破坏不一致性。</p>
+
+<p>我理解，资源是否过期，何时过期，有其业务意义，是否要缓存，如何缓存，由业务和应用场景决定，框架（或者说模式）不应该限定使用或不使用缓存。</p></li>
+<li><p>缓存的安全性。如果使用缓存，则缓存暴露在客户端或者HTTP链路上，如何保证这部分缓存只被特定的用户使用。</p>
+
+<p>比如，有资源…./orders/user/ladygaga, 表示ladygaga能看到的所有order的集合。这部分资源被缓存后如何做到不被别的访问者访问？</p>
+
+<p>这个问题我个人还没有答案，看了些资料，感觉比较靠谱的有一种：每次请求都到服务器进行认证授权。服务器如果认证授权成功，则返回304和缓存马上过期的命令。这样既可以利用链路上的缓存，也可以迫使下次请求先到服务器认证授权。但劣势是每次都必须访问服务器。</p></li>
+</ul>
+
+
+<h3>后端会话状态</h3>
+
+<ul>
+<li><p>REST提倡的是服务器端无会话状态，这点PF-REST框架没有提到。而目前我们开发习惯也往往要在服务端保存会话状态，特别是用户信息往往在认证后就保存在会话中。</p>
+
+<p>我个人理解会话状态之所以不提倡，是防止破坏get方法的幂等和安全性，以至于缓存等优势无法发挥。如果会话数据在会话过程中是不变的，其实不会有这个问题，所以如果会话状态中仅保存用户的不变（在会话时间范围内）的信息，应该不存在问题，比如用户名、权限、组织结构之类。</p></li>
+</ul>
+
+
+<h3>资源</h3>
+
+<ul>
+<li><p>资源是REST风格的核心和特点，资源的业务意义和粒度对REST风格好处的发挥非常重要。如果粒度不合适，有些REST风格的好处就无法实现。</p>
+
+<p>比如，如果把资源的粒度放在操作级别，则可能将资源与资源的操作方式，也就是客户端绑在一起了。例如资源order，在手机上，显示少量信息，在大屏幕web上，显示全面信息。如果在操作级别来划定资源的话，这就是两种资源（叫orderMobile和orderWeb?），显然这样就把后台与客户端做了绑定。试想，如果来了一种新客户端，显示不多不少的信息，那是否要增加一种资源类型？</p>
+
+<p>PF-REST以Form<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> 来划分资源，我理解就是从操作级别来划分资源。把资源与操作过程进行了耦合。</p></li>
+</ul>
+
+
+<h3>REST vs. 普通HTTP远程调用</h3>
+
+<ul>
+<li><p>REST风格是HTTP远程调用模式的一种，但不是普通的HTTP远程调用。</p>
+
+<p>目前的PF-REST框架重点提到的静态html页面加HTTP的接口，我理解普通HTTP远程调用模式也可以做到，并没有突出说明REST的特点。</p>
+
+<p>REST的特点到底能带来什么好处，特别是在既有的企业架构下能带来什么好处，希望跟大家一起多多讨论。</p></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>已经对人名和涉及到公司的专用名字做了更改。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>Form是沿用自Spring MVC的Form概念。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[语录：现有的业务模型来模拟新的业务]]></title>
+    <link href="http://nielinjie.github.io/blog/2012/07/10/said-20120710/"/>
+    <updated>2012-07-10T21:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2012/07/10/said-20120710</id>
+    <content type="html"><![CDATA[<p>工作中的语录：现有的业务模型来模拟新的业务。</p>
+
+<!-- more -->
+
+
+<p>当系统已有业务模型不能适应新的需求的时候，我们有一种做法，就是用现有的业务模型来模拟新的业务，或者说变通迂回达成新的需求。
+这样做对系统修改小（或者无），达成周期也比较短，往往被优先选择。
+这样做本身不能说有问题，但我们要注意分析，防止滥用。我理解这样带来一些隐性风险，供参考：</p>
+
+<ul>
+<li>系统使用变难，因为有些功能是变通实现的，不够直接，需要专家才能使用。</li>
+<li>领域需求越来越复杂，虽然可能功能点比较少，但功能的细节和分支比较多。</li>
+<li>这种做法带来的系统修改虽然小，但往往不直接，比较隐晦，容易遗忘和误读。</li>
+</ul>
 
 ]]></content>
   </entry>
