@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[聂同学]]></title>
-  <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 杂拌 | 聂同学]]></title>
+  <link href="http://nielinjie.github.io/blog/categories/za-ban/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
   <updated>2014-03-22T20:52:47+08:00</updated>
   <id>http://nielinjie.github.io/</id>
