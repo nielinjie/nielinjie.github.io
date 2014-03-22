@@ -1,0 +1,88 @@
+---
+layout: post
+title: "这些年写过的代码（一）"
+date: 2013-01-23 21:36:38 +0800
+comments: true
+categories: [折腾, 开发]
+---
+
+
+2012年的最后两天，终于完成了一个久拖不决的任务：把几年来写过的代码review了一番。
+
+<!-- more -->
+
+这里记录的都是业余时间写的代码，它们往往都是以（企图）解决生活中的一个实际问题开始的，然后变成了当时流行的技术的试验场。这种情况下，最后当然往往把最初要解决的那个问题抛之脑后，无法挽回其烂尾命运。
+
+## 一、爬虫
+这是web爬虫程序。这个程序要解决的问题起源于从某个在线看书网站批量下载小说章节。后续又有批量下载mm图片的兴趣，使这个程序源远流长。
+在这个问题中，程序逻辑主要集中在几个问题——
+
+
+* 爬虫线程管理：网络内容获取是耗时和不确定的io操作，需要管理其状态。同时爬虫往往是从前一个爬虫衍生的，所以所有爬虫线程中，既有并列关系的线程，也有先后关系的线程。
+* 爬虫群中间状态管理：爬虫群不一定能一次完成所有想要内容的获取，需要把中间状态保存下来，同时由于web内容是持续更新的，爬虫群也需要支持发现和获取更新的操作，这也要求记录中间状态。显然，中间状态必须在多个爬虫线程间共享。
+* 内容对象：爬虫群从web中获得的内容需要按照业务意义进行组织，形成一个对象团。这个对象团不同于爬虫群中间状态，也往往不直接对应于所爬过的网站结构。
+* 爬虫行进路线：这个爬虫不是对页面上所有的链接进行跟进，而是根据网站结构，有目的的爬向有意义的内容，是有路线图的。以下载小说为例，第一个页面是排行榜，我们爬向某本书的链接而不是爬向广告，同样，到了具体的内容页面，我们尽量爬向“下一页”而不是“下一章”。
+* 上述四点，前两个问题是所有爬行任务都一样的，后两个问题是每个爬行任务不同的，是对爬行任务的描述。这两个层面，分别是操作层和知识层，如何处理他们的联系，也是一个重要问题。
+
+这个程序我这里有groovy版、clojure版、scala版。[^1]
+
+最初是groovy[0]版，是直接从批量下载小说的需求引出的。
+
+* groovy是我接触过的第一个jvm上的语言，闭包、动态特性和适度的magic，在某些场合非常合用。
+* groovy有称之为“builder”的风格，比如有xmlBuilder、httpBuilder……，类似Object Literal，简洁好用。
+* grovvy有现成的查询html中某些节点的工具。
+* 有个griffon[1]，是仿照grails[2]的思想做的swing下的mvc框架。
+* 这个版本以java内置的线程池管理线程。
+* 这个版本没有区分操作层与知识层，没有考虑底层逻辑有可能被其他爬行任务服用的问题，没有从概念上区分中间状态对象、网站结构对象和内容对象。以网站结构对象为中心驱动：从一个结构对象中得到爬行线程对象，也从中抽取内容对象。
+
+然后是clojure[3]版
+
+* clojure是我见过的第一个把并发支持宣称为语言特性的一门语言。
+* clojure的lisp语法非常引人入胜。
+* 当时对clojure没有对象（那时候想办法用record模拟，但别扭）这个特征非常迷惑，觉得没有对象咋能写程序呢？当然就更没办法去想什么操作层、知识层等等……
+* clojure的agent[4]，及其watch，非常适合爬行的底层逻辑。很方便的自动管理爬行线程间的并列、先后关系。
+* 由于对FP[5]风格的不熟悉，不知道如何以这种风格去抽象逻辑层次，这个版本只实现了有限的底层逻辑。
+
+然后是scala[6]版本，有好几个scala版本
+
+* scala是个好语言。很多观点认为它有点太难学。不过我认为，如果你还没有完全学会，那你就像用java一样使用它，逐步领悟它的不同和强大之处。
+* sbt[7]好用。但有时候稍微复杂了点。只有最简单的情况可以声明式配置，稍微负载的情况就需要进行编程。
+* 从scalaz[8]我真正开始学习FP，有兴趣的同学可以详细读一下scalaz的例子的源代码。生活在 OO[9]、imperative[10] 世界的同学将会感到耳目一新，逐渐感到OO乃至imperative在某些方面相对乏力[^4]。
+* 第一个版本我纠结于如何实现对象在线程间共享，我采用的策略是不共享，把公共对象封装在actor[11]之下，由actor机制实现线程间通讯，不是所有线程都直接访问公共对象。现在scala已经吸纳了akka[12]的actor实现，比以前更加强大了。
+* 第一个版本还研究了如何抽象在一个大对象中访问、修改某个深层属性，那时候不知道有Lens[15]这种模式。
+* 第一个版本开始意识到操作层和知识层的不同，同时由于scala的OO、FP混合特性，我可以自如的进行抽象建模，两个层次完全分开。当面临不同的爬行任务，我只需定义新的内容对象和爬虫行进路线。
+* 这里虽然没有进一步抽象出DSL[13]，但对DSL和其在scala的实现办法进行了一些研究，Internal DSL[14]方面，scala没有groovy容易；但由于几个方便的工具，External DSL[14]反倒是比较方便 —— 比如Kiama[16]、Parboiled[17]
+* 第二个版本出现在我发现STM[20]在scala也有实现的时候，除了大对象共享方式不同，其他跟第一个版本大同小异。
+* 第三个版本出现在我迷恋上Applicative、Monad、Arrow[18] 、Iteratee[19]等FP模式[^2]的时候，我感到OO的编程模式丑陋而无法忍受，我要Lens，大对象要不可变、线程要被隐藏在并发模型之后、爬行任务的生成要实现Iteratee模式，总之我想以FP的“优雅”的方式实现这个程序。结果是，还没写完……。
+* 我意识到自己在强迫自己使用不一样的、不熟悉的、听上去很牛的编程风格，只领略这些风格的不同和神奇，而没有认真思考这种不同有没有真正带来好处。[^3]
+
+最后有个Android版本，原本想实现在android上的爬行，并且开始探索scala在android上运行的可行性。但这个版本由于我迅速成为果粉而无疾而终。
+
+（待续）
+
+[0]: http://groovy.codehaus.org
+[1]: http://griffon.codehaus.org
+[2]: http://grails.org
+[3]: http://clojure.org
+[4]: http://clojure.org/agents
+[5]: http://en.wikipedia.org/wiki/Functional_programming
+[6]: http://www.scala-lang.org
+[7]: http://www.scala-sbt.org
+[8]: http://code.google.com/p/scalaz/
+[9]: http://en.wikipedia.org/wiki/Object-oriented_programming
+[10]: http://en.wikipedia.org/wiki/Imperative_programming
+[11]: http://www.scala-lang.org/node/242
+[12]: http://akka.io
+[13]: http://en.wikipedia.org/wiki/Domain-specific_language
+[14]: http://martinfowler.com/bliki/DomainSpecificLanguage.html
+[15]: https://blog.stackmob.com/2012/02/an-introduction-to-lenses-in-scalaz/
+[16]: http://kiama.googlecode.com
+[17]: https://github.com/sirthias/parboiled/wiki/parboiled-for-Scala
+[18]: http://www.haskell.org/haskellwiki/Typeclassopedia
+[19]: http://www.haskell.org/haskellwiki/Enumerator_and_iteratee
+[20]: http://nbronson.github.com/scala-stm/
+
+[^1]: 已经相当长时间没有关注groovy、grails、griffon、clojure的相关内容了，观点可能过期。scala相关的略好些。
+[^2]: 这里列出的都是Haskell的地址，因为Haskell有页面集中说明这些东西是啥。实际操作中还是用的scalaz实现版本。
+[^3]: 我这样说完全不是指我反对FP风格。实际上我非常喜欢这种风格。我的意思只是，在学习的时候，需要更多的思考。
+[^4]: 将FP跟OO、Imperative对立并不严密。但这里不打算仔细区别这个，我这里的OO、Impaerative指的通常的java、c#、c/c++之类的“主流”语言。

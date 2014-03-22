@@ -1,0 +1,65 @@
+---
+layout: post
+title: "一场似非而是的DSL（后传）"
+date: 2013-09-02 21:36:38 +0800
+comments: true
+categories: [架构,DSL]
+---
+
+这是后传，不是正传，主要写设计结果和实现的一些细节，不喜请无视。
+<!-- more -->
+
+DSL的一个片段如最后的代码所示，基本上满足了我们的要求——
+
+* 片段完整地描述了一个特征，包括扩展点、扩展等等各方面的信息。实例中，`dynamicProperty`、`show`、`mail`是三个不同的扩展点，大括号里面的内容是当某个业务差异时填入扩展点的具体扩展逻辑。而这个业务差异，由`condition`描述。
+* 不存在片段中和片段间来回引用穿梭等影响阅读完整性的问题。
+* 不同方面的内容描述形式一致。比如动态属性dynamicProperty和邮件策略mail是不同的特征，背后的业务知识是很不同的，但这里体现为统一的描述形式。
+* 聚焦于业务概念，噪音很少。这个片段看上去，除了表示范围的大小括号外，基本上全部是业务概念。
+
+讲一些实现细节——
+
+*	DSL的实现基于Groovy的`ObjectGraphBuilder`。
+* 	示例代码中的`dsl`就是`ObjectGraphBuilder`的一个实例，`requirement`构建顶层的bean。
+*	类似于`requirement{}`以及内嵌的`dynamicProperty{…}`都是一些普通的groovy方法调用，通过groovy的动态调用机制赋予这次调用一些逻辑，以`dynamictProperty`为例：
+	* 实例化一个类，根据方法名计算这个类的类名。这个例子里就是类`DynamicProperty`。
+	* 将这个实例set到上级bean的适当属性上，这个属性也是根据方法的名字计算得到的。这个例子就是属性`dynamicProperty`。
+* 上述的根据方法名计算类名和属性的办法是`ObjectGraphBuilder`原生的，比较简陋，需要做一些定制，`ObjectGraphBuilder`提供了定制的接口，分别是`ClassNameResolver`和`RelationNameResolver`。我们对简单的计算办法做了补充：
+	* 类名搜寻策略，原生的计算只有硬匹配，就是只能设置一个包名，每个方法名直接加在包名后面就得出类名。这个策略在我们这里完全行不通，因为我们这里的很多类，不是固定在某个已知的包里面的，比如扩展和扩展点，这些类是具体的，类名来自于具体逻辑所在的包，散布在整个系统。对此我们引入了类名搜索机制，在整个系统的包空间搜索需要的类。另外一方面，我们借助reflection，从上层bean的属性类型，得到需要的类。
+	* 属性搜寻策略，在原生的名字匹配的基础上，我们结合类型匹配，也就是根据类名对应策略得到的类名反过来匹配上层bean的属性类型，找到这个属性。比如`dynamicProperty`这个方法，上层的bean是没有一个叫“dynamicProperty”的属性的，但有个`Feature`类型的属性。`dynamicProperty`方法实例化`DynamicProperty`类，它是`Feature`的子类，可以匹配。
+	* 上述两个搜索策略都考虑了集合属性的情况，名字经过简单地单复数转化，读取类型时通过泛型的集合的参数类型读取。
+	* 有一种特殊情况，搜寻类名和搜寻属性的策略会相互影响，我们希望有一种特殊的策略能把两个搜索过程独立开。我们约定一种特殊的方法名字形式：`propertya$classb`，这样我们根据`propertya`计算属性，`classb`计算类名。更特殊的情况比如代码中的`$selectorRenderer`，只计算类名不计算属性，表示这里只实例化bean，不做上层bean的属性设置。这中特殊策略为DSL的编写带来了方便，但其实不是一种业务策略，在DSL的角度看来其实是一种噪音，我们尽量避免使用。
+* 相关的代码不多，已经放到github，供参考。[https://github.com/nielinjie/dslOGB](https://github.com/nielinjie/dslOGB)。其中用于扫描classpath的依赖包`com.google.classpath`来自于介里：[https://code.google.com/p/classpath-explorer/](https://code.google.com/p/classpath-explorer/)。
+
+代码：
+
+	dsl.requirement{
+	    name('isStock')
+	    description('是否关联交易')
+	    condition(exp:'(owner.sortId==1 || owner.sortId==11 ) && owner.taskComp.contains("PA002")')
+	    dynamicProperty{
+	        name('isStockTrade')
+	        cName('关联交易')
+	        type(java.lang.String.class)
+	        stringValidator()
+	        stringEditor()
+	        maxLength(10)
+	        minLength(1)
+	        isRequired(true)
+	        defaultValue(true)
+	        renderMap(key:'writable',value:$selectorRenderer())
+	        renderMap(key:'readOnly')
+	        activeEvent{
+	            change('var ....')
+	        }
+	    }
+
+	    show{
+	        flag(function:'submitTask',flag:'writable')
+	        flag(function:'approval',flag:'readOnly')
+	    }
+
+	    mail{
+	        handleMap(key:'New_Submit',value:'mailHandle')
+	        handleMap(key:'Edit_Submit',value:'mailHandle')
+	    }
+	}
