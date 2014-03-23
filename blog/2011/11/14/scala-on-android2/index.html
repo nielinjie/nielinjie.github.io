@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>语录：现有的业务模型来模拟新的业务 - 聂同学</title>
+  <title>Android 上的 Scala， 实战之路（一） - 聂同学</title>
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="工作中的语录：现有的业务模型来模拟新的业务。 当系统已有业务模型不能适应新的需求的时候，我们有一种做法，就是用现有的业务模型来模拟新的业务，或者说变通迂回达成新的需求。
-这样做对系统修改小（或者无），达成周期也比较短，往往被优先选择。
-这样做本身不能说有问题，但我们要注意分析，防止滥用。 &hellip;">
+  <meta name="description" content="一、先开始再说 因为已经习惯用Scala开发，所以在开始尝试Android平台开发的时候，没有使用Java。
+在这个文章系列中，将把尝试的过程和遇到的问题（希望都能带上解决办法）分享给大家，希望对大家有所帮助。 先讲讲开发环境。对于比较熟悉Java编程的同学，开发工具应该说关系不大， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nielinjie.github.io/blog/2012/07/10/said-20120710">
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android2">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -70,7 +69,7 @@
   
   <header>
     
-      <h1 class="entry-title">语录：现有的业务模型来模拟新的业务</h1>
+      <h1 class="entry-title">Android 上的 Scala， 实战之路（一）</h1>
     
     
       <p class="meta">
@@ -86,28 +85,28 @@
   
 
 
-<time datetime="2012-07-10T21:36:38+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+<time datetime="2011-11-14T15:04:04+08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2011</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>工作中的语录：现有的业务模型来模拟新的业务。</p>
+<div class="entry-content"><h3>一、先开始再说</h3>
+
+<p>因为已经习惯用Scala开发，所以在开始尝试Android平台开发的时候，没有使用Java。
+在这个文章系列中，将把尝试的过程和遇到的问题（希望都能带上解决办法）分享给大家，希望对大家有所帮助。</p>
 
 <!-- more -->
 
 
-<p>当系统已有业务模型不能适应新的需求的时候，我们有一种做法，就是用现有的业务模型来模拟新的业务，或者说变通迂回达成新的需求。
-这样做对系统修改小（或者无），达成周期也比较短，往往被优先选择。
-这样做本身不能说有问题，但我们要注意分析，防止滥用。我理解这样带来一些隐性风险，供参考：</p>
+<p>先讲讲开发环境。对于比较熟悉Java编程的同学，开发工具应该说关系不大，如果没有找到既能支持Scala又能支持Android的IDE，我们还有终极方案——命令行。只要能了解清楚Scala编译和Android构建的各个步骤，都能找到对应的命令行工具。
+我自己的情况是已经习惯了sbt, 如果大家也使用sbt，android-plugin（<a href="https://github.com/jberkel/android-plugin">https://github.com/jberkel/android-plugin</a> ）将是个非常有帮助的build工具。</p>
 
-<ul>
-<li>系统使用变难，因为有些功能是变通实现的，不够直接，需要专家才能使用。</li>
-<li>领域需求越来越复杂，虽然可能功能点比较少，但功能的细节和分支比较多。</li>
-<li>这种做法带来的系统修改虽然小，但往往不直接，比较隐晦，容易遗忘和误读。</li>
-</ul>
+<p>构建过程并不复杂，与Java的Android开发没有太多不同。只是把Java的编译，变成Scala编译。
+有一个步骤可能需要说明一下。</p>
 
+<p>proguard，这个步骤比较特别，貌似Java开发不一定需要这一步。其作用是把依赖的.jar文件进行裁剪，只保留下有用的class和方法，使得最终部署的文件足够小。对于Java开发的同学，如果依赖的东西不多，这一步就不一定要做。如果依赖了较多的jar文件，就可以尝试用这个步骤，把jar里面需要的class和方法抠出来。对于Scala开发的同学，一般这一步是必须的，毕竟每个可运行的Scala程序都依赖于Scala runtime包，而这个包自己就相当不小。这一步是事故多发地带，以后会再提到。</p>
 </div>
 
 
@@ -130,12 +129,12 @@
   
 
 
-<time datetime="2012-07-10T21:36:38+08:00" pubdate data-updated="true">Jul 10<span>th</span>, 2012</time>
+<time datetime="2011-11-14T15:04:04+08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2011</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/yu-lu/'>语录</a>
+    <a class='category' href='/blog/categories/android/'>Android</a>, <a class='category' href='/blog/categories/scala/'>Scala</a>
   
 </span>
 
@@ -144,7 +143,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nielinjie.github.io/blog/2012/07/10/said-20120710/" data-via="" data-counturl="http://nielinjie.github.io/blog/2012/07/10/said-20120710/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nielinjie.github.io/blog/2011/11/14/scala-on-android2/" data-via="" data-counturl="http://nielinjie.github.io/blog/2011/11/14/scala-on-android2/" >Tweet</a>
   
   
   
@@ -153,10 +152,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2011/11/14/scala-on-android3/" title="Previous Post: Android 上的 Scala， 实战之路（三）">&laquo; Android 上的 Scala， 实战之路（三）</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/10/25/rest/" title="Next Post: 关于REST风格的讨论">关于REST风格的讨论 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2011/11/14/scala-on-android/" title="Next Post: Android 上的 Scala， 实战之路（二）">Android 上的 Scala， 实战之路（二） &raquo;</a>
       
     </p>
   </footer>

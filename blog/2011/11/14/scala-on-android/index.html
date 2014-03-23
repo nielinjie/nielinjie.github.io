@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Android 上的 Scala， 实战之路（二） - 聂同学</title>
+  <meta name="author" content="nielinjie">
+
+  
+  <meta name="description" content="二、Hello World即遭不测 显然，首先是来一个Hello World。 直接使用android-plugin的项目模板。生成的程序非常简单，当然，Hello World都非常简单。
+Activity类的代码如下。 1
+2
+3
+4
+5
+6
+7
+8
+class MainActivity &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">聂同学</a></h1>
+  
+    <h2>一个程序猿和架狗师的博客</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:nielinjie.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Android 上的 Scala， 实战之路（二）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-14T16:04:04+08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h3>二、Hello World即遭不测</h3>
+
+<p>显然，首先是来一个Hello World。</p>
+
+<!-- more -->
+
+
+<p>直接使用android-plugin的项目模板。生成的程序非常简单，当然，Hello World都非常简单。
+Activity类的代码如下。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class MainActivity extends Activity {  
+</span><span class='line'>  override def onCreate(savedInstanceState: Bundle) {  
+</span><span class='line'>    super.onCreate(savedInstanceState)  
+</span><span class='line'>    setContentView(new TextView(this) {  
+</span><span class='line'>      setText("Hello World")  
+</span><span class='line'>    })  
+</span><span class='line'>  }  
+</span><span class='line'>}  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>很简单，可以运行，就不截图了。
+然后我把我的代码改成这样。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import Helper._  
+</span><span class='line'>class MainActivity extends Activity {  
+</span><span class='line'>  override def onCreate(savedInstanceState: Bundle) {  
+</span><span class='line'>    super.onCreate(savedInstanceState)  
+</span><span class='line'>    setContentView((new TextView(this)).doto {  
+</span><span class='line'>      text =&gt;  
+</span><span class='line'>      text.setText("Hello World")  
+</span><span class='line'>    })  
+</span><span class='line'>  }  
+</span><span class='line'>}  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>这里的doto方法是我自己的一个公共模块里的方法（作为一个jar引入到工程中）,是我从clojure里面看着顺眼结果来的，作用是有机会调用一个object的一系列方法，然后还能返回这个对象本身。代码如下——</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>object Helper {  
+</span><span class='line'>  implicit def helpersWrap[A](obj: A) = new {  
+</span><span class='line'>    def doto(f: A =&gt; Unit): A = {  
+</span><span class='line'>      val re = obj  
+</span><span class='line'>      f(re)  
+</span><span class='line'>      re  
+</span><span class='line'>    }  
+</span><span class='line'>  }  
+</span><span class='line'>}  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>再运行，不测——NoSuchMethodException
+看了log，发现了问题在于——虚拟机企图在Object上去找doto方法，肯定是找不到的。
+于是我换了一种写法——</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>object Helper2 {  
+</span><span class='line'>  class Wrapped[A](val obj:A){  
+</span><span class='line'>    def doto(f: A =&gt; Unit): A = {  
+</span><span class='line'>      val re = obj  
+</span><span class='line'>      f(re)  
+</span><span class='line'>      re  
+</span><span class='line'>    }  
+</span><span class='line'>  }  
+</span><span class='line'>  implicit def helpersWrap[A](obj: A) = new Wrapped(obj)  
+</span><span class='line'>}  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>可以运行了，然而问题在哪里呢？为什么jvm中运行效果一样的两种写法在Dalvik虚拟机里面表现出不一样的结果呢？
+看了一下两种写法编译出来的class代码
+第一种（运行错误的一种——object Helper）</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>第二种（运行正确的一种——object Helper2）</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>可以看到，两种写法编译出来的方法type不同，主要是返回类型不同。这种差异确实是源代码差异的直接体现。从被调用方的情况看不出什么特别的情况。于是转换一下思路，从调用方来看看呢。
+专门写了个简单的调用方，代码如下——</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>object UseHelper {  
+</span><span class='line'>  import Helper._  
+</span><span class='line'>  def test = {  
+</span><span class='line'>    "hellow helper".doto {  
+</span><span class='line'>      s =&gt;  
+</span><span class='line'>        s.length()  
+</span><span class='line'>    }  
+</span><span class='line'>  }  
+</span><span class='line'>}  
+</span><span class='line'>object UseHelper2 {  
+</span><span class='line'>  import Helper2._  
+</span><span class='line'>  def test = {  
+</span><span class='line'>    "hellow helper".doto {  
+</span><span class='line'>      s =&gt;  
+</span><span class='line'>        s.length()  
+</span><span class='line'>    }  
+</span><span class='line'>  }  
+</span><span class='line'>}  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>编译，再次看class文件。
+UseHelper</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>UseHelper2</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>可以看到，编译出来的class代码是非常不同的。
+虽然源代码几乎相同，但Helper的调用方使用的是reflection方式的调用，而Helper2的调用方没有使用Reflection，直接是调用了特定的类上面的方法。
+那么为什么使用reflection的方式在Dalvik虚拟机上不能正常运行呢？有待进一步的研究。</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-14T16:04:04+08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/android/'>Android</a>, <a class='category' href='/blog/categories/scala/'>Scala</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://nielinjie.github.io/blog/2011/11/14/scala-on-android/" data-via="" data-counturl="http://nielinjie.github.io/blog/2011/11/14/scala-on-android/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2011/11/14/scala-on-android2/" title="Previous Post: Android 上的 Scala， 实战之路（一）">&laquo; Android 上的 Scala， 实战之路（一）</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2011/11/14/scala-on-android3/" title="Next Post: Android 上的 Scala， 实战之路（三）">Android 上的 Scala， 实战之路（三） &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+
+<section imagesd="comment">
+<h1>Add a comment</h1>
+<!-- Duoshuo Comment BEGIN -->
+  <div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"nielinjie"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comment END -->
+
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/03/22/new-blog-site/">博客搬家了</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/02/dsl-post/">一场似非而是的DSL（后传）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl3/">一场似非而是的DSL（三）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl2/">一场似非而是的DSL（二）</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL（一）</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - nielinjie -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

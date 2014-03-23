@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Android | 聂同学]]></title>
+  <link href="http://nielinjie.github.io/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://nielinjie.github.io/"/>
+  <updated>2014-03-23T16:20:45+08:00</updated>
+  <id>http://nielinjie.github.io/</id>
+  <author>
+    <name><![CDATA[nielinjie]]></name>
+    <email><![CDATA[nielinjie@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Android 上的 Scala， 实战之路（三）]]></title>
+    <link href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android3/"/>
+    <updated>2011-11-14T17:04:04+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2011/11/14/scala-on-android3</id>
+    <content type="html"><![CDATA[<h3>三、介个是数据库接口？</h3>
+
+<p>完成了hello world，我便开始学习android的数据库接口。</p>
+
+<!-- more -->
+
+
+<p>这里提一下，受到各种文档和资料关于“Android上四大组件”的说法影响，开始一直觉得content provider对于访问数据库是必须的。后来才发现这个理解是错的，正确的理解是：content provider是用于向外发布数据的，只有需要向外提供数据的时候，应用才提供content provider。我汗。
+所以对content provider的探索暂时停止了，学习数据库接口。</p>
+
+<p>据说是提供完全的sqlite支持的，然而发现：功能貌似是有的，接口完全似是而非……
+可以传入sql语句、放入参数、运行、遍历结果，啥都能做，问题是以一种奇怪的方式。
+如果只是转换编程口音，ok，可以忍。问题在于早已依赖于jdbc之上的种种类库，sql template不能用？orm不能用？手写sql字符串拼接？手写各种get set和各种try finally close？我感到在这样的世界生活是很困难的。
+于是我几乎要开始写一个jdbc drvier。</p>
+
+<p>幸好找到了这个—— <a href="http://code.google.com/p/sqldroid/">http://code.google.com/p/sqldroid/</a> 。</p>
+
+<p>ps：这里提到了Android中没有暴露内建jdbc driver的原因，有兴趣的同学可以看看。
+搞定了基础设施，开始搭建上层建筑。我选择的是scalaQuery（<a href="http://scalaquery.org/">http://scalaquery.org/</a> ），小巧实用，强类型的sql dsl和composable的结果处理方式非常合我的胃口。
+写了一小段hello world……好吧，这回是hello database。
+不出大家所料：无法运行。
+NullpointException抛出。</p>
+
+<p>很快看出了问题，sqldroid并非是一个完全的实现，只实现了比较常使用的方法。而scalaQuery恰恰使用了不那么常用的方法。——感谢开源世界的一切，问题很容易定位并解决。
+一般使用preparedStatment进行select，使用的是executeQuery方法，直接获得返回的resultset。但scalaquery不一样，它的select调用execute方法，再调用getResultset得到resultset。于是，在帮sqldroid实现了getResult方法之后，两者和谐了。</p>
+
+<p>ps：此前还有NosuchMethodException（Exception还是Error？记不清楚了。）抛出，是sqldroid使用了较新android api的缘故，调整了所使用的api版本，于是我的模拟器用上了很欢型的android4。</p>
+
+<p>“hello database”完整代码如下。代码还没有充分体现出scalaQuery的“强类型sql dsl”或者“composable结果处理”，这些后面应该会再做提及。
+```
+import org.scalaquery.ql.basic.{ BasicTable => Table }<br/>
+import org.scalaquery.ql.TypeMapper.<em><br/>
+import org.scalaquery.ql.</em><br/>
+import android.util.Log<br/>
+import org.scalaquery.session.<em><br/>
+import org.scalaquery.session.Database.threadLocalSession<br/>
+import org.scalaquery.ql.extended.SQLiteDriver.Implicit.</em><br/>
+import android.content.Context<br/>
+import android.database.sqlite.{ SQLiteDatabase, SQLiteOpenHelper }</p>
+
+<p>class Repository {<br/>
+  val dataPath = &ldquo;/data/data/net.nielinjie.beautyFans"<br/>
+  val db = Database.forURL("jdbc:sqldroid:&rdquo; + dataPath + &ldquo;/main.sqlite&rdquo;, driver = &ldquo;org.sqldroid.SqldroidDriver&rdquo;)<br/>
+  db.withSession {</p>
+
+<pre><code>try {  
+  SitesDB.Sites.ddl  
+}  
+</code></pre>
+
+<p>  }<br/>
+  object Sites {</p>
+
+<pre><code>def list(): List[String] = {  
+  db.withSession {  
+    (for (s &lt;- Query(SitesDB.Sites)) yield s.name).list  
+  }  
+}  
+</code></pre>
+
+<p>  }<br/>
+}</p>
+
+<p>object SitesDB {<br/>
+  object Sites extends Table<a href="" title="sites">(Int, String, String, Option[String])</a> {</p>
+
+<pre><code>def id = column[Int]("id", O.NotNull)  
+def name = column[String]("name")  
+def url = column[String]("url")  
+def description = column[Option[String]]("description")  
+def * = id ~ name ~ url ~ description  
+</code></pre>
+
+<p>  }<br/>
+}<br/>
+```</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android 上的 Scala， 实战之路（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android/"/>
+    <updated>2011-11-14T16:04:04+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2011/11/14/scala-on-android</id>
+    <content type="html"><![CDATA[<h3>二、Hello World即遭不测</h3>
+
+<p>显然，首先是来一个Hello World。</p>
+
+<!-- more -->
+
+
+<p>直接使用android-plugin的项目模板。生成的程序非常简单，当然，Hello World都非常简单。
+Activity类的代码如下。
+```
+class MainActivity extends Activity {<br/>
+  override def onCreate(savedInstanceState: Bundle) {</p>
+
+<pre><code>super.onCreate(savedInstanceState)  
+setContentView(new TextView(this) {  
+  setText("Hello World")  
+})  
+</code></pre>
+
+<p>  }<br/>
+}<br/>
+```
+很简单，可以运行，就不截图了。
+然后我把我的代码改成这样。</p>
+
+<p>```
+import Helper._<br/>
+class MainActivity extends Activity {<br/>
+  override def onCreate(savedInstanceState: Bundle) {</p>
+
+<pre><code>super.onCreate(savedInstanceState)  
+setContentView((new TextView(this)).doto {  
+  text =&gt;  
+  text.setText("Hello World")  
+})  
+</code></pre>
+
+<p>  }<br/>
+}<br/>
+```</p>
+
+<p>这里的doto方法是我自己的一个公共模块里的方法（作为一个jar引入到工程中）,是我从clojure里面看着顺眼结果来的，作用是有机会调用一个object的一系列方法，然后还能返回这个对象本身。代码如下——
+```
+object Helper {<br/>
+  implicit def helpersWrap<a href="obj:%20A">A</a> = new {</p>
+
+<pre><code>def doto(f: A =&gt; Unit): A = {  
+  val re = obj  
+  f(re)  
+  re  
+}  
+</code></pre>
+
+<p>  }<br/>
+}<br/>
+```</p>
+
+<p>再运行，不测——NoSuchMethodException
+看了log，发现了问题在于——虚拟机企图在Object上去找doto方法，肯定是找不到的。
+于是我换了一种写法——
+```
+object Helper2 {<br/>
+  class Wrapped<a href="val%20obj:A">A</a>{</p>
+
+<pre><code>def doto(f: A =&gt; Unit): A = {  
+  val re = obj  
+  f(re)  
+  re  
+}  
+</code></pre>
+
+<p>  }<br/>
+  implicit def helpersWrap<a href="obj:%20A">A</a> = new Wrapped(obj)<br/>
+}<br/>
+<code>
+可以运行了，然而问题在哪里呢？为什么jvm中运行效果一样的两种写法在Dalvik虚拟机里面表现出不一样的结果呢？
+看了一下两种写法编译出来的class代码
+第一种（运行错误的一种——object Helper）
+</code>
+这里有个图，还没搬过来。
+```</p>
+
+<p>第二种（运行正确的一种——object Helper2）
+<code>
+这里有个图，还没搬过来。
+</code></p>
+
+<p>可以看到，两种写法编译出来的方法type不同，主要是返回类型不同。这种差异确实是源代码差异的直接体现。从被调用方的情况看不出什么特别的情况。于是转换一下思路，从调用方来看看呢。
+专门写了个简单的调用方，代码如下——
+```
+object UseHelper {<br/>
+  import Helper._<br/>
+  def test = {</p>
+
+<pre><code>"hellow helper".doto {  
+  s =&gt;  
+    s.length()  
+}  
+</code></pre>
+
+<p>  }<br/>
+}<br/>
+object UseHelper2 {<br/>
+  import Helper2._<br/>
+  def test = {</p>
+
+<pre><code>"hellow helper".doto {  
+  s =&gt;  
+    s.length()  
+}  
+</code></pre>
+
+<p>  }<br/>
+}<br/>
+<code>
+编译，再次看class文件。
+UseHelper
+</code>
+这里有个图，还没搬过来。
+```</p>
+
+<p>UseHelper2
+<code>
+这里有个图，还没搬过来。
+</code></p>
+
+<p>可以看到，编译出来的class代码是非常不同的。
+虽然源代码几乎相同，但Helper的调用方使用的是reflection方式的调用，而Helper2的调用方没有使用Reflection，直接是调用了特定的类上面的方法。
+那么为什么使用reflection的方式在Dalvik虚拟机上不能正常运行呢？有待进一步的研究。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Android 上的 Scala， 实战之路（一）]]></title>
+    <link href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android2/"/>
+    <updated>2011-11-14T15:04:04+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2011/11/14/scala-on-android2</id>
+    <content type="html"><![CDATA[<h3>一、先开始再说</h3>
+
+<p>因为已经习惯用Scala开发，所以在开始尝试Android平台开发的时候，没有使用Java。
+在这个文章系列中，将把尝试的过程和遇到的问题（希望都能带上解决办法）分享给大家，希望对大家有所帮助。</p>
+
+<!-- more -->
+
+
+<p>先讲讲开发环境。对于比较熟悉Java编程的同学，开发工具应该说关系不大，如果没有找到既能支持Scala又能支持Android的IDE，我们还有终极方案——命令行。只要能了解清楚Scala编译和Android构建的各个步骤，都能找到对应的命令行工具。
+我自己的情况是已经习惯了sbt, 如果大家也使用sbt，android-plugin（<a href="https://github.com/jberkel/android-plugin">https://github.com/jberkel/android-plugin</a> ）将是个非常有帮助的build工具。</p>
+
+<p>构建过程并不复杂，与Java的Android开发没有太多不同。只是把Java的编译，变成Scala编译。
+有一个步骤可能需要说明一下。</p>
+
+<p>proguard，这个步骤比较特别，貌似Java开发不一定需要这一步。其作用是把依赖的.jar文件进行裁剪，只保留下有用的class和方法，使得最终部署的文件足够小。对于Java开发的同学，如果依赖的东西不多，这一步就不一定要做。如果依赖了较多的jar文件，就可以尝试用这个步骤，把jar里面需要的class和方法抠出来。对于Scala开发的同学，一般这一步是必须的，毕竟每个可运行的Scala程序都依赖于Scala runtime包，而这个包自己就相当不小。这一步是事故多发地带，以后会再提到。</p>
+]]></content>
+  </entry>
+  
+</feed>
