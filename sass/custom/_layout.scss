@@ -19,3 +19,13 @@
 //$sidebar-pad-medium: 15px;
 //$sidebar-pad-wide: 20px;
 //$sidebar-width-wide: 300px;
+
+
+#content div.pagination a.next {
+  left:0 
+}
+
+
+#content div.pagination a.prev {
+  right:0
+}
