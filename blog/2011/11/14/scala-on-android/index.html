@@ -203,17 +203,11 @@ Activity类的代码如下。</p>
 
 <p>可以运行了，然而问题在哪里呢？为什么jvm中运行效果一样的两种写法在Dalvik虚拟机里面表现出不一样的结果呢？
 看了一下两种写法编译出来的class代码
-第一种（运行错误的一种——object Helper）</p>
+第一种（运行错误的一种——object Helper）
+<img src="/images/scala_on_android/help2.png"></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
-
-
-<p>第二种（运行正确的一种——object Helper2）</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
-
+<p>第二种（运行正确的一种——object Helper2）
+<img src="/images/scala_on_android/help1.png"></p>
 
 <p>可以看到，两种写法编译出来的方法type不同，主要是返回类型不同。这种差异确实是源代码差异的直接体现。从被调用方的情况看不出什么特别的情况。于是转换一下思路，从调用方来看看呢。
 专门写了个简单的调用方，代码如下——</p>
@@ -257,17 +251,11 @@ Activity类的代码如下。</p>
 
 
 <p>编译，再次看class文件。
-UseHelper</p>
+UseHelper
+<img src="/images/scala_on_android/use1.png"></p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
-
-
-<p>UseHelper2</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>这里有个图，还没搬过来。</span></code></pre></td></tr></table></div></figure>
-
+<p>UseHelper2
+<img src="/images/scala_on_android/use2.png"></p>
 
 <p>可以看到，编译出来的class代码是非常不同的。
 虽然源代码几乎相同，但Helper的调用方使用的是reflection方式的调用，而Helper2的调用方没有使用Reflection，直接是调用了特定的类上面的方法。
