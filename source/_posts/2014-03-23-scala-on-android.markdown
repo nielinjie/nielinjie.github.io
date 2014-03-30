@@ -72,15 +72,12 @@ object Helper2 {
 可以运行了，然而问题在哪里呢？为什么jvm中运行效果一样的两种写法在Dalvik虚拟机里面表现出不一样的结果呢？
 看了一下两种写法编译出来的class代码
 第一种（运行错误的一种——object Helper）
-```
-这里有个图，还没搬过来。
-```
+{% img /images/scala_on_android/help2.png%}
 
 
 第二种（运行正确的一种——object Helper2）
-```
-这里有个图，还没搬过来。
-```
+{% img /images/scala_on_android/help1.png%}
+
 
 
 
@@ -108,15 +105,13 @@ object UseHelper2 {
 ```
 编译，再次看class文件。
 UseHelper
-```
-这里有个图，还没搬过来。
-```
+{% img /images/scala_on_android/use1.png%}
+
 
 
 UseHelper2
-```
-这里有个图，还没搬过来。
-```
+{% img /images/scala_on_android/use2.png%}
+
 
 
 

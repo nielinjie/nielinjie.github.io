@@ -1,0 +1,9 @@
+---
+layout: post
+title: "敏捷的架构设计（三）：看板b"
+date: 2014-03-30 16:36:38 +0800
+comments: true
+categories: [架构,敏捷]
+---
+
+{% img  /images/kanban/dm.jpg %}
