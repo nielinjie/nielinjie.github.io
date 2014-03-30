@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-03-30T17:45:45+08:00</updated>
+  <updated>2014-03-30T18:02:50+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -24,6 +24,15 @@
 
 <p>这时候你忽然灵光一现，你埋头迅速制造了一个口袋，不是华丽的、未知的、危险的口袋，而是一个简单、简陋、安全、甚至没完全完成的口袋。“啪”，你把口袋拍在雪人肚子上。
 你感到世界清净下来。你安心地微笑，脑中浮现一个模糊的词语，叫做：“提升架构的设计”。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[风险驱动的架构设计：看板]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/03/30/rd1/"/>
+    <updated>2014-03-30T15:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/03/30/rd1</id>
+    <content type="html"><![CDATA[<p><img src="/images/kanban/rd.jpg"></p>
 ]]></content>
   </entry>
   
@@ -54,15 +63,6 @@
     <updated>2014-02-15T21:36:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/02/15/said-shouduan</id>
     <content type="html"><![CDATA[<p>“通用”是手段而不是目的，“简单”也一样，甚而“结构”也一样。感受下呢。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：雪人（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/02/15/said-xueren2/"/>
-    <updated>2014-02-15T15:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/02/15/said-xueren2</id>
-    <content type="html"><![CDATA[<p>这时候走来一个大叔，他对多啦A梦风格的了解人所共知。他警告说多啦A梦的口袋充满了未知，非常危险。于是你谨慎地决定：多啦A梦风格的设计必须局限在雪人的手部。</p>
 ]]></content>
   </entry>
   
