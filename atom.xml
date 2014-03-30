@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-03-25T22:28:59+08:00</updated>
+  <updated>2014-03-30T17:13:01+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[语录：雪人（三）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/03/30/said-xueren3/"/>
+    <updated>2014-03-30T15:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/03/30/said-xueren3</id>
+    <content type="html"><![CDATA[<p>雪人项目进行得还算顺利。然而你发现兄弟们有些异样，他们常常盯着雪人的肚皮部位自说自话，这两天甚至开始聚在一起窃窃私语。
+这些人都是多啦A梦设计风格的铁根粉丝啊，你能感受到设计一个口袋对他们来说是非常巨大的诱惑。
+你曾经反复解释口袋有多危险，明令禁止任何设计口袋的企图。然而你知道这些根本无法打消你的担忧：架构走形的风险正如影随形。</p>
+
+<p>这时候你忽然灵光一现，你埋头迅速制造了一个口袋，不是华丽的、未知的、危险的口袋，而是一个简单、简陋、安全、甚至没完全完成的口袋。“啪”，你把口袋拍在雪人肚子上。
+你感到世界清净下来。你安心地微笑，脑中浮现一个模糊的词语，叫做：“提升架构的设计”。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[博客搬家了]]></title>
@@ -843,29 +857,6 @@
 <p>Form是沿用自Spring MVC的Form概念。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：现有的业务模型来模拟新的业务]]></title>
-    <link href="http://nielinjie.github.io/blog/2012/07/10/said-20120710/"/>
-    <updated>2012-07-10T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2012/07/10/said-20120710</id>
-    <content type="html"><![CDATA[<p>工作中的语录：现有的业务模型来模拟新的业务。</p>
-
-<!-- more -->
-
-
-<p>当系统已有业务模型不能适应新的需求的时候，我们有一种做法，就是用现有的业务模型来模拟新的业务，或者说变通迂回达成新的需求。
-这样做对系统修改小（或者无），达成周期也比较短，往往被优先选择。
-这样做本身不能说有问题，但我们要注意分析，防止滥用。我理解这样带来一些隐性风险，供参考：</p>
-
-<ul>
-<li>系统使用变难，因为有些功能是变通实现的，不够直接，需要专家才能使用。</li>
-<li>领域需求越来越复杂，虽然可能功能点比较少，但功能的细节和分支比较多。</li>
-<li>这种做法带来的系统修改虽然小，但往往不直接，比较隐晦，容易遗忘和误读。</li>
-</ul>
 
 ]]></content>
   </entry>
