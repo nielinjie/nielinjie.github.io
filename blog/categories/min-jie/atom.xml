@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 架构 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 敏捷 | 聂同学]]></title>
+  <link href="http://nielinjie.github.io/blog/categories/min-jie/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
   <updated>2014-03-31T23:09:45+08:00</updated>
   <id>http://nielinjie.github.io/</id>
@@ -61,41 +61,6 @@ A：必须就事论事，没有统一答案。有些架构决策，可以尽量�
 
 <p>Q：如何判断何时开始、何时完成、何种程度、哪一部分的架构设计？<br/>
 A：“风险驱动架构设计”方法……</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：雪人（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/30/said-xueren3/"/>
-    <updated>2014-03-30T15:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/30/said-xueren3</id>
-    <content type="html"><![CDATA[<p>雪人项目进行得还算顺利。然而你发现兄弟们有些异样，他们常常盯着雪人的肚皮部位自说自话，这两天甚至开始聚在一起窃窃私语。
-这些人都是多啦A梦设计风格的铁根粉丝啊，你能感受到设计一个口袋对他们来说是非常巨大的诱惑。
-你曾经反复解释口袋有多危险，明令禁止任何设计口袋的企图。然而你知道这些根本无法打消你的担忧：架构走形的风险正如影随形。</p>
-
-<p>这时候你忽然灵光一现，你埋头迅速制造了一个口袋，不是华丽的、未知的、危险的口袋，而是一个简单、简陋、安全、甚至没完全完成的口袋。“啪”，你把口袋拍在雪人肚子上。
-你感到世界清净下来。你安心地微笑，脑中浮现一个模糊的词语，叫做：“提升架构的设计”。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：好的架构师]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi/"/>
-    <updated>2014-03-09T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi</id>
-    <content type="html"><![CDATA[<p>好的架构师说：好吧，重做是架构进化的一种形式，我们下一个架构将解决这些问题；脾气好的架构师说：好吧，你是老板，你说重做我们就重做；2b架构师说：重做？mb你是老板你了不起么？老子的架构不够nb么？老子的xxx风格yyy模式你sb懂得起么？</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：乌鸦]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/03/said-yuya/"/>
-    <updated>2014-03-03T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/03/said-yuya</id>
-    <content type="html"><![CDATA[<p>一只乌鸦口渴了……，可是他早上买的酸奶没拿吸管，他的勺子比瓶子口大……，这时候一只老乌鸦走过来，分享了他处理类似问题的经验，并声称已经已经被广为使用和验证。
-乌鸦感到庆幸，立即找来了很多石子儿……，直到他认识到他要对付的是酸奶，而不是清水。</p>
-
-<p>乌鸦看着表面上堆着石子儿的酸奶，反思并明白了：模式的应用条件，是模式的重要一部分。</p>
 ]]></content>
   </entry>
   
