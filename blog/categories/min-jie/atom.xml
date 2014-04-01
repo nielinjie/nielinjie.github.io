@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 敏捷 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/min-jie/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-03-31T23:09:45+08:00</updated>
+  <updated>2014-04-01T22:33:27+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -57,7 +57,7 @@ A：是否需要架构设计并不是由是否敏捷过程决定。但敏捷过�
 
 <p>Q：如何处理架构“演进”带来的“额外”成本和风险？<br/>
 A：必须就事论事，没有统一答案。有些架构决策，可以尽量前置；有些架构决策，只能随需求逐渐明朗；有些架构决策，需要随时回顾改进。
-架构设计不再是一个阶段性大任务，而需要划分成多个任务，按不同情况分别管理跟进。</p>
+架构设计不再是一个阶段性、集中处置的大任务，而需要划分成多个任务，按不同情况分别管理跟进。</p>
 
 <p>Q：如何判断何时开始、何时完成、何种程度、哪一部分的架构设计？<br/>
 A：“风险驱动架构设计”方法……</p>
