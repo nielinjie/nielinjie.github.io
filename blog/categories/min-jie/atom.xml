@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 敏捷 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/min-jie/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-04-03T23:01:31+08:00</updated>
+  <updated>2014-04-03T23:10:08+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -15,10 +15,12 @@
   
   <entry>
     <title type="html"><![CDATA[敏捷的架构设计（三）：第一块看板]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/05/aa2/"/>
-    <updated>2014-04-05T16:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/05/aa2</id>
-    <content type="html"><![CDATA[<p>这是一个架构“普通”的项目。也是第一个系统实践“风险驱动架构设计”的项目。</p>
+    <link href="http://nielinjie.github.io/blog/2014/04/03/aa2/"/>
+    <updated>2014-04-03T23:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/04/03/aa2</id>
+    <content type="html"><![CDATA[<blockquote><p>敏捷已死，而敏捷性长存。</p></blockquote>
+
+<p>这是一个架构“普通”的项目。也是第一个系统实践“风险驱动架构设计”的项目。</p>
 
 <!-- more -->
 
