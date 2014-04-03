@@ -18,3 +18,8 @@ group :development do
 end
 
 gem 'sinatra', '~> 1.4.2'
+gem 'metaweblog', '~> 0.1.0'
+gem 'nokogiri', '~> 1.5.9'
+
+gem 'erubis'
+gem 'mini_magick'

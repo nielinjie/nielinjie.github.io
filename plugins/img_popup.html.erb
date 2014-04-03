@@ -1,0 +1,39 @@
+<!-- -*- html -*- -->
+
+<div class="imgpopup screen">
+  <div class="caption">Click the image for a larger view.</div>
+  <a href='javascript:void(0)' style="text-decoration: none" id="image-<%= id %>">
+    <img src="<%= scaled_image %>"
+         width="<%= scaled_width %>" height="<%= scaled_height %>"
+         alt="Click me."/>
+  </a>
+  <div id="image-dialog-<%= id %>" style="display:none">
+    <img src="<%= image %>"
+         style="max-width: 100%;height:auto"/>
+    <br clear="all"/>
+  </div>
+</div>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    jQuery("#image-dialog-<%= id %>").hide();
+    jQuery("#image-dialog-<%= id %>").dialog({
+      autoOpen:  false,
+      modal:     true,
+      draggable: false,
+      width: "100%",
+      <% if title -%>
+      title:     "<%= title %>",
+      <% end -%>
+      show:      'scale',
+      hide:      'scale'
+    });
+
+    jQuery("#image-<%= id %>").click(function() {
+      jQuery("#image-dialog-<%= id %>").dialog('open');
+    });
+
+  });
+</script>
+<div class="illustration print">
+  <img src="<%= image %>" width="<%= full_width %>" height="<%= full_height %>"/>
+</div>
