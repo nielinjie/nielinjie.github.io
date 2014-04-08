@@ -22,12 +22,20 @@ single: true
       {% endif %}
 
     </p>
+        {% unless page.sharing == false %}
+        <section>
+<h2>Sharing</h2>
+
+      {% include post/sharing.html %}
+    </section>
+    {% endunless %}
+
   </footer>
 </article>
 
 {% if site.duoshuo_show_comment_count == true %}
 <section imagesd="comment">
-<h1>Add a comment</h1>
+<h2>Add a comment</h2>
 {% include post/duoshuo.html %}
 </section>
 {% endif %}
