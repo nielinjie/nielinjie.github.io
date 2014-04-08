@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "敏捷的架构设计（四）：第二块看板"
-date: 2014-04-05 16:36:38 +0800
+title: "敏捷的架构设计（五）：第二块看板"
+date: 2014-04-10 16:36:38 +0800
 comments: true
 categories: [架构, 敏捷]
 published: false
