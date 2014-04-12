@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-04-08T21:53:54+08:00</updated>
+  <updated>2014-04-13T00:19:21+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[语录：雪人（四）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/04/12/said-xueren4/"/>
+    <updated>2014-04-12T23:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/04/12/said-xueren4</id>
+    <content type="html"><![CDATA[<p>你感到雪人项目进行得还算顺利，虽然样子有点奇怪。
+直到有一天PO突然说道：“经过调研，现在的孩子喜欢的其实是蜘蛛侠不是蜘蛛。”
+你于是尝试铲掉其中六条腿，雪人摇摇欲坠。
+“架构太不敏捷了。”——PO大喊。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[敏捷的架构设计（四）：来提意见]]></title>
@@ -161,20 +173,6 @@ A：必须就事论事，没有统一答案。有些架构决策，可以尽量�
 
 <p>Q：如何判断何时开始、何时完成、何种程度、哪一部分的架构设计？<br/>
 A：“风险驱动架构设计”方法……</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：雪人（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/30/said-xueren3/"/>
-    <updated>2014-03-30T15:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/30/said-xueren3</id>
-    <content type="html"><![CDATA[<p>雪人项目进行得还算顺利。然而你发现兄弟们有些异样，他们常常盯着雪人的肚皮部位自说自话，这两天甚至开始聚在一起窃窃私语。
-这些人都是多啦A梦设计风格的铁根粉丝啊，你能感受到设计一个口袋对他们来说是非常巨大的诱惑。
-你曾经反复解释口袋有多危险，明令禁止任何设计口袋的企图。然而你知道这些根本无法打消你的担忧：架构走形的风险正如影随形。</p>
-
-<p>这时候你忽然灵光一现，你埋头迅速制造了一个口袋，不是华丽的、未知的、危险的口袋，而是一个简单、简陋、安全、甚至没完全完成的口袋。“啪”，你把口袋拍在雪人肚子上。
-你感到世界清净下来。你傻笑，认为自己理解了一个高大上的词语，叫做：“提升至架构的设计”。</p>
 ]]></content>
   </entry>
   

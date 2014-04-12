@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 语录 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/yu-lu/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-04-08T21:53:54+08:00</updated>
+  <updated>2014-04-13T00:19:21+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[语录：雪人（四）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/04/12/said-xueren4/"/>
+    <updated>2014-04-12T23:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/04/12/said-xueren4</id>
+    <content type="html"><![CDATA[<p>你感到雪人项目进行得还算顺利，虽然样子有点奇怪。
+直到有一天PO突然说道：“经过调研，现在的孩子喜欢的其实是蜘蛛侠不是蜘蛛。”
+你于是尝试铲掉其中六条腿，雪人摇摇欲坠。
+“架构太不敏捷了。”——PO大喊。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[语录：雪人（三）]]></title>
@@ -44,7 +56,7 @@
     <content type="html"><![CDATA[<p>一只乌鸦口渴了……，可是他早上买的酸奶没拿吸管，他的勺子比瓶子口大……，这时候一只老乌鸦走过来，分享了他处理类似问题的经验，并声称已经已经被广为使用和验证。
 乌鸦感到庆幸，立即找来了很多石子儿……，直到他认识到他要对付的是酸奶，而不是清水。</p>
 
-<p>乌鸦看着表面上堆着石子儿的酸奶，反思并明白了：模式的应用条件，是模式的重要一部分。</p>
+<p>乌鸦看着表面上堆着石子儿的酸奶，自我感觉对“模式”的认识深了些。</p>
 ]]></content>
   </entry>
   
@@ -54,15 +66,6 @@
     <updated>2014-02-15T21:36:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/02/15/said-shouduan</id>
     <content type="html"><![CDATA[<p>“通用”是手段而不是目的，“简单”也一样，甚而“结构”也一样。感受下呢。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：雪人（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/02/15/said-xueren2/"/>
-    <updated>2014-02-15T15:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/02/15/said-xueren2</id>
-    <content type="html"><![CDATA[<p>这时候走来一个大叔，他对多啦A梦风格的了解人所共知。他警告说多啦A梦的口袋充满了未知，非常危险。于是你谨慎地决定：多啦A梦风格的设计必须局限在雪人的手部。</p>
 ]]></content>
   </entry>
   

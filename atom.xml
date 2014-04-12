@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-04-08T21:53:54+08:00</updated>
+  <updated>2014-04-13T00:19:21+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,18 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[语录：雪人（四）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/04/12/said-xueren4/"/>
+    <updated>2014-04-12T23:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/04/12/said-xueren4</id>
+    <content type="html"><![CDATA[<p>你感到雪人项目进行得还算顺利，虽然样子有点奇怪。
+直到有一天PO突然说道：“经过调研，现在的孩子喜欢的其实是蜘蛛侠不是蜘蛛。”
+你于是尝试铲掉其中六条腿，雪人摇摇欲坠。
+“架构太不敏捷了。”——PO大喊。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[敏捷的架构设计（四）：来提意见]]></title>
@@ -259,7 +271,7 @@ A：“风险驱动架构设计”方法……</p>
     <content type="html"><![CDATA[<p>一只乌鸦口渴了……，可是他早上买的酸奶没拿吸管，他的勺子比瓶子口大……，这时候一只老乌鸦走过来，分享了他处理类似问题的经验，并声称已经已经被广为使用和验证。
 乌鸦感到庆幸，立即找来了很多石子儿……，直到他认识到他要对付的是酸奶，而不是清水。</p>
 
-<p>乌鸦看着表面上堆着石子儿的酸奶，反思并明白了：模式的应用条件，是模式的重要一部分。</p>
+<p>乌鸦看着表面上堆着石子儿的酸奶，自我感觉对“模式”的认识深了些。</p>
 ]]></content>
   </entry>
   
@@ -767,40 +779,6 @@ A：“风险驱动架构设计”方法……</p>
 <p>这里列出的都是Haskell的地址，因为Haskell有页面集中说明这些东西是啥。实际操作中还是用的scalaz实现版本。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 <li id="fn:4">
 <p>我这样说完全不是指我反对FP风格。实际上我非常喜欢这种风格。我的意思只是，在学习的时候，需要更多的思考。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：关于企业中公用类库和框架的管理]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/01/01/said-20130101/"/>
-    <updated>2013-01-01T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/01/01/said-20130101</id>
-    <content type="html"><![CDATA[<p>关于企业中公用类库和框架的管理，在微博上与同行讨论，记录如下<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，也是我对公司的P框架的期待。</p>
-
-<!-- more -->
-
-
-<p>人说孩子要教的人多，管的人少。类库和框架也一样，整个企业都要对他作出贡献，但要有一两个靠谱的人始终负责管理，维护好它的定位、规划好它的方向，平衡好通用和合用、稳定和进化的关系。</p>
-
-<p>我期待中的管理者将采用这样的管理策略——</p>
-
-<ul>
-<li><p>新特性应该由任何使用这个库的用户按自己的需要开发并提交；管理者要做的是决定哪些特性并入master流。任何用户也可以维护适应自己需求的流，但这些流都是从master流分支而出。</p></li>
-<li><p>创新团队<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>维护自己的流（可能不止一个，按特征簇分开）。其中的新特性由使用者按自己的需求试用。验证后，交由管理者决定是否并入master流。</p></li>
-<li><p>master流不一定只有一个，可以按使用模式或特征簇分成多个流。这些流以及它们之间的关系，由管理者定义和维护。</p></li>
-<li><p>管理团队并不干预用户对框架的使用模式，由使用现场的架构要求决定。如果使用现场没有特殊要求，则可优先从master流中选择使用模式。</p></li>
-</ul>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>有整理，比如去除了一些使讨论通顺的口水话。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>他们推动框架的变化的动机是业界的技术趋势，而不是现场需求。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
