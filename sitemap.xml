@@ -128,4 +128,8 @@
         <loc>http://nielinjie.github.io/robots.txt</loc>
         <lastmod>2014-03-22T17:48:19+08:00</lastmod>
     </url>
+    <url>
+        <loc>http://nielinjie.github.io/site.json.xml</loc>
+        <lastmod>2014-04-13T14:20:45+08:00</lastmod>
+    </url>
 </urlset>
