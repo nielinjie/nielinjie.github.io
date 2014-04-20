@@ -1,0 +1,473 @@
+window.site={
+  posts:[
+
+  {
+    url:"/blog/2014/04/12/said-xueren4/",
+    date:"2014-04-12T23:36:38+08:00",
+    title:"语录：雪人（四）",
+    categories:[
+      
+        "敏捷",
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+        "雪人 4",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/04/07/aa25/",
+    date:"2014-04-07T16:36:38+08:00",
+    title:"敏捷的架构设计（四）：来提意见",
+    categories:[
+      
+        "敏捷",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/04/03/aa2/",
+    date:"2014-04-03T23:36:38+08:00",
+    title:"敏捷的架构设计（三）：第一块看板",
+    categories:[
+      
+        "敏捷",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/03/31/aa1/",
+    date:"2014-03-31T21:36:38+08:00",
+    title:"敏捷的架构设计（二）：风险驱动",
+    categories:[
+      
+        "敏捷",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/03/31/aa/",
+    date:"2014-03-31T21:36:38+08:00",
+    title:"敏捷的架构设计（一）：自问自答",
+    categories:[
+      
+        "敏捷",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/03/30/said-xueren3/",
+    date:"2014-03-30T15:36:38+08:00",
+    title:"语录：雪人（三）",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/03/22/new-blog-site/",
+    date:"2014-03-22T20:15:27+08:00",
+    title:"博客搬家了",
+    categories:[
+      
+        "杂拌",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/03/09/said-jiagoushi/",
+    date:"2014-03-09T21:36:38+08:00",
+    title:"语录：好的架构师",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/03/03/said-yuya/",
+    date:"2014-03-03T21:36:38+08:00",
+    title:"语录：乌鸦",
+    categories:[
+      
+        "架构",
+      
+        "模式",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/02/15/said-shouduan/",
+    date:"2014-02-15T21:36:38+08:00",
+    title:"语录：手段和目的",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/02/15/said-xueren2/",
+    date:"2014-02-15T15:36:38+08:00",
+    title:"语录：雪人（二）",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/02/15/said-xueren1/",
+    date:"2014-02-15T15:36:38+08:00",
+    title:"语录：雪人（一）",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/09/02/dsl-post/",
+    date:"2013-09-02T21:36:38+08:00",
+    title:"一场似非而是的DSL（后传）",
+    categories:[
+      
+        "DSL",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/09/01/dsl3/",
+    date:"2013-09-01T21:36:38+08:00",
+    title:"一场似非而是的DSL（三）",
+    categories:[
+      
+        "DSL",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/09/01/dsl2/",
+    date:"2013-09-01T21:36:38+08:00",
+    title:"一场似非而是的DSL（二）",
+    categories:[
+      
+        "DSL",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/09/01/dsl1/",
+    date:"2013-09-01T21:36:38+08:00",
+    title:"一场似非而是的DSL（一）",
+    categories:[
+      
+        "DSL",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/08/20/distribute-saying/",
+    date:"2013-08-20T21:36:38+08:00",
+    title:"能不能建立去中心化的言论机制？",
+    categories:[
+      
+        "吐槽",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/02/25/our-new-front-end/",
+    date:"2013-02-25T21:27:49+08:00",
+    title:"我们的新前端",
+    categories:[
+      
+        "前端",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/01/23/wd-download-machine/",
+    date:"2013-01-23T21:36:38+08:00",
+    title:"WD My Book Live 作为下载机",
+    categories:[
+      
+        "折腾",
+      
+        "生活",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/01/23/code/",
+    date:"2013-01-23T21:36:38+08:00",
+    title:"这些年写过的代码（一）",
+    categories:[
+      
+        "开发",
+      
+        "折腾",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2013/01/01/said-20130101/",
+    date:"2013-01-01T21:36:38+08:00",
+    title:"语录：关于企业中公用类库和框架的管理",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2012/12/05/said-20121205/",
+    date:"2012-12-05T21:36:38+08:00",
+    title:"语录：REST",
+    categories:[
+      
+        "REST",
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2012/12/03/said-20121203/",
+    date:"2012-12-03T21:36:38+08:00",
+    title:"语录：架构维护者的职责",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2012/10/29/rest2/",
+    date:"2012-10-29T21:36:38+08:00",
+    title:"关于REST风格的讨论（二）",
+    categories:[
+      
+        "REST",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2012/10/25/rest/",
+    date:"2012-10-25T21:36:38+08:00",
+    title:"关于REST风格的讨论",
+    categories:[
+      
+        "REST",
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2012/07/10/said-20120710/",
+    date:"2012-07-10T21:36:38+08:00",
+    title:"语录：现有的业务模型来模拟新的业务",
+    categories:[
+      
+        "架构",
+      
+        "语录",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2011/11/14/scala-on-android3/",
+    date:"2011-11-14T17:04:04+08:00",
+    title:"Android 上的 Scala， 实战之路（三）",
+    categories:[
+      
+        "Android",
+      
+        "Scala",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2011/11/14/scala-on-android/",
+    date:"2011-11-14T16:04:04+08:00",
+    title:"Android 上的 Scala， 实战之路（二）",
+    categories:[
+      
+        "Android",
+      
+        "Scala",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2011/11/14/scala-on-android2/",
+    date:"2011-11-14T15:04:04+08:00",
+    title:"Android 上的 Scala， 实战之路（一）",
+    categories:[
+      
+        "Android",
+      
+        "Scala",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+]
+}
