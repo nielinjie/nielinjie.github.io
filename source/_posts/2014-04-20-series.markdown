@@ -1,0 +1,20 @@
+---
+layout: post
+title: "向Octopress贡献（二）：连载系列"
+date: 2014-04-20 23:36:38 +0800
+comments: true
+categories: [开发, octopress]
+series: ["向Octopress贡献 2"]
+---
+
+我们常常会发表一些连载的系列文章。
+这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
+需要一个新的方式在同一系列的连载文章间跳转。
+
+<!-- more -->
+
+* 延续上篇文章的思路，采用js来实现功能。
+* 在每个post头部的yaml metadata中添加连载系列的相关数据，比如这篇文章添加：`series: ["向Octopress贡献 2"]`。
+* Jekyll会自动将所有的metadata都解析出来，这样全局的json文件中可以容易地包含相关数据。
+* 在适当的地方嵌入相应地html文件，其中的js根据json产生相关的内容。
+* 代码还没写。
