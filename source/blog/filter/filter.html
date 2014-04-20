@@ -1,0 +1,38 @@
+---
+layout: page
+title: Blog Archive
+footer: false
+---
+
+<div id="blog-filtered">
+
+</div>
+<script type="text/javascript" charset="utf-8">
+  function filter(){
+    window.filter={
+      name:getParameterByName("filterName"),
+      value:getParameterByName("filterValue"),
+      des:getParameterByName("filterDes")
+    }
+    if(window.filter.name=="category"){
+      return _(window.site.posts).filter(function(p){
+        return _(p.categories).contains(window.filter.value)
+      })
+    }
+
+  }
+  function article(post){
+    var art=$("<article/>")
+    art.append($("<h1/>").append($("<a/>").attr("href",post.url).text(post.title)))
+    return art
+  }
+  function update(){
+    $("#blog-filtered").empty()
+    var posts=filter()
+    _(posts).each(function(p){
+      $("#blog-filtered").append(article(p))
+    })
+    $("h1.entry-title").text(window.filter.des)
+  }
+  update()
+</script>
