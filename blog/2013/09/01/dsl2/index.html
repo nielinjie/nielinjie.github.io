@@ -225,6 +225,14 @@ var duoshuoQuery = {short_name:"nielinjie"};
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2014/04/20/series/">向Octopress贡献（二）：连载系列</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/20/xiaowanyier/">向Octopress贡献（一）：动态内容</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2014/04/12/said-xueren4/">语录：雪人（四）</a>
       </li>
     
@@ -234,14 +242,6 @@ var duoshuoQuery = {short_name:"nielinjie"};
     
       <li class="post">
         <a href="/blog/2014/04/03/aa2/">敏捷的架构设计（三）：第一块看板</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/31/aa1/">敏捷的架构设计（二）：风险驱动</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/03/31/aa/">敏捷的架构设计（一）：自问自答</a>
       </li>
     
   </ul>
@@ -277,26 +277,14 @@ var duoshuoQuery = {short_name:"nielinjie"};
 
 </style>
 <section class="category-svg">
+  <h1>Categories</h1>
 
 </section>
 <script type="text/javascript" charset="utf-8">
 
-var width = 250,
-    height = 250;
-
-var force = d3.layout.force()
-    .charge(-150)
-    .size([width, height])
-    .on("tick", tick);
 
 
-var svg = d3.select(".category-svg").append("svg")
-    .attr("width", width)
-    .attr("height", height);
-
-var link = svg.selectAll(".link"),
-    node = svg.selectAll(".node");
-
+(function(){
 function categories(){
   return _(window.site.posts).chain()
     .map(function(p){return p.categories})
@@ -325,6 +313,22 @@ function relations(){
     return [c,_(window.site.posts).chain().filter(function(p){return bothCategories(p,c[0],c[1])}).size().value()]
   })
 }
+  var width = 250,
+      height = 250;
+
+  var force = d3.layout.force()
+      .charge(-150)
+      .size([width, height])
+      .on("tick", tick);
+
+
+  var svg = d3.select(".category-svg").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+  var link = svg.selectAll(".link"),
+      node = svg.selectAll(".node");
+
   var ns=nodes()
 
   var graph={
@@ -384,17 +388,18 @@ function relations(){
         window.location.href=buildUrl(url,{filterName:"category",filterValue:c.name,filterDes:"Category: "+c.name})
       })
   node.call(tip)
+  function tick() {
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
 
-function tick() {
-  link.attr("x1", function(d) { return d.source.x; })
-      .attr("y1", function(d) { return d.source.y; })
-      .attr("x2", function(d) { return d.target.x; })
-      .attr("y2", function(d) { return d.target.y; });
+    node
+          .attr("transform", function(d) {
+          return "translate(" + d.x + "," + d.y + ")"; });
+  }
+})()
 
-  node
-        .attr("transform", function(d) {
-  	    return "translate(" + d.x + "," + d.y + ")"; });
-}
 
 
 

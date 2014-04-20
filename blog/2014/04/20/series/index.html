@@ -5,12 +5,14 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>语录：好的架构师 - 聂同学</title>
+  <title>向Octopress贡献（二）：连载系列 - 聂同学</title>
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="好的架构师说：好吧，重做是架构进化的一种形式，我们下一个架构将解决这些问题；脾气好的架构师说：好吧，你是老板，你说重做我们就重做；2b架构师说：重做？mb你是老板你了不起么？老子的架构不够nb么？老子的xxx风格yyy模式你sb懂得起么？
-">
+  <meta name="description" content="我们常常会发表一些连载的系列文章。
+这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
+需要一个新的方式在同一系列的连载文章间跳转。 延续上篇文章的思路，采用js来实现功能。
+在每个post头部的yaml metadata中添加连载系列的相关数据，比如这篇文章添加：series: [" &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +21,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi">
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2014/04/20/series">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -81,7 +83,7 @@
   
   <header>
     
-      <h1 class="entry-title">语录：好的架构师</h1>
+      <h1 class="entry-title">向Octopress贡献（二）：连载系列</h1>
     
     
       <p class="meta">
@@ -97,14 +99,28 @@
   
 
 
-<time datetime="2014-03-09T21:36:38+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2014</time>
+<time datetime="2014-04-20T23:36:38+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>好的架构师说：好吧，重做是架构进化的一种形式，我们下一个架构将解决这些问题；脾气好的架构师说：好吧，你是老板，你说重做我们就重做；2b架构师说：重做？mb你是老板你了不起么？老子的架构不够nb么？老子的xxx风格yyy模式你sb懂得起么？</p>
+<div class="entry-content"><p>我们常常会发表一些连载的系列文章。
+这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
+需要一个新的方式在同一系列的连载文章间跳转。</p>
+
+<!-- more -->
+
+
+<ul>
+<li>延续上篇文章的思路，采用js来实现功能。</li>
+<li>在每个post头部的yaml metadata中添加连载系列的相关数据，比如这篇文章添加：<code>series: ["向Octopress贡献 2"]</code>。</li>
+<li>Jekyll会自动将所有的metadata都解析出来，这样全局的json文件中可以容易地包含相关数据。</li>
+<li>在适当的地方嵌入相应地html文件，其中的js根据json产生相关的内容。</li>
+<li>代码还没写。</li>
+</ul>
+
 </div>
 
 
@@ -127,12 +143,12 @@
   
 
 
-<time datetime="2014-03-09T21:36:38+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2014</time>
+<time datetime="2014-04-20T23:36:38+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/yu-lu/'>语录</a>
+    <a class='category' href='/blog/categories/octopress/'>octopress</a>, <a class='category' href='/blog/categories/kai-fa/'>开发</a>
   
 </span>
 
@@ -141,10 +157,8 @@
 
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/22/new-blog-site/" title="Next Post: 博客搬家了">&laquo; 博客搬家了 </a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/03/03/said-yuya/" title="Previous Post: 语录：乌鸦"> 语录：乌鸦 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/04/20/xiaowanyier/" title="Previous Post: 向Octopress贡献（一）：动态内容"> 向Octopress贡献（一）：动态内容 &raquo;</a>
       
 
     </p>

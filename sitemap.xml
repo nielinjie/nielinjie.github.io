@@ -114,11 +114,19 @@
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/2014/04/12/said-xueren4/</loc>
-        <lastmod>2014-04-13T14:39:18+08:00</lastmod>
+        <lastmod>2014-04-20T23:12:39+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nielinjie.github.io/blog/2014/04/20/xiaowanyier/</loc>
+        <lastmod>2014-04-20T23:52:41+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nielinjie.github.io/blog/2014/04/20/series/</loc>
+        <lastmod>2014-04-20T23:51:19+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/archives/</loc>
-        <lastmod>2014-04-13T14:39:18+08:00</lastmod>
+        <lastmod>2014-04-20T23:52:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/filter/filter.html</loc>
@@ -126,7 +134,7 @@
     </url>
     <url>
         <loc>http://nielinjie.github.io/</loc>
-        <lastmod>2014-04-13T14:39:18+08:00</lastmod>
+        <lastmod>2014-04-20T23:52:41+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/robots.txt</loc>
@@ -134,6 +142,6 @@
     </url>
     <url>
         <loc>http://nielinjie.github.io/site.json.js</loc>
-        <lastmod>2014-04-13T15:25:16+08:00</lastmod>
+        <lastmod>2014-04-20T23:51:20+08:00</lastmod>
     </url>
 </urlset>

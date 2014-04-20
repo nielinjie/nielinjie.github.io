@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-04-20T20:55:35+08:00</updated>
+  <updated>2014-04-21T00:24:30+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[向Octopress贡献（二）：连载系列]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/04/20/series/"/>
+    <updated>2014-04-20T23:36:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/04/20/series</id>
+    <content type="html"><![CDATA[<p>我们常常会发表一些连载的系列文章。
+这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
+需要一个新的方式在同一系列的连载文章间跳转。</p>
+
+<!-- more -->
+
+
+<ul>
+<li>延续上篇文章的思路，采用js来实现功能。</li>
+<li>在每个post头部的yaml metadata中添加连载系列的相关数据，比如这篇文章添加：<code>series: ["向Octopress贡献 2"]</code>。</li>
+<li>Jekyll会自动将所有的metadata都解析出来，这样全局的json文件中可以容易地包含相关数据。</li>
+<li>在适当的地方嵌入相应地html文件，其中的js根据json产生相关的内容。</li>
+<li>代码还没写。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[向Octopress贡献（一）：动态内容]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/04/20/xiaowanyier/"/>
+    <updated>2014-04-20T23:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/04/20/xiaowanyier</id>
+    <content type="html"><![CDATA[<p>同学们往右看：就是那个一坨一坨飘一飘的东西。8-D<br/>
+每个圆表示一个category，它的大小表示该category名下文章的数量（相对的）；两个圆之间的连线表示两个category有联系，也就是说有文章同时属于这两个category。
+两个圆距离越近，则category的关系越密切，同时属于这两个category的文章越多。<br/>
+点击圆形，将来到一个显示该category下所有文章的页面。</p>
+
+<!-- more -->
+
+
+<p>这只是一个初步的demo，有兴趣的同学可以沿着这个思路创造更多有意思的动态内容。</p>
+
+<ul>
+<li>新建一个静态的文件，让Jekyll在generate的时候将整个site的数据写进去。这里我放在根目录，用的是json格式。</li>
+<li>定制aside添加一个html文件，我这里是category.html。</li>
+<li>category.html里面用js绘制需要的动态内容。引用上面的json文件，你可以利用所有数据为所欲为。</li>
+<li>代码看这里：<a href="http://github.com/nielinjie/nielinjie.github.io/commit/3abeab7a7f6d5170be3ae1f7294314470063e88b">http://github.com/nielinjie/nielinjie.github.io/commit</a>。</li>
+</ul>
+
+
+<p>至于显示category文章的页面，比较简单。通过url上queryString传递相应参数即可。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[这些年写过的代码（一）]]></title>

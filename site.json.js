@@ -2,12 +2,46 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2014/04/20/series/",
+    date:"2014-04-20T23:36:38+08:00",
+    title:"向Octopress贡献（二）：连载系列",
+    categories:[
+      
+        "octopress",
+      
+        "开发",
+      
+    ],
+    series:[
+      
+        "向Octopress贡献 2",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/04/20/xiaowanyier/",
+    date:"2014-04-20T23:06:38+08:00",
+    title:"向Octopress贡献（一）：动态内容",
+    categories:[
+      
+        "octopress",
+      
+        "开发",
+      
+    ],
+    series:[
+      
+        "向Octopress贡献 1",
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/04/12/said-xueren4/",
     date:"2014-04-12T23:36:38+08:00",
     title:"语录：雪人（四）",
     categories:[
-      
-        "敏捷",
       
         "架构",
       
@@ -15,8 +49,6 @@ window.site={
       
     ],
     series:[
-      
-        "雪人 4",
       
     ]
   },
