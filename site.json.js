@@ -50,6 +50,8 @@ window.site={
     ],
     series:[
       
+        "雪人 4",
+      
     ]
   },
 
@@ -65,6 +67,8 @@ window.site={
       
     ],
     series:[
+      
+        "敏捷的架构设计 4",
       
     ]
   },
@@ -82,6 +86,8 @@ window.site={
     ],
     series:[
       
+        "敏捷的架构设计 3",
+      
     ]
   },
 
@@ -97,6 +103,8 @@ window.site={
       
     ],
     series:[
+      
+        "敏捷的架构设计 2",
       
     ]
   },
@@ -114,6 +122,8 @@ window.site={
     ],
     series:[
       
+        "敏捷的架构设计 1",
+      
     ]
   },
 
@@ -129,6 +139,8 @@ window.site={
       
     ],
     series:[
+      
+        "雪人 3",
       
     ]
   },
@@ -210,6 +222,8 @@ window.site={
     ],
     series:[
       
+        "雪人 2",
+      
     ]
   },
 
@@ -225,6 +239,8 @@ window.site={
       
     ],
     series:[
+      
+        "雪人 1",
       
     ]
   },
@@ -242,6 +258,8 @@ window.site={
     ],
     series:[
       
+        "一场似非而是的DSL 4",
+      
     ]
   },
 
@@ -257,6 +275,8 @@ window.site={
       
     ],
     series:[
+      
+        "一场似非而是的DSL 3",
       
     ]
   },
@@ -274,6 +294,8 @@ window.site={
     ],
     series:[
       
+        "一场似非而是的DSL 2",
+      
     ]
   },
 
@@ -289,6 +311,8 @@ window.site={
       
     ],
     series:[
+      
+        "一场似非而是的DSL 1",
       
     ]
   },
@@ -351,6 +375,8 @@ window.site={
       
     ],
     series:[
+      
+        "这些年写过的代码 1",
       
     ]
   },
@@ -418,6 +444,8 @@ window.site={
     ],
     series:[
       
+        "关于REST风格的讨论 2",
+      
     ]
   },
 
@@ -433,6 +461,8 @@ window.site={
       
     ],
     series:[
+      
+        "关于REST风格的讨论 1",
       
     ]
   },
@@ -466,6 +496,8 @@ window.site={
     ],
     series:[
       
+        "Android上的Scala 3",
+      
     ]
   },
 
@@ -482,6 +514,8 @@ window.site={
     ],
     series:[
       
+        "Android上的Scala 1",
+      
     ]
   },
 
@@ -497,6 +531,8 @@ window.site={
       
     ],
     series:[
+      
+        "Android上的Scala 2",
       
     ]
   },

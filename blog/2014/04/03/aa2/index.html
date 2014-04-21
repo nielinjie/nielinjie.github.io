@@ -51,7 +51,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">聂同学</a></h1>
   
-    <h2>一个程序猿和架狗师的实践与思考</h2>
+    <h2>一个程序员和架构师的实践与思考</h2>
   
 </hgroup>
 
@@ -180,6 +180,45 @@
       
 
     </p>
+
+    <p/>
+    <section>
+      
+  
+
+
+<div class="post-series" data-series="敏捷的架构设计 3,"></div>
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+    var ss=series()
+    var sers=$("div.post-series").attr("data-series").split(",")
+    sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
+      var name=s.split(" ")[0]
+      var index=s.split(" ")[1]
+      return ss.filter(function(ser){
+        return ser.name==name
+      })
+    }).value()
+    _(sers).each(function(s){
+      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      _(s).each(function(sOfP){
+        p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
+      })
+    })
+  })()
+</script>
+
+    </section>
+
         
         <section>
 <h2>Sharing</h2>
@@ -249,6 +288,31 @@ var duoshuoQuery = {short_name:"nielinjie"};
     
   </ul>
 </section>
+<section class="series">
+  <h1>Series</h1>
+  <ul class="series"></ul>
+</section>
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+
+    var sers=_(series()).chain().groupBy("name").value()
+    _(sers).each(function(v,k){
+      var url="/blog/filter/filter.html"
+      var u = buildUrl(url,{filterName:"series",filterValue:k,filterDes:"Series: "+k})
+      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+"（"+v.length+"）")))
+    })
+  })()
+</script>
 <style>
 
 .link {
