@@ -4,7 +4,7 @@ title: "向Octopress贡献（二）：连载系列"
 date: 2014-04-20 23:36:38 +0800
 comments: true
 categories: [开发, octopress]
-series: ["向Octopress贡献 2"]
+series: ["向Octopress贡献 2","随便一个 1"]
 ---
 
 我们常常会发表一些连载的系列文章。

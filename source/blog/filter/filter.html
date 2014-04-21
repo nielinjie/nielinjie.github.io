@@ -19,7 +19,13 @@ footer: false
         return _(p.categories).contains(window.filter.value)
       })
     }
-
+    if(window.filter.name=="series"){
+      return _(window.site.posts).filter(function(p){
+        return _(p.series).any(function(s){
+          return s.split(" ")[0]==window.filter.value
+        })
+      })
+    }
   }
   function article(post){
     var art=$("<article/>")

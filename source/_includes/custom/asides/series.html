@@ -1,0 +1,25 @@
+<section class="series">
+  <h1>Series</h1>
+  <ul class="series"></ul>
+</section>
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+
+    var sers=_(series()).chain().groupBy("name").value()
+    _(sers).each(function(v,k){
+      var url="/blog/filter/filter.html"
+      var u = buildUrl(url,{filterName:"series",filterValue:k,filterDes:"Series: "+k})
+      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+"（"+v.length+"）")))
+    })
+  })()
+</script>
