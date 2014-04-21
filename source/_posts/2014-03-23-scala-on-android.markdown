@@ -4,6 +4,8 @@ title: "Android 上的 Scala， 实战之路（二）"
 date: 2011-11-14 16:04:04 +0800
 comments: true
 categories: [Scala, Android]
+series: ["Android上的Scala 1"]
+
 ---
 
 

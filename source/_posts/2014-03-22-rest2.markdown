@@ -4,6 +4,8 @@ title: "关于REST风格的讨论（二）"
 date: 2012-10-29 21:36:38 +0800
 comments: true
 categories: [REST, 架构]
+series: ["关于REST风格的讨论 2"]
+
 ---
 
 

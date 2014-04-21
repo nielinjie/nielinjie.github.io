@@ -4,6 +4,8 @@ title: "敏捷的架构设计（三）：第一块看板"
 date: 2014-04-03 23:36:38 +0800
 comments: true
 categories: [架构, 敏捷]
+series: ["敏捷的架构设计 3"]
+
 published: true
 ---
 

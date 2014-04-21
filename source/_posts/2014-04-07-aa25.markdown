@@ -4,6 +4,8 @@ title: "敏捷的架构设计（四）：来提意见"
 date: 2014-04-07 16:36:38 +0800
 comments: true
 categories: [架构, 敏捷]
+series: ["敏捷的架构设计 4"]
+
 published: true
 ---
 

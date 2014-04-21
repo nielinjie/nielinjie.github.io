@@ -4,6 +4,7 @@ title: "敏捷的架构设计（二）：风险驱动"
 date: 2014-03-31 21:36:38 +0800
 comments: true
 categories: [架构, 敏捷]
+series: ["敏捷的架构设计 2"]
 published: true
 ---
 

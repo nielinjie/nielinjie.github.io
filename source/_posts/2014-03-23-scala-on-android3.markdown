@@ -4,6 +4,8 @@ title: "Android 上的 Scala， 实战之路（三）"
 date: 2011-11-14 17:04:04 +0800
 comments: true
 categories: [Scala, Android]
+series: ["Android上的Scala 3"]
+
 ---
 
 ### 三、介个是数据库接口？
