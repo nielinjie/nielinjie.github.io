@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-04-24T22:56:52+08:00</updated>
+  <updated>2014-05-21T22:07:26+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,270 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[我的简历（陆续补充中）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/05/21/resume/"/>
+    <updated>2014-05-21T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/05/21/resume</id>
+    <content type="html"><![CDATA[<h3>自我评价</h3>
+
+<p>熟悉一般企业信息应用系统架构及开发技术。能够进行应用架构设计、技术决策、设计开发。
+深入理解软件开发流程。能够进行相关领域的制度建立、责任分配、指标制定。
+能够负责开发团队的构建和运行。
+善于沟通合作，具备一定领导力和辅导培训能力。</p>
+
+<!-- more -->
+
+
+<h3>工作经验</h3>
+
+<ul>
+<li>2009 /6&mdash;至今：平安科技（深圳）有限公司
+
+<ul>
+<li>开发九部、集团开发部</li>
+<li>应用架构师</li>
+<li>负责两个业务系列所属的项目和相关重要任务的架构设计和架构执行，日常应用架构管理维护。重点需求的解决方案设计，详细设计复审等工作。
+同时参与部门范围改进开发过程；设计开发工具；提高开发效率；保障开发质量等工作。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2007 /11&mdash;2009 /6：平安科技（深圳）有限公司
+
+<ul>
+<li>开发九部</li>
+<li>分组经理</li>
+<li>组建和领导10-20人开发团队，统筹开发分工协调，进行相关决策。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2005 /12&mdash;2007 /11：上海花旗软件
+
+<ul>
+<li>PS部（专业服务部）</li>
+<li>Solution Architect</li>
+<li>j2ee软件系统架构、设计和开发。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2004 /6&mdash;2005 /11：上海花旗软件
+
+<ul>
+<li>PS部（专业服务部）</li>
+<li>Senior Software Developer</li>
+<li>j2ee软件设计和开发。</li>
+</ul>
+</li>
+<li>……</li>
+</ul>
+
+
+<h3>项目经验</h3>
+
+<ul>
+<li>2014 /1&mdash;至今：平安企业门户信息聚合和企业社交
+
+<ul>
+<li>项目描述： 平安企业门户，关于信息聚合和企业社交。原型项目。</li>
+<li>责任描述： 策划、原型设计和开发、技术选型。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2014 /1&mdash;至今：平安法律部诉讼管理系统
+
+<ul>
+<li>项目描述： 平安法律部诉讼管理系统。敏捷项目。</li>
+<li>责任描述： 架构设计，架构执行。
+
+<ul>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（一 至 四）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2014 /1&mdash;2014 /4：用户风险等级评级系统
+
+<ul>
+<li>项目描述： 平安内控关于用户风险等级的数据汇总和分析平台。</li>
+<li>责任描述： 架构设计顾问。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2013 /1&mdash;2014 /1：行政系统移动化
+
+<ul>
+<li>项目描述： 平安行政系统移动适配项目。敏捷项目。</li>
+<li>责任描述： 架构设计，架构执行。
+
+<ul>
+<li><a href="http://nielinjie.github.io/blog/2013/02/25/our-new-front-end/">我们的新前端</a></li>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&amp;filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA">关于REST风格的讨论（系列）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2013 /1&mdash;至今：机构主页可定制化改造
+
+<ul>
+<li>项目描述： 平安机构主页可定制化改造项目，暨企业统一信息发布系统实验项目。</li>
+<li>责任描述： 架构设计，技术选型，架构执行。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2012 /10&mdash;至今：企业全文检索服务
+
+<ul>
+<li>项目描述： 企业公用的全文检索服务。</li>
+<li>责任描述： 架构设计、技术选型，架构执行。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2012 /6&mdash;2013 /4：内控信息收集管理系统
+
+<ul>
+<li>项目描述： 平安集团内控中心内控信息收集管理系统。运行于j2ee平台的bs架构企业管理系统，展示逻辑大量部署于浏览器端。</li>
+<li>责任描述： 架构设计、技术选型、技术培训、架构执行。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2011 /10&mdash;至今：办公系统重构项目
+
+<ul>
+<li>项目描述： 平安集团行政中心办公系统的重构项目。对复杂系统进行有针对性的重构，延缓腐化、降低其维护成本和修改功能的成本。</li>
+<li>责任描述： 策划并发起项目、制定原则和方案、分析和设计。
+
+<ul>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&amp;filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL">一场似非而是的DSL（系列）</a></li>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（五、六）：领域地图（一、二）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2005 /11&mdash;2007 /11：投资银行销售客户管理系统
+
+<ul>
+<li>项目描述： j2ee 平台b/s结构的客户资源管理系统。</li>
+<li>责任描述： 架构设计、详细设计、开发协调。</li>
+</ul>
+</li>
+<li>……</li>
+</ul>
+
+
+<h3>教育经历</h3>
+
+<ul>
+<li>1997 /9&mdash;2001 /7  上海交通大学
+
+<ul>
+<li>自动化   本科</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>培训经历</h3>
+
+<ul>
+<li>2013 /12&mdash;2013 /12：
+
+<ul>
+<li>中程在线： 架构设计实践</li>
+</ul>
+</li>
+<li>2012 /3&mdash;2012 /3：
+
+<ul>
+<li>MPD软件工坊：  敏捷开发过程</li>
+</ul>
+</li>
+<li>2011 /8&mdash;2011 /8：
+
+<ul>
+<li>中程在线： 大型架构案例分析训练营</li>
+</ul>
+</li>
+<li>2011 /6&mdash;2011 /7：
+
+<ul>
+<li>卡洛奇资讯：  卡洛奇应用架构师培训</li>
+</ul>
+</li>
+<li>2010 /7&mdash;2010 /8：
+
+<ul>
+<li>中程在线： 架构设计最佳实践与方法体系</li>
+</ul>
+</li>
+<li>2009 /8&mdash;2009 /8：
+
+<ul>
+<li>Sun：  sun架构师标准课程培训SL425，获SL425结业证书</li>
+</ul>
+</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[敏捷的架构设计（六）：领域地图（二）]]></title>
@@ -632,50 +896,6 @@ A：“风险驱动架构设计”方法……</p>
 
 
 <p>全局和可读，是我们这个DSL设计要重点解决的问题。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一场似非而是的DSL（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/09/01/dsl1/"/>
-    <updated>2013-09-01T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/09/01/dsl1</id>
-    <content type="html"><![CDATA[<p>设计这套DSL的过程中，一直纠结的是：这到底是不是真正的DSL？</p>
-
-<!-- more -->
-
-
-<p>这套DSL，是为公司办公系统的“特征机制”设计的。</p>
-
-<p>所谓“特征”，是对业务差异的一个建模。</p>
-
-<p>我们的办公系统同时为多个不同的业务机构、外部系统、不同的文档类型服务，不同的机构、不同的外部系统、不同的文档类型带来了不同的业务差异逻辑。这些差异化的业务逻辑，带来了系统大部分的复杂性、不稳定性。处理通用逻辑与差异逻辑的关系，成了我们这个系统架构的主要挑战之一。应对的原则很明确，就是将差异逻辑与通用逻辑分开，使其互不影响，分别进化。架构上典型的模式——按通用性分层。</p>
-
-<p>“特征机制”就是我们对这个模式的一个实现，简述一下：</p>
-
-<ul>
-<li>我们把系统逻辑中可能发生扩展的点称为<strong>扩展点</strong>。</li>
-<li>不同的<strong>业务差异</strong>，通过在扩展点上填入适当的<strong>扩展</strong>来实现专用逻辑。</li>
-<li>所谓<strong>特征</strong>，就是一条知识，描述了当在何种<strong>业务差异</strong>的处理中，需要在哪些个扩展点填入哪些个<strong>扩展</strong>。</li>
-<li>所谓<strong>特征机制</strong>，就是当系统运行到一个扩展点的时候，查找到正确的特征，填入正确的扩展并运行的机制。</li>
-</ul>
-
-
-<p>容易发现，特征机制要发挥作用，需要有一个机制来描述所有的特征，这就是特征机制的知识层，对这个描述机制要求是：</p>
-
-<ul>
-<li><p>全局的：我们希望一个特征的所有内容，能够一次看到。如前所述：</p>
-
-<blockquote><p>一条知识，描述了当何种<strong>业务差异</strong>的情况下，需要在哪些个<strong>扩展点</strong>填入哪些个<strong>扩展</strong>。</p></blockquote></li>
-<li>动态的：可以在系统运行中加入、删除或者修改一个<strong>特征</strong>。</li>
-<li>可读的：我们希望运营人员甚至业务人员可以看懂并修改这些<strong>特征</strong>。</li>
-<li>容错的：系统能帮助修改者发现并改正描述中的错误。</li>
-</ul>
-
-
-<p>这些要求并不容易，幸好我们设计这个机制的时候已经将知识层与操作层分离，可以分别进化。先做好操作层，保证机制可以运行，后续再逐渐改善简陋的知识层。目前的知识层，是spring bean配置文件，整个特征机制可以运行，但上述的描述机制要求一条也没有达到。</p>
-
-<p>于是便有了这一场DSL。</p>
 ]]></content>
   </entry>
   
