@@ -17,4 +17,4 @@ series: ["向Octopress贡献 2"]
 * 在每个post头部的yaml metadata中添加连载系列的相关数据，比如这篇文章添加：`series: ["向Octopress贡献 2"]`。
 * Jekyll会自动将所有的metadata都解析出来，这样全局的json文件中可以容易地包含相关数据。
 * 在适当的地方嵌入相应地html文件，其中的js根据json产生相关的内容。
-* 代码还没写。
+* 代码在这里：[https://github.com/nielinjie/nielinjie.github.io/commit](https://github.com/nielinjie/nielinjie.github.io/commit/4a599e5d1296b420dc13473c4e6bbaf4d55fc198)。
