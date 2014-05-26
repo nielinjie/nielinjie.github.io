@@ -2,8 +2,8 @@ window.site={
   posts:[
 
   {
-    url:"/blog/2014/05/24/quality/",
-    date:"2014-05-24T20:06:38+08:00",
+    url:"/blog/2014/05/26/quality/",
+    date:"2014-05-26T20:06:38+08:00",
     title:"给老大爷系统：代码质量守则和工具",
     categories:[
       
@@ -220,6 +220,20 @@ window.site={
     categories:[
       
         "杂拌",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/03/20/wa/",
+    date:"2014-03-20T20:06:38+08:00",
+    title:"关于App服务架构风格的讨论",
+    categories:[
+      
+        "架构",
       
     ],
     series:[

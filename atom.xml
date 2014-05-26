@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-05-26T16:02:07+08:00</updated>
+  <updated>2014-05-26T16:57:17+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[给老大爷系统：代码质量守则和工具]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/05/24/quality/"/>
-    <updated>2014-05-24T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/05/24/quality</id>
+    <link href="http://nielinjie.github.io/blog/2014/05/26/quality/"/>
+    <updated>2014-05-26T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/05/26/quality</id>
     <content type="html"><![CDATA[<p>对于一个历史悠久的老大爷系统，我们的程序员定下了下面的代码质量守则：</p>
 
 <!-- more -->
@@ -778,6 +778,43 @@ A：“风险驱动架构设计”方法……</p>
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[关于App服务架构风格的讨论]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/03/20/wa/"/>
+    <updated>2014-03-20T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/03/20/wa</id>
+    <content type="html"><![CDATA[<p>最近有架构师在架构师列表提问关于web/app服务器分离的架构风格。参与了讨论，摘录如下：</p>
+
+<!-- more -->
+
+
+<h3>发起讨论邮件</h3>
+
+<p>现在在做一个面向企业用户的互联网的项目，我司一般的架构是基于web,app这样的架构。
+我认为没有必要用app，只要web就ok了，本来的基于web,app的架构是想要将复杂业务逻辑的部门和面向网络IO的view层分离，做计算和IO的分离，但是一个简单的应用去用这样的架构是没有价值的，大家认为呢？<br/>
+请大家发表下看法。</p>
+
+<h3>我的回复邮件</h3>
+
+<p>有一些看法供同学们参考、批评，如下：</p>
+
+<ul>
+<li>“计算与IO的分离“不是一个目的，而是一个手段。用来解决某个工程风险的，比如性能、安全性等。要考虑web、app是否应该分离，不是考虑是否需要”计算与IO分离“，而是考虑是否存在这些工程风险，是否应该采用这种手段来解决。</li>
+<li>现在平安常用的web与app分离这个架构策略我理解有两个层面内容，这两个方面的必要性可以分开考虑。可以ab都要，可以只要a，也可以都不要……：
+
+<ul>
+<li>逻辑划分层面，web和app放入不同的逻辑单元。这个是扩展性、互操作性的的考虑。比如有些系统会出现多个展示端，与其他系统的交互一般需要暴露在app层次等</li>
+<li>部署层面，web与app部署于不同节点。这个是安全、可用性方面的考虑。</li>
+</ul>
+</li>
+<li>w/a 分离作为企业推定架构策略，如果被裁剪是有一些隐性成本的，比如人员不适应，环境不标准等等。这些成本会削弱甚至抵消裁剪带来的成本降低，所以倾向于有确实的理由再裁剪。</li>
+</ul>
+
+
+<p>8-D</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[语录：好的架构师]]></title>
     <link href="http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi/"/>
     <updated>2014-03-09T21:36:38+08:00</updated>
@@ -904,58 +941,6 @@ A：“风险驱动架构设计”方法……</p>
     }
 }
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一场似非而是的DSL（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/09/01/dsl3/"/>
-    <updated>2013-09-01T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/09/01/dsl3</id>
-    <content type="html"><![CDATA[<p>上回说到，可读和全局，是我们的DSL形式要解决的主要问题。</p>
-
-<!-- more -->
-
-
-<ul>
-<li>全局，要求DSL结构要精练，同时最好是层级结构，避免指针引用。</li>
-<li>可读，要求DSL能以一种形式表达各个不同的业务方面，所以这个形式必须相当通用。</li>
-</ul>
-
-
-<p>此时那个最纠结的问题出现了：“相当通用”的DSL是不是D <strong><em>S</em></strong> L？毕竟，“通用”在一端，S在另一端。</p>
-
-<p>幸运的是：我们决定先找到这个DSL再讨论它是不是真正的DSL。</p>
-
-<p>既然需要相当通用，我们决定从通用的配置形式出发，我们的办法是——</p>
-
-<ol>
-<li>清理要描述的对象，明确其结构和关系，形成确定的业务模型。在这里就是“特征机制“涉及到的知识层的各个概念，比如特征、扩展点、扩展等。这个工作其实在“特征机制”设计期就已经完成了。</li>
-<li>保证知识层业务模型的可读性，在我们Java系统中，就表现为相关的类（特征、扩展点、扩展等，包括抽象的类和具体的类），它们的类名和属性名、关系名都准确精练、可读。</li>
-<li><p>然后我们使用一种通用的配置形式将这些类实例化（一些javabean），并关联在一起。这时候发现，我们的DSL，基本上等同于描述Bean图的DSL。</p>
-
-<p> 这种配置方式是很常见的，有很多实现方法：</p>
-
-<ul>
-<li>Spring Bean XML：这个形式简单直白，通用性非常强，但过于冗长了些，很难满足全局性要求。噪音很多，很难说可读。</li>
-<li>定制namespace的Spring Bean XML和其他简单的XML：粗略一看是个好主意，比上面的办法在体积和噪音两个方面都改善挺多。但仔细看看不对，要保证通用性，这种方法只能退化为前一种。</li>
-<li>Json：形式上比较简洁，噪音比较少，基本已经满足要求。只是需要在配置中补充一些类型信息，而且处理这些信息需要自己实现，比较繁琐。</li>
-<li>YAML：跟Json相似，类型信息方面实现上简洁些。</li>
-<li>Groovy ObjectGraphBuilder：当我们已经开始深入研究YAML的实现细节的时候，回忆到世界上还有这个，各方面都符合要求。</li>
-</ul>
-</li>
-</ol>
-
-
-<p>至此，我们基本上找到了符合要求的DSL形式，期间也花了很多时间来思考那个纠结的问题：“相当通用”的DSL是不是DSL？现在，我们的回答是：这个DSL就是我们想要的DSL。我们认为——</p>
-
-<ul>
-<li>作为一门语言，其通用或者专用，主要是从使用者的视角来衡量，而不是从设计者、实现者的视角。虽然我们用通用的形式设计、用通用的方法实现这个dsl，但使用者撰写、维护时能接触到的，都是专有业务领域的概念，很少有领域之外的噪音。</li>
-<li>任何定义，都是为作用服务的。我们选择DSL，是由于它的作用，而不是它的定义。如果一个东西被用作DSL，则它就是DSL。</li>
-</ul>
-
-
-<p>一场似非而是的DSL的故事就是这样，如果有同学对我们这个DSL具体是怎样的有兴趣，可以要求我写故事后传……</p>
 ]]></content>
   </entry>
   

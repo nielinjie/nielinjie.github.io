@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>博客搬家了 - 聂同学</title>
+  <title>关于App服务架构风格的讨论 - 聂同学</title>
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。 感谢octopress, 感谢芝明同学（http://zhaozhiming.github.io ），感谢github。听说github正在遭受ddos攻击，祝好运。 期间只遇到一个编码问题，如下。 &hellip;">
+  <meta name="description" content="最近有架构师在架构师列表提问关于web/app服务器分离的架构风格。参与了讨论，摘录如下： 发起讨论邮件 现在在做一个面向企业用户的互联网的项目，我司一般的架构是基于web,app这样的架构。
+我认为没有必要用app，只要web就ok了，本来的基于web, &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nielinjie.github.io/blog/2014/03/22/new-blog-site">
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2014/03/20/wa">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -80,7 +81,7 @@
   
   <header>
     
-      <h1 class="entry-title">博客搬家了</h1>
+      <h1 class="entry-title">关于App服务架构风格的讨论</h1>
     
     
       <p class="meta">
@@ -96,69 +97,42 @@
   
 
 
-<time datetime="2014-03-22T20:15:27+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time>
+<time datetime="2014-03-20T20:06:38+08:00" pubdate data-updated="true">Mar 20<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。</p>
+<div class="entry-content"><p>最近有架构师在架构师列表提问关于web/app服务器分离的架构风格。参与了讨论，摘录如下：</p>
 
 <!-- more -->
 
 
-<p>感谢octopress, 感谢芝明同学（<a href="http://zhaozhiming.github.io">http://zhaozhiming.github.io</a> ），感谢github。听说github正在遭受ddos攻击，祝好运。</p>
+<h3>发起讨论邮件</h3>
 
-<p>期间只遇到一个编码问题，如下。感谢这位同学的博客，问题很快解决了。
-<a href="http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/">http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/</a>
- 见文章中的最后一个问题：YAML Exception</p>
+<p>现在在做一个面向企业用户的互联网的项目，我司一般的架构是基于web,app这样的架构。
+我认为没有必要用app，只要web就ok了，本来的基于web,app的架构是想要将复杂业务逻辑的部门和面向网络IO的view层分离，做计算和IO的分离，但是一个简单的应用去用这样的架构是没有价值的，大家认为呢？<br/>
+请大家发表下看法。</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) ✗ rake generate
-</span><span class='line'>## Generating Site with Jekyll
-</span><span class='line'>identical source/stylesheets/screen.css
-</span><span class='line'>Configuration from /Users/nielinjie/Projects/octopress/_config.yml
-</span><span class='line'>Building site: source -&gt; public
-</span><span class='line'>YAML Exception reading 2014-03-22-new-blog-site.markdown: invalid byte sequence in US-ASCII
-</span><span class='line'>/Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'</span></code></pre></td></tr></table></div></figure>
+<h3>我的回复邮件</h3>
 
+<p>有一些看法供同学们参考、批评，如下：</p>
+
+<ul>
+<li>“计算与IO的分离“不是一个目的，而是一个手段。用来解决某个工程风险的，比如性能、安全性等。要考虑web、app是否应该分离，不是考虑是否需要”计算与IO分离“，而是考虑是否存在这些工程风险，是否应该采用这种手段来解决。</li>
+<li>现在平安常用的web与app分离这个架构策略我理解有两个层面内容，这两个方面的必要性可以分开考虑。可以ab都要，可以只要a，也可以都不要……：
+
+<ul>
+<li>逻辑划分层面，web和app放入不同的逻辑单元。这个是扩展性、互操作性的的考虑。比如有些系统会出现多个展示端，与其他系统的交互一般需要暴露在app层次等</li>
+<li>部署层面，web与app部署于不同节点。这个是安全、可用性方面的考虑。</li>
+</ul>
+</li>
+<li>w/a 分离作为企业推定架构策略，如果被裁剪是有一些隐性成本的，比如人员不适应，环境不标准等等。这些成本会削弱甚至抵消裁剪带来的成本降低，所以倾向于有确实的理由再裁剪。</li>
+</ul>
+
+
+<p>8-D</p>
 </div>
 
 
@@ -181,12 +155,12 @@
   
 
 
-<time datetime="2014-03-22T20:15:27+08:00" pubdate data-updated="true">Mar 22<span>nd</span>, 2014</time>
+<time datetime="2014-03-20T20:06:38+08:00" pubdate data-updated="true">Mar 20<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/za-ban/'>杂拌</a>
+    <a class='category' href='/blog/categories/jia-gou/'>架构</a>
   
 </span>
 
@@ -195,10 +169,10 @@
 
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/03/30/said-xueren3/" title="Next Post: 语录：雪人（三）">&laquo; 语录：雪人（三） </a>
+        <a class="basic-alignment left" href="/blog/2014/03/22/new-blog-site/" title="Next Post: 博客搬家了">&laquo; 博客搬家了 </a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/03/20/wa/" title="Previous Post: 关于App服务架构风格的讨论"> 关于App服务架构风格的讨论 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/03/09/said-jiagoushi/" title="Previous Post: 语录：好的架构师"> 语录：好的架构师 &raquo;</a>
       
 
     </p>
