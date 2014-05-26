@@ -25,7 +25,7 @@ GEM
     liquid (2.3.0)
     maruku (0.6.1)
       syntax (>= 1.0.0)
-    metaweblog (0.1.0)
+    metaweblog (0.2.0)
     mini_magick (3.7.0)
       subexec (~> 0.2.1)
     nokogiri (1.5.11)
@@ -64,7 +64,7 @@ DEPENDENCIES
   haml (~> 3.1.7)
   jekyll (~> 0.12)
   liquid (~> 2.3.0)
-  metaweblog (~> 0.1.0)
+  metaweblog (~> 0.2.0)
   mini_magick
   nokogiri (~> 1.5.9)
   pygments.rb (~> 0.3.4)
