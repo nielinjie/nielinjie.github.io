@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-05-24T17:32:33+08:00</updated>
+  <updated>2014-05-26T16:02:07+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老大爷系统：代码质量守则和工具]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/05/24/quality/"/>
+    <updated>2014-05-24T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/05/24/quality</id>
+    <content type="html"><![CDATA[<p>对于一个历史悠久的老大爷系统，我们的程序员定下了下面的代码质量守则：</p>
+
+<!-- more -->
+
+
+<ul>
+<li>新增方法复杂度不能大于5。</li>
+<li>新增类之间不能出现包循环依赖，同层之间可稍微放宽（如Service之间互相调用）。</li>
+<li>新增类和方法避免有重复代码，出现重复或者相似度较高的代码应提炼成函数。</li>
+<li>过长的方法，新增方法不能过长，代码行数限定在30。</li>
+<li>过大的类，新增类不能过大，尽量体现类的单一职责。</li>
+<li>变量、方法和类的命名要体现业务含义，不能用如s=5、getString()等命名。</li>
+<li>新增方法需编写自动化测试案例。</li>
+</ul>
+
+
+<p>守则里面有很多“新增”，新增类、新增方法。
+因为对于老旧的代码，要求它们的质量不具有可操作性。
+我们只能期望通过要求新增的代码符合要求，来改善至少是维持整个系统的代码质量。</p>
+
+<p>如果团队比较有野心，可能想在“新增”里面包括“更新”，也就是所有“触碰过”的类和方法。</p>
+
+<p>有了守则我们需要一个检查工具，让程序员可以快速地检查和自检。
+但一般的代码扫描工具不能针对“新增、更新”进行扫描，我们需要自己的工具。
+工具的要点在于如何找出所谓的“新增的类和方法”、“更新的类和方法”。</p>
+
+<p>基本思路是：</p>
+
+<ul>
+<li>先找出版本之间的diff，新增的文件和修改过的文件。
+
+<ul>
+<li>比如svn，可以用svn的命令行客户端，也有一些java的api。比如svnKit。</li>
+</ul>
+</li>
+<li>对于新增的文件：
+
+<ul>
+<li>parse这个文件，找到所有的类和方法，即可找到所有的“新增的方法和类”。</li>
+<li>parse可以使用这个：<a href="https://code.google.com/p/javaparser/wiki/UsingThisParser">https://code.google.com/p/javaparser/wiki/UsingThisParser</a></li>
+</ul>
+</li>
+<li>对于修改的文件：
+
+<ul>
+<li>parse新版本，找到所有类和方法的起止位置。</li>
+<li>parse方法同上。</li>
+<li>对比文件的diff结果（这个是按行号列出的更改），就可以发现新增的、更新过的类和方法。</li>
+</ul>
+</li>
+<li>当新增、更新的类和方法得到以后，再综合代码扫描（扫描新版本）的结果报告。比如findbugs、jdepend……
+即可得出新增、更新的类和方法的质量指标了。</li>
+</ul>
+
+
+<p>关键代码在这里：<br/>
+<a href="https://gist.github.com/nielinjie/d8fa324ee0d1d149c5e2">https://gist.github.com/nielinjie/d8fa324ee0d1d149c5e2</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[我的简历（陆续补充中）]]></title>
@@ -891,44 +956,6 @@ A：“风险驱动架构设计”方法……</p>
 
 
 <p>一场似非而是的DSL的故事就是这样，如果有同学对我们这个DSL具体是怎样的有兴趣，可以要求我写故事后传……</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一场似非而是的DSL（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/09/01/dsl2/"/>
-    <updated>2013-09-01T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/09/01/dsl2</id>
-    <content type="html"><![CDATA[<p>接演前文，我们这个任务是找到描述“特征”这个业务的语言——就是DSL，其实也就是找个合适的形式来写配置。不错，让我们看看如何找这个合适的形式。</p>
-
-<!-- more -->
-
-
-<p>前文已经说过，对这个DSL的形式，我们有几个要求：</p>
-
-<ul>
-<li>全局的：我们希望一个特征的所有内容，能够一次看到。</li>
-<li>动态的：可以在系统运行中加入、删除或者修改一个特征。</li>
-<li>可读的：我们希望运营人员甚至业务人员可以看懂甚至修改这些特征。</li>
-<li>容错的：系统能帮助修改者发现并改正描述中的错位。</li>
-</ul>
-
-
-<p>我们一一来看这些要求：</p>
-
-<ul>
-<li>动态的：比较容易做到。我们只要不把配置放在静态的配置文件就可以了。放入数据库，或者可读写的文件系统都可以。主要涉及到DSL的管理、使用问题，与DSL本身的结构没有多大关系。</li>
-<li>容错的：稍微难一点。但我们只要对每个DSL段修改后运行一个校验方法，在一个DSL段导入到系统之前，对它进行校验，给出错误信息就可以了。</li>
-<li>全局的：更难一点了。回想一下前文介绍的“特征“的定义，它就是DSL要描述的对象。这个对象比较复杂。
-
-<blockquote><p>描述了当何种<strong>业务差异</strong>的情况下，需要在哪些个<strong>扩展点</strong>填入哪些个<strong>扩展</strong>。</p></blockquote>
-
-<p>  一个特征，包括了业务差异、扩展点、扩展，有好几个方面的信息。要把它们放入到同一个DSL片段（比如一个文件或一条数据库记录）中，除了各个方面的体量都不能太大，还得适当地表达出它们之间的联系。如果片段总体体积很大，超出了人们的阅读能力，或者人们阅读的时候，需要跟着很多引用、指针之类的到处跳来跳去，那显然我们的全局性要求就没有达到。</p></li>
-<li>可读的：很难。正如前一点要求提到的，我们需要正确地表达出扩展点、扩展这些信息。如果仔细想一下就能意识到，扩展点与扩展点、扩展与扩展，可能是非常不同的。比如有个扩展点，是决定一个文档中有哪些字段的，另有一个扩展点，是决定一个文档在某个状态下可以被采取什么动作的。这些东西风马牛不相及，需要描述的内容非常不同，要如何才能给它们一个统一的描述形式呢？</li>
-</ul>
-
-
-<p>全局和可读，是我们这个DSL设计要重点解决的问题。</p>
 ]]></content>
   </entry>
   

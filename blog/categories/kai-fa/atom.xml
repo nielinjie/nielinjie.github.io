@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-05-24T17:32:33+08:00</updated>
+  <updated>2014-05-26T16:02:07+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,71 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老大爷系统：代码质量守则和工具]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/05/24/quality/"/>
+    <updated>2014-05-24T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/05/24/quality</id>
+    <content type="html"><![CDATA[<p>对于一个历史悠久的老大爷系统，我们的程序员定下了下面的代码质量守则：</p>
+
+<!-- more -->
+
+
+<ul>
+<li>新增方法复杂度不能大于5。</li>
+<li>新增类之间不能出现包循环依赖，同层之间可稍微放宽（如Service之间互相调用）。</li>
+<li>新增类和方法避免有重复代码，出现重复或者相似度较高的代码应提炼成函数。</li>
+<li>过长的方法，新增方法不能过长，代码行数限定在30。</li>
+<li>过大的类，新增类不能过大，尽量体现类的单一职责。</li>
+<li>变量、方法和类的命名要体现业务含义，不能用如s=5、getString()等命名。</li>
+<li>新增方法需编写自动化测试案例。</li>
+</ul>
+
+
+<p>守则里面有很多“新增”，新增类、新增方法。
+因为对于老旧的代码，要求它们的质量不具有可操作性。
+我们只能期望通过要求新增的代码符合要求，来改善至少是维持整个系统的代码质量。</p>
+
+<p>如果团队比较有野心，可能想在“新增”里面包括“更新”，也就是所有“触碰过”的类和方法。</p>
+
+<p>有了守则我们需要一个检查工具，让程序员可以快速地检查和自检。
+但一般的代码扫描工具不能针对“新增、更新”进行扫描，我们需要自己的工具。
+工具的要点在于如何找出所谓的“新增的类和方法”、“更新的类和方法”。</p>
+
+<p>基本思路是：</p>
+
+<ul>
+<li>先找出版本之间的diff，新增的文件和修改过的文件。
+
+<ul>
+<li>比如svn，可以用svn的命令行客户端，也有一些java的api。比如svnKit。</li>
+</ul>
+</li>
+<li>对于新增的文件：
+
+<ul>
+<li>parse这个文件，找到所有的类和方法，即可找到所有的“新增的方法和类”。</li>
+<li>parse可以使用这个：<a href="https://code.google.com/p/javaparser/wiki/UsingThisParser">https://code.google.com/p/javaparser/wiki/UsingThisParser</a></li>
+</ul>
+</li>
+<li>对于修改的文件：
+
+<ul>
+<li>parse新版本，找到所有类和方法的起止位置。</li>
+<li>parse方法同上。</li>
+<li>对比文件的diff结果（这个是按行号列出的更改），就可以发现新增的、更新过的类和方法。</li>
+</ul>
+</li>
+<li>当新增、更新的类和方法得到以后，再综合代码扫描（扫描新版本）的结果报告。比如findbugs、jdepend……
+即可得出新增、更新的类和方法的质量指标了。</li>
+</ul>
+
+
+<p>关键代码在这里：<br/>
+<a href="https://gist.github.com/nielinjie/d8fa324ee0d1d149c5e2">https://gist.github.com/nielinjie/d8fa324ee0d1d149c5e2</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[向Octopress贡献（二）：连载系列]]></title>
