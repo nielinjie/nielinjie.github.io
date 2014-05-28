@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-05-26T16:57:17+08:00</updated>
+  <updated>2014-05-28T10:57:54+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,7 +14,60 @@
 
   
   <entry>
-    <title type="html"><![CDATA[给老大爷系统：代码质量守则和工具]]></title>
+    <title type="html"><![CDATA[简单的灰度发布方案]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/05/28/huidu/"/>
+    <updated>2014-05-28T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/05/28/huidu</id>
+    <content type="html"><![CDATA[<p>正在策划一个系统的灰度发布，目前有个简单的方案，（简图如最后所示）。</p>
+
+<!-- more -->
+
+
+<ol>
+<li>同一系统发布为ab两个版本，同时在生产可用。</li>
+<li>用户访问先通过一个分流规则，这个规则决定访问a版本还是b版本。</li>
+<li>分流规则主要涉及到用户的特征，可能涉及到一些业务逻辑。</li>
+<li>分流规则可以由运营方便地（如果可以，随时地）维护生效。</li>
+</ol>
+
+
+<p>我们的问题主要是：</p>
+
+<p>分流这部分应该是一种常见的反向代理，不太熟悉这类组件。公司里用得比较多的时f5。
+如果利用f5、nginx之类的做分流是否可以达成上面提到的第3、4点。</p>
+
+<p>了解到f5的irule只能描述简单地规则，比如可以读取cookie，
+目前的想法是由应用自己来写规则，通过cookie通知f5，irules里面只需要对cookie做简单判定。
+需要调整分流规则的时候，运营（或者开发）只需要操作应用。
+类似于这样：</p>
+
+<p>f5 中</p>
+
+<pre><code>if(cookie(‘abVersionFlag’)==a){
+       redirectTo a
+}else{
+       redirectTo b
+}
+</code></pre>
+
+<p>应用中（只在b版本中必要）：</p>
+
+<pre><code>if(cookie(‘abVersionFlag’)==null){
+       setCookie(‘abVersionFlag’, getABVserionByUserFromBusiness(user))
+       sendRedirect(url)
+}else{
+       otherBusinessLogic……
+}
+</code></pre>
+
+<p>简图：</p>
+
+<p><img src="http://nielinjie.github.io/images/ab/ab.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老大爷系统（一）：代码质量守则和工具]]></title>
     <link href="http://nielinjie.github.io/blog/2014/05/26/quality/"/>
     <updated>2014-05-26T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/05/26/quality</id>
@@ -859,88 +912,6 @@ A：“风险驱动架构设计”方法……</p>
     <updated>2014-02-15T15:36:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/02/15/said-xueren1</id>
     <content type="html"><![CDATA[<p>你正在堆一个雪人，突然觉得万一它活过来了，跑来掐你脖子可怎么办？于是你把雪人的手改成了多啦A梦风格。恭喜你，你掌握了风险驱动的架构设计方法。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一场似非而是的DSL（后传）]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/09/02/dsl-post/"/>
-    <updated>2013-09-02T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/09/02/dsl-post</id>
-    <content type="html"><![CDATA[<p>这是后传，不是正传，主要写设计结果和实现的一些细节，不喜请无视。</p>
-
-<!-- more -->
-
-
-<p>DSL的一个片段如最后的代码所示，基本上满足了我们的要求——</p>
-
-<ul>
-<li>片段完整地描述了一个特征，包括扩展点、扩展等等各方面的信息。实例中，<code>dynamicProperty</code>、<code>show</code>、<code>mail</code>是三个不同的扩展点，大括号里面的内容是当某个业务差异时填入扩展点的具体扩展逻辑。而这个业务差异，由<code>condition</code>描述。</li>
-<li>不存在片段中和片段间来回引用穿梭等影响阅读完整性的问题。</li>
-<li>不同方面的内容描述形式一致。比如动态属性dynamicProperty和邮件策略mail是不同的特征，背后的业务知识是很不同的，但这里体现为统一的描述形式。</li>
-<li>聚焦于业务概念，噪音很少。这个片段看上去，除了表示范围的大小括号外，基本上全部是业务概念。</li>
-</ul>
-
-
-<p>讲一些实现细节——</p>
-
-<ul>
-<li>DSL的实现基于Groovy的<code>ObjectGraphBuilder</code>。</li>
-<li>示例代码中的<code>dsl</code>就是<code>ObjectGraphBuilder</code>的一个实例，<code>requirement</code>构建顶层的bean。</li>
-<li>类似于<code>requirement{}</code>以及内嵌的<code>dynamicProperty{…}</code>都是一些普通的groovy方法调用，通过groovy的动态调用机制赋予这次调用一些逻辑，以<code>dynamictProperty</code>为例：
-
-<ul>
-<li>实例化一个类，根据方法名计算这个类的类名。这个例子里就是类<code>DynamicProperty</code>。</li>
-<li>将这个实例set到上级bean的适当属性上，这个属性也是根据方法的名字计算得到的。这个例子就是属性<code>dynamicProperty</code>。</li>
-</ul>
-</li>
-<li>上述的根据方法名计算类名和属性的办法是<code>ObjectGraphBuilder</code>原生的，比较简陋，需要做一些定制，<code>ObjectGraphBuilder</code>提供了定制的接口，分别是<code>ClassNameResolver</code>和<code>RelationNameResolver</code>。我们对简单的计算办法做了补充：
-
-<ul>
-<li>类名搜寻策略，原生的计算只有硬匹配，就是只能设置一个包名，每个方法名直接加在包名后面就得出类名。这个策略在我们这里完全行不通，因为我们这里的很多类，不是固定在某个已知的包里面的，比如扩展和扩展点，这些类是具体的，类名来自于具体逻辑所在的包，散布在整个系统。对此我们引入了类名搜索机制，在整个系统的包空间搜索需要的类。另外一方面，我们借助reflection，从上层bean的属性类型，得到需要的类。</li>
-<li>属性搜寻策略，在原生的名字匹配的基础上，我们结合类型匹配，也就是根据类名对应策略得到的类名反过来匹配上层bean的属性类型，找到这个属性。比如<code>dynamicProperty</code>这个方法，上层的bean是没有一个叫“dynamicProperty”的属性的，但有个<code>Feature</code>类型的属性。<code>dynamicProperty</code>方法实例化<code>DynamicProperty</code>类，它是<code>Feature</code>的子类，可以匹配。</li>
-<li>上述两个搜索策略都考虑了集合属性的情况，名字经过简单地单复数转化，读取类型时通过泛型的集合的参数类型读取。</li>
-<li>有一种特殊情况，搜寻类名和搜寻属性的策略会相互影响，我们希望有一种特殊的策略能把两个搜索过程独立开。我们约定一种特殊的方法名字形式：<code>propertya$classb</code>，这样我们根据<code>propertya</code>计算属性，<code>classb</code>计算类名。更特殊的情况比如代码中的<code>$selectorRenderer</code>，只计算类名不计算属性，表示这里只实例化bean，不做上层bean的属性设置。这中特殊策略为DSL的编写带来了方便，但其实不是一种业务策略，在DSL的角度看来其实是一种噪音，我们尽量避免使用。</li>
-</ul>
-</li>
-<li>相关的代码不多，已经放到github，供参考。<a href="https://github.com/nielinjie/dslOGB">https://github.com/nielinjie/dslOGB</a>。其中用于扫描classpath的依赖包<code>com.google.classpath</code>来自于介里：<a href="https://code.google.com/p/classpath-explorer/">https://code.google.com/p/classpath-explorer/</a>。</li>
-</ul>
-
-
-<p>代码：</p>
-
-<pre><code>dsl.requirement{
-    name('isStock')
-    description('是否关联交易')
-    condition(exp:'(owner.sortId==1 || owner.sortId==11 ) &amp;&amp; owner.taskComp.contains("PA002")')
-    dynamicProperty{
-        name('isStockTrade')
-        cName('关联交易')
-        type(java.lang.String.class)
-        stringValidator()
-        stringEditor()
-        maxLength(10)
-        minLength(1)
-        isRequired(true)
-        defaultValue(true)
-        renderMap(key:'writable',value:$selectorRenderer())
-        renderMap(key:'readOnly')
-        activeEvent{
-            change('var ....')
-        }
-    }
-
-    show{
-        flag(function:'submitTask',flag:'writable')
-        flag(function:'approval',flag:'readOnly')
-    }
-
-    mail{
-        handleMap(key:'New_Submit',value:'mailHandle')
-        handleMap(key:'Edit_Submit',value:'mailHandle')
-    }
-}
-</code></pre>
 ]]></content>
   </entry>
   

@@ -2,9 +2,23 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2014/05/28/huidu/",
+    date:"2014-05-28T20:06:38+08:00",
+    title:"简单的灰度发布方案",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/05/26/quality/",
     date:"2014-05-26T20:06:38+08:00",
-    title:"给老大爷系统：代码质量守则和工具",
+    title:"给老大爷系统（一）：代码质量守则和工具",
     categories:[
       
         "工具",
@@ -15,6 +29,8 @@ window.site={
       
     ],
     series:[
+      
+        "给老大爷系统 1",
       
     ]
   },

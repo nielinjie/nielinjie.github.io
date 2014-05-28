@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-05-26T16:57:17+08:00</updated>
+  <updated>2014-05-28T10:57:54+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,59 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[简单的灰度发布方案]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/05/28/huidu/"/>
+    <updated>2014-05-28T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/05/28/huidu</id>
+    <content type="html"><![CDATA[<p>正在策划一个系统的灰度发布，目前有个简单的方案，（简图如最后所示）。</p>
+
+<!-- more -->
+
+
+<ol>
+<li>同一系统发布为ab两个版本，同时在生产可用。</li>
+<li>用户访问先通过一个分流规则，这个规则决定访问a版本还是b版本。</li>
+<li>分流规则主要涉及到用户的特征，可能涉及到一些业务逻辑。</li>
+<li>分流规则可以由运营方便地（如果可以，随时地）维护生效。</li>
+</ol>
+
+
+<p>我们的问题主要是：</p>
+
+<p>分流这部分应该是一种常见的反向代理，不太熟悉这类组件。公司里用得比较多的时f5。
+如果利用f5、nginx之类的做分流是否可以达成上面提到的第3、4点。</p>
+
+<p>了解到f5的irule只能描述简单地规则，比如可以读取cookie，
+目前的想法是由应用自己来写规则，通过cookie通知f5，irules里面只需要对cookie做简单判定。
+需要调整分流规则的时候，运营（或者开发）只需要操作应用。
+类似于这样：</p>
+
+<p>f5 中</p>
+
+<pre><code>if(cookie(‘abVersionFlag’)==a){
+       redirectTo a
+}else{
+       redirectTo b
+}
+</code></pre>
+
+<p>应用中（只在b版本中必要）：</p>
+
+<pre><code>if(cookie(‘abVersionFlag’)==null){
+       setCookie(‘abVersionFlag’, getABVserionByUserFromBusiness(user))
+       sendRedirect(url)
+}else{
+       otherBusinessLogic……
+}
+</code></pre>
+
+<p>简图：</p>
+
+<p><img src="/images/ab/ab.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[敏捷的架构设计（六）：领域地图（二）]]></title>
@@ -192,47 +245,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[敏捷的架构设计（三）：第一块看板]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/03/aa2/"/>
-    <updated>2014-04-03T23:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/03/aa2</id>
-    <content type="html"><![CDATA[<blockquote><p>敏捷已死，而敏捷性长存。</p></blockquote>
-
-<p>这是一个架构“普通”的项目。也是第一个系统实践“风险驱动架构设计”的项目。</p>
-
-<!-- more -->
-
-
-<p>下面介绍一下这个项目的“架构看板”——</p>
-
-<ul>
-<li>看板空间分为三列。
-
-<ul>
-<li>第一列，红色卡片，放置识别到的风险，包括风险的描述、评价手段、影响程度和优先级等。</li>
-<li>第二列，蓝色卡片，放置对策，包括指导原则、注意事项、大致计划、研究的中间结果等。</li>
-<li>第三列，绿色卡片，放置可以执行的任务。</li>
-</ul>
-</li>
-<li>看板空间分为多行，每行对应一个风险。它们按处置的优先级排序。</li>
-<li>风险会随时被识别出来，来源包括但不限于架构师、开发团队、PO、领导和其他干系人。</li>
-<li>所有的风险都会上板，有些会被否决或定为“微不足道”、“容易解决”等，这些被移动到最下方。</li>
-<li>任务根据对策制定，必须是可执行、可衡量的。这些任务体现为绿色卡片。</li>
-<li>绿色任务卡片，会跟用户故事拆分来的任务卡片一起排优先级，并采用和这些卡片一致的跟进方法。</li>
-<li>当绿色任务卡片的状态变化，团队审视红色和蓝色卡片是否需要变化，随着应对措施的进行，对风险认识可能会有改变，对其的对策也可能随之变化。</li>
-<li>团队随时可以移动、增减看板上的卡片，只要跟其他人达成共识。</li>
-</ul>
-
-
-<p>看板并不会直接帮助团队发现风险、制定应对措施、完成相关任务。
-但看板能够有效地协助团队管理整个架构过程。
-是敏捷过程中执行风险驱动架构设计方法的有效手段。</p>
-
-<p><img src="/images/kanban/rd.jpg"></p>
 ]]></content>
   </entry>
   
