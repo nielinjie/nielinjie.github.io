@@ -1,0 +1,49 @@
+---
+layout: post
+title: "简单的灰度发布方案"
+date: 2014-05-28 20:06:38 +0800
+comments: true
+categories: ["架构"]
+
+---
+
+正在策划一个系统的灰度发布，目前有个简单的方案，（简图如最后所示）。
+
+<!-- more -->
+
+1. 同一系统发布为ab两个版本，同时在生产可用。
+2. 用户访问先通过一个分流规则，这个规则决定访问a版本还是b版本。
+3. 分流规则主要涉及到用户的特征，可能涉及到一些业务逻辑。
+4. 分流规则可以由运营方便地（如果可以，随时地）维护生效。
+
+我们的问题主要是：
+
+分流这部分应该是一种常见的反向代理，不太熟悉这类组件。公司里用得比较多的时f5。
+如果利用f5、nginx之类的做分流是否可以达成上面提到的第3、4点。
+
+了解到f5的irule只能描述简单地规则，比如可以读取cookie，
+目前的想法是由应用自己来写规则，通过cookie通知f5，irules里面只需要对cookie做简单判定。
+需要调整分流规则的时候，运营（或者开发）只需要操作应用。
+类似于这样：
+
+f5 中
+
+    if(cookie(‘abVersionFlag’)==a){
+           redirectTo a
+    }else{
+           redirectTo b
+    }
+
+应用中（只在b版本中必要）：
+
+    if(cookie(‘abVersionFlag’)==null){
+           setCookie(‘abVersionFlag’, getABVserionByUserFromBusiness(user))
+           sendRedirect(url)
+    }else{
+           otherBusinessLogic……
+    }
+
+简图：
+
+
+{% img  /images/ab/ab.png %}

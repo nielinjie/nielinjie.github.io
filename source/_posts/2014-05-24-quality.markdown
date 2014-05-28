@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "给老大爷系统：代码质量守则和工具"
+title: "给老大爷系统（一）：代码质量守则和工具"
 date: 2014-05-26 20:06:38 +0800
 comments: true
 categories: ["质量","开发","工具"]
+series: ["给老大爷系统 1"]
 
 ---
 
