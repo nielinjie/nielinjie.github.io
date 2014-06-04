@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-05-28T10:57:54+08:00</updated>
+  <updated>2014-06-04T16:56:01+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[语录：时间]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/04/time/"/>
+    <updated>2014-06-04T16:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/04/time</id>
+    <content type="html"><![CDATA[<p>分解问题的维度除了空间还有时间，可以逐一解决，还可以渐进解决。大家莫忘记了。:&ndash;)</p>
+
+<p>架构师要善于将大规模问题分解为可控可解决的小问题，也要善于把大跨度问题分解为可迭代可验证可积累的小问题。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[简单的灰度发布方案]]></title>
@@ -67,11 +78,11 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[给老大爷系统（一）：代码质量守则和工具]]></title>
+    <title type="html"><![CDATA[给老爷爷系统（一）：代码质量守则和工具]]></title>
     <link href="http://nielinjie.github.io/blog/2014/05/26/quality/"/>
     <updated>2014-05-26T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/05/26/quality</id>
-    <content type="html"><![CDATA[<p>对于一个历史悠久的老大爷系统，我们的程序员定下了下面的代码质量守则：</p>
+    <content type="html"><![CDATA[<p>对于一个历史悠久的老爷爷系统，我们的程序员定下了下面的代码质量守则：</p>
 
 <!-- more -->
 
@@ -903,15 +914,6 @@ A：“风险驱动架构设计”方法……</p>
     <updated>2014-02-15T15:36:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/02/15/said-xueren2</id>
     <content type="html"><![CDATA[<p>这时候走来一个大叔，他对多啦A梦风格的了解人所共知。他警告说多啦A梦的口袋充满了未知，非常危险。于是你谨慎地决定：多啦A梦风格的设计必须局限在雪人的手部。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[语录：雪人（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/02/15/said-xueren1/"/>
-    <updated>2014-02-15T15:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/02/15/said-xueren1</id>
-    <content type="html"><![CDATA[<p>你正在堆一个雪人，突然觉得万一它活过来了，跑来掐你脖子可怎么办？于是你把雪人的手改成了多啦A梦风格。恭喜你，你掌握了风险驱动的架构设计方法。</p>
 ]]></content>
   </entry>
   

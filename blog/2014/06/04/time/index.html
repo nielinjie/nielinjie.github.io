@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>关于REST风格的讨论 - 聂同学</title>
+  <title>语录：时间 - 聂同学</title>
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="近来，公司有关同事对REST风格和在企业应用中的使用（特别是b/s架构的应用中用于浏览器端于服务器端通信）做了研究，并提出了应用模式。但有些想法我个人并不认同，于是向公司架构师邮件列表发出了讨论邮件，现在也把邮件内容1贴在这里，希望与大家讨论批评，后续会持续将其他架构师的回复追加进来。 大家好 &hellip;">
+  <meta name="description" content="分解问题的维度除了空间还有时间，可以逐一解决，还可以渐进解决。大家莫忘记了。:&ndash;) 架构师要善于将大规模问题分解为可控可解决的小问题，也要善于把大跨度问题分解为可迭代可验证可积累的小问题。
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nielinjie.github.io/blog/2012/10/25/rest">
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2014/06/04/time">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -76,7 +77,7 @@
   
   <header>
     
-      <h1 class="entry-title">关于REST风格的讨论</h1>
+      <h1 class="entry-title">语录：时间</h1>
     
     
       <p class="meta">
@@ -92,82 +93,16 @@
   
 
 
-<time datetime="2012-10-25T21:36:38+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2014-06-04T16:06:38+08:00" pubdate data-updated="true">Jun 4<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>近来，公司有关同事对REST风格和在企业应用中的使用（特别是b/s架构的应用中用于浏览器端于服务器端通信）做了研究，并提出了应用模式。但有些想法我个人并不认同，于是向公司架构师邮件列表发出了讨论邮件，现在也把邮件内容<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>贴在这里，希望与大家讨论批评，后续会持续将其他架构师的回复追加进来。</p>
+<div class="entry-content"><p>分解问题的维度除了空间还有时间，可以逐一解决，还可以渐进解决。大家莫忘记了。:&ndash;)</p>
 
-<!-- more -->
-
-
-<p>大家好——</p>
-
-<p>最近XN做了关于PF REST风格接口的分享。逐渐也会有些项目采用这样的架构模式。</p>
-
-<p>最近也对REST做了些学习，有些相关的想法，想跟大家讨论下，请大家批评。</p>
-
-<p>Ps：由于时间冲突没有参加这个分享，如果这些问题大家已经充分讨论过了，请大家原谅，有空的话告知一下讨论结果。</p>
-
-<h3>缓存</h3>
-
-<ul>
-<li><p>PF-REST框架不使用HTTP缓存。跟XN讨论了下，XN认为为了保证客户机和服务器数据一致， 所有HTTP方法，包括get，都不宜使用缓存，所以在框架级别禁止了HTTP缓存。</p>
-
-<p>这里有一点不同意见，我认为缓存是否会破坏数据一致，要由具体的应用场景决定，例如，有些场景，很多数据是不需要修改的，（比如需要展示“行政机构树”），这时候，get这些数据的缓存完全不会破坏不一致性。</p>
-
-<p>我理解，资源是否过期，何时过期，有其业务意义，是否要缓存，如何缓存，由业务和应用场景决定，框架（或者说模式）不应该限定使用或不使用缓存。</p></li>
-<li><p>缓存的安全性。如果使用缓存，则缓存暴露在客户端或者HTTP链路上，如何保证这部分缓存只被特定的用户使用。</p>
-
-<p>比如，有资源…./orders/user/ladygaga, 表示ladygaga能看到的所有order的集合。这部分资源被缓存后如何做到不被别的访问者访问？</p>
-
-<p>这个问题我个人还没有答案，看了些资料，感觉比较靠谱的有一种：每次请求都到服务器进行认证授权。服务器如果认证授权成功，则返回304和缓存马上过期的命令。这样既可以利用链路上的缓存，也可以迫使下次请求先到服务器认证授权。但劣势是每次都必须访问服务器。</p></li>
-</ul>
-
-
-<h3>后端会话状态</h3>
-
-<ul>
-<li><p>REST提倡的是服务器端无会话状态，这点PF-REST框架没有提到。而目前我们开发习惯也往往要在服务端保存会话状态，特别是用户信息往往在认证后就保存在会话中。</p>
-
-<p>我个人理解会话状态之所以不提倡，是防止破坏get方法的幂等和安全性，以至于缓存等优势无法发挥。如果会话数据在会话过程中是不变的，其实不会有这个问题，所以如果会话状态中仅保存用户的不变（在会话时间范围内）的信息，应该不存在问题，比如用户名、权限、组织结构之类。</p></li>
-</ul>
-
-
-<h3>资源</h3>
-
-<ul>
-<li><p>资源是REST风格的核心和特点，资源的业务意义和粒度对REST风格好处的发挥非常重要。如果粒度不合适，有些REST风格的好处就无法实现。</p>
-
-<p>比如，如果把资源的粒度放在操作级别，则可能将资源与资源的操作方式，也就是客户端绑在一起了。例如资源order，在手机上，显示少量信息，在大屏幕web上，显示全面信息。如果在操作级别来划定资源的话，这就是两种资源（叫orderMobile和orderWeb?），显然这样就把后台与客户端做了绑定。试想，如果来了一种新客户端，显示不多不少的信息，那是否要增加一种资源类型？</p>
-
-<p>PF-REST以Form<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> 来划分资源，我理解就是从操作级别来划分资源。把资源与操作过程进行了耦合。</p></li>
-</ul>
-
-
-<h3>REST vs. 普通HTTP远程调用</h3>
-
-<ul>
-<li><p>REST风格是HTTP远程调用模式的一种，但不是普通的HTTP远程调用。</p>
-
-<p>目前的PF-REST框架重点提到的静态html页面加HTTP的接口，我理解普通HTTP远程调用模式也可以做到，并没有突出说明REST的特点。</p>
-
-<p>REST的特点到底能带来什么好处，特别是在既有的企业架构下能带来什么好处，希望跟大家一起多多讨论。</p></li>
-</ul>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>已经对人名和涉及到公司的专用名字做了更改。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>Form是沿用自Spring MVC的Form概念。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
+<p>架构师要善于将大规模问题分解为可控可解决的小问题，也要善于把大跨度问题分解为可迭代可验证可积累的小问题。</p>
 </div>
 
 
@@ -190,12 +125,12 @@
   
 
 
-<time datetime="2012-10-25T21:36:38+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2014-06-04T16:06:38+08:00" pubdate data-updated="true">Jun 4<span>th</span>, 2014</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/rest/'>REST</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>
+    <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/yu-lu/'>语录</a>
   
 </span>
 
@@ -204,10 +139,8 @@
 
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/29/rest2/" title="Next Post: 关于REST风格的讨论（二）">&laquo; 关于REST风格的讨论（二） </a>
       
-      
-        <a class="basic-alignment right" href="/blog/2012/07/10/said-20120710/" title="Previous Post: 语录：现有的业务模型来模拟新的业务"> 语录：现有的业务模型来模拟新的业务 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/05/28/huidu/" title="Previous Post: 简单的灰度发布方案"> 简单的灰度发布方案 &raquo;</a>
       
 
     </p>
@@ -218,7 +151,6 @@
   
 
 
-<div class="post-series" data-series="关于REST风格的讨论 1,"></div>
 <script type="text/javascript" charset="utf-8">
   (function(){
     function series(){
