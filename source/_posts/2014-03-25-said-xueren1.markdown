@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "语录：雪人（一）"
+title: "言论：雪人（一）"
 date: 2014-02-15 15:36:38 +0800
 comments: true
-categories: [语录, 架构]
+categories: [言论, 架构]
 series: ["雪人 1"]
 
 ---
