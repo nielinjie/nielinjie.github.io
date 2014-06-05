@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-05T17:12:30+08:00</updated>
+  <updated>2014-06-05T19:50:53+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（二）：系统是什么样的？（一）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/05/view/"/>
+    <updated>2014-06-05T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/05/view</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>对于老爷爷系统，我们发现特别难以回答一个问题：系统是什么样的？它正在如何发展？</p>
+
+<!-- more -->
+
+
+<p>团队中不同的角色都在尝试弄清楚这个问题。
+上次<a href="http://nielinjie.github.io/blog/2014/04/24/aa3/">有篇blog</a>提到:</p>
+
+<blockquote><p>SA同学正在整理全局“功能地图”、测试同学整理“全量测试案例”</p></blockquote>
+
+<p>而开发团队和架构师，则在整理“领域地图”。</p>
+
+<p>这些不同的角色，对系统有各自不同的关注点。但他们的关注点都需要一个框架组织起来，
+这个框架就是系统特征。
+上面说的这些各种“整理”，其实都包含了对系统特征进行整理和重建，然后再把自己的关注点挂载上去。
+只不过他们从各自的目的出发，从各自的角度下手。</p>
+
+<p>团队意识到：这些关注者可能需要共用同一个系统特征描述。</p>
+
+<ul>
+<li>可以减少分别构建和维护框架带来的工作量。<br/>
+如果说分别构建框架还勉强可以做到的话，分别维护并保持同步，则是完全不可能做到的。</li>
+<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控——
+
+<ul>
+<li>通过观察代码历史和代码质量，可以帮助划定测试重点覆盖区域。</li>
+<li>通过观察相关的代码结构，可以帮助发现功能间关系特别是潜在的相互影响。</li>
+<li>通过观察用户使用量数据，可以帮助评估代码重构的风险。</li>
+</ul>
+</li>
+</ul>
+
+
+<p>“统一系统特征描述”看来很重要，我们需要找到一个形式，可以承担这样的重任。</p>
+
+<p>我们整理了各方面的关注点，觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+
+<p>（未完待续）</p>
+
+<p><img src="http://nielinjie.github.io/images/view/view.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[企业中需要什么样的社交？]]></title>
@@ -924,15 +974,6 @@ A：“风险驱动架构设计”方法……</p>
 乌鸦感到庆幸，立即找来了很多石子儿……，直到他认识到他要对付的是酸奶，而不是清水。</p>
 
 <p>乌鸦看着表面上堆着石子儿的酸奶，自我感觉对“模式”的认识深了些。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[言论：手段和目的]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/02/15/said-shouduan/"/>
-    <updated>2014-02-15T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/02/15/said-shouduan</id>
-    <content type="html"><![CDATA[<p>“通用”是手段而不是目的，“简单”也一样，甚而“结构”也一样。感受下呢。</p>
 ]]></content>
   </entry>
   
