@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 质量 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/zhi-liang/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-04T17:07:43+08:00</updated>
+  <updated>2014-06-05T17:12:30+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -18,7 +18,9 @@
     <link href="http://nielinjie.github.io/blog/2014/05/26/quality/"/>
     <updated>2014-05-26T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/05/26/quality</id>
-    <content type="html"><![CDATA[<p>对于一个历史悠久的老爷爷系统，我们的程序员定下了下面的代码质量守则：</p>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>对于一个历史悠久的老爷爷系统，我们的程序员定下了下面的代码质量守则：</p>
 
 <!-- more -->
 

@@ -2,14 +2,28 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2014/06/05/social/",
+    date:"2014-06-05T16:06:38+08:00",
+    title:"企业中需要什么样的社交？",
+    categories:[
+      
+        "言论",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/06/04/time/",
     date:"2014-06-04T16:06:38+08:00",
-    title:"语录：时间",
+    title:"言论：时间",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -140,12 +154,12 @@ window.site={
   {
     url:"/blog/2014/04/12/said-xueren4/",
     date:"2014-04-12T23:36:38+08:00",
-    title:"语录：雪人（四）",
+    title:"言论：雪人（四）",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -230,12 +244,12 @@ window.site={
   {
     url:"/blog/2014/03/30/said-xueren3/",
     date:"2014-03-30T15:36:38+08:00",
-    title:"语录：雪人（三）",
+    title:"言论：雪人（三）",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -276,12 +290,12 @@ window.site={
   {
     url:"/blog/2014/03/09/said-jiagoushi/",
     date:"2014-03-09T21:36:38+08:00",
-    title:"语录：好的架构师",
+    title:"言论：好的架构师",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -292,14 +306,14 @@ window.site={
   {
     url:"/blog/2014/03/03/said-yuya/",
     date:"2014-03-03T21:36:38+08:00",
-    title:"语录：乌鸦",
+    title:"言论：乌鸦",
     categories:[
       
         "架构",
       
         "模式",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -310,12 +324,12 @@ window.site={
   {
     url:"/blog/2014/02/15/said-shouduan/",
     date:"2014-02-15T21:36:38+08:00",
-    title:"语录：手段和目的",
+    title:"言论：手段和目的",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -326,12 +340,12 @@ window.site={
   {
     url:"/blog/2014/02/15/said-xueren2/",
     date:"2014-02-15T15:36:38+08:00",
-    title:"语录：雪人（二）",
+    title:"言论：雪人（二）",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -344,12 +358,12 @@ window.site={
   {
     url:"/blog/2014/02/15/said-xueren1/",
     date:"2014-02-15T15:36:38+08:00",
-    title:"语录：雪人（一）",
+    title:"言论：雪人（一）",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -498,12 +512,12 @@ window.site={
   {
     url:"/blog/2013/01/01/said-20130101/",
     date:"2013-01-01T21:36:38+08:00",
-    title:"语录：关于企业中公用类库和框架的管理",
+    title:"言论：关于企业中公用类库和框架的管理",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -514,14 +528,14 @@ window.site={
   {
     url:"/blog/2012/12/05/said-20121205/",
     date:"2012-12-05T21:36:38+08:00",
-    title:"语录：REST",
+    title:"言论：REST",
     categories:[
       
         "REST",
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -532,12 +546,12 @@ window.site={
   {
     url:"/blog/2012/12/03/said-20121203/",
     date:"2012-12-03T21:36:38+08:00",
-    title:"语录：架构维护者的职责",
+    title:"言论：架构维护者的职责",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
@@ -584,12 +598,12 @@ window.site={
   {
     url:"/blog/2012/07/10/said-20120710/",
     date:"2012-07-10T21:36:38+08:00",
-    title:"语录：现有的业务模型来模拟新的业务",
+    title:"言论：现有的业务模型来模拟新的业务",
     categories:[
       
         "架构",
       
-        "语录",
+        "言论",
       
     ],
     series:[
