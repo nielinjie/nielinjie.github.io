@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 敏捷 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/min-jie/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-06T10:16:45+08:00</updated>
+  <updated>2014-06-06T17:22:08+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -67,7 +67,7 @@
 </ol>
 
 
-<p>{% img  /images/kanban/dm.jpg %}</p>
+<p><img src="/images/kanban/dm.jpg"></p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -113,7 +113,7 @@
 </ul>
 
 
-<p>{% img  /images/kanban/gongneng.png %}</p>
+<p><img src="/images/kanban/gongneng.png"></p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -221,7 +221,7 @@
 但看板能够有效地协助团队管理整个架构过程。
 是敏捷过程中执行风险驱动架构设计方法的有效手段。</p>
 
-<p>{% img  /images/kanban/rd.jpg %}</p>
+<p><img src="/images/kanban/rd.jpg"></p>
 ]]></content>
   </entry>
   

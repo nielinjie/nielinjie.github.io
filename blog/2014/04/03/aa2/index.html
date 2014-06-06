@@ -30,7 +30,7 @@
 
 
 
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="/javascripts/libs/d3.min.js" charset="utf-8"></script>
 <script src="/javascripts/d3.tip.v0.6.3.js" charset="utf-8"></script>
 
 <script src="/javascripts/underscore-min.js" charset="utf-8"></script>
@@ -257,6 +257,59 @@ var duoshuoQuery = {short_name:"nielinjie"};
       <li><a href="/blog/2014/05/21/resume/">我的简历</a></li>
     </ul>
 </section>
+
+  <link href="/stylesheets/cal-heatmap.css" rel="stylesheet" type="text/css"/>
+
+<script src="/javascripts/libs/cal-heatmap.min.js"></script>
+<style>
+  #cal-pre {
+      cursor:pointer;
+      font-size:1.5em;
+  }
+  #cal-next {
+      cursor:pointer;
+      font-size:1.5em;
+
+  }
+</style>
+<section class="calendar-section">
+  <h1>Calendar</h1>
+<div id="cal-heatmap"></div>
+<span id="cal-pre">←</span><span id="cal-next">→</span><br/>
+
+</section>
+
+<script type="text/javascript">
+(function(){
+  function timestamp(date){
+    return new Date(date).getTime()/1000
+  }
+  function datas(){
+    return _(window.site.posts).chain().countBy(function(p){
+      return timestamp(p.date)
+    }).value()
+  }
+
+  var calendar = new CalHeatMap();
+    calendar.init({
+        data: datas(),
+        //start: new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        start:new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        domain: "month",
+        displayLegend: false,
+        subDomain: "day",
+        range: 4,
+        nextSelector: "#cal-next",
+        previousSelector: "#cal-pre",
+        legend: [1, 2,3,4,5],
+        onClick:function(date,nb){
+          var url="/blog/filter/filter.html"
+          window.location.href=buildUrl(url,{filterName:"week",filterValue:date,filterDes:"Calendar: Week from "+date.toLocaleDateString()})
+        }
+    });
+})()
+
+</script>
 <section class="series">
   <h1>Series</h1>
   <ul class="series"></ul>

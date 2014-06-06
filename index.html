@@ -29,7 +29,7 @@
 
 
 
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<script src="/javascripts/libs/d3.min.js" charset="utf-8"></script>
 <script src="/javascripts/d3.tip.v0.6.3.js" charset="utf-8"></script>
 
 <script src="/javascripts/underscore-min.js" charset="utf-8"></script>
@@ -284,78 +284,6 @@
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/05/24/refactory/">给老爷爷系统（三）：重构</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-24T20:06:38+08:00" pubdate data-updated="true">May 24<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/24/3d/">给老爷爷系统（四）：三个划分维度</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-05-24T20:06:38+08:00" pubdate data-updated="true">May 24<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content">
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
       <h1 class="entry-title"><a href="/blog/2014/05/21/resume/">我的简历（陆续补充中）</a></h1>
     
     
@@ -488,6 +416,93 @@
 
     </article>
   
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/20/series/">向Octopress贡献（二）：连载系列</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-20T23:36:38+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>我们常常会发表一些连载的系列文章。
+这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
+需要一个新的方式在同一系列的连载文章间跳转。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/04/20/series/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/04/20/xiaowanyier/">向Octopress贡献（一）：动态内容</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-04-20T23:06:38+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>同学们往右看：就是那个一坨一坨飘一飘的东西。8-D<br/>
+每个圆表示一个category，它的大小表示该category名下文章的数量（相对的）；两个圆之间的连线表示两个category有联系，也就是说有文章同时属于这两个category。
+两个圆距离越近，则category的关系越密切，同时属于这两个category的文章越多。<br/>
+点击圆形，将来到一个显示该category下所有文章的页面。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2014/04/20/xiaowanyier/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
   <div class="pagination">
     
     <a href="/blog/archives">Blog Archives</a>
@@ -506,6 +521,59 @@
       <li><a href="/blog/2014/05/21/resume/">我的简历</a></li>
     </ul>
 </section>
+
+  <link href="/stylesheets/cal-heatmap.css" rel="stylesheet" type="text/css"/>
+
+<script src="/javascripts/libs/cal-heatmap.min.js"></script>
+<style>
+  #cal-pre {
+      cursor:pointer;
+      font-size:1.5em;
+  }
+  #cal-next {
+      cursor:pointer;
+      font-size:1.5em;
+
+  }
+</style>
+<section class="calendar-section">
+  <h1>Calendar</h1>
+<div id="cal-heatmap"></div>
+<span id="cal-pre">←</span><span id="cal-next">→</span><br/>
+
+</section>
+
+<script type="text/javascript">
+(function(){
+  function timestamp(date){
+    return new Date(date).getTime()/1000
+  }
+  function datas(){
+    return _(window.site.posts).chain().countBy(function(p){
+      return timestamp(p.date)
+    }).value()
+  }
+
+  var calendar = new CalHeatMap();
+    calendar.init({
+        data: datas(),
+        //start: new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        start:new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        domain: "month",
+        displayLegend: false,
+        subDomain: "day",
+        range: 4,
+        nextSelector: "#cal-next",
+        previousSelector: "#cal-pre",
+        legend: [1, 2,3,4,5],
+        onClick:function(date,nb){
+          var url="/blog/filter/filter.html"
+          window.location.href=buildUrl(url,{filterName:"week",filterValue:date,filterDes:"Calendar: Week from "+date.toLocaleDateString()})
+        }
+    });
+})()
+
+</script>
 <section class="series">
   <h1>Series</h1>
   <ul class="series"></ul>
