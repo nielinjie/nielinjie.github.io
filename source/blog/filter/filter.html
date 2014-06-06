@@ -26,6 +26,14 @@ footer: false
         })
       })
     }
+    if(window.filter.name=="week"){
+      return _(window.site.posts).filter(function(p){
+        var time= new Date(p.date).getTime()
+        var start=new Date(window.filter.value).getTime()
+        var end = new Date(start+1000*60*60*24*7)
+        return time<end && time>start
+      })
+    }
   }
   function article(post){
     var art=$("<article/>")
