@@ -159,6 +159,34 @@ Jun 04 2014 posted in 架构, 言论 &hellip;">
 
 <article>
   
+<h1><a href="/blog/2014/05/24/refactory/">给老爷爷系统（三）：重构</a></h1>
+<time datetime="2014-05-24T20:06:38+08:00" pubdate><span class='month'>May</span> <span class='day'>24</span> <span class='year'>2014</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/jia-gou/'>架构</a></span>
+</footer>
+
+
+</article>
+
+
+
+<article>
+  
+<h1><a href="/blog/2014/05/24/3d/">给老爷爷系统（四）：三个划分维度</a></h1>
+<time datetime="2014-05-24T20:06:38+08:00" pubdate><span class='month'>May</span> <span class='day'>24</span> <span class='year'>2014</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/jia-gou/'>架构</a></span>
+</footer>
+
+
+</article>
+
+
+
+<article>
+  
 <h1><a href="/blog/2014/05/21/resume/">我的简历（陆续补充中）</a></h1>
 <time datetime="2014-05-21T20:06:38+08:00" pubdate><span class='month'>May</span> <span class='day'>21</span> <span class='year'>2014</span></time>
 
@@ -726,6 +754,8 @@ Jun 04 2014 posted in 架构, 言论 &hellip;">
 
 
 </style>
+<script src="/javascripts/libs/svg-pan-zoom.min.js"></script>
+
 <section class="category-svg">
   <h1>Categories</h1>
 
@@ -775,9 +805,13 @@ function relations(){
   var svg = d3.select(".category-svg").append("svg")
       .attr("width", width)
       .attr("height", height);
+  svg.append("g").attr("class", "viewport")
+  var panZoomTiger = svgPanZoom('.category-svg svg', {
+            minZoom : 0.2
 
-  var link = svg.selectAll(".link"),
-      node = svg.selectAll(".node");
+        })
+  var link = svg.select(".viewport").selectAll(".link"),
+      node = svg.select(".viewport").selectAll(".node");
 
   var ns=nodes()
 

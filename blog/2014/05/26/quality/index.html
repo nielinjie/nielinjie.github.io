@@ -198,7 +198,7 @@
         <a class="basic-alignment left" href="/blog/2014/05/28/huidu/" title="Next Post: 简单的灰度发布方案">&laquo; 简单的灰度发布方案 </a>
       
       
-        <a class="basic-alignment right" href="/blog/2014/05/21/resume/" title="Previous Post: 我的简历（陆续补充中）"> 我的简历（陆续补充中） &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2014/05/24/refactory/" title="Previous Post: 给老爷爷系统（三）：重构"> 给老爷爷系统（三）：重构 &raquo;</a>
       
 
     </p>
@@ -340,6 +340,8 @@ var duoshuoQuery = {short_name:"nielinjie"};
 
 
 </style>
+<script src="/javascripts/libs/svg-pan-zoom.min.js"></script>
+
 <section class="category-svg">
   <h1>Categories</h1>
 
@@ -389,9 +391,13 @@ function relations(){
   var svg = d3.select(".category-svg").append("svg")
       .attr("width", width)
       .attr("height", height);
+  svg.append("g").attr("class", "viewport")
+  var panZoomTiger = svgPanZoom('.category-svg svg', {
+            minZoom : 0.2
 
-  var link = svg.selectAll(".link"),
-      node = svg.selectAll(".node");
+        })
+  var link = svg.select(".viewport").selectAll(".link"),
+      node = svg.select(".viewport").selectAll(".node");
 
   var ns=nodes()
 

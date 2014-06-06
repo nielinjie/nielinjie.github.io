@@ -9,7 +9,7 @@
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="2012年的最后两天，终于完成了一个久拖不决的任务：把几年来写过的代码review了一番。 ">
+  <meta name="description" content="公司历史悠久的B/S办公系（称为E系统）统需要添加移动支持。 ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +71,88 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/02/25/our-new-front-end/">我们的新前端</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-25T21:27:49+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>公司历史悠久的B/S办公系（称为E系统）统需要添加移动支持。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/02/25/our-new-front-end/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/01/23/wd-download-machine/">WD My Book Live 作为下载机</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-01-23T21:36:38+08:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>入了一个家用存储设备： <a href="http://www.360buy.com/product/502047.html">西部数据（WD）My Book Live 3.5英寸家庭网络硬盘3TB(WDBACG0030HCH)</a> 京东号称降价￥400，现在入看来还是比较合算的。</p>
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2013/01/23/wd-download-machine/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
   
   
     <article>
@@ -392,98 +474,13 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/11/14/scala-on-android/">Android 上的 Scala， 实战之路（二）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-11-14T16:04:04+08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>二、Hello World即遭不测</h3>
-
-<p>显然，首先是来一个Hello World。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2011/11/14/scala-on-android/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2011/11/14/scala-on-android2/">Android 上的 Scala， 实战之路（一）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-11-14T15:04:04+08:00" pubdate data-updated="true">Nov 14<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>一、先开始再说</h3>
-
-<p>因为已经习惯用Scala开发，所以在开始尝试Android平台开发的时候，没有使用Java。
-在这个文章系列中，将把尝试的过程和遇到的问题（希望都能带上解决办法）分享给大家，希望对大家有所帮助。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2011/11/14/scala-on-android2/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
   <div class="pagination">
     
     <a class="next" href="/blog/page/3/">&larr; Newer </a>
     
     <a href="/blog/archives">Blog Archives</a>
+    
+      <a class="prev" href="/blog/page/5/"> Older &rarr;</a>
     
   </div>
 </div>
@@ -552,6 +549,8 @@
 
 
 </style>
+<script src="/javascripts/libs/svg-pan-zoom.min.js"></script>
+
 <section class="category-svg">
   <h1>Categories</h1>
 
@@ -601,9 +600,13 @@ function relations(){
   var svg = d3.select(".category-svg").append("svg")
       .attr("width", width)
       .attr("height", height);
+  svg.append("g").attr("class", "viewport")
+  var panZoomTiger = svgPanZoom('.category-svg svg', {
+            minZoom : 0.2
 
-  var link = svg.selectAll(".link"),
-      node = svg.selectAll(".node");
+        })
+  var link = svg.select(".viewport").selectAll(".link"),
+      node = svg.select(".viewport").selectAll(".node");
 
   var ns=nodes()
 

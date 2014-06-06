@@ -430,7 +430,7 @@ A:<br/>
 
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/05/26/quality/" title="Next Post: 给老爷爷系统（一）：代码质量守则和工具">&laquo; 给老爷爷系统（一）：代码质量守则和工具 </a>
+        <a class="basic-alignment left" href="/blog/2014/05/24/3d/" title="Next Post: 给老爷爷系统（四）：三个划分维度">&laquo; 给老爷爷系统（四）：三个划分维度 </a>
       
       
         <a class="basic-alignment right" href="/blog/2014/04/24/aa4/" title="Previous Post: 敏捷的架构设计（六）：领域地图（二）"> 敏捷的架构设计（六）：领域地图（二） &raquo;</a>
@@ -574,6 +574,8 @@ var duoshuoQuery = {short_name:"nielinjie"};
 
 
 </style>
+<script src="/javascripts/libs/svg-pan-zoom.min.js"></script>
+
 <section class="category-svg">
   <h1>Categories</h1>
 
@@ -623,9 +625,13 @@ function relations(){
   var svg = d3.select(".category-svg").append("svg")
       .attr("width", width)
       .attr("height", height);
+  svg.append("g").attr("class", "viewport")
+  var panZoomTiger = svgPanZoom('.category-svg svg', {
+            minZoom : 0.2
 
-  var link = svg.selectAll(".link"),
-      node = svg.selectAll(".node");
+        })
+  var link = svg.select(".viewport").selectAll(".link"),
+      node = svg.select(".viewport").selectAll(".node");
 
   var ns=nodes()
 

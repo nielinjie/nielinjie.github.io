@@ -375,6 +375,8 @@ var duoshuoQuery = {short_name:"nielinjie"};
 
 
 </style>
+<script src="/javascripts/libs/svg-pan-zoom.min.js"></script>
+
 <section class="category-svg">
   <h1>Categories</h1>
 
@@ -424,9 +426,13 @@ function relations(){
   var svg = d3.select(".category-svg").append("svg")
       .attr("width", width)
       .attr("height", height);
+  svg.append("g").attr("class", "viewport")
+  var panZoomTiger = svgPanZoom('.category-svg svg', {
+            minZoom : 0.2
 
-  var link = svg.selectAll(".link"),
-      node = svg.selectAll(".node");
+        })
+  var link = svg.select(".viewport").selectAll(".link"),
+      node = svg.select(".viewport").selectAll(".node");
 
   var ns=nodes()
 
