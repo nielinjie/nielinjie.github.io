@@ -58,6 +58,7 @@ categories: ["个人"]
 * 2014 /1--至今：平安企业门户信息聚合和企业社交
   * 项目描述：	平安企业门户，关于信息聚合和企业社交。原型项目。
   * 责任描述：	策划、原型设计和开发、技术选型。
+    * [企业中需要什么样的社交？](/blog/2014/06/05/social/)
 ----
 * 2014 /1--至今：平安法律部诉讼管理系统
   * 项目描述：	平安法律部诉讼管理系统。敏捷项目。
@@ -97,6 +98,7 @@ categories: ["个人"]
   * 责任描述：	策划并发起项目、制定原则和方案、分析和设计。
     * [一场似非而是的DSL（系列）](/blog/filter/filter.html?filterName=series&filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL)
     * [敏捷的架构设计（五、六）：领域地图（一、二）](/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
+    * [给老爷爷系统（系列）](/blog/filter/filter.html?filterName=series&filterValue=给老爷爷系统&filterDes=Series%3A%20给老爷爷系统)
 ----
 
 * 2005 /11--2007 /11：投资银行销售客户管理系统

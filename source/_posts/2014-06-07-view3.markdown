@@ -3,7 +3,7 @@ layout: post
 title: "给老爷爷系统（四）：如何描述系统？（三）"
 date: 2014-06-07 18:06:38 +0800
 comments: true
-categories: ["架构","开发","质量","工具"]
+categories: ["架构","开发","质量","工具","DSL"]
 series: ["给老爷爷系统 4"]
 ---
 > 这是一个老爷爷系统。
