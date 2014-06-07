@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 言论 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/yan-lun/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-06T17:22:08+08:00</updated>
+  <updated>2014-06-07T23:37:16+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[言论：结构的要素]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/07/structure/"/>
+    <updated>2014-06-07T17:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/07/structure</id>
+    <content type="html"><![CDATA[<p>结构的基本要素有：</p>
+
+<ul>
+<li>存在：一个元素是否存在。</li>
+<li>边界：一个元素的定义和与其他元素的区别。</li>
+<li>关系：一个元素与其他元素有没有联系。</li>
+</ul>
+
+
+<p>在基本之上，研究结构的另一些特征可能有帮助：</p>
+
+<ul>
+<li>聚和：元素与某些元素的关系不同于与其他元素。</li>
+<li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[企业中需要什么样的社交？]]></title>
@@ -72,15 +96,6 @@
 
 <p>这时候你忽然灵光一现，你埋头迅速制造了一个口袋，不是华丽的、未知的、危险的口袋，而是一个简单、简陋、安全、甚至没完全完成的口袋。“啪”，你把口袋拍在雪人肚子上。
 你感到世界清净下来。你傻笑，认为自己理解了一个高大上的词语，叫做：“提升至架构的设计”。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[言论：好的架构师]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi/"/>
-    <updated>2014-03-09T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi</id>
-    <content type="html"><![CDATA[<p>好的架构师说：好吧，重做是架构进化的一种形式，我们下一个架构将解决这些问题；脾气好的架构师说：好吧，你是老板，你说重做我们就重做；2b架构师说：重做？mb你是老板你了不起么？老子的架构不够nb么？老子的xxx风格yyy模式你sb懂得起么？</p>
 ]]></content>
   </entry>
   

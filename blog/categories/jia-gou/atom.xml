@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-06T17:22:08+08:00</updated>
+  <updated>2014-06-07T23:37:16+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,7 +14,147 @@
 
   
   <entry>
-    <title type="html"><![CDATA[给老爷爷系统（二）：系统是什么样的？（一）]]></title>
+    <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/07/view3/"/>
+    <updated>2014-06-07T18:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/07/view3</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>这一篇讲讲如何实现的问题。</p>
+
+<!-- more -->
+
+
+<p>实现方面主要考虑了两个要点：</p>
+
+<ul>
+<li>如何构建和维护：要快速地建立和编辑，能够加入版本管理，能够在各方面间共享。</li>
+<li>如何展现：各方面要容易地挂载自己的关注点数据，同时跨角色观察的需求要求框架能同时挂载多方面的数据。</li>
+</ul>
+
+
+<p>我们为这两个要点选择了两种不同的形式。</p>
+
+<p>一方面在构建和维护时，特征描述采用纯文本方式，可以说是一种简单地DSL。
+DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和角色间共享。</p>
+
+<p>```
+审批/逐个审批</p>
+
+<pre><code>-i 查看签报详细信息
+-i 输入审批意见
+    -g 使用默认意见
+    -g 手工输入意见
+    -g 语音输入意见
+-i 选择用户
+签报
+用户
+</code></pre>
+
+<p>批量审批</p>
+
+<pre><code>-e 逐个审批
+-i 查看待处理文件列表
+-i 点击审批按钮
+</code></pre>
+
+<p>……
+```</p>
+
+<p>另一方面在展现时，我们解析DSL，图形化交互式（并且略显炫酷滴 :-D）地展示。
+下面展示的是目前的状况。</p>
+
+<ul>
+<li>左边的图，是“系统特征”，由黄色椭圆形表示的领域过程、绿色圆形表示的领域实体，以及他们之间的连线构成。</li>
+<li>右边的下拉菜单，是由各方面提供的关注点数据，可以按需要附加到“系统特征”上。比如这个截图上，
+左边的图上面有个红色的大圆，就是将代码质量数据叠加上来。还有个深绿色的小点，是将代码结构的数据叠加上来。</li>
+<li>除了可以以叠加的方式展示数据，还可以根据关注点数据对图进行过滤。</li>
+</ul>
+
+
+<p><img src="/images/view/view3.png"></p>
+
+<p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[言论：结构的要素]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/07/structure/"/>
+    <updated>2014-06-07T17:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/07/structure</id>
+    <content type="html"><![CDATA[<p>结构的基本要素有：</p>
+
+<ul>
+<li>存在：一个元素是否存在。</li>
+<li>边界：一个元素的定义和与其他元素的区别。</li>
+<li>关系：一个元素与其他元素有没有联系。</li>
+</ul>
+
+
+<p>在基本之上，研究结构的另一些特征可能有帮助：</p>
+
+<ul>
+<li>聚和：元素与某些元素的关系不同于与其他元素。</li>
+<li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（三）：如何描述系统？（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/06/view2/"/>
+    <updated>2014-06-06T18:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/06/view2</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+
+<!-- more -->
+
+
+<p>但功能和领域模型都不能直接使用：</p>
+
+<ul>
+<li>功能的问题是很难跟代码直接关联起来。</li>
+<li>领域模型的问题是只有开发同学熟悉这个概念。SA、测试、开发经理等同学比较熟悉的是“功能”这个概念，
+虽然他们对这个概念的定义不尽相同。</li>
+</ul>
+
+
+<p>我们希望我们的特征描述既可以将各方面关注点都联系起来，又可以让各方面都工作在自己熟悉的概念上。
+于是我们尝试使用一种二者的混合体。</p>
+
+<ul>
+<li>从领域模型出发，以便我们能跟代码产生联系<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。代码非常重要，因为在运行时，代码决定的逻辑基本上是系统的一切。</li>
+<li>弱化领域对象的定义，只描述它是否存在和与其他对象的关系<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。领域对象的定义显然是重要的，但我们现在要的是“框架”。</li>
+<li>强调领域过程，弱化领域实体。实体常常被认为是分析的结果，看上去和“功能”没有关系，有些方面的同学不关注。</li>
+<li>领域过程之间的关系划归为三种：Include、Extend、Generalization<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</li>
+<li>领域过程与实体间，只有一种，引用关系。实体与实体间的关系，不再描述。</li>
+</ul>
+
+
+<p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
+
+<p>（<a href="/blog/2014/06/07/view3">再下一篇</a>）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>逻辑按领域结构划分，在这个系统没完全实现：<a href="/blog/2014/06/09/refactory">重构</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>领域模型是一个领域对象的结构，<a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>没错，跟UML use case图里面的三种关系相同。这并非偶然，我们认为所有的过程之间，都是这三种关系。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（二）：如何描述系统？（一）]]></title>
     <link href="http://nielinjie.github.io/blog/2014/06/05/view/"/>
     <updated>2014-06-05T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/06/05/view</id>
@@ -25,7 +165,7 @@
 <!-- more -->
 
 
-<p>团队中不同的角色都在尝试弄清楚这个问题。
+<p>团队中不同的角色都在尝试解决这个问题。
 上次<a href="/blog/2014/04/24/aa3/">有篇blog</a>提到:</p>
 
 <blockquote><p>SA同学正在整理全局“功能地图”、测试同学整理“全量测试案例”</p></blockquote>
@@ -37,12 +177,12 @@
 上面说的这些各种“整理”，其实都包含了对系统特征进行整理和重建，然后再把自己的关注点挂载上去。
 只不过他们从各自的目的出发，从各自的角度下手。</p>
 
-<p>团队意识到：这些关注者可能需要共用同一个系统特征描述。</p>
+<p>团队意识到：这些各方面的关注者可能需要共用同一个系统特征描述。</p>
 
 <ul>
 <li>可以减少分别构建和维护框架带来的工作量。<br/>
-如果说分别构建框架还勉强可以做到的话，分别维护并保持同步，则是完全不可能做到的。</li>
-<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控——
+如果说分别构建框架只是时间和工作量的问题的话，分别维护和保持同步进化，则是几乎不可能做到的。</li>
+<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控，例如——
 
 <ul>
 <li>通过观察代码历史和代码质量，可以帮助划定测试重点覆盖区域。</li>
@@ -55,9 +195,9 @@
 
 <p>“统一系统特征描述”看来很重要，我们需要找到一个形式，可以承担这样的重任。</p>
 
-<p>我们整理了各方面的关注点，觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+<p>我们整理了各方面的关注点，大致如下，觉得处于中间位置的“功能”或者“领域模型”可能可以承担这个重任。</p>
 
-<p>（未完待续）</p>
+<p>（<a href="/blog/2014/06/06/view2/">下篇</a>）</p>
 
 <p><img src="/images/view/view.png"></p>
 ]]></content>
@@ -71,171 +211,6 @@
     <content type="html"><![CDATA[<p>分解问题的维度除了空间还有时间，可以逐一解决，还可以渐进解决。大家莫忘记了。:&ndash;)</p>
 
 <p>架构师要善于将大规模问题分解为可控可解决的小问题，也要善于把大跨度问题分解为可迭代可验证可积累的小问题。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[简单的灰度发布方案]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/05/28/huidu/"/>
-    <updated>2014-05-28T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/05/28/huidu</id>
-    <content type="html"><![CDATA[<p>正在策划一个系统的灰度发布，目前有个简单的方案，（简图如最后所示）。</p>
-
-<!-- more -->
-
-
-<ol>
-<li>同一系统发布为ab两个版本，同时在生产可用。</li>
-<li>用户访问先通过一个分流规则，这个规则决定访问a版本还是b版本。</li>
-<li>分流规则主要涉及到用户的特征，可能涉及到一些业务逻辑。</li>
-<li>分流规则可以由运营方便地（如果可以，随时地）维护生效。</li>
-</ol>
-
-
-<p>我们的问题主要是：</p>
-
-<p>分流这部分应该是一种常见的反向代理，不太熟悉这类组件。公司里用得比较多的时f5。
-如果利用f5、nginx之类的做分流是否可以达成上面提到的第3、4点。</p>
-
-<p>了解到f5的irule只能描述简单地规则，比如可以读取cookie，
-目前的想法是由应用自己来写规则，通过cookie通知f5，irules里面只需要对cookie做简单判定。
-需要调整分流规则的时候，运营（或者开发）只需要操作应用。
-类似于这样：</p>
-
-<p>f5 中</p>
-
-<pre><code>if(cookie(‘abVersionFlag’)==a){
-       redirectTo a
-}else{
-       redirectTo b
-}
-</code></pre>
-
-<p>应用中（只在b版本中必要）：</p>
-
-<pre><code>if(cookie(‘abVersionFlag’)==null){
-       setCookie(‘abVersionFlag’, getABVserionByUserFromBusiness(user))
-       sendRedirect(url)
-}else{
-       otherBusinessLogic……
-}
-</code></pre>
-
-<p>简图：</p>
-
-<p><img src="/images/ab/ab.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[敏捷的架构设计（六）：领域地图（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/24/aa4/"/>
-    <updated>2014-04-24T17:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/24/aa4</id>
-    <content type="html"><![CDATA[<blockquote><p>敏捷已死，而敏捷性长存。</p></blockquote>
-
-<h3>如何建立领域地图</h3>
-
-<!-- more -->
-
-
-<p>以下直接转帖“领域地图”工作开始时的kickoff邮件，可以体现我们建立“领域地图”方法的基本思路。</p>
-
-<hr />
-
-<ol>
-<li>“领域地图”编制和使用将是一个渐进的和团队参与的过程。地图将逐步进化和完善，于此同时可以使用。</li>
-<li>“领域地图”的目的是将系统的领域知识（业务知识）进行整理，使其结构化，为相关工作提供指导。比如：架构设计、包划分……</li>
-<li>“领域地图”中的知识来源于：
-
-<ol>
-<li>同学们和业务同事的记忆中或者从其他渠道整理的业务知识。</li>
-<li>从代码中发掘来的业务知识。</li>
-</ol>
-</li>
-<li>“领域地图”希望展现的是业务概念及其关系。是一个静态的领域模型视图。“功能地图”也是一个领域模型的一个视图，是动态视图。两者保持一致并相互支持和完善。</li>
-<li>“领域地图”编制工作要点大致是：
-
-<ol>
-<li>工作在“领域地图白板”上进行，就是“英雄联盟白板”<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>的右侧白板。</li>
-<li>图上的要素说明如下：
-
-<ol>
-<li>紫色矩形：来源于同学们的业务知识（3.a），目前主要来源于SA维护的“功能地图”。</li>
-<li>绿色矩形：来源于代码的架构现状。既有可能是从代码发掘的正面的业务知识（3.b），也有可能是系统多年积累来负面现状。</li>
-<li>橙色塔形：从i，ii两点综合而来的理想或者说是设计结论，是领域地图的结果。由架构师和开发同学们讨论确立。</li>
-<li>紫色和绿色的post上的文字可以是一些词语，也可以是一些描述。橙色的post是结果，一般是一个词语，是英文的，便于指导后续架构和设计工作。</li>
-<li>post之间的距离表示概念之间的关系。间隔较小进而重叠的，表示业务概念有较多重合和交互；间隔较远的，表示业务概念分隔明显。</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>对“领域地图”的使用目前主要体现在代码的结构改进，目标是按领域组织代码。
-
-<ol>
-<li>对照橙色塔形和绿色矩形，可以发现现状与理想间的差距，是我们的改进方向，用红色post表示。</li>
-<li>从红色的post，产生可衡量可执行的改进任务，用紫色post表示，与“英雄联盟”白板上内部改造需求一致，便于移动到“英雄联盟”上跟进。（虽然与5.b.i中的颜色一样，但内容会很不一样，应该不会混淆。）</li>
-<li>在“英雄联盟”白板上，有时会有橙色塔形标注“DM”（domain map）贴在任务卡片上，表示此项任务涉及到的领域知识（业务知识）必须在设计阶段在“领域地图”上体现。（和要求设计复审的符号相似，都是橙色塔形，不过那个上标注“D”）</li>
-</ol>
-</li>
-</ol>
-
-
-<p><img src="/images/kanban/dm.jpg"></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>该系统敏捷开发过程的用户故事白板。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[敏捷的架构设计（五）：领域地图（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/24/aa3/"/>
-    <updated>2014-04-24T16:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/24/aa3</id>
-    <content type="html"><![CDATA[<blockquote><p>敏捷已死，而敏捷性长存。</p></blockquote>
-
-<h3>什么是“领域地图”？是“领域模型”么？</h3>
-
-<!-- more -->
-
-
-<p>基本上，就是的。</p>
-
-<p>这是一个历史悠久的系统，历经多年的进化，长久以来团队不知道它的整体需求是怎样的，也缺少有条理的领域知识积累。风险逐渐积累。</p>
-
-<p>现在到了系统整理领域知识，尝试建立领域模型的适当时机——</p>
-
-<ul>
-<li>事务脚本风格向领域划分风格的重构<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>已经在重点局部取得了阶段性进展，现在到了推广到全局的时间了。既然是“按领域划分”，我们自然需要一个领域模型作为划分原则。</li>
-<li>SA同学正在整理全局“功能地图”、测试同学整理“全量测试案例”，这些东西希望能与代码发生联系，需要一个中枢。在上述的架构风格下，这个中枢只能是领域模型。
-我们画了个图来分析领域模型的中枢地位。如后所示。</li>
-</ul>
-
-
-<p>虽然是一种模型，但叫“地图”不叫“模型”——</p>
-
-<ul>
-<li>尺度大，粒度大，只有宏观结构没有细节。是对领域的全局鸟瞰，感觉就像是面对地图。</li>
-<li>强调它的最高指导意义，类比“军事地图”。感受下。:-D</li>
-<li>SA同学的叫做功能“地图”，我们也叫“地图”。</li>
-</ul>
-
-
-<p><img src="/images/kanban/gongneng.png"></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>关于重构有个系列的blog即将写，届时这里换成一个链接……<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   

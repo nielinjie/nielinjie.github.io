@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-06T17:22:08+08:00</updated>
+  <updated>2014-06-07T23:37:16+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,7 +14,154 @@
 
   
   <entry>
-    <title type="html"><![CDATA[给老爷爷系统（二）：系统是什么样的？（一）]]></title>
+    <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/07/view3/"/>
+    <updated>2014-06-07T18:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/07/view3</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>这一篇讲讲如何实现的问题。</p>
+
+<!-- more -->
+
+
+<p>实现方面主要考虑了两个要点：</p>
+
+<ul>
+<li>如何构建和维护：要快速地建立和编辑，能够加入版本管理，能够在各方面间共享。</li>
+<li>如何展现：各方面要容易地挂载自己的关注点数据，同时跨角色观察的需求要求框架能同时挂载多方面的数据。</li>
+</ul>
+
+
+<p>我们为这两个要点选择了两种不同的形式。</p>
+
+<p>一方面在构建和维护时，特征描述采用纯文本方式，可以说是一种简单地DSL。
+DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和角色间共享。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>审批/逐个审批
+</span><span class='line'>  -i 查看签报详细信息
+</span><span class='line'>  -i 输入审批意见
+</span><span class='line'>      -g 使用默认意见
+</span><span class='line'>      -g 手工输入意见
+</span><span class='line'>      -g 语音输入意见
+</span><span class='line'>  -i 选择用户
+</span><span class='line'>    签报
+</span><span class='line'>    用户
+</span><span class='line'>批量审批
+</span><span class='line'>    -e 逐个审批
+</span><span class='line'>    -i 查看待处理文件列表
+</span><span class='line'>    -i 点击审批按钮
+</span><span class='line'>……</span></code></pre></td></tr></table></div></figure>
+
+
+<p>另一方面在展现时，我们解析DSL，图形化交互式（并且略显炫酷滴 :-D）地展示。
+下面展示的是目前的状况。</p>
+
+<ul>
+<li>左边的图，是“系统特征”，由黄色椭圆形表示的领域过程、绿色圆形表示的领域实体，以及他们之间的连线构成。</li>
+<li>右边的下拉菜单，是由各方面提供的关注点数据，可以按需要附加到“系统特征”上。比如这个截图上，
+左边的图上面有个红色的大圆，就是将代码质量数据叠加上来。还有个深绿色的小点，是将代码结构的数据叠加上来。</li>
+<li>除了可以以叠加的方式展示数据，还可以根据关注点数据对图进行过滤。</li>
+</ul>
+
+
+<p><img src="http://nielinjie.github.io/images/view/view3.png"></p>
+
+<p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[言论：结构的要素]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/07/structure/"/>
+    <updated>2014-06-07T17:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/07/structure</id>
+    <content type="html"><![CDATA[<p>结构的基本要素有：</p>
+
+<ul>
+<li>存在：一个元素是否存在。</li>
+<li>边界：一个元素的定义和与其他元素的区别。</li>
+<li>关系：一个元素与其他元素有没有联系。</li>
+</ul>
+
+
+<p>在基本之上，研究结构的另一些特征可能有帮助：</p>
+
+<ul>
+<li>聚和：元素与某些元素的关系不同于与其他元素。</li>
+<li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（三）：如何描述系统？（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/06/view2/"/>
+    <updated>2014-06-06T18:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/06/view2</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+
+<!-- more -->
+
+
+<p>但功能和领域模型都不能直接使用：</p>
+
+<ul>
+<li>功能的问题是很难跟代码直接关联起来。</li>
+<li>领域模型的问题是只有开发同学熟悉这个概念。SA、测试、开发经理等同学比较熟悉的是“功能”这个概念，
+虽然他们对这个概念的定义不尽相同。</li>
+</ul>
+
+
+<p>我们希望我们的特征描述既可以将各方面关注点都联系起来，又可以让各方面都工作在自己熟悉的概念上。
+于是我们尝试使用一种二者的混合体。</p>
+
+<ul>
+<li>从领域模型出发，以便我们能跟代码产生联系<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。代码非常重要，因为在运行时，代码决定的逻辑基本上是系统的一切。</li>
+<li>弱化领域对象的定义，只描述它是否存在和与其他对象的关系<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。领域对象的定义显然是重要的，但我们现在要的是“框架”。</li>
+<li>强调领域过程，弱化领域实体。实体常常被认为是分析的结果，看上去和“功能”没有关系，有些方面的同学不关注。</li>
+<li>领域过程之间的关系划归为三种：Include、Extend、Generalization<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</li>
+<li>领域过程与实体间，只有一种，引用关系。实体与实体间的关系，不再描述。</li>
+</ul>
+
+
+<p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
+
+<p>（<a href="http://nielinjie.github.io/blog/2014/06/07/view3">再下一篇</a>）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>逻辑按领域结构划分，在这个系统没完全实现：<a href="http://nielinjie.github.io/blog/2014/06/09/refactory">重构</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>领域模型是一个领域对象的结构，<a href="http://nielinjie.github.io/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>没错，跟UML use case图里面的三种关系相同。这并非偶然，我们认为所有的过程之间，都是这三种关系。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（二）：如何描述系统？（一）]]></title>
     <link href="http://nielinjie.github.io/blog/2014/06/05/view/"/>
     <updated>2014-06-05T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/06/05/view</id>
@@ -25,7 +172,7 @@
 <!-- more -->
 
 
-<p>团队中不同的角色都在尝试弄清楚这个问题。
+<p>团队中不同的角色都在尝试解决这个问题。
 上次<a href="http://nielinjie.github.io/blog/2014/04/24/aa3/">有篇blog</a>提到:</p>
 
 <blockquote><p>SA同学正在整理全局“功能地图”、测试同学整理“全量测试案例”</p></blockquote>
@@ -37,12 +184,12 @@
 上面说的这些各种“整理”，其实都包含了对系统特征进行整理和重建，然后再把自己的关注点挂载上去。
 只不过他们从各自的目的出发，从各自的角度下手。</p>
 
-<p>团队意识到：这些关注者可能需要共用同一个系统特征描述。</p>
+<p>团队意识到：这些各方面的关注者可能需要共用同一个系统特征描述。</p>
 
 <ul>
 <li>可以减少分别构建和维护框架带来的工作量。<br/>
-如果说分别构建框架还勉强可以做到的话，分别维护并保持同步，则是完全不可能做到的。</li>
-<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控——
+如果说分别构建框架只是时间和工作量的问题的话，分别维护和保持同步进化，则是几乎不可能做到的。</li>
+<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控，例如——
 
 <ul>
 <li>通过观察代码历史和代码质量，可以帮助划定测试重点覆盖区域。</li>
@@ -55,9 +202,9 @@
 
 <p>“统一系统特征描述”看来很重要，我们需要找到一个形式，可以承担这样的重任。</p>
 
-<p>我们整理了各方面的关注点，觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+<p>我们整理了各方面的关注点，大致如下，觉得处于中间位置的“功能”或者“领域模型”可能可以承担这个重任。</p>
 
-<p>（未完待续）</p>
+<p>（<a href="http://nielinjie.github.io/blog/2014/06/06/view2/">下篇</a>）</p>
 
 <p><img src="http://nielinjie.github.io/images/view/view.png"></p>
 ]]></content>
@@ -916,64 +1063,6 @@ A：“风险驱动架构设计”方法……</p>
 </span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
 </span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'</span></code></pre></td></tr></table></div></figure>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[关于App服务架构风格的讨论]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/20/wa/"/>
-    <updated>2014-03-20T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/20/wa</id>
-    <content type="html"><![CDATA[<p>最近有架构师在架构师列表提问关于web/app服务器分离的架构风格。参与了讨论，摘录如下：</p>
-
-<!-- more -->
-
-
-<h3>发起讨论邮件</h3>
-
-<p>现在在做一个面向企业用户的互联网的项目，我司一般的架构是基于web,app这样的架构。
-我认为没有必要用app，只要web就ok了，本来的基于web,app的架构是想要将复杂业务逻辑的部门和面向网络IO的view层分离，做计算和IO的分离，但是一个简单的应用去用这样的架构是没有价值的，大家认为呢？<br/>
-请大家发表下看法。</p>
-
-<h3>我的回复邮件</h3>
-
-<p>有一些看法供同学们参考、批评，如下：</p>
-
-<ul>
-<li>“计算与IO的分离“不是一个目的，而是一个手段。用来解决某个工程风险的，比如性能、安全性等。要考虑web、app是否应该分离，不是考虑是否需要”计算与IO分离“，而是考虑是否存在这些工程风险，是否应该采用这种手段来解决。</li>
-<li>现在平安常用的web与app分离这个架构策略我理解有两个层面内容，这两个方面的必要性可以分开考虑。可以ab都要，可以只要a，也可以都不要……：
-
-<ul>
-<li>逻辑划分层面，web和app放入不同的逻辑单元。这个是扩展性、互操作性的的考虑。比如有些系统会出现多个展示端，与其他系统的交互一般需要暴露在app层次等</li>
-<li>部署层面，web与app部署于不同节点。这个是安全、可用性方面的考虑。</li>
-</ul>
-</li>
-<li>w/a 分离作为企业推定架构策略，如果被裁剪是有一些隐性成本的，比如人员不适应，环境不标准等等。这些成本会削弱甚至抵消裁剪带来的成本降低，所以倾向于有确实的理由再裁剪。</li>
-</ul>
-
-
-<p>8-D</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[言论：好的架构师]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi/"/>
-    <updated>2014-03-09T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/09/said-jiagoushi</id>
-    <content type="html"><![CDATA[<p>好的架构师说：好吧，重做是架构进化的一种形式，我们下一个架构将解决这些问题；脾气好的架构师说：好吧，你是老板，你说重做我们就重做；2b架构师说：重做？mb你是老板你了不起么？老子的架构不够nb么？老子的xxx风格yyy模式你sb懂得起么？</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[言论：乌鸦]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/03/said-yuya/"/>
-    <updated>2014-03-03T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/03/said-yuya</id>
-    <content type="html"><![CDATA[<p>一只乌鸦口渴了……，可是他早上买的酸奶没拿吸管，他的勺子比瓶子口大……，这时候一只老乌鸦走过来，分享了他处理类似问题的经验，并声称已经已经被广为使用和验证。
-乌鸦感到庆幸，立即找来了很多石子儿……，直到他认识到他要对付的是酸奶，而不是清水。</p>
-
-<p>乌鸦看着表面上堆着石子儿的酸奶，自我感觉对“模式”的认识深了些。</p>
 ]]></content>
   </entry>
   

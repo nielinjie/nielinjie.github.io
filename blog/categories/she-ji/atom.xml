@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 设计 | 聂同学]]></title>
+  <link href="http://nielinjie.github.io/blog/categories/she-ji/atom.xml" rel="self"/>
+  <link href="http://nielinjie.github.io/"/>
+  <updated>2014-06-07T23:37:16+08:00</updated>
+  <id>http://nielinjie.github.io/</id>
+  <author>
+    <name><![CDATA[nielinjie]]></name>
+    <email><![CDATA[nielinjie@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[言论：结构的要素]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/07/structure/"/>
+    <updated>2014-06-07T17:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/07/structure</id>
+    <content type="html"><![CDATA[<p>结构的基本要素有：</p>
+
+<ul>
+<li>存在：一个元素是否存在。</li>
+<li>边界：一个元素的定义和与其他元素的区别。</li>
+<li>关系：一个元素与其他元素有没有联系。</li>
+</ul>
+
+
+<p>在基本之上，研究结构的另一些特征可能有帮助：</p>
+
+<ul>
+<li>聚和：元素与某些元素的关系不同于与其他元素。</li>
+<li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

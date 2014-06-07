@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-06T17:22:08+08:00</updated>
+  <updated>2014-06-07T23:37:16+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,7 +14,123 @@
 
   
   <entry>
-    <title type="html"><![CDATA[给老爷爷系统（二）：系统是什么样的？（一）]]></title>
+    <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/07/view3/"/>
+    <updated>2014-06-07T18:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/07/view3</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>这一篇讲讲如何实现的问题。</p>
+
+<!-- more -->
+
+
+<p>实现方面主要考虑了两个要点：</p>
+
+<ul>
+<li>如何构建和维护：要快速地建立和编辑，能够加入版本管理，能够在各方面间共享。</li>
+<li>如何展现：各方面要容易地挂载自己的关注点数据，同时跨角色观察的需求要求框架能同时挂载多方面的数据。</li>
+</ul>
+
+
+<p>我们为这两个要点选择了两种不同的形式。</p>
+
+<p>一方面在构建和维护时，特征描述采用纯文本方式，可以说是一种简单地DSL。
+DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和角色间共享。</p>
+
+<p>```
+审批/逐个审批</p>
+
+<pre><code>-i 查看签报详细信息
+-i 输入审批意见
+    -g 使用默认意见
+    -g 手工输入意见
+    -g 语音输入意见
+-i 选择用户
+签报
+用户
+</code></pre>
+
+<p>批量审批</p>
+
+<pre><code>-e 逐个审批
+-i 查看待处理文件列表
+-i 点击审批按钮
+</code></pre>
+
+<p>……
+```</p>
+
+<p>另一方面在展现时，我们解析DSL，图形化交互式（并且略显炫酷滴 :-D）地展示。
+下面展示的是目前的状况。</p>
+
+<ul>
+<li>左边的图，是“系统特征”，由黄色椭圆形表示的领域过程、绿色圆形表示的领域实体，以及他们之间的连线构成。</li>
+<li>右边的下拉菜单，是由各方面提供的关注点数据，可以按需要附加到“系统特征”上。比如这个截图上，
+左边的图上面有个红色的大圆，就是将代码质量数据叠加上来。还有个深绿色的小点，是将代码结构的数据叠加上来。</li>
+<li>除了可以以叠加的方式展示数据，还可以根据关注点数据对图进行过滤。</li>
+</ul>
+
+
+<p><img src="/images/view/view3.png"></p>
+
+<p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（三）：如何描述系统？（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/06/view2/"/>
+    <updated>2014-06-06T18:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/06/view2</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+
+<!-- more -->
+
+
+<p>但功能和领域模型都不能直接使用：</p>
+
+<ul>
+<li>功能的问题是很难跟代码直接关联起来。</li>
+<li>领域模型的问题是只有开发同学熟悉这个概念。SA、测试、开发经理等同学比较熟悉的是“功能”这个概念，
+虽然他们对这个概念的定义不尽相同。</li>
+</ul>
+
+
+<p>我们希望我们的特征描述既可以将各方面关注点都联系起来，又可以让各方面都工作在自己熟悉的概念上。
+于是我们尝试使用一种二者的混合体。</p>
+
+<ul>
+<li>从领域模型出发，以便我们能跟代码产生联系<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。代码非常重要，因为在运行时，代码决定的逻辑基本上是系统的一切。</li>
+<li>弱化领域对象的定义，只描述它是否存在和与其他对象的关系<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。领域对象的定义显然是重要的，但我们现在要的是“框架”。</li>
+<li>强调领域过程，弱化领域实体。实体常常被认为是分析的结果，看上去和“功能”没有关系，有些方面的同学不关注。</li>
+<li>领域过程之间的关系划归为三种：Include、Extend、Generalization<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</li>
+<li>领域过程与实体间，只有一种，引用关系。实体与实体间的关系，不再描述。</li>
+</ul>
+
+
+<p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
+
+<p>（<a href="/blog/2014/06/07/view3">再下一篇</a>）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>逻辑按领域结构划分，在这个系统没完全实现：<a href="/blog/2014/06/09/refactory">重构</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>领域模型是一个领域对象的结构，<a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>没错，跟UML use case图里面的三种关系相同。这并非偶然，我们认为所有的过程之间，都是这三种关系。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（二）：如何描述系统？（一）]]></title>
     <link href="http://nielinjie.github.io/blog/2014/06/05/view/"/>
     <updated>2014-06-05T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/06/05/view</id>
@@ -25,7 +141,7 @@
 <!-- more -->
 
 
-<p>团队中不同的角色都在尝试弄清楚这个问题。
+<p>团队中不同的角色都在尝试解决这个问题。
 上次<a href="/blog/2014/04/24/aa3/">有篇blog</a>提到:</p>
 
 <blockquote><p>SA同学正在整理全局“功能地图”、测试同学整理“全量测试案例”</p></blockquote>
@@ -37,12 +153,12 @@
 上面说的这些各种“整理”，其实都包含了对系统特征进行整理和重建，然后再把自己的关注点挂载上去。
 只不过他们从各自的目的出发，从各自的角度下手。</p>
 
-<p>团队意识到：这些关注者可能需要共用同一个系统特征描述。</p>
+<p>团队意识到：这些各方面的关注者可能需要共用同一个系统特征描述。</p>
 
 <ul>
 <li>可以减少分别构建和维护框架带来的工作量。<br/>
-如果说分别构建框架还勉强可以做到的话，分别维护并保持同步，则是完全不可能做到的。</li>
-<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控——
+如果说分别构建框架只是时间和工作量的问题的话，分别维护和保持同步进化，则是几乎不可能做到的。</li>
+<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控，例如——
 
 <ul>
 <li>通过观察代码历史和代码质量，可以帮助划定测试重点覆盖区域。</li>
@@ -55,9 +171,9 @@
 
 <p>“统一系统特征描述”看来很重要，我们需要找到一个形式，可以承担这样的重任。</p>
 
-<p>我们整理了各方面的关注点，觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+<p>我们整理了各方面的关注点，大致如下，觉得处于中间位置的“功能”或者“领域模型”可能可以承担这个重任。</p>
 
-<p>（未完待续）</p>
+<p>（<a href="/blog/2014/06/06/view2/">下篇</a>）</p>
 
 <p><img src="/images/view/view.png"></p>
 ]]></content>
@@ -149,120 +265,6 @@
 <li>在适当的地方嵌入相应地html文件，其中的js根据json产生相关的内容。</li>
 <li>代码在这里：<a href="https://github.com/nielinjie/nielinjie.github.io/commit/4a599e5d1296b420dc13473c4e6bbaf4d55fc198">https://github.com/nielinjie/nielinjie.github.io/commit</a>。</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[向Octopress贡献（一）：动态内容]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/20/xiaowanyier/"/>
-    <updated>2014-04-20T23:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/20/xiaowanyier</id>
-    <content type="html"><![CDATA[<p>同学们往右看：就是那个一坨一坨飘一飘的东西。8-D<br/>
-每个圆表示一个category，它的大小表示该category名下文章的数量（相对的）；两个圆之间的连线表示两个category有联系，也就是说有文章同时属于这两个category。
-两个圆距离越近，则category的关系越密切，同时属于这两个category的文章越多。<br/>
-点击圆形，将来到一个显示该category下所有文章的页面。</p>
-
-<!-- more -->
-
-
-<p>这只是一个初步的demo，有兴趣的同学可以沿着这个思路创造更多有意思的动态内容。</p>
-
-<ul>
-<li>新建一个静态的文件，让Jekyll在generate的时候将整个site的数据写进去。这里我放在根目录，用的是json格式。</li>
-<li>定制aside添加一个html文件，我这里是category.html。</li>
-<li>category.html里面用js绘制需要的动态内容。引用上面的json文件，你可以利用所有数据为所欲为。</li>
-<li>代码看这里：<a href="http://github.com/nielinjie/nielinjie.github.io/commit/3abeab7a7f6d5170be3ae1f7294314470063e88b">http://github.com/nielinjie/nielinjie.github.io/commit</a>。</li>
-</ul>
-
-
-<p>至于显示category文章的页面，比较简单。通过url上queryString传递相应参数即可。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[这些年写过的代码（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/01/23/code/"/>
-    <updated>2013-01-23T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/01/23/code</id>
-    <content type="html"><![CDATA[<p>2012年的最后两天，终于完成了一个久拖不决的任务：把几年来写过的代码review了一番。</p>
-
-<!-- more -->
-
-
-<p>这里记录的都是业余时间写的代码，它们往往都是以（企图）解决生活中的一个实际问题开始的，然后变成了当时流行的技术的试验场。这种情况下，最后当然往往把最初要解决的那个问题抛之脑后，无法挽回其烂尾命运。</p>
-
-<h2>一、爬虫</h2>
-
-<p>这是web爬虫程序。这个程序要解决的问题起源于从某个在线看书网站批量下载小说章节。后续又有批量下载mm图片的兴趣，使这个程序源远流长。
-在这个问题中，程序逻辑主要集中在几个问题——</p>
-
-<ul>
-<li>爬虫线程管理：网络内容获取是耗时和不确定的io操作，需要管理其状态。同时爬虫往往是从前一个爬虫衍生的，所以所有爬虫线程中，既有并列关系的线程，也有先后关系的线程。</li>
-<li>爬虫群中间状态管理：爬虫群不一定能一次完成所有想要内容的获取，需要把中间状态保存下来，同时由于web内容是持续更新的，爬虫群也需要支持发现和获取更新的操作，这也要求记录中间状态。显然，中间状态必须在多个爬虫线程间共享。</li>
-<li>内容对象：爬虫群从web中获得的内容需要按照业务意义进行组织，形成一个对象团。这个对象团不同于爬虫群中间状态，也往往不直接对应于所爬过的网站结构。</li>
-<li>爬虫行进路线：这个爬虫不是对页面上所有的链接进行跟进，而是根据网站结构，有目的的爬向有意义的内容，是有路线图的。以下载小说为例，第一个页面是排行榜，我们爬向某本书的链接而不是爬向广告，同样，到了具体的内容页面，我们尽量爬向“下一页”而不是“下一章”。</li>
-<li>上述四点，前两个问题是所有爬行任务都一样的，后两个问题是每个爬行任务不同的，是对爬行任务的描述。这两个层面，分别是操作层和知识层，如何处理他们的联系，也是一个重要问题。</li>
-</ul>
-
-
-<p>这个程序我这里有groovy版、clojure版、scala版。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-
-<p>最初是groovy<a href="http://groovy.codehaus.org">0</a>版，是直接从批量下载小说的需求引出的。</p>
-
-<ul>
-<li>groovy是我接触过的第一个jvm上的语言，闭包、动态特性和适度的magic，在某些场合非常合用。</li>
-<li>groovy有称之为“builder”的风格，比如有xmlBuilder、httpBuilder……，类似Object Literal，简洁好用。</li>
-<li>grovvy有现成的查询html中某些节点的工具。</li>
-<li>有个griffon<a href="http://griffon.codehaus.org">1</a>，是仿照grails<a href="http://grails.org">2</a>的思想做的swing下的mvc框架。</li>
-<li>这个版本以java内置的线程池管理线程。</li>
-<li>这个版本没有区分操作层与知识层，没有考虑底层逻辑有可能被其他爬行任务服用的问题，没有从概念上区分中间状态对象、网站结构对象和内容对象。以网站结构对象为中心驱动：从一个结构对象中得到爬行线程对象，也从中抽取内容对象。</li>
-</ul>
-
-
-<p>然后是clojure<a href="http://clojure.org">3</a>版</p>
-
-<ul>
-<li>clojure是我见过的第一个把并发支持宣称为语言特性的一门语言。</li>
-<li>clojure的lisp语法非常引人入胜。</li>
-<li>当时对clojure没有对象（那时候想办法用record模拟，但别扭）这个特征非常迷惑，觉得没有对象咋能写程序呢？当然就更没办法去想什么操作层、知识层等等……</li>
-<li>clojure的agent<a href="http://clojure.org/agents">4</a>，及其watch，非常适合爬行的底层逻辑。很方便的自动管理爬行线程间的并列、先后关系。</li>
-<li>由于对FP<a href="http://en.wikipedia.org/wiki/Functional_programming">5</a>风格的不熟悉，不知道如何以这种风格去抽象逻辑层次，这个版本只实现了有限的底层逻辑。</li>
-</ul>
-
-
-<p>然后是scala<a href="http://www.scala-lang.org">6</a>版本，有好几个scala版本</p>
-
-<ul>
-<li>scala是个好语言。很多观点认为它有点太难学。不过我认为，如果你还没有完全学会，那你就像用java一样使用它，逐步领悟它的不同和强大之处。</li>
-<li>sbt<a href="http://www.scala-sbt.org">7</a>好用。但有时候稍微复杂了点。只有最简单的情况可以声明式配置，稍微负载的情况就需要进行编程。</li>
-<li>从scalaz<a href="http://code.google.com/p/scalaz/">8</a>我真正开始学习FP，有兴趣的同学可以详细读一下scalaz的例子的源代码。生活在 OO<a href="http://en.wikipedia.org/wiki/Object-oriented_programming">9</a>、imperative<a href="http://en.wikipedia.org/wiki/Imperative_programming">10</a> 世界的同学将会感到耳目一新，逐渐感到OO乃至imperative在某些方面相对乏力<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</li>
-<li>第一个版本我纠结于如何实现对象在线程间共享，我采用的策略是不共享，把公共对象封装在actor<a href="http://www.scala-lang.org/node/242">11</a>之下，由actor机制实现线程间通讯，不是所有线程都直接访问公共对象。现在scala已经吸纳了akka<a href="http://akka.io">12</a>的actor实现，比以前更加强大了。</li>
-<li>第一个版本还研究了如何抽象在一个大对象中访问、修改某个深层属性，那时候不知道有Lens<a href="https://blog.stackmob.com/2012/02/an-introduction-to-lenses-in-scalaz/">15</a>这种模式。</li>
-<li>第一个版本开始意识到操作层和知识层的不同，同时由于scala的OO、FP混合特性，我可以自如的进行抽象建模，两个层次完全分开。当面临不同的爬行任务，我只需定义新的内容对象和爬虫行进路线。</li>
-<li>这里虽然没有进一步抽象出DSL<a href="http://en.wikipedia.org/wiki/Domain-specific_language">13</a>，但对DSL和其在scala的实现办法进行了一些研究，Internal DSL<a href="http://martinfowler.com/bliki/DomainSpecificLanguage.html">14</a>方面，scala没有groovy容易；但由于几个方便的工具，External DSL<a href="http://martinfowler.com/bliki/DomainSpecificLanguage.html">14</a>反倒是比较方便 —— 比如Kiama<a href="http://kiama.googlecode.com">16</a>、Parboiled<a href="https://github.com/sirthias/parboiled/wiki/parboiled-for-Scala">17</a></li>
-<li>第二个版本出现在我发现STM<a href="http://nbronson.github.com/scala-stm/">20</a>在scala也有实现的时候，除了大对象共享方式不同，其他跟第一个版本大同小异。</li>
-<li>第三个版本出现在我迷恋上Applicative、Monad、Arrow<a href="http://www.haskell.org/haskellwiki/Typeclassopedia">18</a> 、Iteratee<a href="http://www.haskell.org/haskellwiki/Enumerator_and_iteratee">19</a>等FP模式<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>的时候，我感到OO的编程模式丑陋而无法忍受，我要Lens，大对象要不可变、线程要被隐藏在并发模型之后、爬行任务的生成要实现Iteratee模式，总之我想以FP的“优雅”的方式实现这个程序。结果是，还没写完……。</li>
-<li>我意识到自己在强迫自己使用不一样的、不熟悉的、听上去很牛的编程风格，只领略这些风格的不同和神奇，而没有认真思考这种不同有没有真正带来好处。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></li>
-</ul>
-
-
-<p>最后有个Android版本，原本想实现在android上的爬行，并且开始探索scala在android上运行的可行性。但这个版本由于我迅速成为果粉而无疾而终。</p>
-
-<p>（待续）</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>已经相当长时间没有关注groovy、grails、griffon、clojure的相关内容了，观点可能过期。scala相关的略好些。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>将FP跟OO、Imperative对立并不严密。但这里不打算仔细区别这个，我这里的OO、Impaerative指的通常的java、c#、c/c++之类的“主流”语言。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>这里列出的都是Haskell的地址，因为Haskell有页面集中说明这些东西是啥。实际操作中还是用的scalaz实现版本。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p>我这样说完全不是指我反对FP风格。实际上我非常喜欢这种风格。我的意思只是，在学习的时候，需要更多的思考。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
 
 ]]></content>
   </entry>
