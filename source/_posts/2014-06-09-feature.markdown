@@ -1,0 +1,16 @@
+---
+layout: post
+title: "给老爷爷系统（八）：特征机制"
+date: 2014-06-12 20:06:38 +0800
+comments: true
+categories: ["架构","设计"]
+series: ["给老爷爷系统 8"]
+published: false
+
+
+---
+
+
+{% img  /images/feature/feature.png %}
+
+{% img  /images/feature/feature2.png %}

@@ -1,0 +1,16 @@
+---
+layout: post
+title: "框计算"
+date: 2014-06-09 18:06:38 +0800
+comments: true
+categories: ["产品"]
+published: false
+---
+
+<!-- more -->
+
+{% img  /images/kuang/kuang.png %}
+
+{% img  /images/kuang/kuang1.png %}
+
+{% img  /images/kuang/kuang2.png %}

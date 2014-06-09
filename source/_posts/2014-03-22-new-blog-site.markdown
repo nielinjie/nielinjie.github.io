@@ -3,7 +3,7 @@ layout: post
 title: "博客搬家了"
 date: 2014-03-22 20:15:27 +0800
 comments: true
-categories: ["杂拌"]
+categories: ["个人"]
 ---
 
 看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。
