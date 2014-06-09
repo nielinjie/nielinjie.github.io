@@ -89,6 +89,8 @@ window.site={
     title:"企业中需要什么样的社交？",
     categories:[
       
+        "产品",
+      
         "言论",
       
     ],
@@ -347,7 +349,7 @@ window.site={
     title:"博客搬家了",
     categories:[
       
-        "杂拌",
+        "个人",
       
     ],
     series:[
@@ -563,9 +565,9 @@ window.site={
     title:"WD My Book Live 作为下载机",
     categories:[
       
-        "折腾",
+        "个人",
       
-        "生活",
+        "折腾",
       
     ],
     series:[

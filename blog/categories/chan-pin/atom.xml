@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 产品 | 聂同学]]></title>
+  <link href="http://nielinjie.github.io/blog/categories/chan-pin/atom.xml" rel="self"/>
+  <link href="http://nielinjie.github.io/"/>
+  <updated>2014-06-09T10:18:59+08:00</updated>
+  <id>http://nielinjie.github.io/</id>
+  <author>
+    <name><![CDATA[nielinjie]]></name>
+    <email><![CDATA[nielinjie@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[企业中需要什么样的社交？]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/05/social/"/>
+    <updated>2014-06-05T16:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/05/social</id>
+    <content type="html"><![CDATA[<p>正在考虑这个问题。
+目前想到几点：</p>
+
+<!-- more -->
+
+
+<ul>
+<li><p>业务系统、办公系统和所有工作环境中随时可以发起社交活动。<br/>
+企业中的社交以工作中的沟通和协作为主，工作事务中随时可以发起社交很重要。</p></li>
+<li><p>社交中要可以方便地包含“业务上下文” 。
+不论是即时通讯、协作、还是活动流、备忘录，需要能方便地插入“业务上下文”。
+“业务上下文”是由业务系统定义，是对一个事务进行介入的入口，比如正在处理的订单，正在审批的文件等。<br/>
+大概包括功能、用户、业务对象等重要要素。</p></li>
+<li><p>社交中要容易为单个事务建立独立的“通道”。<br/>
+工作中的社交跟生活中的社交不同，并不希望各种人和事交织在一起，
+而是希望每件事务可以有个相对隔离的空间，在这个空间中不要被其他人和事干扰。</p></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
