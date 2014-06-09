@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 质量 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/zhi-liang/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-09T10:18:59+08:00</updated>
+  <updated>2014-06-10T00:02:32+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -113,7 +113,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
 
-<p>（<a href="/blog/2014/06/07/view3">再下一篇</a>）</p>
+<p>（<a href="/blog/2014/06/07/view3">再下篇继续</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -173,7 +173,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <p>我们整理了各方面的关注点，大致如下，觉得处于中间位置的“功能”或者“领域模型”可能可以承担这个重任。</p>
 
-<p>（<a href="/blog/2014/06/06/view2/">下篇</a>）</p>
+<p>（<a href="/blog/2014/06/06/view2/">下篇继续</a>）</p>
 
 <p><img src="/images/view/view.png"></p>
 ]]></content>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 重构 | 聂同学]]></title>
+  <link href="http://nielinjie.github.io/blog/categories/zhong-gou/atom.xml" rel="self"/>
+  <link href="http://nielinjie.github.io/"/>
+  <updated>2014-06-10T00:02:32+08:00</updated>
+  <id>http://nielinjie.github.io/</id>
+  <author>
+    <name><![CDATA[nielinjie]]></name>
+    <email><![CDATA[nielinjie@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（五）：重构（一）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/09/refactory/"/>
+    <updated>2014-06-09T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/09/refactory</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>这是一篇补记，说的是在刚刚接手老爷爷系统的时候。</p>
+
+<!-- more -->
+
+
+<p>系统老不是问题，老而失控才是问题。我们的老爷爷系统就遇到了老而失控的问题。</p>
+
+<p>系统腐化、大泥球，讲的大概都是一个意思：需求不停、补丁重重、代码堆积、逻辑纠缠。
+随便一个小改动，都如履薄冰，面对着巨大的复杂性。越来越复杂、越来越纠缠，
+慢慢地（应该说是很快地 &ndash;_&ndash;!!）接近了凡人能处理的极限。</p>
+
+<p>我们研究了代码的结构和历史，发现主要问题是按照“功能”来安置代码，逻辑都放在一个功能入口的纵切面上。
+以我们这个系统的具体情况<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>来说，这个纵切面，就是一条线：Controller → Service → DAO。
+所有的代码，都分布在这条线上。
+整个类似于Transaction Script模式。Transaction Script本身难说有什么问题，问题是这个模式只能面对比较小规模的领域逻辑，
+当领域逻辑复杂度增加的时候，Transaction Script模式就难堪重任了。问题体现出来主要在两个方面：</p>
+
+<ul>
+<li>补丁：当一个功能涉及到的领域逻辑越来越多时，功能的代码上就依附了各种各样的领域逻辑代码。比如审批一个单据，逐渐贴上了用户授权、时效检查等等代码，如果“审批”功能本身修改，就得面对成倍增加的复杂性。</li>
+<li>碎片：同一类的领域逻辑，由于在各个功能都要使用，代码就被分散到了各个功能的代码里面。比如上面说的“用户授权”，在多个功能的代码里都有分布，一旦需要改动，得从各个功能中找出来一一修改，复杂性可想而知。</li>
+</ul>
+
+
+<p>应对的办法是什么呢？简单两个字——划分。</p>
+
+<p>我们的划分标准选择的是领域相关程度。
+关于“用户”的代码集中在一起，关于“时效”的代码也集中在一起。
+甚至“功能”的主要代码，也按照领域相关程度来放入不同的区域，
+比如“审批”、"退回"都是一种对单据的状态流转，它跟为单据设置“审批人”就不是同一类，不放在一起。
+而功能入口的纵切面上，只有调用这些代码的代码。</p>
+
+<p>需要说明一下的是我们这里说“划分”的标准是“领域”，这个跟“领域驱动设计（DDD）”并没有太大关系，
+大家不要搞混了。
+我们的目的只是“划分”。</p>
+
+<p>（下篇继续）</p>
+
+<p><img src="/images/refactory/refactory.png"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>系统采用类似SpringMVC的一个定制框架。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

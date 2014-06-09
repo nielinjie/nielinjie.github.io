@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-09T10:18:59+08:00</updated>
+  <updated>2014-06-10T00:02:32+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（五）：重构（一）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/09/refactory/"/>
+    <updated>2014-06-09T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/09/refactory</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>这是一篇补记，说的是在刚刚接手老爷爷系统的时候。</p>
+
+<!-- more -->
+
+
+<p>系统老不是问题，老而失控才是问题。我们的老爷爷系统就遇到了老而失控的问题。</p>
+
+<p>系统腐化、大泥球，讲的大概都是一个意思：需求不停、补丁重重、代码堆积、逻辑纠缠。
+随便一个小改动，都如履薄冰，面对着巨大的复杂性。越来越复杂、越来越纠缠，
+慢慢地（应该说是很快地 &ndash;_&ndash;!!）接近了凡人能处理的极限。</p>
+
+<p>我们研究了代码的结构和历史，发现主要问题是按照“功能”来安置代码，逻辑都放在一个功能入口的纵切面上。
+以我们这个系统的具体情况<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>来说，这个纵切面，就是一条线：Controller → Service → DAO。
+所有的代码，都分布在这条线上。
+整个类似于Transaction Script模式。Transaction Script本身难说有什么问题，问题是这个模式只能面对比较小规模的领域逻辑，
+当领域逻辑复杂度增加的时候，Transaction Script模式就难堪重任了。问题体现出来主要在两个方面：</p>
+
+<ul>
+<li>补丁：当一个功能涉及到的领域逻辑越来越多时，功能的代码上就依附了各种各样的领域逻辑代码。比如审批一个单据，逐渐贴上了用户授权、时效检查等等代码，如果“审批”功能本身修改，就得面对成倍增加的复杂性。</li>
+<li>碎片：同一类的领域逻辑，由于在各个功能都要使用，代码就被分散到了各个功能的代码里面。比如上面说的“用户授权”，在多个功能的代码里都有分布，一旦需要改动，得从各个功能中找出来一一修改，复杂性可想而知。</li>
+</ul>
+
+
+<p>应对的办法是什么呢？简单两个字——划分。</p>
+
+<p>我们的划分标准选择的是领域相关程度。
+关于“用户”的代码集中在一起，关于“时效”的代码也集中在一起。
+甚至“功能”的主要代码，也按照领域相关程度来放入不同的区域，
+比如“审批”、&#8221;退回&#8221;都是一种对单据的状态流转，它跟为单据设置“审批人”就不是同一类，不放在一起。
+而功能入口的纵切面上，只有调用这些代码的代码。</p>
+
+<p>需要说明一下的是我们这里说“划分”的标准是“领域”，这个跟“领域驱动设计（DDD）”并没有太大关系，
+大家不要搞混了。
+我们的目的只是“划分”。</p>
+
+<p>（下篇继续）</p>
+
+<p><img src="http://nielinjie.github.io/images/refactory/refactory.png"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>系统采用类似SpringMVC的一个定制框架。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
@@ -144,7 +200,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
 
-<p>（<a href="http://nielinjie.github.io/blog/2014/06/07/view3">再下一篇</a>）</p>
+<p>（<a href="http://nielinjie.github.io/blog/2014/06/07/view3">再下篇继续</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -204,7 +260,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <p>我们整理了各方面的关注点，大致如下，觉得处于中间位置的“功能”或者“领域模型”可能可以承担这个重任。</p>
 
-<p>（<a href="http://nielinjie.github.io/blog/2014/06/06/view2/">下篇</a>）</p>
+<p>（<a href="http://nielinjie.github.io/blog/2014/06/06/view2/">下篇继续</a>）</p>
 
 <p><img src="http://nielinjie.github.io/images/view/view.png"></p>
 ]]></content>
@@ -368,7 +424,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[我的简历（陆续补充中）]]></title>
+    <title type="html"><![CDATA[我的简历（陆续完整中）]]></title>
     <link href="http://nielinjie.github.io/blog/2014/05/21/resume/"/>
     <updated>2014-05-21T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/05/21/resume</id>
@@ -391,8 +447,9 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <h3><a name="1"></a>自我评价</h3>
 
-<p>熟悉一般企业信息应用系统架构及开发技术。能够进行应用架构设计、技术决策、设计开发。
-深入理解软件开发流程。能够进行相关领域的制度建立、责任分配、指标制定。
+<p>熟悉企业信息系统架构及开发技术。
+长期从事企业信息系统架构设计、架构执行、架构维护、设计和开发。
+深入理解软件开发流程。
 能够负责开发团队的构建和运行。
 善于沟通合作，具备一定领导力和辅导培训能力。</p>
 
@@ -403,7 +460,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <ul>
 <li>开发九部、集团开发部</li>
-<li>应用架构师</li>
+<li>应用架构师、应用架构专家</li>
 <li>负责两个业务系列所属的项目和相关重要任务的架构设计和架构执行，日常应用架构管理维护。重点需求的解决方案设计，详细设计复审等工作。
 同时参与部门范围改进开发过程；设计开发工具；提高开发效率；保障开发质量等工作。</li>
 </ul>
@@ -1005,70 +1062,6 @@ A：“风险驱动架构设计”方法……</p>
 
 <p>这时候你忽然灵光一现，你埋头迅速制造了一个口袋，不是华丽的、未知的、危险的口袋，而是一个简单、简陋、安全、甚至没完全完成的口袋。“啪”，你把口袋拍在雪人肚子上。
 你感到世界清净下来。你傻笑，认为自己理解了一个高大上的词语，叫做：“提升至架构的设计”。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[博客搬家了]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/22/new-blog-site/"/>
-    <updated>2014-03-22T20:15:27+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/22/new-blog-site</id>
-    <content type="html"><![CDATA[<p>看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。</p>
-
-<!-- more -->
-
-
-<p>感谢octopress, 感谢芝明同学（<a href="http://zhaozhiming.github.io">http://zhaozhiming.github.io</a> ），感谢github。听说github正在遭受ddos攻击，祝好运。</p>
-
-<p>期间只遇到一个编码问题，如下。感谢这位同学的博客，问题很快解决了。
-<a href="http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/">http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/</a>
- 见文章中的最后一个问题：YAML Exception</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-<span class='line-number'>22</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>➜  octopress git:(source) ✗ rake generate
-</span><span class='line'>## Generating Site with Jekyll
-</span><span class='line'>identical source/stylesheets/screen.css
-</span><span class='line'>Configuration from /Users/nielinjie/Projects/octopress/_config.yml
-</span><span class='line'>Building site: source -&gt; public
-</span><span class='line'>YAML Exception reading 2014-03-22-new-blog-site.markdown: invalid byte sequence in US-ASCII
-</span><span class='line'>/Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
-</span><span class='line'>  from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
-</span><span class='line'>  from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'</span></code></pre></td></tr></table></div></figure>
-
 ]]></content>
   </entry>
   
