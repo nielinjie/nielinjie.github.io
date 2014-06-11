@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-10T00:02:32+08:00</updated>
+  <updated>2014-06-11T15:07:54+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（六）：重构（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/11/refactory2/"/>
+    <updated>2014-06-11T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/11/refactory2</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>还是一篇补记，主要讲讲为什么是重构而不是重写。</p>
+
+<!-- more -->
+
+
+<p>同事们喜欢重写系统，好多别的老爷爷老态龙钟之后都是被重写的。
+我们选择重构不重写的原因主要有三点：</p>
+
+<ul>
+<li>代码具有高价值，是可用和满足需求的。重写就意味着要放弃这些价值。</li>
+<li>没有现成的需求。由于开发年代久远，人员流动，而用户也非常分散，没有人能告诉我们需求。
+唯一可能的就是通读代码，反推出需求。这样做，无疑是成本高，风险大。</li>
+<li>能否解决代码系统腐化根源？这一点其实是我们考虑的重点。重写容易，
+如何防止重写的系统再次变坏，却不是件简单的任务。
+我们认为在重构代码的过程中，可以教育和锻炼团队，通过寻找让系统变好的方法，来掌握防止或缓解系统变坏的手段。
+这样不仅让本系统的情况好转，也可以给其他正在或即将变坏的系统提供借鉴。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（五）：重构（一）]]></title>
@@ -55,7 +83,7 @@
 大家不要搞混了。
 我们的目的只是“划分”。</p>
 
-<p>（下篇继续）</p>
+<p>（<a href="http://nielinjie.github.io/blog/2014/06/11/refactory2">下篇继续</a>）</p>
 
 <p><img src="http://nielinjie.github.io/images/refactory/refactory.png"></p>
 <div class="footnotes">
@@ -1048,20 +1076,6 @@ A：必须就事论事，没有统一答案。有些架构决策，可以尽量�
 
 <p>Q：如何判断何时开始、何时完成、何种程度、哪一部分的架构设计？<br/>
 A：“风险驱动架构设计”方法……</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[言论：雪人（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/30/said-xueren3/"/>
-    <updated>2014-03-30T15:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/30/said-xueren3</id>
-    <content type="html"><![CDATA[<p>雪人项目进行得还算顺利。然而你发现兄弟们有些异样，他们常常盯着雪人的肚皮部位自说自话，这两天甚至开始聚在一起窃窃私语。
-这些人都是多啦A梦设计风格的铁根粉丝啊，你能感受到设计一个口袋对他们来说是非常巨大的诱惑。
-你曾经反复解释口袋有多危险，明令禁止任何设计口袋的企图。然而你知道这些根本无法打消你的担忧：架构走形的风险正如影随形。</p>
-
-<p>这时候你忽然灵光一现，你埋头迅速制造了一个口袋，不是华丽的、未知的、危险的口袋，而是一个简单、简陋、安全、甚至没完全完成的口袋。“啪”，你把口袋拍在雪人肚子上。
-你感到世界清净下来。你傻笑，认为自己理解了一个高大上的词语，叫做：“提升至架构的设计”。</p>
 ]]></content>
   </entry>
   

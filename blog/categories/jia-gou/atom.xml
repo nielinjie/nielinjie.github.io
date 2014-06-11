@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-10T00:02:32+08:00</updated>
+  <updated>2014-06-11T15:07:54+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（六）：重构（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/11/refactory2/"/>
+    <updated>2014-06-11T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/11/refactory2</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>还是一篇补记，主要讲讲为什么是重构而不是重写。</p>
+
+<!-- more -->
+
+
+<p>同事们喜欢重写系统，好多别的老爷爷老态龙钟之后都是被重写的。
+我们选择重构不重写的原因主要有三点：</p>
+
+<ul>
+<li>代码具有高价值，是可用和满足需求的。重写就意味着要放弃这些价值。</li>
+<li>没有现成的需求。由于开发年代久远，人员流动，而用户也非常分散，没有人能告诉我们需求。
+唯一可能的就是通读代码，反推出需求。这样做，无疑是成本高，风险大。</li>
+<li>能否解决代码系统腐化根源？这一点其实是我们考虑的重点。重写容易，
+如何防止重写的系统再次变坏，却不是件简单的任务。
+我们认为在重构代码的过程中，可以教育和锻炼团队，通过寻找让系统变好的方法，来掌握防止或缓解系统变坏的手段。
+这样不仅让本系统的情况好转，也可以给其他正在或即将变坏的系统提供借鉴。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（五）：重构（一）]]></title>
@@ -55,7 +83,7 @@
 大家不要搞混了。
 我们的目的只是“划分”。</p>
 
-<p>（下篇继续）</p>
+<p>（<a href="/blog/2014/06/11/refactory2">下篇继续</a>）</p>
 
 <p><img src="/images/refactory/refactory.png"></p>
 <div class="footnotes">
@@ -206,56 +234,6 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（二）：如何描述系统？（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/05/view/"/>
-    <updated>2014-06-05T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/05/view</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>对于老爷爷系统，我们发现特别难以回答一个问题：系统是什么样的？它正在如何发展？</p>
-
-<!-- more -->
-
-
-<p>团队中不同的角色都在尝试解决这个问题。
-上次<a href="/blog/2014/04/24/aa3/">有篇blog</a>提到:</p>
-
-<blockquote><p>SA同学正在整理全局“功能地图”、测试同学整理“全量测试案例”</p></blockquote>
-
-<p>而开发团队和架构师，则在整理“领域地图”。</p>
-
-<p>这些不同的角色，对系统有各自不同的关注点。但他们的关注点都需要一个框架组织起来，
-这个框架就是系统特征。
-上面说的这些各种“整理”，其实都包含了对系统特征进行整理和重建，然后再把自己的关注点挂载上去。
-只不过他们从各自的目的出发，从各自的角度下手。</p>
-
-<p>团队意识到：这些各方面的关注者可能需要共用同一个系统特征描述。</p>
-
-<ul>
-<li>可以减少分别构建和维护框架带来的工作量。<br/>
-如果说分别构建框架只是时间和工作量的问题的话，分别维护和保持同步进化，则是几乎不可能做到的。</li>
-<li>可以有机地将各个角色的关注点联系起来，形成对系统全方位、跨角色的观察监控，例如——
-
-<ul>
-<li>通过观察代码历史和代码质量，可以帮助划定测试重点覆盖区域。</li>
-<li>通过观察相关的代码结构，可以帮助发现功能间关系特别是潜在的相互影响。</li>
-<li>通过观察用户使用量数据，可以帮助评估代码重构的风险。</li>
-</ul>
-</li>
-</ul>
-
-
-<p>“统一系统特征描述”看来很重要，我们需要找到一个形式，可以承担这样的重任。</p>
-
-<p>我们整理了各方面的关注点，大致如下，觉得处于中间位置的“功能”或者“领域模型”可能可以承担这个重任。</p>
-
-<p>（<a href="/blog/2014/06/06/view2/">下篇继续</a>）</p>
-
-<p><img src="/images/view/view.png"></p>
 ]]></content>
   </entry>
   
