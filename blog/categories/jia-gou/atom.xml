@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-11T15:07:54+08:00</updated>
+  <updated>2014-06-16T19:41:03+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（八）：特征机制]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/16/feature/"/>
+    <updated>2014-06-16T21:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/16/feature</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>在《<a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL</a>》和《<a href="/blog/2014/06/16/3d">三个划分维度</a>》中，
+已经提到了“特征机制”。这里专门讲一下。</p>
+
+<!-- more -->
+
+
+<p>“特征机制”，是一种动态选择机制，用来协同“通用”和“专用”两个层次。
+当通用逻辑运行到某个点，需要执行专用逻辑，我们首先需要找到正确地专用逻辑。</p>
+
+<ul>
+<li>我们把通用逻辑中需要运行专用机制，也就是可能发生扩展的点，称为“扩展点”。</li>
+<li>不同的“差异来源”带来不同的“业务差异”，通过在扩展点上填入适当的“扩展”来实现差异化的专用逻辑。</li>
+<li>所谓“特征”，就是一条知识，描述了当在何种“业务差异”的处理中，需要在哪些个扩展点填入哪些个“扩展”。</li>
+<li>所谓“特征机制”，就是当系统运行到一个扩展点的时候，查找到正确的特征，填入正确的扩展并运行的机制。</li>
+</ul>
+
+
+<p>特征机制的实现在设计上有意识地做到“操作层”和“知识层”分离，以便二者能够分别进化，这点在《<a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL</a>》已经说明了。</p>
+
+<p>下面的图体现了上面这些概念的静态关系。除了主干之外，枝节也说一下：</p>
+
+<ul>
+<li>“业务差异”需要一个载体，就是“特征拥有者”，比如“签报”、“用户”等领域对象都可以是特征拥有者，这些拥有者的属性导致了差异。</li>
+<li>同一个拥有者的特征可能来源于不同的差异，其中有可能会相互影响甚至冲突，这时候需要一个裁决者，这就是“特征集”。</li>
+<li>“特征要求”是拥有者的属性与特征之间的映射，体现为“业务属性”和“业务事件”。</li>
+<li>特征由特征要求决定，可以在需要特征时刷新，也可以当“业务属性”改变或“业务事件”发生时刷新。</li>
+</ul>
+
+
+<p><img src="/images/feature/feature2.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（六）：重构（二）]]></title>
@@ -179,60 +219,9 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <p>在基本之上，研究结构的另一些特征可能有帮助：</p>
 
 <ul>
-<li>聚和：元素与某些元素的关系不同于与其他元素。</li>
+<li>聚合：元素与某些元素的关系不同于与其他元素。</li>
 <li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（三）：如何描述系统？（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/06/view2/"/>
-    <updated>2014-06-06T18:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/06/view2</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
-
-<!-- more -->
-
-
-<p>但功能和领域模型都不能直接使用：</p>
-
-<ul>
-<li>功能的问题是很难跟代码直接关联起来。</li>
-<li>领域模型的问题是只有开发同学熟悉这个概念。SA、测试、开发经理等同学比较熟悉的是“功能”这个概念，
-虽然他们对这个概念的定义不尽相同。</li>
-</ul>
-
-
-<p>我们希望我们的特征描述既可以将各方面关注点都联系起来，又可以让各方面都工作在自己熟悉的概念上。
-于是我们尝试使用一种二者的混合体。</p>
-
-<ul>
-<li>从领域模型出发，以便我们能跟代码产生联系<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。代码非常重要，因为在运行时，代码决定的逻辑基本上是系统的一切。</li>
-<li>弱化领域对象的定义，只描述它是否存在和与其他对象的关系<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。领域对象的定义显然是重要的，但我们现在要的是“框架”。</li>
-<li>强调领域过程，弱化领域实体。实体常常被认为是分析的结果，看上去和“功能”没有关系，有些方面的同学不关注。</li>
-<li>领域过程之间的关系划归为三种：Include、Extend、Generalization<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</li>
-<li>领域过程与实体间，只有一种，引用关系。实体与实体间的关系，不再描述。</li>
-</ul>
-
-
-<p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
-
-<p>（<a href="/blog/2014/06/07/view3">再下篇继续</a>）</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>逻辑按领域结构划分，在这个系统没完全实现：<a href="/blog/2014/06/09/refactory">重构</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>领域模型是一个领域对象的结构，<a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>没错，跟UML use case图里面的三种关系相同。这并非偶然，我们认为所有的过程之间，都是这三种关系。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
 
 ]]></content>
   </entry>

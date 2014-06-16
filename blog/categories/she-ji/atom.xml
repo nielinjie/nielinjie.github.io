@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 设计 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/she-ji/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-11T15:07:54+08:00</updated>
+  <updated>2014-06-16T19:41:03+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（八）：特征机制]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/16/feature/"/>
+    <updated>2014-06-16T21:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/16/feature</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p>在《<a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL</a>》和《<a href="/blog/2014/06/16/3d">三个划分维度</a>》中，
+已经提到了“特征机制”。这里专门讲一下。</p>
+
+<!-- more -->
+
+
+<p>“特征机制”，是一种动态选择机制，用来协同“通用”和“专用”两个层次。
+当通用逻辑运行到某个点，需要执行专用逻辑，我们首先需要找到正确地专用逻辑。</p>
+
+<ul>
+<li>我们把通用逻辑中需要运行专用机制，也就是可能发生扩展的点，称为“扩展点”。</li>
+<li>不同的“差异来源”带来不同的“业务差异”，通过在扩展点上填入适当的“扩展”来实现差异化的专用逻辑。</li>
+<li>所谓“特征”，就是一条知识，描述了当在何种“业务差异”的处理中，需要在哪些个扩展点填入哪些个“扩展”。</li>
+<li>所谓“特征机制”，就是当系统运行到一个扩展点的时候，查找到正确的特征，填入正确的扩展并运行的机制。</li>
+</ul>
+
+
+<p>特征机制的实现在设计上有意识地做到“操作层”和“知识层”分离，以便二者能够分别进化，这点在《<a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL</a>》已经说明了。</p>
+
+<p>下面的图体现了上面这些概念的静态关系。除了主干之外，枝节也说一下：</p>
+
+<ul>
+<li>“业务差异”需要一个载体，就是“特征拥有者”，比如“签报”、“用户”等领域对象都可以是特征拥有者，这些拥有者的属性导致了差异。</li>
+<li>同一个拥有者的特征可能来源于不同的差异，其中有可能会相互影响甚至冲突，这时候需要一个裁决者，这就是“特征集”。</li>
+<li>“特征要求”是拥有者的属性与特征之间的映射，体现为“业务属性”和“业务事件”。</li>
+<li>特征由特征要求决定，可以在需要特征时刷新，也可以当“业务属性”改变或“业务事件”发生时刷新。</li>
+</ul>
+
+
+<p><img src="/images/feature/feature2.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[言论：结构的要素]]></title>
@@ -30,7 +70,7 @@
 <p>在基本之上，研究结构的另一些特征可能有帮助：</p>
 
 <ul>
-<li>聚和：元素与某些元素的关系不同于与其他元素。</li>
+<li>聚合：元素与某些元素的关系不同于与其他元素。</li>
 <li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
 </ul>
 

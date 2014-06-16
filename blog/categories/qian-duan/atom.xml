@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 前端 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/qian-duan/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-11T15:07:54+08:00</updated>
+  <updated>2014-06-16T19:41:03+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -112,7 +112,7 @@
 <hr/>
 <ol>
 <li id="fn:1">
-<p>四层=展示层+业务层+数据层，其中，业务层=应用层+领域层<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>四层=展示层+业务层+数据层，其中，业务层=应用层+领域层。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
