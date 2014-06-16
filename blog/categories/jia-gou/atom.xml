@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-16T19:41:03+08:00</updated>
+  <updated>2014-06-16T19:44:10+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -50,6 +50,64 @@
 
 
 <p><img src="/images/feature/feature2.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[给老爷爷系统（七）：三个划分维度]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/06/16/3d/"/>
+    <updated>2014-06-16T20:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/06/16/3d</id>
+    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
+
+<p><a href="/blog/2014/06/09/refactory">前一篇</a>提到，
+为了应对复杂性，对代码按“领域”进行划分。</p>
+
+<!-- more -->
+
+
+<p>这个维度的划分不强调层次，而强调聚合<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。
+根据领域概念的相关性联系在一起，比如跟“用户”这个领域概念有关的代码放在一处，跟“流程”有关的代码放在一处。
+而跟“（用户）授权”有关的代码放在一处，这一处靠近“用户”而远离“流程”。</p>
+
+<p>另一个维度，这个系统（和其他很多系统一样）历来就有从框架“职责”方向的划分，
+比如代码分为Action、Controller、Service、BO、DAO等等。整理了一下，
+从上到下，分为三个层次：表现层、业务层、基础设施层，其中业务层，又分为功能层和领域层。
+跟上个维度不同，这个维度上，层次是有明显意义的。
+上一层一般只能调用下一层或者同一层的逻辑。</p>
+
+<p>逐步的我们发现，我们需要另一个划分。我们的系统是企业办公系统，
+除了“通用”逻辑以外，我们有很多“专用”的逻辑，这些“专用”逻辑贯穿在整个业务逻辑中，
+比如不同的专业公司、不同的地域，对某些功能有不同的要求。（这些带来业务逻辑差异的因素，称为“差异来源”。）
+这些逻辑如果在实现时简单直接，就会有很多“专用”代码，“弥散”在整个系统中。
+坏处很明显：</p>
+
+<ul>
+<li>专用逻辑分散，很难管理和进化。</li>
+<li>通用逻辑跟专用逻辑纠缠，增加了不必要的复杂度。</li>
+</ul>
+
+
+<p>于是我们明确了第三个维度的划分，在这个维度上，系统划分为“通用”、“专用”两个层次。</p>
+
+<p>下面的第一个图，体现了三个维度的划分情况。</p>
+
+<p>第二个图，重点描述了第三个维度的划分。
+左边是没有第三维度划分时的情况，不同差异来源的专用逻辑，在不同的领域，无规律地散乱着。
+右边是按照第三维度划分后的情况，下层是通用逻辑。上层是专用逻辑，按照不同的差异来源，不同的领域，有序分布。
+至于协同两个层次的机制，称为“特征机制”，将在<a href="/blog/2014/06/16/feature">下一篇</a>中阐述。</p>
+
+<p><img src="/images/3d/3d.png"></p>
+
+<p><img src="/images/feature/feature.png"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
 ]]></content>
   </entry>
   
@@ -199,30 +257,6 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <p><img src="/images/view/view3.png"></p>
 
 <p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[言论：结构的要素]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/07/structure/"/>
-    <updated>2014-06-07T17:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/07/structure</id>
-    <content type="html"><![CDATA[<p>结构的基本要素有：</p>
-
-<ul>
-<li>存在：一个元素是否存在。</li>
-<li>边界：一个元素的定义和与其他元素的区别。</li>
-<li>关系：一个元素与其他元素有没有联系。</li>
-</ul>
-
-
-<p>在基本之上，研究结构的另一些特征可能有帮助：</p>
-
-<ul>
-<li>聚合：元素与某些元素的关系不同于与其他元素。</li>
-<li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
-</ul>
-
 ]]></content>
   </entry>
   
