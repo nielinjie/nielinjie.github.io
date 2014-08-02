@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-06-16T19:49:19+08:00</updated>
+  <updated>2014-08-02T16:39:53+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[知识在此（一）：脑图大开]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc/"/>
+    <updated>2014-08-02T16:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/08/02/pkc</id>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html">&ldquo;知识在此：脑图大开&rdquo;</a>，ps：不是“脑洞大开”……</p>
+
+<!-- more -->
+
+
+<p>这是一个“脑图”工具。</p>
+
+<p>脑图工具是本人一直重度依赖的思考工具。
+所以也是“知识在此”系列的第一个工具。</p>
+
+<p>这个工具将按照本人对脑图的需求和期待来改进。大家有任何意见和期待，请给随时我反馈。</p>
+
+<p>目前看到近期的路线图可能是：</p>
+
+<ul>
+<li>云端存储和共享。</li>
+<li>演示模式。</li>
+<li>应用插件。</li>
+<li>移动适配。</li>
+</ul>
+
+
+<p><img src="/images/pkc/mm.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[知识在此（零）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc0/"/>
+    <updated>2014-08-02T14:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/08/02/pkc0</id>
+    <content type="html"><![CDATA[<p>什么是“知识在此”？</p>
+
+<!-- more -->
+
+
+<p>“知识在此”是“个人知识管理工具系列”。</p>
+
+<p>在信息爆炸的时代，信息只有经过过滤、整理、归纳才能成为知识。</p>
+
+<p><img src="/images/pkc/ivk.jpg"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
@@ -176,96 +225,6 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <p>（<a href="/blog/2014/06/06/view2/">下篇继续</a>）</p>
 
 <p><img src="/images/view/view.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（一）：代码质量守则和工具]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/05/26/quality/"/>
-    <updated>2014-05-26T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/05/26/quality</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>对于一个历史悠久的老爷爷系统，我们的程序员定下了下面的代码质量守则：</p>
-
-<!-- more -->
-
-
-<ul>
-<li>新增方法复杂度不能大于5。</li>
-<li>新增类之间不能出现包循环依赖，同层之间可稍微放宽（如Service之间互相调用）。</li>
-<li>新增类和方法避免有重复代码，出现重复或者相似度较高的代码应提炼成函数。</li>
-<li>过长的方法，新增方法不能过长，代码行数限定在30。</li>
-<li>过大的类，新增类不能过大，尽量体现类的单一职责。</li>
-<li>变量、方法和类的命名要体现业务含义，不能用如s=5、getString()等命名。</li>
-<li>新增方法需编写自动化测试案例。</li>
-</ul>
-
-
-<p>守则里面有很多“新增”，新增类、新增方法。
-因为对于老旧的代码，要求它们的质量不具有可操作性。
-我们只能期望通过要求新增的代码符合要求，来改善至少是维持整个系统的代码质量。</p>
-
-<p>如果团队比较有野心，可能想在“新增”里面包括“更新”，也就是所有“触碰过”的类和方法。</p>
-
-<p>有了守则我们需要一个检查工具，让程序员可以快速地检查和自检。
-但一般的代码扫描工具不能针对“新增、更新”进行扫描，我们需要自己的工具。
-工具的要点在于如何找出所谓的“新增的类和方法”、“更新的类和方法”。</p>
-
-<p>基本思路是：</p>
-
-<ul>
-<li>先找出版本之间的diff，新增的文件和修改过的文件。
-
-<ul>
-<li>比如svn，可以用svn的命令行客户端，也有一些java的api。比如svnKit。</li>
-</ul>
-</li>
-<li>对于新增的文件：
-
-<ul>
-<li>parse这个文件，找到所有的类和方法，即可找到所有的“新增的方法和类”。</li>
-<li>parse可以使用这个：<a href="https://code.google.com/p/javaparser/wiki/UsingThisParser">https://code.google.com/p/javaparser/wiki/UsingThisParser</a></li>
-</ul>
-</li>
-<li>对于修改的文件：
-
-<ul>
-<li>parse新版本，找到所有类和方法的起止位置。</li>
-<li>parse方法同上。</li>
-<li>对比文件的diff结果（这个是按行号列出的更改），就可以发现新增的、更新过的类和方法。</li>
-</ul>
-</li>
-<li>当新增、更新的类和方法得到以后，再综合代码扫描（扫描新版本）的结果报告。比如findbugs、jdepend……
-即可得出新增、更新的类和方法的质量指标了。</li>
-</ul>
-
-
-<p>关键代码在这里：<br/>
-<a href="https://gist.github.com/nielinjie/d8fa324ee0d1d149c5e2">https://gist.github.com/nielinjie/d8fa324ee0d1d149c5e2</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[向Octopress贡献（二）：连载系列]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/20/series/"/>
-    <updated>2014-04-20T23:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/20/series</id>
-    <content type="html"><![CDATA[<p>我们常常会发表一些连载的系列文章。
-这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
-需要一个新的方式在同一系列的连载文章间跳转。</p>
-
-<!-- more -->
-
-
-<ul>
-<li>延续上篇文章的思路，采用js来实现功能。</li>
-<li>在每个post头部的yaml metadata中添加连载系列的相关数据，比如这篇文章添加：<code>series: ["向Octopress贡献 2"]</code>。</li>
-<li>Jekyll会自动将所有的metadata都解析出来，这样全局的json文件中可以容易地包含相关数据。</li>
-<li>在适当的地方嵌入相应地html文件，其中的js根据json产生相关的内容。</li>
-<li>代码在这里：<a href="https://github.com/nielinjie/nielinjie.github.io/commit/4a599e5d1296b420dc13473c4e6bbaf4d55fc198">https://github.com/nielinjie/nielinjie.github.io/commit</a>。</li>
-</ul>
-
 ]]></content>
   </entry>
   

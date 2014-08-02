@@ -77,10 +77,6 @@
         <lastmod>2014-06-05T16:46:19+08:00</lastmod>
     </url>
     <url>
-        <loc>http://nielinjie.github.io/blog/2014/02/15/said-shouduan/</loc>
-        <lastmod>2014-06-05T16:46:19+08:00</lastmod>
-    </url>
-    <url>
         <loc>http://nielinjie.github.io/blog/2014/03/03/said-yuya/</loc>
         <lastmod>2014-06-05T16:46:19+08:00</lastmod>
     </url>
@@ -95,6 +91,10 @@
     <url>
         <loc>http://nielinjie.github.io/blog/2014/03/22/new-blog-site/</loc>
         <lastmod>2014-06-08T20:40:05+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nielinjie.github.io/blog/2014/03/25/said-shouduan/</loc>
+        <lastmod>2014-06-21T17:07:58+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/2014/03/30/said-xueren3/</loc>
@@ -138,7 +138,7 @@
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/2014/05/21/resume/</loc>
-        <lastmod>2014-06-16T19:49:17+08:00</lastmod>
+        <lastmod>2014-06-16T19:51:17+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/2014/05/26/quality/</loc>
@@ -189,8 +189,16 @@
         <lastmod>2014-06-16T19:38:29+08:00</lastmod>
     </url>
     <url>
+        <loc>http://nielinjie.github.io/blog/2014/08/02/pkc0/</loc>
+        <lastmod>2014-08-02T16:38:37+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://nielinjie.github.io/blog/2014/08/02/pkc/</loc>
+        <lastmod>2014-08-02T16:36:45+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://nielinjie.github.io/blog/archives/</loc>
-        <lastmod>2014-06-16T19:49:17+08:00</lastmod>
+        <lastmod>2014-08-02T16:38:37+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/filter/filter.html</loc>
@@ -198,7 +206,7 @@
     </url>
     <url>
         <loc>http://nielinjie.github.io/</loc>
-        <lastmod>2014-06-16T19:49:17+08:00</lastmod>
+        <lastmod>2014-08-02T16:38:37+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/robots.txt</loc>

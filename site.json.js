@@ -2,6 +2,38 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2014/08/02/pkc/",
+    date:"2014-08-02T16:06:38+08:00",
+    title:"知识在此（一）：脑图大开",
+    categories:[
+      
+        "开发",
+      
+    ],
+    series:[
+      
+        "知识在此 2",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/08/02/pkc0/",
+    date:"2014-08-02T14:06:38+08:00",
+    title:"知识在此（零）",
+    categories:[
+      
+        "开发",
+      
+    ],
+    series:[
+      
+        "知识在此 1",
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/06/16/feature/",
     date:"2014-06-16T21:06:38+08:00",
     title:"给老爷爷系统（八）：特征机制",
@@ -414,6 +446,18 @@ window.site={
   },
 
   {
+    url:"/blog/2014/03/25/said-shouduan/",
+    date:"2014-03-25T00:00:00+08:00",
+    title:"Said Shouduan",
+    categories:[
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/03/22/new-blog-site/",
     date:"2014-03-22T20:15:27+08:00",
     title:"博客搬家了",
@@ -466,22 +510,6 @@ window.site={
         "架构",
       
         "模式",
-      
-        "言论",
-      
-    ],
-    series:[
-      
-    ]
-  },
-
-  {
-    url:"/blog/2014/02/15/said-shouduan/",
-    date:"2014-02-15T21:36:38+08:00",
-    title:"言论：手段和目的",
-    categories:[
-      
-        "架构",
       
         "言论",
       
