@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-08-02T16:39:53+08:00</updated>
+  <updated>2014-08-02T16:51:26+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -18,7 +18,7 @@
     <link href="http://nielinjie.github.io/blog/2014/08/02/pkc/"/>
     <updated>2014-08-02T16:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/08/02/pkc</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html">&ldquo;知识在此：脑图大开&rdquo;</a>，ps：不是“脑洞大开”……</p>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">&ldquo;知识在此：脑图大开&rdquo;</a> ps：不是“脑洞大开”……</p>
 
 <!-- more -->
 
@@ -26,7 +26,7 @@
 <p>这是一个“脑图”工具。</p>
 
 <p>脑图工具是本人一直重度依赖的思考工具。
-所以也是“知识在此”系列的第一个工具。</p>
+所以也是<a href="/blog/2014/08/02/pkc0/">“知识在此”</a>系列的第一个工具。</p>
 
 <p>这个工具将按照本人对脑图的需求和期待来改进。大家有任何意见和期待，请给随时我反馈。</p>
 
@@ -54,7 +54,7 @@
 <!-- more -->
 
 
-<p>“知识在此”是“个人知识管理工具系列”。</p>
+<p>“知识在此”是我正在致力于的“个人知识管理工具系列”。</p>
 
 <p>在信息爆炸的时代，信息只有经过过滤、整理、归纳才能成为知识。</p>
 
