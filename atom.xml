@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-08-14T18:37:53+08:00</updated>
+  <updated>2014-08-30T14:40:35+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[脑图大开：云端存储]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/08/30/pkc-cloud-save/"/>
+    <updated>2014-08-30T16:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/08/30/pkc-cloud-save</id>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">&ldquo;知识在此：脑图大开&rdquo;</a> ps：不是“脑洞大开”……</p>
+
+<!-- more -->
+
+
+<p>云端存储功能发布。</p>
+
+<p><img src="http://nielinjie.github.io/images/pkc/pck_cloud_save.png"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[知识在此（一）：脑图大开]]></title>
@@ -1065,17 +1081,6 @@ A:<br/>
 
 
 <p>至于显示category文章的页面，比较简单。通过url上queryString传递相应参数即可。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[言论：雪人（四）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/12/said-xueren4/"/>
-    <updated>2014-04-12T23:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/12/said-xueren4</id>
-    <content type="html"><![CDATA[<p>你感到雪人项目进行得还算顺利，虽然样子有点奇怪。
-直到有一天PO突然说道：“经过调研，现在的孩子喜欢的其实是蜘蛛侠不是蜘蛛。”
-你于是尝试铲掉其中六条腿，雪人摇摇欲坠。 “架构太不敏捷了。”——PO大喊。</p>
 ]]></content>
   </entry>
   

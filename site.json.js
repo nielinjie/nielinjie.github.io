@@ -2,12 +2,32 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2014/08/30/pkc-cloud-save/",
+    date:"2014-08-30T16:06:38+08:00",
+    title:"脑图大开：云端存储",
+    categories:[
+      
+        "开发",
+      
+        "知识在此",
+      
+    ],
+    series:[
+      
+        "知识在此 3",
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/08/02/pkc/",
     date:"2014-08-02T16:06:38+08:00",
     title:"知识在此（一）：脑图大开",
     categories:[
       
         "开发",
+      
+        "知识在此",
       
     ],
     series:[
@@ -24,6 +44,8 @@ window.site={
     categories:[
       
         "开发",
+      
+        "知识在此",
       
     ],
     series:[
