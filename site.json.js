@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2014/09/07/pkc-presentation-editor/",
+    date:"2014-09-07T23:06:38+08:00",
+    title:"脑图大开：中秋发布",
+    categories:[
+      
+        "开发",
+      
+        "知识在此",
+      
+    ],
+    series:[
+      
+        "知识在此 4",
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/08/30/pkc-cloud-save/",
     date:"2014-08-30T16:06:38+08:00",
     title:"脑图大开：云端存储",
