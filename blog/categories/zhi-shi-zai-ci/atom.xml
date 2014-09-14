@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 知识在此 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/zhi-shi-zai-ci/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-09-07T23:05:44+08:00</updated>
+  <updated>2014-09-14T21:26:24+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[脑图大开：发布为日志]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/09/14/pkc-page/"/>
+    <updated>2014-09-14T23:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/09/14/pkc-page</id>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
+
+<!-- more -->
+
+
+<p>实现了“发布为日志”功能。此后“脑图大开”将以其本身作为相关日志的发布地点。</p>
+
+<p>“聂同学”Blog将返回到本来的定位——“一个程序员和架构师的实践与思考”。</p>
+
+<p><a href="http://pckmmap.duapp.com/public/pages/index.html?nodeId=83cd2d01-b536-4117-a431-0820abf746d2" target="_blank">“脑图大开”之日志。</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[脑图大开：中秋发布]]></title>

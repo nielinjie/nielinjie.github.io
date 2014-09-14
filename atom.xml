@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-09-07T23:05:44+08:00</updated>
+  <updated>2014-09-14T21:26:24+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[脑图大开：发布为日志]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/09/14/pkc-page/"/>
+    <updated>2014-09-14T23:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/09/14/pkc-page</id>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
+
+<!-- more -->
+
+
+<p>实现了“发布为日志”功能。此后“脑图大开”将以其本身作为相关日志的发布地点。</p>
+
+<p>“聂同学”Blog将返回到本来的定位——“一个程序员和架构师的实践与思考”。</p>
+
+<p><a href="http://pckmmap.duapp.com/public/pages/index.html?nodeId=83cd2d01-b536-4117-a431-0820abf746d2" target="_blank">“脑图大开”之日志。</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[脑图大开：中秋发布]]></title>
@@ -1046,29 +1064,6 @@ A:<br/>
 <p>关于重构有个系列的blog即将写，届时这里换成一个链接……<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[向Octopress贡献（二）：连载系列]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/20/series/"/>
-    <updated>2014-04-20T23:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/20/series</id>
-    <content type="html"><![CDATA[<p>我们常常会发表一些连载的系列文章。
-这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
-需要一个新的方式在同一系列的连载文章间跳转。</p>
-
-<!-- more -->
-
-
-<ul>
-<li>延续上篇文章的思路，采用js来实现功能。</li>
-<li>在每个post头部的yaml metadata中添加连载系列的相关数据，比如这篇文章添加：<code>series: ["向Octopress贡献 2"]</code>。</li>
-<li>Jekyll会自动将所有的metadata都解析出来，这样全局的json文件中可以容易地包含相关数据。</li>
-<li>在适当的地方嵌入相应地html文件，其中的js根据json产生相关的内容。</li>
-<li>代码在这里：<a href="https://github.com/nielinjie/nielinjie.github.io/commit/4a599e5d1296b420dc13473c4e6bbaf4d55fc198">https://github.com/nielinjie/nielinjie.github.io/commit</a>。</li>
-</ul>
 
 ]]></content>
   </entry>

@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2014/09/14/pkc-page/",
+    date:"2014-09-14T23:06:38+08:00",
+    title:"脑图大开：发布为日志",
+    categories:[
+      
+        "开发",
+      
+        "知识在此",
+      
+    ],
+    series:[
+      
+        "知识在此 5",
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/09/07/pkc-presentation-editor/",
     date:"2014-09-07T23:06:38+08:00",
     title:"脑图大开：中秋发布",

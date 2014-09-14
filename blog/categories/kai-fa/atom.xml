@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-09-07T23:05:44+08:00</updated>
+  <updated>2014-09-14T21:26:24+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[脑图大开：发布为日志]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/09/14/pkc-page/"/>
+    <updated>2014-09-14T23:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/09/14/pkc-page</id>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
+
+<!-- more -->
+
+
+<p>实现了“发布为日志”功能。此后“脑图大开”将以其本身作为相关日志的发布地点。</p>
+
+<p>“聂同学”Blog将返回到本来的定位——“一个程序员和架构师的实践与思考”。</p>
+
+<p><a href="http://pckmmap.duapp.com/public/pages/index.html?nodeId=83cd2d01-b536-4117-a431-0820abf746d2" target="_blank">“脑图大开”之日志。</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[脑图大开：中秋发布]]></title>
@@ -91,71 +109,6 @@
 <p>在信息爆炸的时代，信息只有经过过滤、整理、归纳才能成为知识。</p>
 
 <p><img src="/images/pkc/ivk.jpg"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/07/view3/"/>
-    <updated>2014-06-07T18:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/07/view3</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>这一篇讲讲如何实现的问题。</p>
-
-<!-- more -->
-
-
-<p>实现方面主要考虑了两个要点：</p>
-
-<ul>
-<li>如何构建和维护：要快速地建立和编辑，能够加入版本管理，能够在各方面间共享。</li>
-<li>如何展现：各方面要容易地挂载自己的关注点数据，同时跨角色观察的需求要求框架能同时挂载多方面的数据。</li>
-</ul>
-
-
-<p>我们为这两个要点选择了两种不同的形式。</p>
-
-<p>一方面在构建和维护时，特征描述采用纯文本方式，可以说是一种简单地DSL。
-DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和角色间共享。</p>
-
-<p>```
-审批/逐个审批</p>
-
-<pre><code>-i 查看签报详细信息
--i 输入审批意见
-    -g 使用默认意见
-    -g 手工输入意见
-    -g 语音输入意见
--i 选择用户
-签报
-用户
-</code></pre>
-
-<p>批量审批</p>
-
-<pre><code>-e 逐个审批
--i 查看待处理文件列表
--i 点击审批按钮
-</code></pre>
-
-<p>……
-```</p>
-
-<p>另一方面在展现时，我们解析DSL，图形化交互式（并且略显炫酷滴 :-D）地展示。
-下面展示的是目前的状况。</p>
-
-<ul>
-<li>左边的图，是“系统特征”，由黄色椭圆形表示的领域过程、绿色圆形表示的领域实体，以及他们之间的连线构成。</li>
-<li>右边的下拉菜单，是由各方面提供的关注点数据，可以按需要附加到“系统特征”上。比如这个截图上，
-左边的图上面有个红色的大圆，就是将代码质量数据叠加上来。还有个深绿色的小点，是将代码结构的数据叠加上来。</li>
-<li>除了可以以叠加的方式展示数据，还可以根据关注点数据对图进行过滤。</li>
-</ul>
-
-
-<p><img src="/images/view/view3.png"></p>
-
-<p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
 ]]></content>
   </entry>
   
