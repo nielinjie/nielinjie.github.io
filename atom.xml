@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-09-14T21:26:24+08:00</updated>
+  <updated>2014-10-10T15:32:25+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -18,7 +18,7 @@
     <link href="http://nielinjie.github.io/blog/2014/09/14/pkc-page/"/>
     <updated>2014-09-14T23:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/09/14/pkc-page</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
 
 <!-- more -->
 
@@ -36,7 +36,7 @@
     <link href="http://nielinjie.github.io/blog/2014/09/07/pkc-presentation-editor/"/>
     <updated>2014-09-07T23:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/09/07/pkc-presentation-editor</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
 
 <!-- more -->
 
@@ -52,7 +52,7 @@
     <link href="http://nielinjie.github.io/blog/2014/08/30/pkc-cloud-save/"/>
     <updated>2014-08-30T16:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/08/30/pkc-cloud-save</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">&ldquo;知识在此：脑图大开&rdquo;</a> ps：不是“脑洞大开”……</p>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">&ldquo;知识在此：脑图大开&rdquo;</a> ps：不是“脑洞大开”……</p>
 
 <!-- more -->
 
@@ -68,7 +68,7 @@
     <link href="http://nielinjie.github.io/blog/2014/08/02/pkc/"/>
     <updated>2014-08-02T16:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/08/02/pkc</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/public/index.html" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
+    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
 
 <!-- more -->
 
@@ -672,11 +672,15 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <h3><a name="1"></a>自我评价</h3>
 
-<p>熟悉企业信息系统架构及开发技术。
+<p>应用架构师。<br/>
+熟悉企业信息系统架构及开发技术。
 长期从事企业信息系统架构设计、架构执行、架构维护、设计和开发。
 深入理解软件开发流程。
 能够负责开发团队的构建和运行。
 善于沟通合作，具备一定领导力和辅导培训能力。</p>
+
+<p>“全端开发工程师”。<br/>
+熟悉互联网应用开发相关技术，可以胜任从前端到后端多种开发任务。</p>
 
 <h3><a name="2"></a>工作经验</h3>
 
@@ -737,6 +741,24 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 
 <h3><a name="3"></a>项目经验</h3>
+
+<ul>
+<li>2014 /7&mdash;至今：“知识在此”
+
+<ul>
+<li>项目描述： 云端的个人知识管理服务。业余项目。</li>
+<li>责任描述： 发起人和唯一的成员
+
+<ul>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&amp;filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4">知识在此</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
 
 <ul>
 <li>2014 /1&mdash;至今：平安企业门户信息聚合和企业社交
