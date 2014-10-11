@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-10-10T15:32:25+08:00</updated>
+  <updated>2014-10-11T11:44:44+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -656,6 +656,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
     <content type="html"><![CDATA[<h3>目录</h3>
 
 <ul>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#0">基本信息</a></li>
 <li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#1">自我评价</a></li>
 <li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#2">工作经验</a></li>
 <li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#3">项目经验</a></li>
@@ -669,6 +670,15 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 
 <hr />
+
+<h3><a name="0"></a>基本信息</h3>
+
+<p>姓名：聂林杰<br/>
+性别：男<br/>
+出生年月：1979.1.<br/>
+学历：本科<br/>
+联系电话：18982274450<br/>
+电子邮箱：<a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#110;&#x69;&#x65;&#108;&#105;&#110;&#x6a;&#105;&#x65;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6e;&#105;&#101;&#108;&#x69;&#x6e;&#x6a;&#105;&#101;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
