@@ -3,11 +3,11 @@ layout: post
 title: "知识在此（一）：脑图大开"
 date: 2014-08-02 16:06:38 +0800
 comments: true
-categories: ["开发"]
+categories: ["开发","知识在此"]
 series: ["知识在此 2"]
 
 ---
-<a href="http://pckmmap.duapp.com/public/index.html" target="_blank">"知识在此：脑图大开"</a> ps：不是“脑洞大开”……
+<a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……
 
 <!-- more -->
 

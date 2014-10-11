@@ -3,7 +3,7 @@ layout: post
 title: "知识在此（零）"
 date: 2014-08-02 14:06:38 +0800
 comments: true
-categories: ["开发"]
+categories: ["开发","知识在此"]
 series: ["知识在此 1"]
 
 ---
