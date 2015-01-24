@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2014-10-11T11:44:44+08:00</updated>
+  <updated>2015-01-24T20:39:44+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -649,7 +649,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[我的简历（陆续完整中）]]></title>
+    <title type="html"><![CDATA[我的简历]]></title>
     <link href="http://nielinjie.github.io/blog/2014/05/21/resume/"/>
     <updated>2014-05-21T20:06:38+08:00</updated>
     <id>http://nielinjie.github.io/blog/2014/05/21/resume</id>
@@ -678,7 +678,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#110;&#x69;&#x65;&#108;&#105;&#110;&#x6a;&#105;&#x65;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6e;&#105;&#101;&#108;&#x69;&#x6e;&#x6a;&#105;&#101;&#x40;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#x6d;</a></p>
+电子邮箱：<a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#110;&#105;&#101;&#x6c;&#x69;&#x6e;&#x6a;&#105;&#x65;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6e;&#105;&#101;&#108;&#x69;&#110;&#106;&#x69;&#101;&#64;&#103;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
@@ -689,8 +689,11 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 能够负责开发团队的构建和运行。
 善于沟通合作，具备一定领导力和辅导培训能力。</p>
 
-<p>“全端开发工程师”。<br/>
-熟悉互联网应用开发相关技术，可以胜任从前端到后端多种开发任务。</p>
+<p>“Web全端开发者”。<br/>
+熟悉Web应用开发相关技术，可以胜任从前端到后端多种开发任务。</p>
+
+<p>“iOS开发者”。<br/>
+iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
 
 <h3><a name="2"></a>工作经验</h3>
 
@@ -753,11 +756,25 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <h3><a name="3"></a>项目经验</h3>
 
 <ul>
-<li>2014 /7&mdash;至今：“知识在此”
+<li><p>2014 /12&mdash;2015 /1： “近在”</p>
+
+<ul>
+<li>项目描述： iOS的沟通效率工具。业余项目。</li>
+<li>责任描述： 发起人和唯一成员。</li>
+<li>相关内容：
+
+<ul>
+<li><a href="http://veryclose.duapp.com">近在</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>2014 /7&mdash;2014 /12：“知识在此”</p>
 
 <ul>
 <li>项目描述： 云端的个人知识管理服务。业余项目。</li>
-<li>责任描述： 发起人和唯一的成员
+<li>责任描述： 发起人和唯一的成员。</li>
+<li>相关内容：
 
 <ul>
 <li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&amp;filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4">知识在此</a></li>
@@ -771,11 +788,25 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <hr />
 
 <ul>
+<li>2014 /6&mdash;2014 /12：文件转换服务
+
+<ul>
+<li>项目描述： 用于转换各种文档至手机可显示的图片的服务，平安多个App公用。</li>
+<li>责任描述： 架构设计，架构执行。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
 <li>2014 /1&mdash;至今：平安企业门户信息聚合和企业社交
 
 <ul>
 <li>项目描述： 平安企业门户，关于信息聚合和企业社交。原型项目。</li>
-<li>责任描述： 策划、原型设计和开发、技术选型。
+<li>责任描述： 策划、原型设计和开发、技术选型。</li>
+<li>相关内容：
 
 <ul>
 <li><a href="http://nielinjie.github.io/blog/2014/06/05/social/">企业中需要什么样的社交？</a></li>
@@ -793,7 +824,8 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <ul>
 <li>项目描述： 平安法律部诉讼管理系统。敏捷项目。</li>
-<li>责任描述： 架构设计，架构执行。
+<li>责任描述： 架构设计，架构执行。</li>
+<li>相关内容：
 
 <ul>
 <li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（一 至 四）</a></li>
@@ -824,7 +856,8 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <ul>
 <li>项目描述： 平安行政系统移动适配项目。敏捷项目。</li>
-<li>责任描述： 架构设计，架构执行。
+<li>责任描述： 架构设计，架构执行。</li>
+<li>相关内容：
 
 <ul>
 <li><a href="http://nielinjie.github.io/blog/2013/02/25/our-new-front-end/">我们的新前端</a></li>
@@ -855,7 +888,7 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <li>2012 /10&mdash;至今：企业全文检索服务
 
 <ul>
-<li>项目描述： 企业公用的全文检索服务。</li>
+<li>项目描述： 企业公用的全文检索服务。为平安内部多个系统提供全文检索服务。基于Apache Solr。</li>
 <li>责任描述： 架构设计、技术选型，架构执行。</li>
 </ul>
 </li>
@@ -882,7 +915,8 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 <ul>
 <li>项目描述： 平安集团行政中心办公系统的重构项目。对复杂系统进行有针对性的重构，延缓腐化、降低其维护成本和修改功能的成本。</li>
-<li>责任描述： 策划并发起项目、制定原则和方案、分析和设计。
+<li>责任描述： 策划并发起项目、制定原则和方案、分析和设计。</li>
+<li>相关内容：
 
 <ul>
 <li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&amp;filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL">一场似非而是的DSL（系列）</a></li>
@@ -898,14 +932,14 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <hr />
 
 <ul>
-<li>2005 /11&mdash;2007 /11：投资银行销售客户管理系统
+<li><p>2005 /11&mdash;2007 /11：投资银行销售客户管理系统</p>
 
 <ul>
 <li>项目描述： j2ee 平台b/s结构的客户资源管理系统。</li>
 <li>责任描述： 架构设计、详细设计、开发协调。</li>
 </ul>
 </li>
-<li>……</li>
+<li><p>……</p></li>
 </ul>
 
 
@@ -964,6 +998,11 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 
 
 <h3><a name="6"></a>FAQ</h3>
+
+<p>Q:
+何为“应用架构师”？职责有哪些？<br/>
+A:<br/>
+平安的“应用架构师”主要负责产出应用方案并支持其实施。</p>
 
 <p>Q:<br/>
 架构工作中最重要的是什么？<br/>

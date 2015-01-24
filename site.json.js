@@ -312,7 +312,7 @@ window.site={
   {
     url:"/blog/2014/05/21/resume/",
     date:"2014-05-21T20:06:38+08:00",
-    title:"我的简历（陆续完整中）",
+    title:"我的简历",
     categories:[
       
         "个人",
