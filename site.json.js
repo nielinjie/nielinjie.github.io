@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/01/30/resume/",
+    date:"2015-01-30T14:06:38+08:00",
+    title:"我的简历",
+    categories:[
+      
+        "个人",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2014/09/14/pkc-page/",
     date:"2014-09-14T23:06:38+08:00",
     title:"脑图大开：发布为日志",
@@ -305,20 +319,6 @@ window.site={
     series:[
       
         "给老爷爷系统 1",
-      
-    ]
-  },
-
-  {
-    url:"/blog/2014/05/21/resume/",
-    date:"2014-05-21T20:06:38+08:00",
-    title:"我的简历",
-    categories:[
-      
-        "个人",
-      
-    ],
-    series:[
       
     ]
   },

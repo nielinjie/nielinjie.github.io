@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 个人 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/ge-ren/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-01-24T20:39:44+08:00</updated>
+  <updated>2015-01-30T14:49:45+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -15,19 +15,19 @@
   
   <entry>
     <title type="html"><![CDATA[我的简历]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/05/21/resume/"/>
-    <updated>2014-05-21T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/05/21/resume</id>
+    <link href="http://nielinjie.github.io/blog/2015/01/30/resume/"/>
+    <updated>2015-01-30T14:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/01/30/resume</id>
     <content type="html"><![CDATA[<h3>目录</h3>
 
 <ul>
-<li><a href="/blog/2014/05/21/resume/#0">基本信息</a></li>
-<li><a href="/blog/2014/05/21/resume/#1">自我评价</a></li>
-<li><a href="/blog/2014/05/21/resume/#2">工作经验</a></li>
-<li><a href="/blog/2014/05/21/resume/#3">项目经验</a></li>
-<li><a href="/blog/2014/05/21/resume/#4">教育经历</a></li>
-<li><a href="/blog/2014/05/21/resume/#5">培训经历</a></li>
-<li><a href="/blog/2014/05/21/resume/#6">FAQ</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#0">基本信息</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#1">自我评价</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#2">工作经验</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#3">项目经验</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#4">教育经历</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#5">培训经历</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/05/21/resume/#6">FAQ</a></li>
 </ul>
 
 
@@ -43,7 +43,7 @@
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x6e;&#105;&#x65;&#x6c;&#105;&#110;&#106;&#x69;&#101;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#x6d;">&#x6e;&#105;&#x65;&#108;&#105;&#110;&#106;&#105;&#101;&#64;&#x67;&#109;&#97;&#105;&#x6c;&#x2e;&#99;&#x6f;&#x6d;</a></p>
+电子邮箱：<a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#110;&#105;&#x65;&#x6c;&#105;&#x6e;&#106;&#x69;&#x65;&#x40;&#x67;&#109;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;">&#110;&#105;&#101;&#108;&#105;&#110;&#106;&#x69;&#x65;&#64;&#103;&#x6d;&#97;&#105;&#108;&#x2e;&#x63;&#x6f;&#109;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
@@ -52,13 +52,13 @@
 长期从事企业信息系统架构设计、架构执行、架构维护、设计和开发。
 深入理解软件开发流程。
 能够负责开发团队的构建和运行。
-善于沟通合作，具备一定领导力和辅导培训能力。</p>
+善于沟通合作，具备一定领导力和辅导培训能力。同时承担团队中Java和J2EE方面技术专家和排错指导角色。</p>
 
 <p>“Web全端开发者”。<br/>
 熟悉Web应用开发相关技术，可以胜任从前端到后端多种开发任务。</p>
 
 <p>“iOS开发者”。<br/>
-iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
+iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。</p>
 
 <h3><a name="2"></a>工作经验</h3>
 
@@ -121,38 +121,6 @@ iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
 <h3><a name="3"></a>项目经验</h3>
 
 <ul>
-<li><p>2014 /12&mdash;2015 /1： “近在”</p>
-
-<ul>
-<li>项目描述： iOS的沟通效率工具。业余项目。</li>
-<li>责任描述： 发起人和唯一成员。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="http://veryclose.duapp.com">近在</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>2014 /7&mdash;2014 /12：“知识在此”</p>
-
-<ul>
-<li>项目描述： 云端的个人知识管理服务。业余项目。</li>
-<li>责任描述： 发起人和唯一的成员。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&amp;filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4">知识在此</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
 <li>2014 /6&mdash;2014 /12：文件转换服务
 
 <ul>
@@ -174,7 +142,7 @@ iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
 <li>相关内容：
 
 <ul>
-<li><a href="/blog/2014/06/05/social/">企业中需要什么样的社交？</a></li>
+<li><a href="http://nielinjie.github.io/blog/2014/06/05/social/">企业中需要什么样的社交？</a></li>
 </ul>
 </li>
 </ul>
@@ -193,7 +161,7 @@ iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
 <li>相关内容：
 
 <ul>
-<li><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（一 至 四）</a></li>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（一 至 四）</a></li>
 </ul>
 </li>
 </ul>
@@ -225,8 +193,8 @@ iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
 <li>相关内容：
 
 <ul>
-<li><a href="/blog/2013/02/25/our-new-front-end/">我们的新前端</a></li>
-<li><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&amp;filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA">关于REST风格的讨论（系列）</a></li>
+<li><a href="http://nielinjie.github.io/blog/2013/02/25/our-new-front-end/">我们的新前端</a></li>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&amp;filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA">关于REST风格的讨论（系列）</a></li>
 </ul>
 </li>
 </ul>
@@ -284,9 +252,9 @@ iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
 <li>相关内容：
 
 <ul>
-<li><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&amp;filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL">一场似非而是的DSL（系列）</a></li>
-<li><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（五、六）：领域地图（一、二）</a></li>
-<li><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%BB%99%E8%80%81%E7%88%B7%E7%88%B7%E7%B3%BB%E7%BB%9F&amp;filterDes=Series%3A%20%E7%BB%99%E8%80%81%E7%88%B7%E7%88%B7%E7%B3%BB%E7%BB%9F">给老爷爷系统（系列）</a></li>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&amp;filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL">一场似非而是的DSL（系列）</a></li>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（五、六）：领域地图（一、二）</a></li>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%BB%99%E8%80%81%E7%88%B7%E7%88%B7%E7%B3%BB%E7%BB%9F&amp;filterDes=Series%3A%20%E7%BB%99%E8%80%81%E7%88%B7%E7%88%B7%E7%B3%BB%E7%BB%9F">给老爷爷系统（系列）</a></li>
 </ul>
 </li>
 </ul>
@@ -297,11 +265,49 @@ iOS开发新手，不会Obj-c，只会Swift…… 在AppStore有上线App。</p>
 <hr />
 
 <ul>
-<li><p>2005 /11&mdash;2007 /11：投资银行销售客户管理系统</p>
+<li>2005 /11&mdash;2007 /11：投资银行销售客户管理系统
 
 <ul>
 <li>项目描述： j2ee 平台b/s结构的客户资源管理系统。</li>
 <li>责任描述： 架构设计、详细设计、开发协调。</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li>2014 /12&mdash;2015 /1： “近在”
+
+<ul>
+<li>项目描述： iOS的沟通效率工具。业余项目。</li>
+<li>责任描述： 发起人和唯一成员。</li>
+<li>相关内容：
+
+<ul>
+<li><a href="http://veryclose.duapp.com">近在</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<ul>
+<li><p>2014 /7&mdash;2014 /12：“知识在此”</p>
+
+<ul>
+<li>项目描述： 云端的个人知识管理服务。业余项目。</li>
+<li>责任描述： 发起人和唯一的成员。</li>
+<li>相关内容：
+
+<ul>
+<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&amp;filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4">知识在此</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>……</p></li>
