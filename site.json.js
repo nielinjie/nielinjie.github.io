@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/03/17/pped2kLinks/",
+    date:"2015-03-17T10:06:38+08:00",
+    title:"感谢皮皮书屋",
+    categories:[
+      
+        "“参考”",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/01/30/resume/",
     date:"2015-01-30T14:06:38+08:00",
     title:"我的简历",
