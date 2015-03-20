@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/03/20/mac-hadoop/",
+    date:"2015-03-20T17:06:38+08:00",
+    title:"Mac上尝试Hadoop",
+    categories:[
+      
+        "Hadoop",
+      
+        "开发",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/03/17/pped2kLinks/",
     date:"2015-03-17T10:06:38+08:00",
     title:"感谢皮皮书屋",

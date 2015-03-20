@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Hadoop | 聂同学]]></title>
+  <link href="http://nielinjie.github.io/blog/categories/hadoop/atom.xml" rel="self"/>
+  <link href="http://nielinjie.github.io/"/>
+  <updated>2015-03-20T18:43:47+08:00</updated>
+  <id>http://nielinjie.github.io/</id>
+  <author>
+    <name><![CDATA[nielinjie]]></name>
+    <email><![CDATA[nielinjie@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mac上尝试Hadoop]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/03/20/mac-hadoop/"/>
+    <updated>2015-03-20T17:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/03/20/mac-hadoop</id>
+    <content type="html"><![CDATA[<p>在Mac单机上安装和尝试了一下Hadoop。</p>
+
+<!-- more -->
+
+
+<ol>
+<li>安装Hadoop：
+
+<ul>
+<li><a href="http://amodernstory.com/2014/09/23/installing-hadoop-on-mac-osx-yosemite/">installing-hadoop-on-mac-osx-yosemite</a>， 完全照着装的。</li>
+</ul>
+</li>
+<li>简单的代码：
+
+<ul>
+<li><a href="https://gist.github.com/nielinjie/4a1d8cbfda7d76c559a5">Gist</a></li>
+<li>使用的时<a href="/blog/2015/03/17/pped2kLinks/">前一篇</a>中皮皮书屋的资源列表，从edonkey连接中解码出名称。没什么实际意义，纯粹试试环境能不能用。</li>
+</ul>
+</li>
+<li><p>运行：<br/>
+IDE里面可以直接运行，只讲一下classpath：<br/>
+我加入了下面目录中的所有jar，应该有些不是必须的。但先这样来吧。</p>
+
+<pre><code>  (base)/common/
+  (base)/common/lib/
+  (base)/hdfs/
+  (base)/mapreduce/
+  (base)/yarn/ 
+</code></pre>
+
+<p>  其中的<code>base</code>是hadoop安装目录里面的库目录，在我这个安装里面是<code>/usr/local/Cellar/hadoop/2.6.0/libexec/share/hadoop/</code></p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
