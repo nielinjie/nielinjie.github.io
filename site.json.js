@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/04/02/move/",
+    date:"2015-04-02T10:48:27+08:00",
+    title:"迁移到gitcafe",
+    categories:[
+      
+        "个人",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/03/20/mac-hadoop/",
     date:"2015-03-20T17:06:38+08:00",
     title:"Mac上尝试Hadoop",
