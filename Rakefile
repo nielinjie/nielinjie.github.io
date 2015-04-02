@@ -27,6 +27,9 @@ new_post_ext    = "markdown"  # default new post file extension when using the n
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
+gitcafe_dir      = "gitcafe"
+gitcafe_branch   = "gitcafe-pages"
+
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   puts '## Set the codepage to 65001 for Windows machines'
   `chcp 65001`
@@ -215,7 +218,7 @@ end
 ##############
 
 desc "Default deploy task"
-task :deploy do
+task :deploy_github do
   # Check if preview posts exist, which should not be published
   if File.exists?(".preview-mode")
     puts "## Found posts in preview mode, regenerating files ..."
@@ -226,6 +229,34 @@ task :deploy do
   Rake::Task[:copydot].invoke(source_dir, public_dir)
   Rake::Task["#{deploy_default}"].execute
 end
+
+
+desc "deploy gitcafe"
+task :deploy do
+  # Check if preview posts exist, which should not be published
+  if File.exists?(".preview-mode")
+    puts "## Found posts in preview mode, regenerating files ..."
+    File.delete(".preview-mode")
+    Rake::Task[:generate].execute # 这个地方每次都会 generate 我一般喜欢先 generate 本地看好没问题之后再 deploy，所以就注释掉了
+  end
+
+  puts "## Deploying branch to Gitcafe Pages "
+  puts "\n## copying #{public_dir} to #{gitcafe_dir}"
+  cp_r "#{public_dir}/.", gitcafe_dir
+  cd "#{gitcafe_dir}" do
+    system "git add ."
+    system "git add -u"
+    puts "\n## Commiting: Site updated at #{Time.now.utc}"
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m \"#{message}\""
+    puts "\n## Pushing generated #{gitcafe_dir} website"
+    system "git push origin #{gitcafe_branch} --force"
+    puts "\n## Gcafe Pages deploy complete"
+  end
+end
+
+
+
 
 desc "Generate website and deploy"
 task :gen_deploy => [:integrate, :generate, :deploy] do
