@@ -2,9 +2,71 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/04/10/resilient3/",
+    date:"2015-04-10T10:18:14+08:00",
+    title:"质量保障措施参考清单（三）",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "质量保障措施参考清单 3",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/04/10/resilient2/",
+    date:"2015-04-10T10:18:14+08:00",
+    title:"质量保障措施参考清单（二）",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "质量保障措施参考清单 2",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/04/09/service/",
+    date:"2015-04-09T11:11:07+08:00",
+    title:"“服务化”",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/04/09/resilient/",
+    date:"2015-04-09T10:18:14+08:00",
+    title:"质量保障措施参考清单（一）",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "质量保障措施参考清单 1",
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/04/02/move/",
     date:"2015-04-02T10:48:27+08:00",
-    title:"迁移到gitcafe",
+    title:"复制到gitcafe",
     categories:[
       
         "个人",

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-04-02T11:21:59+08:00</updated>
+  <updated>2015-04-21T10:55:58+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,365 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[质量保障措施参考清单（三）]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/04/10/resilient3/"/>
+    <updated>2015-04-10T10:18:14+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/04/10/resilient3</id>
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/04/09/resilient2/">接上篇</a>）</p>
+
+<!-- more -->
+
+
+<h2>业务正确性和容错性</h2>
+
+<p>系统不仅需要业务功能结果正确，还需要在业务发生问题的时候能够尽量多的提供诊断和恢复支持。</p>
+
+<h3>设计时</h3>
+
+<p>设计时可以识别的设计要求大致有：</p>
+
+<ul>
+<li>业务错误可以回查。</li>
+<li>业务过程可以回查。</li>
+<li>业务操作可以回查。</li>
+<li>系统故障情况下业务（一定程度上）可以持续。</li>
+</ul>
+
+
+<p>为满足此要求，需要：</p>
+
+<ul>
+<li>定义业务过程、业务状态。</li>
+<li>记录业务过程和状态的变化。</li>
+<li>为各个状态定义业务备案。</li>
+<li>记录业务操作。</li>
+</ul>
+
+
+<h3>业务接入时</h3>
+
+<ul>
+<li>业务被误用。
+
+<ul>
+<li>明确的业务定位</li>
+</ul>
+</li>
+<li>系统之间业务状态不正确或不明确。
+
+<ul>
+<li>记录业务进出口状态。</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>日常趋势</h3>
+
+<ul>
+<li>事故趋势恶化
+
+<ul>
+<li>业务逻辑有问题？</li>
+<li>用户体验有问题？
+
+<ul>
+<li>用户体验数据</li>
+</ul>
+</li>
+<li>需要事故记录</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>事故时</h3>
+
+<ul>
+<li>系统操作中断，比如可用性事故引起。
+
+<ul>
+<li>需要各个状态定义业务备案。</li>
+</ul>
+</li>
+<li>事后发现业务结果不正确。
+
+<ul>
+<li>记录业务过程状态变化。</li>
+</ul>
+</li>
+<li>系统错误
+
+<ul>
+<li>大范围错误 &ndash; 归结为<a href="/blog/2015/04/09/resilient2/">可用性事故</a>。</li>
+<li>局部错误 &ndash; 归结为bug。</li>
+<li>需要系统错误率实时监控和报警。</li>
+<li>需要系统错误持续记录和分析。</li>
+</ul>
+</li>
+</ul>
+
+
+<h3>小结</h3>
+
+<p>综上，为持续保障系统正确性，需要采取的措施有：</p>
+
+<ul>
+<li><strong>明确的业务定位。</strong>以及定期review。</li>
+<li><strong>定义各个业务过程、业务状态。</strong></li>
+<li><strong>业务过程和业务状态的变化的记录。</strong></li>
+<li><strong>各个状态定义业务备案。</strong></li>
+<li><strong>业务操作的记录。</strong></li>
+<li><strong>业务进出口状态的记录。</strong></li>
+<li><strong>用户体验数据持续记录和分析。</strong></li>
+<li><strong>系统错误率持续监控和阙值报警。</strong></li>
+<li><strong>系统错误持续记录和分析。</strong></li>
+<li><strong>事故记录与分析。</strong></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[质量保障措施参考清单（二）]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/04/10/resilient2/"/>
+    <updated>2015-04-10T10:18:14+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/04/10/resilient2</id>
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/04/09/resilient/">接上篇</a>）</p>
+
+<!-- more -->
+
+
+<h2>可用性</h2>
+
+<p>可用性风险通常比较被重视，企业默认架构中往往有较多应对措施。而且很多可用性风险与<a href="/blog/2015/04/09/resilient/">性能与容量风险</a>有关，所以这里总结的风险和保障措施显得比较少。</p>
+
+<h3>设计时</h3>
+
+<p>企业默认架构中一般包含可用性的基本应对：</p>
+
+<ul>
+<li>HA方案，比如热备冷备及相关切换方案等。</li>
+<li>容灾方案</li>
+</ul>
+
+
+<h3>业务接入时</h3>
+
+<p>一般不会产生可用性风险。除非超过系统容量造成系统不可用。这个风险<a href="/blog/2015/04/09/resilient/">在“性能与容量”部分讨论</a>。</p>
+
+<h3>日常趋势</h3>
+
+<ul>
+<li>事故趋势恶化。</li>
+<li>资源消耗异常。（<a href="/blog/2015/04/09/resilient/">在“性能与容量”部分讨论</a>。）</li>
+</ul>
+
+
+<h3>事故时</h3>
+
+<p>可用性事故一般有：</p>
+
+<ul>
+<li>系统失去响应
+
+<ul>
+<li>容量问题造成的。（<a href="/blog/2015/04/09/resilient/">在“性能与容量”部分讨论</a>。）</li>
+<li>某个（某些）节点失去响应造成。
+
+<ul>
+<li>需要各节点可用性数据。</li>
+<li>节点可拔插。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>系统大范围报错
+
+<ul>
+<li>诊断用现场实时数据。（<a href="/blog/2015/04/09/resilient/">在“性能与容量”部分讨论</a>。）</li>
+</ul>
+</li>
+</ul>
+
+
+<p>为及时发现可用性事故，我们需要：</p>
+
+<ul>
+<li>可用性数据实时监控和报警</li>
+</ul>
+
+
+<h3>小结</h3>
+
+<p>综上，为持续保障系统可用性，需要采取的措施有：</p>
+
+<ul>
+<li><strong>预先设计的HA和容灾方案。</strong></li>
+<li><strong>事故记录与分析。</strong></li>
+<li><strong>可用性数据持续监控与阙值报警。</strong></li>
+<li><strong>各节点可用性实时数据。</strong></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[“服务化”]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/04/09/service/"/>
+    <updated>2015-04-09T11:11:07+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/04/09/service</id>
+    <content type="html"><![CDATA[<p>什么是服务？每个架构师都有不同的定义，在不同的场景下可能也有不同的定义。</p>
+
+<!-- more -->
+
+
+<p>在各系统“服务化”的场景中，我们对“服务”的定义是：</p>
+
+<p>（未完成）</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[质量保障措施参考清单（一）]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/04/09/resilient/"/>
+    <updated>2015-04-09T10:18:14+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/04/09/resilient</id>
+    <content type="html"><![CDATA[<p>为更好的应对业务快速变化带来的挑战，许多系统正在从“关联系统”角色向着“<a href="/blog/2015/04/09/service/">服务</a>”角色转变。这样的转变对系统各方面质量特别是运行时质量提出了不一样的要求。如何管理并始终满足这些要求，打造弹性、容错、可管理的服务，是我们需要重点考虑的问题。</p>
+
+<!-- more -->
+
+
+<p>作为“<a href="/blog/2014/03/31/aa1/">风险驱动的架构设计</a>”的实践者，我们以系统运行过程各个阶段可能遇到的风险为线索，整理我们可能采取的保障措施。——</p>
+
+<ul>
+<li>设计时</li>
+<li>业务接入时</li>
+<li>日常趋势</li>
+<li>事故时</li>
+</ul>
+
+
+<h2>性能和容量</h2>
+
+<h3>设计时</h3>
+
+<p>需要根据业务目标确定适当性能理想值。比如：</p>
+
+<ul>
+<li>响应时间</li>
+<li>吞吐量</li>
+</ul>
+
+
+<h3>业务接入时</h3>
+
+<p>新的业务接入，不论是新的系统接入还是旧有接入系统业务量发生变化。</p>
+
+<ul>
+<li>新系统接入时应该声明业务量和变化趋势。</li>
+<li>接入系统业务量（即将）发生显著变化时应该声明。</li>
+<li>需要知晓当前系统可以承受的业务量。</li>
+</ul>
+
+
+<h3>日常趋势</h3>
+
+<p>系统运行中，几个方面的风险需要持续防范：</p>
+
+<ul>
+<li>性能表现恶化</li>
+<li>业务量异常变化</li>
+<li>资源消耗异常变化</li>
+</ul>
+
+
+<p>为此，我们需要：</p>
+
+<ul>
+<li>性能指标的周期性监控记录。</li>
+<li>业务总量的周期性监控记录。</li>
+<li>各接入系统业务量周期性监控记录。</li>
+<li>资源消耗量周期性监控记录。</li>
+</ul>
+
+
+<h3>事故时</h3>
+
+<p>性能事故指的是性能表现发生急剧恶化，用户受到明显影响。性能事故的原因可以分两种情况分析——</p>
+
+<ul>
+<li>业务量发生变化
+
+<ul>
+<li>各接入系统业务量及调用量。</li>
+<li>隔离、特别是热隔离。</li>
+<li>扩展性，特别是横向扩展。</li>
+</ul>
+</li>
+<li>业务量没有明显变化
+
+<ul>
+<li>受依赖系统拖累
+
+<ul>
+<li>依赖系统调用记录。</li>
+<li>替代方案或后备方案。</li>
+</ul>
+</li>
+<li>某（些）节点性能异常
+
+<ul>
+<li>各节点的性能数据。</li>
+<li>节点可（热）拔插。</li>
+</ul>
+</li>
+<li>变更 &ndash; 环境、代码
+
+<ul>
+<li>诊断用现场数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>为及时发现性能事故和区分两种情况，我们需要：</p>
+
+<ul>
+<li>性能数据，实时监控和阙值报警。</li>
+<li>总业务量，包括时间和功能分布。</li>
+</ul>
+
+
+<h3>小结</h3>
+
+<p>综上，为持续保障系统性能表现，需要采取的措施有：</p>
+
+<ul>
+<li><strong>根据业务目标有适当的性能和容量的理想值。</strong>影响因素变化后或者周期性地需要review。</li>
+<li><strong>明确当前系统最大承受业务量。</strong>影响因素变化后或者周期性地需要review。</li>
+<li><strong>确保新系统接入或接入系统业务量变化时声明业务量和变化趋势。</strong>建立机制，包括事后回朔机制。</li>
+<li><strong>系统性能指标的阙值报警。</strong></li>
+<li><strong>系统性能指标的持续监控记录和分析。</strong></li>
+<li><strong>业务总量的持续监控和分析。</strong></li>
+<li><strong>各接入系统业务量持续监控和分析。</strong></li>
+<li><strong>资源消耗量持续监控和分析。</strong></li>
+<li><strong>各接入系统业务量及调用量实时数据。</strong></li>
+<li><strong>有能力实时隔离接入系统。</strong></li>
+<li><strong>容量可扩展性，特别是横向扩展。</strong></li>
+<li><strong>依赖系统调用记录的实时数据。</strong>包括调用量和性能。</li>
+<li><strong>依赖系统替代方案或后备方案。</strong>至少有业务层面后备方案。</li>
+<li><strong>各节点的性能指标的实时数据。</strong></li>
+<li><strong>各节点可（热）拔插。</strong>拔出后性能和容量可接受。</li>
+<li><strong>诊断用现场实时数据。</strong>各节点都需要此类数据，比如线程dump。</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（八）：特征机制]]></title>
@@ -50,213 +409,6 @@
 
 
 <p><img src="/images/feature/feature2.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（七）：三个划分维度]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/16/3d/"/>
-    <updated>2014-06-16T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/16/3d</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p><a href="/blog/2014/06/09/refactory">前一篇</a>提到，
-为了应对复杂性，对代码按“领域”进行划分。</p>
-
-<!-- more -->
-
-
-<p>这个维度的划分不强调层次，而强调聚合<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。
-根据领域概念的相关性联系在一起，比如跟“用户”这个领域概念有关的代码放在一处，跟“流程”有关的代码放在一处。
-而跟“（用户）授权”有关的代码放在一处，这一处靠近“用户”而远离“流程”。</p>
-
-<p>另一个维度，这个系统（和其他很多系统一样）历来就有从框架“职责”方向的划分，
-比如代码分为Action、Controller、Service、BO、DAO等等。整理了一下，
-从上到下，分为三个层次：表现层、业务层、基础设施层，其中业务层，又分为功能层和领域层。
-跟上个维度不同，这个维度上，层次是有明显意义的。
-上一层一般只能调用下一层或者同一层的逻辑。</p>
-
-<p>逐步的我们发现，我们需要另一个划分。我们的系统是企业办公系统，
-除了“通用”逻辑以外，我们有很多“专用”的逻辑，这些“专用”逻辑贯穿在整个业务逻辑中，
-比如不同的专业公司、不同的地域，对某些功能有不同的要求。（这些带来业务逻辑差异的因素，称为“差异来源”。）
-这些逻辑如果在实现时简单直接，就会有很多“专用”代码，“弥散”在整个系统中。
-坏处很明显：</p>
-
-<ul>
-<li>专用逻辑分散，很难管理和进化。</li>
-<li>通用逻辑跟专用逻辑纠缠，增加了不必要的复杂度。</li>
-</ul>
-
-
-<p>于是我们明确了第三个维度的划分，在这个维度上，系统划分为“通用”、“专用”两个层次。</p>
-
-<p>下面的第一个图，体现了三个维度的划分情况。</p>
-
-<p>第二个图，重点描述了第三个维度的划分。
-左边是没有第三维度划分时的情况，不同差异来源的专用逻辑，在不同的领域，无规律地散乱着。
-右边是按照第三维度划分后的情况，下层是通用逻辑。上层是专用逻辑，按照不同的差异来源，不同的领域，有序分布。
-至于协同两个层次的机制，称为“特征机制”，将在<a href="/blog/2014/06/16/feature">下一篇</a>中阐述。</p>
-
-<p><img src="/images/3d/3d.png"></p>
-
-<p><img src="/images/feature/feature.png"></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p><a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（六）：重构（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/11/refactory2/"/>
-    <updated>2014-06-11T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/11/refactory2</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>还是一篇补记，主要讲讲为什么是重构而不是重写。</p>
-
-<!-- more -->
-
-
-<p>同事们喜欢重写系统，好多别的老爷爷老态龙钟之后都是被重写的。
-我们选择重构不重写的原因主要有三点：</p>
-
-<ul>
-<li>代码具有高价值，是可用和满足需求的。重写就意味着要放弃这些价值。</li>
-<li>没有现成的需求。由于开发年代久远，人员流动，而用户也非常分散，没有人能告诉我们需求。
-唯一可能的就是通读代码，反推出需求。这样做，无疑是成本高，风险大。</li>
-<li>能否解决代码系统腐化根源？这一点其实是我们考虑的重点。重写容易，
-如何防止重写的系统再次变坏，却不是件简单的任务。
-我们认为在重构代码的过程中，可以教育和锻炼团队，通过寻找让系统变好的方法，来掌握防止或缓解系统变坏的手段。
-这样不仅让本系统的情况好转，也可以给其他正在或即将变坏的系统提供借鉴。</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（五）：重构（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/09/refactory/"/>
-    <updated>2014-06-09T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/09/refactory</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>这是一篇补记，说的是在刚刚接手老爷爷系统的时候。</p>
-
-<!-- more -->
-
-
-<p>系统老不是问题，老而失控才是问题。我们的老爷爷系统就遇到了老而失控的问题。</p>
-
-<p>系统腐化、大泥球，讲的大概都是一个意思：需求不停、补丁重重、代码堆积、逻辑纠缠。
-随便一个小改动，都如履薄冰，面对着巨大的复杂性。越来越复杂、越来越纠缠，
-慢慢地（应该说是很快地 &ndash;_&ndash;!!）接近了凡人能处理的极限。</p>
-
-<p>我们研究了代码的结构和历史，发现主要问题是按照“功能”来安置代码，逻辑都放在一个功能入口的纵切面上。
-以我们这个系统的具体情况<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>来说，这个纵切面，就是一条线：Controller → Service → DAO。
-所有的代码，都分布在这条线上。
-整个类似于Transaction Script模式。Transaction Script本身难说有什么问题，问题是这个模式只能面对比较小规模的领域逻辑，
-当领域逻辑复杂度增加的时候，Transaction Script模式就难堪重任了。问题体现出来主要在两个方面：</p>
-
-<ul>
-<li>补丁：当一个功能涉及到的领域逻辑越来越多时，功能的代码上就依附了各种各样的领域逻辑代码。比如审批一个单据，逐渐贴上了用户授权、时效检查等等代码，如果“审批”功能本身修改，就得面对成倍增加的复杂性。</li>
-<li>碎片：同一类的领域逻辑，由于在各个功能都要使用，代码就被分散到了各个功能的代码里面。比如上面说的“用户授权”，在多个功能的代码里都有分布，一旦需要改动，得从各个功能中找出来一一修改，复杂性可想而知。</li>
-</ul>
-
-
-<p>应对的办法是什么呢？简单两个字——划分。</p>
-
-<p>我们的划分标准选择的是领域相关程度。
-关于“用户”的代码集中在一起，关于“时效”的代码也集中在一起。
-甚至“功能”的主要代码，也按照领域相关程度来放入不同的区域，
-比如“审批”、"退回"都是一种对单据的状态流转，它跟为单据设置“审批人”就不是同一类，不放在一起。
-而功能入口的纵切面上，只有调用这些代码的代码。</p>
-
-<p>需要说明一下的是我们这里说“划分”的标准是“领域”，这个跟“领域驱动设计（DDD）”并没有太大关系，
-大家不要搞混了。
-我们的目的只是“划分”。</p>
-
-<p>（<a href="/blog/2014/06/11/refactory2">下篇继续</a>）</p>
-
-<p><img src="/images/refactory/refactory.png"></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>系统采用类似SpringMVC的一个定制框架。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/07/view3/"/>
-    <updated>2014-06-07T18:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/07/view3</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>这一篇讲讲如何实现的问题。</p>
-
-<!-- more -->
-
-
-<p>实现方面主要考虑了两个要点：</p>
-
-<ul>
-<li>如何构建和维护：要快速地建立和编辑，能够加入版本管理，能够在各方面间共享。</li>
-<li>如何展现：各方面要容易地挂载自己的关注点数据，同时跨角色观察的需求要求框架能同时挂载多方面的数据。</li>
-</ul>
-
-
-<p>我们为这两个要点选择了两种不同的形式。</p>
-
-<p>一方面在构建和维护时，特征描述采用纯文本方式，可以说是一种简单地DSL。
-DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和角色间共享。</p>
-
-<p>```
-审批/逐个审批</p>
-
-<pre><code>-i 查看签报详细信息
--i 输入审批意见
-    -g 使用默认意见
-    -g 手工输入意见
-    -g 语音输入意见
--i 选择用户
-签报
-用户
-</code></pre>
-
-<p>批量审批</p>
-
-<pre><code>-e 逐个审批
--i 查看待处理文件列表
--i 点击审批按钮
-</code></pre>
-
-<p>……
-```</p>
-
-<p>另一方面在展现时，我们解析DSL，图形化交互式（并且略显炫酷滴 :-D）地展示。
-下面展示的是目前的状况。</p>
-
-<ul>
-<li>左边的图，是“系统特征”，由黄色椭圆形表示的领域过程、绿色圆形表示的领域实体，以及他们之间的连线构成。</li>
-<li>右边的下拉菜单，是由各方面提供的关注点数据，可以按需要附加到“系统特征”上。比如这个截图上，
-左边的图上面有个红色的大圆，就是将代码质量数据叠加上来。还有个深绿色的小点，是将代码结构的数据叠加上来。</li>
-<li>除了可以以叠加的方式展示数据，还可以根据关注点数据对图进行过滤。</li>
-</ul>
-
-
-<p><img src="/images/view/view3.png"></p>
-
-<p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
 ]]></content>
   </entry>
   
