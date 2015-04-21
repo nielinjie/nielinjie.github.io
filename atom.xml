@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-04-21T10:55:58+08:00</updated>
+  <updated>2015-04-21T11:02:36+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -18,7 +18,7 @@
     <link href="http://nielinjie.github.io/blog/2015/04/10/resilient3/"/>
     <updated>2015-04-10T10:18:14+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/04/10/resilient3</id>
-    <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/04/09/resilient2/">接上篇</a>）</p>
+    <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/04/10/resilient2/">接上篇</a>）</p>
 
 <!-- more -->
 
@@ -104,7 +104,7 @@
 <li>系统错误
 
 <ul>
-<li>大范围错误 &ndash; 归结为<a href="http://nielinjie.github.io/blog/2015/04/09/resilient2/">可用性事故</a>。</li>
+<li>大范围错误 &ndash; 归结为<a href="http://nielinjie.github.io/blog/2015/04/10/resilient2/">可用性事故</a>。</li>
 <li>局部错误 &ndash; 归结为bug。</li>
 <li>需要系统错误率实时监控和报警。</li>
 <li>需要系统错误持续记录和分析。</li>
@@ -13399,7 +13399,7 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x6e;&#105;&#x65;&#108;&#105;&#110;&#106;&#x69;&#101;&#64;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#99;&#x6f;&#x6d;">&#110;&#105;&#x65;&#108;&#105;&#x6e;&#106;&#105;&#x65;&#x40;&#103;&#109;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+电子邮箱：<a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#110;&#105;&#x65;&#x6c;&#105;&#x6e;&#x6a;&#x69;&#101;&#x40;&#103;&#x6d;&#97;&#x69;&#108;&#46;&#99;&#111;&#109;">&#110;&#105;&#x65;&#108;&#105;&#x6e;&#106;&#105;&#101;&#64;&#103;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 

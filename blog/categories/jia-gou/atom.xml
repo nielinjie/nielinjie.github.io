@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-04-21T10:55:58+08:00</updated>
+  <updated>2015-04-21T11:02:36+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -18,7 +18,7 @@
     <link href="http://nielinjie.github.io/blog/2015/04/10/resilient3/"/>
     <updated>2015-04-10T10:18:14+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/04/10/resilient3</id>
-    <content type="html"><![CDATA[<p>（<a href="/blog/2015/04/09/resilient2/">接上篇</a>）</p>
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/04/10/resilient2/">接上篇</a>）</p>
 
 <!-- more -->
 
@@ -104,7 +104,7 @@
 <li>系统错误
 
 <ul>
-<li>大范围错误 &ndash; 归结为<a href="/blog/2015/04/09/resilient2/">可用性事故</a>。</li>
+<li>大范围错误 &ndash; 归结为<a href="/blog/2015/04/10/resilient2/">可用性事故</a>。</li>
 <li>局部错误 &ndash; 归结为bug。</li>
 <li>需要系统错误率实时监控和报警。</li>
 <li>需要系统错误持续记录和分析。</li>
