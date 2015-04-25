@@ -226,7 +226,7 @@
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/2015/04/09/service/</loc>
-        <lastmod>2015-04-10T10:15:27+08:00</lastmod>
+        <lastmod>2015-04-25T21:31:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/2015/04/10/resilient2/</loc>
@@ -237,8 +237,12 @@
         <lastmod>2015-04-21T11:02:02+08:00</lastmod>
     </url>
     <url>
+        <loc>http://nielinjie.github.io/blog/2015/04/25/chief-programmer/</loc>
+        <lastmod>2015-04-25T20:51:51+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://nielinjie.github.io/blog/archives/</loc>
-        <lastmod>2015-04-21T11:02:02+08:00</lastmod>
+        <lastmod>2015-04-25T21:31:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/blog/filter/filter.html</loc>
@@ -246,7 +250,7 @@
     </url>
     <url>
         <loc>http://nielinjie.github.io/</loc>
-        <lastmod>2015-04-21T11:02:02+08:00</lastmod>
+        <lastmod>2015-04-25T21:31:05+08:00</lastmod>
     </url>
     <url>
         <loc>http://nielinjie.github.io/robots.txt</loc>

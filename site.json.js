@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/04/25/chief-programmer/",
+    date:"2015-04-25T13:40:12+08:00",
+    title:"首席程序员负责制",
+    categories:[
+      
+        "开发",
+      
+        "敏捷",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/04/10/resilient3/",
     date:"2015-04-10T10:18:14+08:00",
     title:"质量保障措施参考清单（三）",

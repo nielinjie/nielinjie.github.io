@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-04-21T11:02:36+08:00</updated>
+  <updated>2015-04-25T21:33:38+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[首席程序员负责制]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/04/25/chief-programmer/"/>
+    <updated>2015-04-25T13:40:12+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/04/25/chief-programmer</id>
+    <content type="html"><![CDATA[<p>&ldquo;首席程序员负责制”是我常向团队推荐的一种敏捷实践。</p>
+
+<!--more-->
+
+
+<ul>
+<li>主要用于成员构成比较复杂的团队。比如编程技能参差不齐、领域熟悉程度不同、责任心和士气有待提升、<s>帮派</s>（大误）等情况。</li>
+<li>只有一部分程序员有权力提交代码，称为“首席程序员”，他们对所以提交的代码负责。</li>
+<li>其他程序参与除提交代码以外的所有活动。他们产出的代码交给所属的首席程序员处理。</li>
+<li>其他程序员合适的时候可以转变为首席程序员。</li>
+</ul>
+
+
+<p><img src="/images/chief/chief.JPG" width="300"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mac上尝试Hadoop]]></title>
@@ -101,37 +123,6 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
 <p>云端存储功能发布。</p>
 
 <p><img src="/images/pkc/pck_cloud_save.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[知识在此（一）：脑图大开]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc/"/>
-    <updated>2014-08-02T16:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/08/02/pkc</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
-
-<!-- more -->
-
-
-<p>这是一个“脑图”工具。</p>
-
-<p>脑图工具是本人一直重度依赖的思考工具。
-所以也是<a href="/blog/2014/08/02/pkc0/">“知识在此”</a>系列的第一个工具。</p>
-
-<p>这个工具将按照本人对脑图的需求和期待来改进。大家有任何意见和期待，请给随时我反馈。</p>
-
-<p>目前看到近期的路线图可能是：</p>
-
-<ul>
-<li>云端存储和共享。</li>
-<li>演示模式。</li>
-<li>应用插件。</li>
-<li>移动适配。</li>
-</ul>
-
-
-<p><img src="/images/pkc/mm.png"></p>
 ]]></content>
   </entry>
   
