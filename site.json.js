@@ -7,6 +7,8 @@ window.site={
     title:"节选译：迁移至云架构（一）",
     categories:[
       
+        "云",
+      
         "架构",
       
         "翻译",
@@ -133,7 +135,7 @@ window.site={
     title:"感谢皮皮书屋",
     categories:[
       
-        "“参考”",
+        "参考",
       
     ],
     series:[
