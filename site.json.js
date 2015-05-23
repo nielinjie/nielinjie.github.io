@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/05/23/cloud/",
+    date:"2015-05-23T11:15:31+08:00",
+    title:"节选译：迁移至云架构（一）",
+    categories:[
+      
+        "架构",
+      
+        "翻译",
+      
+    ],
+    series:[
+      
+        "迁移至云架构（节选译） 0",
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/04/25/chief-programmer/",
     date:"2015-04-25T13:40:12+08:00",
     title:"首席程序员负责制",
