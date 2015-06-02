@@ -101,14 +101,14 @@
 
 <p>本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。</p>
 
-<p>（接<a href="/blog/2015/05/23/cloud/">前文</a>）</p>
+<p>（<a href="/blog/2015/05/23/cloud/">接前文</a>）</p>
 
 <!--more-->
 
 
-<h1>云架构的定义</h1>
+<h2>云架构的定义</h2>
 
-<h2><a name="12f"></a>十二因子应用</h2>
+<h3><a name="12f"></a>十二因子应用</h3>
 
 <p>“十二因子应用”是一些云架构模式。它们专注于速度、稳定、伸缩，主要包括强调声明性配置、无状态和无共享的横向伸缩进程、全面与部署环境解耦合等方面。当前大量的云平台都为部署十二因子应用优化。</p>
 
@@ -123,9 +123,9 @@
 
 <p>最后，应用的可丢弃性使得平台自动错误恢复非常容易快速。同时，将日志作为事件流大大地帮助了应用状态的可视化。环境的等同、一致的配置机制以及支持服务机制则使得平台能为应用运行的各个方面提供更强大的可视化能力。这是十二因子应用在稳定方面的意义。</p>
 
-<h2><a name="ms"></a>微服务</h2>
+<h3><a name="ms"></a>微服务</h3>
 
-<p>微服务代表了将巨大架构业务系统解构为独立可部署的服务。每个服务代表一个业务能力，或者说是产生业务价值的最小原子服务。</p>
+<p>微服务代表了将巨大架构<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>业务系统解构为独立可部署的服务。每个服务代表一个业务能力，或者说是产生业务价值的最小原子服务。</p>
 
 <ul>
 <li>我们将业务领域解耦为独立可部署的上下文的同时，我们就解耦了相关的变化迭代。当变化被局限在单个的上下文，这些变化可以独立于业务的其他方面。结果就是可以更频繁迅速地落实，从而持续不断地产生价值。</li>
@@ -136,7 +136,7 @@
 </ul>
 
 
-<h2>敏捷的自助基础设施</h2>
+<h3><a name="ai"></a>敏捷的自助基础设施</h3>
 
 <p>云架构应用的部署与维护往往由开发团队负责。支持自助的平台往往有帮助。</p>
 
@@ -158,7 +158,7 @@
 
 <p>这一系列的工具保障了团队可以敏捷地开发和运营他们的服务，并且做到快速、稳定、可伸缩。</p>
 
-<h2>基于API的协作</h2>
+<h3>基于API的协作</h3>
 
 <p>云架构中，服务之间唯一的交互方式是API，公开发布和有版本的API。通常采用HTTP上的REST风格并使用JSON序列化，但其他协议和序列化方式也完全可以。</p>
 
@@ -166,11 +166,11 @@
 
 <p>通过<a href="http://martinfowler.com/articles/consumerDrivenContracts.html">客户驱动合同</a>，交互双方校验合同。服务的消费者不允许访问依赖的实现细节，也不能直接访问它的数据存储。事实上，只有一个服务可以访问它自己的数据存储。这种强制解耦合有利于云架构的速度。</p>
 
-<h2>“反脆弱”</h2>
+<h3>“反脆弱”</h3>
 
 <p>“反脆弱”并不是指的鲁棒性或弹性。而是指系统在压力下变得更强的特性。什么系统可以做到这个？比如人的免疫系统，暴露的时候变得更强而隔离的时候变得更弱。比如，Netflix Simian Army项目有个Chaos Monkey子模块，通过向生产部件中随机注入错误来寻找架构中的弱点。通过显式地寻找弱点、注入错误、强制修复，架构自然随时间逐渐变强。</p>
 
-<h1>总结</h1>
+<h2>总结</h2>
 
 <p>以下为译者自己总结的 :&ndash;)</p>
 
@@ -181,7 +181,15 @@
 </ol>
 
 
-<p>（后文继续）</p>
+<p>（<a href="/blog/2015/05/29/cloud3/">后文继续，需要改变</a>）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>monolithic application architectures<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
 </div>
 
 
@@ -217,6 +225,8 @@
     </p>
 
     <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/05/29/cloud3/" title="Next Post: 节选译：迁移至云架构（三）">&laquo; 节选译：迁移至云架构（三） </a>
       
       
         <a class="basic-alignment right" href="/blog/2015/05/23/cloud/" title="Previous Post: 节选译：迁移至云架构（一）"> 节选译：迁移至云架构（一） &raquo;</a>
@@ -393,7 +403,7 @@ var duoshuoQuery = {short_name:"nielinjie"};
 </script>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (41)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (2)</a></li><li><a href='/blog/categories/yun'>云 (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (43)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/yun'>云 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
 </section>
 
   

@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>节选译：迁移至云架构（四） - 聂同学</title>
+  <meta name="author" content="nielinjie">
+
+  
+  <meta name="description" content="原文：Migrating to Cloud-Native Application Architectures 本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。 （接前文） 组织转变 这一节我们将讨论为了更好地应用云架构，组织在建立团队方面将如何改进。这个理论的背后是著名的Conway’s &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2015/06/02/cloud4">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+
+
+
+<script src="/javascripts/libs/d3.min.js" charset="utf-8"></script>
+<script src="/javascripts/d3.tip.v0.6.3.js" charset="utf-8"></script>
+
+<script src="/javascripts/underscore-min.js" charset="utf-8"></script>
+<script src="/javascripts/queryString.js" charset="utf-8"></script>
+<script src="/site.json.js" charset="utf-8"></script>
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">聂同学</a></h1>
+  
+    <h2>一个程序员和架构师的实践与思考</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:nielinjie.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">节选译：迁移至云架构（四）</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-02T11:15:31+08:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
+
+<p>本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。</p>
+
+<p>（<a href="/blog/2015/05/29/cloud3/">接前文</a>）</p>
+
+<!--more-->
+
+
+<h2>组织转变</h2>
+
+<p>这一节我们将讨论为了更好地应用云架构，组织在建立团队方面将如何改进。这个理论的背后是著名的<em>Conway’s Law</em>，我们的办法是围绕一个长期的产品线建立多职责的团队，而不是鼓励每种职责的人员呆在自己单独的团队里（比如testing）。</p>
+
+<h3><a name="bct"></a>业务能力<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>团队</h3>
+
+<blockquote><p>任何组织设计的产品，它的设计结构都跟组织的交流结构一致。—— Melvyn Conway</p></blockquote>
+
+<p>我们已经讨论了把IT划分为竖井的做法。自然地，这时我们也把每个人放进了这样的竖井里。那么我们来看看需要开发一个新软件时会发生什么。</p>
+
+<p>通常的做法是建立一个项目团队，指定一名项目经理。然后项目经理会跟各个竖井打交道，获得项目所需的各种人员。从上面引用的<em>Conway’s Law</em>我们会看到，这种团队自然就产出了类似竖井结构的架构：</p>
+
+<ul>
+<li>数据操作层</li>
+<li>服务层</li>
+<li>Web MVC 层</li>
+<li>消息层</li>
+<li>……</li>
+</ul>
+
+
+<p>这些层次横亘在各个业务能力间，各个业务能力要想不影响其他地创新和落地，变得比较困难。</p>
+
+<p>很多公司想要迁移到云架构，比如按业务能力划分微服务。他们应用的是Thoughtworks所谓的
+<a href="http://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver">“反Conway策略”</a>。不是按组织结构来决定架构，而是反过来，按照想要的架构来重新调整组织架构。按照Conway的观点，只有这样，你想要的架构才会最终出现。</p>
+
+<p>所以，作为迁移到DevOps文化的一部分，团队跨职责并按照业务能力来组织，他们开发产品而不是项目。产品是长期存在的，直到他们不再具有业务价值。交付一个业务能力需要的人员都在一个团队中——开发、测试、发布、运营，代码不需要在各个团队间传来传去。这种团队往往也叫“<a href="http://www.fastcompany.com/50106/inside-mind-jeff-bezos">两个披萨团队</a>”，也就是说如果两个披萨不够这个团队分，那这个团队就太大了点。</p>
+
+<p>现在我们来看如何决定要建立什么团队。如果我们遵从“反Conway策略”，我们将从组织的领域模型开始，找到能够封装在“界限上下文”<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>里地业务能力。一旦确定了这些业务能力，我们就建立相关的业务能力团队，负责这个业务能力的整个生命周期，同时也负责从开发到运营的整个循环。</p>
+
+<h3><a name="pt"></a>平台团队</h3>
+
+<p>业务能力团队依赖于“敏捷的自助基础设施”<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。实际上，我们可以定义一个业务能力，叫做“可以开发、部署、运营业务能力的业务能力”。这个能力由平台团队负责。</p>
+
+<p>平台团队根据业务能力团队的要求运营着“敏捷的自助基础设施”。如果公司自己运行云平台，那平台团队需要负责数据中心和了解硬件。</p>
+
+<p>IT运营往往通过各种ticket系统与客户交互。但平台团队运营的是“自助”的平台，它要以不同的方式交互。就像业务能力团队通过API合同跟其他团队协作，平台团队也为平台定义一套合同。业务能力团队不是将环境和数据请求放到等待队列等待实施，而是请求并获得一个自动发布管道，需要的时候能够自行处理环境和数据。</p>
+
+<h2>技术转变</h2>
+
+<p>现在我们来看看迁移到云中的DevOps可能遇到的实现问题。</p>
+
+<h3>分解巨大<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>架构</h3>
+
+<p>传统的n层巨大架构部署到云基础设施很难运行得好。因为它们往往就运行环境做了一些假设，然而云基础设施并不支持，比如：</p>
+
+<ul>
+<li>mount好的共享文件系统</li>
+<li>P2p的应用服务集群</li>
+<li>共享运行库</li>
+<li>已知位置的配置文件</li>
+</ul>
+
+
+<p>这些假设都基于这种架构的应用被部署在长期存在的基础设施上，它们跟云基础设施弹性短期的想法并不兼容。如果应用并没有这些环境假设呢？还是有问题：</p>
+
+<ul>
+<li>巨大架构将所有业务能力的变化绑在一起，不利于各个业务能力的创新分别落地。妨害了创新的快速。</li>
+<li>巨大架构中的服务很难单独伸缩，负载效率难以提升。</li>
+<li>新加入组织的员工难以适应，他们需要学习整个领域和大量的代码，没有几个月的时间，他们很难成为真正有效率的开发人员。</li>
+<li>开发组织通过增加人员来扩大规模很难，增加沟通和协作的成本。</li>
+<li>技术栈长期不变，引入新技术风险较大。</li>
+</ul>
+
+
+<p>以上清单正好是“微服务”<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>的优势清单逐条反过来（<s>我Kao</s>）。同时，将组织划分为业务能力团队，也要求将巨大架构分解为微服务。只有这样，才能充分享有我们迁移到云基础设施的好处。</p>
+
+<h3><a name="dd"></a>分解数据</h3>
+
+<p>分解巨大架构并不足够。数据模型也需要分解。如果业务能力团队看似自治但却被限制在同一个数据上协作，巨大架构对创新的阻碍只不过搬到了数据层面而已。</p>
+
+<p>DDD认为<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup>我们的成功很大程度上依赖于我们的领域模型的质量。领域模型只有内部一致才能有用，同一个模型中不应该有不一致的概念和词汇。</p>
+
+<p>要产出一个大一统的领域模型非常困难和昂贵，甚至是不可能的。Evans根据内部一致的子集来划分领域，称为“界限上下文”。</p>
+
+<p>最近在跟航空业的客户合作时，我们讨论了几个他们业务的核心概念。比如“预定”，我们能在相关业务中找出十七个不同的定义，显然它们不能看做是同一个概念。相反，每个定义都是有细微差异的不同概念。这成为了组织的瓶颈。</p>
+
+<p>界限上下文允许我们在组织范围保留不一致的定义，同时在单个上下文里面保持一致。</p>
+
+<p>我们开始识别哪些能够内部一致的领域模型片段。我们在这些片段的周围画出边界，这就成了我们界限上下文。这样我们就能把我们的业务能力团队对应到界限上下文，这些团队将产出对应的微服务。</p>
+
+<p>微服务的定义又指导了需要哪些十二因子应用。十二因子主要是技术上的规范，而微服务主要是业务上的规范。我们定义界限上下文，赋予之业务能力，围绕业务能力建立团队，让团队开发十二因子应用。由于这样的应用都是独立可部署的，使得业务能力团队有更多的技术手段可用。</p>
+
+<p>我们将界限上下文与“每服务每数据库”模式关联，也就是每个微服务封装、管理和保护它们自己的领域模型和数据存储。在这个模式中，只有一个应用服务可以访问它的数据存储（可能是一个多租户数据库集群中的一个schema，也可以是一个独占的物理数据库）。任何外部访问只能通过API合同（经常是REST，但是可以是任何协议）。</p>
+
+<p>这种分解使应用可以根据自己的数据特征选择不同的数据存储，比如数据结构和数据读写模式。另一方面，为了能回答一些跨上下文的问题，数据通过事件驱动技术重新组合起来。比如<a href="http://martinfowler.com/bliki/CQRS.html">CQRC</a>和<a href="http://martinfowler.com/eaaDev/EventSourcing.html">event sourcing</a>就常常用来实现跨上下文将相似概念同步起来。</p>
+
+<h3>容器化</h3>
+
+<p>容器镜像（比如由<a href="https://linuxcontainers.org">LXC</a>、<a href="https://www.docker.com">Docker</a>、<a href="https://github.com/coreos/rkt">Rocket</a>准备的）正在迅速成为云架构的部署单元。这些镜像也迅速得到了调度工具的支持，比如Kubernetes、Marathon、 Lattice。公有云提供商比如Amazon和Google也提供了基于容器的调度和部署服务。容器技术提供了跟虚拟机相似的资源分配和隔离，同时相对来说大大地轻量和易移植。应用开发者要尽快适应将应用打包为容器镜像，以便能享有现代云基础设施带来的便利。</p>
+
+<h3>从奏乐到舞蹈<sup id="fnref:7"><a href="#fn:7" rel="footnote">7</a></sup></h3>
+
+<p>不仅仅服务产出、数据模型和管理应该去中心化，服务的集成也应该去中心化。企业中服务集成传统上使用类似ESB。ESB就成为了服务间交互的所有决策的控制者，包括路由、传输、协议、安全等。我们称为“奏乐”，类似于指挥决定了整个音乐的演奏进程。ESB和奏乐模式使得架构图显得非常简单，但不幸的是这种简单性具有欺骗性。ESB中经常隐藏着一张复杂性的网。管理这种复杂性非常费时，跟它一起工作也成为了应用开发团队的瓶颈。就像我们谈到的大一统的数据模型一样，大一统的服务集成也成为了追求快速的绊脚石。</p>
+
+<p>在云架构中，比如微服务，我们倾向于“舞蹈”，类似于芭蕾舞。不是把精力放在集成机制，而是放在各个节点。当舞台上发生了跟原计划不符的异常情况，并没有一个指挥来告诉舞者该怎么做，而是舞者自己适应。类似的，我们的服务也是自己适应他们运行环境中出现的异常情况，比如通过“客户端负载均衡<sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a></sup>”和“断路器<sup id="fnref:9"><a href="#fn:9" rel="footnote">9</a></sup>”。</p>
+
+<p>虽然架构图看上去趋向于一张纠结的网，但其复杂性并不超过传统的SOA。舞蹈模式只是承认和暴露了系统本质的复杂性。这个转变同样是为了支持自治进而实现云架构快速地目标。团队可以迅速应对各种情况，不必与其他团队过多协作，也不用疲于跟ESB打交道。</p>
+
+<h2>总结</h2>
+
+<p>以下为译者自己总结的 :&ndash;)</p>
+
+<ol>
+<li>文化转变：DevOps、持续交付、自治</li>
+<li>组织结构转变：业务能力团队、平台团队</li>
+<li>技术转变：分解服务、分解数据、容器化、分解集成</li>
+</ol>
+
+
+<p>（后文继续，迁移指南）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>business capability<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>bounded contexts，在“<a href="#dd">分解数据</a>”中讨论<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="/blog/2015/05/23/cloud2/#ai">前面已经提到</a>。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>Monolith<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p><a href="/blog/2015/05/23/cloud2/#ms">微服务</a>。<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<li id="fn:6">
+<p>书：<em>Domain-Driven Design</em>，作者Eric Evans<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+<li id="fn:7">
+<p>从Orchestration到Choreography<a href="#fnref:7" rev="footnote">&#8617;</a></p></li>
+<li id="fn:8">
+<p>路由和负载均衡（链接待建）<a href="#fnref:8" rev="footnote">&#8617;</a></p></li>
+<li id="fn:9">
+<p>错误容忍（链接待建）<a href="#fnref:9" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-02T11:15:31+08:00" pubdate data-updated="true">Jun 2<span>nd</span>, 2015</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/yun/'>云</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/fan-yi/'>翻译</a>
+  
+</span>
+
+
+    </p>
+
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2015/05/29/cloud3/" title="Previous Post: 节选译：迁移至云架构（三）"> 节选译：迁移至云架构（三） &raquo;</a>
+      
+
+    </p>
+
+    <p/>
+    <section>
+      
+  
+
+
+<div class="post-series" data-series="节选译：迁移至云架构 3,"></div>
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+    var ss=series()
+    var sers=$("div.post-series").attr("data-series").split(",")
+    sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
+      var name=s.split(" ")[0]
+      var index=s.split(" ")[1]
+      return ss.filter(function(ser){
+        return ser.name==name
+      })
+    }).value()
+    _(sers).each(function(s){
+      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      _(s).each(function(sOfP){
+        p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
+      })
+    })
+  })()
+</script>
+
+    </section>
+
+        
+        <section>
+<h2>Sharing</h2>
+
+      <div class="bshare-custom icon-medium-plus"><div class="bsPromo bsPromo2"></div><a title="分享到新浪微博" class="bshare-sinaminiblog" href="javascript:void(0);"></a><a title="分享到腾讯微博" class="bshare-qqmb" href="javascript:void(0);"></a><a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a><a title="分享到豆瓣" class="bshare-douban" href="javascript:void(0);"></a><a title="分享到Evernote" class="bshare-evernote" href="javascript:void(0);"></a><a title="分享到ReadItLater" class="bshare-readitlater" href="javascript:void(0);"></a><a title="分享到有道笔记" class="bshare-youdaonote" href="javascript:void(0);"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count" style="float: none;">26.3K</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=ab3c7c18-ccaf-4f13-9ade-eb0cf918582e&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+
+    </section>
+    
+
+  </footer>
+</article>
+
+
+<section imagesd="comment">
+<h2>Add a comment</h2>
+<!-- Duoshuo Comment BEGIN -->
+  <div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"nielinjie"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comment END -->
+
+</section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+    <ul>
+      <li>“应用架构专家” @平安科技</li>
+      <li>“Web全端开发者” @业余</li>
+      <li>“iOS开发者” @业余</li>
+      <li>nielinjie@gmail.com</li>
+      <li><a href="/blog/2015/01/30/resume/">我的简历</a></li>
+      <li>
+        <img src="/images/me/weixin.jpg" style="width:80px">
+        <img src="/images/me/weibo.png" style="width:80px">
+        <img src="/images/me/zhifubao.png" style="width:80px">
+      </li>
+    </ul>
+</section>
+
+  <link href="/stylesheets/cal-heatmap.css" rel="stylesheet" type="text/css"/>
+
+<script src="/javascripts/libs/cal-heatmap.min.js"></script>
+<style>
+  #cal-pre {
+      cursor:pointer;
+      font-size:1.5em;
+  }
+  #cal-next {
+      cursor:pointer;
+      font-size:1.5em;
+
+  }
+</style>
+<section class="calendar-section">
+  <h1>Calendar</h1>
+<div id="cal-heatmap"></div>
+<span id="cal-pre">←</span><span id="cal-next">→</span><br/>
+
+</section>
+
+<script type="text/javascript">
+(function(){
+  function timestamp(date){
+    return new Date(date).getTime()/1000
+  }
+  function datas(){
+    return _(window.site.posts).chain().countBy(function(p){
+      return timestamp(p.date)
+    }).value()
+  }
+
+  var calendar = new CalHeatMap();
+    calendar.init({
+        data: datas(),
+        //start: new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        start:new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        domain: "month",
+        displayLegend: false,
+        subDomain: "day",
+        range: 4,
+        nextSelector: "#cal-next",
+        previousSelector: "#cal-pre",
+        legend: [1, 2,3,4,5],
+        onClick:function(date,nb){
+          var url="/blog/filter/filter.html"
+          window.location.href=buildUrl(url,{filterName:"week",filterValue:date,filterDes:"Calendar: Week from "+date.toLocaleDateString()})
+        }
+    });
+})()
+
+</script>
+<section class="series">
+  <h1>Series</h1>
+  <ul class="series"></ul>
+</section>
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+
+    var sers=_(series()).chain().groupBy("name").value()
+    _(sers).each(function(v,k){
+      var url="/blog/filter/filter.html"
+      var u = buildUrl(url,{filterName:"series",filterValue:k,filterDes:"Series: "+k})
+      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+"（"+v.length+"）")))
+    })
+  })()
+</script>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (43)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/yun'>云 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - nielinjie -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1275367e1683bb7323263bc0c06163a0' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

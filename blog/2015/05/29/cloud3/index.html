@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>复制到gitcafe - 聂同学</title>
+  <title>节选译：迁移至云架构（三） - 聂同学</title>
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="已复制到gitcafe—— http://nielinjie.gitcafe.io github.io的访问（由于它前面的墙）不太稳定，现保存一份copy在gitcafe，两边同步发布。 遗留内容迁移步骤在此：http://wdicc.com/octopress-and-gitcafe/ &hellip;">
+  <meta name="description" content="原文：Migrating to Cloud-Native Application Architectures 本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。 （接前文） 需要转变 文化转变 从竖井到DevOps 企业IT常常被组织为一些竖井：软件开发、QA、DBA、系统管理、运营、发布管理 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nielinjie.github.io/blog/2015/04/02/move">
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2015/05/29/cloud3">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -74,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">复制到gitcafe</h1>
+      <h1 class="entry-title">节选译：迁移至云架构（三）</h1>
     
     
       <p class="meta">
@@ -90,29 +90,104 @@
   
 
 
-<time datetime="2015-04-02T10:48:27+08:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2015</time>
+<time datetime="2015-05-29T11:15:31+08:00" pubdate data-updated="true">May 29<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>已复制到gitcafe——</p>
+<div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
 
-<p><a href="http://nielinjie.gitcafe.io">http://nielinjie.gitcafe.io</a></p>
+<p>本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。</p>
 
-<!-- more -->
+<p>（<a href="/blog/2015/05/23/cloud2/">接前文</a>）</p>
+
+<!--more-->
 
 
-<p>github.io的访问（由于它前面的墙）不太稳定，现保存一份copy在gitcafe，两边同步发布。</p>
+<h1>需要转变</h1>
 
-<p>遗留内容迁移步骤在此：<a href="http://wdicc.com/octopress-and-gitcafe/">http://wdicc.com/octopress-and-gitcafe/</a></p>
+<h2>文化转变</h2>
 
-<p>补充一点没有提到的：</p>
+<h3>从竖井到DevOps</h3>
+
+<p>企业IT常常被组织为一些竖井：软件开发、QA、DBA、系统管理、运营、发布管理、项目管理等。这些竖井往往有不同的管理层次、工具集、沟通方式、词汇和激励形式。这些不同鼓励了做事方法的不同。</p>
+
+<p>一个常被提到的例子是开发和运营的不同。
+开发的任务是开发功能，往往是通过向企业IT中引入更改来实现的。所以开发部门的任务可以说成是“交付变化”，自然开发部门也往往是鼓励交付更多的变化。</p>
+
+<p>另一方面，运营的任务则可以说是“防止变化”，运营的任务是保持可用性、弹性、性能和持久性。他们往往被鼓励保持KPI，比如平均错误间隔，平均恢复时间等。然而对于保持这些指标来说，最大的风险就是引入变化。结果就是，运营经常不是想办法怎么安全地引入开发期望的变化，而是想办法把让引入变化更痛苦，从而降低变化的频率。</p>
+
+<p>这种不同的做事方法显然带来了低效的合作。协作、沟通、交接工件变得非常乏味和痛苦，甚至是混乱和危险。企业IT往往企图修复这种状况，构建了通过ticket系统和会议驱动的重流程。结果是工作变得更加慢和浪费了。</p>
+
+<p>像这样的环境跟云架构快速的理念完全相左。竖井诞生的原因，往往是希望带来更多地稳定和安全，但实践证明，作用甚微，甚至有时候会带来反作用。</p>
+
+<p>DevOps的核心就是打破这样的竖井。构建共享的工具、词汇和沟通结构，建立文化，为着同一个目标：快速安全地实现价值。围绕这一目标建立激励机制。官僚机构和流程被信任和责任心取代。</p>
+
+<p>届时，开发和运营向同一个直接领导负责，共同寻找办法，既能持续产出价值，又能保持可用性、弹性、性能和持久性。现在发现，云架构相关技术能够为之提供支持。</p>
+
+<h3>从Punctuated Equilibrium<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> 到持续交付</h3>
+
+<p>企业往往引入了敏捷过程，比如Scrum，但一般限于开发团队。</p>
+
+<p>我们已经相当成功地将单个的开发团队变得敏捷。我们做了很多改进：结对编程、测试驱动开发，持续集成……，我们已经能很高效地完成“从用户故事到Demo”的循环。但我们的问题是：<em>功能什么时候能上生产呢？</em></p>
+
+<p>这个问题我们很难回答，它迫使我们考虑一些我们不能控制的因素：</p>
 
 <ul>
-<li>git clone到gitcafe目录之后，要建立gitcafe-pages分支（如果没有的话），并且checkout，以便后续运行deploy命令时能提交到这个分支上。</li>
+<li>QA流程需要多少时间？</li>
+<li>我们啥时候能加入版本计划？</li>
+<li>什么时候运营能准备好环境？</li>
 </ul>
+
+
+<p>这时候我们意识到我们陷入了“<a href="http://sdtimes.com/analyst-watch-water-scrum-fall-is-the-reality-of-agile/">Water-Scrum-fall</a>” ，我们的团队已经开始敏捷了，但我们的组织还没有。结果，我们每个迭代的成果并不能体现到生产部署，代码其实还堆积在传统的发布循环中。</p>
+
+<p>这种工作模式实际上抹杀了敏捷的两个关键好处。</p>
+
+<ul>
+<li>客户仍然要隔好几个星期才能看到新东西，感觉不到敏捷的好处，所以并不能如约与开发团队建立信任关系。他们倾向于回到老的工作方式：把尽量多的需求都塞到版本里——由于他们不太相信软件能够快速发布，于是宁愿最后好不容易发布的时候能多交付点东西。</li>
+<li>开发团队可能要好几周才能得到真正的反馈。Demo是很不错，但开发人员都知道，只有真正的用户使用了真正的生产软件，才能产生好的反馈。这样的反馈才能提供有效的修正，团队才能真正做到“build the right thing”。如果反馈延迟了，错误堆积起来，返工的成本就很高。</li>
+</ul>
+
+
+<p>想要得到云架构的好处就需要转变到持续发布。</p>
+
+<p>技术上我们可以做到每个迭代（甚至每次代码提交）自动部署到生产。我们建立部署管道，在此执行自动测试，防止生产问题。现在唯一需要做的是业务决策：现在是否是发布新特性的好的业务时机？由于部署管道是全自动的，业务决策好后可以一键实施。</p>
+
+<h3>从中央集权到分散自治</h3>
+
+<p>Water-Scrum-fall文化中有一点值得特别指出，因为我感觉是使用云的过程中的一个绊脚石。</p>
+
+<p>企业经常围绕应用架构和数据管理建立中央集权组织，负责维护守则和标准、审批设计和更改。中央集权确实有几点帮助：</p>
+
+<ul>
+<li>可以防止技术栈的不一致。降低组织的维护总成本。</li>
+<li>可以防止架构选择的不一致。</li>
+<li>合规管理之类的Cross-cutting concerns可以在组织内保持一致。</li>
+<li>数据的所有权可以一目了然。</li>
+</ul>
+
+
+<p>这些组织建立起来是为了提高质量和降低成本。但收效甚微。同时还影响了云架构在快速方面的努力。巨大架构可能成为技术创新的瓶颈，巨大单一的管理组织也一样。有时候一个小的变化只需要几分钟就能完成，而且也肯定会通过评审，但却需要很长时间来等待评审会议的召开。</p>
+
+<p>使用云架构几乎总是伴随着去中心集权。开发云架构应用的团队（“Business Capability Teams”<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>）几乎拥有了交付所需要的所有的能力。他们拥有数据管理、技术栈、架构、每个部件的设计以及API合同。如果有什么决定需要做，那就是这个团队就能做了。</p>
+
+<p>去中心和自治的团队通过集成模式规定的机制来制衡，这些机制存在于团队开发的服务之间，通常很小很轻。（比如使用HTTP REST JSON风格的API，而不是各不相同的RPC接口。）这些机制通常最先出现在基层，用来解决一些共有问题，比如“错误容忍”。我们鼓励各团队自己设计解决方案，然后自组织地与其他团队一起形成公用的模式和框架。如果出现了对整个组织都好用的模式和框架，那么就将这些模式、框架转交给“云工具、框架团队”。工具框架团队可以是平台团队<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>的一部分，也可以不是。在整个团队对架构形成共识的过程中，工具框架团队和他们的方案，将起到带头作用。</p>
+
+<p>（<a href="/blog/2015/06/02/cloud4/">后文继续</a>）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="http://en.wikipedia.org/wiki/Punctuated_equilibrium">Punctuated Equilibrium</a>（什么鬼……）<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p><a href="/blog/2015/06/02/cloud4/#bct">业务能力团队</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="/blog/2015/06/02/cloud4/#pt">平台团队</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
 
 </div>
 
@@ -136,12 +211,12 @@
   
 
 
-<time datetime="2015-04-02T10:48:27+08:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2015</time>
+<time datetime="2015-05-29T11:15:31+08:00" pubdate data-updated="true">May 29<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/ge-ren/'>个人</a>
+    <a class='category' href='/blog/categories/yun/'>云</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/fan-yi/'>翻译</a>
   
 </span>
 
@@ -150,10 +225,10 @@
 
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2015/04/09/resilient/" title="Next Post: 质量保障措施参考清单（一）">&laquo; 质量保障措施参考清单（一） </a>
+        <a class="basic-alignment left" href="/blog/2015/06/02/cloud4/" title="Next Post: 节选译：迁移至云架构（四）">&laquo; 节选译：迁移至云架构（四） </a>
       
       
-        <a class="basic-alignment right" href="/blog/2015/03/20/mac-hadoop/" title="Previous Post: Mac上尝试Hadoop"> Mac上尝试Hadoop &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2015/05/23/cloud2/" title="Previous Post: 节选译：迁移至云架构（二）"> 节选译：迁移至云架构（二） &raquo;</a>
       
 
     </p>
@@ -164,6 +239,7 @@
   
 
 
+<div class="post-series" data-series="节选译：迁移至云架构 2,"></div>
 <script type="text/javascript" charset="utf-8">
   (function(){
     function series(){
