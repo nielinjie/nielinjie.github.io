@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 云 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/yun/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-06-03T00:24:10+08:00</updated>
+  <updated>2015-06-06T23:33:15+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,13 +14,13 @@
 
   
   <entry>
-    <title type="html"><![CDATA[节选译：迁移至云架构（四）]]></title>
+    <title type="html"><![CDATA[译：迁移至云架构（四）]]></title>
     <link href="http://nielinjie.github.io/blog/2015/06/02/cloud4/"/>
     <updated>2015-06-02T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/06/02/cloud4</id>
     <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
 
-<p>本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。</p>
+<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
 
 <p>（<a href="/blog/2015/05/29/cloud3/">接前文</a>）</p>
 
@@ -114,7 +114,7 @@
 
 <p>这种分解使应用可以根据自己的数据特征选择不同的数据存储，比如数据结构和数据读写模式。另一方面，为了能回答一些跨上下文的问题，数据通过事件驱动技术重新组合起来。比如<a href="http://martinfowler.com/bliki/CQRS.html">CQRC</a>和<a href="http://martinfowler.com/eaaDev/EventSourcing.html">event sourcing</a>就常常用来实现跨上下文将相似概念同步起来。</p>
 
-<h3>容器化</h3>
+<h3><a name="c"></a>容器化</h3>
 
 <p>容器镜像（比如由<a href="https://linuxcontainers.org">LXC</a>、<a href="https://www.docker.com">Docker</a>、<a href="https://github.com/coreos/rkt">Rocket</a>准备的）正在迅速成为云架构的部署单元。这些镜像也迅速得到了调度工具的支持，比如Kubernetes、Marathon、 Lattice。公有云提供商比如Amazon和Google也提供了基于容器的调度和部署服务。容器技术提供了跟虚拟机相似的资源分配和隔离，同时相对来说大大地轻量和易移植。应用开发者要尽快适应将应用打包为容器镜像，以便能享有现代云基础设施带来的便利。</p>
 
@@ -166,13 +166,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[节选译：迁移至云架构（三）]]></title>
+    <title type="html"><![CDATA[译：迁移至云架构（三）]]></title>
     <link href="http://nielinjie.github.io/blog/2015/05/29/cloud3/"/>
     <updated>2015-05-29T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/05/29/cloud3</id>
     <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
 
-<p>本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。</p>
+<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
 
 <p>（<a href="/blog/2015/05/23/cloud2/">接前文</a>）</p>
 
@@ -249,7 +249,7 @@
 
 <p>去中心和自治的团队通过集成模式规定的机制来制衡，这些机制存在于团队开发的服务之间，通常很小很轻。（比如使用HTTP REST JSON风格的API，而不是各不相同的RPC接口。）这些机制通常最先出现在基层，用来解决一些共有问题，比如“错误容忍”。我们鼓励各团队自己设计解决方案，然后自组织地与其他团队一起形成公用的模式和框架。如果出现了对整个组织都好用的模式和框架，那么就将这些模式、框架转交给“云工具、框架团队”。工具框架团队可以是平台团队<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>的一部分，也可以不是。在整个团队对架构形成共识的过程中，工具框架团队和他们的方案，将起到带头作用。</p>
 
-<p>（<a href="/blog/2015/06/02/cloud4/">后文继续</a>）</p>
+<p>（<a href="/blog/2015/06/02/cloud4/">后文继续，组织转变</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -266,13 +266,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[节选译：迁移至云架构（二）]]></title>
+    <title type="html"><![CDATA[译：迁移至云架构（二）]]></title>
     <link href="http://nielinjie.github.io/blog/2015/05/23/cloud2/"/>
     <updated>2015-05-23T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/05/23/cloud2</id>
     <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
 
-<p>本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。</p>
+<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
 
 <p>（<a href="/blog/2015/05/23/cloud/">接前文</a>）</p>
 
@@ -367,13 +367,13 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[节选译：迁移至云架构（一）]]></title>
+    <title type="html"><![CDATA[译：迁移至云架构（一）]]></title>
     <link href="http://nielinjie.github.io/blog/2015/05/23/cloud/"/>
     <updated>2015-05-23T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/05/23/cloud</id>
     <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
 
-<p>本文为”节选译“，不是逐句逐段翻译，是意译和无废话译。</p>
+<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
 
 <!--more-->
 
@@ -448,7 +448,7 @@
 
 <p>移动平台是多样化的，移动应用经常需要跟遗留服务或者云中的微服务打交道。这些服务不可能满足各种移动平台的用户的不同需求。将整合多样性的任务交给移动开发会增加网络延迟和流量，带来响应慢和电池消耗。云架构可以将整合任务放到服务器端，比如通过模式”API GateWay"。后续进一步讨论。<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup></p>
 
-<p>（<a href="/blog/2015/05/23/cloud2/">后文继续</a>）</p>
+<p>（<a href="/blog/2015/05/23/cloud2/">后文继续，云架构的定义</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -461,7 +461,7 @@
 <li id="fn:4">
 <p>要求微服务的一些特性，见<a href="/blog/2015/05/23/cloud2/#12f">“十二因子应用”</a>。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
-<p>见“容器化”（链接待建）<a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<p>见<a href="/blog/2015/06/02/cloud4/#c">“容器化”</a><a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
 <li id="fn:6">
 <p>见“API GateWay和边界服务“（链接待建）<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
 </ol>
