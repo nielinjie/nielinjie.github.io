@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>关于REST风格的讨论 - 聂同学</title>
+  <title>译：迁移至云架构（五） - 聂同学</title>
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="近来，公司有关同事对REST风格和在企业应用中的使用（特别是b/s架构的应用中用于浏览器端于服务器端通信）做了研究，并提出了应用模式。但有些想法我个人并不认同，于是向公司架构师邮件列表发出了讨论邮件，现在也把邮件内容1贴在这里，希望与大家讨论批评，后续会持续将其他架构师的回复追加进来。 大家好 &hellip;">
+  <meta name="description" content="原文：Migrating to Cloud-Native Application Architectures 本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。 （接前文） 迁移指南 现在我们已经定义了云架构，简短讨论了企业如果要使用云架构需要些什么转变。现在我们谈谈具体的技术。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nielinjie.github.io/blog/2012/10/25/rest">
+  <link rel="canonical" href="http://nielinjie.github.io/blog/2015/06/07/cloud5">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -74,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">关于REST风格的讨论</h1>
+      <h1 class="entry-title">译：迁移至云架构（五）</h1>
     
     
       <p class="meta">
@@ -90,82 +90,97 @@
   
 
 
-<time datetime="2012-10-25T21:36:38+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2015-06-07T11:15:31+08:00" pubdate data-updated="true">Jun 7<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>近来，公司有关同事对REST风格和在企业应用中的使用（特别是b/s架构的应用中用于浏览器端于服务器端通信）做了研究，并提出了应用模式。但有些想法我个人并不认同，于是向公司架构师邮件列表发出了讨论邮件，现在也把邮件内容<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>贴在这里，希望与大家讨论批评，后续会持续将其他架构师的回复追加进来。</p>
+<div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
 
-<!-- more -->
+<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
+
+<p>（<a href="/blog/2015/06/02/cloud4/">接前文</a>）</p>
+
+<!--more-->
 
 
-<p>大家好——</p>
+<h1>迁移指南</h1>
 
-<p>最近XN做了关于PF REST风格接口的分享。逐渐也会有些项目采用这样的架构模式。</p>
+<p>现在我们已经定义了云架构，简短讨论了企业如果要使用云架构需要些什么转变。现在我们谈谈具体的技术。这里更多的是提供简短介绍和进一步阅读的链接。</p>
 
-<p>最近也对REST做了些学习，有些相关的想法，想跟大家讨论下，请大家批评。</p>
+<h2>分解指南</h2>
 
-<p>Ps：由于时间冲突没有参加这个分享，如果这些问题大家已经充分讨论过了，请大家原谅，有空的话告知一下讨论结果。</p>
+<p>我们已经讨论了分解数据、服务、团队，那么，我们怎么才能实现这些呢？好问题，我们如何打破现存的巨大的一切，前进到云架构呢？</p>
 
-<h3>缓存</h3>
+<p>我已经看到一些公司成功地进行了渐进式迁移，有一些可以借鉴的模式。这里有一些公开的例子：<a href="https://blog.yourkarma.com/building-microservices-at-karma">Karma</a>、<a href="https://developers.soundcloud.com/blog/building-products-at-soundcloud-part-1-dealing-with-the-monolith">SoundCloud</a>。</p>
+
+<p>下面我们将一步一步看看如何将巨体上的服务迁移到云。</p>
+
+<h3>新特性作为微服务</h3>
+
+<p>有点意外的是，第一步并不是打碎巨体。我们现在假设在巨体上你有一些待实现的特性。事实上，如果你的巨体根本没打算实现新功能，那恐怕根本没有必要去分解它。我们首要的目的是快速变化，如果你的系统根本没打算要变化，谈何快速变化呢？</p>
+
+<blockquote><p>团队认为改变架构的好办法并不是立即分拆巨体，而是不再在上面增加任何新东西，新东西都建立为微服务——<em>Phil Calcado, SoundCloud</em></p></blockquote>
+
+<p>这个策略显然的好处就是我们建立新的微服务的难度很低，毕竟从头开始建立要比从一个<a href="http://www.laputan.org/mud/">大泥球</a>上动刀要容易得多。</p>
+
+<p>当然不可避免的，我们的微服务需要跟巨体沟通，我们如何处理这个问题呢？</p>
+
+<h3>反腐层</h3>
+
+<blockquote><p>因为我们的逻辑还在Rails写的巨体中，所有的微服务都还得这样或那样地跟它沟通。——<em>Phil Calcado, SoundCloud</em></p></blockquote>
+
+<p>DDD讨论了<em>反腐层</em>，它的目的是让两个不同领域模型的系统可以相互沟通，而不必让一个系统的领域模型同化另一个。当你在新的微服务中实现新的功能的时候，你肯定不希望新功能耦合在既有巨体的内部业务知识上。反腐层是一种建立API合同的办法，让巨体看起来就像是另一个微服务。</p>
+
+<p>Evans 将反腐层的实现划分为三个子层：</p>
 
 <ul>
-<li><p>PF-REST框架不使用HTTP缓存。跟XN讨论了下，XN认为为了保证客户机和服务器数据一致， 所有HTTP方法，包括get，都不宜使用缓存，所以在框架级别禁止了HTTP缓存。</p>
-
-<p>这里有一点不同意见，我认为缓存是否会破坏数据一致，要由具体的应用场景决定，例如，有些场景，很多数据是不需要修改的，（比如需要展示“行政机构树”），这时候，get这些数据的缓存完全不会破坏不一致性。</p>
-
-<p>我理解，资源是否过期，何时过期，有其业务意义，是否要缓存，如何缓存，由业务和应用场景决定，框架（或者说模式）不应该限定使用或不使用缓存。</p></li>
-<li><p>缓存的安全性。如果使用缓存，则缓存暴露在客户端或者HTTP链路上，如何保证这部分缓存只被特定的用户使用。</p>
-
-<p>比如，有资源…./orders/user/ladygaga, 表示ladygaga能看到的所有order的集合。这部分资源被缓存后如何做到不被别的访问者访问？</p>
-
-<p>这个问题我个人还没有答案，看了些资料，感觉比较靠谱的有一种：每次请求都到服务器进行认证授权。服务器如果认证授权成功，则返回304和缓存马上过期的命令。这样既可以利用链路上的缓存，也可以迫使下次请求先到服务器认证授权。但劣势是每次都必须访问服务器。</p></li>
+<li>Facade —— 在这里Facade的目的是简单地集成巨体的接口，因为很可能巨体的接口并不是按照现行集成原则来设计的。重要的是，这里不要改变巨体的领域模型，不要把集成和翻译耦合在一起了。</li>
+<li>Adapter —— Adapter中我们定义我们需要的“服务”。Adapter知道如何从我们的系统接收一个请求，然后将请求转发给巨体。</li>
+<li>Translator —— Translator的任务就是为我们的服务和巨体之间的请求和响应转换领域模型。</li>
 </ul>
 
 
-<h3>后端会话状态</h3>
+<p>这三个松耦合的部件解决三个问题：</p>
 
 <ul>
-<li><p>REST提倡的是服务器端无会话状态，这点PF-REST框架没有提到。而目前我们开发习惯也往往要在服务端保存会话状态，特别是用户信息往往在认证后就保存在会话中。</p>
-
-<p>我个人理解会话状态之所以不提倡，是防止破坏get方法的幂等和安全性，以至于缓存等优势无法发挥。如果会话数据在会话过程中是不变的，其实不会有这个问题，所以如果会话状态中仅保存用户的不变（在会话时间范围内）的信息，应该不存在问题，比如用户名、权限、组织结构之类。</p></li>
+<li>系统集成</li>
+<li>协议翻译</li>
+<li>模型翻译</li>
 </ul>
 
 
-<h3>资源</h3>
+<p>现在剩下的问题是在哪一层进行通信。DDD中Evans讨论了两种办法：第一种，<em>facade to system</em>，当你无法改变遗留系统的时候使用。在这里我们假定我们是可以修改遗留巨体的，那么我们主要讨论第二种，<em>adapter to facade</em>，也就是我们将Facade放进到遗留巨体中，所以通信在Adapter和Facade之间进行。因为显然两个专门现写的部件通信起来容易些。</p>
+
+<p>最后值得注意的是，防腐层也能促进双向沟通，毕竟遗留巨体有时候也是需要跟新建立的微服务沟通的。</p>
+
+<h3>扼杀巨体</h3>
+
+<blockquote><p>随着架构变化的进行，团队得以在一个灵活得多的环境里构建新特性和改进，剩下的问题是，我们如何从巨体中提取已有特性？——<em>Phil Calcado, SoundCloud</em></p></blockquote>
+
+<p>我从Martin Fowler的文章<a href="http://www.martinfowler.com/bliki/StranglerApplication.html">StranglerApplication</a>中借用了“扼杀巨体”的说法。在这篇文章中Fowler介绍：在老系统的周边逐渐建立一个新系统，让老系统生长缓慢，几年后最终被扼杀。我们要做的正是如此：通过一系列的微服务和反腐层，我们在老系统周边逐渐建立新的云中系统。</p>
+
+<p>两个原则帮助我们选择要提取的特性：</p>
 
 <ul>
-<li><p>资源是REST风格的核心和特点，资源的业务意义和粒度对REST风格好处的发挥非常重要。如果粒度不合适，有些REST风格的好处就无法实现。</p>
-
-<p>比如，如果把资源的粒度放在操作级别，则可能将资源与资源的操作方式，也就是客户端绑在一起了。例如资源order，在手机上，显示少量信息，在大屏幕web上，显示全面信息。如果在操作级别来划定资源的话，这就是两种资源（叫orderMobile和orderWeb?），显然这样就把后台与客户端做了绑定。试想，如果来了一种新客户端，显示不多不少的信息，那是否要增加一种资源类型？</p>
-
-<p>PF-REST以Form<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup> 来划分资源，我理解就是从操作级别来划分资源。把资源与操作过程进行了耦合。</p></li>
+<li>SoundCloud制订了第一个原则：在巨体中识别界限上下文。正如我们前面讨论的，界限上下文要求内部一致的领域模型。遗留巨体的领域模型显然不会是内部一致的，现在我们就开始从中识别内部一致的子模型。这些就是我们提取的候选。</li>
+<li>第二个原则讨论了优先级：哪些候选先提取？我们可以通过回顾迁移到云的意义来回答这个问题：快速创新。哪个特性提取后最有助于快速创新？我们显然选择那些些现有业务需要它快速变化的特性。</li>
 </ul>
 
 
-<h3>REST vs. 普通HTTP远程调用</h3>
+<h3>怎么才算完成？</h3>
+
+<p>我们怎么知道我们完成了？一般有两个完成标志：</p>
 
 <ul>
-<li><p>REST风格是HTTP远程调用模式的一种，但不是普通的HTTP远程调用。</p>
-
-<p>目前的PF-REST框架重点提到的静态html页面加HTTP的接口，我理解普通HTTP远程调用模式也可以做到，并没有突出说明REST的特点。</p>
-
-<p>REST的特点到底能带来什么好处，特别是在既有的企业架构下能带来什么好处，希望跟大家一起多多讨论。</p></li>
+<li>巨体完全被扼杀了。所有的界限上下文都被提取成了微服务。最后一步就是识别出并干掉那些不再需要的防腐层。</li>
+<li>巨体被扼杀到了一定程度：要继续提取特征的话，成本已经超过了收益。有时候巨体的一部分很稳定，它们几年都不变，工作得也很好。那么提取这些部分就没有什么价值，如果同时维护相关的反腐层成本也够低，那我们就让它们长期保留好了。</li>
 </ul>
 
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>已经对人名和涉及到公司的专用名字做了更改。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>Form是沿用自Spring MVC的Form概念。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
 
+<p>（<a href="/blog/2015/06/07/cloud6/">后文继续，分布式系统指南</a>）</p>
 </div>
 
 
@@ -188,12 +203,12 @@
   
 
 
-<time datetime="2012-10-25T21:36:38+08:00" pubdate data-updated="true">Oct 25<span>th</span>, 2012</time>
+<time datetime="2015-06-07T11:15:31+08:00" pubdate data-updated="true">Jun 7<span>th</span>, 2015</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/rest/'>REST</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>
+    <a class='category' href='/blog/categories/yun/'>云</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/fan-yi/'>翻译</a>
   
 </span>
 
@@ -202,10 +217,10 @@
 
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/10/29/rest2/" title="Next Post: 关于REST风格的讨论（二）">&laquo; 关于REST风格的讨论（二） </a>
+        <a class="basic-alignment left" href="/blog/2015/06/07/cloud6/" title="Next Post: 译：迁移至云架构（六）">&laquo; 译：迁移至云架构（六） </a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/07/10/said-20120710/" title="Previous Post: 言论：现有的业务模型来模拟新的业务"> 言论：现有的业务模型来模拟新的业务 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2015/06/02/cloud4/" title="Previous Post: 译：迁移至云架构（四）"> 译：迁移至云架构（四） &raquo;</a>
       
 
     </p>
@@ -216,7 +231,7 @@
   
 
 
-<div class="post-series" data-series="关于REST风格的讨论 1,"></div>
+<div class="post-series" data-series="译：迁移至云架构 5,"></div>
 <script type="text/javascript" charset="utf-8">
   (function(){
     function series(){
