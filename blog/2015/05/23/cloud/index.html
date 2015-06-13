@@ -171,28 +171,28 @@ Web的伸缩
 
 <p>所以云架构的另一个特点是状态外化，将状态交给外部状态管理服务（比如数据网格、缓存、对象存储等），同时保持应用实例本身是“无状态”的。无状态的应用实例可以快速地创建和销毁，跟外部状态管理服务也可以快速连接和分开，这样就可以快速响应需求的变化。当然这也要求外部状态管理服务本身是可以伸缩的。多数的云服务商已经意识到这一点，提供了很健壮的类似服务。</p>
 
-<h3>移动应用和客户端多样性</h3>
+<h3><a name="mc"></a>移动应用和客户端多样性</h3>
 
 <p>应用需要”随时随地“满足需求。访问成几何级数增长。云架构予以支持。</p>
 
-<p>移动平台是多样化的，移动应用经常需要跟遗留服务或者云中的微服务打交道。这些服务不可能满足各种移动平台的用户的不同需求。将整合多样性的任务交给移动开发会增加网络延迟和流量，带来响应慢和电池消耗。云架构可以将整合任务放到服务器端，比如通过模式”API GateWay&#8221;。后续进一步讨论。<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup></p>
+<p>移动平台是多样化的，移动应用经常需要跟遗留服务或者云中的微服务打交道。这些服务不可能满足各种移动平台的用户的不同需求。将整合多样性的任务交给移动开发会增加网络延迟和流量，带来响应慢和电池消耗。云架构可以将整合任务放到服务器端，比如通过模式”API网关&#8221;。后续进一步讨论。<sup id="fnref:6"><a href="#fn:6" rel="footnote">6</a></sup></p>
 
 <p>（<a href="/blog/2015/05/23/cloud2/">后文继续，云架构的定义</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>见<a href="/blog/2015/05/23/cloud2/#ms">“微服务”</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p><a href="/blog/2015/05/23/cloud2/#ms">微服务</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>书：<em>Release It!</em><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
-<p>见“断流器”（链接待建）<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<p><a href="/blog/2015/06/07/cloud6/#bc">断流器</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 <li id="fn:4">
 <p>要求微服务的一些特性，见<a href="/blog/2015/05/23/cloud2/#12f">“十二因子应用”</a>。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
-<p>见<a href="/blog/2015/06/02/cloud4/#c">“容器化”</a><a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+<p><a href="/blog/2015/06/02/cloud4/#c">容器化</a><a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
 <li id="fn:6">
-<p>见“API GateWay和边界服务“（链接待建）<a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
+<p><a href="/blog/2015/06/07/cloud6/#api">API网关和边沿服务</a><a href="#fnref:6" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

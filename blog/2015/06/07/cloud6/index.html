@@ -9,8 +9,7 @@
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="原文：Migrating to Cloud-Native Application Architectures 本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。 （接前文） 分布式系统指南 有版本的分布式配置 服务注册和发现 路由和负载均衡 错误容忍 API大门和边缘服务 总结
-">
+  <meta name="description" content="原文：Migrating to Cloud-Native Application Architectures 本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。 （接前文） 分布式系统指南 当我们开始构建由微服务组成的分布式系统，我们需要应对巨体架构系统一般不会需要的非功能需求。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -109,17 +108,188 @@
 
 <h2>分布式系统指南</h2>
 
+<p>当我们开始构建由微服务组成的分布式系统，我们需要应对巨体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。</p>
+
+<p>这些实践来自于<a href="http://projects.spring.io/spring-cloud/">Spring Cloud</a> 和<a href="http://netflix.github.io">Netflix OSS</a> 系列项目的组合使用。</p>
+
 <h3>有版本的分布式配置</h3>
+
+<p>我们已经讨论了<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>适当的配置管理机制的重要性，提到过配置通过操作系统级别的环境变量注入。这种方式非常适合简单系统。但当系统复杂性增加，我们可能需要更多的配置功能，比如：</p>
+
+<ul>
+<li>为正在运行的应用改变日志级别，以便诊断生产问题。</li>
+<li>改变接收消息的线程数。</li>
+<li>报告所有的配置更改，支持生产系统的监管审计。</li>
+<li>为正在运行的应用开关某个功能。</li>
+<li>支持配置中的保密内容，比如密码。</li>
+</ul>
+
+
+<p>为了支持这些能力，我们的配置机制需要有如下的特性：</p>
+
+<ul>
+<li>有版本</li>
+<li>可以审计</li>
+<li>加密</li>
+<li>刷新不需重启</li>
+</ul>
+
+
+<p>Spring Cloud项目中有个<a href="http://cloud.spring.io/spring-cloud-config/">配置服务器</a>支持这些特性。这个配置服务器保存了应用的配置文件，后台是一个git仓库，提供一套REST API（图3-1）。</p>
+
+<p><img src="/images/cloud/springConfig.png" title="[图3-1. The Spring Cloud Config Server]" ></p>
+
+<p>图3-1. The Spring Cloud Config Server</p>
+
+<p>剩下的问题是如何可以不重启应用客户端修改配置。这个能力由Spring Cloud的另一个模块——<a href="http://cloud.spring.io/spring-cloud-bus/">总线</a>提供。这个模块用一个轻量级的消息中间件连接分布式系统中的各节点。它可以用来广播状态变化，比如我们的配置更改（图3-2）。
+只要简单地向连入总线的任何应用的<code>/bus/refresh</code>地址发送一个HTTP POST，我们就可以提示所有连入的应用更新他们的配置值，通常更新到配置服务器上的最新值。</p>
+
+<p><img src="/images/cloud/springBus.png" title="[图3-2. The Spring Cloud Bus]" ></p>
+
+<p>图3-2. The Spring Cloud Bus</p>
 
 <h3>服务注册和发现</h3>
 
-<h3>路由和负载均衡</h3>
+<p>当我们建立分布式系统，我们的代码和它的依赖之间就必须通过网络沟通。我们如何有效地将我们的微服务联系起来呢？</p>
 
-<h3>错误容忍</h3>
+<p>云中的一种常见的架构模式（图3-3）是建立前端（应用）服务和后端（业务）服务，后端服务通常不会被直接访问，而是通过前端服务间接访问。服务注册表存放了所有服务的信息，前端服务中有一个客户端库<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>可以到这些信息，从而可以处理路由和负载均衡事务。</p>
 
-<h3>API大门和边缘服务</h3>
+<p><img src="/images/cloud/serviceRegistration.png" title="[图3-3. Service registration and discovery]" ></p>
+
+<p>图3-3. Service registration and discovery</p>
+
+<p>我们使用各种<a href="https://en.wikipedia.org/wiki/Service_locator_pattern">Service Locator</a>和<a href="https://en.wikipedia.org/wiki/Dependency_injection">Dependency Injection</a>解决这个问题，面向服务架构长期使用各种服务注册机制。这里我们使用一个类似的方案：<a href="https://github.com/Netflix/eureka">Eureka</a>——来自于Netflix OSS项目，可以在服务定位的同时处理中间层服务的负载均衡、failover机制。<a href="http://cloud.spring.io/spring-cloud-netflix/">Spring Cloud Netflix</a>项目进一步简化了对Eureka的使用，它提供了一个基于Annotation的配置模型。</p>
+
+<p>所有使用<a href="http://projects.spring.io/spring-boot/">Spring Boot</a>的应用都可以通过简单添加<code>@EnableDiscoveryClient</code>来获得服务注册和发现功能。</p>
+
+<h3><a name="rlb"></a>路由和负载均衡</h3>
+
+<p>简单的循环负载均衡在很多场景下是很有效的。但在云环境下的分布式系统需要进一步的路由与负载均衡行为。以前这通常由外部的集中的负载均衡服务提供。然而这种服务往往没有足够的信息和上下文，它们也没办法为应用提供最佳选择。同时，集中的解决方案存在单点失效的问题，当他们出问题了整个架构都要受到影响。</p>
+
+<p>云架构把路由和负载均衡的职责转移到客户端。这种方案的一个例子是来自Netflix OSS项目的<a href="https://github.com/Netflix/ribbon">Ribbon</a>（图3-4）。</p>
+
+<p><img src="/images/cloud/clientLoadBalancer.png" title="[图3-4. Ribbon client-side load balancer]" ></p>
+
+<p>图3-4. Ribbon client-side load balancer</p>
+
+<p>Ribbon提供了丰富的功能：</p>
+
+<ul>
+<li>内建多种负载均衡规则
+
+<ul>
+<li>循环</li>
+<li>平均响应时间加权的循环</li>
+<li>随机</li>
+<li>可用性过滤（避免tripped circuits和大并发连接数）</li>
+</ul>
+</li>
+<li>定制均衡规则插件</li>
+<li>与服务发现方案（包括Eureka）的可拔插集成</li>
+<li>Cloud-native intelligence such as zone affinity and unhealthy zone avoidance</li>
+<li>内建错误容忍</li>
+</ul>
+
+
+<p>就跟Eureka类似，Spring Cloud Netflix 项目进一步简化了对Ribbon的使用，将注入<code>DiscoveryClient</code>变为注入<code>LoadBalancerClient</code>，就可以从直接使用Eureka切换为使用Ribbon</p>
+
+<h3><a name="ft"></a>错误容忍</h3>
+
+<p>分布式系统潜在的错误比巨体系统要多。现在每一个请求都需要使用数十个甚至上百个不同的微服务，其中的一个或多个出问题几乎是肯定的。</p>
+
+<blockquote><p>如果不采取必要地错误容忍措施，30个依赖服务的系统每个月将有两个小时多的宕机时间，即使每个服务可用性都是99.99%。（99.99%^30 = 99.7% uptime = 2+ hours in a month）—<em>Ben Christensen, Netflix Engineer</em></p></blockquote>
+
+<p>我们如何防止类似的错误堆积呢？</p>
+
+<p>Mike Nygard论述<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>了几种有用的模式：</p>
+
+<ul>
+<li><a name="bc"></a>断流器<br/>
+断流器会隔离一个服务，如果发现它的依赖服务状态不佳的话。断流器通常被实现为一个状态机（图3-5）。当它处于闭合状态，调用就简单地被传递到依赖。如果调用失败了，断流器开始对失败计数，当在特定时间内失败次数达到了特定值，断流器就切换到断开状态。当断流器处于断开状态，任何调用都会立即返回，根本不会真正尝试调用依赖。再过了一个特地时间过后，断流器切换到半开状态。在半开状态，调用会被传递到依赖，如果成功，断流器切换到闭合状态，否则切到断开状态。</li>
+</ul>
+
+
+<p><img src="/images/cloud/stateMachine.png" title="[图3-5. A circuit breaker state machine]" ></p>
+
+<p>图3-5. A circuit breaker state machine</p>
+
+<ul>
+<li>隔板<br/>
+隔板分割服务，防止整个服务因为局部错误而整体失效。软件系统可以从多个层面应用隔板。简单地分割为微服务就是第一种应用。将应用进程分割为Linux容器<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>，使得单个进程不会影响整个机器，也是一种应用。还有个例子是将并行运算分散到多个线程池中。</li>
+</ul>
+
+
+<p>Netflix在库<a href="https://github.com/Netflix/Hystrix">Hystrix</a>中加入了很强大错误容忍功能。Hystrix通过<code>HystrixCommand</code>来将代码包装在断流器中。</p>
+
+<p>Spring Cloud Netflix项目通过<code>@EnableCircuitBreaker</code>注解，在Spring Boot应用中加入Hystrix部件。并且借助一系列<a href="https://github.com/Netflix/Hystrix/tree/master/hystrix-contrib/hystrix-javanica">捐献的注解</a>使得编程更加的简单。</p>
+
+<p>Hystrix不同于其他的断流器，它还应用隔板模式，将各个断流器封装在各自的线程池中。它还收集一些有用的数据：</p>
+
+<ul>
+<li>流量</li>
+<li>请求速率</li>
+<li>错误占比</li>
+<li>Hosts reporting</li>
+<li>延迟分布</li>
+<li>请求结果：成功、失败、拒绝</li>
+</ul>
+
+
+<p>这些数据作为事件流散发，可以用另一个Netflix OSS工具—— <a href="https://github.com/Netflix/Turbine">Turbine</a>进行综合。单独的综合的数据都可以通过一个Hystrix面板展示出来（图3-6），面板对分布式系统的健康状况提供了很好地可视化。</p>
+
+<p><img src="/images/cloud/dashboard.png" title="[图3-6. Hystrix Dashboard showing three sets of circuit breaker metrics]" ></p>
+
+<p>图3-6. Hystrix Dashboard showing three sets of circuit breaker metrics</p>
+
+<h3><a name="api"></a>API网关和边缘服务</h3>
+
+<p>我们已经提到了<sup id="fnref:5"><a href="#fn:5" rel="footnote">5</a></sup>微服务中服务方的服务整合，我们来具体看看它的必要性：</p>
+
+<ul>
+<li>延迟<br/>
+移动端通常使用比较慢速的网络，如果应用需要依次跟几十几百个服务通信，那延迟是很难接受的。容易理解并行发起请求是很有必要的。相比于在各个不同的移动端平台上实现并行模式，在服务端实现会比较便宜也不容易出错。</li>
+<li>续航<br/>
+就算网络速度不是问题，客户端跟大量微服务打交道还是会有问题。使用网络对于移动端来说是很消耗电池电量的。移动开发者通常都希望减少与服务端的通信来增强用户体验。</li>
+<li>设备多样性<br/>
+移动端的设备多样性非常明显。比如厂商、尺寸、操作系统、编程语言等等都有很多不同。</li>
+</ul>
+
+
+<p><a href="http://microservices.io/patterns/apigateway.html">API网关</a>模式就是将移动端开发的负担转移到服务端。API网关就是一个普通的微服务，只不过它是与单个移动应用对应的，为它提供单一的后台入口。它每个请求都会跟几十几百个服务并行通信，将所有返回结果综合起来再返回到移动端。如果有必要，它也处理协议翻译的工作，比如HTTP翻译为AMQP。</p>
+
+<p><img src="/images/cloud/apiGateway.png" title="[Figure 3-7. The API Gateway pattern]" ></p>
+
+<p>Figure 3-7. The API Gateway pattern</p>
+
+<p>API网关可以用任何语言、运行时或者框架实现，只要它能支持web编程、并发以及跟后台服务通信的协议。流行的选择包括Nodejs（有reactive编程模型）和Go（有简单的并发模型）。</p>
+
+<p>如果使用Java，可以考虑<a href="https://github.com/ReactiveX/RxJava">RxJava</a>， <a href="http://reactivex.io">Reactive Extensions</a> 的Java实现。毕竟如果只使用Java提供的原生特性，合并并行处理的结果这一点很难做好。</p>
 
 <h2>总结</h2>
+
+<p>以下又是译者自己总结的 :&ndash;)</p>
+
+<ul>
+<li>分解： 新特性作为微服务、防腐层、扼杀巨体</li>
+<li>分布式系统： 配置服务和管理总线、动态服务发现、去中心化的负载均衡、断流器和隔板、API网关</li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="/blog/2015/05/23/cloud2/#12f">十二因子应用</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p><a href="#rlb">路由和负载均衡</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>书：<em>Release It!</em> <a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p><a href="/blog/2015/06/02/cloud4/#c">容器化</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+<li id="fn:5">
+<p><a href="/blog/2015/05/23/cloud/#mc">移动应用和客户端多样性</a><a href="#fnref:5" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
 </div>
 
 
