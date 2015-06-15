@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-06-13T20:36:49+08:00</updated>
+  <updated>2015-06-15T17:16:27+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,48 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[单体还是微服务？]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/06/14/monolithf/"/>
+    <updated>2015-06-14T16:58:26+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/06/14/monolithf</id>
+    <content type="html"><![CDATA[<p>单体优先还是直接采用微服务？这个问题随着马丁大叔的文章<a href="http://martinfowler.com/bliki/MonolithFirst.html">Monolith First</a>再次热闹起来。</p>
+
+<!-- more -->
+
+
+<p>微服务与单体的本质区别是什么：是系统各部分间分隔的强度大。</p>
+
+<p>微服务相对于单体的优势和劣势都是从这个本质得来的：</p>
+
+<p>优势：</p>
+
+<p>由于强力的分隔，系统各部分间相互影响就小得多。</p>
+
+<ul>
+<li>业务被分隔</li>
+<li>团队被分隔</li>
+<li>技术被分隔</li>
+<li>环境被分割</li>
+</ul>
+
+
+<p>劣势：</p>
+
+<p>由于强力的隔离，系统各部分相互协同就比较困难。</p>
+
+<ul>
+<li>集成比较困难，要各个服务协同起来完成实际的业务功能。有许多细节需要处理，往往需要一些框架和支持服务的帮助，比如需要服务注册与寻址等</li>
+<li>跨服务的改动比较困难。</li>
+</ul>
+
+
+<p>另外一个附带的区别：在某些人的视角上，系统的部分变小变多了。</p>
+
+<p>单体中的部件，比如模块，只有开发人员是可见的，部署、运营、治理等角色都不可见。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[译：迁移至云架构（六）]]></title>
@@ -415,7 +457,7 @@
 
 <p>不仅仅服务产出、数据模型和管理应该去中心化，服务的集成也应该去中心化。企业中服务集成传统上使用类似ESB。ESB就成为了服务间交互的所有决策的控制者，包括路由、传输、协议、安全等。我们称为“奏乐”，类似于指挥决定了整个音乐的演奏进程。ESB和奏乐模式使得架构图显得非常简单，但不幸的是这种简单性具有欺骗性。ESB中经常隐藏着一张复杂性的网。管理这种复杂性非常费时，跟它一起工作也成为了应用开发团队的瓶颈。就像我们谈到的大一统的数据模型一样，大一统的服务集成也成为了追求快速的绊脚石。</p>
 
-<p>在云架构中，比如微服务，我们倾向于“舞蹈”，类似于芭蕾舞。不是把精力放在集成机制，而是放在各个节点。当舞台上发生了跟原计划不符的异常情况，并没有一个指挥来告诉舞者该怎么做，而是舞者自己适应。类似的，我们的服务也是自己适应他们运行环境中出现的异常情况，比如通过“客户端负载均衡<sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a></sup>”和“断路器<sup id="fnref:9"><a href="#fn:9" rel="footnote">9</a></sup>”。</p>
+<p>在云架构中，比如微服务，我们倾向于“舞蹈”，类似于芭蕾舞。不是把精力放在集成机制，而是放在各个节点。当舞台上发生了跟原计划不符的异常情况，并没有一个指挥来告诉舞者该怎么做，而是舞者自己适应。类似的，我们的服务也是自己适应他们运行环境中出现的异常情况，比如通过“客户端负载均衡<sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a></sup>”和“断流器<sup id="fnref:9"><a href="#fn:9" rel="footnote">9</a></sup>”。</p>
 
 <p>虽然架构图看上去趋向于一张纠结的网，但其复杂性并不超过传统的SOA。舞蹈模式只是承认和暴露了系统本质的复杂性。这个转变同样是为了支持自治进而实现云架构快速地目标。团队可以迅速应对各种情况，不必与其他团队过多协作，也不用疲于跟ESB打交道。</p>
 
@@ -451,7 +493,7 @@
 <li id="fn:8">
 <p><a href="http://nielinjie.github.io/blog/2015/05/07/cloud6/#rlb">路由和负载均衡</a><a href="#fnref:8" rev="footnote">&#8617;</a></p></li>
 <li id="fn:9">
-<p><a href="http://nielinjie.github.io/blog/2015/05/07/cloud6/#ft">错误容忍</a><a href="#fnref:9" rev="footnote">&#8617;</a></p></li>
+<p><a href="http://nielinjie.github.io/blog/2015/06/07/cloud6/#ft">错误容忍</a><a href="#fnref:9" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -14237,7 +14279,7 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x6e;&#x69;&#x65;&#x6c;&#105;&#110;&#x6a;&#x69;&#101;&#x40;&#x67;&#109;&#x61;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#110;&#105;&#x65;&#108;&#105;&#x6e;&#x6a;&#105;&#101;&#x40;&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></p>
+电子邮箱：<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6e;&#x69;&#x65;&#108;&#105;&#110;&#106;&#105;&#101;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;">&#110;&#x69;&#101;&#108;&#x69;&#110;&#106;&#105;&#101;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
@@ -14683,24 +14725,6 @@ A:<br/>
 
 
 <p><img src="http://nielinjie.github.io/images/pkc/mm.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[知识在此（零）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc0/"/>
-    <updated>2014-08-02T14:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/08/02/pkc0</id>
-    <content type="html"><![CDATA[<p>什么是“知识在此”？</p>
-
-<!-- more -->
-
-
-<p>“知识在此”是我正在致力于的“个人知识管理工具系列”。</p>
-
-<p>在信息爆炸的时代，信息只有经过过滤、整理、归纳才能成为知识。</p>
-
-<p><img src="http://nielinjie.github.io/images/pkc/ivk.jpg"></p>
 ]]></content>
   </entry>
   

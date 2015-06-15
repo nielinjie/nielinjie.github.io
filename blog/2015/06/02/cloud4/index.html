@@ -201,7 +201,7 @@
 
 <p>不仅仅服务产出、数据模型和管理应该去中心化，服务的集成也应该去中心化。企业中服务集成传统上使用类似ESB。ESB就成为了服务间交互的所有决策的控制者，包括路由、传输、协议、安全等。我们称为“奏乐”，类似于指挥决定了整个音乐的演奏进程。ESB和奏乐模式使得架构图显得非常简单，但不幸的是这种简单性具有欺骗性。ESB中经常隐藏着一张复杂性的网。管理这种复杂性非常费时，跟它一起工作也成为了应用开发团队的瓶颈。就像我们谈到的大一统的数据模型一样，大一统的服务集成也成为了追求快速的绊脚石。</p>
 
-<p>在云架构中，比如微服务，我们倾向于“舞蹈”，类似于芭蕾舞。不是把精力放在集成机制，而是放在各个节点。当舞台上发生了跟原计划不符的异常情况，并没有一个指挥来告诉舞者该怎么做，而是舞者自己适应。类似的，我们的服务也是自己适应他们运行环境中出现的异常情况，比如通过“客户端负载均衡<sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a></sup>”和“断路器<sup id="fnref:9"><a href="#fn:9" rel="footnote">9</a></sup>”。</p>
+<p>在云架构中，比如微服务，我们倾向于“舞蹈”，类似于芭蕾舞。不是把精力放在集成机制，而是放在各个节点。当舞台上发生了跟原计划不符的异常情况，并没有一个指挥来告诉舞者该怎么做，而是舞者自己适应。类似的，我们的服务也是自己适应他们运行环境中出现的异常情况，比如通过“客户端负载均衡<sup id="fnref:8"><a href="#fn:8" rel="footnote">8</a></sup>”和“断流器<sup id="fnref:9"><a href="#fn:9" rel="footnote">9</a></sup>”。</p>
 
 <p>虽然架构图看上去趋向于一张纠结的网，但其复杂性并不超过传统的SOA。舞蹈模式只是承认和暴露了系统本质的复杂性。这个转变同样是为了支持自治进而实现云架构快速地目标。团队可以迅速应对各种情况，不必与其他团队过多协作，也不用疲于跟ESB打交道。</p>
 
@@ -237,7 +237,7 @@
 <li id="fn:8">
 <p><a href="/blog/2015/05/07/cloud6/#rlb">路由和负载均衡</a><a href="#fnref:8" rev="footnote">&#8617;</a></p></li>
 <li id="fn:9">
-<p><a href="/blog/2015/05/07/cloud6/#ft">错误容忍</a><a href="#fnref:9" rev="footnote">&#8617;</a></p></li>
+<p><a href="/blog/2015/06/07/cloud6/#ft">错误容忍</a><a href="#fnref:9" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -454,7 +454,7 @@ var duoshuoQuery = {short_name:"nielinjie"};
 </script>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (45)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (46)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
 </section>
 
   
