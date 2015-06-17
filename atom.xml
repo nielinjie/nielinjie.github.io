@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-06-15T17:16:27+08:00</updated>
+  <updated>2015-06-17T09:40:16+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,48 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[单体还是微服务？]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/06/14/monolithf/"/>
-    <updated>2015-06-14T16:58:26+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/06/14/monolithf</id>
-    <content type="html"><![CDATA[<p>单体优先还是直接采用微服务？这个问题随着马丁大叔的文章<a href="http://martinfowler.com/bliki/MonolithFirst.html">Monolith First</a>再次热闹起来。</p>
-
-<!-- more -->
-
-
-<p>微服务与单体的本质区别是什么：是系统各部分间分隔的强度大。</p>
-
-<p>微服务相对于单体的优势和劣势都是从这个本质得来的：</p>
-
-<p>优势：</p>
-
-<p>由于强力的分隔，系统各部分间相互影响就小得多。</p>
-
-<ul>
-<li>业务被分隔</li>
-<li>团队被分隔</li>
-<li>技术被分隔</li>
-<li>环境被分割</li>
-</ul>
-
-
-<p>劣势：</p>
-
-<p>由于强力的隔离，系统各部分相互协同就比较困难。</p>
-
-<ul>
-<li>集成比较困难，要各个服务协同起来完成实际的业务功能。有许多细节需要处理，往往需要一些框架和支持服务的帮助，比如需要服务注册与寻址等</li>
-<li>跨服务的改动比较困难。</li>
-</ul>
-
-
-<p>另外一个附带的区别：在某些人的视角上，系统的部分变小变多了。</p>
-
-<p>单体中的部件，比如模块，只有开发人员是可见的，部署、运营、治理等角色都不可见。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[译：迁移至云架构（六）]]></title>
@@ -14279,7 +14237,7 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x6e;&#x69;&#x65;&#108;&#105;&#110;&#106;&#105;&#101;&#64;&#103;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#111;&#109;">&#110;&#x69;&#101;&#108;&#x69;&#110;&#106;&#105;&#101;&#x40;&#103;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
+电子邮箱：<a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#110;&#x69;&#101;&#x6c;&#105;&#x6e;&#106;&#105;&#101;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x6e;&#105;&#x65;&#x6c;&#105;&#x6e;&#x6a;&#105;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
@@ -14725,6 +14683,24 @@ A:<br/>
 
 
 <p><img src="http://nielinjie.github.io/images/pkc/mm.png"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[知识在此（零）]]></title>
+    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc0/"/>
+    <updated>2014-08-02T14:06:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2014/08/02/pkc0</id>
+    <content type="html"><![CDATA[<p>什么是“知识在此”？</p>
+
+<!-- more -->
+
+
+<p>“知识在此”是我正在致力于的“个人知识管理工具系列”。</p>
+
+<p>在信息爆炸的时代，信息只有经过过滤、整理、归纳才能成为知识。</p>
+
+<p><img src="http://nielinjie.github.io/images/pkc/ivk.jpg"></p>
 ]]></content>
   </entry>
   
