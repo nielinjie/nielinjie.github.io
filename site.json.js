@@ -159,6 +159,8 @@ window.site={
       
         "架构",
       
+        "质量",
+      
     ],
     series:[
       
@@ -174,6 +176,8 @@ window.site={
     categories:[
       
         "架构",
+      
+        "质量",
       
     ],
     series:[
@@ -204,6 +208,8 @@ window.site={
     categories:[
       
         "架构",
+      
+        "质量",
       
     ],
     series:[

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-06-28T11:48:40+08:00</updated>
+  <updated>2015-06-28T15:09:10+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -67,7 +67,7 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
   (base)/common/lib/
   (base)/hdfs/
   (base)/mapreduce/
-  (base)/yarn/ 
+  (base)/yarn/
 </code></pre>
 
 <p>  其中的<code>base</code>是hadoop安装目录里面的库目录，在我这个安装里面是<code>/usr/local/Cellar/hadoop/2.6.0/libexec/share/hadoop/</code></p></li>
