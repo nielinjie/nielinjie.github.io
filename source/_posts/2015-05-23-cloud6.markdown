@@ -8,17 +8,17 @@ series: ["译：迁移至云架构 6"]
 
 ---
 
-原文：[Migrating to Cloud-Native Application Architectures](http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook)
 
-本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。
 
 （[接前文](/blog/2015/06/07/cloud5/)）
 
-<!--more-->
 
 ## 分布式系统指南
 
-当我们开始构建由微服务组成的分布式系统，我们需要应对巨体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。
+当我们开始构建由微服务组成的分布式系统，我们需要应对单体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。
+
+<!--more-->
+
 
 这些实践来自于[Spring Cloud](http://projects.spring.io/spring-cloud/) 和[Netflix OSS](http://netflix.github.io) 系列项目的组合使用。
 
@@ -81,7 +81,7 @@ Ribbon提供了丰富的功能：
 	* 循环
 	* 平均响应时间加权的循环
 	* 随机
-	* 可用性过滤（避免tripped circuits和大并发连接数） 
+	* 可用性过滤（避免tripped circuits和大并发连接数）
 * 定制均衡规则插件
 * 与服务发现方案（包括Eureka）的可拔插集成
 * Cloud-native intelligence such as zone affinity and unhealthy zone avoidance
@@ -92,7 +92,7 @@ Ribbon提供了丰富的功能：
 
 ### <a name="ft"></a>错误容忍
 
-分布式系统潜在的错误比巨体系统要多。现在每一个请求都需要使用数十个甚至上百个不同的微服务，其中的一个或多个出问题几乎是肯定的。
+分布式系统潜在的错误比单体系统要多。现在每一个请求都需要使用数十个甚至上百个不同的微服务，其中的一个或多个出问题几乎是肯定的。
 
 >如果不采取必要地错误容忍措施，30个依赖服务的系统每个月将有两个小时多的宕机时间，即使每个服务可用性都是99.99%。（99.99%^30 = 99.7% uptime = 2+ hours in a month）—*Ben Christensen, Netflix Engineer*
 
@@ -142,7 +142,7 @@ Hystrix不同于其他的断流器，它还应用隔板模式，将各个断流�
 [API网关](http://microservices.io/patterns/apigateway.html)模式就是将移动端开发的负担转移到服务端。API网关就是一个普通的微服务，只不过它是与单个移动应用对应的，为它提供单一的后台入口。它每个请求都会跟几十几百个服务并行通信，将所有返回结果综合起来再返回到移动端。如果有必要，它也处理协议翻译的工作，比如HTTP翻译为AMQP。
 
 
- 
+
 {% img /images/cloud/apiGateway.png  [Figure 3-7. The API Gateway pattern] %}
 
 Figure 3-7. The API Gateway pattern
@@ -154,16 +154,12 @@ API网关可以用任何语言、运行时或者框架实现，只要它能支�
 ## 总结
 以下又是译者自己总结的 :-)  
 
-* 分解： 新特性作为微服务、防腐层、扼杀巨体 
+* 分解： 新特性作为微服务、防腐层、扼杀单体
 * 分布式系统： 配置服务和管理总线、动态服务发现、去中心化的负载均衡、断流器和隔板、API网关
 
 
 [^1]: [十二因子应用](/blog/2015/05/23/cloud2/#12f)
 [^2]: [路由和负载均衡](#rlb)
-[^3]: 书：*Release It!* 
+[^3]: 书：*Release It!*
 [^4]: [容器化](/blog/2015/06/02/cloud4/#c)
 [^5]: [移动应用和客户端多样性](/blog/2015/05/23/cloud/#mc)
-
-
-
-

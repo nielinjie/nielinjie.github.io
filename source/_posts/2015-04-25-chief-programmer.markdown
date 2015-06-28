@@ -18,4 +18,3 @@ categories:  ["开发","敏捷"]
 
 
 {% img  /images/chief/chief.JPG 300 %}
-

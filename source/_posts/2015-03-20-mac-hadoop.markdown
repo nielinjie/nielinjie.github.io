@@ -24,6 +24,6 @@ IDE里面可以直接运行，只讲一下classpath：
 		(base)/common/lib/
 		(base)/hdfs/
 		(base)/mapreduce/
-		(base)/yarn/ 
-	
+		(base)/yarn/
+
 	其中的`base`是hadoop安装目录里面的库目录，在我这个安装里面是`/usr/local/Cellar/hadoop/2.6.0/libexec/share/hadoop/`
