@@ -9,7 +9,9 @@
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="原文：Migrating to Cloud-Native Application Architectures 本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。 （接前文） ">
+  <meta name="description" content="单体优先还是直接采用微服务？这个问题随着马丁大叔的文章Monolith First1发布，显得再次热闹起来。 在我看来，从三个方面尝试分析这个问题。 微服务架构和单体架构区别是什么？
+系统建立之初这些区别意味着什么？
+如果系统建立之初使用单体架构，后续过渡到微服务架构代价如何？ ">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +79,56 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2015/06/28/monolithf/">单体优先还是微服务？</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-06-28T16:58:26+08:00" pubdate data-updated="true">Jun 28<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>单体优先还是直接采用微服务？这个问题随着马丁大叔的文章Monolith First<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>发布，显得再次热闹起来。</p>
+
+<p>在我看来，从三个方面尝试分析这个问题。</p>
+
+<ol>
+<li>微服务架构和单体架构区别是什么？</li>
+<li>系统建立之初这些区别意味着什么？</li>
+<li>如果系统建立之初使用单体架构，后续过渡到微服务架构代价如何？</li>
+</ol>
+
+
+</div>
+  
+  
+    <footer>
+      <a rel="full-article" href="/blog/2015/06/28/monolithf/">Read on &rarr;</a>
+    </footer>
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2015/06/07/cloud6/">译：迁移至云架构（六）</a></h1>
     
     
@@ -100,11 +152,11 @@
   </header>
 
 
-  <div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
+  <div class="entry-content"><p>（<a href="/blog/2015/06/07/cloud5/">接前文</a>）</p>
 
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
+<h2>分布式系统指南</h2>
 
-<p>（<a href="/blog/2015/06/07/cloud5/">接前文</a>）</p>
+<p>当我们开始构建由微服务组成的分布式系统，我们需要应对单体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。</p>
 
 </div>
   
@@ -145,11 +197,11 @@
   </header>
 
 
-  <div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
+  <div class="entry-content"><p>（<a href="/blog/2015/06/02/cloud4/">接前文</a>）</p>
 
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
+<h1>迁移指南</h1>
 
-<p>（<a href="/blog/2015/06/02/cloud4/">接前文</a>）</p>
+<p>现在我们已经定义了云架构，简短讨论了企业如果要使用云架构需要些什么转变。现在我们谈谈具体的技术。这里更多的是提供简短介绍和进一步阅读的链接。</p>
 
 </div>
   
@@ -190,11 +242,11 @@
   </header>
 
 
-  <div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
+  <div class="entry-content"><p>（<a href="/blog/2015/05/29/cloud3/">接前文</a>）</p>
 
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
+<h2>组织转变</h2>
 
-<p>（<a href="/blog/2015/05/29/cloud3/">接前文</a>）</p>
+<p>这一节我们将讨论为了更好地应用云架构，组织在建立团队方面将如何改进。这个理论的背后是著名的<em>Conway’s Law</em>，我们的办法是围绕一个长期的产品线建立多职责的团队，而不是鼓励每种职责的人员呆在自己单独的团队里（比如testing）。</p>
 
 </div>
   
@@ -235,11 +287,15 @@
   </header>
 
 
-  <div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
+  <div class="entry-content"><p>（<a href="/blog/2015/05/23/cloud2/">接前文</a>）</p>
 
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
+<h1>需要转变</h1>
 
-<p>（<a href="/blog/2015/05/23/cloud2/">接前文</a>）</p>
+<h2>文化转变</h2>
+
+<h3>从竖井到DevOps</h3>
+
+<p>企业IT常常被组织为一些竖井：软件开发、QA、DBA、系统管理、运营、发布管理、项目管理等。这些竖井往往有不同的管理层次、工具集、沟通方式、词汇和激励形式。这些不同鼓励了做事方法的不同。</p>
 
 </div>
   
@@ -280,11 +336,18 @@
   </header>
 
 
-  <div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
+  <div class="entry-content"><p>（<a href="/blog/2015/05/23/cloud/">接前文</a>）</p>
 
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
+<h2>云架构的定义</h2>
 
-<p>（<a href="/blog/2015/05/23/cloud/">接前文</a>）</p>
+<h3><a name="12f"></a>十二因子应用</h3>
+
+<p>“十二因子应用”是一些云架构模式。它们专注于速度、稳定、伸缩，主要包括强调声明性配置、无状态和无共享的横向伸缩进程、全面与部署环境解耦合等方面。当前大量的云平台都为部署十二因子应用优化。</p>
+
+<p>在“十二因子应用”的说法中，“应用”指的是单个部署单元。</p>
+
+<p>十二因子应用表述为：<br/>
+（省略，可参见官方中文版：<a href="http://12factor.net/zh_cn/">十二因子应用</a>）</p>
 
 </div>
   
@@ -328,6 +391,18 @@
   <div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
 
 <p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
+
+<h1>云架构的兴起</h1>
+
+<p>创新型公司遇到的问题是：</p>
+
+<ul>
+<li>创新的速度</li>
+<li>总是可用的服务</li>
+<li>Web的伸缩</li>
+<li>移动为中心的用户体验</li>
+</ul>
+
 
 </div>
   
@@ -411,6 +486,10 @@
 
   <div class="entry-content"><p>（<a href="/blog/2015/04/10/resilient2/">接上篇</a>）</p>
 
+<h2>业务正确性和容错性</h2>
+
+<p>系统不仅需要业务功能结果正确，还需要在业务发生问题的时候能够尽量多的提供诊断和恢复支持。</p>
+
 </div>
   
   
@@ -452,54 +531,15 @@
 
   <div class="entry-content"><p>（<a href="/blog/2015/04/09/resilient/">接上篇</a>）</p>
 
+<h2>可用性</h2>
+
+<p>可用性风险通常比较被重视，企业默认架构中往往有较多应对措施。而且很多可用性风险与<a href="/blog/2015/04/09/resilient/">性能与容量风险</a>有关，所以这里总结的风险和保障措施显得比较少。</p>
+
 </div>
   
   
     <footer>
       <a rel="full-article" href="/blog/2015/04/10/resilient2/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2015/04/09/service/">“服务化”</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2015-04-09T11:11:07+08:00" pubdate data-updated="true">Apr 9<span>th</span>, 2015</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>“服务化”，就是既有系统进化为“服务”的努力。</p>
-
-<p>什么是服务？每个架构师都有不同的定义，在不同的场景下可能也有不同的定义。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2015/04/09/service/">Read on &rarr;</a>
     </footer>
   
 
@@ -611,7 +651,7 @@
 </script>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (45)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (46)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
 </section>
 
   

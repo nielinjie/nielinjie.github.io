@@ -9,7 +9,7 @@
   <meta name="author" content="nielinjie">
 
   
-  <meta name="description" content="原文：Migrating to Cloud-Native Application Architectures 本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。 （接前文） 分布式系统指南 当我们开始构建由微服务组成的分布式系统，我们需要应对单体架构系统一般不会需要的非功能需求。 &hellip;">
+  <meta name="description" content="（接前文） 分布式系统指南 当我们开始构建由微服务组成的分布式系统，我们需要应对单体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。 这些实践来自于Spring &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -97,18 +97,14 @@
   </header>
 
 
-<div class="entry-content"><p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="/blog/2015/06/07/cloud5/">接前文</a>）</p>
-
-<!--more-->
-
+<div class="entry-content"><p>（<a href="/blog/2015/06/07/cloud5/">接前文</a>）</p>
 
 <h2>分布式系统指南</h2>
 
 <p>当我们开始构建由微服务组成的分布式系统，我们需要应对单体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。</p>
+
+<!--more-->
+
 
 <p>这些实践来自于<a href="http://projects.spring.io/spring-cloud/">Spring Cloud</a> 和<a href="http://netflix.github.io">Netflix OSS</a> 系列项目的组合使用。</p>
 
@@ -282,7 +278,7 @@
 <li id="fn:2">
 <p><a href="#rlb">路由和负载均衡</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
-<p>书：<em>Release It!</em> <a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<p>书：<em>Release It!</em><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 <li id="fn:4">
 <p><a href="/blog/2015/06/02/cloud4/#c">容器化</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
@@ -325,6 +321,8 @@
     </p>
 
     <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2015/06/28/monolithf/" title="Next Post: 单体优先还是微服务？">&laquo; 单体优先还是微服务？ </a>
       
       
         <a class="basic-alignment right" href="/blog/2015/06/07/cloud5/" title="Previous Post: 译：迁移至云架构（五）"> 译：迁移至云架构（五） &raquo;</a>
@@ -501,7 +499,7 @@ var duoshuoQuery = {short_name:"nielinjie"};
 </script>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (45)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (46)</a></li><li><a href='/blog/categories/kai-fa'>开发 (14)</a></li><li><a href='/blog/categories/yan-lun'>言论 (14)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (5)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/hadoop'>Hadoop (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li></ul>
 </section>
 
   

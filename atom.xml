@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-06-17T09:40:16+08:00</updated>
+  <updated>2015-06-28T11:48:40+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,22 +14,135 @@
 
   
   <entry>
+    <title type="html"><![CDATA[单体优先还是微服务？]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/06/28/monolithf/"/>
+    <updated>2015-06-28T16:58:26+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/06/28/monolithf</id>
+    <content type="html"><![CDATA[<p>单体优先还是直接采用微服务？这个问题随着马丁大叔的文章Monolith First<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>发布，显得再次热闹起来。</p>
+
+<p>在我看来，从三个方面尝试分析这个问题。</p>
+
+<ol>
+<li>微服务架构和单体架构区别是什么？</li>
+<li>系统建立之初这些区别意味着什么？</li>
+<li>如果系统建立之初使用单体架构，后续过渡到微服务架构代价如何？</li>
+</ol>
+
+
+<!-- more -->
+
+
+<h3>微服务架构和单体架构区别是什么？</h3>
+
+<p>微服务架构与单体架构的区别，本质是系统各部件间分隔的强度大小。</p>
+
+<p>从下面几个方面看一看：</p>
+
+<table>
+<thead>
+<tr>
+<th><i></i> </th>
+<th>微服务 </th>
+<th> 单体</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>领域分隔 </td>
+<td> 领域被分隔为微服务。分隔力度大，相互间的影响较小。微服务可以各自拥有不同的进化节奏，不同领域的创新可以分别实施、快速落地。 <br/> 领域间的调用相对困难，需要一些基础服务帮助，比如服务注册和寻址等。 </td>
+<td> 领域的分隔表现为模块的分隔，其间的联系简单直接。</td>
+</tr>
+<tr>
+<td>团队分隔    </td>
+<td> 团队按微服务配置。成员专注于小的领域和代码集。沟通成本低。容易学习。<br/> 需要部件之间紧密协作时相对困难，比如当代码需要在部件之间移动。  </td>
+<td> 整个系统一个团队。如果系统变得庞大，成员就需要学习大量的代码和领域知识，团队内的沟通和协作也变得低效。不得不分割团队时容易按职责分割，形成竖井团队<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</td>
+</tr>
+<tr>
+<td>技术分隔    </td>
+<td> 在不同的微服务中，可以根据不同的业务特性分别选择适当的技术。包括可以分别选择适当的存储策略。    </td>
+<td> 整个系统（甚至整个企业）统一的技术栈，管理起来看似简单。但有时候统一的标准并不适合所有的实际情况。</td>
+</tr>
+<tr>
+<td>运行时分隔 </td>
+<td> 各部件通常运行于不同的进程。容易进行错误隔离。可以分别伸缩。<br/> 运行时需要管理的单位较多，相对困难，需要一些专门的运营工具。</td>
+<td> 通常运行于同一个进程。部件间协作的额外开销很小。</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>系统建立之初这些区别意味着什么？</h3>
+
+<p>通过上面的罗列比较我们可以看到：对于复杂系统，微服务架构可以有效地分隔复杂度。
+但微服务架构有风险：首先需要前期就对领域有良好的认识以便分割。其次需要一定的基础服务和工具。如果团队并不熟悉这种相对较新的架构，学习和适应的成本还是比较高的。
+如果我们的系统在建立之初比较简单，在各个方面基本上并不需要高强度的分隔，单体架构往往就能够满足要求。</p>
+
+<p>我们看看什么情况下可能有可能直接从微服务架构开始：</p>
+
+<ul>
+<li>我们的系统所面对的领域规模很大，需要进行分割；同时，我们很清楚如何分隔。（……，好吧，这种情况基本没有，囧）</li>
+<li>我们的团队规模太小，从一开始就无法单独承担系统的规模。</li>
+<li>我的企业默认架构就是微服务，很多系统已经实践过了。</li>
+<li>我的老板认为微服务很酷，必须上。</li>
+<li>……</li>
+</ul>
+
+
+<p>这些情况下，如果各方充分认识到微服务的代价并作出应对预案，是可以直接应用微服务架构的。</p>
+
+<p>在所有的代价中，有一种最重要，值得再说一遍：领域划分不清晰的情况下请务必慎重，在微服务间移动领域逻辑是非常昂贵的。</p>
+
+<h3>已有单体架构系统过渡到微服务架构代价如何？</h3>
+
+<p>马丁大叔提出的“扼死大法”<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>是一种自然有效的过渡方式。但跟其他所有的方式一样。
+这个办法的难度和相关代价还是取决于单体本身的结构特点。
+如果单体自身拥有良好的结构，容易从中剥离出相对独立的领域逻辑。那我们可以有条不紊逐步剥离：</p>
+
+<ol>
+<li>为新特性创建微服务，单体保持不变。</li>
+<li>在单体中识别内聚的子领域，对应地各自剥离为微服务。</li>
+<li>按照业务价值和变化频度安排优先级。</li>
+<li>并不追求完全消灭单体。</li>
+</ol>
+
+
+<p>另一种情况，单体本身是一个大泥球。那就没有那么幸运了，我们必须先整理单体本身。</p>
+
+<h3>结论</h3>
+
+<ul>
+<li><p>单体优先，同时请做好准备，你可能很快需要过渡到微服务。所以做一个“微服务友好”的单体，并适时开始基础服务和团队技能的准备。</p></li>
+<li><p>读到这里仍然觉得自己应该立即微服务的同学：请不犹豫地微服务吧。</p></li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="http://martinfowler.com/bliki/MonolithFirst.html">Monolith First</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:1">
+<p>“竖井团队”被认为在大部分情况下是反模式。参见<a href="http://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver">“反Conway策略”</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p><a href="http://www.martinfowler.com/bliki/StranglerApplication.html">StranglerApplication</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[译：迁移至云架构（六）]]></title>
     <link href="http://nielinjie.github.io/blog/2015/06/07/cloud6/"/>
     <updated>2015-06-07T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/06/07/cloud6</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="http://nielinjie.github.io/blog/2015/06/07/cloud5/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/06/07/cloud5/">接前文</a>）</p>
 
 <h2>分布式系统指南</h2>
 
 <p>当我们开始构建由微服务组成的分布式系统，我们需要应对单体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。</p>
+
+<!--more-->
+
 
 <p>这些实践来自于<a href="http://projects.spring.io/spring-cloud/">Spring Cloud</a> 和<a href="http://netflix.github.io">Netflix OSS</a> 系列项目的组合使用。</p>
 
@@ -203,7 +316,7 @@
 <li id="fn:2">
 <p><a href="#rlb">路由和负载均衡</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
-<p>书：<em>Release It!</em> <a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<p>书：<em>Release It!</em><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 <li id="fn:4">
 <p><a href="http://nielinjie.github.io/blog/2015/06/02/cloud4/#c">容器化</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
@@ -219,18 +332,14 @@
     <link href="http://nielinjie.github.io/blog/2015/06/07/cloud5/"/>
     <updated>2015-06-07T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/06/07/cloud5</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="http://nielinjie.github.io/blog/2015/06/02/cloud4/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/06/02/cloud4/">接前文</a>）</p>
 
 <h1>迁移指南</h1>
 
 <p>现在我们已经定义了云架构，简短讨论了企业如果要使用云架构需要些什么转变。现在我们谈谈具体的技术。这里更多的是提供简短介绍和进一步阅读的链接。</p>
+
+<!--more-->
+
 
 <h2>分解指南</h2>
 
@@ -311,18 +420,14 @@
     <link href="http://nielinjie.github.io/blog/2015/06/02/cloud4/"/>
     <updated>2015-06-02T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/06/02/cloud4</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="http://nielinjie.github.io/blog/2015/05/29/cloud3/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/05/29/cloud3/">接前文</a>）</p>
 
 <h2>组织转变</h2>
 
 <p>这一节我们将讨论为了更好地应用云架构，组织在建立团队方面将如何改进。这个理论的背后是著名的<em>Conway’s Law</em>，我们的办法是围绕一个长期的产品线建立多职责的团队，而不是鼓励每种职责的人员呆在自己单独的团队里（比如testing）。</p>
+
+<!--more-->
+
 
 <h3><a name="bct"></a>业务能力<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>团队</h3>
 
@@ -463,14 +568,7 @@
     <link href="http://nielinjie.github.io/blog/2015/05/29/cloud3/"/>
     <updated>2015-05-29T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/05/29/cloud3</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="http://nielinjie.github.io/blog/2015/05/23/cloud2/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/05/23/cloud2/">接前文</a>）</p>
 
 <h1>需要转变</h1>
 
@@ -479,6 +577,9 @@
 <h3>从竖井到DevOps</h3>
 
 <p>企业IT常常被组织为一些竖井：软件开发、QA、DBA、系统管理、运营、发布管理、项目管理等。这些竖井往往有不同的管理层次、工具集、沟通方式、词汇和激励形式。这些不同鼓励了做事方法的不同。</p>
+
+<!--more-->
+
 
 <p>一个常被提到的例子是开发和运营的不同。
 开发的任务是开发功能，往往是通过向企业IT中引入更改来实现的。所以开发部门的任务可以说成是“交付变化”，自然开发部门也往往是鼓励交付更多的变化。</p>
@@ -563,14 +664,7 @@
     <link href="http://nielinjie.github.io/blog/2015/05/23/cloud2/"/>
     <updated>2015-05-23T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/05/23/cloud2</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="http://nielinjie.github.io/blog/2015/05/23/cloud/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/05/23/cloud/">接前文</a>）</p>
 
 <h2>云架构的定义</h2>
 
@@ -582,6 +676,9 @@
 
 <p>十二因子应用表述为：<br/>
 （省略，可参见官方中文版：<a href="http://12factor.net/zh_cn/">十二因子应用</a>）</p>
+
+<!--more-->
+
 
 <p>十二因子让应用可以快速部署，因为对环境没有多少要求。对环境没有要求也让云平台可以采用简单一致的机制来自动化地提供新的环境。这是十二因子应用在速度方面的意义。</p>
 
@@ -668,9 +765,6 @@
 
 <p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
 
-<!--more-->
-
-
 <h1>云架构的兴起</h1>
 
 <p>创新型公司遇到的问题是：</p>
@@ -681,6 +775,9 @@
 <li>Web的伸缩</li>
 <li>移动为中心的用户体验</li>
 </ul>
+
+
+<!--more-->
 
 
 <p>迁移到云是一个自然地选择，”云架构“是这些公司获得搅局能力的关键。</p>
@@ -792,12 +889,12 @@
     <id>http://nielinjie.github.io/blog/2015/04/10/resilient3</id>
     <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/04/10/resilient2/">接上篇</a>）</p>
 
-<!-- more -->
-
-
 <h2>业务正确性和容错性</h2>
 
 <p>系统不仅需要业务功能结果正确，还需要在业务发生问题的时候能够尽量多的提供诊断和恢复支持。</p>
+
+<!-- more -->
+
 
 <h3>设计时</h3>
 
@@ -912,12 +1009,12 @@
     <id>http://nielinjie.github.io/blog/2015/04/10/resilient2</id>
     <content type="html"><![CDATA[<p>（<a href="http://nielinjie.github.io/blog/2015/04/09/resilient/">接上篇</a>）</p>
 
-<!-- more -->
-
-
 <h2>可用性</h2>
 
 <p>可用性风险通常比较被重视，企业默认架构中往往有较多应对措施。而且很多可用性风险与<a href="http://nielinjie.github.io/blog/2015/04/09/resilient/">性能与容量风险</a>有关，所以这里总结的风险和保障措施显得比较少。</p>
+
+<!-- more -->
+
 
 <h3>设计时</h3>
 
@@ -1219,10 +1316,10 @@ A：“服务化”是使既有既有系统形成适当的“组件”的过程�
 
 <p><a href="http://nielinjie.gitcafe.io">http://nielinjie.gitcafe.io</a></p>
 
+<p>github.io的访问（由于它前面的墙）不太稳定，现保存一份copy在gitcafe，两边同步发布。</p>
+
 <!-- more -->
 
-
-<p>github.io的访问（由于它前面的墙）不太稳定，现保存一份copy在gitcafe，两边同步发布。</p>
 
 <p>遗留内容迁移步骤在此：<a href="http://wdicc.com/octopress-and-gitcafe/">http://wdicc.com/octopress-and-gitcafe/</a></p>
 
@@ -14237,7 +14334,7 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#110;&#x69;&#101;&#x6c;&#105;&#x6e;&#106;&#105;&#101;&#64;&#x67;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#x6d;">&#x6e;&#105;&#x65;&#x6c;&#105;&#x6e;&#x6a;&#105;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
+电子邮箱：<a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#110;&#105;&#101;&#108;&#x69;&#x6e;&#x6a;&#105;&#x65;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#110;&#105;&#101;&#x6c;&#x69;&#x6e;&#106;&#x69;&#x65;&#64;&#103;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#111;&#109;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
@@ -14683,24 +14780,6 @@ A:<br/>
 
 
 <p><img src="http://nielinjie.github.io/images/pkc/mm.png"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[知识在此（零）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc0/"/>
-    <updated>2014-08-02T14:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/08/02/pkc0</id>
-    <content type="html"><![CDATA[<p>什么是“知识在此”？</p>
-
-<!-- more -->
-
-
-<p>“知识在此”是我正在致力于的“个人知识管理工具系列”。</p>
-
-<p>在信息爆炸的时代，信息只有经过过滤、整理、归纳才能成为知识。</p>
-
-<p><img src="http://nielinjie.github.io/images/pkc/ivk.jpg"></p>
 ]]></content>
   </entry>
   

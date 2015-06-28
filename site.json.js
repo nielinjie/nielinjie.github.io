@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/06/28/monolithf/",
+    date:"2015-06-28T16:58:26+08:00",
+    title:"单体优先还是微服务？",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/06/07/cloud6/",
     date:"2015-06-07T11:15:31+08:00",
     title:"译：迁移至云架构（六）",

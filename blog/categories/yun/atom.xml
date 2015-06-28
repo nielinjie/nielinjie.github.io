@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 云 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/yun/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-06-17T09:40:16+08:00</updated>
+  <updated>2015-06-28T11:48:40+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -18,18 +18,14 @@
     <link href="http://nielinjie.github.io/blog/2015/06/07/cloud6/"/>
     <updated>2015-06-07T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/06/07/cloud6</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="/blog/2015/06/07/cloud5/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/06/07/cloud5/">接前文</a>）</p>
 
 <h2>分布式系统指南</h2>
 
 <p>当我们开始构建由微服务组成的分布式系统，我们需要应对单体架构系统一般不会需要的非功能需求。有时候需要跟物理定律周旋，比如一致性、延迟、网络分割等。然而另一些问题比如脆弱和可管理性就可以用相对通用的模式来解决。下面我们将介绍这方面的一些实践。</p>
+
+<!--more-->
+
 
 <p>这些实践来自于<a href="http://projects.spring.io/spring-cloud/">Spring Cloud</a> 和<a href="http://netflix.github.io">Netflix OSS</a> 系列项目的组合使用。</p>
 
@@ -203,7 +199,7 @@
 <li id="fn:2">
 <p><a href="#rlb">路由和负载均衡</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
-<p>书：<em>Release It!</em> <a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<p>书：<em>Release It!</em><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 <li id="fn:4">
 <p><a href="/blog/2015/06/02/cloud4/#c">容器化</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 <li id="fn:5">
@@ -219,18 +215,14 @@
     <link href="http://nielinjie.github.io/blog/2015/06/07/cloud5/"/>
     <updated>2015-06-07T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/06/07/cloud5</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="/blog/2015/06/02/cloud4/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/06/02/cloud4/">接前文</a>）</p>
 
 <h1>迁移指南</h1>
 
 <p>现在我们已经定义了云架构，简短讨论了企业如果要使用云架构需要些什么转变。现在我们谈谈具体的技术。这里更多的是提供简短介绍和进一步阅读的链接。</p>
+
+<!--more-->
+
 
 <h2>分解指南</h2>
 
@@ -311,18 +303,14 @@
     <link href="http://nielinjie.github.io/blog/2015/06/02/cloud4/"/>
     <updated>2015-06-02T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/06/02/cloud4</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="/blog/2015/05/29/cloud3/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/05/29/cloud3/">接前文</a>）</p>
 
 <h2>组织转变</h2>
 
 <p>这一节我们将讨论为了更好地应用云架构，组织在建立团队方面将如何改进。这个理论的背后是著名的<em>Conway’s Law</em>，我们的办法是围绕一个长期的产品线建立多职责的团队，而不是鼓励每种职责的人员呆在自己单独的团队里（比如testing）。</p>
+
+<!--more-->
+
 
 <h3><a name="bct"></a>业务能力<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>团队</h3>
 
@@ -463,14 +451,7 @@
     <link href="http://nielinjie.github.io/blog/2015/05/29/cloud3/"/>
     <updated>2015-05-29T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/05/29/cloud3</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="/blog/2015/05/23/cloud2/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/05/23/cloud2/">接前文</a>）</p>
 
 <h1>需要转变</h1>
 
@@ -479,6 +460,9 @@
 <h3>从竖井到DevOps</h3>
 
 <p>企业IT常常被组织为一些竖井：软件开发、QA、DBA、系统管理、运营、发布管理、项目管理等。这些竖井往往有不同的管理层次、工具集、沟通方式、词汇和激励形式。这些不同鼓励了做事方法的不同。</p>
+
+<!--more-->
+
 
 <p>一个常被提到的例子是开发和运营的不同。
 开发的任务是开发功能，往往是通过向企业IT中引入更改来实现的。所以开发部门的任务可以说成是“交付变化”，自然开发部门也往往是鼓励交付更多的变化。</p>
@@ -563,14 +547,7 @@
     <link href="http://nielinjie.github.io/blog/2015/05/23/cloud2/"/>
     <updated>2015-05-23T11:15:31+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/05/23/cloud2</id>
-    <content type="html"><![CDATA[<p>原文：<a href="http://pivotal.io/platform-as-a-service/migrating-to-cloud-native-application-architectures-ebook">Migrating to Cloud-Native Application Architectures</a></p>
-
-<p>本文为“节选译”，不是逐句逐段翻译，是意译和无废话译。</p>
-
-<p>（<a href="/blog/2015/05/23/cloud/">接前文</a>）</p>
-
-<!--more-->
-
+    <content type="html"><![CDATA[<p>（<a href="/blog/2015/05/23/cloud/">接前文</a>）</p>
 
 <h2>云架构的定义</h2>
 
@@ -582,6 +559,9 @@
 
 <p>十二因子应用表述为：<br/>
 （省略，可参见官方中文版：<a href="http://12factor.net/zh_cn/">十二因子应用</a>）</p>
+
+<!--more-->
+
 
 <p>十二因子让应用可以快速部署，因为对环境没有多少要求。对环境没有要求也让云平台可以采用简单一致的机制来自动化地提供新的环境。这是十二因子应用在速度方面的意义。</p>
 
