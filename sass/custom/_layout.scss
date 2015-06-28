@@ -6,7 +6,7 @@
 //$header-padding-bottom: 1.5em;
 
 //$max-width: 1350px;
-//$indented-lists: true;
+$indented-lists: true;
 
 // Padding used for layout margins
 //$pad-min: 18px;
@@ -22,10 +22,43 @@
 
 
 #content div.pagination a.next {
-  left:0 
+  left:0
 }
 
 
 #content div.pagination a.prev {
   right:0
+}
+
+#content  {
+  line-height: 1.8
+}
+
+
+#content {
+  p, article blockquote, ul, ol {
+    margin-bottom: 1em;
+  }
+}
+
+#content .footnotes p {
+  margin-bottom: 0
+}
+
+
+#content table {
+
+  font-size: 90%;
+  margin-bottom: 1em;
+
+  th, td {
+    padding: .2em .4em;
+    border: 1px solid black;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+
 }
