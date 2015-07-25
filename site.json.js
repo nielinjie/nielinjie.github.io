@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/07/25/questions/",
+    date:"2015-07-25T09:57:11+08:00",
+    title:"问架构师候选人什么问题？",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/06/28/monolithf/",
     date:"2015-06-28T16:58:26+08:00",
     title:"单体优先还是微服务？",
