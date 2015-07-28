@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-07-25T18:10:57+08:00</updated>
+  <updated>2015-07-28T16:48:43+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[中文字体]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/07/28/typo/"/>
+    <updated>2015-07-28T16:41:56+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/07/28/typo</id>
+    <content type="html"><![CDATA[<p><a href="http://typo.sofi.sh">typo.css</a> 提供的默认中文字体很不错。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[问架构师候选人什么问题？]]></title>
@@ -14388,7 +14403,7 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x6e;&#105;&#101;&#x6c;&#x69;&#110;&#106;&#x69;&#101;&#x40;&#x67;&#x6d;&#x61;&#105;&#108;&#x2e;&#x63;&#111;&#x6d;">&#x6e;&#105;&#x65;&#108;&#x69;&#110;&#x6a;&#105;&#101;&#64;&#103;&#109;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a></p>
+电子邮箱：<a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x6e;&#x69;&#x65;&#108;&#105;&#x6e;&#106;&#x69;&#101;&#x40;&#103;&#109;&#97;&#105;&#108;&#46;&#x63;&#x6f;&#109;">&#x6e;&#x69;&#101;&#x6c;&#105;&#x6e;&#106;&#x69;&#x65;&#x40;&#x67;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
@@ -14787,22 +14802,6 @@ A:<br/>
 <p>中秋发布。演示和富文本。</p>
 
 <p><a href="http://pckmmap.duapp.com/public/presentation.html?nodeId=5834d345-309c-4bf5-bd4e-e3e323469073" target="_blank">说演示，演示就在此。</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[脑图大开：云端存储]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/08/30/pkc-cloud-save/"/>
-    <updated>2014-08-30T16:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/08/30/pkc-cloud-save</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">&ldquo;知识在此：脑图大开&rdquo;</a> ps：不是“脑洞大开”……</p>
-
-<!-- more -->
-
-
-<p>云端存储功能发布。</p>
-
-<p><img src="http://nielinjie.github.io/images/pkc/pck_cloud_save.png"></p>
 ]]></content>
   </entry>
   

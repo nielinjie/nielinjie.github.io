@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/07/28/typo/",
+    date:"2015-07-28T16:41:56+08:00",
+    title:"中文字体",
+    categories:[
+      
+        "个人",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/07/25/questions/",
     date:"2015-07-25T09:57:11+08:00",
     title:"问架构师候选人什么问题？",
