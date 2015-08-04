@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-07-28T16:53:00+08:00</updated>
+  <updated>2015-08-04T21:47:57+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[言论：雪人（五）]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/08/04/said-xueren4/"/>
+    <updated>2015-08-04T21:10:16+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/08/04/said-xueren4</id>
+    <content type="html"><![CDATA[<p>“最近好多展览，这些雪人真是太漂亮了！”<br/>
+“是的。可惜不能看到建造和维护这些雪人的展览。”</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[架构工作中的三个关键词]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/07/29/3words/"/>
+    <updated>2015-07-29T10:21:30+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/07/29/3words</id>
+    <content type="html"><![CDATA[<p>这里是我在架构工作中强调的三个关键词。是我工作桌面上保留时间最长的一个Post，也许会一直保留下去吧。</p>
+
+<!-- more -->
+
+
+<h4>Structure</h4>
+
+<p>结构。结构非常重要，不用多说。在有些观点中，结构就是架构的定义，比如：“架构就是系统中的元素以及它们之间的关系”。<br/>
+架构的结果最终被体现为系统中的结构，架构的价值，也是通过系统中的结构体现。</p>
+
+<h4>Risk</h4>
+
+<p>风险。解决风险是架构的目的。所有的架构活动，都是为了消除或者减轻工程风险。<br/>
+把风险作为架构过程的驱动力，是进行“恰如其分”的架构过程的有效选项。</p>
+
+<h4>View</h4>
+
+<p>视野。架构师需要随时与开发团队共享视野。<br/>
+一方面保证开发团队对架构的认识和认同，另一方面保证架构师对需求的了解。</p>
+
+<h4>最后</h4>
+
+<p>来个靓照。是的，它有些沧桑了。:-D</p>
+
+<p><img src="http://nielinjie.github.io/images/3words/post.jpg" width="300"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[中文字体]]></title>
@@ -14401,7 +14444,7 @@ IDE里面可以直接运行，只讲一下classpath：<br/>
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#110;&#105;&#101;&#108;&#105;&#110;&#106;&#x69;&#x65;&#64;&#103;&#x6d;&#97;&#x69;&#108;&#x2e;&#99;&#x6f;&#109;">&#110;&#105;&#x65;&#108;&#105;&#110;&#x6a;&#x69;&#x65;&#x40;&#x67;&#x6d;&#97;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
+电子邮箱：<a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#110;&#x69;&#x65;&#x6c;&#105;&#x6e;&#106;&#105;&#x65;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#110;&#105;&#x65;&#108;&#x69;&#110;&#x6a;&#x69;&#x65;&#64;&#x67;&#x6d;&#x61;&#105;&#x6c;&#46;&#x63;&#111;&#109;</a></p>
 
 <h3><a name="1"></a>自我评价</h3>
 
@@ -14766,40 +14809,6 @@ A:<br/>
 如何避免架构执行走样，或者及时发现和纠正走样，是一个还没想透彻的问题。</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[脑图大开：发布为日志]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/09/14/pkc-page/"/>
-    <updated>2014-09-14T23:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/09/14/pkc-page</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
-
-<!-- more -->
-
-
-<p>实现了“发布为日志”功能。此后“脑图大开”将以其本身作为相关日志的发布地点。</p>
-
-<p>“聂同学”Blog将返回到本来的定位——“一个程序员和架构师的实践与思考”。</p>
-
-<p><a href="http://pckmmap.duapp.com/public/pages/index.html?nodeId=83cd2d01-b536-4117-a431-0820abf746d2" target="_blank">“脑图大开”之日志。</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[脑图大开：中秋发布]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/09/07/pkc-presentation-editor/"/>
-    <updated>2014-09-07T23:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/09/07/pkc-presentation-editor</id>
-    <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
-
-<!-- more -->
-
-
-<p>中秋发布。演示和富文本。</p>
-
-<p><a href="http://pckmmap.duapp.com/public/presentation.html?nodeId=5834d345-309c-4bf5-bd4e-e3e323469073" target="_blank">说演示，演示就在此。</a></p>
 ]]></content>
   </entry>
   
