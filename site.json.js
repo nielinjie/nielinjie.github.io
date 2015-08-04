@@ -296,22 +296,6 @@ window.site={
   },
 
   {
-    url:"/blog/2015/03/20/mac-hadoop/",
-    date:"2015-03-20T17:06:38+08:00",
-    title:"Mac上尝试Hadoop",
-    categories:[
-      
-        "Hadoop",
-      
-        "开发",
-      
-    ],
-    series:[
-      
-    ]
-  },
-
-  {
     url:"/blog/2015/03/17/pped2kLinks/",
     date:"2015-03-17T10:06:38+08:00",
     title:"感谢皮皮书屋",
@@ -335,60 +319,6 @@ window.site={
       
     ],
     series:[
-      
-    ]
-  },
-
-  {
-    url:"/blog/2014/09/14/pkc-page/",
-    date:"2014-09-14T23:06:38+08:00",
-    title:"脑图大开：发布为日志",
-    categories:[
-      
-        "开发",
-      
-        "知识在此",
-      
-    ],
-    series:[
-      
-        "知识在此 5",
-      
-    ]
-  },
-
-  {
-    url:"/blog/2014/09/07/pkc-presentation-editor/",
-    date:"2014-09-07T23:06:38+08:00",
-    title:"脑图大开：中秋发布",
-    categories:[
-      
-        "开发",
-      
-        "知识在此",
-      
-    ],
-    series:[
-      
-        "知识在此 4",
-      
-    ]
-  },
-
-  {
-    url:"/blog/2014/08/30/pkc-cloud-save/",
-    date:"2014-08-30T16:06:38+08:00",
-    title:"脑图大开：云端存储",
-    categories:[
-      
-        "开发",
-      
-        "知识在此",
-      
-    ],
-    series:[
-      
-        "知识在此 3",
       
     ]
   },
