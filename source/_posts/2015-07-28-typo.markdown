@@ -1,0 +1,14 @@
+---
+layout: post
+title: "中文字体"
+date: 2015-07-28 16:41:56 +0800
+comments: true
+categories: ["个人"]
+
+---
+
+[typo.css](http://typo.sofi.sh) 提供的中文字体不错——
+
+`
+PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
+`
