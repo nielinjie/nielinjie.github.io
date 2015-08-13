@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/08/13/scenario/",
+    date:"2015-08-13T15:15:34+08:00",
+    title:"以场景思维辅助风险驱动架构设计",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/08/04/said-xueren4/",
     date:"2015-08-04T21:10:16+08:00",
     title:"言论：雪人（五）",
