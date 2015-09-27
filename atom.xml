@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-09-02T15:14:29+08:00</updated>
+  <updated>2015-09-27T17:38:38+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,35 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Nocoolcode]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/09/27/nocoolcode/"/>
+    <updated>2015-09-27T16:51:48+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/09/27/nocoolcode</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[同学说：伪代码是好代码]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/09/27/fakecode/"/>
+    <updated>2015-09-27T16:51:27+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/09/27/fakecode</id>
+    <content type="html"><![CDATA[<p>基本上，是同意的。</p>
+
+<!-- more -->
+
+
+<p>通常伪代码都直接描述了某个层面的业务逻辑，是比较典型的领域特定语言（DSL）。同时，也往往符合DDD中对统一语言的期望。</p>
+
+<p>在系统中，如果有一个层次的代码可以集中精力于表达业务逻辑，而不用操心各种质量约束，无疑是理想的。</p>
+
+<p>所以，伪代码确实是好代码，如果它能如愿运行的话。</p>
+
+<p><img src="http://nielinjie.github.io/images/fakecode/fakecode.jpg"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[以场景思维辅助风险驱动架构设计]]></title>
@@ -1481,444 +1510,6 @@ A：“服务化”是使既有既有系统形成适当的“组件”的过程�
 
 <ul>
 <li>git clone到gitcafe目录之后，要建立gitcafe-pages分支（如果没有的话），并且checkout，以便后续运行deploy命令时能提交到这个分支上。</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[感谢皮皮书屋]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/03/17/pped2kLinks/"/>
-    <updated>2015-03-17T10:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/03/17/pped2kLinks</id>
-    <content type="html"><![CDATA[<p>感谢皮皮书屋，有需要的同学可以搜索下面。<br/>
-列表生成于互联网材料，请大家支持正版。</p>
-
-<!-- more -->
-
-
-<p><a href="ed2k://|file|AdvancED%20Flex%20Application%20Development-Building%20Rich%20Media%20X%20%5BFriends%20of%20Ed%5D%282007-12%29.pdf|12424189|6f6f91f409bfb0571dcf60dad5e1b0fb|h=tzkp37p25bkwoxrtiggnrsnpetmwgihp|/">AdvancED Flex Application Development-Building Rich Media X [Friends of Ed](2007-12).pdf</a><br/>
-<a href="ed2k://|file|Programming%20Flex%202-The%20comprehensive%20guide%20to%20creating%20rich%20media%20applications%20with%20Adobe%20Flex%20%5BO%27Reilly%5D%282007-04%29.pdf|3540637|cfc4d1d52946eb258b0a96f5d5907ec6|h=o5ud2q6fgxbcntp3mb7hp4ltpsjhhyni|/">Programming Flex 2-The comprehensive guide to creating rich media applications with Adobe Flex [O&#8217;Reilly](2007-04).pdf</a><br/>
-<a href="ed2k://|file|ActionScript%203.0%20Design%20Patterns%20%5BO%27Reilly%5D%282007-07%29.pdf|4154823|9085d30a4e6883a577bd7a9254059710|h=x3ulsklyhithau6yiuhusrmcs65ggcdf|/">ActionScript 3.0 Design Patterns [O&#8217;Reilly](2007-07).pdf</a><br/>
-<a href="ed2k://|file|PHP%20and%20MySQL%20Web%20Development%2C%202nd%20Edition%20%5BSams%20Publishing%5D%282020-03%29.pdf|8126760|7a62d845313f091506260909d9bc4174|h=rrv7mqogimk2m4b6tkbob7bg253nixg7|/">PHP and MySQL Web Development, 2nd Edition [Sams Publishing](2020-03).pdf</a><br/>
-<a href="ed2k://|file|Ajax-%20The%20Definitive%20Guide%20%5BO%27Reilly%5D%282008-01-15%29.chm|9971458|b92d116c53f69fd3ba84cec10aadfc95|h=n7f2osccg4hhxhmdlosikavd4xopickw|/">Ajax- The Definitive Guide [O&#8217;Reilly](2008-01-15).chm</a><br/>
-<a href="ed2k://|file|Advanced%20Programming%20in%20the%20UNIX%20Environment%2C%202nd%20Edition%20%5BAddison%20Wesley%5D%282005-06%29.chm|3369501|49ea20fde198bdd55ecb4c514e73c23c|h=4zxs6w6fpyxjfyehnrowhprwxq4ffgmh|/">Advanced Programming in the UNIX Environment, 2nd Edition [Addison Wesley](2005-06).chm</a><br/>
-<a href="ed2k://|file|JavaScript%20Bible%2C5th%20Edition%20%5BWiley%20Publishing%5D%282004-03%29.pdf|25325592|62b08addbfe40d4527c923f846261af2|h=7ddbrsplng73yrz4xiqs2mklqqey7uyo|/">JavaScript Bible,5th Edition [Wiley Publishing](2004-03).pdf</a></p>
-
-<p><a href="http://nielinjie.github.io/pp">完整列表</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[我的简历]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/01/30/resume/"/>
-    <updated>2015-01-30T14:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/01/30/resume</id>
-    <content type="html"><![CDATA[<h3>目录</h3>
-
-<ul>
-<li><a href="http://nielinjie.github.io/blog/2015/01/30/resume/#0">基本信息</a></li>
-<li><a href="http://nielinjie.github.io/blog/2015/01/30/resume/#1">自我评价</a></li>
-<li><a href="http://nielinjie.github.io/blog/2015/01/30/resume/#2">工作经验</a></li>
-<li><a href="http://nielinjie.github.io/blog/2015/01/30/resume/#3">项目经验</a></li>
-<li><a href="http://nielinjie.github.io/blog/2015/01/30/resume/#4">教育经历</a></li>
-<li><a href="http://nielinjie.github.io/blog/2015/01/30/resume/#5">培训经历</a></li>
-<li><a href="http://nielinjie.github.io/blog/2015/01/30/resume/#6">FAQ</a></li>
-</ul>
-
-
-<!-- more -->
-
-
-<hr />
-
-<h3><a name="0"></a>基本信息</h3>
-
-<p>姓名：聂林杰<br/>
-性别：男<br/>
-出生年月：1979.1.<br/>
-学历：本科<br/>
-联系电话：18982274450<br/>
-电子邮箱：<a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x6e;&#x69;&#x65;&#108;&#105;&#110;&#106;&#x69;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#110;&#105;&#101;&#108;&#x69;&#110;&#x6a;&#105;&#101;&#x40;&#x67;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></p>
-
-<h3><a name="1"></a>自我评价</h3>
-
-<p>应用架构师。<br/>
-熟悉企业信息系统架构及开发技术。
-长期从事企业信息系统架构设计、架构执行、架构维护、设计和开发。熟悉j2ee和web相关技术。
-深入理解软件开发流程。
-能够负责开发团队的构建和运行。
-善于沟通合作，具备一定领导力和辅导培训能力。同时承担团队中Java和J2EE方面技术专家和排错指导角色。</p>
-
-<p>“Web全端开发者”。<br/>
-熟悉Web应用开发相关技术，可以胜任从前端到后端多种开发任务。</p>
-
-<h3><a name="2"></a>工作经验</h3>
-
-<ul>
-<li>2009 /6&mdash;至今：平安科技（深圳）有限公司
-
-<ul>
-<li>开发九部、集团开发部</li>
-<li>应用架构师、应用架构专家</li>
-<li>负责两个业务系列所属的项目和相关重要任务的架构设计和架构执行，日常应用架构管理维护。重点需求的解决方案设计，详细设计复审等工作。
-同时参与部门范围改进开发过程；设计开发工具；提高开发效率；保障开发质量等工作。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2007 /11&mdash;2009 /6：平安科技（深圳）有限公司
-
-<ul>
-<li>开发九部</li>
-<li>分组经理</li>
-<li>组建和领导10-20人开发团队，统筹开发分工协调，进行相关决策。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2005 /12&mdash;2007 /11：上海花旗软件
-
-<ul>
-<li>PS部（专业服务部）</li>
-<li>Solution Architect</li>
-<li>j2ee软件系统架构、设计和开发。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2004 /6&mdash;2005 /11：上海花旗软件
-
-<ul>
-<li>PS部（专业服务部）</li>
-<li>Senior Software Developer</li>
-<li>j2ee软件设计和开发。</li>
-</ul>
-</li>
-<li>……</li>
-</ul>
-
-
-<h3><a name="3"></a>项目经验</h3>
-
-<ul>
-<li><p>2015 /8&mdash;至今：安全防护产品项目</p>
-
-<ul>
-<li>项目描述：为平安旗下多款APP和网站提供实时安全防护服务。</li>
-<li>责任描述：架构设计。</li>
-</ul>
-</li>
-<li><p>2015 /7&mdash;至今：反洗钱系统群架构重构</p>
-
-<ul>
-<li>项目描述：对现有反洗钱系统群架构进行检视和重构。</li>
-<li>责任描述：架构设计。</li>
-</ul>
-</li>
-<li><p>2015 /1&mdash;至今：平安“壹企业”SAAS云服务</p>
-
-<ul>
-<li>项目描述：面向中小企业的信息化管理平台，SAAS。<a href="http://www.yqycloud.com">http://www.yqycloud.com</a></li>
-<li>责任描述：架构设计，架构执行。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2014 /6&mdash;2014 /12：文件转换服务
-
-<ul>
-<li>项目描述： 用于转换各种文档至手机可显示的图片的服务，平安多个App公用。</li>
-<li>责任描述： 架构设计，架构执行。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2014 /1&mdash;2015 /1：平安企业门户信息聚合和企业社交
-
-<ul>
-<li>项目描述： 平安企业门户，关于信息聚合和企业社交。原型项目。</li>
-<li>责任描述： 策划、原型设计和开发、技术选型。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="http://nielinjie.github.io/blog/2014/06/05/social/">企业中需要什么样的社交？</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2014 /1&mdash;2015 /1：平安法律部诉讼管理系统
-
-<ul>
-<li>项目描述： 平安法律部诉讼管理系统。敏捷项目。</li>
-<li>责任描述： 架构设计，架构执行。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（一 至 四）</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2014 /1&mdash;2014 /4：用户风险等级评级系统
-
-<ul>
-<li>项目描述： 平安内控关于用户风险等级的数据汇总和分析平台。</li>
-<li>责任描述： 架构设计顾问。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2013 /1&mdash;2014 /1：行政系统移动化
-
-<ul>
-<li>项目描述： 平安行政系统移动适配项目。敏捷项目。</li>
-<li>责任描述： 架构设计，架构执行。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="http://nielinjie.github.io/blog/2013/02/25/our-new-front-end/">我们的新前端</a></li>
-<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&amp;filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA">关于REST风格的讨论（系列）</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2013 /1&mdash;2014 /12：机构主页可定制化改造
-
-<ul>
-<li>项目描述： 平安机构主页可定制化改造项目，暨企业统一信息发布系统实验项目。</li>
-<li>责任描述： 架构设计，技术选型，架构执行。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2012 /10&mdash;2014 /12：企业全文检索服务
-
-<ul>
-<li>项目描述： 企业公用的全文检索服务。为平安内部多个系统提供全文检索服务。基于Apache Solr。</li>
-<li>责任描述： 架构设计、技术选型，架构执行。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2012 /6&mdash;2013 /4：内控信息收集管理系统
-
-<ul>
-<li>项目描述： 平安集团内控中心内控信息收集管理系统。运行于j2ee平台的bs架构企业管理系统，展示逻辑大量部署于浏览器端。</li>
-<li>责任描述： 架构设计、技术选型、技术培训、架构执行。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2011 /10&mdash;至今：办公系统重构项目
-
-<ul>
-<li>项目描述： 平安集团行政中心办公系统的重构项目。对复杂系统进行有针对性的重构，延缓腐化、降低其维护成本和修改功能的成本。</li>
-<li>责任描述： 策划并发起项目、制定原则和方案、分析和设计。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&amp;filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL">一场似非而是的DSL（系列）</a></li>
-<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">敏捷的架构设计（五、六）：领域地图（一、二）</a></li>
-<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%BB%99%E8%80%81%E7%88%B7%E7%88%B7%E7%B3%BB%E7%BB%9F&amp;filterDes=Series%3A%20%E7%BB%99%E8%80%81%E7%88%B7%E7%88%B7%E7%B3%BB%E7%BB%9F">给老爷爷系统（系列）</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2005 /11&mdash;2007 /11：投资银行销售客户管理系统
-
-<ul>
-<li>项目描述： j2ee 平台b/s结构的客户资源管理系统。</li>
-<li>责任描述： 架构设计、详细设计、开发协调。</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li>2014 /12&mdash;2015 /1： “近在”
-
-<ul>
-<li>项目描述： iOS的沟通效率工具。业余项目。</li>
-<li>责任描述： 发起人和唯一成员。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="http://veryclose.duapp.com">近在</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-
-<hr />
-
-<ul>
-<li><p>2014 /7&mdash;2014 /12：“知识在此”</p>
-
-<ul>
-<li>项目描述： 云端的个人知识管理服务。业余项目。</li>
-<li>责任描述： 发起人和唯一的成员。</li>
-<li>相关内容：
-
-<ul>
-<li><a href="http://nielinjie.github.io/blog/filter/filter.html?filterName=series&amp;filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&amp;filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4">知识在此</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>……</p></li>
-</ul>
-
-
-<h3><a name="4"></a>教育经历</h3>
-
-<ul>
-<li>1997 /9&mdash;2001 /7  上海交通大学
-
-<ul>
-<li>自动化   本科</li>
-</ul>
-</li>
-</ul>
-
-
-<h3><a name="5"></a>培训经历</h3>
-
-<ul>
-<li>2015 /8&mdash;2015 /8：
-
-<ul>
-<li>MSUP：领域驱动设计</li>
-</ul>
-</li>
-<li>2013 /12&mdash;2013 /12：
-
-<ul>
-<li>中程在线：架构设计实践</li>
-</ul>
-</li>
-<li>2012 /3&mdash;2012 /3：
-
-<ul>
-<li>MPD软件工坊：敏捷开发过程</li>
-</ul>
-</li>
-<li>2011 /8&mdash;2011 /8：
-
-<ul>
-<li>中程在线：大型架构案例分析训练营</li>
-</ul>
-</li>
-<li>2011 /6&mdash;2011 /7：
-
-<ul>
-<li>卡洛奇资讯：卡洛奇应用架构师培训</li>
-</ul>
-</li>
-<li>2010 /7&mdash;2010 /8：
-
-<ul>
-<li>中程在线：架构设计最佳实践与方法体系</li>
-</ul>
-</li>
-<li>2009 /8&mdash;2009 /8：
-
-<ul>
-<li>Sun：sun架构师标准课程培训SL425，获SL425结业证书</li>
-</ul>
-</li>
-</ul>
-
-
-<h3><a name="6"></a>FAQ</h3>
-
-<p>Q:
-何为“应用架构师”？职责有哪些？<br/>
-A:<br/>
-平安的“应用架构师”主要负责产出应用方案并支持其实施。</p>
-
-<p>Q:<br/>
-架构工作中最重要的是什么？<br/>
-A:<br/>
-最重要的是做出折中，架构工作中遇到的问题往往不是非黑即白的，最后的答案是折中的结果。
-不仅要敢于折中，还要善于折中。
-不仅要关注折中这个结果，还必须持续关注和管理折中的条件、折中的范围、折中的程度、折中的影响。</p>
-
-<p>Q:<br/>
-架构工作中最难的是什么？<br/>
-A:<br/>
-个人感到比较难的有两点。</p>
-
-<ul>
-<li>第一点是管理架构设计过程。
-很多时候架构设计过程过于依赖架构师个人的经验甚至直觉，过程本身难以控制，同时架构知识也很难积累和分享。</li>
-<li>第二点是架构的执行。架构只有执行了才能产生作用。
-但架构执行的过程却往往缺少重视和指导，在长时间跨度、参与人员复杂、需求随时变化等等因素的影响下，架构执行走样的情况经常发生。
-如何避免架构执行走样，或者及时发现和纠正走样，是一个还没想透彻的问题。</li>
 </ul>
 
 ]]></content>

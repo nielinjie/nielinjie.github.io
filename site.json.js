@@ -2,6 +2,34 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/09/27/nocoolcode/",
+    date:"2015-09-27T16:51:48+08:00",
+    title:"Nocoolcode",
+    categories:[
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/09/27/fakecode/",
+    date:"2015-09-27T16:51:27+08:00",
+    title:"同学说：伪代码是好代码",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "同学说 1",
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/08/13/scenario/",
     date:"2015-08-13T15:15:34+08:00",
     title:"以场景思维辅助风险驱动架构设计",
@@ -324,20 +352,6 @@ window.site={
   },
 
   {
-    url:"/blog/2015/01/30/resume/",
-    date:"2015-01-30T14:06:38+08:00",
-    title:"我的简历",
-    categories:[
-      
-        "个人",
-      
-    ],
-    series:[
-      
-    ]
-  },
-
-  {
     url:"/blog/2014/08/02/pkc/",
     date:"2014-08-02T16:06:38+08:00",
     title:"知识在此（一）：脑图大开",
@@ -587,6 +601,18 @@ window.site={
     series:[
       
         "给老爷爷系统 1",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2014/05/21/resume/",
+    date:"2014-05-21T00:00:00+08:00",
+    title:"Resume",
+    categories:[
+      
+    ],
+    series:[
       
     ]
   },
