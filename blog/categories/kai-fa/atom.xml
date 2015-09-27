@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 开发 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/kai-fa/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-09-27T17:38:38+08:00</updated>
+  <updated>2015-09-27T18:03:21+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[同学说：别让牛人写代码]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/09/27/nocoolcode/"/>
+    <updated>2015-09-27T16:51:48+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/09/27/nocoolcode</id>
+    <content type="html"><![CDATA[<p>基本上，是同意的。</p>
+
+<!--more-->
+
+
+<p>牛人写的代码固然威力无穷，奈何太贵。不仅现在贵，将来更贵。</p>
+
+<p>一般人看不懂，改不动，又不敢丢。活活贵死整个团队。</p>
+
+<p>如果有别的办法，不要依赖于牛人写代码。</p>
+
+<p><img src="/images/nocoolcode/nocoolcode.jpg" width="350"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[首席程序员负责制]]></title>
@@ -146,57 +166,6 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <p><img src="/images/view/view3.png"></p>
 
 <p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（三）：如何描述系统？（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/06/view2/"/>
-    <updated>2014-06-06T18:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/06/view2</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
-
-<!-- more -->
-
-
-<p>但功能和领域模型都不能直接使用：</p>
-
-<ul>
-<li>功能的问题是很难跟代码直接关联起来。</li>
-<li>领域模型的问题是只有开发同学熟悉这个概念。SA、测试、开发经理等同学比较熟悉的是“功能”这个概念，
-虽然他们对这个概念的定义不尽相同。</li>
-</ul>
-
-
-<p>我们希望我们的特征描述既可以将各方面关注点都联系起来，又可以让各方面都工作在自己熟悉的概念上。
-于是我们尝试使用一种二者的混合体。</p>
-
-<ul>
-<li>从领域模型出发，以便我们能跟代码产生联系<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。代码非常重要，因为在运行时，代码决定的逻辑基本上是系统的一切。</li>
-<li>弱化领域对象的定义，只描述它是否存在和与其他对象的关系<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。领域对象的定义显然是重要的，但我们现在要的是“框架”。</li>
-<li>强调领域过程，弱化领域实体。实体常常被认为是分析的结果，看上去和“功能”没有关系，有些方面的同学不关注。</li>
-<li>领域过程之间的关系划归为三种：Include、Extend、Generalization<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</li>
-<li>领域过程与实体间，只有一种，引用关系。实体与实体间的关系，不再描述。</li>
-</ul>
-
-
-<p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
-
-<p>（<a href="/blog/2014/06/07/view3">再下篇继续</a>）</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>逻辑按领域结构划分，在这个系统没完全实现：<a href="/blog/2014/06/09/refactory">重构</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>领域模型是一个领域对象的结构，<a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>没错，跟UML use case图里面的三种关系相同。这并非偶然，我们认为所有的过程之间，都是这三种关系。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   

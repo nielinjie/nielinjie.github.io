@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-09-27T17:38:38+08:00</updated>
+  <updated>2015-09-27T18:03:21+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,19 +14,30 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Nocoolcode]]></title>
+    <title type="html"><![CDATA[同学说：别让牛人写代码]]></title>
     <link href="http://nielinjie.github.io/blog/2015/09/27/nocoolcode/"/>
     <updated>2015-09-27T16:51:48+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/09/27/nocoolcode</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>基本上，是同意的。</p>
+
+<!--more-->
+
+
+<p>牛人写的代码固然威力无穷，奈何太贵。不仅现在贵，将来更贵。</p>
+
+<p>一般人看不懂，改不动，又不敢丢。活活贵死整个团队。</p>
+
+<p>如果有别的办法，不要依赖于牛人写代码。</p>
+
+<p><img src="http://nielinjie.github.io/images/nocoolcode/nocoolcode.jpg" width="350"></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[同学说：伪代码是好代码]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/09/27/fakecode/"/>
-    <updated>2015-09-27T16:51:27+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/09/27/fakecode</id>
+    <link href="http://nielinjie.github.io/blog/2015/09/25/fakecode/"/>
+    <updated>2015-09-25T20:51:27+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/09/25/fakecode</id>
     <content type="html"><![CDATA[<p>基本上，是同意的。</p>
 
 <!-- more -->
@@ -36,7 +47,7 @@
 
 <p>在系统中，如果有一个层次的代码可以集中精力于表达业务逻辑，而不用操心各种质量约束，无疑是理想的。</p>
 
-<p>所以，伪代码确实是好代码，如果它能如愿运行的话。</p>
+<p>伪代码确实是好代码，如果它能如愿运行的话。</p>
 
 <p><img src="http://nielinjie.github.io/images/fakecode/fakecode.jpg"></p>
 ]]></content>

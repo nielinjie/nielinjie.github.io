@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-09-27T17:38:38+08:00</updated>
+  <updated>2015-09-27T18:03:21+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,10 +14,30 @@
 
   
   <entry>
+    <title type="html"><![CDATA[同学说：别让牛人写代码]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/09/27/nocoolcode/"/>
+    <updated>2015-09-27T16:51:48+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/09/27/nocoolcode</id>
+    <content type="html"><![CDATA[<p>基本上，是同意的。</p>
+
+<!--more-->
+
+
+<p>牛人写的代码固然威力无穷，奈何太贵。不仅现在贵，将来更贵。</p>
+
+<p>一般人看不懂，改不动，又不敢丢。活活贵死整个团队。</p>
+
+<p>如果有别的办法，不要依赖于牛人写代码。</p>
+
+<p><img src="/images/nocoolcode/nocoolcode.jpg" width="350"></p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[同学说：伪代码是好代码]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/09/27/fakecode/"/>
-    <updated>2015-09-27T16:51:27+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/09/27/fakecode</id>
+    <link href="http://nielinjie.github.io/blog/2015/09/25/fakecode/"/>
+    <updated>2015-09-25T20:51:27+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/09/25/fakecode</id>
     <content type="html"><![CDATA[<p>基本上，是同意的。</p>
 
 <!-- more -->
@@ -27,7 +47,7 @@
 
 <p>在系统中，如果有一个层次的代码可以集中精力于表达业务逻辑，而不用操心各种质量约束，无疑是理想的。</p>
 
-<p>所以，伪代码确实是好代码，如果它能如愿运行的话。</p>
+<p>伪代码确实是好代码，如果它能如愿运行的话。</p>
 
 <p><img src="/images/fakecode/fakecode.jpg"></p>
 ]]></content>
@@ -117,60 +137,6 @@
 <p>来个靓照。是的，它有些沧桑了。:-D</p>
 
 <p><img src="/images/3words/post.jpg" width="300"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[问架构师候选人什么问题？]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/07/25/questions/"/>
-    <updated>2015-07-25T09:57:11+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/07/25/questions</id>
-    <content type="html"><![CDATA[<p>面试时交流时间有限，应该问你的架构师候选人什么问题？</p>
-
-<!--more-->
-
-
-<h4>Q1：架构工作有些什么步骤？架构工作与其它开发工作的关系如何？……</h4>
-
-<p>有些架构师认为此类问题比较重要。只有弄清楚了这些问题，才能算是掌握了架构方法论，能够保证可控可重复地进行架构设计。而另一些架构师则认为，只要能产出切实可用的系统，架构设计是什么，它如何达成的都不重要。</p>
-
-<p>个人认为方法论是重要的。你团队中的架构过程和成果需要积累和传承，适当的方法论可以在架构师（包括开发团队）之间统一讨论语言和产出物，利于积累和传承。</p>
-
-<p>特别是，如果你认为你的架构师应该负责建立或提高架构和开发的团队和流程，你需要问此类问题。</p>
-
-<h4>Q2：假设现在需要搭建XX类型的系统，你如何思考？</h4>
-
-<p>这类问题是开放式的主观题。涵盖范围很广，可以全面地考察架构师的思维方式、方法论、知识、经验，所以被广泛使用。这类问题很好用，但需要注意。它常常引来候选人的长篇大论，从方法到模式，从前台到后台，从需求到设计，…… 所以交流过程中需要控制和引导，避免被淹没在回答当中，当候选人提到了想要重点考察的领域，需要有针对性地进行专门的提问和讨论。</p>
-
-<h4>Q3：假设现在遇到X问题，解决方案是什么？</h4>
-
-<p>这类问题考察的是架构师的经验。如果他<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>遇到和解决过同类问题，并且记住了解决方案，他就能回答，如果没有，就不能回答。因为没有人能够在四目相对的几秒十几秒时间里解决一个陌生的架构问题。要知道架构决策和设计不是一个靠急智能够胜任的工作。</p>
-
-<p>所以如果你需要架构师招聘进来以后能够立即解决一个问题——也就是你提问中的那个问题，你需要问这类问题。个人认为这种情况要尽量避免，因为这样就放弃了对其它方面素质的考量和选择。</p>
-
-<h4>Q4：AA设计模式中……、BB数据库中……、CC算法中……、DD类里面……</h4>
-
-<p>这类是涉及到某些领域的细节问题，如果你需要架构师兼任此领域的技术专家（这种情况常见），那你需要问这类问题。</p>
-
-<p>有些架构师可能对某些领域的细节问题解决能力不足，但他隔离和描述问题的能力很强，进而可以很快从外部找到并应用现成的解决方案。这样的架构师虽然称不上技术专家，但一定程度上其实可以解决大量的具体问题。</p>
-
-<p>依据你面对的问题、团队规模及可以负担的成本，你需要判断是否需要真正的技术专家。</p>
-
-<h4>Q5：在你做过的YY事情中，是如何考虑ZZ问题的？</h4>
-
-<p>这类问题跟Q2问题功能相似。同时它可以避免Q2问题的一个弱点：万一候选人没有XX类型系统的工作经验，考察就没办法进行下去。除非：你的职位必需这类系统的知识和经验。这种情况常见，比如招聘互联网产品的架构师往往认为必需“大并发系统”的知识和经验。</p>
-
-<h4>Q6：最近在干什么？学什么？比较关注什么？</h4>
-
-<p>个人比较喜欢此类问题。但这类问题完全没有参考答案，需要提问人注意从回答中挖掘想要的信息。比如候选人对职业生涯的规划、对技术走势的判断等等。否则问答完了之后，对候选人是否适合职位的判断帮助不大。</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>文中所有的“他”，均不特指男性。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   
