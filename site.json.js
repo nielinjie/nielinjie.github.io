@@ -4,7 +4,7 @@ window.site={
   {
     url:"/blog/2015/09/27/nocoolcode/",
     date:"2015-09-27T16:51:48+08:00",
-    title:"同学说：别让牛人写代码",
+    title:"“别让牛人写代码”",
     categories:[
       
         "开发",
@@ -22,7 +22,7 @@ window.site={
   {
     url:"/blog/2015/09/25/fakecode/",
     date:"2015-09-25T20:51:27+08:00",
-    title:"同学说：伪代码是好代码",
+    title:"“伪代码是好代码”",
     categories:[
       
         "架构",
