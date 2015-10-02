@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-09-29T20:43:48+08:00</updated>
+  <updated>2015-10-03T01:18:39+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,11 +14,37 @@
 
   
   <entry>
+    <title type="html"><![CDATA[技术栈是架构设计的目的么？]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/10/02/techstack/"/>
+    <updated>2015-10-02T22:46:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/10/02/techstack</id>
+    <content type="html"><![CDATA[<p>不是。</p>
+
+<p>相比于架构设计的目的，技术栈更像是架构执行的手段。</p>
+
+<p>“为了实现那样的架构设计，我们将使用这些的技术。……”</p>
+
+<!--more-->
+
+
+<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>ps: 另一个角度说来，技术栈也确实常作为架构设计的重要产出物，体现着设计结论的一些方面。所以类似“XX技术在XX公司的应用”这样的句型，作为架构分享文章的标题经常出现。读到这样的文章，希望同学们以正确的姿势打开，从技术栈的展示中，窥见架构设计的来龙去脉。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[“别让牛人写代码”]]></title>
     <link href="http://nielinjie.github.io/blog/2015/09/27/nocoolcode/"/>
     <updated>2015-09-27T16:51:48+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/09/27/nocoolcode</id>
-    <content type="html"><![CDATA[<p>基本上，是同意的。</p>
+    <content type="html"><![CDATA[<p>同意。</p>
 
 <!--more-->
 
@@ -104,39 +130,6 @@
     <id>http://nielinjie.github.io/blog/2015/08/04/said-xueren4</id>
     <content type="html"><![CDATA[<p>“最近好多展览，这些雪人真是太漂亮了！”<br/>
 “是的。可惜不能看到建造和维护这些雪人的展览。”</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构工作中的三个关键词]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/07/29/3words/"/>
-    <updated>2015-07-29T10:21:30+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/07/29/3words</id>
-    <content type="html"><![CDATA[<p>这里是我在架构工作中强调的三个关键词。是我工作桌面上保留时间最长的一个Post，也许会一直保留下去吧。</p>
-
-<!-- more -->
-
-
-<h4>Structure</h4>
-
-<p>结构。在有些观点中，结构就是架构的定义，比如：“架构就是系统中的元素以及它们之间的关系”。<br/>
-架构的结果最终被体现为系统中的结构，架构的价值，也是通过系统中的结构体现。</p>
-
-<h4>Risk</h4>
-
-<p>风险。解决风险是架构的目的。所有的架构活动，都是为了消除或者减轻工程风险。<br/>
-把风险作为架构过程的驱动力，是进行“恰如其分”的架构过程的有效选项。</p>
-
-<h4>View</h4>
-
-<p>视野。架构师需要随时与开发团队共享视野。<br/>
-一方面保证开发团队对架构的认识和认同，另一方面保证架构师对需求的了解。</p>
-
-<h4>最后</h4>
-
-<p>来个靓照。是的，它有些沧桑了。:-D</p>
-
-<p><img src="/images/3words/post.jpg" width="300"></p>
 ]]></content>
   </entry>
   

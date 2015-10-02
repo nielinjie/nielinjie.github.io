@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-09-29T20:43:48+08:00</updated>
+  <updated>2015-10-03T01:18:39+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,11 +14,37 @@
 
   
   <entry>
+    <title type="html"><![CDATA[技术栈是架构设计的目的么？]]></title>
+    <link href="http://nielinjie.github.io/blog/2015/10/02/techstack/"/>
+    <updated>2015-10-02T22:46:38+08:00</updated>
+    <id>http://nielinjie.github.io/blog/2015/10/02/techstack</id>
+    <content type="html"><![CDATA[<p>不是。</p>
+
+<p>相比于架构设计的目的，技术栈更像是架构执行的手段。</p>
+
+<p>“为了实现那样的架构设计，我们将使用这些的技术。……”</p>
+
+<!--more-->
+
+
+<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>ps: 另一个角度说来，技术栈也确实常作为架构设计的重要产出物，体现着设计结论的一些方面。所以类似“XX技术在XX公司的应用”这样的句型，作为架构分享文章的标题经常出现。读到这样的文章，希望同学们以正确的姿势打开，从技术栈的展示中，窥见架构设计的来龙去脉。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[“别让牛人写代码”]]></title>
     <link href="http://nielinjie.github.io/blog/2015/09/27/nocoolcode/"/>
     <updated>2015-09-27T16:51:48+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/09/27/nocoolcode</id>
-    <content type="html"><![CDATA[<p>基本上，是同意的。</p>
+    <content type="html"><![CDATA[<p>同意。</p>
 
 <!--more-->
 
@@ -1496,31 +1522,6 @@ A：“服务化”是使既有既有系统形成适当的“组件”的过程�
 <li><strong>各节点的性能指标的实时数据。</strong></li>
 <li><strong>各节点可（热）拔插。</strong>拔出后性能和容量可接受。</li>
 <li><strong>诊断用现场实时数据。</strong>各节点都需要此类数据，比如线程dump。</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[复制到gitcafe]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/04/02/move/"/>
-    <updated>2015-04-02T10:48:27+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/04/02/move</id>
-    <content type="html"><![CDATA[<p>已复制到gitcafe——</p>
-
-<p><a href="http://nielinjie.gitcafe.io">http://nielinjie.gitcafe.io</a></p>
-
-<p>github.io的访问（由于它前面的墙）不太稳定，现保存一份copy在gitcafe，两边同步发布。</p>
-
-<!-- more -->
-
-
-<p>遗留内容迁移步骤在此：<a href="http://wdicc.com/octopress-and-gitcafe/">http://wdicc.com/octopress-and-gitcafe/</a></p>
-
-<p>补充一点没有提到的：</p>
-
-<ul>
-<li>git clone到gitcafe目录之后，要建立gitcafe-pages分支（如果没有的话），并且checkout，以便后续运行deploy命令时能提交到这个分支上。</li>
 </ul>
 
 ]]></content>

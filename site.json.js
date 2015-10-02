@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/10/02/techstack/",
+    date:"2015-10-02T22:46:38+08:00",
+    title:"技术栈是架构设计的目的么？",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/09/27/nocoolcode/",
     date:"2015-09-27T16:51:48+08:00",
     title:"“别让牛人写代码”",
