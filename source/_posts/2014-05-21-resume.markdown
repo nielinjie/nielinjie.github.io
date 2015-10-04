@@ -8,13 +8,12 @@ categories: ["个人"]
 ---
 ### 目录
 
-* [基本信息](http://nielinjie.github.io/blog/2015/01/30/resume/#0)
-* [自我评价](http://nielinjie.github.io/blog/2015/01/30/resume/#1)
-* [工作经验](http://nielinjie.github.io/blog/2015/01/30/resume/#2)
-* [项目经验](http://nielinjie.github.io/blog/2015/01/30/resume/#3)
-* [教育经历](http://nielinjie.github.io/blog/2015/01/30/resume/#4)
-* [培训经历](http://nielinjie.github.io/blog/2015/01/30/resume/#5)
-* [FAQ](http://nielinjie.github.io/blog/2015/01/30/resume/#6)
+* [基本信息](/blog/2015/01/30/resume/#0)
+* [自我介绍](/blog/2015/01/30/resume/#1)
+* [工作经验](/blog/2015/01/30/resume/#2)
+* [项目经验](/blog/2015/01/30/resume/#3)
+* [教育经历](/blog/2015/01/30/resume/#4)
+* [培训经历](/blog/2015/01/30/resume/#5)
 
 <!-- more -->
 
@@ -31,7 +30,7 @@ categories: ["个人"]
 电子邮箱：nielinjie@gmail.com
 
 
-### <a name="1"></a>自我评价
+### <a name="1"></a>自我介绍
 
 应用架构师。  
 熟悉企业信息系统架构及开发技术。
@@ -40,11 +39,9 @@ categories: ["个人"]
 能够负责开发团队的构建和运行。
 善于沟通合作，具备一定领导力和辅导培训能力。同时承担团队中Java和J2EE方面技术专家和排错指导角色。
 
-“Web全端开发者”。  
-熟悉Web应用开发相关技术，可以胜任从前端到后端多种开发任务。
+个人网站：[www.nietongxue.xyz](http://www.nietongxue.xyz)
 
-“iOS开发者”。  
-iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。
+
 
 ### <a name="2"></a>工作经验
 
@@ -59,23 +56,40 @@ iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。
     * 开发九部
     * 分组经理
     * 组建和领导10-20人开发团队，统筹开发分工协调，进行相关决策。
+    
 ----
 
 * 2005 /12--2007 /11：上海花旗软件
     * PS部（专业服务部）
     * Solution Architect
     * j2ee软件系统架构、设计和开发。
+    
 ----
 
 * 2004 /6--2005 /11：上海花旗软件
     * PS部（专业服务部）
     * Senior Software Developer
     * j2ee软件设计和开发。
+
+----    
+
 * ……
 
 ### <a name="3"></a>项目经验
 
-* 2015 /1--至今: 平安“壹企业”SAAS云服务
+* 2015 /8--至今：平安账户安全防护产品项目
+	* 项目描述：为平安旗下多款APP和网站提供实时账户安全防护服务。
+	* 责任描述：架构设计。 
+	
+----
+	
+* 2015 /7--至今：反洗钱系统群架构重构
+	* 项目描述：对现有反洗钱系统群架构进行检视和重构。
+	* 责任描述：架构设计。 
+
+----
+
+* 2015 /1--至今：平安“壹企业”SAAS云服务
 	* 项目描述：面向中小企业的信息化管理平台，SAAS。[http://www.yqycloud.com](http://www.yqycloud.com)
 	* 责任描述：架构设计，架构执行。 
     
@@ -91,21 +105,21 @@ iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。
   * 项目描述：	平安企业门户，关于信息聚合和企业社交。原型项目。
   * 责任描述：	策划、原型设计和开发、技术选型。
   * 相关内容：
-    * [企业中需要什么样的社交？](http://nielinjie.github.io/blog/2014/06/05/social/)
+    * [企业中需要什么样的社交？](/blog/2014/06/05/social/)
     
 ----
 
-* 2014 /1--至今：平安法律部诉讼管理系统
+* 2014 /1--2015 /1：平安法律部诉讼管理系统
   * 项目描述：	平安法律部诉讼管理系统。敏捷项目。
   * 责任描述：	架构设计，架构执行。
   * 相关内容：
-    * [敏捷的架构设计（一 至 四）](http://nielinjie.github.io/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
+    * [敏捷的架构设计（一 至 四）](/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
     
 ----
 
 * 2014 /1--2014 /4：用户风险等级评级系统
   * 项目描述：	平安内控关于用户风险等级的数据汇总和分析平台。
-  * 责任描述：	架构设计顾问。
+  * 责任描述：	架构设计指导。
   
 ----
 
@@ -113,18 +127,18 @@ iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。
   * 项目描述：	平安行政系统移动适配项目。敏捷项目。
   * 责任描述：	架构设计，架构执行。
   * 相关内容：
-    * [我们的新前端](http://nielinjie.github.io/blog/2013/02/25/our-new-front-end/)
-    * [关于REST风格的讨论（系列）](http://nielinjie.github.io/blog/filter/filter.html?filterName=series&filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA)
+    * [我们的新前端](/blog/2013/02/25/our-new-front-end/)
+    * [关于REST风格的讨论（系列）](/blog/filter/filter.html?filterName=series&filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA)
     
 ----
 
-* 2013 /1--至今：机构主页可定制化改造
+* 2013 /1--2014 /12：机构主页可定制化改造
   * 项目描述：	平安机构主页可定制化改造项目，暨企业统一信息发布系统实验项目。
   * 责任描述：	架构设计，技术选型，架构执行。
   
 ----
 
-* 2012 /10--至今：企业全文检索服务
+* 2012 /10--2014 /12：企业全文检索服务
   * 项目描述：	企业公用的全文检索服务。为平安内部多个系统提供全文检索服务。基于Apache Solr。
   * 责任描述：	架构设计、技术选型，架构执行。
   
@@ -140,9 +154,9 @@ iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。
   * 项目描述：	平安集团行政中心办公系统的重构项目。对复杂系统进行有针对性的重构，延缓腐化、降低其维护成本和修改功能的成本。
   * 责任描述：	策划并发起项目、制定原则和方案、分析和设计。
   * 相关内容：
-    * [一场似非而是的DSL（系列）](http://nielinjie.github.io/blog/filter/filter.html?filterName=series&filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL)
-    * [敏捷的架构设计（五、六）：领域地图（一、二）](http://nielinjie.github.io/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
-    * [给老爷爷系统（系列）](http://nielinjie.github.io/blog/filter/filter.html?filterName=series&filterValue=给老爷爷系统&filterDes=Series%3A%20给老爷爷系统)
+    * [一场似非而是的DSL（系列）](/blog/filter/filter.html?filterName=series&filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL)
+    * [敏捷的架构设计（五、六）：领域地图（一、二）](/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
+    * [给老爷爷系统（系列）](/blog/filter/filter.html?filterName=series&filterValue=给老爷爷系统&filterDes=Series%3A%20给老爷爷系统)
     
 ----
 
@@ -152,18 +166,13 @@ iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。
   
 ----
 
-* 2014 /12--2015 /1： “近在”
-  * 项目描述： iOS的沟通效率工具。业余项目。
-  * 责任描述： 发起人和唯一成员。
-  * 相关内容：
-    * [近在](http://veryclose.duapp.com)
-----
-
 * 2014 /7--2014 /12：“知识在此”
   * 项目描述：	云端的个人知识管理服务。业余项目。
   * 责任描述：	发起人和唯一的成员。
   * 相关内容：
-    * [知识在此](http://nielinjie.github.io/blog/filter/filter.html?filterName=series&filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4)
+    * [知识在此](/blog/filter/filter.html?filterName=series&filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4)
+    
+----
     
 * ……
 
@@ -173,42 +182,19 @@ iOS开发新手，不会Obj-c，只会Swift…… 已在AppStore上线App。
   * 自动化	本科
 
 ### <a name="5"></a>培训经历
-
+* 2015 /8--2015 /8：
+  * MSUP：领域驱动设计 
 * 2013 /12--2013 /12：
-  * 中程在线：	架构设计实践
+  * 中程在线：架构设计实践
 * 2012 /3--2012 /3：
-  * MPD软件工坊：	敏捷开发过程
+  * MPD软件工坊：敏捷开发过程
 * 2011 /8--2011 /8：
-  * 中程在线：	大型架构案例分析训练营
+  * 中程在线：大型架构案例分析训练营
 * 2011 /6--2011 /7：
-  * 卡洛奇资讯：	卡洛奇应用架构师培训
+  * 卡洛奇资讯：卡洛奇应用架构师培训
 * 2010 /7--2010 /8：
-  * 中程在线：	架构设计最佳实践与方法体系
+  * 中程在线：架构设计最佳实践与方法体系
 * 2009 /8--2009 /8：
-  * Sun：	sun架构师标准课程培训SL425，获SL425结业证书
-
-### <a name="6"></a>FAQ
-Q:
-何为“应用架构师”？职责有哪些？  
-A:  
-平安的“应用架构师”主要负责产出应用方案并支持其实施。
+  * Sun：sun架构师标准课程培训SL425，获SL425结业证书
 
 
-Q:  
-架构工作中最重要的是什么？  
-A:  
-最重要的是做出折中，架构工作中遇到的问题往往不是非黑即白的，最后的答案是折中的结果。
-不仅要敢于折中，还要善于折中。
-不仅要关注折中这个结果，还必须持续关注和管理折中的条件、折中的范围、折中的程度、折中的影响。
-
-
-Q:  
-架构工作中最难的是什么？  
-A:  
-个人感到比较难的有两点。  
-
-* 第一点是管理架构设计过程。
-  很多时候架构设计过程过于依赖架构师个人的经验甚至直觉，过程本身难以控制，同时架构知识也很难积累和分享。  
-* 第二点是架构的执行。架构只有执行了才能产生作用。
-  但架构执行的过程却往往缺少重视和指导，在长时间跨度、参与人员复杂、需求随时变化等等因素的影响下，架构执行走样的情况经常发生。
-  如何避免架构执行走样，或者及时发现和纠正走样，是一个还没想透彻的问题。

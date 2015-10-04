@@ -12,3 +12,7 @@ categories: ["个人"]
 `
 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
 `
+
+ [^1]
+ 
+[^1]: 2015年9月30日升级OSX到EI Capitan后，PingFang SC变难看了，改为了PingFang SC Light。话说只有我一个人觉得PingFang SC不好看么？只有Light和Thin勉强能看。

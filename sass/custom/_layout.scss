@@ -62,3 +62,12 @@ $indented-lists: true;
 
 
 }
+
+
+div.qcode {
+  display: inline-block;
+  div.label {
+    font-size: xx-small;
+    text-align: center;
+  }
+}
