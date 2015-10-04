@@ -516,6 +516,10 @@ A：任何开发过程是否需要架构设计，不是由采用什么过程决�
       <li><a href="/blog/2015/01/30/resume/">我的简历</a></li>
       <li>
         <div class="qcode">
+        <img src="/images/me/nietongxue.png" style="width:60px">
+        <div class="label">个人网站</div>
+        </div>
+        <div class="qcode">
         <img src="/images/me/weixin.jpg" style="width:60px">
         <div class="label">微信</div>
         </div>
@@ -527,7 +531,7 @@ A：任何开发过程是否需要架构设计，不是由采用什么过程决�
         <img src="/images/me/linkedin.PNG" style="width:60px">
         <div class="label">LinkedIn</div>
         </div>
-      
+
 
       </li>
     </ul>
@@ -585,32 +589,6 @@ A：任何开发过程是否需要架构设计，不是由采用什么过程决�
 })()
 
 </script>
-<section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2015/10/02/techstack/">技术栈是架构设计的目的么？</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/09/27/nocoolcode/">“别让牛人写代码”</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/09/25/fakecode/">“伪代码是好代码”</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/13/scenario/">以场景思维辅助风险驱动架构设计</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2015/08/04/said-xueren4/">雪人（五）</a>
-      </li>
-    
-  </ul>
-</section>
 <section class="series">
   <h1>Series</h1>
   <ul class="series"></ul>
@@ -632,7 +610,7 @@ A：任何开发过程是否需要架构设计，不是由采用什么过程决�
     _(sers).each(function(v,k){
       var url="/blog/filter/filter.html"
       var u = buildUrl(url,{filterName:"series",filterValue:k,filterDes:"Series: "+k})
-      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+"("+v.length+")")))
+      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+" ("+v.length+")")))
     })
   })()
 </script>
