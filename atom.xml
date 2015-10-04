@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://nielinjie.github.io/atom.xml" rel="self"/>
   <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-03T01:29:14+08:00</updated>
+  <updated>2015-10-04T12:42:58+08:00</updated>
   <id>http://nielinjie.github.io/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -27,12 +27,15 @@
 <!--more-->
 
 
-<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><br/>
+ <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
-<p>ps: 另一个角度说来，技术栈也确实常作为架构设计的重要产出物，体现着设计结论的一些方面。所以类似“XX技术在XX公司的应用”这样的句型，作为架构分享文章的标题经常出现。读到这样的文章，希望同学们以正确的姿势打开，从技术栈的展示中，窥见架构设计的来龙去脉。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>另一个角度说来，技术栈也确实常作为架构设计的重要产出物，体现着设计结论的一些方面。所以类似“XX技术在XX公司的应用”这样的句型，作为架构分享文章的标题经常出现。读到这样的文章，希望同学们以正确的姿势打开，从技术栈的展示中，窥见架构设计的来龙去脉。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>既然架构设计和执行是连贯不分的一个整体，那么区分前者的输出和后置的输入有什么意义呢？我认为是有意义的。这是孰本孰末，孰因孰果的问题。试想这样的情况：架构执行过程中，如果发现栈中某技术不适用，是否可以更改？如果是执行的手段，我们可以便宜更改，只要不偏离设计结论；如果是设计的目的，我们不能随意更改，因为要改论点需要重新梳理论据与论证。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -124,7 +127,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[言论：雪人（五）]]></title>
+    <title type="html"><![CDATA[雪人（五）]]></title>
     <link href="http://nielinjie.github.io/blog/2015/08/04/said-xueren4/"/>
     <updated>2015-08-04T21:10:16+08:00</updated>
     <id>http://nielinjie.github.io/blog/2015/08/04/said-xueren4</id>
@@ -176,6 +179,9 @@
 <p><code>
 PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
 </code></p>
+
+<!--more-->
+
 
 <p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 <div class="footnotes">
