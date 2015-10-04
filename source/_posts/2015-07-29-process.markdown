@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "架构是一项关于过程的工作么？"
-date: 2015-08-02 10:25:03 +0800
+date: 2015-10-04 10:25:03 +0800
 comments: true
-categories: ["架构","言论"]
+categories: ["架构"]
 published: false
 
 ---

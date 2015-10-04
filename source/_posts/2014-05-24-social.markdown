@@ -3,7 +3,7 @@ layout: post
 title: "企业中需要什么样的社交？"
 date: 2014-06-05 16:06:38 +0800
 comments: true
-categories: ["言论","产品"]
+categories: [产品]
 
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "言论：结构的要素"
+title: "结构的要素"
 date: 2014-06-07 17:06:38 +0800
 comments: true
-categories: ["架构","言论","设计"]
+categories: [架构,设计]
 
 ---
 

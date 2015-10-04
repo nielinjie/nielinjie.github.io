@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "言论：雪人（三）"
+title: "雪人（三）"
 date: 2014-03-30 15:36:38 +0800
 comments: true
-categories: [言论, 架构]
+categories: [架构]
 series: ["雪人 3"]
 
 ---

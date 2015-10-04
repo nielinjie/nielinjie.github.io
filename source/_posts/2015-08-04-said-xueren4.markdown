@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "言论：雪人（五）"
+title: "雪人（五）"
 date: 2015-08-04 21:10:16 +0800
 comments: true
-categories: [言论, 架构]
+categories: [架构]
 series: ["雪人 4"]
 ---
 

@@ -19,7 +19,7 @@
     _(sers).each(function(v,k){
       var url="/blog/filter/filter.html"
       var u = buildUrl(url,{filterName:"series",filterValue:k,filterDes:"Series: "+k})
-      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+"（"+v.length+"）")))
+      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+" ("+v.length+")")))
     })
   })()
 </script>
