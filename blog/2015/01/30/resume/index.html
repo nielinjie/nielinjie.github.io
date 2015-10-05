@@ -19,7 +19,7 @@
 出生年月：1979.1.
 学历：本科
 联系电话：18982274450
-电子邮箱：&#x6e;&#105;&#101;&#x6c;&#105;&#x6e;&#x6a;&#105;&#x65;&#64 &hellip;">
+电子邮箱：&#x6e;&#x69;&#x65;&#108;&#x69;&#110;&#106;&#x69;&#101;&#64 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -131,7 +131,7 @@
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#110;&#x69;&#101;&#108;&#105;&#x6e;&#106;&#105;&#x65;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;">&#x6e;&#105;&#101;&#x6c;&#105;&#x6e;&#x6a;&#105;&#x65;&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+电子邮箱：<a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#110;&#x69;&#101;&#x6c;&#105;&#x6e;&#106;&#x69;&#x65;&#x40;&#103;&#109;&#97;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x6e;&#x69;&#x65;&#108;&#x69;&#110;&#106;&#x69;&#101;&#64;&#103;&#109;&#97;&#x69;&#108;&#x2e;&#99;&#111;&#x6d;</a></p>
 
 <h3><a name="1"></a>自我介绍</h3>
 
@@ -551,7 +551,8 @@
       }).flatten().value()
     }
     var ss=series()
-    var sers=$("div.post-series").attr("data-series").split(",")
+    var sers=$("div.post-series").attr("data-series")
+    sers = sers?sers.split(","):[]
     sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
       var name=s.split(" ")[0]
       var index=s.split(" ")[1]
@@ -574,7 +575,7 @@
         <section>
 <h2>Sharing</h2>
 
-      <div class="bshare-custom icon-medium-plus"><div class="bsPromo bsPromo2"></div><a title="分享到新浪微博" class="bshare-sinaminiblog" href="javascript:void(0);"></a><a title="分享到腾讯微博" class="bshare-qqmb" href="javascript:void(0);"></a><a title="分享到微信" class="bshare-weixin" href="javascript:void(0);"></a><a title="分享到豆瓣" class="bshare-douban" href="javascript:void(0);"></a><a title="分享到Evernote" class="bshare-evernote" href="javascript:void(0);"></a><a title="分享到ReadItLater" class="bshare-readitlater" href="javascript:void(0);"></a><a title="分享到有道笔记" class="bshare-youdaonote" href="javascript:void(0);"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count" style="float: none;">26.3K</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=ab3c7c18-ccaf-4f13-9ade-eb0cf918582e&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+      <a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=ab3c7c18-ccaf-4f13-9ade-eb0cf918582e&style=1&bp=sinaminiblog,weixin,douban,linkedin,readitlater,youdaonote,evernote,twitter,facebook,gplus"></script>
 
     </section>
     
