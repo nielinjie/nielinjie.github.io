@@ -7,7 +7,11 @@ title: 聂同学
 subtitle: 一个程序员和架构师的实践与思考
 author: nielinjie
 simple_search: https://www.google.com/search
-description: 一个程序员和架构师的实践与思考
+description: 聂同学，一个程序员和架构师的实践与思考
+
+# for SEO
+
+keywords: 聂同学, 架构师, 架构, 开发, 敏捷, 实践, 思考, 程序员
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -57,6 +61,11 @@ default_asides: [custom/asides/about.html,custom/asides/calendar.html,custom/asi
 # blog_index_asides:
 # post_asides:
 # page_asides:
+
+
+
+
+
 
 # ----------------------- #
 #   3rd Party Settings    #
