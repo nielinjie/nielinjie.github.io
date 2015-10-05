@@ -19,7 +19,8 @@
       }).flatten().value()
     }
     var ss=series()
-    var sers=$("div.post-series").attr("data-series").split(",")
+    var sers=$("div.post-series").attr("data-series")
+    sers = sers?sers.split(","):[]
     sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
       var name=s.split(" ")[0]
       var index=s.split(" ")[1]
