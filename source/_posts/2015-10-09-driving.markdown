@@ -1,0 +1,13 @@
+---
+layout: post
+title: "架构设计过程的驱动技术"
+date: 2015-10-09 15:31:05 +0800
+comments: true
+categories: ["架构","过程"]
+published: false
+keywords: "架构, 过程, 驱动,"
+description: "架构设计过程的驱动技术"
+
+---
+
+
