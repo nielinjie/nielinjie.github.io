@@ -1,5 +1,5 @@
 ---
-layout: nil
+layout: null
 ---
 window.site={
   posts:[
