@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://nielinjie.github.io/blog/2015/06/28/monolithf">
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2015/06/28/monolithf">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -53,12 +53,13 @@
   
 </ul>
   
-<form action="https://www.google.com/search" method="get">
+<form >
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:nielinjie.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+    <input class="search" id="bdcsMain" type="text" placeholder="Search"/>
   </fieldset>
 </form>
+
+
   
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
@@ -89,7 +90,7 @@
   
 
 
-<time datetime="2015-06-28T16:58:26+08:00" pubdate data-updated="true">Jun 28<span>th</span>, 2015</time>
+<time datetime="2015-06-28T16:58:26+08:00" pubdate data-updated="true"></time>
         
       </p>
     
@@ -133,7 +134,7 @@
 <tr>
 <td>团队分隔    </td>
 <td> 团队按微服务配置。成员专注于小的领域和代码集。沟通成本低。容易学习。<br/> 需要部件之间紧密协作时相对困难，比如当代码需要在部件之间移动。  </td>
-<td> 整个系统一个团队。如果系统变得庞大，成员就需要学习大量的代码和领域知识，团队内的沟通和协作也变得低效。不得不分割团队时容易按职责分割，形成竖井团队<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</td>
+<td> 整个系统一个团队。如果系统变得庞大，成员就需要学习大量的代码和领域知识，团队内的沟通和协作也变得低效。不得不分割团队时容易按职责分割，形成竖井团队<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</td>
 </tr>
 <tr>
 <td>技术分隔    </td>
@@ -172,7 +173,7 @@
 
 <h3>已有单体架构系统过渡到微服务架构代价如何？</h3>
 
-<p>马丁大叔提出的“扼死大法”<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>是一种自然有效的过渡方式。但跟其他所有的方式一样。
+<p>马丁大叔提出的“扼死大法”<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>是一种自然有效的过渡方式。但跟其他所有的方式一样。
 这个办法的难度和相关代价还是取决于单体本身的结构特点。
 如果单体自身拥有良好的结构，容易从中剥离出相对独立的领域逻辑。那我们可以有条不紊逐步剥离：</p>
 
@@ -198,10 +199,10 @@
 <ol>
 <li id="fn:1">
 <p><a href="http://martinfowler.com/bliki/MonolithFirst.html">Monolith First</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:1">
-<p>“竖井团队”被认为在大部分情况下是反模式。参见<a href="http://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver">“反Conway策略”</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
-<p><a href="http://www.martinfowler.com/bliki/StranglerApplication.html">StranglerApplication</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<p>“竖井团队”被认为在大部分情况下是反模式。参见<a href="http://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver">“反Conway策略”</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="http://www.martinfowler.com/bliki/StranglerApplication.html">StranglerApplication</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -227,7 +228,7 @@
   
 
 
-<time datetime="2015-06-28T16:58:26+08:00" pubdate data-updated="true">Jun 28<span>th</span>, 2015</time>
+<time datetime="2015-06-28T16:58:26+08:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
@@ -291,8 +292,9 @@
         <section>
 <h2>Sharing</h2>
 
-      <a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=ab3c7c18-ccaf-4f13-9ade-eb0cf918582e&style=1&bp=sinaminiblog,weixin,douban,linkedin,readitlater,youdaonote,evernote,twitter,facebook,gplus"></script>
 
+      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
     </section>
     
 
@@ -432,7 +434,7 @@ var duoshuoQuery = {short_name:"nielinjie"};
 </script>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (53)</a></li><li><a href='/blog/categories/kai-fa'>开发 (11)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (7)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>DSL (5)</a></li><li><a href='/blog/categories/ge-ren'>个人 (5)</a></li><li><a href='/blog/categories/scala'>Scala (3)</a></li><li><a href='/blog/categories/rest'>REST (3)</a></li><li><a href='/blog/categories/android'>Android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (54)</a></li><li><a href='/blog/categories/kai-fa'>开发 (11)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (7)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/ge-ren'>个人 (5)</a></li><li><a href='/blog/categories/dsl'>dsl (5)</a></li><li><a href='/blog/categories/scala'>scala (3)</a></li><li><a href='/blog/categories/rest'>rest (3)</a></li><li><a href='/blog/categories/android'>android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/she-ji'>设计 (2)</a></li><li><a href='/blog/categories/zhi-shi-zai-ci'>知识在此 (2)</a></li><li><a href='/blog/categories/zhe-teng'>折腾 (2)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/chan-pin'>产品 (1)</a></li><li><a href='/blog/categories/qian-duan'>前端 (1)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/guo-cheng'>过程 (1)</a></li><li><a href='/blog/categories/tu-cao'>吐槽 (1)</a></li></ul>
 </section>
 
   
@@ -449,6 +451,7 @@ var duoshuoQuery = {short_name:"nielinjie"};
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1275367e1683bb7323263bc0c06163a0' type='text/javascript'%3E%3C/script%3E"));
 </script>
+<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=320040675796358319' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
 
 </footer>
   

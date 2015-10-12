@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Octopress | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/octopress/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[向Octopress贡献（二）：连载系列]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/20/series/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/04/20/series/"/>
     <updated>2014-04-20T23:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/20/series</id>
+    <id>http://www.nietongxue.xyz/blog/2014/04/20/series</id>
     <content type="html"><![CDATA[<p>我们常常会发表一些连载的系列文章。
 这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
 需要一个新的方式在同一系列的连载文章间跳转。</p>
@@ -38,9 +38,9 @@
   
   <entry>
     <title type="html"><![CDATA[向Octopress贡献（一）：动态内容]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/04/20/xiaowanyier/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/04/20/xiaowanyier/"/>
     <updated>2014-04-20T23:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/04/20/xiaowanyier</id>
+    <id>http://www.nietongxue.xyz/blog/2014/04/20/xiaowanyier</id>
     <content type="html"><![CDATA[<p>同学们往右看：就是那个一坨一坨飘一飘的东西。8-D<br/>
 每个圆表示一个category，它的大小表示该category名下文章的数量（相对的）；两个圆之间的连线表示两个category有联系，也就是说有文章同时属于这两个category。
 两个圆距离越近，则category的关系越密切，同时属于这两个category的文章越多。<br/>

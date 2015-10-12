@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 重构 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/zhong-gou/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/zhong-gou/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（六）：重构（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/11/refactory2/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/06/11/refactory2/"/>
     <updated>2014-06-11T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/11/refactory2</id>
+    <id>http://www.nietongxue.xyz/blog/2014/06/11/refactory2</id>
     <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
 
 <p>还是一篇补记，主要讲讲为什么是重构而不是重写。</p>
@@ -43,9 +43,9 @@
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（五）：重构（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/09/refactory/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/06/09/refactory/"/>
     <updated>2014-06-09T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/09/refactory</id>
+    <id>http://www.nietongxue.xyz/blog/2014/06/09/refactory</id>
     <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
 
 <p>这是一篇补记，说的是在刚刚接手老爷爷系统的时候。</p>
@@ -57,7 +57,7 @@
 
 <p>系统腐化、大泥球，讲的大概都是一个意思：需求不停、补丁重重、代码堆积、逻辑纠缠。
 随便一个小改动，都如履薄冰，面对着巨大的复杂性。越来越复杂、越来越纠缠，
-慢慢地（应该说是很快地 &ndash;_&ndash;!!）接近了凡人能处理的极限。</p>
+慢慢地（应该说是很快地 -_-!!）接近了凡人能处理的极限。</p>
 
 <p>我们研究了代码的结构和历史，发现主要问题是按照“功能”来安置代码，逻辑都放在一个功能入口的纵切面上。
 以我们这个系统的具体情况<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>来说，这个纵切面，就是一条线：Controller → Service → DAO。

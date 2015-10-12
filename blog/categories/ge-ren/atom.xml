@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 个人 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/ge-ren/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/ge-ren/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[中文字体]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/07/28/typo/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/07/28/typo/"/>
     <updated>2015-07-28T16:41:56+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/07/28/typo</id>
+    <id>http://www.nietongxue.xyz/blog/2015/07/28/typo</id>
     <content type="html"><![CDATA[<p><a href="http://typo.sofi.sh">typo.css</a> 提供的中文字体不错——</p>
 
 <p><code>
@@ -41,9 +41,9 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
   
   <entry>
     <title type="html"><![CDATA[复制到gitcafe]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/04/02/move/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/04/02/move/"/>
     <updated>2015-04-02T10:48:27+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/04/02/move</id>
+    <id>http://www.nietongxue.xyz/blog/2015/04/02/move</id>
     <content type="html"><![CDATA[<p>已复制到gitcafe——</p>
 
 <p><a href="http://nielinjie.gitcafe.io">http://nielinjie.gitcafe.io</a></p>
@@ -66,9 +66,9 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
   
   <entry>
     <title type="html"><![CDATA[我的简历]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/01/30/resume/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/01/30/resume/"/>
     <updated>2015-01-30T14:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/01/30/resume</id>
+    <id>http://www.nietongxue.xyz/blog/2015/01/30/resume</id>
     <content type="html"><![CDATA[<h3>目录</h3>
 
 <ul>
@@ -93,7 +93,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 出生年月：1979.1.<br/>
 学历：本科<br/>
 联系电话：18982274450<br/>
-电子邮箱：<a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#110;&#105;&#101;&#x6c;&#105;&#110;&#106;&#105;&#101;&#64;&#x67;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x6e;&#x69;&#101;&#108;&#x69;&#110;&#106;&#105;&#101;&#x40;&#103;&#109;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;</a></p>
+电子邮箱：<a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#110;&#x69;&#x65;&#108;&#x69;&#110;&#x6a;&#105;&#x65;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#110;&#105;&#x65;&#108;&#105;&#x6e;&#x6a;&#x69;&#101;&#64;&#103;&#109;&#97;&#x69;&#108;&#46;&#99;&#111;&#109;</a></p>
 
 <h3><a name="1"></a>自我介绍</h3>
 
@@ -109,7 +109,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <h3><a name="2"></a>工作经验</h3>
 
 <ul>
-<li>2009 /6&mdash;至今：平安科技（深圳）有限公司
+<li>2009 /6&ndash;至今：平安科技（深圳）有限公司
 
 <ul>
 <li>开发九部、集团开发部</li>
@@ -124,7 +124,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2007 /11&mdash;2009 /6：平安科技（深圳）有限公司
+<li>2007 /11&ndash;2009 /6：平安科技（深圳）有限公司
 
 <ul>
 <li>开发九部</li>
@@ -138,7 +138,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2005 /12&mdash;2007 /11：上海花旗软件
+<li>2005 /12&ndash;2007 /11：上海花旗软件
 
 <ul>
 <li>PS部（专业服务部）</li>
@@ -152,7 +152,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2004 /6&mdash;2005 /11：上海花旗软件
+<li>2004 /6&ndash;2005 /11：上海花旗软件
 
 <ul>
 <li>PS部（专业服务部）</li>
@@ -173,7 +173,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <h3><a name="3"></a>项目经验</h3>
 
 <ul>
-<li>2015 /8&mdash;至今：平安账户安全防护产品项目
+<li>2015 /8&ndash;至今：平安账户安全防护产品项目
 
 <ul>
 <li>项目描述：为平安旗下多款APP和网站提供实时账户安全防护服务。</li>
@@ -186,7 +186,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2015 /7&mdash;至今：反洗钱系统群架构重构
+<li>2015 /7&ndash;至今：反洗钱系统群架构重构
 
 <ul>
 <li>项目描述：对现有反洗钱系统群架构进行检视和重构。</li>
@@ -199,7 +199,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2015 /1&mdash;至今：平安“壹企业”SAAS云服务
+<li>2015 /1&ndash;至今：平安“壹企业”SAAS云服务
 
 <ul>
 <li>项目描述：面向中小企业的信息化管理平台，SAAS。<a href="http://www.yqycloud.com">http://www.yqycloud.com</a></li>
@@ -212,7 +212,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2014 /6&mdash;2014 /12：文件转换服务
+<li>2014 /6&ndash;2014 /12：文件转换服务
 
 <ul>
 <li>项目描述： 用于转换各种文档至手机可显示的图片的服务，平安多个App公用。</li>
@@ -225,7 +225,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2014 /1&mdash;2015 /1：平安企业门户信息聚合和企业社交
+<li>2014 /1&ndash;2015 /1：平安企业门户信息聚合和企业社交
 
 <ul>
 <li>项目描述： 平安企业门户，关于信息聚合和企业社交。原型项目。</li>
@@ -244,7 +244,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2014 /1&mdash;2015 /1：平安法律部诉讼管理系统
+<li>2014 /1&ndash;2015 /1：平安法律部诉讼管理系统
 
 <ul>
 <li>项目描述： 平安法律部诉讼管理系统。敏捷项目。</li>
@@ -263,7 +263,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2014 /1&mdash;2014 /4：用户风险等级评级系统
+<li>2014 /1&ndash;2014 /4：用户风险等级评级系统
 
 <ul>
 <li>项目描述： 平安内控关于用户风险等级的数据汇总和分析平台。</li>
@@ -276,7 +276,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2013 /1&mdash;2014 /1：行政系统移动化
+<li>2013 /1&ndash;2014 /1：行政系统移动化
 
 <ul>
 <li>项目描述： 平安行政系统移动适配项目。敏捷项目。</li>
@@ -296,7 +296,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2013 /1&mdash;2014 /12：机构主页可定制化改造
+<li>2013 /1&ndash;2014 /12：机构主页可定制化改造
 
 <ul>
 <li>项目描述： 平安机构主页可定制化改造项目，暨企业统一信息发布系统实验项目。</li>
@@ -309,7 +309,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2012 /10&mdash;2014 /12：企业全文检索服务
+<li>2012 /10&ndash;2014 /12：企业全文检索服务
 
 <ul>
 <li>项目描述： 企业公用的全文检索服务。为平安内部多个系统提供全文检索服务。基于Apache Solr。</li>
@@ -322,7 +322,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2012 /6&mdash;2013 /4：内控信息收集管理系统
+<li>2012 /6&ndash;2013 /4：内控信息收集管理系统
 
 <ul>
 <li>项目描述： 平安集团内控中心内控信息收集管理系统。运行于j2ee平台的bs架构企业管理系统，展示逻辑大量部署于浏览器端。</li>
@@ -335,7 +335,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2011 /10&mdash;至今：办公系统重构项目
+<li>2011 /10&ndash;至今：办公系统重构项目
 
 <ul>
 <li>项目描述： 平安集团行政中心办公系统的重构项目。对复杂系统进行有针对性的重构，延缓腐化、降低其维护成本和修改功能的成本。</li>
@@ -356,7 +356,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2005 /11&mdash;2007 /11：投资银行销售客户管理系统
+<li>2005 /11&ndash;2007 /11：投资银行销售客户管理系统
 
 <ul>
 <li>项目描述： j2ee 平台b/s结构的客户资源管理系统。</li>
@@ -369,7 +369,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <hr />
 
 <ul>
-<li>2014 /7&mdash;2014 /12：“知识在此”
+<li>2014 /7&ndash;2014 /12：“知识在此”
 
 <ul>
 <li>项目描述： 云端的个人知识管理服务。业余项目。</li>
@@ -395,7 +395,7 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <h3><a name="4"></a>教育经历</h3>
 
 <ul>
-<li>1997 /9&mdash;2001 /7  上海交通大学
+<li>1997 /9&ndash;2001 /7  上海交通大学
 
 <ul>
 <li>自动化   本科</li>
@@ -407,43 +407,43 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <h3><a name="5"></a>培训经历</h3>
 
 <ul>
-<li>2015 /8&mdash;2015 /8：
+<li>2015 /8&ndash;2015 /8：
 
 <ul>
 <li>MSUP：领域驱动设计</li>
 </ul>
 </li>
-<li>2013 /12&mdash;2013 /12：
+<li>2013 /12&ndash;2013 /12：
 
 <ul>
 <li>中程在线：架构设计实践</li>
 </ul>
 </li>
-<li>2012 /3&mdash;2012 /3：
+<li>2012 /3&ndash;2012 /3：
 
 <ul>
 <li>MPD软件工坊：敏捷开发过程</li>
 </ul>
 </li>
-<li>2011 /8&mdash;2011 /8：
+<li>2011 /8&ndash;2011 /8：
 
 <ul>
 <li>中程在线：大型架构案例分析训练营</li>
 </ul>
 </li>
-<li>2011 /6&mdash;2011 /7：
+<li>2011 /6&ndash;2011 /7：
 
 <ul>
 <li>卡洛奇资讯：卡洛奇应用架构师培训</li>
 </ul>
 </li>
-<li>2010 /7&mdash;2010 /8：
+<li>2010 /7&ndash;2010 /8：
 
 <ul>
 <li>中程在线：架构设计最佳实践与方法体系</li>
 </ul>
 </li>
-<li>2009 /8&mdash;2009 /8：
+<li>2009 /8&ndash;2009 /8：
 
 <ul>
 <li>Sun：sun架构师标准课程培训SL425，获SL425结业证书</li>
@@ -456,9 +456,9 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
   
   <entry>
     <title type="html"><![CDATA[博客搬家了]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/03/22/new-blog-site/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/03/22/new-blog-site/"/>
     <updated>2014-03-22T20:15:27+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/03/22/new-blog-site</id>
+    <id>http://www.nietongxue.xyz/blog/2014/03/22/new-blog-site</id>
     <content type="html"><![CDATA[<p>看到了芝明同学的博客以及引擎octopress, 感觉漂亮又方便，于是把博客搬家了。</p>
 
 <!-- more -->
@@ -470,43 +470,37 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <a href="http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/">http://fedcuit.github.io/blog/2012/08/02/config-octopress-on-mac/</a>
  见文章中的最后一个问题：YAML Exception</p>
 
-<p>```
-➜  octopress git:(source) ✗ rake generate</p>
-
-<h2>Generating Site with Jekyll</h2>
-
-<p>identical source/stylesheets/screen.css
+<pre><code>➜  octopress git:(source) ✗ rake generate
+## Generating Site with Jekyll
+identical source/stylesheets/screen.css
 Configuration from /Users/nielinjie/Projects/octopress/_config.yml
-Building site: source &ndash;> public
+Building site: source -&gt; public
 YAML Exception reading 2014-03-22-new-blog-site.markdown: invalid byte sequence in US-ASCII
-/Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)</p>
-
-<pre><code>from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
-from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
-from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
-from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
-from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
-from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
-from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
-from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'
+/Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `gsub': invalid byte sequence in US-ASCII (ArgumentError)
+    from /Users/nielinjie/Projects/octopress/plugins/backtick_code_block.rb:13:in `render_code_block'
+    from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:12:in `pre_filter'
+    from /Users/nielinjie/Projects/octopress/plugins/octopress_filters.rb:28:in `pre_render'
+    from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:112:in `block in pre_render'
+    from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `each'
+    from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:111:in `pre_render'
+    from /Users/nielinjie/Projects/octopress/plugins/post_filters.rb:166:in `do_layout'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/post.rb:195:in `render'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:200:in `block in render'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `each'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:199:in `render'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/lib/jekyll/site.rb:41:in `process'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/jekyll-0.12.0/bin/jekyll:264:in `&lt;top (required)&gt;'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `load'
+    from /Users/nielinjie/.rbenv/versions/1.9.3-p0/bin/jekyll:23:in `&lt;main&gt;'
 </code></pre>
-
-<p>```</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[WD My Book Live 作为下载机]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/01/23/wd-download-machine/"/>
+    <link href="http://www.nietongxue.xyz/blog/2013/01/23/wd-download-machine/"/>
     <updated>2013-01-23T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/01/23/wd-download-machine</id>
+    <id>http://www.nietongxue.xyz/blog/2013/01/23/wd-download-machine</id>
     <content type="html"><![CDATA[<p>入了一个家用存储设备： <a href="http://www.360buy.com/product/502047.html">西部数据（WD）My Book Live 3.5英寸家庭网络硬盘3TB(WDBACG0030HCH)</a> 京东号称降价￥400，现在入看来还是比较合算的。</p>
 
 <!-- more -->

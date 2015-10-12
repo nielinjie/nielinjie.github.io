@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: REST | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/rest/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <title><![CDATA[Category: Rest | 聂同学]]></title>
+  <link href="http://www.nietongxue.xyz/blog/categories/rest/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[REST]]></title>
-    <link href="http://nielinjie.github.io/blog/2012/12/05/said-20121205/"/>
+    <link href="http://www.nietongxue.xyz/blog/2012/12/05/said-20121205/"/>
     <updated>2012-12-05T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2012/12/05/said-20121205</id>
+    <id>http://www.nietongxue.xyz/blog/2012/12/05/said-20121205</id>
     <content type="html"><![CDATA[<p>不是REST就别说是REST，可以说是json-rcp，又不丢人。</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[关于REST风格的讨论（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2012/10/29/rest2/"/>
+    <link href="http://www.nietongxue.xyz/blog/2012/10/29/rest2/"/>
     <updated>2012-10-29T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2012/10/29/rest2</id>
+    <id>http://www.nietongxue.xyz/blog/2012/10/29/rest2</id>
     <content type="html"><![CDATA[<p>参与到讨论中的架构师只有两三位。看来公司内对REST有看法的同学并不多。邮件如下。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 
 <!-- more -->
@@ -34,7 +34,7 @@
 
 <p>其中，XN是这次公司里负责研究和介绍REST的主要人员，通过讨论，我理解这次侧重于研究的是<strong>展示逻辑部署于浏览器端</strong>这种应用模式，以及如何以这种模式替换目前广泛使用的类似SpringMVC的服务器端展示逻辑。其中浏览器到服务器端的HTTP接口，用到了类似REST形式。对于REST本身的内涵和意义，这次并没有作为重点关注。</p>
 
-<h3>答复: 关于REST风格 &ndash; NLJ（我）</h3>
+<h3>答复: 关于REST风格 - NLJ（我）</h3>
 
 <p>感谢大家参加讨论，对XN和CH的观点回复如下，供大家批评。</p>
 
@@ -77,7 +77,7 @@
 </ul>
 
 
-<h3>答复: 关于REST风格 &ndash; XN</h3>
+<h3>答复: 关于REST风格 - XN</h3>
 
 <ul>
 <li><p>缓存</p>
@@ -102,7 +102,7 @@
 </ul>
 
 
-<h3>答复: 关于REST风格 &ndash; CH</h3>
+<h3>答复: 关于REST风格 - CH</h3>
 
 <p>没有去听这个分享，就我理解对于缓存部分有些看法：</p>
 
@@ -134,9 +134,9 @@
   
   <entry>
     <title type="html"><![CDATA[关于REST风格的讨论]]></title>
-    <link href="http://nielinjie.github.io/blog/2012/10/25/rest/"/>
+    <link href="http://www.nietongxue.xyz/blog/2012/10/25/rest/"/>
     <updated>2012-10-25T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2012/10/25/rest</id>
+    <id>http://www.nietongxue.xyz/blog/2012/10/25/rest</id>
     <content type="html"><![CDATA[<p>近来，公司有关同事对REST风格和在企业应用中的使用（特别是b/s架构的应用中用于浏览器端于服务器端通信）做了研究，并提出了应用模式。但有些想法我个人并不认同，于是向公司架构师邮件列表发出了讨论邮件，现在也把邮件内容<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>贴在这里，希望与大家讨论批评，后续会持续将其他架构师的回复追加进来。</p>
 
 <!-- more -->

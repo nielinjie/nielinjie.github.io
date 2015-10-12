@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 工具 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/gong-ju/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/gong-ju/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/07/view3/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/06/07/view3/"/>
     <updated>2014-06-07T18:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/07/view3</id>
+    <id>http://www.nietongxue.xyz/blog/2014/06/07/view3</id>
     <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
 
 <p>这一篇讲讲如何实现的问题。</p>
@@ -38,28 +38,21 @@
 <p>一方面在构建和维护时，特征描述采用纯文本方式，可以说是一种简单地DSL。
 DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和角色间共享。</p>
 
-<p>```
-审批/逐个审批</p>
-
-<pre><code>-i 查看签报详细信息
--i 输入审批意见
-    -g 使用默认意见
-    -g 手工输入意见
-    -g 语音输入意见
--i 选择用户
-签报
-用户
+<pre><code>审批/逐个审批
+    -i 查看签报详细信息
+    -i 输入审批意见
+        -g 使用默认意见
+        -g 手工输入意见
+        -g 语音输入意见
+    -i 选择用户
+    签报
+    用户
+批量审批
+    -e 逐个审批
+    -i 查看待处理文件列表
+    -i 点击审批按钮
+……
 </code></pre>
-
-<p>批量审批</p>
-
-<pre><code>-e 逐个审批
--i 查看待处理文件列表
--i 点击审批按钮
-</code></pre>
-
-<p>……
-```</p>
 
 <p>另一方面在展现时，我们解析DSL，图形化交互式（并且略显炫酷滴 :-D）地展示。
 下面展示的是目前的状况。</p>
@@ -80,9 +73,9 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（一）：代码质量守则和工具]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/05/26/quality/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/05/26/quality/"/>
     <updated>2014-05-26T20:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/05/26/quality</id>
+    <id>http://www.nietongxue.xyz/blog/2014/05/26/quality</id>
     <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
 
 <p>对于一个历史悠久的老爷爷系统，我们的程序员定下了下面的代码质量守则：</p>

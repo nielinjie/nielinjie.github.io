@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/jia-gou/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -14,10 +14,41 @@
 
   
   <entry>
+    <title type="html"><![CDATA[架构设计不能忽视过程产出]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/10/04/process/"/>
+    <updated>2015-10-04T10:25:03+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/10/04/process</id>
+    <content type="html"><![CDATA[<p>跟开发过程中其他环节相比，架构设计往往更加依赖于架构师个人的经验和决定。
+有些架构师和团队对架构设计过程比较随意。
+我们常看到的介绍架构设计的文章，也多侧重于介绍设计结论。这些都似乎使得架构设计倾向强调最终结论，不太重视中间过程和过程产出。</p>
+
+<p>最终结论固然是重要的，但过程产出也有重要意义。从几个方面来看：</p>
+
+<!--more-->
+
+
+<ol>
+<li>架构设计需要迭代和回朔。在架构设计和执行的整个过程中，往往需要反复迭代，逐次逼近理想结论。期间有很多的回溯反复过程。如果没有必要的过程产出，很难有效地进行这种迭代。</li>
+<li>架构设计需要沟通和协作。架构设计作为开发工作的一个环节，与其他环节有许多沟通协作。特别是，实现环节将直接使用架构设计结论。这些沟通协作要求交付物<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> 有说服力，合作团队希望接受包括来龙去脉和前因后果的设计产出，而不仅仅是一个最终结论。过程产出能支持设计结论，提供说服力。</li>
+<li>架构设计需要积累和分享讨论。架构设计结论作为组织内的高价值知识，需要有效地积累和分享讨论。这同样要求设计结论有系统性、有说服力，需要有过程产出。</li>
+</ol>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>交付物，不一定是书面交付物。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[技术栈是架构设计的目的么？]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/10/02/techstack/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/10/02/techstack/"/>
     <updated>2015-10-02T22:46:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/10/02/techstack</id>
+    <id>http://www.nietongxue.xyz/blog/2015/10/02/techstack</id>
     <content type="html"><![CDATA[<p>不是。</p>
 
 <p>相比于架构设计的目的，技术栈更像是架构执行的手段。</p>
@@ -27,15 +58,14 @@
 <!--more-->
 
 
-<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup><br/>
- <sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></p>
+<p>既然架构设计和执行是连贯不分的一个整体，那么区分前者的输出和后置的输入有什么意义呢？我认为是有意义的。这是孰本孰末，孰因孰果的问题。试想这样的情况：架构执行过程中，如果发现栈中某技术不适用，是否可以更改？如果是执行的手段，我们可以便宜更改，只要不偏离设计结论；如果是设计的目的，我们不能随意更改，因为要改结论需要从论点、论据、论证一一检视更改。</p>
+
+<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
 <p>另一个角度说来，技术栈也确实常作为架构设计的重要产出物，体现着设计结论的一些方面。所以类似“XX技术在XX公司的应用”这样的句型，作为架构分享文章的标题经常出现。读到这样的文章，希望同学们以正确的姿势打开，从技术栈的展示中，窥见架构设计的来龙去脉。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>既然架构设计和执行是连贯不分的一个整体，那么区分前者的输出和后置的输入有什么意义呢？我认为是有意义的。这是孰本孰末，孰因孰果的问题。试想这样的情况：架构执行过程中，如果发现栈中某技术不适用，是否可以更改？如果是执行的手段，我们可以便宜更改，只要不偏离设计结论；如果是设计的目的，我们不能随意更改，因为要改结论需要从论点、论据、论证一一检视更改。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -44,9 +74,9 @@
   
   <entry>
     <title type="html"><![CDATA[“别让牛人写代码”]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/09/27/nocoolcode/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/09/27/nocoolcode/"/>
     <updated>2015-09-27T16:51:48+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/09/27/nocoolcode</id>
+    <id>http://www.nietongxue.xyz/blog/2015/09/27/nocoolcode</id>
     <content type="html"><![CDATA[<p>同意。</p>
 
 <!--more-->
@@ -64,9 +94,9 @@
   
   <entry>
     <title type="html"><![CDATA[“伪代码是好代码”]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/09/25/fakecode/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/09/25/fakecode/"/>
     <updated>2015-09-25T20:51:27+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/09/25/fakecode</id>
+    <id>http://www.nietongxue.xyz/blog/2015/09/25/fakecode</id>
     <content type="html"><![CDATA[<p>可以这么说。</p>
 
 <!-- more -->
@@ -84,9 +114,9 @@
   
   <entry>
     <title type="html"><![CDATA[以场景思维辅助风险驱动架构设计]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/08/13/scenario/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/08/13/scenario/"/>
     <updated>2015-08-13T15:15:34+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/08/13/scenario</id>
+    <id>http://www.nietongxue.xyz/blog/2015/08/13/scenario</id>
     <content type="html"><![CDATA[<p>“风险驱动架构设计”<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>需要架构师和团队及时发现风险。这一点是依赖团队经验的。这样的依赖常常引发人们的焦虑：是否所有的风险都被及时发现进而处理了？</p>
 
 <p>不用说缺乏相关经验的团队，即使是经验丰富的团队，随着进入陌生的业务领域或技术环境，也不能避免再次陷入到这样的焦虑之中。</p>
@@ -123,16 +153,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[雪人（五）]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/08/04/said-xueren4/"/>
-    <updated>2015-08-04T21:10:16+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/08/04/said-xueren4</id>
-    <content type="html"><![CDATA[<p>“最近好多展览，这些雪人真是太漂亮了！”<br/>
-“是的。可惜不能看到建造和维护这些雪人的展览。”</p>
 ]]></content>
   </entry>
   

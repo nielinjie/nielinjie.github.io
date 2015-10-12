@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 设计 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/she-ji/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/she-ji/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（八）：特征机制]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/16/feature/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/06/16/feature/"/>
     <updated>2014-06-16T21:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/16/feature</id>
+    <id>http://www.nietongxue.xyz/blog/2014/06/16/feature</id>
     <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
 
 <p>在《<a href="/blog/2013/09/01/dsl1/">一场似非而是的DSL</a>》和《<a href="/blog/2014/06/16/3d">三个划分维度</a>》中，
@@ -55,9 +55,9 @@
   
   <entry>
     <title type="html"><![CDATA[结构的要素]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/07/structure/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/06/07/structure/"/>
     <updated>2014-06-07T17:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/07/structure</id>
+    <id>http://www.nietongxue.xyz/blog/2014/06/07/structure</id>
     <content type="html"><![CDATA[<p>结构的基本要素有：</p>
 
 <ul>

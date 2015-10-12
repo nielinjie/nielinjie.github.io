@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/10/04/process/",
+    date:"2015-10-04T10:25:03+08:00",
+    title:"架构设计不能忽视过程产出",
+    categories:[
+      
+        "架构",
+      
+        "过程",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/10/02/techstack/",
     date:"2015-10-02T22:46:38+08:00",
     title:"技术栈是架构设计的目的么？",
@@ -21,9 +37,9 @@ window.site={
     title:"“别让牛人写代码”",
     categories:[
       
-        "开发",
-      
         "架构",
+      
+        "开发",
       
     ],
     series:[
@@ -141,11 +157,11 @@ window.site={
     title:"译：迁移至云架构（六）",
     categories:[
       
-        "云",
+        "翻译",
       
         "架构",
       
-        "翻译",
+        "云",
       
     ],
     series:[
@@ -161,11 +177,11 @@ window.site={
     title:"译：迁移至云架构（五）",
     categories:[
       
-        "云",
+        "翻译",
       
         "架构",
       
-        "翻译",
+        "云",
       
     ],
     series:[
@@ -181,11 +197,11 @@ window.site={
     title:"译：迁移至云架构（四）",
     categories:[
       
-        "云",
+        "翻译",
       
         "架构",
       
-        "翻译",
+        "云",
       
     ],
     series:[
@@ -201,11 +217,11 @@ window.site={
     title:"译：迁移至云架构（三）",
     categories:[
       
-        "云",
+        "翻译",
       
         "架构",
       
-        "翻译",
+        "云",
       
     ],
     series:[
@@ -221,11 +237,11 @@ window.site={
     title:"译：迁移至云架构（二）",
     categories:[
       
-        "云",
+        "翻译",
       
         "架构",
       
-        "翻译",
+        "云",
       
     ],
     series:[
@@ -241,11 +257,11 @@ window.site={
     title:"译：迁移至云架构（一）",
     categories:[
       
-        "云",
+        "翻译",
       
         "架构",
       
-        "翻译",
+        "云",
       
     ],
     series:[
@@ -493,15 +509,15 @@ window.site={
     title:"给老爷爷系统（四）：如何描述系统？（三）",
     categories:[
       
-        "DSL",
-      
-        "工具",
+        "架构",
       
         "开发",
       
-        "架构",
-      
         "质量",
+      
+        "工具",
+      
+        "dsl",
       
     ],
     series:[
@@ -533,9 +549,9 @@ window.site={
     title:"给老爷爷系统（三）：如何描述系统？（二）",
     categories:[
       
-        "开发",
-      
         "架构",
+      
+        "开发",
       
         "质量",
       
@@ -553,9 +569,9 @@ window.site={
     title:"给老爷爷系统（二）：如何描述系统？（一）",
     categories:[
       
-        "开发",
-      
         "架构",
+      
+        "开发",
       
         "质量",
       
@@ -615,11 +631,11 @@ window.site={
     title:"给老爷爷系统（一）：代码质量守则和工具",
     categories:[
       
-        "工具",
+        "质量",
       
         "开发",
       
-        "质量",
+        "工具",
       
     ],
     series:[
@@ -635,9 +651,9 @@ window.site={
     title:"敏捷的架构设计（六）：领域地图（二）",
     categories:[
       
-        "敏捷",
-      
         "架构",
+      
+        "敏捷",
       
     ],
     series:[
@@ -653,9 +669,9 @@ window.site={
     title:"敏捷的架构设计（五）：领域地图（一）",
     categories:[
       
-        "敏捷",
-      
         "架构",
+      
+        "敏捷",
       
     ],
     series:[
@@ -671,9 +687,9 @@ window.site={
     title:"向Octopress贡献（二）：连载系列",
     categories:[
       
-        "octopress",
-      
         "开发",
+      
+        "octopress",
       
     ],
     series:[
@@ -689,9 +705,9 @@ window.site={
     title:"向Octopress贡献（一）：动态内容",
     categories:[
       
-        "octopress",
-      
         "开发",
+      
+        "octopress",
       
     ],
     series:[
@@ -723,9 +739,9 @@ window.site={
     title:"敏捷的架构设计（四）：来提意见",
     categories:[
       
-        "敏捷",
-      
         "架构",
+      
+        "敏捷",
       
     ],
     series:[
@@ -741,9 +757,9 @@ window.site={
     title:"敏捷的架构设计（三）：第一块看板",
     categories:[
       
-        "敏捷",
-      
         "架构",
+      
+        "敏捷",
       
     ],
     series:[
@@ -759,9 +775,9 @@ window.site={
     title:"敏捷的架构设计（二）：风险驱动",
     categories:[
       
-        "敏捷",
-      
         "架构",
+      
+        "敏捷",
       
     ],
     series:[
@@ -777,9 +793,9 @@ window.site={
     title:"敏捷的架构设计（一）：自问自答",
     categories:[
       
-        "敏捷",
-      
         "架构",
+      
+        "敏捷",
       
     ],
     series:[
@@ -915,9 +931,9 @@ window.site={
     title:"一场似非而是的DSL（后传）",
     categories:[
       
-        "DSL",
-      
         "架构",
+      
+        "dsl",
       
     ],
     series:[
@@ -933,9 +949,9 @@ window.site={
     title:"一场似非而是的DSL（三）",
     categories:[
       
-        "DSL",
-      
         "架构",
+      
+        "dsl",
       
     ],
     series:[
@@ -951,9 +967,9 @@ window.site={
     title:"一场似非而是的DSL（二）",
     categories:[
       
-        "DSL",
-      
         "架构",
+      
+        "dsl",
       
     ],
     series:[
@@ -969,9 +985,9 @@ window.site={
     title:"一场似非而是的DSL（一）",
     categories:[
       
-        "DSL",
-      
         "架构",
+      
+        "dsl",
       
     ],
     series:[
@@ -1001,9 +1017,9 @@ window.site={
     title:"我们的新前端",
     categories:[
       
-        "前端",
-      
         "架构",
+      
+        "前端",
       
     ],
     series:[
@@ -1017,9 +1033,9 @@ window.site={
     title:"WD My Book Live 作为下载机",
     categories:[
       
-        "个人",
-      
         "折腾",
+      
+        "个人",
       
     ],
     series:[
@@ -1033,9 +1049,9 @@ window.site={
     title:"这些年写过的代码（一）",
     categories:[
       
-        "开发",
-      
         "折腾",
+      
+        "开发",
       
     ],
     series:[
@@ -1065,9 +1081,9 @@ window.site={
     title:"REST",
     categories:[
       
-        "REST",
-      
         "架构",
+      
+        "rest",
       
     ],
     series:[
@@ -1095,7 +1111,7 @@ window.site={
     title:"关于REST风格的讨论（二）",
     categories:[
       
-        "REST",
+        "rest",
       
         "架构",
       
@@ -1113,7 +1129,7 @@ window.site={
     title:"关于REST风格的讨论",
     categories:[
       
-        "REST",
+        "rest",
       
         "架构",
       
@@ -1145,9 +1161,9 @@ window.site={
     title:"Android 上的 Scala， 实战之路（三）",
     categories:[
       
-        "Android",
+        "scala",
       
-        "Scala",
+        "android",
       
     ],
     series:[
@@ -1163,9 +1179,9 @@ window.site={
     title:"Android 上的 Scala， 实战之路（二）",
     categories:[
       
-        "Android",
+        "scala",
       
-        "Scala",
+        "android",
       
     ],
     series:[
@@ -1181,9 +1197,9 @@ window.site={
     title:"Android 上的 Scala， 实战之路（一）",
     categories:[
       
-        "Android",
+        "scala",
       
-        "Scala",
+        "android",
       
     ],
     series:[

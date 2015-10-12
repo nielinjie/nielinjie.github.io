@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 知识在此 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/zhi-shi-zai-ci/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/zhi-shi-zai-ci/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[知识在此（一）：脑图大开]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/08/02/pkc/"/>
     <updated>2014-08-02T16:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/08/02/pkc</id>
+    <id>http://www.nietongxue.xyz/blog/2014/08/02/pkc</id>
     <content type="html"><![CDATA[<p><a href="http://pckmmap.duapp.com/" target="_blank">“知识在此：脑图大开”</a> ps：不是“脑洞大开”……</p>
 
 <!-- more -->
@@ -46,9 +46,9 @@
   
   <entry>
     <title type="html"><![CDATA[知识在此（零）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/08/02/pkc0/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/08/02/pkc0/"/>
     <updated>2014-08-02T14:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/08/02/pkc0</id>
+    <id>http://www.nietongxue.xyz/blog/2014/08/02/pkc0</id>
     <content type="html"><![CDATA[<p>什么是“知识在此”？</p>
 
 <!-- more -->

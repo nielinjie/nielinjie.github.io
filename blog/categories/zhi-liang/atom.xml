@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 质量 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/zhi-liang/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/zhi-liang/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[质量保障措施参考清单（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/04/10/resilient3/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/04/10/resilient3/"/>
     <updated>2015-04-10T10:18:14+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/04/10/resilient3</id>
+    <id>http://www.nietongxue.xyz/blog/2015/04/10/resilient3</id>
     <content type="html"><![CDATA[<p>（<a href="/blog/2015/04/10/resilient2/">接上篇</a>）</p>
 
 <h2>业务正确性和容错性</h2>
@@ -104,8 +104,8 @@
 <li>系统错误
 
 <ul>
-<li>大范围错误 &ndash; 归结为<a href="/blog/2015/04/10/resilient2/">可用性事故</a>。</li>
-<li>局部错误 &ndash; 归结为bug。</li>
+<li>大范围错误 - 归结为<a href="/blog/2015/04/10/resilient2/">可用性事故</a>。</li>
+<li>局部错误 - 归结为bug。</li>
 <li>需要系统错误率实时监控和报警。</li>
 <li>需要系统错误持续记录和分析。</li>
 </ul>
@@ -135,9 +135,9 @@
   
   <entry>
     <title type="html"><![CDATA[质量保障措施参考清单（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/04/10/resilient2/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/04/10/resilient2/"/>
     <updated>2015-04-10T10:18:14+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/04/10/resilient2</id>
+    <id>http://www.nietongxue.xyz/blog/2015/04/10/resilient2</id>
     <content type="html"><![CDATA[<p>（<a href="/blog/2015/04/09/resilient/">接上篇</a>）</p>
 
 <h2>可用性</h2>
@@ -219,9 +219,9 @@
   
   <entry>
     <title type="html"><![CDATA[质量保障措施参考清单（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2015/04/09/resilient/"/>
+    <link href="http://www.nietongxue.xyz/blog/2015/04/09/resilient/"/>
     <updated>2015-04-09T10:18:14+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2015/04/09/resilient</id>
+    <id>http://www.nietongxue.xyz/blog/2015/04/09/resilient</id>
     <content type="html"><![CDATA[<p>为更好的应对业务快速变化带来的挑战，许多系统正在从“关联系统”角色向着“<a href="/blog/2015/04/09/service/">服务</a>”角色转变。这样的转变对系统各方面质量特别是运行时质量提出了不一样的要求。如何管理并始终满足这些要求，打造弹性、容错、可管理的服务，是我们需要重点考虑的问题。</p>
 
 <!-- more -->
@@ -311,7 +311,7 @@
 <li>节点可（热）拔插。</li>
 </ul>
 </li>
-<li>变更 &ndash; 环境、代码
+<li>变更 - 环境、代码
 
 <ul>
 <li>诊断用现场数据</li>
@@ -358,9 +358,9 @@
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（四）：如何描述系统？（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/07/view3/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/06/07/view3/"/>
     <updated>2014-06-07T18:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/07/view3</id>
+    <id>http://www.nietongxue.xyz/blog/2014/06/07/view3</id>
     <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
 
 <p>这一篇讲讲如何实现的问题。</p>
@@ -381,28 +381,21 @@
 <p>一方面在构建和维护时，特征描述采用纯文本方式，可以说是一种简单地DSL。
 DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和角色间共享。</p>
 
-<p>```
-审批/逐个审批</p>
-
-<pre><code>-i 查看签报详细信息
--i 输入审批意见
-    -g 使用默认意见
-    -g 手工输入意见
-    -g 语音输入意见
--i 选择用户
-签报
-用户
+<pre><code>审批/逐个审批
+    -i 查看签报详细信息
+    -i 输入审批意见
+        -g 使用默认意见
+        -g 手工输入意见
+        -g 语音输入意见
+    -i 选择用户
+    签报
+    用户
+批量审批
+    -e 逐个审批
+    -i 查看待处理文件列表
+    -i 点击审批按钮
+……
 </code></pre>
-
-<p>批量审批</p>
-
-<pre><code>-e 逐个审批
--i 查看待处理文件列表
--i 点击审批按钮
-</code></pre>
-
-<p>……
-```</p>
 
 <p>另一方面在展现时，我们解析DSL，图形化交互式（并且略显炫酷滴 :-D）地展示。
 下面展示的是目前的状况。</p>
@@ -423,9 +416,9 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（三）：如何描述系统？（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2014/06/06/view2/"/>
+    <link href="http://www.nietongxue.xyz/blog/2014/06/06/view2/"/>
     <updated>2014-06-06T18:06:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2014/06/06/view2</id>
+    <id>http://www.nietongxue.xyz/blog/2014/06/06/view2</id>
     <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
 
 <p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>

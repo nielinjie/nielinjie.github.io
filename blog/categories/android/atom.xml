@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Android | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/android/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/android/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Android 上的 Scala， 实战之路（三）]]></title>
-    <link href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android3/"/>
+    <link href="http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android3/"/>
     <updated>2011-11-14T17:04:04+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2011/11/14/scala-on-android3</id>
+    <id>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android3</id>
     <content type="html"><![CDATA[<h3>三、介个是数据库接口？</h3>
 
 <p>完成了hello world，我便开始学习android的数据库接口。</p>
@@ -47,61 +47,86 @@ NullpointException抛出。</p>
 <p>ps：此前还有NosuchMethodException（Exception还是Error？记不清楚了。）抛出，是sqldroid使用了较新android api的缘故，调整了所使用的api版本，于是我的模拟器用上了很欢型的android4。</p>
 
 <p>“hello database”完整代码如下。代码还没有充分体现出scalaQuery的“强类型sql dsl”或者“composable结果处理”，这些后面应该会再做提及。
-```
-import org.scalaquery.ql.basic.{ BasicTable => Table }<br/>
-import org.scalaquery.ql.TypeMapper.<em><br/>
-import org.scalaquery.ql.</em><br/>
-import android.util.Log<br/>
-import org.scalaquery.session.<em><br/>
-import org.scalaquery.session.Database.threadLocalSession<br/>
-import org.scalaquery.ql.extended.SQLiteDriver.Implicit.</em><br/>
-import android.content.Context<br/>
-import android.database.sqlite.{ SQLiteDatabase, SQLiteOpenHelper }</p>
-
-<p>class Repository {<br/>
-  val dataPath = &ldquo;/data/data/net.nielinjie.beautyFans"<br/>
-  val db = Database.forURL("jdbc:sqldroid:&rdquo; + dataPath + &ldquo;/main.sqlite&rdquo;, driver = &ldquo;org.sqldroid.SqldroidDriver&rdquo;)<br/>
-  db.withSession {</p>
-
-<pre><code>try {  
-  SitesDB.Sites.ddl  
-}  
-</code></pre>
-
-<p>  }<br/>
-  object Sites {</p>
-
-<pre><code>def list(): List[String] = {  
-  db.withSession {  
-    (for (s &lt;- Query(SitesDB.Sites)) yield s.name).list  
-  }  
-}  
-</code></pre>
-
-<p>  }<br/>
-}</p>
-
-<p>object SitesDB {<br/>
-  object Sites extends Table<a href="" title="sites">(Int, String, String, Option[String])</a> {</p>
-
-<pre><code>def id = column[Int]("id", O.NotNull)  
-def name = column[String]("name")  
-def url = column[String]("url")  
-def description = column[Option[String]]("description")  
-def * = id ~ name ~ url ~ description  
-</code></pre>
-
-<p>  }<br/>
-}<br/>
-```</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>import org.scalaquery.ql.basic.{ BasicTable =&gt; Table }&lt;br/&gt;
+</span><span class='line'>import org.scalaquery.ql.TypeMapper.&lt;em&gt;&lt;br/&gt;
+</span><span class='line'>import org.scalaquery.ql.&lt;/em&gt;&lt;br/&gt;
+</span><span class='line'>import android.util.Log&lt;br/&gt;
+</span><span class='line'>import org.scalaquery.session.&lt;em&gt;&lt;br/&gt;
+</span><span class='line'>import org.scalaquery.session.Database.threadLocalSession&lt;br/&gt;
+</span><span class='line'>import org.scalaquery.ql.extended.SQLiteDriver.Implicit.&lt;/em&gt;&lt;br/&gt;
+</span><span class='line'>import android.content.Context&lt;br/&gt;
+</span><span class='line'>import android.database.sqlite.{ SQLiteDatabase, SQLiteOpenHelper }&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;class Repository {&lt;br/&gt;
+</span><span class='line'>  val dataPath = &ldquo;/data/data/net.nielinjie.beautyFans&rdquo;&lt;br/&gt;
+</span><span class='line'>  val db = Database.forURL(&ldquo;jdbc:sqldroid:&rdquo; + dataPath + &ldquo;/main.sqlite&rdquo;, driver = &ldquo;org.sqldroid.SqldroidDriver&rdquo;)&lt;br/&gt;
+</span><span class='line'>  db.withSession {&lt;br/&gt;
+</span><span class='line'>    try {&lt;br/&gt;
+</span><span class='line'>      SitesDB.Sites.ddl&lt;br/&gt;
+</span><span class='line'>    }&lt;br/&gt;
+</span><span class='line'>  }&lt;br/&gt;
+</span><span class='line'>  object Sites {&lt;br/&gt;
+</span><span class='line'>    def list(): List[String] = {&lt;br/&gt;
+</span><span class='line'>      db.withSession {&lt;br/&gt;
+</span><span class='line'>        (for (s &lt;- Query(SitesDB.Sites)) yield s.name).list&lt;br/&gt;
+</span><span class='line'>      }&lt;br/&gt;
+</span><span class='line'>    }&lt;br/&gt;
+</span><span class='line'>  }&lt;br/&gt;
+</span><span class='line'>}&lt;/p&gt;
+</span><span class='line'>
+</span><span class='line'>&lt;p&gt;object SitesDB {&lt;br/&gt;
+</span><span class='line'>  object Sites extends Table&lt;a href="" title="sites"&gt;(Int, String, String, Option[String])&lt;/a&gt; {&lt;br/&gt;
+</span><span class='line'>    def id = column&lt;a href="" title="id&quot;, O.NotNull)  
+</span><span class='line'>    def name = column[String](&quot;name"&gt;Int&lt;/a&gt;&lt;br/&gt;
+</span><span class='line'>    def url = column&lt;a href="" title="url"&gt;String&lt;/a&gt;&lt;br/&gt;
+</span><span class='line'>    def description = column&lt;a href="" title="description"&gt;Option[String]&lt;/a&gt;&lt;br/&gt;
+</span><span class='line'>    def * = id ~ name ~ url ~ description&lt;br/&gt;
+</span><span class='line'>  }&lt;br/&gt;
+</span><span class='line'>}&lt;br/&gt;</span></code></pre></td></tr></table></div></figure></p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Android 上的 Scala， 实战之路（二）]]></title>
-    <link href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android/"/>
+    <link href="http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android/"/>
     <updated>2011-11-14T16:04:04+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2011/11/14/scala-on-android</id>
+    <id>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android</id>
     <content type="html"><![CDATA[<h3>二、Hello World即遭不测</h3>
 
 <p>显然，首先是来一个Hello World。</p>
@@ -111,72 +136,59 @@ def * = id ~ name ~ url ~ description
 
 <p>直接使用android-plugin的项目模板。生成的程序非常简单，当然，Hello World都非常简单。
 Activity类的代码如下。
-```
-class MainActivity extends Activity {<br/>
-  override def onCreate(savedInstanceState: Bundle) {</p>
-
-<pre><code>super.onCreate(savedInstanceState)  
-setContentView(new TextView(this) {  
-  setText("Hello World")  
-})  
-</code></pre>
-
-<p>  }<br/>
-}<br/>
-```
+<code>
+class MainActivity extends Activity {  
+  override def onCreate(savedInstanceState: Bundle) {  
+    super.onCreate(savedInstanceState)  
+    setContentView(new TextView(this) {  
+      setText("Hello World")  
+    })  
+  }  
+}  
+</code>
 很简单，可以运行，就不截图了。
 然后我把我的代码改成这样。</p>
 
-<p>```
-import Helper._<br/>
-class MainActivity extends Activity {<br/>
-  override def onCreate(savedInstanceState: Bundle) {</p>
-
-<pre><code>super.onCreate(savedInstanceState)  
-setContentView((new TextView(this)).doto {  
-  text =&gt;  
-  text.setText("Hello World")  
-})  
-</code></pre>
-
-<p>  }<br/>
-}<br/>
-```</p>
-
-<p>这里的doto方法是我自己的一个公共模块里的方法（作为一个jar引入到工程中）,是我从clojure里面看着顺眼结果来的，作用是有机会调用一个object的一系列方法，然后还能返回这个对象本身。代码如下——
-```
-object Helper {<br/>
-  implicit def helpersWrap<a href="obj:%20A">A</a> = new {</p>
-
-<pre><code>def doto(f: A =&gt; Unit): A = {  
-  val re = obj  
-  f(re)  
-  re  
+<pre><code>import Helper._  
+class MainActivity extends Activity {  
+  override def onCreate(savedInstanceState: Bundle) {  
+    super.onCreate(savedInstanceState)  
+    setContentView((new TextView(this)).doto {  
+      text =&gt;  
+      text.setText("Hello World")  
+    })  
+  }  
 }  
 </code></pre>
 
-<p>  }<br/>
-}<br/>
-```</p>
+<p>这里的doto方法是我自己的一个公共模块里的方法（作为一个jar引入到工程中）,是我从clojure里面看着顺眼结果来的，作用是有机会调用一个object的一系列方法，然后还能返回这个对象本身。代码如下——
+<code>
+object Helper {  
+  implicit def helpersWrap[A](obj: A) = new {  
+    def doto(f: A =&gt; Unit): A = {  
+      val re = obj  
+      f(re)  
+      re  
+    }  
+  }  
+}  
+</code></p>
 
 <p>再运行，不测——NoSuchMethodException
 看了log，发现了问题在于——虚拟机企图在Object上去找doto方法，肯定是找不到的。
 于是我换了一种写法——
-```
-object Helper2 {<br/>
-  class Wrapped<a href="val%20obj:A">A</a>{</p>
-
-<pre><code>def doto(f: A =&gt; Unit): A = {  
-  val re = obj  
-  f(re)  
-  re  
+<code>
+object Helper2 {  
+  class Wrapped[A](val obj:A){  
+    def doto(f: A =&gt; Unit): A = {  
+      val re = obj  
+      f(re)  
+      re  
+    }  
+  }  
+  implicit def helpersWrap[A](obj: A) = new Wrapped(obj)  
 }  
-</code></pre>
-
-<p>  }<br/>
-  implicit def helpersWrap<a href="obj:%20A">A</a> = new Wrapped(obj)<br/>
-}<br/>
-```
+</code>
 可以运行了，然而问题在哪里呢？为什么jvm中运行效果一样的两种写法在Dalvik虚拟机里面表现出不一样的结果呢？
 看了一下两种写法编译出来的class代码
 第一种（运行错误的一种——object Helper）
@@ -187,32 +199,26 @@ object Helper2 {<br/>
 
 <p>可以看到，两种写法编译出来的方法type不同，主要是返回类型不同。这种差异确实是源代码差异的直接体现。从被调用方的情况看不出什么特别的情况。于是转换一下思路，从调用方来看看呢。
 专门写了个简单的调用方，代码如下——
-```
-object UseHelper {<br/>
-  import Helper._<br/>
-  def test = {</p>
-
-<pre><code>"hellow helper".doto {  
-  s =&gt;  
-    s.length()  
+<code>
+object UseHelper {  
+  import Helper._  
+  def test = {  
+    "hellow helper".doto {  
+      s =&gt;  
+        s.length()  
+    }  
+  }  
 }  
-</code></pre>
-
-<p>  }<br/>
-}<br/>
-object UseHelper2 {<br/>
-  import Helper2._<br/>
-  def test = {</p>
-
-<pre><code>"hellow helper".doto {  
-  s =&gt;  
-    s.length()  
+object UseHelper2 {  
+  import Helper2._  
+  def test = {  
+    "hellow helper".doto {  
+      s =&gt;  
+        s.length()  
+    }  
+  }  
 }  
-</code></pre>
-
-<p>  }<br/>
-}<br/>
-```
+</code>
 编译，再次看class文件。
 UseHelper
 <img src="/images/scala_on_android/use1.png"></p>
@@ -228,9 +234,9 @@ UseHelper
   
   <entry>
     <title type="html"><![CDATA[Android 上的 Scala， 实战之路（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2011/11/14/scala-on-android2/"/>
+    <link href="http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android2/"/>
     <updated>2011-11-14T15:04:04+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2011/11/14/scala-on-android2</id>
+    <id>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android2</id>
     <content type="html"><![CDATA[<h3>一、先开始再说</h3>
 
 <p>因为已经习惯用Scala开发，所以在开始尝试Android平台开发的时候，没有使用Java。

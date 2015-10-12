@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 前端 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/qian-duan/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/qian-duan/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[我们的新前端]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/02/25/our-new-front-end/"/>
+    <link href="http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end/"/>
     <updated>2013-02-25T21:27:49+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/02/25/our-new-front-end</id>
+    <id>http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end</id>
     <content type="html"><![CDATA[<p>公司历史悠久的B/S办公系（称为E系统）统需要添加移动支持。</p>
 
 <!-- more -->
@@ -75,8 +75,8 @@
 <p>MVC（或者其变体，我们不做区分）简单有效，开发人员比较熟悉，没有不使用的理由。我们考察了一些相关框架，最后落脚于下面两个：</p>
 
 <ul>
-<li>Backbone &ndash; 简单直白，社区活跃。虽然核心框架中不包含composite view、data binding等功能，但相关插件都有，可以方便的自由组合。</li>
-<li>Ember &ndash; 功能丰富，特别是如果配合ember data，基本可以一站式解决所有问题。缺点是比较新，特别是ember data还不是“Production Ready”，遇到问题不一定能快速解决。</li>
+<li>Backbone - 简单直白，社区活跃。虽然核心框架中不包含composite view、data binding等功能，但相关插件都有，可以方便的自由组合。</li>
+<li>Ember - 功能丰富，特别是如果配合ember data，基本可以一站式解决所有问题。缺点是比较新，特别是ember data还不是“Production Ready”，遇到问题不一定能快速解决。</li>
 </ul>
 
 

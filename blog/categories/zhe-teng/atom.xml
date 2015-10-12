@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: 折腾 | 聂同学]]></title>
-  <link href="http://nielinjie.github.io/blog/categories/zhe-teng/atom.xml" rel="self"/>
-  <link href="http://nielinjie.github.io/"/>
-  <updated>2015-10-05T14:29:16+08:00</updated>
-  <id>http://nielinjie.github.io/</id>
+  <link href="http://www.nietongxue.xyz/blog/categories/zhe-teng/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-10-12T17:02:53+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
     <email><![CDATA[nielinjie@gmail.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[WD My Book Live 作为下载机]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/01/23/wd-download-machine/"/>
+    <link href="http://www.nietongxue.xyz/blog/2013/01/23/wd-download-machine/"/>
     <updated>2013-01-23T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/01/23/wd-download-machine</id>
+    <id>http://www.nietongxue.xyz/blog/2013/01/23/wd-download-machine</id>
     <content type="html"><![CDATA[<p>入了一个家用存储设备： <a href="http://www.360buy.com/product/502047.html">西部数据（WD）My Book Live 3.5英寸家庭网络硬盘3TB(WDBACG0030HCH)</a> 京东号称降价￥400，现在入看来还是比较合算的。</p>
 
 <!-- more -->
@@ -58,9 +58,9 @@
   
   <entry>
     <title type="html"><![CDATA[这些年写过的代码（一）]]></title>
-    <link href="http://nielinjie.github.io/blog/2013/01/23/code/"/>
+    <link href="http://www.nietongxue.xyz/blog/2013/01/23/code/"/>
     <updated>2013-01-23T21:36:38+08:00</updated>
-    <id>http://nielinjie.github.io/blog/2013/01/23/code</id>
+    <id>http://www.nietongxue.xyz/blog/2013/01/23/code</id>
     <content type="html"><![CDATA[<p>2012年的最后两天，终于完成了一个久拖不决的任务：把几年来写过的代码review了一番。</p>
 
 <!-- more -->
