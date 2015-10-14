@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/10/09/driving/",
+    date:"2015-10-09T21:31:05+08:00",
+    title:"架构设计过程的驱动技术（上）",
+    categories:[
+      
+        "架构",
+      
+        "过程",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/10/04/process/",
     date:"2015-10-04T10:25:03+08:00",
     title:"架构设计不能忽视过程产出",
@@ -72,6 +88,10 @@ window.site={
     categories:[
       
         "架构",
+      
+        "敏捷",
+      
+        "过程",
       
     ],
     series:[
@@ -281,6 +301,8 @@ window.site={
       
         "敏捷",
       
+        "过程",
+      
     ],
     series:[
       
@@ -405,7 +427,7 @@ window.site={
       
         "开发",
       
-        "知识在此",
+        "产品",
       
     ],
     series:[
@@ -423,7 +445,7 @@ window.site={
       
         "开发",
       
-        "知识在此",
+        "产品",
       
     ],
     series:[
@@ -655,6 +677,8 @@ window.site={
       
         "敏捷",
       
+        "过程",
+      
     ],
     series:[
       
@@ -672,6 +696,8 @@ window.site={
         "架构",
       
         "敏捷",
+      
+        "过程",
       
     ],
     series:[
@@ -761,6 +787,8 @@ window.site={
       
         "敏捷",
       
+        "过程",
+      
     ],
     series:[
       
@@ -779,6 +807,8 @@ window.site={
       
         "敏捷",
       
+        "过程",
+      
     ],
     series:[
       
@@ -796,6 +826,8 @@ window.site={
         "架构",
       
         "敏捷",
+      
+        "过程",
       
     ],
     series:[
@@ -935,6 +967,8 @@ window.site={
       
         "dsl",
       
+        "设计",
+      
     ],
     series:[
       
@@ -952,6 +986,8 @@ window.site={
         "架构",
       
         "dsl",
+      
+        "设计",
       
     ],
     series:[
@@ -971,6 +1007,8 @@ window.site={
       
         "dsl",
       
+        "设计",
+      
     ],
     series:[
       
@@ -989,6 +1027,8 @@ window.site={
       
         "dsl",
       
+        "设计",
+      
     ],
     series:[
       
@@ -1003,7 +1043,7 @@ window.site={
     title:"能不能建立去中心化的言论机制？",
     categories:[
       
-        "吐槽",
+        "产品",
       
     ],
     series:[
@@ -1019,8 +1059,6 @@ window.site={
       
         "架构",
       
-        "前端",
-      
     ],
     series:[
       
@@ -1032,8 +1070,6 @@ window.site={
     date:"2013-01-23T21:36:38+08:00",
     title:"WD My Book Live 作为下载机",
     categories:[
-      
-        "折腾",
       
         "个人",
       
@@ -1049,9 +1085,9 @@ window.site={
     title:"这些年写过的代码（一）",
     categories:[
       
-        "折腾",
-      
         "开发",
+      
+        "产品",
       
     ],
     series:[

@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-10-12T17:02:53+08:00</updated>
+  <updated>2015-10-14T13:59:29+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,58 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[架构设计过程的驱动技术（上）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/10/09/driving/"/>
+    <updated>2015-10-09T21:31:05+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/10/09/driving</id>
+    <content type="html"><![CDATA[<p>驱动技术是方法论的第一步，是对目标问题进行分割，并分别进行管理跟进的技术。</p>
+
+<p>我们常说“这个问题从何处着手呢？”——驱动技术要做的就是：找到从何着手，跟进着手过程，评估着手效果，归纳着手结论。</p>
+
+<!--more-->
+
+
+<p>具体到架构设计方法论，驱动技术要解决的就是：</p>
+
+<ol>
+<li>如何将目标系统分解为可以应对的问题。</li>
+<li>如何跟进应对这些问题的过程。</li>
+<li>如何评价问题被应对的程度。</li>
+<li>如何归纳所有应对结果并形成架构设计。</li>
+</ol>
+
+
+<p>其中第一条，是区别各驱动技术的要点。也是理解和选择各驱动技术的要点。分解依据不同，跟进、评价、归纳等机制也相应不同。</p>
+
+<p>从这个角度看，架构设计中常见的驱动技术有：</p>
+
+<ol>
+<li><p>特征驱动，或者叫需求驱动。分解依据是目标系统的特征。特征驱动是收集筛选系统的特征，并跟进特征的实现措施的驱动技术。经典的架构设计方法论多采用这种驱动技术。</p>
+
+<p> 特征驱动将系统特征分为功能、质量、约束三个类型，从中选取“典型”的作为架构设计应对的问题。通过应用不同的架构技术，对每个选定特征制定实现策略。</p></li>
+<li><p>风险驱动。分解依据是目标系统生命周期中蕴藏的风险。风险驱动是发现生命周期中的风险，并跟进风险的控制措施的驱动技术。风险驱动是“不完备架构设计方法”的主要驱动技术。作为本人团队最常用的驱动技术，前期博客已经做了阐述<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p></li>
+<li><p>模式驱动。分解依据是根据团队积累的架构模式（也包括反模式）。模式驱动是筛选适用的模式，并跟进模式的应用措施的驱动技术。</p>
+
+<p> 严格的说，模式驱动不是一种顶层的驱动技术，因为模式本身，并不是对目标系统本身的分解（而特征和风险则是）。如果我们说得完整一点，应该是：“为了实现xx特征（或者控制xx风险），我们应用xx模式。”。所以模式驱动其实是在特征驱动或风险驱动之后接着应用的驱动技术。但实际很多情况下，团队只要稍微知道要设计的系统的类型，脑中已经冒出了许多模式，后续也是依据这些模式的应用来跟进，可以说淡化了原有的顶层驱动技术。</p></li>
+<li><p>直觉驱动。或者说不使用任何驱动技术。当团队处于非常熟悉的领域、平台、技术栈的时候，直觉驱动确实存在。这种情况下架构设计基本已不需要“过程”来管控。不需要过程管控的架构设计是否合理，团队中意见并不一致，个人认为要慎重<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p></li>
+</ol>
+
+
+<p>（下篇讲讲何时使用何种驱动技术，待链接）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">系列：敏捷的架构设计</a><br/><a href="http://www.nietongxue.xyz/blog/2015/08/13/scenario/">以场景思维辅助风险驱动架构设计</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p><a href="http://www.nietongxue.xyz/blog/2015/10/04/process/">架构设计不能忽视过程产出</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[架构设计不能忽视过程产出]]></title>
@@ -1348,88 +1400,6 @@ PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Se
 <li><strong>可用性数据持续监控与阙值报警。</strong></li>
 <li><strong>各节点可用性实时数据。</strong></li>
 </ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[“服务化”]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/04/09/service/"/>
-    <updated>2015-04-09T11:11:07+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/04/09/service</id>
-    <content type="html"><![CDATA[<p>“服务化”，就是既有系统进化为“服务”的努力。</p>
-
-<p>什么是服务？每个架构师都有不同的定义，在不同的场景下可能也有不同的定义。</p>
-
-<!-- more -->
-
-
-<p>在各系统“服务化”的场景中，我们对“服务”的定义是：</p>
-
-<blockquote><p><strong>自管理的业务能力。</strong></p></blockquote>
-
-<p>这个定义里有两个要点：</p>
-
-<ol>
-<li>自管理。自管理意味着服务自身对服务内容和服务质量负责。而不是用户负责或者双方共同负责。同时，也意味着对服务内容和质量有定义和进化的权利。</li>
-<li>业务：服务合同以业务为依据制定。比如：
-
-<ul>
-<li>服务内容，只包括某领域业务范围的服务，而不传递其他领域的服务。</li>
-<li>服务粒度，以业务场景为依据划分服务和设计交互。</li>
-<li>服务形式，以最大限度支持业务的变化为依据制定。</li>
-</ul>
-</li>
-</ol>
-
-
-<p>系统“服务化”实践中，我们用三个线索来思考改善这两个要点：</p>
-
-<ol>
-<li>系统应该/可以提供何种服务？：
-
-<ol>
-<li>系统的业务定位如何？即它在所参与的企业活动中的位置如何？</li>
-<li>这种定位是否理想？可能如何进化？</li>
-</ol>
-</li>
-<li>系统以何种形式提供服务？
-
-<ol>
-<li>基于所处的业务定位，何种服务形式可以适应业务快速发展？</li>
-<li>基于所处的企业IT环境，何种服务形式便于其他系统使用？</li>
-</ol>
-</li>
-<li>系统如何实现（或改善）自管理能力？<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>
-
-<ol>
-<li>“服务”对系统各方面质量特别是运行时质量提出了不一样的要求。</li>
-<li><a href="blog/filter/filter.html?filterName=series&amp;filterValue=%E8%B4%A8%E9%87%8F%E4%BF%9D%E9%9A%9C%E6%8E%AA%E6%96%BD%E5%8F%82%E8%80%83%E6%B8%85%E5%8D%95&amp;filterDes=Series%3A%20%E8%B4%A8%E9%87%8F%E4%BF%9D%E9%9A%9C%E6%8E%AA%E6%96%BD%E5%8F%82%E8%80%83%E6%B8%85%E5%8D%95">系列：质量保障措施参考清单</a></li>
-</ol>
-</li>
-</ol>
-
-
-<h4>ps: FAQ</h4>
-
-<p>Q：“服务化”是为了减小系统开发维护成本么？<br/>
-A：可能碰巧有这个效果，但目标不是减小单个系统的成本，而是减小企业范围的总成本。减小的是：业务变化时，IT系统适应业务并支持业务所需的成本。</p>
-
-<p>Q：“服务化”是“组件化”么？<br/>
-A：“服务化”是使既有既有系统形成适当的“组件”的过程。可以说“服务化”是为了“组件化”。“组件化”包括两个方面：</p>
-
-<ol>
-<li>形成适当的“组件”</li>
-<li>形成“组件”间有效组合并管理的机制。</li>
-</ol>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>主要考虑服务质量部分，服务内容部分已在1.中考虑。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
 
 ]]></content>
   </entry>
