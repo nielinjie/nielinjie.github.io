@@ -107,7 +107,7 @@
 <p>具体到架构设计方法论，驱动技术要解决的就是：</p>
 
 <ol>
-<li>如何将目标系统分解为可以应对的问题。</li>
+<li>如何将目标系统<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>分解为可以应对的问题。</li>
 <li>如何跟进应对这些问题的过程。</li>
 <li>如何评价问题被应对的程度。</li>
 <li>如何归纳所有应对结果并形成架构设计。</li>
@@ -122,11 +122,11 @@
 <li><p>特征驱动，或者叫需求驱动。分解依据是目标系统的特征。特征驱动是收集筛选系统的特征，并跟进特征的实现措施的驱动技术。经典的架构设计方法论多采用这种驱动技术。</p>
 
 <p> 特征驱动将系统特征分为功能、质量、约束三个类型，从中选取“典型”的作为架构设计应对的问题。通过应用不同的架构技术，对每个选定特征制定实现策略。</p></li>
-<li><p>风险驱动。分解依据是目标系统生命周期中蕴藏的风险。风险驱动是发现生命周期中的风险，并跟进风险的控制措施的驱动技术。风险驱动是“不完备架构设计方法”的主要驱动技术。作为本人团队最常用的驱动技术，前期博客已经做了阐述<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p></li>
-<li><p>模式驱动。分解依据是根据团队积累的架构模式（也包括反模式）。模式驱动是筛选适用的模式，并跟进模式的应用措施的驱动技术。</p>
+<li><p>风险驱动。分解依据是目标系统生命周期中蕴藏的风险。风险驱动是发现生命周期中的风险，并跟进风险的控制措施的驱动技术。风险驱动是“不完备架构设计方法”的主要驱动技术。作为本人团队最常用的驱动技术，前期博客已经做了阐述<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p></li>
+<li><p>模式驱动。分解依据是团队积累的架构模式（也包括反模式）。模式驱动是筛选适用的模式，并跟进模式的应用措施的驱动技术。</p>
 
-<p> 严格的说，模式驱动不是一种顶层的驱动技术，因为模式本身，并不是对目标系统本身的分解（而特征和风险则是）。如果我们说得完整一点，应该是：“为了实现xx特征（或者控制xx风险），我们应用xx模式。”。所以模式驱动其实是在特征驱动或风险驱动之后接着应用的驱动技术。但实际很多情况下，团队只要稍微知道要设计的系统的类型，脑中已经冒出了许多模式，后续也是依据这些模式的应用来跟进，可以说淡化了原有的顶层驱动技术。</p></li>
-<li><p>直觉驱动。或者说不使用任何驱动技术。当团队处于非常熟悉的领域、平台、技术栈的时候，直觉驱动确实存在。这种情况下架构设计基本已不需要“过程”来管控。不需要过程管控的架构设计是否合理，团队中意见并不一致，个人认为要慎重<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p></li>
+<p> 模式驱动不是一种顶层的驱动技术，因为架构模式本身，严格来讲并不是对目标系统本身的分解（而特征和风险则是）。如果我们说得完整一点，应该是：“为了实现xx特征（或者控制xx风险），我们应用xx模式。”。所以模式驱动其实是在特征驱动或风险驱动之后接着应用的驱动技术。但实际很多情况下，团队只要稍微知道要设计的系统的类型，脑中已经冒出了许多模式，后续也是依据这些模式的应用来跟进，可以说淡化了原有的顶层驱动技术。</p></li>
+<li><p>直觉驱动。或者说不使用任何驱动技术。当团队处于非常熟悉的领域、平台、技术栈的时候，直觉驱动确实存在。这种情况下架构设计基本已不需要“过程”来管控。不需要过程管控的架构设计是否合理，团队中意见并不一致，个人认为要慎重<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</p></li>
 </ol>
 
 
@@ -135,9 +135,11 @@
 <hr/>
 <ol>
 <li id="fn:1">
-<p><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">系列：敏捷的架构设计</a><br/><a href="/blog/2015/08/13/scenario/">以场景思维辅助风险驱动架构设计</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>本篇中以新系统架构设计为例，但所谈适合其他架构设计，比如架构重整改进、只设计一个模块等。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
-<p><a href="/blog/2015/10/04/process/">架构设计不能忽视过程产出</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<p><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">系列：敏捷的架构设计</a><br/><a href="/blog/2015/08/13/scenario/">以场景思维辅助风险驱动架构设计</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="/blog/2015/10/04/process/">架构设计不能忽视过程产出</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -361,7 +363,7 @@ var duoshuoQuery = {short_name:"nielinjie"};
 </script>
 <section>
   <h1>Categories</h1>
-    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (55)</a></li><li><a href='/blog/categories/kai-fa'>开发 (11)</a></li><li><a href='/blog/categories/guo-cheng'>过程 (9)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (8)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (7)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/she-ji'>设计 (6)</a></li><li><a href='/blog/categories/ge-ren'>个人 (5)</a></li><li><a href='/blog/categories/chan-pin'>产品 (5)</a></li><li><a href='/blog/categories/dsl'>dsl (5)</a></li><li><a href='/blog/categories/rest'>rest (3)</a></li><li><a href='/blog/categories/scala'>scala (3)</a></li><li><a href='/blog/categories/android'>android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li></ul>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (57)</a></li><li><a href='/blog/categories/kai-fa'>开发 (11)</a></li><li><a href='/blog/categories/guo-cheng'>过程 (10)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (8)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (7)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/she-ji'>设计 (6)</a></li><li><a href='/blog/categories/ge-ren'>个人 (5)</a></li><li><a href='/blog/categories/chan-pin'>产品 (5)</a></li><li><a href='/blog/categories/dsl'>dsl (5)</a></li><li><a href='/blog/categories/rest'>rest (3)</a></li><li><a href='/blog/categories/scala'>scala (3)</a></li><li><a href='/blog/categories/android'>android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li></ul>
 </section>
 
   

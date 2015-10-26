@@ -2,6 +2,38 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/10/26/method/",
+    date:"2015-10-26T21:24:20+08:00",
+    title:"方法论",
+    categories:[
+      
+        "架构",
+      
+        "过程",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/10/24/evolve/",
+    date:"2015-10-24T17:21:53+08:00",
+    title:"“架构是进化来的，不是设计来的。”",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "同学说 0",
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/10/09/driving/",
     date:"2015-10-09T21:31:05+08:00",
     title:"架构设计过程的驱动技术（上）",
@@ -52,7 +84,7 @@ window.site={
   {
     url:"/blog/2015/09/27/nocoolcode/",
     date:"2015-09-27T16:51:48+08:00",
-    title:"“别让牛人写代码”",
+    title:"“别让牛人写代码。”",
     categories:[
       
         "架构",
@@ -62,7 +94,7 @@ window.site={
     ],
     series:[
       
-        "同学说 2",
+        "同学说 0",
       
     ]
   },
@@ -70,7 +102,7 @@ window.site={
   {
     url:"/blog/2015/09/25/fakecode/",
     date:"2015-09-25T20:51:27+08:00",
-    title:"“伪代码是好代码”",
+    title:"“伪代码是好代码。”",
     categories:[
       
         "架构",
@@ -78,7 +110,7 @@ window.site={
     ],
     series:[
       
-        "同学说 1",
+        "同学说 0",
       
     ]
   },
