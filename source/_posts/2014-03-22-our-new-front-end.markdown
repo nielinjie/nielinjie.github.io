@@ -3,7 +3,7 @@ layout: post
 title: "我们的新前端"
 date: 2013-02-25 21:27:49 +0800
 comments: true
-categories: ["架构", "前端"]
+categories: ["架构"]
 ---
 
 

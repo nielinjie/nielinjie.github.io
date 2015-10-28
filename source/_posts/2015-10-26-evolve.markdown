@@ -1,0 +1,17 @@
+---
+layout: post
+title: "“架构是进化来的，不是设计来的。”"
+date: 2015-10-24 17:21:53 +0800
+comments: true
+categories: ["架构"]
+series: ["同学说 0"]
+keywords: "架构, 进化, 设计,"
+description: "架构是进化来的，不是设计来的。"
+
+---
+
+当然。
+
+<!--more-->
+
+但是，每一步的进化都是设计来的。

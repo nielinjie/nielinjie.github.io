@@ -3,7 +3,7 @@ layout: post
 title: "脑图大开：中秋发布"
 date: 2014-09-07 23:06:38 +0800
 comments: true
-categories: ["开发","知识在此"]
+categories: ["开发",产品]
 series: ["知识在此 4"]
 published: false
 

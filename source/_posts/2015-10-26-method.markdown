@@ -1,0 +1,16 @@
+---
+layout: post
+title: "方法论"
+date: 2015-10-26 21:24:20 +0800
+comments: true
+categories: ["架构","过程"]
+keywords: "架构, 方法论"
+description: "方法论"
+
+---
+
+方法论是路线图，不是轨道。
+
+<!--more-->
+
+想要像火车司机那样一趟又一趟，恐怕不能如愿。

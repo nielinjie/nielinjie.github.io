@@ -3,7 +3,7 @@ layout: post
 title: "敏捷的架构设计（五）：领域地图（一）"
 date: 2014-04-24 16:36:38 +0800
 comments: true
-categories: [架构, 敏捷]
+categories: [架构, 敏捷, 过程]
 series: ["敏捷的架构设计 5"]
 
 

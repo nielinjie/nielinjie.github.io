@@ -3,7 +3,7 @@ layout: post
 title: "WD My Book Live 作为下载机"
 date: 2013-01-23 21:36:38 +0800
 comments: true
-categories: [折腾, 个人]
+categories: [个人]
 ---
 
 

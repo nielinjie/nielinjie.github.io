@@ -1,0 +1,15 @@
+---
+layout: post
+title: "架构设计过程的驱动技术（三）"
+date: 2015-10-28 16:25:25 +0800
+comments: true
+published: false
+categories: ["架构","过程"]
+series: ["架构设计过程的驱动技术 1"]
+keywords: "架构, 过程, 驱动"
+description: "架构设计过程的驱动技术"
+
+---
+
+
+谈谈特征驱动与风险驱动的对比

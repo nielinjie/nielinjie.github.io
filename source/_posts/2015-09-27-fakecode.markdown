@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "“伪代码是好代码”"
+title: "“伪代码是好代码。”"
 date: 2015-09-25 20:51:27 +0800
 comments: true
 categories: ["架构"]
-series: ["同学说 1"]
+series: ["同学说 0"]
 
 
 ---

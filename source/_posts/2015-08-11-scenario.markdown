@@ -3,7 +3,7 @@ layout: post
 title: "以场景思维辅助风险驱动架构设计"
 date: 2015-08-13 15:15:34 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构",敏捷, 过程]
 
 ---
 

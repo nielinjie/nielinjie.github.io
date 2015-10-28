@@ -3,7 +3,7 @@ layout: post
 title: "能不能建立去中心化的言论机制？"
 date: 2013-08-20 21:36:38 +0800
 comments: true
-categories: [吐槽]
+categories: [产品]
 ---
 
 

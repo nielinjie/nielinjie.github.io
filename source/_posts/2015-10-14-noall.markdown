@@ -1,0 +1,11 @@
+---
+layout: post
+title: "“不完备的架构设计”需要完备的驱动技术"
+date: 2015-10-14 12:08:15 +0800
+comments: true
+categories: ["架构","过程"]
+published: false
+keywords: "不完备, 架构设计, 架构,驱动,过程"
+description: "“不完备的架构设计”需要完备的驱动技术"
+
+---
