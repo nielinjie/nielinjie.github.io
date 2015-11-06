@@ -1,0 +1,29 @@
+---
+layout: post
+title: "读TOGAF（一）：企业大火锅"
+date: 2015-11-07 00:05:18 +0800
+comments: true
+categories: ["架构","TOGAF"]
+published: true
+series: ["读TOGAF 1"]
+keywords: "架构, TOGAF, 企业, 连续体, 火锅"
+description: "读TOGAF：企业大火锅"
+
+---
+
+Enterprise Continuum， 我称作企业大火锅。
+
+
+
+<!--more-->
+
+热气腾腾地沸着。各种物料在里面翻滚，碰撞，成熟，积累。
+
+食客不用看见那么多，眼中只有这一刻的这一坨，先捞去也……
+
+
+[^1]
+
+[^1]: 比喻有风险。如有跑偏，概不负责。
+
+{%img  /images/togaf/hot.JPG 500 %}

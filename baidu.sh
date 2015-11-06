@@ -1,5 +1,4 @@
 #!/bin/bash
-rake generate
 if [ x$1 != x ]
 then
   if [ x$1 != xall ]
