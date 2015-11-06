@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Togaf | 聂同学]]></title>
+  <link href="http://www.nietongxue.xyz/blog/categories/togaf/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2015-11-07T01:27:30+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
+  <author>
+    <name><![CDATA[nielinjie]]></name>
+    <email><![CDATA[nielinjie@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[读TOGAF（一）：企业大火锅]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/11/07/togaf/"/>
+    <updated>2015-11-07T00:05:18+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/11/07/togaf</id>
+    <content type="html"><![CDATA[<p>Enterprise Continuum， 我称作企业大火锅。</p>
+
+<!--more-->
+
+
+<p>热气腾腾地沸着。各种物料在里面翻滚，碰撞，成熟，积累。</p>
+
+<p>食客不用看见那么多，眼中只有这一刻的这一坨，先捞去也……</p>
+
+<p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<p><img src="/images/togaf/hot.JPG" width="500"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>比喻有风险。如有跑偏，概不负责。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

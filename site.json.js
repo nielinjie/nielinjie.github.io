@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/11/07/togaf/",
+    date:"2015-11-07T00:05:18+08:00",
+    title:"读TOGAF（一）：企业大火锅",
+    categories:[
+      
+        "架构",
+      
+        "togaf",
+      
+    ],
+    series:[
+      
+        "读TOGAF 1",
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/10/28/driving2/",
     date:"2015-10-28T09:06:49+08:00",
     title:"架构设计过程的驱动技术（二）",

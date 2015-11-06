@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-10-28T16:04:05+08:00</updated>
+  <updated>2015-11-07T01:27:30+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[读TOGAF（一）：企业大火锅]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/11/07/togaf/"/>
+    <updated>2015-11-07T00:05:18+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/11/07/togaf</id>
+    <content type="html"><![CDATA[<p>Enterprise Continuum， 我称作企业大火锅。</p>
+
+<!--more-->
+
+
+<p>热气腾腾地沸着。各种物料在里面翻滚，碰撞，成熟，积累。</p>
+
+<p>食客不用看见那么多，眼中只有这一刻的这一坨，先捞去也……</p>
+
+<p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<p><img src="/images/togaf/hot.JPG" width="500"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>比喻有风险。如有跑偏，概不负责。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[架构设计过程的驱动技术（二）]]></title>
@@ -98,37 +126,6 @@
 <p><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">系列：敏捷的架构设计</a><br/><a href="/blog/2015/08/13/scenario/">以场景思维辅助风险驱动架构设计</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
 <p><a href="/blog/2015/10/04/process/">架构设计不能忽视过程产出</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构设计不能忽视过程产出]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/04/process/"/>
-    <updated>2015-10-04T10:25:03+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/04/process</id>
-    <content type="html"><![CDATA[<p>跟开发过程中其他环节相比，架构设计往往更加依赖于架构师个人的经验和决定。
-有些架构师和团队对架构设计过程比较随意。
-我们常看到的介绍架构设计的文章，也多侧重于介绍设计结论。这些都似乎使得架构设计倾向强调最终结论，不太重视中间过程和过程产出。</p>
-
-<p>最终结论固然是重要的，但过程产出也有重要意义。从几个方面来看：</p>
-
-<!--more-->
-
-
-<ol>
-<li>架构设计需要迭代和回朔。在架构设计和执行的整个过程中，往往需要反复迭代，逐次逼近理想结论。期间有很多的回溯反复过程。如果没有必要的过程产出，很难有效地进行这种迭代。</li>
-<li>架构设计需要沟通和协作。架构设计作为开发工作的一个环节，与其他环节有许多沟通协作。特别是，实现环节将直接使用架构设计结论。这些沟通协作要求交付物<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup> 有说服力，合作团队希望接受包括来龙去脉和前因后果的设计产出，而不仅仅是一个最终结论。过程产出能支持设计结论，提供说服力。</li>
-<li>架构设计需要积累和分享讨论。架构设计结论作为组织内的高价值知识，需要有效地积累和分享讨论。这同样要求设计结论有系统性、有说服力，需要有过程产出。</li>
-</ol>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>交付物，不一定是书面交付物。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
