@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/11/20/system-like/",
+    date:"2015-11-20T10:39:55+08:00",
+    title:"系统要像什么？",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/11/07/togaf/",
     date:"2015-11-07T00:05:18+08:00",
     title:"读TOGAF（一）：企业大火锅",
