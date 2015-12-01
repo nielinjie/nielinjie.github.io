@@ -1,0 +1,23 @@
+---
+layout: post
+title: "读TOGAF（二）：ADM初瞥"
+date: 2015-11-17 00:05:18 +0800
+comments: true
+categories: ["架构","TOGAF"]
+published: true
+series: ["读TOGAF 2"]
+keywords: "架构, TOGAF, ADM"
+description: "读TOGAF：ADM"
+
+---
+
+<!--more-->
+
+* ADM建议一系列的阶段和步骤。但不建议范围[^1]。
+* ADM是渐进迭代的。每次迭代有自己的范围，渐进产出。
+* ADM是可以调整包括裁剪的。但调整必须管理并维持。
+* ADM通过架构仓库参与到企业火锅[^2]。
+
+
+[^1]: 架构范围包括：宽度、深度、时间范围、架构领域。
+[^2]: [企业火锅](/blog/2015/11/07/togaf/)

@@ -26,4 +26,4 @@ Enterprise Continuum， 我称作企业大火锅。
 
 [^1]: 比喻有风险。如有跑偏，概不负责。
 
-{%img  /images/togaf/hot.JPG 500 %}
+{%img  /images/togaf/hot.jpg 500 %}
