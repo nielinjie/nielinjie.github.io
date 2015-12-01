@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-11-20T10:48:07+08:00</updated>
+  <updated>2015-12-01T20:41:33+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Orchestration 和 Choreography]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/11/29/oc/"/>
+    <updated>2015-11-29T15:01:02+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/11/29/oc</id>
+    <content type="html"><![CDATA[<p>Orchestration 和 Choreography，这个两个词在跟“服务”有关的架构讨论中常有出现。比如微服务和SOA。</p>
+
+<!--more-->
+
+
+<p>如果直译的话，这两个词一个是“编曲”，一个“编舞”。</p>
+
+<p>编曲和编舞都是编。编就是安排、设计。不论是微服务的服务还是SOA的服务，要想沟通协同，合力完成业务请求，都是需要安排设计的。</p>
+
+<p>但二者编排的对象不同，一个是曲一个是舞。特别是，按照词的本意，这里的“曲”指的是“管弦乐曲”，是相对复杂宏大的演奏。</p>
+
+<p>曲和舞有什么区别呢？</p>
+
+<ol>
+<li>曲需要指挥，舞不需要。乐者在演奏时，需要指挥随时指挥协调。而舞者则不需要，按照事前安排做好自己就行。需要跟其他舞者合作时，也由自己直接沟通完成。</li>
+<li>曲分工复杂，舞比较简单。管弦乐曲演奏需要多种不同乐器多种不同乐者，要求彼此配合得当，才能演出成功。而舞蹈没那么多分工，即使是大型舞蹈，台上人多，但角色也就数种而已。</li>
+<li>曲比较严肃，舞比较宽松。乐者的演奏和配合一丝不苟，少有随性。舞者则有较多的个人发挥空间。</li>
+</ol>
+
+
+<p>SOA的理念是自上而下，比较多的依赖于集中安排，运行时也需要明确的中间件进行中央控制协调。边界内有多种类型的服务，相互之间严密配合。SOA的风格类似于编曲。</p>
+
+<p>跟SOA相比，微服务风格更类似于编舞。边界内的服务遵循简单的约定，负责一个特定的领域。他们的地位相似，实现方式和沟通方式由自己选择。</p>
+
+<p>编曲和编舞是一种形象的比喻，并不会完全精确。架构师编排服务的时候不要照抄。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[系统要像什么？]]></title>
@@ -24,6 +57,34 @@
 
 
 <p>要想办法让系统像一个生物，如能更进一步，要像一个社会。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[读TOGAF（二）：ADM初瞥]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm/"/>
+    <updated>2015-11-17T00:05:18+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm</id>
+    <content type="html"><![CDATA[<!--more-->
+
+
+<ul>
+<li>ADM建议一系列的阶段和步骤。但不建议范围<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</li>
+<li>ADM是渐进迭代的。每次迭代有自己的范围，渐进产出。</li>
+<li>ADM是可以调整包括裁剪的。但调整必须管理并维持。</li>
+<li>ADM通过架构仓库参与到企业火锅<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>架构范围包括：宽度、深度、时间范围、架构领域。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p><a href="/blog/2015/11/07/togaf/">企业火锅</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
 ]]></content>
   </entry>
   
@@ -65,34 +126,6 @@
 <p>由于不是顶层驱动技术，模式驱动很难验证最终解决了问题，比如不能说：“由于我们使用了xx、yy、zz模式，所以我们能完成XX系统。”反过来，对于顶层的驱动技术，就可以说：“由于我们实现了所有典型的特征，所以我们能实现XX系统”，或者，“由于我们遏制了所有（发现了的）风险，所有我们能完成XX系统”。所以如果使用模式驱动，应该要回过头来，借助顶层驱动技术来验证问题的解决。从这个意义上来讲，可以说模式驱动是被顶层驱动嵌套使用的。</p>
 
 <p>特征驱动和风险驱动分解问题时，也会频繁使用模式思维，但这不是模式驱动。比如说特征驱动，整理系统的质量需求的时候，我们常常使用一个“质量需求检查表”。其中列举了特定类型系统常见的质量需求。我们对此一一检视，判别目标系统是否有此需求。这是典型的模式思维。但这里的模式不是架构设计模式，这里也不是将目标系统分解为模式进行跟进。所以不是模式驱动的架构设计。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[方法论]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/26/method/"/>
-    <updated>2015-10-26T21:24:20+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/26/method</id>
-    <content type="html"><![CDATA[<p>方法论是路线图，不是轨道。</p>
-
-<!--more-->
-
-
-<p>想要像火车司机那样一趟又一趟，恐怕不能如愿。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[“架构是进化来的，不是设计来的。”]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/24/evolve/"/>
-    <updated>2015-10-24T17:21:53+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/24/evolve</id>
-    <content type="html"><![CDATA[<p>当然。</p>
-
-<!--more-->
-
-
-<p>但是，每一步的进化都是设计来的。</p>
 ]]></content>
   </entry>
   

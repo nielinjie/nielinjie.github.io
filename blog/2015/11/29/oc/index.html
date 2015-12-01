@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>译：迁移至云架构（二） - 聂同学</title>
+  <title>Orchestration 和 Choreography - 聂同学</title>
   <meta name="author" content="nielinjie">
   
-  <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
-  <meta name="keywords" content="聂同学, 架构师, 架构, 开发, 敏捷, 实践, 思考, 程序员">
+  <meta name="description" content="Orchestration 和 Choreography">
+  <meta name="keywords" content="微服务, SOA, 服务, Orchestration, Choreography, 编舞, 编曲">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2015/05/23/cloud2">
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2015/11/29/oc">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -74,7 +74,7 @@
   
   <header>
     
-      <h1 class="entry-title">译：迁移至云架构（二）</h1>
+      <h1 class="entry-title">Orchestration 和 Choreography</h1>
     
     
       <p class="meta">
@@ -90,102 +90,38 @@
   
 
 
-<time datetime="2015-05-23T11:15:31+08:00" pubdate data-updated="true"></time>
+<time datetime="2015-11-29T15:01:02+08:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>（<a href="/blog/2015/05/23/cloud/">接前文</a>）</p>
-
-<h2>云架构的定义</h2>
-
-<h3><a name="12f"></a>十二因子应用</h3>
-
-<p>“十二因子应用”是一些云架构模式。它们专注于速度、稳定、伸缩，主要包括强调声明性配置、无状态和无共享的横向伸缩进程、全面与部署环境解耦合等方面。当前大量的云平台都为部署十二因子应用优化。</p>
-
-<p>在“十二因子应用”的说法中，“应用”指的是单个部署单元。</p>
-
-<p>十二因子应用表述为：<br/>
-（省略，可参见官方中文版：<a href="http://12factor.net/zh_cn/">十二因子应用</a>）</p>
+<div class="entry-content"><p>Orchestration 和 Choreography，这个两个词在跟“服务”有关的架构讨论中常有出现。比如微服务和SOA。</p>
 
 <!--more-->
 
 
-<p>十二因子让应用可以快速部署，因为对环境没有多少要求。对环境没有要求也让云平台可以采用简单一致的机制来自动化地提供新的环境。这是十二因子应用在速度方面的意义。</p>
+<p>如果直译的话，这两个词一个是“编曲”，一个“编舞”。</p>
 
-<p>十二因子也使得应用满足“生命短促”的要求，换句话说我们可以以很小的成本丢弃这些应用。首先应用环境本身完全是可丢弃的，同时应用的状态，不管内存中的还是持久化的，都外化到支持服务中。这就使得应用可以简单地自动化地伸缩。在大多数情况下，平台只要按想要的数量简单拷贝现有的环境然后启动进程就可以了。当需要缩减的时候，只要关闭运行中的进程，然后删除相应地环境就可以了，完全不用备份或者保护这些环境。这是十二因子应用在伸缩方面的意义。</p>
+<p>编曲和编舞都是编。编就是安排、设计。不论是微服务的服务还是SOA的服务，要想沟通协同，合力完成业务请求，都是需要安排设计的。</p>
 
-<p>最后，应用的可丢弃性使得平台自动错误恢复非常容易快速。同时，将日志作为事件流大大地帮助了应用状态的可视化。环境的等同、一致的配置机制以及支持服务机制则使得平台能为应用运行的各个方面提供更强大的可视化能力。这是十二因子应用在稳定方面的意义。</p>
+<p>但二者编排的对象不同，一个是曲一个是舞。特别是，按照词的本意，这里的“曲”指的是“管弦乐曲”，是相对复杂宏大的演奏。</p>
 
-<h3><a name="ms"></a>微服务</h3>
-
-<p>微服务代表了将单体架构<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>业务系统解构为独立可部署的服务。每个服务代表一个业务能力，或者说是产生业务价值的最小原子服务。</p>
-
-<ul>
-<li>我们将业务领域解耦为独立可部署的上下文的同时，我们就解耦了相关的变化迭代。当变化被局限在单个的上下文，这些变化可以独立于业务的其他方面。结果就是可以更频繁迅速地落实，从而持续不断地产生价值。</li>
-<li>便于加速开发。包括可以投入更多地开发人员。可以将开发人员分开，让他们平行工作，不用过多的交流协作。</li>
-<li>新加入的开发人员上手更快，因为他们需要学习的东西更少，需要打交道的团队也更小。</li>
-<li>应用新技术可以更容易。在单体架构应用中应用新技术风险较大，一旦犯错可能拖累整个企业架构。</li>
-<li>微服务带来独立有效的伸缩。巨大架构应用也可以伸缩，但要求所有部件一起伸缩，不光是哪些负载重的部件。</li>
-</ul>
-
-
-<h3><a name="ai"></a>敏捷的自助基础设施</h3>
-
-<p>云架构应用的部署与维护往往由开发团队负责。支持自助的平台往往有帮助。</p>
-
-<p>好的平台能为用户建立一个抽象层。在IAAS中，我们通过调用API来建立虚拟服务器、网络、存储，然后应用不同形式的配置和自动化来运行我们的应用和支持服务。平台现在鼓励我们以应用和支持服务的角度思考。</p>
-
-<p>应用代码只是简单地被push到git仓库，平台就开始自动编译打包、建立应用环境、部署应用、启动必要地进程。团队不需要知道代码在哪里运行，也不用知道代码是怎么到那里去的。</p>
-
-<p>支持服务也采用类似的机制。不论需要数据库、消息队列还是邮件服务器，只需要告诉平台你的需求。现在的平台大多提供SQL/NoSQL数据库、消息队列、搜索引擎、缓存等各种重要的支持服务。这些服务的实例可以被绑定到我们应用，必要地使用许可被自动注入到应用中。完全不需要繁琐和容易出错的各种定制。</p>
-
-<p>这些平台还提供各种其他能力：</p>
-
-<ul>
-<li>应用实例自动化和按需的伸缩。</li>
-<li>应用健康管理。</li>
-<li>动态路由和负载均衡。</li>
-<li>日志和测量数据的汇总。</li>
-</ul>
-
-
-<p>这一系列的工具保障了团队可以敏捷地开发和运营他们的服务，并且做到快速、稳定、可伸缩。</p>
-
-<h3>基于API的协作</h3>
-
-<p>云架构中，服务之间唯一的交互方式是API，公开发布和有版本的API。通常采用HTTP上的REST风格并使用JSON序列化，但其他协议和序列化方式也完全可以。</p>
-
-<p>团队可以在需要的时候部署新的功能。只要他们不破坏任何既有的API合同，就不用跟其他团队协调同步。跟自助基础设施交互的主要方式也是API，不论新建、伸缩还是维护应用基础设施，都通过API的调用进行。</p>
-
-<p>通过<a href="http://martinfowler.com/articles/consumerDrivenContracts.html">客户驱动合同</a>，交互双方校验合同。服务的消费者不允许访问依赖的实现细节，也不能直接访问它的数据存储。事实上，只有一个服务可以访问它自己的数据存储。这种强制解耦合有利于云架构的速度。</p>
-
-<h3>“反脆弱”</h3>
-
-<p>“反脆弱”并不是指的鲁棒性或弹性。而是指系统在压力下变得更强的特性。什么系统可以做到这个？比如人的免疫系统，暴露的时候变得更强而隔离的时候变得更弱。比如，Netflix Simian Army项目有个Chaos Monkey子模块，通过向生产部件中随机注入错误来寻找架构中的弱点。通过显式地寻找弱点、注入错误、强制修复，架构自然随时间逐渐变强。</p>
-
-<h2>总结</h2>
-
-<p>以下为译者自己总结的 :-)</p>
+<p>曲和舞有什么区别呢？</p>
 
 <ol>
-<li>提出创新时代的四个问题：速度、稳定、伸缩、移动</li>
-<li>云架构在这四个问题上大致有何思路。</li>
-<li>针对四个问题，云架构有五个措施：十二因子、微服务、自助基础设施、基于API协作、反脆弱</li>
+<li>曲需要指挥，舞不需要。乐者在演奏时，需要指挥随时指挥协调。而舞者则不需要，按照事前安排做好自己就行。需要跟其他舞者合作时，也由自己直接沟通完成。</li>
+<li>曲分工复杂，舞比较简单。管弦乐曲演奏需要多种不同乐器多种不同乐者，要求彼此配合得当，才能演出成功。而舞蹈没那么多分工，即使是大型舞蹈，台上人多，但角色也就数种而已。</li>
+<li>曲比较严肃，舞比较宽松。乐者的演奏和配合一丝不苟，少有随性。舞者则有较多的个人发挥空间。</li>
 </ol>
 
 
-<p>（<a href="/blog/2015/05/29/cloud3/">后文继续，需要转变</a>）</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>monolithic application architectures<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
+<p>SOA的理念是自上而下，比较多的依赖于集中安排，运行时也需要明确的中间件进行中央控制协调。边界内有多种类型的服务，相互之间严密配合。SOA的风格类似于编曲。</p>
 
+<p>跟SOA相比，微服务风格更类似于编舞。边界内的服务遵循简单的约定，负责一个特定的领域。他们的地位相似，实现方式和沟通方式由自己选择。</p>
+
+<p>编曲和编舞是一种形象的比喻，并不会完全精确。架构师编排服务的时候不要照抄。</p>
 </div>
 
 
@@ -208,12 +144,12 @@
   
 
 
-<time datetime="2015-05-23T11:15:31+08:00" pubdate data-updated="true"></time>
+<time datetime="2015-11-29T15:01:02+08:00" pubdate data-updated="true"></time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/yun/'>云</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/fan-yi/'>翻译</a>
+    <a class='category' href='/blog/categories/jia-gou/'>架构</a>
   
 </span>
 
@@ -227,7 +163,6 @@
   
 
 
-<div class="post-series" data-series="迁移至云架构 1,"></div>
 <script type="text/javascript" charset="utf-8">
   (function(){
     function series(){

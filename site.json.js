@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/11/29/oc/",
+    date:"2015-11-29T15:01:02+08:00",
+    title:"Orchestration 和 Choreography",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/11/20/system-like/",
     date:"2015-11-20T10:39:55+08:00",
     title:"系统要像什么？",
@@ -11,6 +25,24 @@ window.site={
       
     ],
     series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/11/17/togaf-adm/",
+    date:"2015-11-17T00:05:18+08:00",
+    title:"读TOGAF（二）：ADM初瞥",
+    categories:[
+      
+        "架构",
+      
+        "togaf",
+      
+    ],
+    series:[
+      
+        "读TOGAF 2",
       
     ]
   },

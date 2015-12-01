@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Togaf | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/togaf/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-11-20T10:48:07+08:00</updated>
+  <updated>2015-12-01T20:41:33+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,34 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[读TOGAF（二）：ADM初瞥]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm/"/>
+    <updated>2015-11-17T00:05:18+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm</id>
+    <content type="html"><![CDATA[<!--more-->
+
+
+<ul>
+<li>ADM建议一系列的阶段和步骤。但不建议范围<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</li>
+<li>ADM是渐进迭代的。每次迭代有自己的范围，渐进产出。</li>
+<li>ADM是可以调整包括裁剪的。但调整必须管理并维持。</li>
+<li>ADM通过架构仓库参与到企业火锅<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>架构范围包括：宽度、深度、时间范围、架构领域。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p><a href="/blog/2015/11/07/togaf/">企业火锅</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[读TOGAF（一）：企业大火锅]]></title>
