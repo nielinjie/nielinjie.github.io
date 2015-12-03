@@ -125,10 +125,6 @@
     <lastmod>2015-03-17T10:06:38+08:00</lastmod>
   </url>
   <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/01/30/resume/</loc>
-    <lastmod>2015-01-30T14:06:38+08:00</lastmod>
-  </url>
-  <url>
     <loc>http://www.nietongxue.xyz/blog/2014/08/02/pkc/</loc>
     <lastmod>2014-08-02T16:06:38+08:00</lastmod>
   </url>
@@ -324,10 +320,13 @@
     <loc>http://www.nietongxue.xyz/blog/filter/filter.html</loc>
   </url>
   <url>
+    <loc>http://www.nietongxue.xyz/blog/archives/</loc>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/</loc>
   </url>
   <url>
-    <loc>http://www.nietongxue.xyz/blog/archives/</loc>
+    <loc>http://www.nietongxue.xyz/resume/</loc>
   </url>
   <url>
     <loc>http://www.nietongxue.xyz/pp/</loc>
