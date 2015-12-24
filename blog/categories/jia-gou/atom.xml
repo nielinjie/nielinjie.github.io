@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-12-08T11:48:15+08:00</updated>
+  <updated>2015-12-24T14:18:53+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,26 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[“Reactive宣言里为什么有个消息驱动？”]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/12/23/md/"/>
+    <updated>2015-12-23T16:31:35+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/12/23/md</id>
+    <content type="html"><![CDATA[<p>宣言的其他方面描述的都是系统的外部特征：快速响应、容错、压力下的弹性。为什么单单加入“消息驱动”这个实现策略呢？</p>
+
+<!--more-->
+
+
+<p>外部特征被纳入一个“宣言”容易理解，是作为一种承诺和目标。实现策略为何要被纳入一个宣言？毕竟，如果我的系统能实现被期待的外部特征，谁在乎是什么东西驱动的呢？消息驱动？神经驱动？意念驱动？随便啊。</p>
+
+<p>表面看来确实如此。</p>
+
+<p>答案在于，消息驱动在这里并不仅是一个实现策略。宣言中提到的“系统”是多层的，包括大大小小各层级的系统，其中大系统往往由小系统组成。当诸多小系统组成大系统的时候，大系统的实现策略就成了对小系统的外部特征要求。小系统之间的交互，要遵循的就是消息驱动这个一致约定，这对与小系统来说是外部特征，而不是实现策略。</p>
+
+<p>所以消息驱动这个要点，在Reactive的系统生态中，是相互间既能松散自治又能协同合作的重要保证。虽然对系统的最终用户可能没有重要意义，但却是开发者之间的重要承诺和共同目标。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Orchestration 和 Choreography]]></title>
@@ -113,19 +133,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构设计过程的驱动技术（二）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/28/driving2/"/>
-    <updated>2015-10-28T09:06:49+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/28/driving2</id>
-    <content type="html"><![CDATA[<p>模式驱动不是一种顶层的驱动技术。因为架构模式本身，严格来讲并不是对目标系统本身的分解（而特征和风险则是）。<!--more-->如果说得完整一点，应该是：“为了实现xx特征（或者控制xx风险），我们应用xx模式。”。所以模式驱动其实是在特征驱动或风险驱动之后接着应用的驱动技术。但实际很多情况下，团队只要稍微知道要设计的系统的类型，脑中已经冒出了许多模式，后续也是依据这些模式的应用来跟进，可以说淡化了原有的顶层驱动技术。</p>
-
-<p>由于不是顶层驱动技术，模式驱动很难验证最终解决了问题，比如不能说：“由于我们使用了xx、yy、zz模式，所以我们能完成XX系统。”反过来，对于顶层的驱动技术，就可以说：“由于我们实现了所有典型的特征，所以我们能实现XX系统”，或者，“由于我们遏制了所有（发现了的）风险，所有我们能完成XX系统”。所以如果使用模式驱动，应该要回过头来，借助顶层驱动技术来验证问题的解决。从这个意义上来讲，可以说模式驱动是被顶层驱动嵌套使用的。</p>
-
-<p>特征驱动和风险驱动分解问题时，也会频繁使用模式思维，但这不是模式驱动。比如说特征驱动，整理系统的质量需求的时候，我们常常使用一个“质量需求检查表”。其中列举了特定类型系统常见的质量需求。我们对此一一检视，判别目标系统是否有此需求。这是典型的模式思维。但这里的模式不是架构设计模式，这里也不是将目标系统分解为模式进行跟进。所以不是模式驱动的架构设计。</p>
 ]]></content>
   </entry>
   

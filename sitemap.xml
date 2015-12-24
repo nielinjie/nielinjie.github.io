@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.nietongxue.xyz/blog/2015/12/23/md/</loc>
+    <lastmod>2015-12-23T16:31:35+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/blog/2015/11/29/oc/</loc>
     <lastmod>2015-11-29T15:01:02+08:00</lastmod>
   </url>
@@ -390,26 +394,5 @@
   </url>
   <url>
     <loc>http://www.nietongxue.xyz/blog/categories/togaf/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/2/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/3/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/4/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/5/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/6/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/7/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/8/</loc>
   </url>
 </urlset>

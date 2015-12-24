@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2015/12/23/md/",
+    date:"2015-12-23T16:31:35+08:00",
+    title:"“Reactive宣言里为什么有个消息驱动？”",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "同学说 0",
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/11/29/oc/",
     date:"2015-11-29T15:01:02+08:00",
     title:"Orchestration 和 Choreography",
