@@ -18,12 +18,32 @@ window.site={
   },
 
   {
+    url:"/blog/2015/12/01/micro/",
+    date:"2015-12-01T15:16:01+08:00",
+    title:"微服务的微（上）",
+    categories:[
+      
+        "架构",
+      
+        "微服务",
+      
+    ],
+    series:[
+      
+        "微服务的微 0",
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/11/29/oc/",
     date:"2015-11-29T15:01:02+08:00",
     title:"Orchestration 和 Choreography",
     categories:[
       
         "架构",
+      
+        "微服务",
       
     ],
     series:[
@@ -296,6 +316,8 @@ window.site={
     categories:[
       
         "架构",
+      
+        "微服务",
       
     ],
     series:[
