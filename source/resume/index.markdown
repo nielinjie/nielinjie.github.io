@@ -1,11 +1,16 @@
 ---
-layout: post
+layout: page
 title: "我的简历"
-date: 2015-01-30 14:06:38 +0800
+date: 2015-12-03 11:24
 comments: true
-categories: ["个人"]
-
+keywords: "简历, 架构师, 聂林杰,"
+description: "聂林杰的简历"
+published: true
+sharing: true
+footer: true
 ---
+
+
 ### 目录
 
 * [基本信息](#0)
@@ -55,14 +60,14 @@ categories: ["个人"]
     * 开发九部
     * 分组经理
     * 组建和领导10-20人开发团队，统筹开发分工协调，进行相关决策。
-    
+
 ----
 
 * 2005 /12--2007 /11：上海花旗软件
     * PS部（专业服务部）
     * Solution Architect
     * j2ee软件系统架构、设计和开发。
-    
+
 ----
 
 * 2004 /6--2005 /11：上海花旗软件
@@ -78,26 +83,26 @@ categories: ["个人"]
 
 * 2015 /8--至今：平安账户安全防护产品项目
 	* 项目描述：为平安旗下多款APP和网站提供实时账户安全防护服务。
-	* 责任描述：架构设计。 
-	
+	* 责任描述：架构设计。
+
 ----
-	
+
 * 2015 /7--至今：反洗钱系统群架构重构
 	* 项目描述：对现有反洗钱系统群架构进行检视和重构。
-	* 责任描述：架构设计。 
+	* 责任描述：架构设计。
 
 ----
 
 * 2015 /1--至今：平安“壹企业”SAAS云服务
 	* 项目描述：面向中小企业的信息化管理平台，SAAS。[http://www.yqycloud.com](http://www.yqycloud.com)
-	* 责任描述：架构设计，架构执行。 
-    
+	* 责任描述：架构设计，架构执行。
+
 ----
-    
+
 * 2014 /6--2014 /12：文件转换服务
   * 项目描述：	用于转换各种文档至手机可显示的图片的服务，平安多个App公用。
-  * 责任描述：	架构设计，架构执行。 
-  
+  * 责任描述：	架构设计，架构执行。
+
 ----
 
 * 2014 /1--2015 /1：平安企业门户信息聚合和企业社交
@@ -105,7 +110,7 @@ categories: ["个人"]
   * 责任描述：	策划、原型设计和开发、技术选型。
   * 相关内容：
     * [企业中需要什么样的社交？](http://www.nietongxue.xyz/blog/2014/06/05/social/)
-    
+
 ----
 
 * 2014 /1--2015 /1：平安法律部诉讼管理系统
@@ -113,13 +118,13 @@ categories: ["个人"]
   * 责任描述：	架构设计，架构执行。
   * 相关内容：
     * [敏捷的架构设计（一 至 四）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
-    
+
 ----
 
 * 2014 /1--2014 /4：用户风险等级评级系统
   * 项目描述：	平安内控关于用户风险等级的数据汇总和分析平台。
   * 责任描述：	架构设计指导。
-  
+
 ----
 
 * 2013 /1--2014 /1：行政系统移动化
@@ -128,25 +133,25 @@ categories: ["个人"]
   * 相关内容：
     * [我们的新前端](http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end/)
     * [关于REST风格的讨论（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA)
-    
+
 ----
 
 * 2013 /1--2014 /12：机构主页可定制化改造
   * 项目描述：	平安机构主页可定制化改造项目，暨企业统一信息发布系统实验项目。
   * 责任描述：	架构设计，技术选型，架构执行。
-  
+
 ----
 
 * 2012 /10--2014 /12：企业全文检索服务
   * 项目描述：	企业公用的全文检索服务。为平安内部多个系统提供全文检索服务。基于Apache Solr。
   * 责任描述：	架构设计、技术选型，架构执行。
-  
+
 ----
 
 * 2012 /6--2013 /4：内控信息收集管理系统
   * 项目描述：	平安集团内控中心内控信息收集管理系统。运行于j2ee平台的bs架构企业管理系统，展示逻辑大量部署于浏览器端。
   * 责任描述：	架构设计、技术选型、技术培训、架构执行。
-  
+
 ----
 
 * 2011 /10--至今：办公系统重构项目
@@ -156,13 +161,13 @@ categories: ["个人"]
     * [一场似非而是的DSL（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL)
     * [敏捷的架构设计（五、六）：领域地图（一、二）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
     * [给老爷爷系统（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=给老爷爷系统&filterDes=Series%3A%20给老爷爷系统)
-    
+
 ----
 
 * 2005 /11--2007 /11：投资银行销售客户管理系统
   * 项目描述：	j2ee 平台b/s结构的客户资源管理系统。
   * 责任描述：	架构设计、详细设计、开发协调。
-  
+
 ----
 
 * 2014 /7--2014 /12：“知识在此”
@@ -170,9 +175,9 @@ categories: ["个人"]
   * 责任描述：	发起人和唯一的成员。
   * 相关内容：
     * [知识在此](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4)
-    
+
 ----
-    
+
 * ……
 
 ### <a name="4"></a>教育经历
@@ -182,7 +187,7 @@ categories: ["个人"]
 
 ### <a name="5"></a>培训经历
 * 2015 /8--2015 /8：
-  * MSUP：领域驱动设计 
+  * MSUP：领域驱动设计
 * 2013 /12--2013 /12：
   * 中程在线：架构设计实践
 * 2012 /3--2012 /3：
@@ -195,5 +200,3 @@ categories: ["个人"]
   * 中程在线：架构设计最佳实践与方法体系
 * 2009 /8--2009 /8：
   * Sun：sun架构师标准课程培训SL425，获SL425结业证书
-
-

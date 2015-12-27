@@ -4,47 +4,42 @@ single: true
 ---
 
 <div>
-<article class="hentry" role="article">
-  {% include article.html %}
-  <footer>
-    <p class="meta">
-      {% include post/author.html %}
-      {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-      {% include post/categories.html %}
-    </p>
+    <article class="hentry" role="article">
+        {% include article.html %}
+        <footer>
+            <p class="meta">
+                {% include post/author.html %}
+                {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+                {% include post/categories.html %}
+            </p>
 
 
-    <p/>
-    <section>
-      {% include post/series.html %}
+            <p/>
+            <section>
+                {% include post/series.html %}
+            </section>
+
+            {% unless page.sharing == false %}
+                {% include post/sharing.html %}
+            {% endunless %}
+
+        </footer>
+    </article>
+
+    {% if site.duoshuo_show_comment_count == true %}
+    <section imagesd="comment">
+        <h2>Add a comment</h2>
+        {% include post/duoshuo.html %}
     </section>
+    {% endif %}
 
-        {% unless page.sharing == false %}
-        <section>
-<h2>Sharing</h2>
-
-
-      <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-    </section>
-    {% endunless %}
-
-  </footer>
-</article>
-
-{% if site.duoshuo_show_comment_count == true %}
-<section imagesd="comment">
-<h2>Add a comment</h2>
-{% include post/duoshuo.html %}
-</section>
-{% endif %}
 </div>
 {% unless page.sidebar == false %}
 <aside class="sidebar">
-  {% if site.post_asides.size %}
+    {% if site.post_asides.size %}
     {% include_array post_asides %}
-  {% else %}
+    {% else %}
     {% include_array default_asides %}
-  {% endif %}
+    {% endif %}
 </aside>
 {% endunless %}

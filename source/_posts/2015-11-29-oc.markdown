@@ -3,7 +3,7 @@ layout: post
 title: "Orchestration 和 Choreography"
 date: 2015-11-29 15:01:02 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构","微服务"]
 published: true
 keywords: "微服务, SOA, 服务, Orchestration, Choreography, 编舞, 编曲"
 description: "Orchestration 和 Choreography"
@@ -33,5 +33,3 @@ SOA的理念是自上而下，比较多的依赖于集中安排，运行时也�
 跟SOA相比，微服务风格更类似于编舞。边界内的服务遵循简单的约定，负责一个特定的领域。他们的地位相似，实现方式和沟通方式由自己选择。
 
 编曲和编舞是一种形象的比喻，并不会完全精确。架构师编排服务的时候不要照抄。
-
-

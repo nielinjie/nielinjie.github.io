@@ -3,7 +3,7 @@ layout: post
 title: "首席程序员负责制"
 date: 2015-04-25 13:40:12 +0800
 comments: true
-categories:  ["开发","敏捷", 过程]
+categories:  ["开发","敏捷", "过程"]
 
 ---
 

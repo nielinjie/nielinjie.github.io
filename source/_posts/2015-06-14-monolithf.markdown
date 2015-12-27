@@ -3,7 +3,7 @@ layout: post
 title: "单体优先还是微服务？"
 date: 2015-06-28 16:58:26 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构","微服务"]
 
 ---
 
