@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 过程 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/guo-cheng/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-12-27T15:09:37+08:00</updated>
+  <updated>2016-01-07T20:07:04+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,78 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[在发展中团队：领域管理]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/"/>
+    <updated>2015-12-31T09:54:24+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/12/31/developing-domain</id>
+    <content type="html"><![CDATA[<p>度过初创期，业务复杂性明显发展，系统结构和质量越来越受到重视。</p>
+
+<p>需要考虑如何管理领域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<!--more-->
+
+
+<h3>什么是领域？</h3>
+
+<p>领域是业务概念和他们之间的关系与协作。系统的目的就是实现这些概念和协作。</p>
+
+<h3>领域有什么用？</h3>
+
+<ol>
+<li>领域决定系统的业务特征。领域的现状就是系统的业务现状，领域的历史就是系统的业务历史。或者说，领域体现了业务与系统特征间的因果关系。</li>
+<li>领域是通用语言。在产品团队与开发团队间，各产品线之间，各开发团队之间或者开发团队内部。领域是沟通的语言，也是发布和积累的语言，是协作的首要工具。</li>
+<li>领域是系统结构的依据。以领域驱动设计<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>是应对系统复杂性的常见手段。领域的结构深刻影响系统结构。</li>
+</ol>
+
+
+<p>这些用途决定了对领域管理的要求，比如：容易阅读，容易查找，容易控制，容易共享，容易跟踪变化。</p>
+
+<h3>如何管理领域？</h3>
+
+<ol>
+<li>从静态、动态两个角度描述领域。静态体现领域实体和他们的关系，动态体现领域实体的行为和协作。可以借用UML类图和序列图的形式<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>，也可以使用伪代码。</li>
+<li>形式化、结构化的描述体系。形式化的语言去除二义性，知识在各团队各角色之间不会产生歧义。结构化的语言体现层次，不同角色可以关注不同层面。 这一点上，UML相关约定完全够用。如果结合文件系统的树形结构，可以实现足够丰富的层次。</li>
+<li>使用git或其他SVC。便于共享和跟踪变化。这要求使用尽量简单的描述语言。在这里，一般的UML图不太理想，人类无法阅读UML图的diff。同样的，各种其他图、doc文档之类也不理想。可以借用马丁大叔UmlAsSketch<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>的想法，使用纯文本形式的UML。</li>
+<li>使用中文。英文翻译是引入歧义的重要途径，在尽量少的地方使用英文，而不是相反。</li>
+<li>与开发共享周期。领域变化的步调一般与系统的设计开发一致，可以借用设计开发的版本和迭代周期。</li>
+</ol>
+
+
+<p>另外，一些可能的问题——</p>
+
+<p>Q：领域是需求么？<br/>
+A：对于开发团队来说，可以说领域来源于需求。区别是：</p>
+
+<ol>
+<li>需求从产品和用户的角度，以交互驱动；领域从设计和开发的角度，以结构和逻辑驱动。</li>
+<li>需求是增量，领域是全量。需求描述的是每次改动，一般以版本、迭代作为组织单位。如果想从需求知道系统体现业务现状，就必须将历史中所有相关需求找出来进行归纳，这无疑非常困难。而领域持续维护，随时体现当前现状。</li>
+<li>需求关心局部，领域关心全局。需求强调体验，往往专注于局部，以一个场景一次交互为单位进行描述。而领域强调整体，需要负责跨产品线跨系统保持一致性。</li>
+<li>需求包括功能、质量、约束，领域只涉及到功能。</li>
+</ol>
+
+
+<p>Q：领域是设计（类图、ER图……）么？<br/>
+A：领域是设计的依据（之一）。设计的目的是实现领域，但设计需要同时考虑其他架构策略，比如由质量要求引发的技术方案。如图：</p>
+
+<p><img src="/images/dev/domain.png" width="550"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本文中的“领域”都是指“领域模型”或者其他形式的领域知识，而不是领域本身。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>此处的“以领域驱动设计”不完全等于DDD。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>是不是任何事物都可以从静态和动态两角度描述，进而都使用类图和序列图？<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p><a href="http://martinfowler.com/bliki/UmlAsSketch.html">UmlAsSketch</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[架构设计过程的驱动技术（二）]]></title>
@@ -115,50 +187,6 @@
 <ol>
 <li id="fn:1">
 <p>交付物，不一定是书面交付物。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[以场景思维辅助风险驱动架构设计]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/08/13/scenario/"/>
-    <updated>2015-08-13T15:15:34+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/08/13/scenario</id>
-    <content type="html"><![CDATA[<p>“风险驱动架构设计”<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>需要架构师和团队及时发现风险。这一点是依赖团队经验的。这样的依赖常常引发人们的焦虑：是否所有的风险都被及时发现进而处理了？</p>
-
-<p>不用说缺乏相关经验的团队，即使是经验丰富的团队，随着进入陌生的业务领域或技术环境，也不能避免再次陷入到这样的焦虑之中。</p>
-
-<!-- more -->
-
-
-<p>如何缓解焦虑，建立大家的信心呢？我们做了一些尝试——</p>
-
-<p>每当我们害怕遗漏的时候，我们有个朴素的方法：列出所有可能，一一检视，从中挑出那些需要处理的。</p>
-
-<p>怎么才能列出“所有”可能的工程风险呢？我们尝试的是场景思维：我们以软件工程中常见的场景为线索——</p>
-
-<ul>
-<li>系统处理典型需求的场景</li>
-<li>发布新功能的场景</li>
-<li>业务量发生显著变化的场景</li>
-<li>常见故障和应对的场景</li>
-</ul>
-
-
-<p>根据业务领域、技术环境以及团队结构等因素的不同，这些场景中会发生不同的事件。通过虚拟这些场景和其中的事件，一一检视这些事件中可能蕴含的风险，就可以使我们发现风险的工作系统化。</p>
-
-<p>有同学问到：去寻求一个“完整的”风险列表，不是跟“恰如其分的、不完备的”原则矛盾了么？并不是这样的。我们说的要恰如其分和不完备，指的是架构活动不追求全面，而不是说考虑范围不考虑全面。通过场景思维剪除掉不必要应对的风险，以后的架构活动仍然是恰如其分的。</p>
-
-<p>我们可以从另一个角度来概述这件事情——</p>
-
-<p>“不能发现所有风险”这个风险，是我们可能需要应对的第一个风险。如果需要应对，那我们的措施就是“场景思维法”。</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p><a href="/blog/2014/03/31/aa1/">“风险驱动架构设计”</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

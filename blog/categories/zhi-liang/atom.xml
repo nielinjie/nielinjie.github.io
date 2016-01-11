@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 质量 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/zhi-liang/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-12-27T15:09:37+08:00</updated>
+  <updated>2016-01-07T20:07:04+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[实现质量要求的三个考虑方向]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/12/24/3direct/"/>
+    <updated>2015-12-24T13:25:20+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/12/24/3direct</id>
+    <content type="html"><![CDATA[<p>性能、可用性、可伸缩、可扩展……如何达成这些质量要求，是随时要考虑的问题。
+有没有什么“普遍的”考虑方法呢？</p>
+
+<!--more-->
+
+
+<p>对各个质量要求，具体的考虑方法是各不相同的，但总结起来思考方向一般有几个：<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3>正向</h3>
+
+<p>顺着问题发生的因果方向考虑。</p>
+
+<p>列出可能导致问题发生的因素，建立问题场景的模型，研究因素与结果的关系，按优先级评估和排除这些因素。比如对于性能质量风险：对典型请求建模，列出处理请求的步骤，考察它们可能对总体性能的影响，排除可能的瓶颈。</p>
+
+<h3>反向</h3>
+
+<p>将因果关系反过来。</p>
+
+<p>我们从结果出发，基于问题已经发生。考虑如何才能回溯问题的原因并排除。还以性能为例。如果发现系统响应缓慢，我们可以有些什么手段找到缓慢环节，证实它是缓慢的根源？从这个方向考虑，通常会发现要求系统中有足够多的诊断支持，比如日志、现场收集保护、快照分析等等。</p>
+
+<p>值得提醒的是，问题发生有至少两个场景，都是可以利用的：</p>
+
+<ol>
+<li>测试，制造问题的发生。</li>
+<li>生产中发现已发生的问题。<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
+</ol>
+
+
+<h3>横向</h3>
+
+<p>或者说无向。指的是不按因果方向考虑。比如使用“模式”——根据系统特点，列出可能提高性能的模式，看看成本，能用上的都用上吧。这种方法也确实有用。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本文以性能为例，但方法可以推广到其他质量要求。好吧，貌似也可以推广到其他任何事。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>当然先要救命和减少问题影响。但不属于本文的范围。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[质量保障措施参考清单（三）]]></title>
@@ -411,57 +460,6 @@ DSL文件很方便人和机器阅读，同时放入SCM，实现版本管理和�
 <p><img src="/images/view/view3.png"></p>
 
 <p>最后，代码在此：<a href="http://github.com/nielinjie/developTools">http://github.com/nielinjie/developTools</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[给老爷爷系统（三）：如何描述系统？（二）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2014/06/06/view2/"/>
-    <updated>2014-06-06T18:06:38+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2014/06/06/view2</id>
-    <content type="html"><![CDATA[<blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
-
-<!-- more -->
-
-
-<p>但功能和领域模型都不能直接使用：</p>
-
-<ul>
-<li>功能的问题是很难跟代码直接关联起来。</li>
-<li>领域模型的问题是只有开发同学熟悉这个概念。SA、测试、开发经理等同学比较熟悉的是“功能”这个概念，
-虽然他们对这个概念的定义不尽相同。</li>
-</ul>
-
-
-<p>我们希望我们的特征描述既可以将各方面关注点都联系起来，又可以让各方面都工作在自己熟悉的概念上。
-于是我们尝试使用一种二者的混合体。</p>
-
-<ul>
-<li>从领域模型出发，以便我们能跟代码产生联系<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。代码非常重要，因为在运行时，代码决定的逻辑基本上是系统的一切。</li>
-<li>弱化领域对象的定义，只描述它是否存在和与其他对象的关系<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。领域对象的定义显然是重要的，但我们现在要的是“框架”。</li>
-<li>强调领域过程，弱化领域实体。实体常常被认为是分析的结果，看上去和“功能”没有关系，有些方面的同学不关注。</li>
-<li>领域过程之间的关系划归为三种：Include、Extend、Generalization<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</li>
-<li>领域过程与实体间，只有一种，引用关系。实体与实体间的关系，不再描述。</li>
-</ul>
-
-
-<p>总的来说，这是领域模型的一种裁剪，或者可能更准确地说法，是一种遮挡：暴露大家的共同关注点，隐藏其他。</p>
-
-<p>（<a href="/blog/2014/06/07/view3">再下篇继续</a>）</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>逻辑按领域结构划分，在这个系统没完全实现：<a href="/blog/2014/06/09/refactory">重构</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>领域模型是一个领域对象的结构，<a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>没错，跟UML use case图里面的三种关系相同。这并非偶然，我们认为所有的过程之间，都是这三种关系。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   

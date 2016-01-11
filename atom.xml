@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-12-27T15:09:37+08:00</updated>
+  <updated>2016-01-07T20:07:04+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,10 +14,189 @@
 
   
   <entry>
+    <title type="html"><![CDATA[在发展中团队：微服务？]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/"/>
+    <updated>2016-01-05T10:08:59+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/01/05/dev-micro</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/微服务"/>
+    
+    <content type="html"><![CDATA[<p>当系统成长的时候，大家都想到“微服务”。</p>
+
+<!--more-->
+
+
+<p>微服务太火，好像成了理所当然。但应该考虑微服务是否适于这个团队。</p>
+
+<p>对于微服务本身，正反两方驱动力讲得比较多了<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<p>而微服务落实到团队，需要考虑更多：文化需要推广？团队需要重组？技能需要学习？过程可能调整？平台需要验证？……</p>
+
+<p>对照团队现状和发展步调，我们必须知道能得到什么，又需要付出什么。</p>
+
+<p>想要提高可用性？可能只需要多份部署。</p>
+
+<p>想要改善逻辑结构？可能只需要开发时模块化。</p>
+
+<p>想要错误隔离？可能只需要分布式。</p>
+
+<p>想要解耦和可重用化？可能只需要服务化。</p>
+
+<p>……</p>
+
+<p>微服务是一套工具，而不是一件。团队可以做出裁剪，也可以做出渐进策略。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="http://www.nietongxue.xyz/blog/2015/12/01/micro/">微服务的“微”</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在发展中团队：领域管理]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/"/>
+    <updated>2015-12-31T09:54:24+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/12/31/developing-domain</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
+    <content type="html"><![CDATA[<p>度过初创期，业务复杂性明显发展，系统结构和质量越来越受到重视。</p>
+
+<p>需要考虑如何管理领域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<!--more-->
+
+
+<h3>什么是领域？</h3>
+
+<p>领域是业务概念和他们之间的关系与协作。系统的目的就是实现这些概念和协作。</p>
+
+<h3>领域有什么用？</h3>
+
+<ol>
+<li>领域决定系统的业务特征。领域的现状就是系统的业务现状，领域的历史就是系统的业务历史。或者说，领域体现了业务与系统特征间的因果关系。</li>
+<li>领域是通用语言。在产品团队与开发团队间，各产品线之间，各开发团队之间或者开发团队内部。领域是沟通的语言，也是发布和积累的语言，是协作的首要工具。</li>
+<li>领域是系统结构的依据。以领域驱动设计<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>是应对系统复杂性的常见手段。领域的结构深刻影响系统结构。</li>
+</ol>
+
+
+<p>这些用途决定了对领域管理的要求，比如：容易阅读，容易查找，容易控制，容易共享，容易跟踪变化。</p>
+
+<h3>如何管理领域？</h3>
+
+<ol>
+<li>从静态、动态两个角度描述领域。静态体现领域实体和他们的关系，动态体现领域实体的行为和协作。可以借用UML类图和序列图的形式<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>，也可以使用伪代码。</li>
+<li>形式化、结构化的描述体系。形式化的语言去除二义性，知识在各团队各角色之间不会产生歧义。结构化的语言体现层次，不同角色可以关注不同层面。 这一点上，UML相关约定完全够用。如果结合文件系统的树形结构，可以实现足够丰富的层次。</li>
+<li>使用git或其他SVC。便于共享和跟踪变化。这要求使用尽量简单的描述语言。在这里，一般的UML图不太理想，人类无法阅读UML图的diff。同样的，各种其他图、doc文档之类也不理想。可以借用马丁大叔UmlAsSketch<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>的想法，使用纯文本形式的UML。</li>
+<li>使用中文。英文翻译是引入歧义的重要途径，在尽量少的地方使用英文，而不是相反。</li>
+<li>与开发共享周期。领域变化的步调一般与系统的设计开发一致，可以借用设计开发的版本和迭代周期。</li>
+</ol>
+
+
+<p>另外，一些可能的问题——</p>
+
+<p>Q：领域是需求么？<br/>
+A：对于开发团队来说，可以说领域来源于需求。区别是：</p>
+
+<ol>
+<li>需求从产品和用户的角度，以交互驱动；领域从设计和开发的角度，以结构和逻辑驱动。</li>
+<li>需求是增量，领域是全量。需求描述的是每次改动，一般以版本、迭代作为组织单位。如果想从需求知道系统体现业务现状，就必须将历史中所有相关需求找出来进行归纳，这无疑非常困难。而领域持续维护，随时体现当前现状。</li>
+<li>需求关心局部，领域关心全局。需求强调体验，往往专注于局部，以一个场景一次交互为单位进行描述。而领域强调整体，需要负责跨产品线跨系统保持一致性。</li>
+<li>需求包括功能、质量、约束，领域只涉及到功能。</li>
+</ol>
+
+
+<p>Q：领域是设计（类图、ER图……）么？<br/>
+A：领域是设计的依据（之一）。设计的目的是实现领域，但设计需要同时考虑其他架构策略，比如由质量要求引发的技术方案。如图：</p>
+
+<p><img src="http://www.nietongxue.xyz/images/dev/domain.png" width="550"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本文中的“领域”都是指“领域模型”或者其他形式的领域知识，而不是领域本身。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>此处的“以领域驱动设计”不完全等于DDD。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>是不是任何事物都可以从静态和动态两角度描述，进而都使用类图和序列图？<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p><a href="http://martinfowler.com/bliki/UmlAsSketch.html">UmlAsSketch</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[实现质量要求的三个考虑方向]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/12/24/3direct/"/>
+    <updated>2015-12-24T13:25:20+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/12/24/3direct</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/质量"/>
+    
+    <content type="html"><![CDATA[<p>性能、可用性、可伸缩、可扩展……如何达成这些质量要求，是随时要考虑的问题。
+有没有什么“普遍的”考虑方法呢？</p>
+
+<!--more-->
+
+
+<p>对各个质量要求，具体的考虑方法是各不相同的，但总结起来思考方向一般有几个：<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3>正向</h3>
+
+<p>顺着问题发生的因果方向考虑。</p>
+
+<p>列出可能导致问题发生的因素，建立问题场景的模型，研究因素与结果的关系，按优先级评估和排除这些因素。比如对于性能质量风险：对典型请求建模，列出处理请求的步骤，考察它们可能对总体性能的影响，排除可能的瓶颈。</p>
+
+<h3>反向</h3>
+
+<p>将因果关系反过来。</p>
+
+<p>我们从结果出发，基于问题已经发生。考虑如何才能回溯问题的原因并排除。还以性能为例。如果发现系统响应缓慢，我们可以有些什么手段找到缓慢环节，证实它是缓慢的根源？从这个方向考虑，通常会发现要求系统中有足够多的诊断支持，比如日志、现场收集保护、快照分析等等。</p>
+
+<p>值得提醒的是，问题发生有至少两个场景，都是可以利用的：</p>
+
+<ol>
+<li>测试，制造问题的发生。</li>
+<li>生产中发现已发生的问题。<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
+</ol>
+
+
+<h3>横向</h3>
+
+<p>或者说无向。指的是不按因果方向考虑。比如使用“模式”——根据系统特点，列出可能提高性能的模式，看看成本，能用上的都用上吧。这种方法也确实有用。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本文以性能为例，但方法可以推广到其他质量要求。好吧，貌似也可以推广到其他任何事。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>当然先要救命和减少问题影响。但不属于本文的范围。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[“Reactive宣言里为什么有个消息驱动？”]]></title>
     <link href="http://www.nietongxue.xyz/blog/2015/12/23/md/"/>
     <updated>2015-12-23T16:31:35+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/12/23/md</id>
+    
+    <category term="/架构"/>
+    
     <content type="html"><![CDATA[<p>宣言的其他方面描述的都是系统的外部特征：快速响应、容错、压力下的弹性。为什么单单加入“消息驱动”这个实现策略呢？</p>
 
 <!--more-->
@@ -34,10 +213,15 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[微服务的微（上）]]></title>
+    <title type="html"><![CDATA[微服务的微]]></title>
     <link href="http://www.nietongxue.xyz/blog/2015/12/01/micro/"/>
     <updated>2015-12-01T15:16:01+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/12/01/micro</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/微服务"/>
+    
     <content type="html"><![CDATA[<p>微服务的微，是指服务粒度的微么？</p>
 
 <!--more-->
@@ -72,6 +256,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/11/29/oc/"/>
     <updated>2015-11-29T15:01:02+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/11/29/oc</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/微服务"/>
+    
     <content type="html"><![CDATA[<p>Orchestration 和 Choreography，这个两个词在跟“服务”有关的架构讨论中常有出现。比如微服务和SOA。</p>
 
 <!--more-->
@@ -105,6 +294,9 @@
     <link href="http://www.nietongxue.xyz/blog/2015/11/20/system-like/"/>
     <updated>2015-11-20T10:39:55+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/11/20/system-like</id>
+    
+    <category term="/架构"/>
+    
     <content type="html"><![CDATA[<p>系统不要像一座建筑或一台机器。</p>
 
 <!--more-->
@@ -119,6 +311,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm/"/>
     <updated>2015-11-17T00:05:18+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/togaf"/>
+    
     <content type="html"><![CDATA[<!--more-->
 
 
@@ -147,6 +344,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/11/07/togaf/"/>
     <updated>2015-11-07T00:05:18+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/11/07/togaf</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/togaf"/>
+    
     <content type="html"><![CDATA[<p>Enterprise Continuum， 我称作企业大火锅。</p>
 
 <!--more-->
@@ -175,6 +377,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/10/28/driving2/"/>
     <updated>2015-10-28T09:06:49+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/10/28/driving2</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
     <content type="html"><![CDATA[<p>模式驱动不是一种顶层的驱动技术。因为架构模式本身，严格来讲并不是对目标系统本身的分解（而特征和风险则是）。<!--more-->如果说得完整一点，应该是：“为了实现xx特征（或者控制xx风险），我们应用xx模式。”。所以模式驱动其实是在特征驱动或风险驱动之后接着应用的驱动技术。但实际很多情况下，团队只要稍微知道要设计的系统的类型，脑中已经冒出了许多模式，后续也是依据这些模式的应用来跟进，可以说淡化了原有的顶层驱动技术。</p>
 
 <p>由于不是顶层驱动技术，模式驱动很难验证最终解决了问题，比如不能说：“由于我们使用了xx、yy、zz模式，所以我们能完成XX系统。”反过来，对于顶层的驱动技术，就可以说：“由于我们实现了所有典型的特征，所以我们能实现XX系统”，或者，“由于我们遏制了所有（发现了的）风险，所有我们能完成XX系统”。所以如果使用模式驱动，应该要回过头来，借助顶层驱动技术来验证问题的解决。从这个意义上来讲，可以说模式驱动是被顶层驱动嵌套使用的。</p>
@@ -188,6 +395,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/10/26/method/"/>
     <updated>2015-10-26T21:24:20+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/10/26/method</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
     <content type="html"><![CDATA[<p>方法论是路线图，不是轨道。</p>
 
 <!--more-->
@@ -202,6 +414,9 @@
     <link href="http://www.nietongxue.xyz/blog/2015/10/24/evolve/"/>
     <updated>2015-10-24T17:21:53+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/10/24/evolve</id>
+    
+    <category term="/架构"/>
+    
     <content type="html"><![CDATA[<p>当然。</p>
 
 <!--more-->
@@ -216,6 +431,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/10/09/driving/"/>
     <updated>2015-10-09T21:31:05+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/10/09/driving</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
     <content type="html"><![CDATA[<p>驱动技术是方法论的第一步，是对目标问题进行分割，并分别进行管理跟进的技术。</p>
 
 <p>我们常说“这个问题从何处着手呢？”——驱动技术要做的就是：找到从何着手，跟进着手过程，评估着手效果，归纳着手结论。</p>
@@ -266,6 +486,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/10/04/process/"/>
     <updated>2015-10-04T10:25:03+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/10/04/process</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
     <content type="html"><![CDATA[<p>跟开发过程中其他环节相比，架构设计往往更加依赖于架构师个人的经验和决定。
 有些架构师和团队对架构设计过程比较随意。
 我们常看到的介绍架构设计的文章，也多侧重于介绍设计结论。这些都似乎使得架构设计倾向强调最终结论，不太重视中间过程和过程产出。</p>
@@ -297,6 +522,9 @@
     <link href="http://www.nietongxue.xyz/blog/2015/10/02/techstack/"/>
     <updated>2015-10-02T22:46:38+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/10/02/techstack</id>
+    
+    <category term="/架构"/>
+    
     <content type="html"><![CDATA[<p>不是。</p>
 
 <p>相比于架构设计的目的，技术栈更像是架构执行的手段。</p>
@@ -325,6 +553,11 @@
     <link href="http://www.nietongxue.xyz/blog/2015/09/27/nocoolcode/"/>
     <updated>2015-09-27T16:51:48+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/09/27/nocoolcode</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/开发"/>
+    
     <content type="html"><![CDATA[<p>同意。</p>
 
 <!--more-->
@@ -345,6 +578,9 @@
     <link href="http://www.nietongxue.xyz/blog/2015/09/25/fakecode/"/>
     <updated>2015-09-25T20:51:27+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/09/25/fakecode</id>
+    
+    <category term="/架构"/>
+    
     <content type="html"><![CDATA[<p>可以这么说。</p>
 
 <!-- more -->
@@ -365,6 +601,13 @@
     <link href="http://www.nietongxue.xyz/blog/2015/08/13/scenario/"/>
     <updated>2015-08-13T15:15:34+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/08/13/scenario</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/敏捷"/>
+    
+    <category term="/过程"/>
+    
     <content type="html"><![CDATA[<p>“风险驱动架构设计”<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>需要架构师和团队及时发现风险。这一点是依赖团队经验的。这样的依赖常常引发人们的焦虑：是否所有的风险都被及时发现进而处理了？</p>
 
 <p>不用说缺乏相关经验的团队，即使是经验丰富的团队，随着进入陌生的业务领域或技术环境，也不能避免再次陷入到这样的焦虑之中。</p>
@@ -409,6 +652,9 @@
     <link href="http://www.nietongxue.xyz/blog/2015/08/04/said-xueren4/"/>
     <updated>2015-08-04T21:10:16+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/08/04/said-xueren4</id>
+    
+    <category term="/架构"/>
+    
     <content type="html"><![CDATA[<p>“最近好多展览，这些雪人真是太漂亮了！”<br/>
 “是的。可惜不能看到建造和维护这些雪人的展览。”</p>
 ]]></content>
@@ -419,6 +665,9 @@
     <link href="http://www.nietongxue.xyz/blog/2015/07/29/3words/"/>
     <updated>2015-07-29T10:21:30+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/07/29/3words</id>
+    
+    <category term="/架构"/>
+    
     <content type="html"><![CDATA[<p>这里是我在架构工作中强调的三个关键词。是我工作桌面上保留时间最长的一个Post，也许会一直保留下去吧。</p>
 
 <!-- more -->
@@ -444,203 +693,6 @@
 <p>来个靓照。是的，它有些沧桑了。:-D</p>
 
 <p><img src="http://www.nietongxue.xyz/images/3words/post.jpg" width="300"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[中文字体]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/07/28/typo/"/>
-    <updated>2015-07-28T16:41:56+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/07/28/typo</id>
-    <content type="html"><![CDATA[<p><a href="http://typo.sofi.sh">typo.css</a> 提供的中文字体不错——</p>
-
-<p><code>
-PingFang SC, Lantinghei SC, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans;
-</code></p>
-
-<!--more-->
-
-
-<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>2015年9月30日升级OSX到EI Capitan后，PingFang SC变难看了，改为了PingFang SC Light。话说只有我一个人觉得PingFang SC不好看么？只有Light和Thin勉强能看。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[问架构师候选人什么问题？]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/07/25/questions/"/>
-    <updated>2015-07-25T09:57:11+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/07/25/questions</id>
-    <content type="html"><![CDATA[<p>面试时交流时间有限，应该问你的架构师候选人什么问题？</p>
-
-<!--more-->
-
-
-<h4>Q1：架构工作有些什么步骤？架构工作与其它开发工作的关系如何？……</h4>
-
-<p>有些架构师认为此类问题比较重要。只有弄清楚了这些问题，才能算是掌握了架构方法论，能够保证可控可重复地进行架构设计。而另一些架构师则认为，只要能产出切实可用的系统，架构设计是什么，它如何达成的都不重要。</p>
-
-<p>个人认为方法论是重要的。你团队中的架构过程和成果需要积累和传承，适当的方法论可以在架构师（包括开发团队）之间统一讨论语言和产出物，利于积累和传承。</p>
-
-<p>特别是，如果你认为你的架构师应该负责建立或提高架构和开发的团队和流程，你需要问此类问题。</p>
-
-<h4>Q2：假设现在需要搭建XX类型的系统，你如何思考？</h4>
-
-<p>这类问题是开放式的主观题。涵盖范围很广，可以全面地考察架构师的思维方式、方法论、知识、经验，所以被广泛使用。这类问题很好用，但需要注意。它常常引来候选人的长篇大论，从方法到模式，从前台到后台，从需求到设计，…… 所以交流过程中需要控制和引导，避免被淹没在回答当中，当候选人提到了想要重点考察的领域，需要有针对性地进行专门的提问和讨论。</p>
-
-<h4>Q3：假设现在遇到X问题，解决方案是什么？</h4>
-
-<p>这类问题考察的是架构师的经验。如果他<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>遇到和解决过同类问题，并且记住了解决方案，他就能回答，如果没有，就不能回答。因为没有人能够在四目相对的几秒十几秒时间里解决一个陌生的架构问题。要知道架构决策和设计不是一个靠急智能够胜任的工作。</p>
-
-<p>所以如果你需要架构师招聘进来以后能够立即解决一个问题——也就是你提问中的那个问题，你需要问这类问题。个人认为这种情况要尽量避免，因为这样就放弃了对其它方面素质的考量和选择。</p>
-
-<h4>Q4：AA设计模式中……、BB数据库中……、CC算法中……、DD类里面……</h4>
-
-<p>这类是涉及到某些领域的细节问题，如果你需要架构师兼任此领域的技术专家（这种情况常见），那你需要问这类问题。</p>
-
-<p>有些架构师可能对某些领域的细节问题解决能力不足，但他隔离和描述问题的能力很强，进而可以很快从外部找到并应用现成的解决方案。这样的架构师虽然称不上技术专家，但一定程度上其实可以解决大量的具体问题。</p>
-
-<p>依据你面对的问题、团队规模及可以负担的成本，你需要判断是否需要真正的技术专家。</p>
-
-<h4>Q5：在你做过的YY事情中，是如何考虑ZZ问题的？</h4>
-
-<p>这类问题跟Q2问题功能相似。同时它可以避免Q2问题的一个弱点：万一候选人没有XX类型系统的工作经验，考察就没办法进行下去。除非：你的职位必需这类系统的知识和经验。这种情况常见，比如招聘互联网产品的架构师往往认为必需“大并发系统”的知识和经验。</p>
-
-<h4>Q6：最近在干什么？学什么？比较关注什么？</h4>
-
-<p>个人比较喜欢此类问题。但这类问题完全没有参考答案，需要提问人注意从回答中挖掘想要的信息。比如候选人对职业生涯的规划、对技术走势的判断等等。否则问答完了之后，对候选人是否适合职位的判断帮助不大。</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>文中所有的“他”，均不特指男性。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[单体优先还是微服务？]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/06/28/monolithf/"/>
-    <updated>2015-06-28T16:58:26+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/06/28/monolithf</id>
-    <content type="html"><![CDATA[<p>单体优先还是直接采用微服务？这个问题随着马丁大叔的文章Monolith First<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>发布，显得再次热闹起来。</p>
-
-<p>在我看来，从三个方面尝试分析这个问题。</p>
-
-<ol>
-<li>微服务架构和单体架构区别是什么？</li>
-<li>系统建立之初这些区别意味着什么？</li>
-<li>如果系统建立之初使用单体架构，后续过渡到微服务架构代价如何？</li>
-</ol>
-
-
-<!-- more -->
-
-
-<h3>微服务架构和单体架构区别是什么？</h3>
-
-<p>微服务架构与单体架构的区别，本质是系统各部件间分隔的强度大小。</p>
-
-<p>从下面几个方面看一看：</p>
-
-<table>
-<thead>
-<tr>
-<th><i></i> </th>
-<th>微服务 </th>
-<th> 单体</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>领域分隔 </td>
-<td> 领域被分隔为微服务。分隔力度大，相互间的影响较小。微服务可以各自拥有不同的进化节奏，不同领域的创新可以分别实施、快速落地。 <br/> 领域间的调用相对困难，需要一些基础服务帮助，比如服务注册和寻址等。 </td>
-<td> 领域的分隔表现为模块的分隔，其间的联系简单直接。</td>
-</tr>
-<tr>
-<td>团队分隔    </td>
-<td> 团队按微服务配置。成员专注于小的领域和代码集。沟通成本低。容易学习。<br/> 需要部件之间紧密协作时相对困难，比如当代码需要在部件之间移动。  </td>
-<td> 整个系统一个团队。如果系统变得庞大，成员就需要学习大量的代码和领域知识，团队内的沟通和协作也变得低效。不得不分割团队时容易按职责分割，形成竖井团队<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</td>
-</tr>
-<tr>
-<td>技术分隔    </td>
-<td> 在不同的微服务中，可以根据不同的业务特性分别选择适当的技术。包括可以分别选择适当的存储策略。    </td>
-<td> 整个系统（甚至整个企业）统一的技术栈，管理起来看似简单。但有时候统一的标准并不适合所有的实际情况。</td>
-</tr>
-<tr>
-<td>运行时分隔 </td>
-<td> 各部件通常运行于不同的进程。容易进行错误隔离。可以分别伸缩。<br/> 运行时需要管理的单位较多，相对困难，需要一些专门的运营工具。</td>
-<td> 通常运行于同一个进程。部件间协作的额外开销很小。</td>
-</tr>
-</tbody>
-</table>
-
-
-<h3>系统建立之初这些区别意味着什么？</h3>
-
-<p>通过上面的罗列比较我们可以看到：对于复杂系统，微服务架构可以有效地分隔复杂度。
-但微服务架构有风险：首先需要前期就对领域有良好的认识以便分割。其次需要一定的基础服务和工具。如果团队并不熟悉这种相对较新的架构，学习和适应的成本还是比较高的。
-如果我们的系统在建立之初比较简单，在各个方面基本上并不需要高强度的分隔，单体架构往往就能够满足要求。</p>
-
-<p>我们看看什么情况下可能有可能直接从微服务架构开始：</p>
-
-<ul>
-<li>我们的系统所面对的领域规模很大，需要进行分割；同时，我们很清楚如何分隔。（……，好吧，这种情况基本没有，囧）</li>
-<li>我们的团队规模太小，从一开始就无法单独承担系统的规模。</li>
-<li>我的企业默认架构就是微服务，很多系统已经实践过了。</li>
-<li>我的老板认为微服务很酷，必须上。</li>
-<li>……</li>
-</ul>
-
-
-<p>这些情况下，如果各方充分认识到微服务的代价并作出应对预案，是可以直接应用微服务架构的。</p>
-
-<p>在所有的代价中，有一种最重要，值得再说一遍：领域划分不清晰的情况下请务必慎重，在微服务间移动领域逻辑是非常昂贵的。</p>
-
-<h3>已有单体架构系统过渡到微服务架构代价如何？</h3>
-
-<p>马丁大叔提出的“扼死大法”<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>是一种自然有效的过渡方式。但跟其他所有的方式一样。
-这个办法的难度和相关代价还是取决于单体本身的结构特点。
-如果单体自身拥有良好的结构，容易从中剥离出相对独立的领域逻辑。那我们可以有条不紊逐步剥离：</p>
-
-<ol>
-<li>为新特性创建微服务，单体保持不变。</li>
-<li>在单体中识别内聚的子领域，对应地各自剥离为微服务。</li>
-<li>按照业务价值和变化频度安排优先级。</li>
-<li>并不追求完全消灭单体。</li>
-</ol>
-
-
-<p>另一种情况，单体本身是一个大泥球。那就没有那么幸运了，我们必须先整理单体本身。</p>
-
-<h3>结论</h3>
-
-<ul>
-<li><p>单体优先，同时请做好准备，你可能很快需要过渡到微服务。所以做一个“微服务友好”的单体，并适时开始基础服务和团队技能的准备。</p></li>
-<li><p>读到这里仍然觉得自己应该立即微服务的同学：请不犹豫地微服务吧。</p></li>
-</ul>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p><a href="http://martinfowler.com/bliki/MonolithFirst.html">Monolith First</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>“竖井团队”被认为在大部分情况下是反模式。参见<a href="http://www.thoughtworks.com/radar/techniques/inverse-conway-maneuver">“反Conway策略”</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p><a href="http://www.martinfowler.com/bliki/StranglerApplication.html">StranglerApplication</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   

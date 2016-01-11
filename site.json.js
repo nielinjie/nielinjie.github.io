@@ -2,6 +2,58 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2016/01/05/dev-micro/",
+    date:"2016-01-05T10:08:59+08:00",
+    title:"在发展中团队：微服务？",
+    categories:[
+      
+        "架构",
+      
+        "微服务",
+      
+    ],
+    series:[
+      
+        "在发展中团队 0",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/12/31/developing-domain/",
+    date:"2015-12-31T09:54:24+08:00",
+    title:"在发展中团队：领域管理",
+    categories:[
+      
+        "架构",
+      
+        "过程",
+      
+    ],
+    series:[
+      
+        "在发展中团队 0",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2015/12/24/3direct/",
+    date:"2015-12-24T13:25:20+08:00",
+    title:"实现质量要求的三个考虑方向",
+    categories:[
+      
+        "架构",
+      
+        "质量",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2015/12/23/md/",
     date:"2015-12-23T16:31:35+08:00",
     title:"“Reactive宣言里为什么有个消息驱动？”",
@@ -20,7 +72,7 @@ window.site={
   {
     url:"/blog/2015/12/01/micro/",
     date:"2015-12-01T15:16:01+08:00",
-    title:"微服务的微（上）",
+    title:"微服务的微",
     categories:[
       
         "架构",
@@ -29,8 +81,6 @@ window.site={
       
     ],
     series:[
-      
-        "微服务的微 0",
       
     ]
   },

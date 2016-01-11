@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2015-12-27T15:09:37+08:00</updated>
+  <updated>2016-01-07T20:07:04+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,167 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[在发展中团队：微服务？]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/"/>
+    <updated>2016-01-05T10:08:59+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/01/05/dev-micro</id>
+    <content type="html"><![CDATA[<p>当系统成长的时候，大家都想到“微服务”。</p>
+
+<!--more-->
+
+
+<p>微服务太火，好像成了理所当然。但应该考虑微服务是否适于这个团队。</p>
+
+<p>对于微服务本身，正反两方驱动力讲得比较多了<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<p>而微服务落实到团队，需要考虑更多：文化需要推广？团队需要重组？技能需要学习？过程可能调整？平台需要验证？……</p>
+
+<p>对照团队现状和发展步调，我们必须知道能得到什么，又需要付出什么。</p>
+
+<p>想要提高可用性？可能只需要多份部署。</p>
+
+<p>想要改善逻辑结构？可能只需要开发时模块化。</p>
+
+<p>想要错误隔离？可能只需要分布式。</p>
+
+<p>想要解耦和可重用化？可能只需要服务化。</p>
+
+<p>……</p>
+
+<p>微服务是一套工具，而不是一件。团队可以做出裁剪，也可以做出渐进策略。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="/blog/2015/12/01/micro/">微服务的“微”</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[在发展中团队：领域管理]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/"/>
+    <updated>2015-12-31T09:54:24+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/12/31/developing-domain</id>
+    <content type="html"><![CDATA[<p>度过初创期，业务复杂性明显发展，系统结构和质量越来越受到重视。</p>
+
+<p>需要考虑如何管理领域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<!--more-->
+
+
+<h3>什么是领域？</h3>
+
+<p>领域是业务概念和他们之间的关系与协作。系统的目的就是实现这些概念和协作。</p>
+
+<h3>领域有什么用？</h3>
+
+<ol>
+<li>领域决定系统的业务特征。领域的现状就是系统的业务现状，领域的历史就是系统的业务历史。或者说，领域体现了业务与系统特征间的因果关系。</li>
+<li>领域是通用语言。在产品团队与开发团队间，各产品线之间，各开发团队之间或者开发团队内部。领域是沟通的语言，也是发布和积累的语言，是协作的首要工具。</li>
+<li>领域是系统结构的依据。以领域驱动设计<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>是应对系统复杂性的常见手段。领域的结构深刻影响系统结构。</li>
+</ol>
+
+
+<p>这些用途决定了对领域管理的要求，比如：容易阅读，容易查找，容易控制，容易共享，容易跟踪变化。</p>
+
+<h3>如何管理领域？</h3>
+
+<ol>
+<li>从静态、动态两个角度描述领域。静态体现领域实体和他们的关系，动态体现领域实体的行为和协作。可以借用UML类图和序列图的形式<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>，也可以使用伪代码。</li>
+<li>形式化、结构化的描述体系。形式化的语言去除二义性，知识在各团队各角色之间不会产生歧义。结构化的语言体现层次，不同角色可以关注不同层面。 这一点上，UML相关约定完全够用。如果结合文件系统的树形结构，可以实现足够丰富的层次。</li>
+<li>使用git或其他SVC。便于共享和跟踪变化。这要求使用尽量简单的描述语言。在这里，一般的UML图不太理想，人类无法阅读UML图的diff。同样的，各种其他图、doc文档之类也不理想。可以借用马丁大叔UmlAsSketch<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>的想法，使用纯文本形式的UML。</li>
+<li>使用中文。英文翻译是引入歧义的重要途径，在尽量少的地方使用英文，而不是相反。</li>
+<li>与开发共享周期。领域变化的步调一般与系统的设计开发一致，可以借用设计开发的版本和迭代周期。</li>
+</ol>
+
+
+<p>另外，一些可能的问题——</p>
+
+<p>Q：领域是需求么？<br/>
+A：对于开发团队来说，可以说领域来源于需求。区别是：</p>
+
+<ol>
+<li>需求从产品和用户的角度，以交互驱动；领域从设计和开发的角度，以结构和逻辑驱动。</li>
+<li>需求是增量，领域是全量。需求描述的是每次改动，一般以版本、迭代作为组织单位。如果想从需求知道系统体现业务现状，就必须将历史中所有相关需求找出来进行归纳，这无疑非常困难。而领域持续维护，随时体现当前现状。</li>
+<li>需求关心局部，领域关心全局。需求强调体验，往往专注于局部，以一个场景一次交互为单位进行描述。而领域强调整体，需要负责跨产品线跨系统保持一致性。</li>
+<li>需求包括功能、质量、约束，领域只涉及到功能。</li>
+</ol>
+
+
+<p>Q：领域是设计（类图、ER图……）么？<br/>
+A：领域是设计的依据（之一）。设计的目的是实现领域，但设计需要同时考虑其他架构策略，比如由质量要求引发的技术方案。如图：</p>
+
+<p><img src="/images/dev/domain.png" width="550"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本文中的“领域”都是指“领域模型”或者其他形式的领域知识，而不是领域本身。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>此处的“以领域驱动设计”不完全等于DDD。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>是不是任何事物都可以从静态和动态两角度描述，进而都使用类图和序列图？<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p><a href="http://martinfowler.com/bliki/UmlAsSketch.html">UmlAsSketch</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[实现质量要求的三个考虑方向]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2015/12/24/3direct/"/>
+    <updated>2015-12-24T13:25:20+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2015/12/24/3direct</id>
+    <content type="html"><![CDATA[<p>性能、可用性、可伸缩、可扩展……如何达成这些质量要求，是随时要考虑的问题。
+有没有什么“普遍的”考虑方法呢？</p>
+
+<!--more-->
+
+
+<p>对各个质量要求，具体的考虑方法是各不相同的，但总结起来思考方向一般有几个：<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>.</p>
+
+<h3>正向</h3>
+
+<p>顺着问题发生的因果方向考虑。</p>
+
+<p>列出可能导致问题发生的因素，建立问题场景的模型，研究因素与结果的关系，按优先级评估和排除这些因素。比如对于性能质量风险：对典型请求建模，列出处理请求的步骤，考察它们可能对总体性能的影响，排除可能的瓶颈。</p>
+
+<h3>反向</h3>
+
+<p>将因果关系反过来。</p>
+
+<p>我们从结果出发，基于问题已经发生。考虑如何才能回溯问题的原因并排除。还以性能为例。如果发现系统响应缓慢，我们可以有些什么手段找到缓慢环节，证实它是缓慢的根源？从这个方向考虑，通常会发现要求系统中有足够多的诊断支持，比如日志、现场收集保护、快照分析等等。</p>
+
+<p>值得提醒的是，问题发生有至少两个场景，都是可以利用的：</p>
+
+<ol>
+<li>测试，制造问题的发生。</li>
+<li>生产中发现已发生的问题。<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup></li>
+</ol>
+
+
+<h3>横向</h3>
+
+<p>或者说无向。指的是不按因果方向考虑。比如使用“模式”——根据系统特点，列出可能提高性能的模式，看看成本，能用上的都用上吧。这种方法也确实有用。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本文以性能为例，但方法可以推广到其他质量要求。好吧，貌似也可以推广到其他任何事。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>当然先要救命和减少问题影响。但不属于本文的范围。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[“Reactive宣言里为什么有个消息驱动？”]]></title>
@@ -34,7 +195,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[微服务的微（上）]]></title>
+    <title type="html"><![CDATA[微服务的微]]></title>
     <link href="http://www.nietongxue.xyz/blog/2015/12/01/micro/"/>
     <updated>2015-12-01T15:16:01+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2015/12/01/micro</id>
@@ -61,81 +222,6 @@
 <ol>
 <li id="fn:1">
 <p>前面有详细讨论，参见<a href="/blog/2015/06/28/monolithf/">《单体优先还是微服务？》</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Orchestration 和 Choreography]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/11/29/oc/"/>
-    <updated>2015-11-29T15:01:02+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/11/29/oc</id>
-    <content type="html"><![CDATA[<p>Orchestration 和 Choreography，这个两个词在跟“服务”有关的架构讨论中常有出现。比如微服务和SOA。</p>
-
-<!--more-->
-
-
-<p>如果直译的话，这两个词一个是“编曲”，一个“编舞”。</p>
-
-<p>编曲和编舞都是编。编就是安排、设计。不论是微服务的服务还是SOA的服务，要想沟通协同，合力完成业务请求，都是需要安排设计的。</p>
-
-<p>但二者编排的对象不同，一个是曲一个是舞。特别是，按照词的本意，这里的“曲”指的是“管弦乐曲”，是相对复杂宏大的演奏。</p>
-
-<p>曲和舞有什么区别呢？</p>
-
-<ol>
-<li>曲需要指挥，舞不需要。乐者在演奏时，需要指挥随时指挥协调。而舞者则不需要，按照事前安排做好自己就行。需要跟其他舞者合作时，也由自己直接沟通完成。</li>
-<li>曲分工复杂，舞比较简单。管弦乐曲演奏需要多种不同乐器多种不同乐者，要求彼此配合得当，才能演出成功。而舞蹈没那么多分工，即使是大型舞蹈，台上人多，但角色也就数种而已。</li>
-<li>曲比较严肃，舞比较宽松。乐者的演奏和配合一丝不苟，少有随性。舞者则有较多的个人发挥空间。</li>
-</ol>
-
-
-<p>SOA的理念是自上而下，比较多的依赖于集中安排，运行时也需要明确的中间件进行中央控制协调。边界内有多种类型的服务，相互之间严密配合。SOA的风格类似于编曲。</p>
-
-<p>跟SOA相比，微服务风格更类似于编舞。边界内的服务遵循简单的约定，负责一个特定的领域。他们的地位相似，实现方式和沟通方式由自己选择。</p>
-
-<p>编曲和编舞是一种形象的比喻，并不会完全精确。架构师编排服务的时候不要照抄。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[系统要像什么？]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/11/20/system-like/"/>
-    <updated>2015-11-20T10:39:55+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/11/20/system-like</id>
-    <content type="html"><![CDATA[<p>系统不要像一座建筑或一台机器。</p>
-
-<!--more-->
-
-
-<p>要想办法让系统像一个生物，如能更进一步，要像一个社会。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[读TOGAF（二）：ADM初瞥]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm/"/>
-    <updated>2015-11-17T00:05:18+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm</id>
-    <content type="html"><![CDATA[<!--more-->
-
-
-<ul>
-<li>ADM建议一系列的阶段和步骤。但不建议范围<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</li>
-<li>ADM是渐进迭代的。每次迭代有自己的范围，渐进产出。</li>
-<li>ADM是可以调整包括裁剪的。但调整必须管理并维持。</li>
-<li>ADM通过架构仓库参与到企业火锅<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</li>
-</ul>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>架构范围包括：宽度、深度、时间范围、架构领域。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p><a href="/blog/2015/11/07/togaf/">企业火锅</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
