@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.nietongxue.xyz/blog/2016/01/24/develop-quality/</loc>
+    <lastmod>2016-01-24T11:44:37+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/blog/2016/01/19/do-die/</loc>
+    <lastmod>2016-01-19T09:21:19+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/</loc>
     <lastmod>2016-01-05T10:08:59+08:00</lastmod>
   </url>

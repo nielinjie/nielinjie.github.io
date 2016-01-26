@@ -2,6 +2,40 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2016/01/24/develop-quality/",
+    date:"2016-01-24T11:44:37+08:00",
+    title:"在发展中团队：开发质量问题",
+    categories:[
+      
+        "开发",
+      
+        "过程",
+      
+        "质量",
+      
+    ],
+    series:[
+      
+        "在发展中团队 0",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2016/01/19/do-die/",
+    date:"2016-01-19T09:21:19+08:00",
+    title:"领域对象的没落？",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2016/01/05/dev-micro/",
     date:"2016-01-05T10:08:59+08:00",
     title:"在发展中团队：微服务？",

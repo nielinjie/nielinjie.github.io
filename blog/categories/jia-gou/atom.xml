@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-01-07T20:07:04+08:00</updated>
+  <updated>2016-01-26T16:57:56+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[领域对象的没落？]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/01/19/do-die/"/>
+    <updated>2016-01-19T09:21:19+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/01/19/do-die</id>
+    <content type="html"><![CDATA[<p>最近，网红架构师学镛老师提出了观点，说用对象模型来体现领域已不太适用于现代系统环境，比如分布式和高并发。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<!--more-->
+
+
+<p>我是同意这个观点的。</p>
+
+<p>我认为究其原因，主要是因为目前的服务<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>提供方式。不是以对象为单位包装为服务。由于性能、容错、可伸缩、可扩展等质量要求，人们常使用分布式和松耦合的接口，比如REST风格的HTTP接口、Reactive风格的消息接口。而曾经流行的对象风格的接口，比如EJB，由于不适应这些现代质量要求，已经逐渐淡出了视线。</p>
+
+<p>如果服务不以对象的方式提供，则领域对象无法直接映射为服务。那么领域对象的意义就局限到服务内部。而在更重要的、有全局意义的服务设计和跨服务过程设计中，就不再有使用领域对象的理由。</p>
+
+<p>体现在实践中，领域过程仍然是最重要的知识，只是现在更多的领域过程被分解为子过程的调用和信息的流动，而不是对象和对象间的协作。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>原话在<a href="http://weibo.com/rebol">这里</a>。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>这里通篇使用的是“服务”这个词语，但指的是广义的可重用组件。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在发展中团队：微服务？]]></title>
@@ -191,40 +221,6 @@ A：领域是设计的依据（之一）。设计的目的是实现领域，但�
 <p>答案在于，消息驱动在这里并不仅是一个实现策略。宣言中提到的“系统”是多层的，包括大大小小各层级的系统，其中大系统往往由小系统组成。当诸多小系统组成大系统的时候，大系统的实现策略就成了对小系统的外部特征要求。小系统之间的交互，要遵循的就是消息驱动这个一致约定，这对与小系统来说是外部特征，而不是实现策略。</p>
 
 <p>所以消息驱动这个要点，在Reactive的系统生态中，是相互间既能松散自治又能协同合作的重要保证。虽然对系统的最终用户可能没有重要意义，但却是开发者之间的重要承诺和共同目标。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[微服务的微]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/12/01/micro/"/>
-    <updated>2015-12-01T15:16:01+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/12/01/micro</id>
-    <content type="html"><![CDATA[<p>微服务的微，是指服务粒度的微么？</p>
-
-<!--more-->
-
-
-<p>微服务可能是由此得名的。但在微服务架构思想中，服务粒度的微，不应该放在首要强调的位置。</p>
-
-<p>微服务架构的思想中，服务的粒度是能找到明确依据的。它由正反两个方向的力相互平衡决定。</p>
-
-<p>驱动服务分割变小的正向力是解耦带来的收益。这个可以从几个方面考察——业务、团队、技术栈、运行时。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-
-<p>反向力是服务分割变小后带来的问题，目前看来最难解决的是性能和数据一致性。服务的粒度越小，需要协作的服务数量越多，性能和一致性方面的影响就越大。</p>
-
-<p>对于这两个力的平衡，不同的业务，不同的团队，不同的进化方向等等，多种因素决定了结果并不相同。正向力大一些，服务的粒度就小一些，服务就微一些，否则，服务就没那么微。</p>
-
-<p>这样一来，服务是不是微、有多微，并不由微服务架构思想本身决定。甚至一种可能的合理结果是：运用微服务的思想分析之后，却发现使用单体架构更为合理。</p>
-
-<p>所以，微服务的微，并不强调服务粒度的微。</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>前面有详细讨论，参见<a href="/blog/2015/06/28/monolithf/">《单体优先还是微服务？》</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   
