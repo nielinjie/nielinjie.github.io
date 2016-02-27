@@ -51,13 +51,16 @@ footer: true
 * 2015 /12--至今：北京时时客科技有限公司
 	* 研发部架构组
 	* 高级架构师
-	* 负责核心系统群架构工作。该系统群为服务业SAAS系统。
+	* 负责核心系统软件架构工作。该系统群为服务业SAAS系统。
+
+----
 
 * 2009 /6--2015 /12：平安科技（深圳）有限公司
     * 开发九部、集团开发部
     * 应用架构师、应用架构专家
     * 负责两个业务系列所属的项目和相关重要任务的架构设计和架构执行，日常应用架构管理维护。重点需求的解决方案设计，详细设计复审等工作。
 同时参与部门范围改进开发过程；设计开发工具；提高开发效率；保障开发质量等工作。
+
 ----
 
 * 2007 /11--2009 /6：平安科技（深圳）有限公司
@@ -84,10 +87,11 @@ footer: true
 * ……
 
 ### <a name="3"></a>项目经验
-* 2015 /12--至今：客如云核心软件系统群架构重整项目
-	* 项目描述：客如云核心软件系统群架构重整项目，包括团队知识重组、领域驱动开发、服务化、数据库分库等内容。[http://www.keruyun.com](http://www.keruyun.com)
-	* 责任描述：项目策划、架构设计、架构执行。
-	* 相关内容：[在发展中团队](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=在发展中团队&filterDes=Series%3A%20在发展中团队)
+* 2015 /12--至今：客如云软件系统群架构重构战略项目
+	* 项目描述：客如云软件系统群架构重构战略项目，包括团队重组、开发过程改进、领域驱动开发、服务化、数据库分库等内容。[http://www.keruyun.com](http://www.keruyun.com)
+	* 责任描述：发起人、负责人、架构设计、架构执行。
+	* 相关博客：
+		* [在发展中团队](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=在发展中团队&filterDes=Series%3A%20在发展中团队)
 	
 ----
 
@@ -118,7 +122,7 @@ footer: true
 * 2014 /1--2015 /1：平安企业门户信息聚合和企业社交
   * 项目描述：	平安企业门户，关于信息聚合和企业社交。原型项目。
   * 责任描述：	策划、原型设计和开发、技术选型。
-  * 相关内容：
+  * 相关博客：
     * [企业中需要什么样的社交？](http://www.nietongxue.xyz/blog/2014/06/05/social/)
 
 ----
@@ -126,7 +130,7 @@ footer: true
 * 2014 /1--2015 /1：平安法律部诉讼管理系统
   * 项目描述：	平安法律部诉讼管理系统。敏捷项目。
   * 责任描述：	架构设计，架构执行。
-  * 相关内容：
+  * 相关博客：
     * [敏捷的架构设计（一 至 四）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
 
 ----
@@ -140,7 +144,7 @@ footer: true
 * 2013 /1--2014 /1：行政系统移动化
   * 项目描述：	平安行政系统移动适配项目。敏捷项目。
   * 责任描述：	架构设计，架构执行。
-  * 相关内容：
+  * 相关博客：
     * [我们的新前端](http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end/)
     * [关于REST风格的讨论（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA)
 
@@ -167,7 +171,7 @@ footer: true
 * 2011 /10--2015 /12：办公系统重构项目
   * 项目描述：	平安集团行政中心办公系统的重构项目。对复杂系统进行有针对性的重构，延缓腐化、降低其维护成本和修改功能的成本。
   * 责任描述：	策划并发起项目、制定原则和方案、分析和设计。
-  * 相关内容：
+  * 相关博客：
     * [一场似非而是的DSL（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL)
     * [敏捷的架构设计（五、六）：领域地图（一、二）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
     * [给老爷爷系统（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=给老爷爷系统&filterDes=Series%3A%20给老爷爷系统)
@@ -183,7 +187,7 @@ footer: true
 * 2014 /7--2014 /12：“知识在此”
   * 项目描述：	云端的个人知识管理服务。业余项目。
   * 责任描述：	发起人和唯一的成员。
-  * 相关内容：
+  * 相关博客：
     * [知识在此](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4)
 
 ----
