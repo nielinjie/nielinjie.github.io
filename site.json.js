@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2016/03/13/quality2/",
+    date:"2016-03-13T19:46:06+08:00",
+    title:"“程序员需要工程思维”",
+    categories:[
+      
+        "质量",
+      
+        "过程",
+      
+    ],
+    series:[
+      
+        "同学说 1",
+      
+    ]
+  },
+
+  {
     url:"/blog/2016/01/24/develop-quality/",
     date:"2016-01-24T11:44:37+08:00",
     title:"在发展中团队：开发质量问题",

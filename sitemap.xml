@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.nietongxue.xyz/blog/2016/03/13/quality2/</loc>
+    <lastmod>2016-03-13T19:46:06+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/blog/2016/01/24/develop-quality/</loc>
     <lastmod>2016-01-24T11:44:37+08:00</lastmod>
   </url>
@@ -421,29 +425,5 @@
   </url>
   <url>
     <loc>http://www.nietongxue.xyz/blog/categories/togaf/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/2/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/3/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/4/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/5/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/6/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/7/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/8/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/9/</loc>
   </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 过程 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/guo-cheng/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-02-27T23:04:01+08:00</updated>
+  <updated>2016-03-13T21:21:23+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[“程序员需要工程思维”]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/03/13/quality2/"/>
+    <updated>2016-03-13T19:46:06+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/03/13/quality2</id>
+    <content type="html"><![CDATA[<p>有同学提到工程思维，认为借助传统的建筑、机械工程的思考方式，有助于控制软件工程质量<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。这当然是有益的。</p>
+
+<!--more-->
+
+
+<p>但我们需要注意，软件系统与传统建筑、机械系统有非常重要的不同。直接借鉴传统的建筑、机械工程方法，很多时候是不足以解决问题的。</p>
+
+<p>最大的不同在于：软件系统不仅是运行着的，而且是演进着的<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。而且这个演进是必需的、积极的、有巨大价值的。这是软件质量控制的独特和真正困难之处。</p>
+
+<p>传统工程一旦产出，产品本身就保持稳定。所以传统质量的定义是描述产出物的特征，符合这个特征的就是好质量，否则就是坏质量。对于特定的产品，质量的定义保持不变。质量控制的方法也以质量定义不变作为前提。</p>
+
+<p>这个办法在软件这里不好用。因为产出物的特征不断变化，质量的定义必须不断变化。所以质量控制方法必须多增加一个维度，即质量定义本身的变化。有了这个维度，问题完全不一样了。</p>
+
+<p>所以，从质量控制这个角度来说，将软件系统比作建筑、机械系统，软件工程比作建筑、机械工程是不理想的。不如把软件系统比作社会系统，把软件工程比作社会的发展演进。软件质量控制，更多的从社会科学领域借鉴方法。比如为了控制社会的有效运行，人类发明了立法、司法、执法等成体系的有效手段，我们可以借鉴，“反脆弱”<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>是个不错的尝试。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzI0NjA1NTg0MA==&amp;mid=402605263&amp;idx=1&amp;sn=0490d0de815bef7ac9c61f8c47e0254e&amp;scene=2&amp;srcid=03136ItfAMvAXMJLxllTDEsp&amp;from=timeline&amp;isappinstalled=0#wechat_redirect">为了产品，程序猿请随时加满工程属性</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>“卖出不管”的传统软件这里不讨论。主要讲互联网系统比如SAAS。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p><a href="/blog/2015/05/23/cloud2/#an">“反脆弱”</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在发展中团队：开发质量问题]]></title>
@@ -139,56 +173,6 @@ A：领域是设计的依据（之一）。设计的目的是实现领域，但�
 
 
 <p>想要像火车司机那样一趟又一趟，恐怕不能如愿。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构设计过程的驱动技术（一）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/09/driving/"/>
-    <updated>2015-10-09T21:31:05+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/09/driving</id>
-    <content type="html"><![CDATA[<p>驱动技术是方法论的第一步，是对目标问题进行分割，并分别进行管理跟进的技术。</p>
-
-<p>我们常说“这个问题从何处着手呢？”——驱动技术要做的就是：找到从何着手，跟进着手过程，评估着手效果，归纳着手结论。</p>
-
-<!--more-->
-
-
-<p>具体到架构设计方法论，驱动技术要解决的就是：</p>
-
-<ol>
-<li>如何将目标系统<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>分解为可以应对的问题。</li>
-<li>如何跟进应对这些问题的过程。</li>
-<li>如何评价问题被应对的程度。</li>
-<li>如何归纳所有应对结果并形成架构设计。</li>
-</ol>
-
-
-<p>其中第一条，是区别各驱动技术的要点。也是理解和选择各驱动技术的要点。分解依据不同，跟进、评价、归纳等机制也相应不同。</p>
-
-<p>从这个角度看，架构设计中常见的驱动技术有：</p>
-
-<ol>
-<li><p>特征驱动，或者叫需求驱动。分解依据是目标系统的特征。特征驱动是收集筛选系统的特征，并跟进特征的实现措施的驱动技术。经典的架构设计方法论多采用这种驱动技术。</p></li>
-<li><p>风险驱动。分解依据是目标系统生命周期中蕴藏的风险。风险驱动是发现生命周期中的风险，并跟进风险的控制措施的驱动技术。风险驱动是“不完备架构设计方法”的主要驱动技术。作为本人团队最常用的驱动技术，前期博客已经做了阐述<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p></li>
-<li><p>模式驱动。分解依据是团队积累的架构模式（也包括反模式）。模式驱动是筛选适用的模式，并跟进模式的应用措施的驱动技术。</p></li>
-<li><p>直觉驱动。或者说不使用任何驱动技术。当团队处于非常熟悉的领域、平台、技术栈的时候，直觉驱动确实存在。这种情况下架构设计基本已不需要“过程”来管控。不需要过程管控的架构设计是否合理，团队中意见并不一致，个人认为要慎重<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。</p></li>
-</ol>
-
-
-<p>（<a href="/blog/2015/10/28/driving2/">后一篇</a>）</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>本篇中以新系统架构设计为例，但所谈适合其他架构设计，比如架构重整改进、仅设计一个模块等。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p><a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">系列：敏捷的架构设计</a><br/><a href="/blog/2015/08/13/scenario/">以场景思维辅助风险驱动架构设计</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p><a href="/blog/2015/10/04/process/">架构设计不能忽视过程产出</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   
