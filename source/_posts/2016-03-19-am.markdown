@@ -1,0 +1,13 @@
+---
+layout: post
+title: "架构是一种管理手段"
+date: 2016-03-19 09:59:18 +0800
+comments: true
+categories: ["架构"]
+published: true
+keywords: ", , ,"
+description: ""
+
+---
+
+架构是一种管理手段。如果不是最重要的那一种的话。
