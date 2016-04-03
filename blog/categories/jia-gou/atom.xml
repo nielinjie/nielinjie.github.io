@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-02T15:21:31+08:00</updated>
+  <updated>2016-04-03T18:34:14+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[重构，从知识结构开始（二）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2/"/>
+    <updated>2016-04-02T15:30:25+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2</id>
+    <content type="html"><![CDATA[<p>我们认为两个方面的措施可以改善我们的知识结构。</p>
+
+<!--more-->
+
+
+<h3>一、设计和维护知识结构</h3>
+
+<p>知识结构必须有意识地设计和维护。</p>
+
+<p>我们使用上下文（Context）和上下文地图（Context Map）来结构化我们的知识，这两个概念都来自于DDD战略设计<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。
+简单讲上下文就是知识一致性的单元。上下文地图就是上下文之间的关系。</p>
+
+<p>上下文如下图示意，是一个有明确边界的单元，知识是其核心，也是其价值。边界中的其他元素是维持知识的手段。左边的是知识的描述，比如模型。右上是知识的守护和传承者：团队。右下是知识的体现形式——各种组件，比如后台的服务，前台的Android App，数据库Schema等。</p>
+
+<p>而上下文地图，是描述和维护上下文之间的关系的一个图。上下文与上下文地图加在一起，体现了全局范围内对知识结构的设计。</p>
+
+<p><img src="/images/domain/context.png" width="400"></p>
+
+<h3>二、区别应用知识与领域知识</h3>
+
+<p>应用知识描述的是如何（使用业务来）达成功能，领域知识描述的是业务本身。明确这两种知识的差别，除了一般的划分知识制造隔离的目的外，主要的是两个目的：</p>
+
+<ol>
+<li>解决前文提到的“补丁”和“碎片”问题。应用和领域分开演化，解决“补丁”问题；领域负责业务维护业务一致性，解决“碎片”问题。</li>
+<li>建立明确稳定的知识关联。如果没有领域，应用之间直接关联，在不同的时段不停变化，今天由于这项业务跟这个应用关联，明天又由于那项业务跟那个应用关联。关联不稳定，如下图左方所示。而有了领域作为关联枢纽，应用之间不需要直接关联，同时应用与领域的关联不会经常变化。</li>
+</ol>
+
+
+<p><img src="/images/domain/ad.png" width="400"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Eric Evans《领域驱动设计——软件核心复杂性应对之道》<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[架构是一种管理手段]]></title>
@@ -32,15 +77,10 @@
     <link href="http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/"/>
     <updated>2016-02-20T14:17:28+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2016/02/20/dev-dc</id>
-    <content type="html"><![CDATA[<p>在知识结构层面，我们认识到有两个问题：</p>
+    <content type="html"><![CDATA[<p>我们意识到系统中存在的大量结构性问题，根源都是我们知识的结构问题。
+在知识结构层面，我们有两个主要问题。</p>
 
 <!--more-->
-
-
-<ol>
-<li>没有意识到知识需要拆分。</li>
-<li>知识的结构来自于“产品线”。</li>
-</ol>
 
 
 <h3>一、没有意识到知识需要拆分</h3>
@@ -71,9 +111,13 @@
 </ul>
 
 
-<p>以上面我们谈到的好的知识结构的要求来看。来自于“产品线”的知识结构，一个要求都不能满足。</p>
+<p>这时候的情况类似于下图中Transaction Script的情况。</p>
 
-<p>（待续，下一篇讲讲我们的解决思路）</p>
+<p>显然，来自于“产品线”的知识结构，不能满足我们上面谈到的对知识结构的要求。</p>
+
+<p><img src="/images/domain/domain.gif" width="400"></p>
+
+<p>（<a href="/blog/2016/04/02/dev-dc2/">后文继续，讲讲我们的解决思路</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -151,78 +195,6 @@
 <ol>
 <li id="fn:1">
 <p><a href="/blog/2015/12/01/micro/">微服务的“微”</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在发展中团队：领域管理]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/"/>
-    <updated>2015-12-31T09:54:24+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/12/31/developing-domain</id>
-    <content type="html"><![CDATA[<p>度过初创期，业务复杂性明显发展，系统结构和质量越来越受到重视。</p>
-
-<p>需要考虑如何管理领域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
-
-<!--more-->
-
-
-<h3>什么是领域？</h3>
-
-<p>领域是业务概念和他们之间的关系与协作。系统的目的就是实现这些概念和协作。</p>
-
-<h3>领域有什么用？</h3>
-
-<ol>
-<li>领域决定系统的业务特征。领域的现状就是系统的业务现状，领域的历史就是系统的业务历史。或者说，领域体现了业务与系统特征间的因果关系。</li>
-<li>领域是通用语言。在产品团队与开发团队间，各产品线之间，各开发团队之间或者开发团队内部。领域是沟通的语言，也是发布和积累的语言，是协作的首要工具。</li>
-<li>领域是系统结构的依据。以领域驱动设计<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>是应对系统复杂性的常见手段。领域的结构深刻影响系统结构。</li>
-</ol>
-
-
-<p>这些用途决定了对领域管理的要求，比如：容易阅读，容易查找，容易控制，容易共享，容易跟踪变化。</p>
-
-<h3>如何管理领域？</h3>
-
-<ol>
-<li>从静态、动态两个角度描述领域。静态体现领域实体和他们的关系，动态体现领域实体的行为和协作。可以借用UML类图和序列图的形式<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>，也可以使用伪代码。</li>
-<li>形式化、结构化的描述体系。形式化的语言去除二义性，知识在各团队各角色之间不会产生歧义。结构化的语言体现层次，不同角色可以关注不同层面。 这一点上，UML相关约定完全够用。如果结合文件系统的树形结构，可以实现足够丰富的层次。</li>
-<li>使用git或其他SVC。便于共享和跟踪变化。这要求使用尽量简单的描述语言。在这里，一般的UML图不太理想，人类无法阅读UML图的diff。同样的，各种其他图、doc文档之类也不理想。可以借用马丁大叔UmlAsSketch<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup>的想法，使用纯文本形式的UML。</li>
-<li>使用中文。英文翻译是引入歧义的重要途径，在尽量少的地方使用英文，而不是相反。</li>
-<li>与开发共享周期。领域变化的步调一般与系统的设计开发一致，可以借用设计开发的版本和迭代周期。</li>
-</ol>
-
-
-<p>另外，一些可能的问题——</p>
-
-<p>Q：领域是需求么？<br/>
-A：对于开发团队来说，可以说领域来源于需求。区别是：</p>
-
-<ol>
-<li>需求从产品和用户的角度，以交互驱动；领域从设计和开发的角度，以结构和逻辑驱动。</li>
-<li>需求是增量，领域是全量。需求描述的是每次改动，一般以版本、迭代作为组织单位。如果想从需求知道系统体现业务现状，就必须将历史中所有相关需求找出来进行归纳，这无疑非常困难。而领域持续维护，随时体现当前现状。</li>
-<li>需求关心局部，领域关心全局。需求强调体验，往往专注于局部，以一个场景一次交互为单位进行描述。而领域强调整体，需要负责跨产品线跨系统保持一致性。</li>
-<li>需求包括功能、质量、约束，领域只涉及到功能。</li>
-</ol>
-
-
-<p>Q：领域是设计（类图、ER图……）么？<br/>
-A：领域是设计的依据（之一）。设计的目的是实现领域，但设计需要同时考虑其他架构策略，比如由质量要求引发的技术方案。如图：</p>
-
-<p><img src="/images/dev/domain.png" width="550"></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>本文中的“领域”都是指“领域模型”或者其他形式的领域知识，而不是领域本身。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>此处的“以领域驱动设计”不完全等于DDD。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-<li id="fn:3">
-<p>是不是任何事物都可以从静态和动态两角度描述，进而都使用类图和序列图？<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-<li id="fn:4">
-<p><a href="http://martinfowler.com/bliki/UmlAsSketch.html">UmlAsSketch</a><a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

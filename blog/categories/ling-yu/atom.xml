@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 领域 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/ling-yu/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-02T15:21:31+08:00</updated>
+  <updated>2016-04-03T18:34:14+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,19 +14,59 @@
 
   
   <entry>
-    <title type="html"><![CDATA[重构，从知识结构开始（一）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/"/>
-    <updated>2016-02-20T14:17:28+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/02/20/dev-dc</id>
-    <content type="html"><![CDATA[<p>在知识结构层面，我们认识到有两个问题：</p>
+    <title type="html"><![CDATA[重构，从知识结构开始（二）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2/"/>
+    <updated>2016-04-02T15:30:25+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2</id>
+    <content type="html"><![CDATA[<p>我们认为两个方面的措施可以改善我们的知识结构。</p>
 
 <!--more-->
 
 
+<h3>一、设计和维护知识结构</h3>
+
+<p>知识结构必须有意识地设计和维护。</p>
+
+<p>我们使用上下文（Context）和上下文地图（Context Map）来结构化我们的知识，这两个概念都来自于DDD战略设计<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。
+简单讲上下文就是知识一致性的单元。上下文地图就是上下文之间的关系。</p>
+
+<p>上下文如下图示意，是一个有明确边界的单元，知识是其核心，也是其价值。边界中的其他元素是维持知识的手段。左边的是知识的描述，比如模型。右上是知识的守护和传承者：团队。右下是知识的体现形式——各种组件，比如后台的服务，前台的Android App，数据库Schema等。</p>
+
+<p>而上下文地图，是描述和维护上下文之间的关系的一个图。上下文与上下文地图加在一起，体现了全局范围内对知识结构的设计。</p>
+
+<p><img src="/images/domain/context.png" width="400"></p>
+
+<h3>二、区别应用知识与领域知识</h3>
+
+<p>应用知识描述的是如何（使用业务来）达成功能，领域知识描述的是业务本身。明确这两种知识的差别，除了一般的划分知识制造隔离的目的外，主要的是两个目的：</p>
+
 <ol>
-<li>没有意识到知识需要拆分。</li>
-<li>知识的结构来自于“产品线”。</li>
+<li>解决前文提到的“补丁”和“碎片”问题。应用和领域分开演化，解决“补丁”问题；领域负责业务维护业务一致性，解决“碎片”问题。</li>
+<li>建立明确稳定的知识关联。如果没有领域，应用之间直接关联，在不同的时段不停变化，今天由于这项业务跟这个应用关联，明天又由于那项业务跟那个应用关联。关联不稳定，如下图左方所示。而有了领域作为关联枢纽，应用之间不需要直接关联，同时应用与领域的关联不会经常变化。</li>
 </ol>
+
+
+<p><img src="/images/domain/ad.png" width="400"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>Eric Evans《领域驱动设计——软件核心复杂性应对之道》<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[重构，从知识结构开始（一）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/"/>
+    <updated>2016-02-20T14:17:28+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/02/20/dev-dc</id>
+    <content type="html"><![CDATA[<p>我们意识到系统中存在的大量结构性问题，根源都是我们知识的结构问题。
+在知识结构层面，我们有两个主要问题。</p>
+
+<!--more-->
 
 
 <h3>一、没有意识到知识需要拆分</h3>
@@ -57,9 +97,13 @@
 </ul>
 
 
-<p>以上面我们谈到的好的知识结构的要求来看。来自于“产品线”的知识结构，一个要求都不能满足。</p>
+<p>这时候的情况类似于下图中Transaction Script的情况。</p>
 
-<p>（待续，下一篇讲讲我们的解决思路）</p>
+<p>显然，来自于“产品线”的知识结构，不能满足我们上面谈到的对知识结构的要求。</p>
+
+<p><img src="/images/domain/domain.gif" width="400"></p>
+
+<p>（<a href="/blog/2016/04/02/dev-dc2/">后文继续，讲讲我们的解决思路</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
