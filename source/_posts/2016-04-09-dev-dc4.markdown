@@ -1,0 +1,17 @@
+---
+layout: post
+title: "重构，以知识结构为中心（四）"
+date: 2016-04-09 11:10:01 +0800
+comments: true
+categories: ["架构","领域","重构"]
+series: ["重构，以知识结构为中心 4","在发展中团队 4"]
+published: false
+
+
+---
+
+我们设计了一些工具帮助领域团队。
+
+
+
+<!--more-->

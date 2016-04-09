@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "重构，从知识结构开始（一）"
+title: "重构，以知识结构为中心（一）"
 date: 2016-02-20 14:17:28 +0800
 comments: true
 categories: ["架构","领域","重构"]
-series: ["在发展中团队 1"]
+series: ["重构，以知识结构为中心 1","在发展中团队 1"]
 published: true
 
 ---
