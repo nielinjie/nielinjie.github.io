@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 领域 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/ling-yu/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-03T18:40:08+08:00</updated>
+  <updated>2016-04-09T15:20:38+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -14,7 +14,59 @@
 
   
   <entry>
-    <title type="html"><![CDATA[重构，从知识结构开始（二）]]></title>
+    <title type="html"><![CDATA[重构，以知识结构为中心（三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/04/09/dev-dc3/"/>
+    <updated>2016-04-09T11:09:57+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/04/09/dev-dc3</id>
+    <content type="html"><![CDATA[<p>团队和过程是维护知识结构的必需。</p>
+
+<!--more-->
+
+
+<h3>团队：“知识 - 团队 - 沟通”的闭环</h3>
+
+<p>团队结构与沟通结构，显然是一个映射关系。相比于团队内部，不同团队之间的沟通肯定相对不便，效率和准确性都显著较低。</p>
+
+<p>而知识结构和沟通结构，也是一种相互制约的关系。这个关系就是康威定理<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>描述的关系，定理中所说的产出结构，其实就是按照知识结构形成的。</p>
+
+<p>知识、团队、沟通三者的关系，形成了某种循环。通过改善团队和沟通结构，可以帮助知识结构的改善。同时逐渐改善的知识结构，也会促成沟通和团队的进一步改善。如下图所示。</p>
+
+<p>所以我们认为，根据“产品线”制定的团队结构需要重新安排。根据上下文定义、应用与领域分离的原则，我们重新设计了团队结构，并开始了“团队种子->虚拟团队->实体团队”的团队构建之路。</p>
+
+<p><img src="/images/domain/TCK.png" width="300"></p>
+
+<h3>过程：知识需要重整</h3>
+
+<p>知识的来源是我们的产品同学。产品同学产出的知识，与开发需要的知识，结构上并不一致<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
+
+<ol>
+<li>产品同学描述局部。较难详细考虑对系统其他部分的影响。</li>
+<li>产品同学描述过程。较少考虑涉及的概念和规则。</li>
+<li>产品同学描述增量。他们关注功能的增加和变化，较少关注遗留和现状。</li>
+</ol>
+
+
+<p>这样的关注角度和知识结构有它的价值，但对研发来说是不适合的。
+我们需要一个重整知识结构的过程，将产品同学输入的片段知识，重新整理并归纳到我们，这个过程就是“需求分析”。根据我们的团队结构和与产品同学的合作模式，我们认为这个“需求分析”应该是：“应用触发领域驱动的需求分析”。</p>
+
+<p>也就是说：需求分析由应用团队触发，因为产品同学的输入在应用（也就是目前大家都习惯的“产品线”概念）；但随即转交给相应的领域团队，由领域团队作为中枢推进和控制后续分析工作的进行。这个过程跟我们此前谈到的，应用知识与领域知识的关系相匹配——<a href="/blog/2016/04/02/dev-dc2/">区别应用知识与领域知识</a>。</p>
+
+<p>（后文继续，讲讲领域团队的工具）</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="https://en.wikipedia.org/wiki/Conway%27s_law">Conway&rsquo;s law</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>这里说的是本团队的情况，并不是说业界普遍情况。个人对产品业界了解不多。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[重构，以知识结构为中心（二）]]></title>
     <link href="http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2/"/>
     <updated>2016-04-02T15:30:25+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2</id>
@@ -36,7 +88,7 @@
 
 <p><img src="/images/domain/context.png" width="400"></p>
 
-<h3>二、区别应用知识与领域知识</h3>
+<h3><a name="ad"></a>二、区别应用知识与领域知识</h3>
 
 <p>应用知识描述的是如何（使用业务来）达成功能，领域知识描述的是业务本身。明确这两种知识的差别，除了一般的划分知识制造隔离的目的外，主要的是两个目的：</p>
 
@@ -47,6 +99,8 @@
 
 
 <p><img src="/images/domain/ad.png" width="400"></p>
+
+<p>（<a href="/blog/2016/04/09/dev-dc3/">后文继续，讲讲维护知识的手段</a>）</p>
 <div class="footnotes">
 <hr/>
 <ol>
@@ -59,7 +113,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[重构，从知识结构开始（一）]]></title>
+    <title type="html"><![CDATA[重构，以知识结构为中心（一）]]></title>
     <link href="http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/"/>
     <updated>2016-02-20T14:17:28+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2016/02/20/dev-dc</id>
