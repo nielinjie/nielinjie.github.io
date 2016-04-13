@@ -1,0 +1,17 @@
+---
+layout: post
+title: "记一群成功的微服务"
+date: 2016-04-13 13:39:21 +0800
+comments: true
+categories: ["架构","微服务"]
+published: true
+---
+
+记一群（可能比较）成功的微服务[^1]。Enjoy :-)
+
+<!--more-->
+
+<video src="http://us.sinaimg.cn/000lQiBtjx06S0zCVQMf01040101QHkP0k02.mp4?KID=unistore,video&amp;Expires=1460529413&amp;ssig=5dH2lDGUWk" controls="controls" >
+</video>
+
+[^1]: [Orchestration 和 Choreography](/blog/2015/11/29/oc/)
