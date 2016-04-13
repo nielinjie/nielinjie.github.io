@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "记一群成功的微服务"
+title: "一帮成功的微服务"
 date: 2016-04-13 13:39:21 +0800
 comments: true
 categories: ["架构","微服务"]
 published: true
 ---
 
-记一群（可能比较）成功的微服务[^1]。Enjoy :-)
+一帮（可能比较）成功的微服务[^1]。Enjoy 😂
 
 <!--more-->
 
-<iframe height=498 width=510 src="http://player.youku.com/embed/XMTQ5MDUyNjg5Ng==" frameborder=0 allowfullscreen></iframe>
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTY5NjA5NTUy" frameborder=0 allowfullscreen></iframe>
 
 [^1]: [Orchestration 和 Choreography](/blog/2015/11/29/oc/)
