@@ -11,7 +11,6 @@ published: true
 
 <!--more-->
 
-<video src="http://us.sinaimg.cn/000lQiBtjx06S0zCVQMf01040101QHkP0k02.mp4?KID=unistore,video&amp;Expires=1460529413&amp;ssig=5dH2lDGUWk" controls="controls" >
-</video>
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTQ5MDUyNjg5Ng==" frameborder=0 allowfullscreen></iframe>
 
 [^1]: [Orchestration 和 Choreography](/blog/2015/11/29/oc/)
