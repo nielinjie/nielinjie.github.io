@@ -24,7 +24,16 @@ layout: null
     {% for cate in post.categories%}
     <category term="/{{cate}}"/>
     {% endfor %}
-    <content type="html"><![CDATA[{{ post.content | expand_urls: site.url | cdata_escape }}]]></content>
+    <content type="html">
+      <![CDATA[{{ post.content | excerpt | expand_urls: site.url | cdata_escape }}
+      {% capture excerpted %}{{ post.content | has_excerpt }}{% endcapture %}
+      {% if excerpted == 'true' %}
+        <p>
+          <a rel="full-article" href="{{ site.url }}{{ post.url }}">{{ site.excerpt_link }}</a>
+        </p>
+      {% endif %}
+      ]]>
+    </content>
   </entry>
   {% endfor %}
 </feed>
