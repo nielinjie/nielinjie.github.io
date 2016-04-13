@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 微服务 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/wei-fu-wu/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-09T15:20:38+08:00</updated>
+  <updated>2016-04-13T22:41:13+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[一帮成功的微服务]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/04/13/good-ms/"/>
+    <updated>2016-04-13T13:39:21+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/04/13/good-ms</id>
+    <content type="html"><![CDATA[<p>一帮（可能比较）成功的微服务<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。Enjoy 😂</p>
+
+<!--more-->
+
+
+
+
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTY5NjA5NTUy" frameborder=0 allowfullscreen></iframe>
+
+
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p><a href="/blog/2015/11/29/oc/">Orchestration 和 Choreography</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在发展中团队：微服务？]]></title>
