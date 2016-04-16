@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>简单的灰度发布方案 - 聂同学</title>
+  <title>重构，以知识结构为中心（四） - 聂同学</title>
   <meta name="author" content="nielinjie">
   
   <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2014/05/28/huidu">
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -74,7 +74,7 @@
         
   <header>
     
-      <h1 class="entry-title">简单的灰度发布方案</h1>
+      <h1 class="entry-title">重构，以知识结构为中心（四）</h1>
     
     
       <p class="meta">
@@ -91,58 +91,51 @@
 
 
 
-<time datetime="2014-05-28T20:06:38+08:00"  data-updated="true">2014-05-28</time>
+<time datetime="2016-04-16T11:10:01+08:00"  data-updated="true">2016-04-16</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>正在策划一个系统的灰度发布，目前有个简单的方案，（简图如最后所示）。</p>
+<div class="entry-content"><p>为了帮助领域团队凝聚和守护领域知识，我们设计和使用了一些工具。</p>
 
-<!-- more -->
+<!--more-->
 
 
+<h3>领域模型</h3>
+
+<p>最首要的工具当然是领域模型。但从零开始建立一个有些远水解不了近渴。
+我们的想法是识别一点建立一点使用一点，持续地延伸和细化。</p>
+
+<p>当前是划分上下文、区别领域与应用、建立团队的阶段，我们关注点就在上下文之间的边界上和领域与应用的边界上。
+那么我们就以上下文之间的边界处和领域与应用之间的边界处作为我们领域模型建立的起点。</p>
+
+<h3>领域边界跟踪表<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></h3>
+
+<p>上下文之间的关系非常重要，关系到知识的依赖类型，也关系到领域团队间的沟通和协作。所以我们特别关注厘清边界处的概念和它们的属主。</p>
+
+<p>团队认识到的边界，往往描述为领域之间的交互场景。这时候需要从中提炼出业务概念和规则。一般以领域实体和领域事件为代表。</p>
+
+<h3>应用差异跟踪表</h3>
+
+<p>领域团队职责是维护业务的一致性。
+这要求领域团队除了控制领域知识以外，对领域知识的各种应用形式必须有足够的认识和应对。
+这一点在当前领域与应用的边界尚未完全明确的情况下尤为必要。</p>
+
+<p>我们的切入点是总结应用形式之间的差异并制定对差异的应对策略<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
+
+<p>（还有一些其他层面的工具，待续）</p>
+<div class="footnotes">
+<hr/>
 <ol>
-<li>同一系统发布为ab两个版本，同时在生产可用。</li>
-<li>用户访问先通过一个分流规则，这个规则决定访问a版本还是b版本。</li>
-<li>分流规则主要涉及到用户的特征，可能涉及到一些业务逻辑。</li>
-<li>分流规则可以由运营方便地（如果可以，随时地）维护生效。</li>
+<li id="fn:1">
+<p>“领域边界”其实是上下文边界的俗成说法，老司机也阻止不了——上下文这个名词确实不够简明。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p><a href="/attachment/app-diff.html/">《领域知识在各应用的形态差异及如何处理》（已打码）</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
+</div>
 
-
-<p>我们的问题主要是：</p>
-
-<p>分流这部分应该是一种常见的反向代理，不太熟悉这类组件。公司里用得比较多的时f5。
-如果利用f5、nginx之类的做分流是否可以达成上面提到的第3、4点。</p>
-
-<p>了解到f5的irule只能描述简单地规则，比如可以读取cookie，
-目前的想法是由应用自己来写规则，通过cookie通知f5，irules里面只需要对cookie做简单判定。
-需要调整分流规则的时候，运营（或者开发）只需要操作应用。
-类似于这样：</p>
-
-<p>f5 中</p>
-
-<pre><code>if(cookie(‘abVersionFlag’)==a){
-       redirectTo a
-}else{
-       redirectTo b
-}
-</code></pre>
-
-<p>应用中（只在b版本中必要）：</p>
-
-<pre><code>if(cookie(‘abVersionFlag’)==null){
-       setCookie(‘abVersionFlag’, getABVserionByUserFromBusiness(user))
-       sendRedirect(url)
-}else{
-       otherBusinessLogic……
-}
-</code></pre>
-
-<p>简图：</p>
-
-<p><img src="/images/ab/ab.png"></p>
 </div>
 
 
@@ -166,12 +159,12 @@
 
 
 
-<time datetime="2014-05-28T20:06:38+08:00"  data-updated="true">2014-05-28</time>
+<time datetime="2016-04-16T11:10:01+08:00"  data-updated="true">2016-04-16</time>
                 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/jia-gou/'>架构</a>
+    <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/zhong-gou/'>重构</a>, <a class='category' href='/blog/categories/ling-yu/'>领域</a>
   
 </span>
 
@@ -185,6 +178,7 @@
   
 
 
+<div class="post-series" data-series="重构，以知识结构为中心 4,在发展中团队 4,"></div>
 <script type="text/javascript" charset="utf-8">
   (function(){
     function series(){

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/</loc>
+    <lastmod>2016-04-16T11:10:01+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/blog/2016/04/13/good-ms/</loc>
     <lastmod>2016-04-13T13:39:21+08:00</lastmod>
   </url>
@@ -369,6 +373,9 @@
     <lastmod>2011-11-14T15:04:04+08:00</lastmod>
   </url>
   <url>
+    <loc>http://www.nietongxue.xyz/attachment/app-diff.html</loc>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/blog/filter/filter.html</loc>
   </url>
   <url>
@@ -378,10 +385,10 @@
     <loc>http://www.nietongxue.xyz/</loc>
   </url>
   <url>
-    <loc>http://www.nietongxue.xyz/resume/</loc>
+    <loc>http://www.nietongxue.xyz/pp/</loc>
   </url>
   <url>
-    <loc>http://www.nietongxue.xyz/pp/</loc>
+    <loc>http://www.nietongxue.xyz/resume/</loc>
   </url>
   <url>
     <loc>http://www.nietongxue.xyz/blog/categories/scala/</loc>

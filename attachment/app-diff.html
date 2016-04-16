@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>简单的灰度发布方案 - 聂同学</title>
+  <title>领域知识的应用形态差异及对策 - 聂同学</title>
   <meta name="author" content="nielinjie">
   
   <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2014/05/28/huidu">
+  <link rel="canonical" href="http://www.nietongxue.xyz/attachment/app-diff.html">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -70,15 +70,11 @@
   <div id="main">
     <div id="content">
       <div>
-    <article class="hentry" role="article">
-        
+<article role="article">
+  
   <header>
-    
-      <h1 class="entry-title">简单的灰度发布方案</h1>
-    
-    
-      <p class="meta">
-        
+    <h1 class="entry-title">领域知识的应用形态差异及对策</h1>
+    <p class="meta">
 
 
 
@@ -91,69 +87,49 @@
 
 
 
-<time datetime="2014-05-28T20:06:38+08:00"  data-updated="true">2014-05-28</time>
-        
-      </p>
-    
+<time datetime="2016-04-16T12:28:00+08:00"  data-updated="true">2016-04-16</time></p>
   </header>
+  
+  <h3>一、业务差异</h3>
 
-
-<div class="entry-content"><p>正在策划一个系统的灰度发布，目前有个简单的方案，（简图如最后所示）。</p>
-
-<!-- more -->
-
+<p>这类差异大概有：</p>
 
 <ol>
-<li>同一系统发布为ab两个版本，同时在生产可用。</li>
-<li>用户访问先通过一个分流规则，这个规则决定访问a版本还是b版本。</li>
-<li>分流规则主要涉及到用户的特征，可能涉及到一些业务逻辑。</li>
-<li>分流规则可以由运营方便地（如果可以，随时地）维护生效。</li>
+<li>由于业态不同 - 比如有些是卖这类东西，有些是卖那类东西。</li>
+<li>由于用户角色不同 - 比如有些是前台职员操作，有些是顾客操作，有些是后台管理者操作。</li>
+<li>由于UseCase不同 - 比如有些是在配置规则，有些是在使用规则。</li>
+<li>由于产品策略不同 - 比如有些是精简版，有些是完整版。</li>
+<li>由于操作渠道的不同 - 比如有些是通过合作系统操作，有些是通过另一个合作系统操作。</li>
 </ol>
 
 
-<p>我们的问题主要是：</p>
+<p>这一类的差异是业务的本质。有些不需要领域层面处理，应用层面进行选择就可以了。而有些则需要通过领域逻辑的分支来处理。</p>
 
-<p>分流这部分应该是一种常见的反向代理，不太熟悉这类组件。公司里用得比较多的时f5。
-如果利用f5、nginx之类的做分流是否可以达成上面提到的第3、4点。</p>
+<p><strong>业务差异是否有必要在领域层面处理，由领域团队决定。</strong></p>
 
-<p>了解到f5的irule只能描述简单地规则，比如可以读取cookie，
-目前的想法是由应用自己来写规则，通过cookie通知f5，irules里面只需要对cookie做简单判定。
-需要调整分流规则的时候，运营（或者开发）只需要操作应用。
-类似于这样：</p>
+<h3>二、步调差异</h3>
 
-<p>f5 中</p>
+<p>由于研发或产品的工作进度造成应用形态差异（不论有意还是无意）。</p>
 
-<pre><code>if(cookie(‘abVersionFlag’)==a){
-       redirectTo a
-}else{
-       redirectTo b
-}
-</code></pre>
+<p>领域层面通过版本来应对这种差异，比如服务接口的版本。</p>
 
-<p>应用中（只在b版本中必要）：</p>
+<p><strong>设计和维护版本之间的兼容性策略是领域团队的责任，而不是应用团队的。</strong></p>
 
-<pre><code>if(cookie(‘abVersionFlag’)==null){
-       setCookie(‘abVersionFlag’, getABVserionByUserFromBusiness(user))
-       sendRedirect(url)
-}else{
-       otherBusinessLogic……
-}
-</code></pre>
+<h3>三、技术差异</h3>
 
-<p>简图：</p>
+<p>不同的应用在不同的平台上运行，有可能会出现一些技术限制造成差异。比如有些应用网速不可控，有些应用内存很少等等。这种差异往往是暂时的，根据大家对这个技术限制的认识转化为之前的两种：</p>
 
-<p><img src="/images/ab/ab.png"></p>
-</div>
+<ol>
+<li>技术限制将被克服。则转化为步调差异。</li>
+<li>技术限制将被容忍。则转化为不同的产品策略（业务差异第4点）。</li>
+</ol>
 
 
-        <footer>
-            <p class="meta">
-                
   
-
-<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
-
-                
+    <footer>
+      <p class="meta">
+        
+        
 
 
 
@@ -166,59 +142,11 @@
 
 
 
-<time datetime="2014-05-28T20:06:38+08:00"  data-updated="true">2014-05-28</time>
-                
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/jia-gou/'>架构</a>
-  
-</span>
-
-
-            </p>
-
-
-            <p/>
-            <section>
-                
-  
-
-
-<script type="text/javascript" charset="utf-8">
-  (function(){
-    function series(){
-      var posts=window.site.posts
-      return _(posts).chain().map(function(p){
-        return _(p.series).map(function(s){
-          var parts=s.split(" ")
-          return {name:parts[0],index:parts[1],post:p}
-        })
-      }).flatten().value()
-    }
-    var ss=series()
-    var sers=$("div.post-series").attr("data-series")
-    sers = sers?sers.split(","):[]
-    sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
-      var name=s.split(" ")[0]
-      var index=s.split(" ")[1]
-      return ss.filter(function(ser){
-        return ser.name==name
-      })
-    }).value()
-    _(sers).each(function(s){
-      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
-      _(s).each(function(sOfP){
-        p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
-      })
-    })
-  })()
-</script>
-
-            </section>
-
-            
-                <section>
+<time datetime="2016-04-16T12:28:00+08:00"  data-updated="true">2016-04-16</time>
+        
+      </p>
+      
+        <section>
 <h2>Sharing</h2>
 
 
@@ -226,15 +154,14 @@
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 </section>
 
-            
+      
+    </footer>
+  
+</article>
 
-        </footer>
-    </article>
-
-    
-    <section imagesd="comment">
-        <h2>Add a comment</h2>
-        <!-- Duoshuo Comment BEGIN -->
+<section imagesd="comment">
+    <h2>Add a comment</h2>
+    <!-- Duoshuo Comment BEGIN -->
   <div class="ds-thread"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"nielinjie"};
@@ -249,13 +176,12 @@ var duoshuoQuery = {short_name:"nielinjie"};
   </script>
 <!-- Duoshuo Comment END -->
 
-    </section>
-    
+</section>
 
 </div>
 
 <aside class="sidebar">
-    
+  
     <section>
   <h1>About Me</h1>
   <a href="/resume/"><img id="photo" src="/images/me/photo.jpg"/></a>
@@ -376,7 +302,7 @@ var duoshuoQuery = {short_name:"nielinjie"};
     <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (74)</a></li><li><a href='/blog/categories/guo-cheng'>过程 (14)</a></li><li><a href='/blog/categories/kai-fa'>开发 (12)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (10)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (8)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (6)</a></li><li><a href='/blog/categories/she-ji'>设计 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>dsl (5)</a></li><li><a href='/blog/categories/wei-fu-wu'>微服务 (5)</a></li><li><a href='/blog/categories/chan-pin'>产品 (5)</a></li><li><a href='/blog/categories/ling-yu'>领域 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/rest'>rest (3)</a></li><li><a href='/blog/categories/android'>android (3)</a></li><li><a href='/blog/categories/scala'>scala (3)</a></li><li><a href='/blog/categories/togaf'>togaf (2)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/mo-shi'>模式 (1)</a></li></ul>
 </section>
 
-    
+  
 </aside>
 
 

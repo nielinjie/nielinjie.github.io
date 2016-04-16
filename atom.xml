@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-13T22:41:13+08:00</updated>
+  <updated>2016-04-16T13:03:13+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[重构，以知识结构为中心（四）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/"/>
+    <updated>2016-04-16T11:10:01+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/领域"/>
+    
+    <category term="/重构"/>
+    
+    <content type="html">
+      <![CDATA[<p>为了帮助领域团队凝聚和守护领域知识，我们设计和使用了一些工具。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[一帮成功的微服务]]></title>
@@ -463,28 +489,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/10/26/method/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[“架构是进化来的，不是设计来的。”]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/24/evolve/"/>
-    <updated>2015-10-24T17:21:53+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/24/evolve</id>
-    
-    <category term="/架构"/>
-    
-    <content type="html">
-      <![CDATA[<p>当然。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/10/24/evolve/">Read on &rarr;</a>
         </p>
       
       ]]>
