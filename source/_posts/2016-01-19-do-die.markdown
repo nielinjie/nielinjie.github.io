@@ -3,7 +3,7 @@ layout: post
 title: "领域对象的没落？"
 date: 2016-01-19 09:21:19 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构","领域"]
 published: true
 keywords: "领域,对象,架构"
 description: "领域对象的没落？"
@@ -32,4 +32,3 @@ description: "领域对象的没落？"
 
 [^1]: 原话在[这里](http://weibo.com/rebol)。
 [^2]: 这里通篇使用的是“服务”这个词语，但指的是广义的可重用组件。
-

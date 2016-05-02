@@ -3,7 +3,7 @@ layout: post
 title: "“服务化”"
 date: 2015-04-09 11:11:07 +0800
 comments: true
-categories: [架构]
+categories: ["架构"]
 
 ---
 

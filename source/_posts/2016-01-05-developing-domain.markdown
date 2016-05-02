@@ -3,7 +3,7 @@ layout: post
 title: "在发展中团队：领域管理"
 date: 2015-12-31 09:54:24 +0800
 comments: true
-categories: ["架构","过程"]
+categories: ["架构","过程","领域"]
 series: ["在发展中团队 0"]
 keywords: "发展中, 领域, 管理,"
 description: "在发展中团队：领域知识管理"
