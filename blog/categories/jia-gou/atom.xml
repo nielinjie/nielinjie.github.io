@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-16T13:03:13+08:00</updated>
+  <updated>2016-05-28T18:24:25+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[FAQ：应用架构与技术架构]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/05/28/avst/"/>
+    <updated>2016-05-28T17:15:59+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/05/28/avst</id>
+    <content type="html"><![CDATA[<p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>应用架构产出结构。技术架构产出技术。</p>
+
+<p>应用架构的职责是产出并维护一个合理健康的结构。而技术架构所产出技术，则被用作支持这个结构的手段。技术就是手段。</p>
+
+<!--more-->
+
+
+<p>技术的进化有时候会直接导致结构的变革，这就是技术驱动的团队的情况。而其他情况，可能是大部分情况，技术是在结构的框架和需求中发展。</p>
+
+<p>大部分的团队的技术，来自于“选型”，即从已有技术选择适合自己的，而这个“适合自己”，最重要的标准之一就是适合自己的结构。</p>
+
+<p>技术是局部的，而结构是广泛的。但局部与广泛是相对的。在更宏观的结构来看，更微观的结构可能就是技术。</p>
+
+<p>任何从客户系统的视角来说是一项局部的技术，它的存在和种种特性，其实可能需要复杂和高妙的内部结构来支撑。</p>
+
+<p>同样的道理，任何尺度的结构，都可能是更大尺度的系统的一个局部技术。例如我们从产品和运营的视角，整个应用系统，包括它的结构，都是一个局部技术。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>通篇以一名应用架构师的视角。我肯定别的架构师有他们自己的看法。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[重构，以知识结构为中心（四）]]></title>
@@ -182,20 +214,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构是一种管理手段]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/03/19/am/"/>
-    <updated>2016-03-19T09:59:18+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/03/19/am</id>
-    <content type="html"><![CDATA[<p>是的。如果不是最重要的那一种的话。</p>
-
-<!--more-->
-
-
-<p>架构同时也是管理的目的。既是目的又是手段。有点像是修金字塔，基础部分的修建既是目的又是手段。</p>
 ]]></content>
   </entry>
   

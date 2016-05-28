@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2016/05/28/avst/",
+    date:"2016-05-28T17:15:59+08:00",
+    title:"FAQ：应用架构与技术架构",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "FAQ 0",
+      
+    ]
+  },
+
+  {
     url:"/blog/2016/04/16/dev-dc4/",
     date:"2016-04-16T11:10:01+08:00",
     title:"重构，以知识结构为中心（四）",
@@ -165,6 +181,8 @@ window.site={
       
         "架构",
       
+        "领域",
+      
     ],
     series:[
       
@@ -198,6 +216,8 @@ window.site={
         "架构",
       
         "过程",
+      
+        "领域",
       
     ],
     series:[

@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-16T13:03:13+08:00</updated>
+  <updated>2016-05-28T18:24:25+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[FAQ：应用架构与技术架构]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/05/28/avst/"/>
+    <updated>2016-05-28T17:15:59+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/05/28/avst</id>
+    
+    <category term="/架构"/>
+    
+    <content type="html">
+      <![CDATA[<p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>应用架构产出结构。技术架构产出技术。</p>
+
+<p>应用架构的职责是产出并维护一个合理健康的结构。而技术架构所产出技术，则被用作支持这个结构的手段。技术就是手段。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/05/28/avst/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[重构，以知识结构为中心（四）]]></title>
@@ -222,6 +246,8 @@
     
     <category term="/架构"/>
     
+    <category term="/领域"/>
+    
     <content type="html">
       <![CDATA[<p>最近，网红架构师学镛老师提出了观点，说用对象模型来体现领域已不太适用于现代系统环境，比如分布式和高并发。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 
@@ -269,6 +295,8 @@
     <category term="/架构"/>
     
     <category term="/过程"/>
+    
+    <category term="/领域"/>
     
     <content type="html">
       <![CDATA[<p>度过初创期，业务复杂性明显发展，系统结构和质量越来越受到重视。</p>
@@ -465,30 +493,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/10/28/driving2/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[方法论]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/26/method/"/>
-    <updated>2015-10-26T21:24:20+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/26/method</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/过程"/>
-    
-    <content type="html">
-      <![CDATA[<p>方法论是路线图，不是轨道。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/10/26/method/">Read on &rarr;</a>
         </p>
       
       ]]>

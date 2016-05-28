@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>给老爷爷系统（七）：三个划分维度 - 聂同学</title>
+  <title>FAQ：应用架构与技术架构 - 聂同学</title>
   <meta name="author" content="nielinjie">
   
   <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2014/06/16/3d">
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2016/05/28/avst">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
@@ -74,7 +74,7 @@
         
   <header>
     
-      <h1 class="entry-title">给老爷爷系统（七）：三个划分维度</h1>
+      <h1 class="entry-title">FAQ：应用架构与技术架构</h1>
     
     
       <p class="meta">
@@ -91,60 +91,34 @@
 
 
 
-<time datetime="2014-06-16T20:06:38+08:00"  data-updated="true">2014-06-16</time>
+<time datetime="2016-05-28T17:15:59+08:00"  data-updated="true">2016-05-28</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><blockquote><p>这是一个老爷爷系统。</p></blockquote>
+<div class="entry-content"><p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>应用架构产出结构。技术架构产出技术。</p>
 
-<p><a href="/blog/2014/06/09/refactory">前一篇</a>提到，
-为了应对复杂性，对代码按“领域”进行划分。</p>
+<p>应用架构的职责是产出并维护一个合理健康的结构。而技术架构所产出技术，则被用作支持这个结构的手段。技术就是手段。</p>
 
-<!-- more -->
-
-
-<p>这个维度的划分不强调层次，而强调聚合<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。
-根据领域概念的相关性联系在一起，比如跟“用户”这个领域概念有关的代码放在一处，跟“流程”有关的代码放在一处。
-而跟“（用户）授权”有关的代码放在一处，这一处靠近“用户”而远离“流程”。</p>
-
-<p>另一个维度，这个系统（和其他很多系统一样）历来就有从框架“职责”方向的划分，
-比如代码分为Action、Controller、Service、BO、DAO等等。整理了一下，
-从上到下，分为三个层次：表现层、业务层、基础设施层，其中业务层，又分为功能层和领域层。
-跟上个维度不同，这个维度上，层次是有明显意义的。
-上一层一般只能调用下一层或者同一层的逻辑。</p>
-
-<p>逐步的我们发现，我们需要另一个划分。我们的系统是企业办公系统，
-除了“通用”逻辑以外，我们有很多“专用”的逻辑，这些“专用”逻辑贯穿在整个业务逻辑中，
-比如不同的专业公司、不同的地域，对某些功能有不同的要求。（这些带来业务逻辑差异的因素，称为“差异来源”。）
-这些逻辑如果在实现时简单直接，就会有很多“专用”代码，“弥散”在整个系统中。
-坏处很明显：</p>
-
-<ul>
-<li>专用逻辑分散，很难管理和进化。</li>
-<li>通用逻辑跟专用逻辑纠缠，增加了不必要的复杂度。</li>
-</ul>
+<!--more-->
 
 
-<p>于是我们明确了第三个维度的划分，在这个维度上，系统划分为“通用”、“专用”两个层次。</p>
+<p>技术的进化有时候会直接导致结构的变革，这就是技术驱动的团队的情况。而其他情况，可能是大部分情况，技术是在结构的框架和需求中发展。</p>
 
-<p>下面的第一个图，体现了三个维度的划分情况。</p>
+<p>大部分的团队的技术，来自于“选型”，即从已有技术选择适合自己的，而这个“适合自己”，最重要的标准之一就是适合自己的结构。</p>
 
-<p>第二个图，重点描述了第三个维度的划分。
-左边是没有第三维度划分时的情况，不同差异来源的专用逻辑，在不同的领域，无规律地散乱着。
-右边是按照第三维度划分后的情况，下层是通用逻辑。上层是专用逻辑，按照不同的差异来源，不同的领域，有序分布。
-至于协同两个层次的机制，称为“特征机制”，将在<a href="/blog/2014/06/16/feature">下一篇</a>中阐述。</p>
+<p>技术是局部的，而结构是广泛的。但局部与广泛是相对的。在更宏观的结构来看，更微观的结构可能就是技术。</p>
 
-<p><img src="/images/3d/3d.png"></p>
+<p>任何从客户系统的视角来说是一项局部的技术，它的存在和种种特性，其实可能需要复杂和高妙的内部结构来支撑。</p>
 
-<p><img src="/images/feature/feature.png"></p>
+<p>同样的道理，任何尺度的结构，都可能是更大尺度的系统的一个局部技术。例如我们从产品和运营的视角，整个应用系统，包括它的结构，都是一个局部技术。</p>
 <div class="footnotes">
 <hr/>
 <ol>
 <li id="fn:1">
-<p><a href="/blog/2014/06/07/structure">结构的要素</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<p>通篇以一名应用架构师的视角。我肯定别的架构师有他们自己的看法。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
@@ -171,7 +145,7 @@
 
 
 
-<time datetime="2014-06-16T20:06:38+08:00"  data-updated="true">2014-06-16</time>
+<time datetime="2016-05-28T17:15:59+08:00"  data-updated="true">2016-05-28</time>
                 
 
 <span class="categories">
@@ -190,7 +164,7 @@
   
 
 
-<div class="post-series" data-series="给老爷爷系统 7,"></div>
+<div class="post-series" data-series="FAQ 0,"></div>
 <script type="text/javascript" charset="utf-8">
   (function(){
     function series(){

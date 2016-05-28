@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 领域 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/ling-yu/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-04-16T13:03:13+08:00</updated>
+  <updated>2016-05-28T18:24:25+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -211,6 +211,36 @@
 <p>所谓“掌握”，指的是可以直接指导研发，并使其产生业务价值的程度。而“了解”，指的是明了其大致原理的程度。举个时髦的例子，你能明白《时间简史》，大概可以算是了解相对论。但你能设计探测引力波的方案，才能算掌握相对论。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p>我们这里的“产品线”可能跟很多团队的“产品线”概念不一样。我们的产品线大部分其实是同一套业务的不同功能集。比如有面向不同用户角色的不同功能集，体现在不同客户端的不同功能集等等。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[领域对象的没落？]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/01/19/do-die/"/>
+    <updated>2016-01-19T09:21:19+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/01/19/do-die</id>
+    <content type="html"><![CDATA[<p>最近，网红架构师学镛老师提出了观点，说用对象模型来体现领域已不太适用于现代系统环境，比如分布式和高并发。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<!--more-->
+
+
+<p>我是同意这个观点的。</p>
+
+<p>我认为究其原因，主要是因为目前的服务<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>提供方式。不是以对象为单位包装为服务。由于性能、容错、可伸缩、可扩展等质量要求，人们常使用分布式和松耦合的接口，比如REST风格的HTTP接口、Reactive风格的消息接口。而曾经流行的对象风格的接口，比如EJB，由于不适应这些现代质量要求，已经逐渐淡出了视线。</p>
+
+<p>如果服务不以对象的方式提供，则领域对象无法直接映射为服务。那么领域对象的意义就局限到服务内部。而在更重要的、有全局意义的服务设计和跨服务过程设计中，就不再有使用领域对象的理由。</p>
+
+<p>体现在实践中，领域过程仍然是最重要的知识，只是现在更多的领域过程被分解为子过程的调用和信息的流动，而不是对象和对象间的协作。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>原话在<a href="http://weibo.com/rebol">这里</a>。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>这里通篇使用的是“服务”这个词语，但指的是广义的可重用组件。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
