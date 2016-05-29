@@ -4,7 +4,7 @@ title: "拖动研发组织发展的三驾马车"
 date: 2016-05-02 11:48:26 +0800
 comments: true
 categories: ["管理","架构","过程"]
-published: true
+published: false
 
 ---
 

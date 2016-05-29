@@ -45,13 +45,15 @@ footer: true
 
 个人网站：[www.nietongxue.xyz](http://www.nietongxue.xyz)
 
+FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=FAQ&filterDes=Series%3A%20FAQ)
+
 
 
 ### <a name="2"></a>工作经验
 * 2015 /12--至今：时时客科技有限公司
 	* 研发部架构组
 	* 高级架构师
-	* 负责核心系统软件架构工作。该系统群为服务业SAAS系统。
+	* 负责核心系统软件应用架构工作。该系统群为服务业SAAS系统。
 
 ----
 
