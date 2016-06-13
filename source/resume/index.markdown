@@ -52,7 +52,7 @@ FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?fil
 ### <a name="2"></a>工作经验
 * 2015 /12--至今：时时客科技有限公司
 	* 研发部架构组
-	* 高级架构师
+	* 高级架构师、应用架构负责人
 	* 负责核心系统软件应用架构工作。该系统群为服务业SAAS系统。
 
 ----
@@ -94,13 +94,13 @@ FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?fil
 	* 责任描述：发起人、负责人、架构设计、架构执行。
 	* 相关博客：
 		* [在发展中团队](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=在发展中团队&filterDes=Series%3A%20在发展中团队)
-	
+
 ----
 
 * 2015 /8--2015 /12：平安账户安全防护产品项目
 	* 项目描述：为平安旗下多款APP和网站提供实时账户安全防护服务。
 	* 责任描述：架构设计。
-	
+
 ----
 
 * 2015 /7--2015 /12：反洗钱系统群架构重构
