@@ -4,6 +4,7 @@ title: "微服务的微"
 date: 2015-12-01 15:16:01 +0800
 comments: true
 categories: ["架构","微服务"]
+series: ["微服务的微 0"]
 keywords: "微服务"
 description: "微服务的微"
 

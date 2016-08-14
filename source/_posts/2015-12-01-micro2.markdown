@@ -1,18 +1,18 @@
 ---
 layout: post
 title: "微服务的微（下）"
-date: 2015-12-01 15:16:01 +0800
+date: 2015-12-15 15:16:01 +0800
 comments: true
 categories: ["架构","微服务"]
-published: false
+published: true
 series: ["微服务的微 1"]
 keywords: "微服务"
 description: "微服务的微"
 
 ---
 
-微服务应该强调什么微呢？
+那么，微服务应该强调什么微呢？
 
 <!--more-->
 
-统筹的微，约定的微，框架的微
+统筹的微，约定的微，技术的微，框架的微。
