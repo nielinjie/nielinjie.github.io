@@ -125,7 +125,7 @@ FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?fil
   * 项目描述：	平安企业门户，关于信息聚合和企业社交。原型项目。
   * 责任描述：	策划、原型设计和开发、技术选型。
   * 相关博客：
-    * [企业中需要什么样的社交？](http://www.nietongxue.xyz/blog/2014/06/05/social/)
+	  * [企业中需要什么样的社交？](http://www.nietongxue.xyz/blog/2014/06/05/social/)
 
 ----
 
@@ -133,7 +133,7 @@ FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?fil
   * 项目描述：	平安法律部诉讼管理系统。敏捷项目。
   * 责任描述：	架构设计，架构执行。
   * 相关博客：
-    * [敏捷的架构设计（一 至 四）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
+	  * [敏捷的架构设计（一 至 四）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
 
 ----
 
@@ -147,8 +147,8 @@ FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?fil
   * 项目描述：	平安行政系统移动适配项目。敏捷项目。
   * 责任描述：	架构设计，架构执行。
   * 相关博客：
-    * [我们的新前端](http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end/)
-    * [关于REST风格的讨论（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA)
+	    * [我们的新前端](http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end/)
+	    * [关于REST风格的讨论（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA&filterDes=Series%3A%20%E5%85%B3%E4%BA%8EREST%E9%A3%8E%E6%A0%BC%E7%9A%84%E8%AE%A8%E8%AE%BA)
 
 ----
 
@@ -174,9 +174,9 @@ FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?fil
   * 项目描述：	平安集团行政中心办公系统的重构项目。对复杂系统进行有针对性的重构，延缓腐化、降低其维护成本和修改功能的成本。
   * 责任描述：	策划并发起项目、制定原则和方案、分析和设计。
   * 相关博客：
-    * [一场似非而是的DSL（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL)
-    * [敏捷的架构设计（五、六）：领域地图（一、二）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
-    * [给老爷爷系统（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=给老爷爷系统&filterDes=Series%3A%20给老爷爷系统)
+	    * [一场似非而是的DSL（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL&filterDes=Series%3A%20%E4%B8%80%E5%9C%BA%E4%BC%BC%E9%9D%9E%E8%80%8C%E6%98%AF%E7%9A%84DSL)
+	    * [敏捷的架构设计（五、六）：领域地图（一、二）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1)
+	    * [给老爷爷系统（系列）](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=给老爷爷系统&filterDes=Series%3A%20给老爷爷系统)
 
 ----
 
@@ -190,7 +190,7 @@ FAQ：[www.nietongxue.xyz](http://www.nietongxue.xyz/blog/filter/filter.html?fil
   * 项目描述：	云端的个人知识管理服务。业余项目。
   * 责任描述：	发起人和唯一的成员。
   * 相关博客：
-    * [知识在此](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4)
+	    * [知识在此](http://www.nietongxue.xyz/blog/filter/filter.html?filterName=series&filterValue=%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4&filterDes=Series%3A%20%E7%9F%A5%E8%AF%86%E5%9C%A8%E6%AD%A4)
 
 ----
 
