@@ -1,4 +1,6 @@
 http://www.nietongxue.xyz
+http://www.nietongxue.xyz/blog/2016/08/14/question2/
+http://www.nietongxue.xyz/blog/2016/08/13/question/
 http://www.nietongxue.xyz/blog/2016/05/28/avst/
 http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/
 http://www.nietongxue.xyz/blog/2016/04/13/good-ms/
@@ -13,6 +15,7 @@ http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/
 http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/
 http://www.nietongxue.xyz/blog/2015/12/24/3direct/
 http://www.nietongxue.xyz/blog/2015/12/23/md/
+http://www.nietongxue.xyz/blog/2015/12/15/micro2/
 http://www.nietongxue.xyz/blog/2015/12/01/micro/
 http://www.nietongxue.xyz/blog/2015/11/29/oc/
 http://www.nietongxue.xyz/blog/2015/11/20/system-like/

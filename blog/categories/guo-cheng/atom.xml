@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 过程 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/guo-cheng/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-06-13T23:16:12+08:00</updated>
+  <updated>2016-08-15T22:12:11+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[问题空间与解空间]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/08/14/question2/"/>
+    <updated>2016-08-14T20:29:27+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/08/14/question2</id>
+    <content type="html"><![CDATA[<p>问题空间与解空间<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，体现了思考的一般过程，所以在很多方法论中有所表现。</p>
+
+<!--more-->
+
+
+<p>“设计思维”讲到4D过程，Discovery、Define、Design、Delivery。 其中Discovery、Define就是在研究和结构化问题空间，而Design、Delivery则分别是解决问题和归纳整合，属于解空间。</p>
+
+<p>领域驱动设计方法中，子域与上下文是两个看来近似的概念。其实子域在问题空间，是对领域这个大问题的分解，而上下文在解空间，是对子域的解决。研究上下文的关系，则是在归纳整合，使这些解决能互相融洽，共同解决领域这个大问题。</p>
+
+<p>有一类问题，难点和重点在于分析和分解问题，解决问题倒是比较容易。针对这类问题的方法，自然是强调研究问题空间。</p>
+
+<p>威胁建模方法，是一个很好的例子。数据流图，信任空间，STRIDE模型，都是研究问题空间的方法。找到了可能的威胁之后，还要对威胁进行评估排序，这些都是在问题空间。到最后才谈到解空间，也就是如何解决威胁。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>在<a href="/blog/2016/08/13/question/">前一篇</a>中首先提及。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[架构设计过程的驱动技术（三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/08/13/question/"/>
+    <updated>2016-08-13T20:29:27+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/08/13/question</id>
+    <content type="html"><![CDATA[<p>特征驱动和风险驱动，看来是相对完备的驱动技术；模式驱动，则不是那么完备。
+这两类驱动技术的区别究竟从何而来呢？</p>
+
+<!--more-->
+
+
+<p>大部分人思考问题，特别是比较复杂的问题的过程。分为两个步骤 -</p>
+
+<ul>
+<li>第一个步骤，分析问题，定义问题，分解问题，将大问题、复杂的棘手的问题，分解为小的可解决的子问题。这个步骤，我们称为处理问题空间。</li>
+<li>第二个步骤，对第一个步骤得到的子问题分别解决，并将所有答案归纳整合，使之可以解决最初的复杂问题。这个步骤，我们成为处理解空间。</li>
+</ul>
+
+
+<p>两个步骤如下图所示。图中ABCD步骤，就是处理问题空间，步骤EFGH则是处理解空间。</p>
+
+<p>显然，模式驱动没有覆盖第一个步骤，只覆盖了第二个步骤。而特征驱动和风险驱动，覆盖了第一第二两个步骤。其中，特征驱动认为实现特征就是我们面对的大问题，提供了分析分解这个大问题的办法，这些方法都是作用于问题空间的方法。而风险驱动认为应对风险就是我们的大问题，提供了定义风险衡量风险等在问题空间方法。</p>
+
+<p><img src="/images/question/question.png" width="500"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[“程序员需要工程思维”]]></title>
@@ -146,33 +201,6 @@ A：领域是设计的依据（之一）。设计的目的是实现领域，但�
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构设计过程的驱动技术（二）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/28/driving2/"/>
-    <updated>2015-10-28T09:06:49+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/28/driving2</id>
-    <content type="html"><![CDATA[<p>模式驱动不是一种顶层的驱动技术。因为架构模式本身，严格来讲并不是对目标系统本身的分解（而特征和风险则是）。<!--more-->如果说得完整一点，应该是：“为了实现xx特征（或者控制xx风险），我们应用xx模式。”。所以模式驱动其实是在特征驱动或风险驱动之后接着应用的驱动技术。但实际很多情况下，团队只要稍微知道要设计的系统的类型，脑中已经冒出了许多模式，后续也是依据这些模式的应用来跟进，可以说淡化了原有的顶层驱动技术。</p>
-
-<p>由于不是顶层驱动技术，模式驱动很难验证最终解决了问题，比如不能说：“由于我们使用了xx、yy、zz模式，所以我们能完成XX系统。”反过来，对于顶层的驱动技术，就可以说：“由于我们实现了所有典型的特征，所以我们能实现XX系统”，或者，“由于我们遏制了所有（发现了的）风险，所有我们能完成XX系统”。所以如果使用模式驱动，应该要回过头来，借助顶层驱动技术来验证问题的解决。从这个意义上来讲，可以说模式驱动是被顶层驱动嵌套使用的。</p>
-
-<p>特征驱动和风险驱动分解问题时，也会频繁使用模式思维，但这不是模式驱动。比如说特征驱动，整理系统的质量需求的时候，我们常常使用一个“质量需求检查表”。其中列举了特定类型系统常见的质量需求。我们对此一一检视，判别目标系统是否有此需求。这是典型的模式思维。但这里的模式不是架构设计模式，这里也不是将目标系统分解为模式进行跟进。所以不是模式驱动的架构设计。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[方法论]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/10/26/method/"/>
-    <updated>2015-10-26T21:24:20+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/10/26/method</id>
-    <content type="html"><![CDATA[<p>方法论是路线图，不是轨道。</p>
-
-<!--more-->
-
-
-<p>想要像火车司机那样一趟又一趟，恐怕不能如愿。</p>
 ]]></content>
   </entry>
   
