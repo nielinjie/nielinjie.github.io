@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-08-15T22:12:11+08:00</updated>
+  <updated>2016-09-07T21:16:45+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[时事：996]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/07/996/"/>
+    <updated>2016-09-07T21:26:15+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/07/996</id>
+    
+    <category term="/管理"/>
+    
+    <category term="/时事"/>
+    
+    <content type="html">
+      <![CDATA[<p>996或者其他工作制，涉及到几个关系 -</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/09/07/996/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[问题空间与解空间]]></title>
@@ -476,28 +500,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/11/29/oc/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[系统要像什么？]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/11/20/system-like/"/>
-    <updated>2015-11-20T10:39:55+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/11/20/system-like</id>
-    
-    <category term="/架构"/>
-    
-    <content type="html">
-      <![CDATA[<p>系统不要像一座建筑或一台机器。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/11/20/system-like/">Read on &rarr;</a>
         </p>
       
       ]]>
