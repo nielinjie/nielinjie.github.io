@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-09-07T21:16:45+08:00</updated>
+  <updated>2016-09-23T21:29:45+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,27 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/19/transaction/"/>
+    <updated>2016-09-19T17:16:43+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/19/transaction</id>
+    
+    <category term="/架构"/>
+    
+    <content type="html">
+      <![CDATA[<p>近来有挺多文章谈“分布式事务”。
+这些文章主要是从实现模式角度来谈的。比如常见的模式有哪些，哪些个模式适合哪种场景，有什么优点缺点，根据什么选择等等。
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/09/19/transaction/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[时事：996]]></title>
@@ -476,30 +497,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/12/01/micro/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Orchestration 和 Choreography]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/11/29/oc/"/>
-    <updated>2015-11-29T15:01:02+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/11/29/oc</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/微服务"/>
-    
-    <content type="html">
-      <![CDATA[<p>Orchestration 和 Choreography，这个两个词在跟“服务”有关的架构讨论中常有出现。比如微服务和SOA。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/11/29/oc/">Read on &rarr;</a>
         </p>
       
       ]]>

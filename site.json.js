@@ -2,6 +2,20 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2016/09/19/transaction/",
+    date:"2016-09-19T17:16:43+08:00",
+    title:"分布式事务，也谈",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2016/09/07/996/",
     date:"2016-09-07T21:26:15+08:00",
     title:"时事：996",
