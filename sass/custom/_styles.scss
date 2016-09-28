@@ -1,16 +1,27 @@
 // This File is imported last, and will override other styles in the cascade
 // Add styles here to make changes without digging in too much
 h1, h2, h3, h4, h5 {
-  font-weight: 500;
+  font-weight: 400;
+}
+
+
+.entry-content{
+  font-size: 18px;
+  font-weight: 300;
+  font-style: normal;
 }
 
 h1.entry-title {
-  font-size:2.0em;
-}
-#content .blog-index article h1 {
-  font-size:2.0em;
+  font-size:1.8em;
 }
 
+#content .blog-index article h1 {
+  font-size:1.8em;
+}
+
+aside.sidebar {
+  font-weight: 300;
+}
 
 ul#category-list li {
     display: inline-block;
