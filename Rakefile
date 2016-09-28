@@ -28,7 +28,7 @@ new_page_ext    = "markdown"  # default new page file extension when using the n
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
 gitcafe_dir      = "gitcafe"
-gitcafe_branch   = "gitcafe-pages"
+gitcafe_branch   = "coding-pages"
 
 if (/cygwin|mswin|mingw|bccwin|wince|emx/ =~ RUBY_PLATFORM) != nil
   puts '## Set the codepage to 65001 for Windows machines'
