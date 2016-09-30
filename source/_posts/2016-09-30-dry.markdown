@@ -1,0 +1,13 @@
+---
+layout: post
+title: "时事：干货"
+date: 2016-05-20 17:22:12 +0800
+comments: true
+categories: ["时事"]
+published: true
+---
+
+架构类的分享流行“干货”一词，读文章的要找“干货”，发文章的宣称“干货”。
+
+<!--more-->
+
