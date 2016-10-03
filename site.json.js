@@ -12,6 +12,8 @@ window.site={
     ],
     series:[
       
+        "分布式事务，也谈 1",
+      
     ]
   },
 
@@ -77,6 +79,20 @@ window.site={
     series:[
       
         "FAQ 0",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2016/05/20/dry/",
+    date:"2016-05-20T17:22:12+08:00",
+    title:"时事：干货",
+    categories:[
+      
+        "时事",
+      
+    ],
+    series:[
       
     ]
   },

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-09-28T21:13:40+08:00</updated>
+  <updated>2016-10-03T12:30:52+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -57,41 +57,41 @@
 <table>
 <thead>
 <tr>
-<th>操作A状况 </th>
+<th> 操作A状况 </th>
 <th> 操作B状况 </th>
-<th> 处置策略</th>
+<th> 处置策略      </th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>成功</td>
-<td>失败</td>
-<td> 操作A撤销</td>
+<td> 成功    </td>
+<td> 失败    </td>
+<td> 操作A撤销     </td>
 </tr>
 <tr>
-<td>未知</td>
-<td>（未尝试）</td>
-<td>重试操作A</td>
+<td> 未知    </td>
+<td> （未尝试） </td>
+<td> 重试操作A     </td>
 </tr>
 <tr>
-<td>成功</td>
-<td>未知</td>
-<td>回查操作B</td>
+<td> 成功    </td>
+<td> 未知    </td>
+<td> 回查操作B     </td>
 </tr>
 <tr>
-<td>成功</td>
-<td>繁忙</td>
-<td>等待时间t后重试B</td>
+<td> 成功    </td>
+<td> 繁忙    </td>
+<td> 等待时间t后重试B </td>
 </tr>
 <tr>
-<td>成功</td>
-<td>已排队</td>
-<td>等待时间t后回查B</td>
+<td> 成功    </td>
+<td> 已排队   </td>
+<td> 等待时间t后回查B </td>
 </tr>
 <tr>
-<td>……</td>
-<td>……</td>
-<td>……</td>
+<td> ……    </td>
+<td> ……    </td>
+<td> ……        </td>
 </tr>
 </tbody>
 </table>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 时事 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/shi-shi/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-09-28T21:13:40+08:00</updated>
+  <updated>2016-10-03T12:30:52+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -35,6 +35,33 @@
 <p>很多时候大家都提到了第三个关系。但前两个关系也同样重要。</p>
 
 <p>不论是要号召、要推行、要拥护，还是要抵制、要逃避，只有讲清楚这几个关系，才能做到有理有据，把说服力落到实处。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[时事：干货]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/05/20/dry/"/>
+    <updated>2016-05-20T17:22:12+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/05/20/dry</id>
+    <content type="html"><![CDATA[<p>最近流行“干货”一词，写博客办论坛的宣称“干货”，读文章找培训的寻求“干货”。</p>
+
+<!--more-->
+
+
+<p>讲这个词的含义，强调的大概是：结论、现成、务实、落地，之类的。</p>
+
+<p>然而，在架构领域，有些东西一般干货不会涉及，讲究干货的同学们需要注意 -</p>
+
+<ol>
+<li>架构需要因果。架构决策不能脱离环境和目的。学习一个架构决策结论，一定要确保<strong>全面地</strong>学习了它的前因后果。</li>
+<li>架构需要过程。架构决策是一个工程过程，不能仅依赖于个人的经验和见识。工程需要可重复可分派可积累的过程。如果只有一个现成结果，即使完全正确，也是不完整不理想的。</li>
+<li>架构需要务虚。比如架构工作依赖大量抽象和抽象基础上的分析推演。</li>
+<li>架构需要远方。比如架构工作需要设想和构筑存在于未来的“空中楼阁”。</li>
+<li>……</li>
+</ol>
+
+
+<p>一句话就是，<strong>干货没问题，但要记得干货是不够的</strong>。</p>
 ]]></content>
   </entry>
   

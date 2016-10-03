@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>聂同学</title>
+  <title>时事：干货 - 聂同学</title>
   <meta name="author" content="nielinjie">
   
   <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.nietongxue.xyz/posts/7">
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2016/05/20/dry">
   <!-- <link href="/favicon.png" rel="icon"> -->
 
 
@@ -89,15 +89,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
+      <div>
+    <article class="hentry" role="article">
+        
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/06/06/view2/">给老爷爷系统（三）：如何描述系统？（二）</a></h1>
+      <h1 class="entry-title">时事：干货</h1>
     
     
       <p class="meta">
@@ -114,429 +111,145 @@
 
 
 
-<time datetime="2014-06-06T18:06:38+08:00"  data-updated="true">2014-06-06</time>
+<time datetime="2016-05-20T17:22:12+08:00"  data-updated="true">2016-05-20</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><blockquote><p>这是一个老爷爷系统。</p></blockquote>
+<div class="entry-content"><p>最近流行“干货”一词，写博客办论坛的宣称“干货”，读文章找培训的寻求“干货”。</p>
 
-<p>上一篇谈到统一的系统特征描述的形式问题。觉得“功能”或者“领域模型”可能可以承担这个重任。</p>
+<!--more-->
 
+
+<p>讲这个词的含义，强调的大概是：结论、现成、务实、落地，之类的。</p>
+
+<p>然而，在架构领域，有些东西一般干货不会涉及，讲究干货的同学们需要注意 -</p>
+
+<ol>
+<li>架构需要因果。架构决策不能脱离环境和目的。学习一个架构决策结论，一定要确保<strong>全面地</strong>学习了它的前因后果。</li>
+<li>架构需要过程。架构决策是一个工程过程，不能仅依赖于个人的经验和见识。工程需要可重复可分派可积累的过程。如果只有一个现成结果，即使完全正确，也是不完整不理想的。</li>
+<li>架构需要务虚。比如架构工作依赖大量抽象和抽象基础上的分析推演。</li>
+<li>架构需要远方。比如架构工作需要设想和构筑存在于未来的“空中楼阁”。</li>
+<li>……</li>
+</ol>
+
+
+<p>一句话就是，<strong>干货没问题，但要记得干货是不够的</strong>。</p>
 </div>
+
+
+        <footer>
+            <p class="meta">
+                
   
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/06/06/view2/">Read on &rarr;</a>
-    </footer>
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+
+                
+
+
+
+
+
+
+
+
   
 
 
+
+<time datetime="2016-05-20T17:22:12+08:00"  data-updated="true">2016-05-20</time>
+                
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/shi-shi/'>时事</a>
+  
+</span>
+
+
+            </p>
+
+
+            <p/>
+            <section>
+                
+  
+
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+    var ss=series()
+    var sers=$("div.post-series").attr("data-series")
+    sers = sers?sers.split(","):[]
+    sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
+      var name=s.split(" ")[0]
+      var index=s.split(" ")[1]
+      return ss.filter(function(ser){
+        return ser.name==name
+      })
+    }).value()
+    _(sers).each(function(s){
+      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      _(s).each(function(sOfP){
+        p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
+      })
+    })
+  })()
+</script>
+
+            </section>
+
+            
+                <section>
+<h2>Sharing</h2>
+
+
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</section>
+
+            
+
+        </footer>
     </article>
-  
-  
-    <article>
-      
-  <header>
+
     
-      <h1 class="entry-title"><a href="/blog/2014/06/05/view/">给老爷爷系统（二）：如何描述系统？（一）</a></h1>
+    <section imagesd="comment">
+        <h2>Add a comment</h2>
+        <!-- Duoshuo Comment BEGIN -->
+  <div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"nielinjie"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comment END -->
+
+    </section>
     
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-06-05T20:06:38+08:00"  data-updated="true">2014-06-05</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>对于老爷爷系统，我们发现特别难以回答一个问题：系统是什么样的？它正在如何发展？</p>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/06/05/view/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/05/social/">企业中需要什么样的社交？</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-06-05T16:06:38+08:00"  data-updated="true">2014-06-05</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>正在考虑这个问题。
-目前想到几点：</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/06/05/social/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/06/04/time/">时间</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-06-04T16:06:38+08:00"  data-updated="true">2014-06-04</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>分解问题的维度除了空间还有时间，可以逐一解决，还可以渐进解决。大家莫忘记了。:-)</p>
-
-<p>架构师要善于将大规模问题分解为可控可解决的小问题，也要善于把大跨度问题分解为可迭代可验证可积累的小问题。</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/28/huidu/">简单的灰度发布方案</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-05-28T20:06:38+08:00"  data-updated="true">2014-05-28</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>正在策划一个系统的灰度发布，目前有个简单的方案，（简图如最后所示）。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/28/huidu/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/05/26/quality/">给老爷爷系统（一）：代码质量守则和工具</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-05-26T20:06:38+08:00"  data-updated="true">2014-05-26</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>这是一个老爷爷系统。</p></blockquote>
-
-<p>对于一个历史悠久的老爷爷系统，我们的程序员定下了下面的代码质量守则：</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/05/26/quality/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/aa4/">敏捷的架构设计（六）：领域地图（二）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-04-24T17:36:38+08:00"  data-updated="true">2014-04-24</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>敏捷已死，而敏捷性长存。</p></blockquote>
-
-<h3>如何建立领域地图</h3>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/04/24/aa4/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/aa3/">敏捷的架构设计（五）：领域地图（一）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-04-24T16:36:38+08:00"  data-updated="true">2014-04-24</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><blockquote><p>敏捷已死，而敏捷性长存。</p></blockquote>
-
-<h3>什么是“领域地图”？是“领域模型”么？</h3>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/04/24/aa3/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/20/series/">向Octopress贡献（二）：连载系列</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-04-20T23:36:38+08:00"  data-updated="true">2014-04-20</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>我们常常会发表一些连载的系列文章。
-这些文章时间上有时会相互隔开，这时候默认的导航链接就不太方便。
-需要一个新的方式在同一系列的连载文章间跳转。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/04/20/series/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/20/xiaowanyier/">向Octopress贡献（一）：动态内容</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2014-04-20T23:06:38+08:00"  data-updated="true">2014-04-20</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>同学们往右看：就是那个一坨一坨飘一飘的东西。8-D<br/>
-每个圆表示一个category，它的大小表示该category名下文章的数量（相对的）；两个圆之间的连线表示两个category有联系，也就是说有文章同时属于这两个category。
-两个圆距离越近，则category的关系越密切，同时属于这两个category的文章越多。<br/>
-点击圆形，将来到一个显示该category下所有文章的页面。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2014/04/20/xiaowanyier/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a class="next" href="/posts/6">&larr; Newer </a>
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-      <a class="prev" href="/posts/8"> Older &rarr;</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
-  
+    
     <section>
   <h1>About Me</h1>
   <a href="/resume/"><img id="photo" src="/images/me/photo.jpg"/></a>
@@ -666,8 +379,9 @@
     </ul>
 </section>
 
-  
+    
 </aside>
+
 
     </div>
   </div>
