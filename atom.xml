@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-10-07T11:21:53+08:00</updated>
+  <updated>2016-10-07T12:22:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（番外）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/10/07/process/"/>
+    <updated>2016-10-07T14:29:52+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/10/07/process</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/模式"/>
+    
+    <content type="html">
+      <![CDATA[<h3>过程管理，一个基础模式？</h3>
+
+<p>系列中<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>提到，事务管理，实质是一个过程管理。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/10/07/process/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[分布式事务，也谈（之三）]]></title>
@@ -24,7 +50,7 @@
     <category term="/设计"/>
     
     <content type="html">
-      <![CDATA[<p>继续谈实现模型。按抽象层次分层，设计为知识 &ndash;> 操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
+      <![CDATA[<p>继续谈实现模型。按抽象层次分层，设计为知识→操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
 
 
       
@@ -472,31 +498,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[实现质量要求的三个考虑方向]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/12/24/3direct/"/>
-    <updated>2015-12-24T13:25:20+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/12/24/3direct</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/质量"/>
-    
-    <content type="html">
-      <![CDATA[<p>性能、可用性、可伸缩、可扩展……如何达成这些质量要求，是随时要考虑的问题。
-有没有什么“普遍的”考虑方法呢？</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/12/24/3direct/">Read on &rarr;</a>
         </p>
       
       ]]>

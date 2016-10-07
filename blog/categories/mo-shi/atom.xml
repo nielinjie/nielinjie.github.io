@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 模式 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/mo-shi/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-10-07T11:21:53+08:00</updated>
+  <updated>2016-10-07T12:22:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,56 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（番外）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/10/07/process/"/>
+    <updated>2016-10-07T14:29:52+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/10/07/process</id>
+    <content type="html"><![CDATA[<h3>过程管理，一个基础模式？</h3>
+
+<p>系列中<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>提到，事务管理，实质是一个过程管理。</p>
+
+<!--more-->
+
+
+<p>包括事务管理，过程管理还出现在多个常见的场景中，比如 -</p>
+
+<ul>
+<li>事务管理 - 负责管理各个相关联的操作，对他们的“状况“做出决策应对。</li>
+<li>服务编排 - 负责将小粒度和职责单一的服务组合为复杂的业务过程。</li>
+<li>协调异步 - 负责异步操作之间的步调协调工作。</li>
+<li>交互串联 - 负责将多个业务步骤包装为一个用户友好的交互过程。</li>
+</ul>
+
+
+<p>这几个场景都是一个管理者在对一个过程进行管理。但在不同场景中管理者的职责不同 -</p>
+
+<ul>
+<li>事务管理 - 强调操作状况的可见、可控、可稽核。</li>
+<li>服务编排 - 强调服务间的依赖管理，服务结果的传递和收集。</li>
+<li>协调异步 - 强调操作间的步调协同，与同步的转化，处理等待，处理中间状态。</li>
+<li>交互串联 - 强调与用户的交互，比如处理中间状态的表现，过程中用户的干预等。</li>
+</ul>
+
+
+<p>根据系列中的研究，这些个过程管理都可以考虑实现为分层结构的状态机模型。</p>
+
+<p>这里有一个挑战：实际情况中一个管理组件很有可能兼职，很可能需要同时完成上述职责中的两三项。这种情况下，处理具体业务逻辑的最上层，就需要从各个职责各自的角度，对操作和决策进行描述，然后，如果能做到的话，把它们融合起来。</p>
+
+<p>（也许还有下一篇，研究下如何融合各个职责的操作和决策）</p>
+
+<p><img src="/images/transaction/process.png" width="500"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>系列 - <a href="/blog/2016/09/19/transaction/">分布式事务，也谈</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[乌鸦]]></title>
