@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-10-03T12:30:52+08:00</updated>
+  <updated>2016-10-07T11:21:53+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/10/06/transaction3/"/>
+    <updated>2016-10-06T00:43:57+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/10/06/transaction3</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/设计"/>
+    
+    <content type="html">
+      <![CDATA[<p>继续谈实现模型。按抽象层次分层，设计为知识 &ndash;> 操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/10/06/transaction3/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之二）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/26/transaction2/"/>
+    <updated>2016-09-26T16:08:48+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/26/transaction2</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/设计"/>
+    
+    <content type="html">
+      <![CDATA[<p>如前一篇提到的 <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，本篇谈一谈实现模型<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/09/26/transaction2/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[分布式事务，也谈]]></title>
@@ -449,52 +497,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/12/24/3direct/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[“Reactive宣言里为什么有个消息驱动？”]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/12/23/md/"/>
-    <updated>2015-12-23T16:31:35+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/12/23/md</id>
-    
-    <category term="/架构"/>
-    
-    <content type="html">
-      <![CDATA[<p>宣言的其他方面描述的都是系统的外部特征：快速响应、容错、压力下的弹性。为什么单单加入“消息驱动”这个实现策略呢？</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/12/23/md/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[微服务的微（下）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/12/15/micro2/"/>
-    <updated>2015-12-15T15:16:01+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/12/15/micro2</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/微服务"/>
-    
-    <content type="html">
-      <![CDATA[<p>那么，微服务应该强调什么微呢？</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/12/15/micro2/">Read on &rarr;</a>
         </p>
       
       ]]>

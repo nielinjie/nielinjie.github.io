@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.nietongxue.xyz/blog/2016/10/06/transaction3/</loc>
+    <lastmod>2016-10-06T00:43:57+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/blog/2016/09/26/transaction2/</loc>
+    <lastmod>2016-09-26T16:08:48+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/blog/2016/09/19/transaction/</loc>
     <lastmod>2016-09-19T17:16:43+08:00</lastmod>
   </url>
@@ -489,5 +497,35 @@
   </url>
   <url>
     <loc>http://www.nietongxue.xyz/blog/categories/guan-li/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/2/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/3/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/4/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/5/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/6/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/7/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/8/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/9/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/10/</loc>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/posts/11/</loc>
   </url>
 </urlset>

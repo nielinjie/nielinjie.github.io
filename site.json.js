@@ -2,6 +2,42 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2016/10/06/transaction3/",
+    date:"2016-10-06T00:43:57+08:00",
+    title:"分布式事务，也谈（之三）",
+    categories:[
+      
+        "架构",
+      
+        "设计",
+      
+    ],
+    series:[
+      
+        "分布式事务，也谈 3",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2016/09/26/transaction2/",
+    date:"2016-09-26T16:08:48+08:00",
+    title:"分布式事务，也谈（之二）",
+    categories:[
+      
+        "架构",
+      
+        "设计",
+      
+    ],
+    series:[
+      
+        "分布式事务，也谈 2",
+      
+    ]
+  },
+
+  {
     url:"/blog/2016/09/19/transaction/",
     date:"2016-09-19T17:16:43+08:00",
     title:"分布式事务，也谈",

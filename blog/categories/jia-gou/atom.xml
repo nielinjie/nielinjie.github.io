@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-10-03T12:30:52+08:00</updated>
+  <updated>2016-10-07T11:21:53+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/10/06/transaction3/"/>
+    <updated>2016-10-06T00:43:57+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/10/06/transaction3</id>
+    <content type="html"><![CDATA[<p>继续谈实现模型。按抽象层次分层，设计为知识 &ndash;> 操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
+
+<!--more-->
+
+
+<p>最上层为具体业务开发者需要关注的概念，实际上只包括：</p>
+
+<ol>
+<li>各个操作的特征，说明各个操作如何调用、可否回查、可否撤销等等。</li>
+<li>决策表中的具体规则。说明当某某状况发生时，采取某某处置。</li>
+</ol>
+
+
+<p>第二层为事务管理组件，负责组织前面提到的两层嵌套状态机。</p>
+
+<p>第三层和第四层，是两层嵌套状态机本身的实现。</p>
+
+<p><img src="/images/transaction/transaction3.png" width="500"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之二）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/26/transaction2/"/>
+    <updated>2016-09-26T16:08:48+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/26/transaction2</id>
+    <content type="html"><![CDATA[<p>如前一篇提到的 <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，本篇谈一谈实现模型<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
+
+<!--more-->
+
+
+<p>过程管理常常被实现为一个状态机，这里顺着这个思路尝试一番。</p>
+
+<ol>
+<li>每个操作实现为一个状态机，称为“操作状态机”。</li>
+<li>使用一个外层状态机处理决策过程，实现决策表。称为“决策状态机”。</li>
+<li>操作状态机嵌入决策状态机，作为内嵌状态<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。决策状态机和操作状态机分别是外层状态机和内层状态机。</li>
+<li>内层状态机对外层隐藏它自己能够独立处理的逻辑。仅向外暴露最终的对外<strong>状况</strong>和可以被外层<strong>处置</strong>的事件。</li>
+<li>逻辑在内外层之间的分配是最重要的一个权衡。如果内层逻辑太多则外层可以做的处置就太少，控制能力有限。如果内层逻辑太少，就将大量复杂性丢给外层，外层负担太重。这两种情况，层次结构都失效了。</li>
+<li>内外层之间通过事件沟通，内层产生的最终状况通过事件送达外层决策，外层决策做出的处置也通过事件操作内层。</li>
+<li>操作的撤销可以视为另一个操作，实现为一个独立的操作状态机。也可以与操作本身一起实现为同一个状态机。这是内外层的逻辑分布进行权衡的一个例子。</li>
+<li>决策表，是外层逻辑的核心，是一些规则的集合，规则的输入是各个操作的对外状况，输出是对各个操作的处置。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></li>
+<li>决策逻辑可能会很复杂，比如有时候决策逻辑不仅依赖于当前输入，还会依赖于决策历史。此时需要权衡，可以把特别复杂和不太可能发生的情况留给人工解决。</li>
+<li>整个结构还可能继续嵌套，也就是说整个状态机可能还是更外层状态机的一个内嵌状态机。</li>
+<li>上述整个结构，是对应于一个事务的。处理多个事务，就是同时并存的多个状态机实例。</li>
+</ol>
+
+
+<p>（<a href="/blog/2016/10/06/transaction3/">下一篇</a>，继续谈实现模型）</p>
+
+<p>附图：</p>
+
+<p><img src="/images/transaction/transaction2.png" width="500"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本篇所有概念和名词都延续自<a href="/blog/2016/09/19/transaction/">前一篇</a>。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>此处并没有任何可以直接应用的结论或代码。“干货”并非是本博的主要内容，参见：<a href="/blog/2016/05/20/dry/">时事：干货</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Wiki：<a href="https://en.wikipedia.org/wiki/UML_state_machine#Hierarchically_nested_states">Hierarchically_nested_states</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>决策表的例子见<a href="/blog/2016/09/19/transaction/">前一篇</a>，但要注意，前一篇的例子中，对操作的处置是很细节的，在很多场景中不一定适合，如上面第5点讨论的。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[分布式事务，也谈]]></title>
@@ -110,7 +185,7 @@
 </ol>
 
 
-<p>（待续，接下来也许尝试建立一个实现模型。）</p>
+<p>（<a href="/blog/2016/09/26/transaction2/">下一篇</a>，谈一谈实现模型）</p>
 
 <p><img src="/images/transaction/transaction.jpg" width="500"></p>
 
@@ -182,80 +257,6 @@
 <p>显然，模式驱动没有覆盖第一个步骤，只覆盖了第二个步骤。而特征驱动和风险驱动，覆盖了第一第二两个步骤。其中，特征驱动认为实现特征就是我们面对的大问题，提供了分析分解这个大问题的办法，这些方法都是作用于问题空间的方法。而风险驱动认为应对风险就是我们的大问题，提供了定义风险衡量风险等在问题空间方法。</p>
 
 <p><img src="/images/question/question.png" width="500"></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[FAQ：应用架构与技术架构]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/05/28/avst/"/>
-    <updated>2016-05-28T17:15:59+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/05/28/avst</id>
-    <content type="html"><![CDATA[<p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>应用架构产出结构。技术架构产出技术。</p>
-
-<p>应用架构的职责是产出并维护一个合理健康的结构。而技术架构所产出技术，则被用作支持这个结构的手段。技术就是手段。</p>
-
-<!--more-->
-
-
-<p>技术的进化有时候会直接导致结构的变革，这就是技术驱动的团队的情况。而其他情况，可能是大部分情况，技术是在结构的框架和需求中发展。</p>
-
-<p>大部分的团队的技术，来自于“选型”，即从已有技术选择适合自己的，而这个“适合自己”，最重要的标准之一就是适合自己的结构。</p>
-
-<p>技术是局部的，而结构是广泛的。但局部与广泛是相对的。在更宏观层面来看，更微观的结构可能就是技术。任何一项局部技术，它的存在和种种特性，可能需要复杂和高妙的内部结构来支撑。</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>通篇以一名应用架构师的视角。我肯定别的架构师有他们自己的看法。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[重构，以知识结构为中心（四）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/"/>
-    <updated>2016-04-16T11:10:01+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4</id>
-    <content type="html"><![CDATA[<p>为了帮助领域团队凝聚和守护领域知识，我们设计和使用了一些工具。</p>
-
-<!--more-->
-
-
-<h3>领域模型</h3>
-
-<p>最首要的工具当然是领域模型。但从零开始建立一个有些远水解不了近渴。
-我们的想法是识别一点建立一点使用一点，持续地延伸和细化。</p>
-
-<p>当前是划分上下文、区别领域与应用、建立团队的阶段，我们关注点就在上下文之间的边界上和领域与应用的边界上。
-那么我们就以上下文之间的边界处和领域与应用之间的边界处作为我们领域模型建立的起点。</p>
-
-<h3>领域边界跟踪表<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></h3>
-
-<p>上下文之间的关系非常重要，关系到知识的依赖类型，也关系到领域团队间的沟通和协作。所以我们特别关注厘清边界处的概念和它们的属主。</p>
-
-<p>团队认识到的边界，往往描述为领域之间的交互场景。这时候需要从中提炼出业务概念和规则。一般以领域实体和领域事件为代表。</p>
-
-<h3>应用差异跟踪表</h3>
-
-<p>领域团队职责是维护业务的一致性。
-这要求领域团队除了控制领域知识以外，对领域知识的各种应用形式必须有足够的认识和应对。
-这一点在当前领域与应用的边界尚未完全明确的情况下尤为必要。</p>
-
-<p>我们的切入点是总结应用形式之间的差异并制定对差异的应对策略<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
-
-<p>（还有一些其他层面的工具，待续）</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>“领域边界”其实是上下文边界的俗成说法，老司机也阻止不了——上下文这个名词确实不够简明。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p><a href="/attachment/app-diff.html/">《领域知识在各应用的形态差异及如何处理》（已打码）</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
 ]]></content>
   </entry>
   

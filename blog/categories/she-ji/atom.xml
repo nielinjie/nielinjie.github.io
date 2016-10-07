@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 设计 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/she-ji/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-10-03T12:30:52+08:00</updated>
+  <updated>2016-10-07T11:21:53+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,81 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/10/06/transaction3/"/>
+    <updated>2016-10-06T00:43:57+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/10/06/transaction3</id>
+    <content type="html"><![CDATA[<p>继续谈实现模型。按抽象层次分层，设计为知识 &ndash;> 操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
+
+<!--more-->
+
+
+<p>最上层为具体业务开发者需要关注的概念，实际上只包括：</p>
+
+<ol>
+<li>各个操作的特征，说明各个操作如何调用、可否回查、可否撤销等等。</li>
+<li>决策表中的具体规则。说明当某某状况发生时，采取某某处置。</li>
+</ol>
+
+
+<p>第二层为事务管理组件，负责组织前面提到的两层嵌套状态机。</p>
+
+<p>第三层和第四层，是两层嵌套状态机本身的实现。</p>
+
+<p><img src="/images/transaction/transaction3.png" width="500"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之二）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/26/transaction2/"/>
+    <updated>2016-09-26T16:08:48+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/26/transaction2</id>
+    <content type="html"><![CDATA[<p>如前一篇提到的 <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，本篇谈一谈实现模型<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
+
+<!--more-->
+
+
+<p>过程管理常常被实现为一个状态机，这里顺着这个思路尝试一番。</p>
+
+<ol>
+<li>每个操作实现为一个状态机，称为“操作状态机”。</li>
+<li>使用一个外层状态机处理决策过程，实现决策表。称为“决策状态机”。</li>
+<li>操作状态机嵌入决策状态机，作为内嵌状态<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。决策状态机和操作状态机分别是外层状态机和内层状态机。</li>
+<li>内层状态机对外层隐藏它自己能够独立处理的逻辑。仅向外暴露最终的对外<strong>状况</strong>和可以被外层<strong>处置</strong>的事件。</li>
+<li>逻辑在内外层之间的分配是最重要的一个权衡。如果内层逻辑太多则外层可以做的处置就太少，控制能力有限。如果内层逻辑太少，就将大量复杂性丢给外层，外层负担太重。这两种情况，层次结构都失效了。</li>
+<li>内外层之间通过事件沟通，内层产生的最终状况通过事件送达外层决策，外层决策做出的处置也通过事件操作内层。</li>
+<li>操作的撤销可以视为另一个操作，实现为一个独立的操作状态机。也可以与操作本身一起实现为同一个状态机。这是内外层的逻辑分布进行权衡的一个例子。</li>
+<li>决策表，是外层逻辑的核心，是一些规则的集合，规则的输入是各个操作的对外状况，输出是对各个操作的处置。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></li>
+<li>决策逻辑可能会很复杂，比如有时候决策逻辑不仅依赖于当前输入，还会依赖于决策历史。此时需要权衡，可以把特别复杂和不太可能发生的情况留给人工解决。</li>
+<li>整个结构还可能继续嵌套，也就是说整个状态机可能还是更外层状态机的一个内嵌状态机。</li>
+<li>上述整个结构，是对应于一个事务的。处理多个事务，就是同时并存的多个状态机实例。</li>
+</ol>
+
+
+<p>（<a href="/blog/2016/10/06/transaction3/">下一篇</a>，继续谈实现模型）</p>
+
+<p>附图：</p>
+
+<p><img src="/images/transaction/transaction2.png" width="500"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本篇所有概念和名词都延续自<a href="/blog/2016/09/19/transaction/">前一篇</a>。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>此处并没有任何可以直接应用的结论或代码。“干货”并非是本博的主要内容，参见：<a href="/blog/2016/05/20/dry/">时事：干货</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Wiki：<a href="https://en.wikipedia.org/wiki/UML_state_machine#Hierarchically_nested_states">Hierarchically_nested_states</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>决策表的例子见<a href="/blog/2016/09/19/transaction/">前一篇</a>，但要注意，前一篇的例子中，对操作的处置是很细节的，在很多场景中不一定适合，如上面第5点讨论的。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[给老爷爷系统（八）：特征机制]]></title>
@@ -156,96 +231,6 @@
     }
 }
 </code></pre>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一场似非而是的DSL（三）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2013/09/01/dsl3/"/>
-    <updated>2013-09-01T21:36:38+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2013/09/01/dsl3</id>
-    <content type="html"><![CDATA[<p>上回说到，可读和全局，是我们的DSL形式要解决的主要问题。</p>
-
-<!-- more -->
-
-
-<ul>
-<li>全局，要求DSL结构要精练，同时最好是层级结构，避免指针引用。</li>
-<li>可读，要求DSL能以一种形式表达各个不同的业务方面，所以这个形式必须相当通用。</li>
-</ul>
-
-
-<p>此时那个最纠结的问题出现了：“相当通用”的DSL是不是D <strong><em>S</em></strong> L？毕竟，“通用”在一端，S在另一端。</p>
-
-<p>幸运的是：我们决定先找到这个DSL再讨论它是不是真正的DSL。</p>
-
-<p>既然需要相当通用，我们决定从通用的配置形式出发，我们的办法是——</p>
-
-<ol>
-<li>清理要描述的对象，明确其结构和关系，形成确定的业务模型。在这里就是“特征机制“涉及到的知识层的各个概念，比如特征、扩展点、扩展等。这个工作其实在“特征机制”设计期就已经完成了。</li>
-<li>保证知识层业务模型的可读性，在我们Java系统中，就表现为相关的类（特征、扩展点、扩展等，包括抽象的类和具体的类），它们的类名和属性名、关系名都准确精练、可读。</li>
-<li><p>然后我们使用一种通用的配置形式将这些类实例化（一些javabean），并关联在一起。这时候发现，我们的DSL，基本上等同于描述Bean图的DSL。</p>
-
-<p> 这种配置方式是很常见的，有很多实现方法：</p>
-
-<ul>
-<li>Spring Bean XML：这个形式简单直白，通用性非常强，但过于冗长了些，很难满足全局性要求。噪音很多，很难说可读。</li>
-<li>定制namespace的Spring Bean XML和其他简单的XML：粗略一看是个好主意，比上面的办法在体积和噪音两个方面都改善挺多。但仔细看看不对，要保证通用性，这种方法只能退化为前一种。</li>
-<li>Json：形式上比较简洁，噪音比较少，基本已经满足要求。只是需要在配置中补充一些类型信息，而且处理这些信息需要自己实现，比较繁琐。</li>
-<li>YAML：跟Json相似，类型信息方面实现上简洁些。</li>
-<li>Groovy ObjectGraphBuilder：当我们已经开始深入研究YAML的实现细节的时候，回忆到世界上还有这个，各方面都符合要求。</li>
-</ul>
-</li>
-</ol>
-
-
-<p>至此，我们基本上找到了符合要求的DSL形式，期间也花了很多时间来思考那个纠结的问题：“相当通用”的DSL是不是DSL？现在，我们的回答是：这个DSL就是我们想要的DSL。我们认为——</p>
-
-<ul>
-<li>作为一门语言，其通用或者专用，主要是从使用者的视角来衡量，而不是从设计者、实现者的视角。虽然我们用通用的形式设计、用通用的方法实现这个dsl，但使用者撰写、维护时能接触到的，都是专有业务领域的概念，很少有领域之外的噪音。</li>
-<li>任何定义，都是为作用服务的。我们选择DSL，是由于它的作用，而不是它的定义。如果一个东西被用作DSL，则它就是DSL。</li>
-</ul>
-
-
-<p>一场似非而是的DSL的故事就是这样，如果有同学对我们这个DSL具体是怎样的有兴趣，可以要求我写故事后传……</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一场似非而是的DSL（二）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2013/09/01/dsl2/"/>
-    <updated>2013-09-01T21:36:38+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2013/09/01/dsl2</id>
-    <content type="html"><![CDATA[<p>接演前文，我们这个任务是找到描述“特征”这个业务的语言——就是DSL，其实也就是找个合适的形式来写配置。不错，让我们看看如何找这个合适的形式。</p>
-
-<!-- more -->
-
-
-<p>前文已经说过，对这个DSL的形式，我们有几个要求：</p>
-
-<ul>
-<li>全局的：我们希望一个特征的所有内容，能够一次看到。</li>
-<li>动态的：可以在系统运行中加入、删除或者修改一个特征。</li>
-<li>可读的：我们希望运营人员甚至业务人员可以看懂甚至修改这些特征。</li>
-<li>容错的：系统能帮助修改者发现并改正描述中的错位。</li>
-</ul>
-
-
-<p>我们一一来看这些要求：</p>
-
-<ul>
-<li>动态的：比较容易做到。我们只要不把配置放在静态的配置文件就可以了。放入数据库，或者可读写的文件系统都可以。主要涉及到DSL的管理、使用问题，与DSL本身的结构没有多大关系。</li>
-<li>容错的：稍微难一点。但我们只要对每个DSL段修改后运行一个校验方法，在一个DSL段导入到系统之前，对它进行校验，给出错误信息就可以了。</li>
-<li>全局的：更难一点了。回想一下前文介绍的“特征“的定义，它就是DSL要描述的对象。这个对象比较复杂。
-
-<blockquote><p>描述了当何种<strong>业务差异</strong>的情况下，需要在哪些个<strong>扩展点</strong>填入哪些个<strong>扩展</strong>。</p></blockquote>
-
-<p>  一个特征，包括了业务差异、扩展点、扩展，有好几个方面的信息。要把它们放入到同一个DSL片段（比如一个文件或一条数据库记录）中，除了各个方面的体量都不能太大，还得适当地表达出它们之间的联系。如果片段总体体积很大，超出了人们的阅读能力，或者人们阅读的时候，需要跟着很多引用、指针之类的到处跳来跳去，那显然我们的全局性要求就没有达到。</p></li>
-<li>可读的：很难。正如前一点要求提到的，我们需要正确地表达出扩展点、扩展这些信息。如果仔细想一下就能意识到，扩展点与扩展点、扩展与扩展，可能是非常不同的。比如有个扩展点，是决定一个文档中有哪些字段的，另有一个扩展点，是决定一个文档在某个状态下可以被采取什么动作的。这些东西风马牛不相及，需要描述的内容非常不同，要如何才能给它们一个统一的描述形式呢？</li>
-</ul>
-
-
-<p>全局和可读，是我们这个DSL设计要重点解决的问题。</p>
 ]]></content>
   </entry>
   
