@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-10-07T12:22:42+08:00</updated>
+  <updated>2016-12-21T20:43:18+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,53 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[与复杂同行（一）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/12/11/complex/"/>
+    <updated>2016-12-11T13:21:04+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/12/11/complex</id>
+    <content type="html"><![CDATA[<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<p><strong>复杂性平方律</strong></p>
+
+<blockquote><p>系统的复杂性正比于系统规模的平方</p></blockquote>
+
+<p>一、系统的复杂性不仅由节点的数量（即“规模”）带来，更多的是由节点间的关系（包括没有关系）带来。<!--more-->
+这也就是复杂性平方律的原因。系统的复杂性正比于节点数的平方，因为节点间的连接数正比于节点数的平方。
+我们假设节点和连接的复杂度都为1，比如下图所示的系统，总复杂度为14。</p>
+
+<p><img src="/images/complex/complex1.png" width="300"></p>
+
+<p>二、尝试分拆系统。节点被分拆到两个不同的空间，出现了跨空间的连接，这些连接通常成本相对高，带来了相当多额外复杂度。
+所以简单的分割不一定能带来复杂性的改善。
+我们假设跨空间连接的复杂度为k，则两个空间的复杂度分别为7+4k、3+4k，要使分拆后复杂度降低，对k的要求很高 -</p>
+
+<blockquote><p>  7 + 4k &lt; 14 => k &lt; 1.75</p>
+
+<p>  3 + 4k &lt; 14 => k &lt; 2.75</p></blockquote>
+
+<p><img src="/images/complex/complex2.png" width="300"></p>
+
+<p>三、增加一些节点和连接（方块节点和虚线连接）来改变跨空间连接。
+由于方块节点和虚线连接通常是一些技术性的代理元素，不用承载领域内容。它们的复杂性通常小于普通元素。这里我们仍然按1来计算。
+同样计算对k的要求，发现降低了很多。</p>
+
+<blockquote><p>11+ k &lt; 14 => k &lt; 3</p>
+
+<p>6 + k &lt; 14 => k &lt; 8</p></blockquote>
+
+<p><img src="/images/complex/complex3.png" width="300"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>前方坑大。管挖不管填。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[分布式事务，也谈（番外）]]></title>
@@ -249,34 +296,6 @@
 <p>貌似通篇也适合“不分布”式事务。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 <li id="fn:3">
 <p>“状况”，我自己选择的词汇，区别于“结果”，比如1+1的操作，2（或者3）是“结果”，做完了或者没做完或者不愿意做是“状况”。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[问题空间与解空间]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/08/14/question2/"/>
-    <updated>2016-08-14T20:29:27+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/08/14/question2</id>
-    <content type="html"><![CDATA[<p>问题空间与解空间<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，体现了思考的一般过程，所以在很多方法论中有所表现。</p>
-
-<!--more-->
-
-
-<p>“设计思维”讲到4D过程，Discovery、Define、Design、Delivery。 其中Discovery、Define就是在研究和结构化问题空间，而Design、Delivery则分别是解决问题和归纳整合，属于解空间。</p>
-
-<p>领域驱动设计方法中，子域与上下文是两个看来近似的概念。其实子域在问题空间，是对领域这个大问题的分解，而上下文在解空间，是对子域的解决。研究上下文的关系，则是在归纳整合，使这些解决能互相融洽，共同解决领域这个大问题。</p>
-
-<p>有一类问题，难点和重点在于分析和分解问题，解决问题倒是比较容易。针对这类问题的方法，自然是强调研究问题空间。</p>
-
-<p>威胁建模方法，是一个很好的例子。数据流图，信任空间，STRIDE模型，都是研究问题空间的方法。找到了可能的威胁之后，还要对威胁进行评估排序，这些都是在问题空间。到最后才谈到解空间，也就是如何解决威胁。</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>在<a href="/blog/2016/08/13/question/">前一篇</a>中首先提及。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

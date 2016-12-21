@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2016/12/11/complex/",
+    date:"2016-12-11T13:21:04+08:00",
+    title:"与复杂同行（一）",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "与复杂同行 0",
+      
+    ]
+  },
+
+  {
     url:"/blog/2016/10/07/process/",
     date:"2016-10-07T14:29:52+08:00",
     title:"分布式事务，也谈（番外）",

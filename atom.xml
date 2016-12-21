@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-10-07T12:22:42+08:00</updated>
+  <updated>2016-12-21T20:43:18+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[与复杂同行（一）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/12/11/complex/"/>
+    <updated>2016-12-11T13:21:04+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/12/11/complex</id>
+    
+    <category term="/架构"/>
+    
+    <content type="html">
+      <![CDATA[<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+
+<p><strong>复杂性平方律</strong></p>
+
+<blockquote><p>系统的复杂性正比于系统规模的平方</p></blockquote>
+
+<p>一、系统的复杂性不仅由节点的数量（即“规模”）带来，更多的是由节点间的关系（包括没有关系）带来。
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/12/11/complex/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[分布式事务，也谈（番外）]]></title>
@@ -470,34 +496,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在发展中团队：领域管理]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/"/>
-    <updated>2015-12-31T09:54:24+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/12/31/developing-domain</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/过程"/>
-    
-    <category term="/领域"/>
-    
-    <content type="html">
-      <![CDATA[<p>度过初创期，业务复杂性明显发展，系统结构和质量越来越受到重视。</p>
-
-<p>需要考虑如何管理领域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/">Read on &rarr;</a>
         </p>
       
       ]]>
