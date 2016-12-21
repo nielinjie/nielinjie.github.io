@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-12-21T20:49:12+08:00</updated>
+  <updated>2016-12-21T20:56:34+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -18,9 +18,7 @@
     <link href="http://www.nietongxue.xyz/blog/2016/12/11/complex/"/>
     <updated>2016-12-11T13:21:04+08:00</updated>
     <id>http://www.nietongxue.xyz/blog/2016/12/11/complex</id>
-    <content type="html"><![CDATA[<p> <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-
-<p><strong>复杂性平方律</strong></p>
+    <content type="html"><![CDATA[<p><strong>复杂性平方律</strong></p>
 
 <blockquote><p>系统的复杂性正比于系统规模的平方</p></blockquote>
 
@@ -48,7 +46,9 @@
 
 <p>6 + k &lt; 14 => k &lt; 8</p></blockquote>
 
-<p><img src="/images/complex/complex3.png" width="300"></p>
+<p>d<img src="/images/complex/complex3.png" width="300"></p>
+
+<p>（待续） <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
 <div class="footnotes">
 <hr/>
 <ol>
