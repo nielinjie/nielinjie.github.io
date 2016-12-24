@@ -8,7 +8,7 @@ series: ["与复杂同行 0"]
 published: true
 ---
 
- [^1]
+
 
 **复杂性平方律**
 
@@ -38,5 +38,9 @@ published: true
 > 6 + k < 14 => k < 8
 
 {% img  /images/complex/complex3.png 300 %}
+
+
+
+（待续） [^1]
 
 [^1]: 前方坑大。管挖不管填。
