@@ -1,0 +1,10 @@
+---
+layout: post
+title: "技术的对面"
+date: 2016-12-23 09:13:54 +0800
+comments: true
+categories: ["架构"]
+published: true
+---
+
+“技术“的对面是什么？是“应用”么？是“策略”么？是“思想”么？是”道”么？
