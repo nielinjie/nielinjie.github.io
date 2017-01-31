@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2016-12-21T20:56:34+08:00</updated>
+  <updated>2017-02-01T00:07:51+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[随便微科幻]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/01/31/suibian/"/>
+    <updated>2017-01-31T23:58:19+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/01/31/suibian</id>
+    
+    <category term="/科幻"/>
+    
+    <content type="html">
+      <![CDATA[<h4>（之一）</h4>
+
+<p>— 老大，遗传算法编号E2A5R0TH发展出的智能开始自模拟了。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/01/31/suibian/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[技术的对面]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/12/23/tech/"/>
+    <updated>2016-12-23T09:13:54+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/12/23/tech</id>
+    
+    <category term="/架构"/>
+    
+    <content type="html">
+      <![CDATA[<p><u><strong>技术</strong></u>的对面<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>是什么？
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/12/23/tech/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[与复杂同行（一）]]></title>
@@ -446,54 +490,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/01/24/develop-quality/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[领域对象的没落？]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/01/19/do-die/"/>
-    <updated>2016-01-19T09:21:19+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/01/19/do-die</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/领域"/>
-    
-    <content type="html">
-      <![CDATA[<p>最近，网红架构师学镛老师提出了观点，说用对象模型来体现领域已不太适用于现代系统环境，比如分布式和高并发。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/01/19/do-die/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在发展中团队：微服务？]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/"/>
-    <updated>2016-01-05T10:08:59+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/01/05/dev-micro</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/微服务"/>
-    
-    <content type="html">
-      <![CDATA[<p>当系统成长的时候，大家都想到“微服务”。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/">Read on &rarr;</a>
         </p>
       
       ]]>

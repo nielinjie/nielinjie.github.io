@@ -2,6 +2,36 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2017/01/31/suibian/",
+    date:"2017-01-31T23:58:19+08:00",
+    title:"随便微科幻",
+    categories:[
+      
+        "科幻",
+      
+    ],
+    series:[
+      
+        "随便微科幻 0",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2016/12/23/tech/",
+    date:"2016-12-23T09:13:54+08:00",
+    title:"技术的对面",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2016/12/11/complex/",
     date:"2016-12-11T13:21:04+08:00",
     title:"与复杂同行（一）",
