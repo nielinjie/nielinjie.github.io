@@ -18,7 +18,7 @@ published: true
 
 作为全局架构师角色，不再进行提前的统一的架构设计。主要工作集中在对架构活动的辅导、服务和审核。 
 
-需要处理的问题主要在几个方面 - 
+工作主要在几个方面 - 
 
 1. 架构结果不能相互抵触。
 
@@ -36,7 +36,7 @@ published: true
 
    敏捷和涌现的架构是我们的目标。但有些团队可能需要一些帮助才能做到。设计能力方面可能有待提高，认识理念方面可能需要统一。这些团队需要比较频密的干预和辅导。
 
-目前还在思考的问题 -
+几个问题需要在实践中探索 -
 
 1. 是否要规定架构设计的产出物？
 
@@ -52,4 +52,5 @@ published: true
 
 
 [^1]: 之前总结的一个系列，时间比较久了。—— [Series: 敏捷的架构设计](/blog/filter/filter.html?filterName=series&filterValue=敏捷的架构设计&filterDes=Series%3A%20敏捷的架构设计)
-[^2]: 最重要的一个可能是：有界上下文。之前有文重点说明这个结构的应用。—— [Series: 重构，以知识结构为中心](http://localhost:4000/blog/filter/filter.html?filterName=series&filterValue=重构，以知识结构为中心&filterDes=Series%3A%20重构，以知识结构为中心)
+[^2]: 后续会讨论下这些个结构，其中一个比较明显的可能是：有界上下文。之前也有博文提到过这个结构的应用。—— [Series: 重构，以知识结构为中心](/blog/filter/filter.html?filterName=series&filterValue=重构，以知识结构为中心&filterDes=Series%3A%20重构，以知识结构为中心)
+

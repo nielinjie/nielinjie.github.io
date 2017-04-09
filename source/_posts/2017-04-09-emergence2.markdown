@@ -1,0 +1,16 @@
+---
+layout: post
+title: "涌现中的架构（二）"
+date: 2017-04-09 16:54:43 +0800
+comments: true
+categories: ["架构","敏捷"]
+series: ["涌现中的架构 1"]
+published: false
+---
+
+涌现的架构需要高层结构的支持。
+
+<!--more-->
+
+一个是有界上下文。一个是六边形架构。
+
