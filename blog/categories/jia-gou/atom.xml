@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-04-09T16:14:23+08:00</updated>
+  <updated>2017-04-09T18:22:25+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -65,7 +65,7 @@
 <li id="fn:1">
 <p>之前总结的一个系列，时间比较久了。—— <a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">Series: 敏捷的架构设计</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
-<p>最重要的一个可能是：有界上下文。之前有文重点说明这个结构的应用。—— <a href="http://localhost:4000/blog/filter/filter.html?filterName=series&amp;filterValue=%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83&amp;filterDes=Series%3A%20%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83">Series: 重构，以知识结构为中心</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<p>后续会讨论下这些个结构，其中一个比较明显的可能是：有界上下文。之前也有博文提到过这个结构的应用。—— <a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83&amp;filterDes=Series%3A%20%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83">Series: 重构，以知识结构为中心</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 
