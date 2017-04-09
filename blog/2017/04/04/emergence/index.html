@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>聂同学</title>
+  <title>涌现中的架构（一） - 聂同学</title>
   <meta name="author" content="nielinjie">
   
   <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.nietongxue.xyz">
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2017/04/04/emergence">
   <!-- <link href="/favicon.png" rel="icon"> -->
 
 
@@ -89,15 +89,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
+      <div>
+    <article class="hentry" role="article">
+        
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2017/04/04/emergence/">涌现中的架构（一）</a></h1>
+      <h1 class="entry-title">涌现中的架构（一）</h1>
     
     
       <p class="meta">
@@ -121,410 +118,171 @@
   </header>
 
 
-  <div class="entry-content"><p>之前对敏捷架构的思考和实践主要在敏捷团队内部<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。这个系列主要探讨在公司级别的敏捷架构实践。</p>
+<div class="entry-content"><p>之前对敏捷架构的思考和实践主要在敏捷团队内部<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。这个系列主要探讨在公司级别的敏捷架构实践。</p>
+
+<!--more-->
+
+
+<p>在实行敏捷风格架构的场景中，各个团队将按照自己的实际情况和各自对架构的理解完成架构活动。</p>
+
+<p>作为全局架构师角色，不再进行提前的统一的架构设计。主要工作集中在对架构活动的辅导、服务和审核。</p>
+
+<p>工作主要在几个方面 -</p>
+
+<ol>
+<li><p>架构结果不能相互抵触。</p>
+
+<p>各团队产出各种组件，它们之间必须能够协作。各个团队的设计结果必须遵从协作协议。要么是既有的，要么是及时达成的。</p></li>
+<li><p>上层结构需要持续维护。</p>
+
+<p>跨团队的涌现架构需要一些上层结构的支持<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。团队设计的结果随时可能对高层结构产生影响，这时候需要判断这种影响是否是良性的。进而决策是鼓励还是遏制这种影响。</p></li>
+<li><p>架构活动需要保持某种一致。</p>
+
+<p>各个团队解决问题的方式需要某种程度的一致性，如果彼此相差太多，就会造成系统难以理解。对演进和传承都有不良的影响。但如果过于强调一致性，又有僵化的趋势，等于走回到计划型架构的老路。</p></li>
+<li><p>架构设计有时可能需要干预。</p>
+
+<p>敏捷和涌现的架构是我们的目标。但有些团队可能需要一些帮助才能做到。设计能力方面可能有待提高，认识理念方面可能需要统一。这些团队需要比较频密的干预和辅导。</p></li>
+</ol>
+
+
+<p>几个问题需要在实践中探索 -</p>
+
+<ol>
+<li><p>是否要规定架构设计的产出物？</p>
+
+<p>可能需要某种程度的统一产出物，以便全局架构师审核和其他团队参考。</p></li>
+<li><p>如何找到合适的沟通时间点？</p>
+
+<p>架构设计会在团队间产生相互影响，当团队的节奏不同时，如何找到对彼此影响较小的时间点？</p></li>
+<li><p>是否需要集中的架构研讨会议？</p>
+
+<p>团队间的架构沟通是否可以通过一个集中的会议来减少成本？</p></li>
+</ol>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>之前总结的一个系列，时间比较久了。—— <a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">Series: 敏捷的架构设计</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>最重要的一个可能是：有界上下文。之前有文重点说明这个结构的应用。—— <a href="http://localhost:4000/blog/filter/filter.html?filterName=series&amp;filterValue=%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83&amp;filterDes=Series%3A%20%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83">Series: 重构，以知识结构为中心</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
 
 </div>
+
+
+        <footer>
+            <p class="meta">
+                
   
-  
-    <footer>
-      <a rel="full-article" href="/blog/2017/04/04/emergence/">Read on &rarr;</a>
-    </footer>
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+
+                
+
+
+
+
+
+
+
+
   
 
 
+
+<time datetime="2017-04-04T17:43:06+08:00"  data-updated="true">2017-04-04</time>
+                
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/min-jie/'>敏捷</a>, <a class='category' href='/blog/categories/jia-gou/'>架构</a>
+  
+</span>
+
+
+            </p>
+
+
+            <p/>
+            <section>
+                
+  
+
+
+<div class="post-series" data-series="涌现中的架构 0,"></div>
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+    var ss=series()
+    var sers=$("div.post-series").attr("data-series")
+    sers = sers?sers.split(","):[]
+    sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
+      var name=s.split(" ")[0]
+      var index=s.split(" ")[1]
+      return ss.filter(function(ser){
+        return ser.name==name
+      })
+    }).value()
+    _(sers).each(function(s){
+      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      _(s).each(function(sOfP){
+        p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
+      })
+    })
+  })()
+</script>
+
+            </section>
+
+            
+                <section>
+<h2>Sharing</h2>
+
+
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</section>
+
+            
+
+        </footer>
     </article>
-  
-  
-    <article>
-      
-  <header>
+
     
-      <h1 class="entry-title"><a href="/blog/2017/01/31/suibian/">随便微科幻</a></h1>
+    <section imagesd="comment">
+        <h2>Add a comment</h2>
+        <!-- Duoshuo Comment BEGIN -->
+  <div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"nielinjie"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- Duoshuo Comment END -->
+
+    </section>
     
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2017-01-31T23:58:19+08:00"  data-updated="true">2017-01-31</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h4>（之一）</h4>
-
-<p>— 老大，遗传算法编号E2A5R0TH发展出的智能开始自模拟了。</p>
 
 </div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2017/01/31/suibian/">Read on &rarr;</a>
-    </footer>
-  
 
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/12/23/tech/">技术的对面</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-12-23T09:13:54+08:00"  data-updated="true">2016-12-23</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><u><strong>技术</strong></u>的对面<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>是什么？</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/12/23/tech/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/12/11/complex/">与复杂同行（一）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-12-11T13:21:04+08:00"  data-updated="true">2016-12-11</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><strong>复杂性平方律</strong></p>
-
-<blockquote><p>系统的复杂性正比于系统规模的平方</p></blockquote>
-
-<p>一、系统的复杂性不仅由节点的数量（即“规模”）带来，更多的是由节点间的关系（包括没有关系）带来。</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/12/11/complex/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/10/07/process/">分布式事务，也谈（番外）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-10-07T14:29:52+08:00"  data-updated="true">2016-10-07</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>过程管理，一个基础模式？</h3>
-
-<p>系列中<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>提到，事务管理，实质是一个过程管理。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/10/07/process/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/10/06/transaction3/">分布式事务，也谈（之三）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-10-06T00:43:57+08:00"  data-updated="true">2016-10-06</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>继续谈实现模型。按抽象层次分层，设计为知识→操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/10/06/transaction3/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/09/26/transaction2/">分布式事务，也谈（之二）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-09-26T16:08:48+08:00"  data-updated="true">2016-09-26</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>如前一篇提到的 <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，本篇谈一谈实现模型<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/09/26/transaction2/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/09/19/transaction/">分布式事务，也谈</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-09-19T17:16:43+08:00"  data-updated="true">2016-09-19</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>近来有挺多文章谈“分布式事务”。
-这些文章主要是从实现模式角度来谈的。比如常见的模式有哪些，哪些个模式适合哪种场景，有什么优点缺点，根据什么选择等等。</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/09/19/transaction/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/09/07/996/">时事：996</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-09-07T21:26:15+08:00"  data-updated="true">2016-09-07</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>996或者其他工作制，涉及到几个关系 -</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/09/07/996/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/08/14/question2/">问题空间与解空间</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-<time datetime="2016-08-14T20:29:27+08:00"  data-updated="true">2016-08-14</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>问题空间与解空间<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，体现了思考的一般过程，所以在很多方法论中有所表现。</p>
-
-</div>
-  
-  
-    <footer>
-      <a rel="full-article" href="/blog/2016/08/14/question2/">Read on &rarr;</a>
-    </footer>
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-      <a class="prev" href="/posts/2"> Older &rarr;</a>
-    
-  </div>
-</div>
 <aside class="sidebar">
-  
+    
     <section>
   <h1>About Me</h1>
   <a href="/resume/"><img id="photo" src="/images/me/photo.jpg"/></a>
@@ -654,8 +412,9 @@
     </ul>
 </section>
 
-  
+    
 </aside>
+
 
     </div>
   </div>

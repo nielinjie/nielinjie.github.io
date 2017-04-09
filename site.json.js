@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2017/04/04/emergence/",
+    date:"2017-04-04T17:43:06+08:00",
+    title:"涌现中的架构（一）",
+    categories:[
+      
+        "架构",
+      
+        "敏捷",
+      
+    ],
+    series:[
+      
+        "涌现中的架构 0",
+      
+    ]
+  },
+
+  {
     url:"/blog/2017/01/31/suibian/",
     date:"2017-01-31T23:58:19+08:00",
     title:"随便微科幻",

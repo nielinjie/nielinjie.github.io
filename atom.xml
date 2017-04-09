@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-02-01T00:11:43+08:00</updated>
+  <updated>2017-04-09T16:14:23+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[涌现中的架构（一）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/04/04/emergence/"/>
+    <updated>2017-04-04T17:43:06+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/04/04/emergence</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/敏捷"/>
+    
+    <content type="html">
+      <![CDATA[<p>之前对敏捷架构的思考和实践主要在敏捷团队内部<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。这个系列主要探讨在公司级别的敏捷架构实践。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/04/04/emergence/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[随便微科幻]]></title>
@@ -464,32 +488,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[在发展中团队：开发质量问题]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/01/24/develop-quality/"/>
-    <updated>2016-01-24T11:44:37+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/01/24/develop-quality</id>
-    
-    <category term="/开发"/>
-    
-    <category term="/过程"/>
-    
-    <category term="/质量"/>
-    
-    <content type="html">
-      <![CDATA[<p>随着系统和团队规模逐渐成长，开发质量问题<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>一般有增多趋势。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/01/24/develop-quality/">Read on &rarr;</a>
         </p>
       
       ]]>
