@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-05-21T16:12:08+08:00</updated>
+  <updated>2017-05-21T16:57:26+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -46,7 +46,7 @@
 <p>在我看来利用设计变换需要注意一些原则 -</p>
 
 <ol>
-<li>设计变换是解空间的事，尽量不要涉及问题空间，也尽量不要干扰到设计本身。</li>
+<li>设计变换是解空间的事，尽量不要涉及问题空间，也尽量不要干扰到设计本身。<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></li>
 <li>设计的变换需要有明确的目的。没事不要变换。这个目的要随时验证。</li>
 <li>设计的变换必须是等效的，不论怎么变，需要始终保证能解决最初的问题。</li>
 <li>设计的变换在这里实质是一种折中，跟所有折中一样，需要持续管理其影响。</li>
@@ -54,6 +54,14 @@
 
 
 <p>上面几点，比较理想化。实际中，情况要复杂一些，但不影响谈原则。</p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>关于解空间与问题空间，见之前的文章：<a href="/blog/2016/08/14/question2/">问题空间与解空间</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
 ]]></content>
   </entry>
   
