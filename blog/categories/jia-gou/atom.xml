@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-04-22T16:54:33+08:00</updated>
+  <updated>2017-05-21T16:12:08+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[与复杂同行（番外）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/05/21/complex80/"/>
+    <updated>2017-05-21T14:57:18+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/05/21/complex80</id>
+    <content type="html"><![CDATA[<p>在强制家长培训中，一位小学数学的教学专家谈了一个案例 -</p>
+
+<!--more-->
+
+
+<blockquote><p>一道应用题，所有的同学都得到了它的解答算式 -</p>
+
+<p>25*(5+7)</p>
+
+<p>但是接下来，不同的同学就有不同的步骤 -</p>
+
+<p>有些同学直接按照运算准则，计算 25 * 12，这是两位数乘法，小朋友无法口算，需要通过笔算竖式乘法。</p>
+
+<p>爱思考的同学通过乘法分配律，计算 25 *5 + 25 * 7，避免了两位数乘两位数，可以口算完成，不用使用竖式。</p>
+
+<p>更爱思考的同学计算 25 * 10 + 25*2，难度进一步降低了。</p>
+
+<p>最爱思考的同学计算 25 * 4 *3 ，非常容易计算。</p></blockquote>
+
+<p>这个案例谈的是，通过变换计算的路径，避免复杂计算。（当然如果有可以秒算两位数乘法的小朋友，他可能会觉得“爱思考”的同学们不太好理解。）</p>
+
+<p>软件开发者和架构师的日常工作中，常常也会遇到这个场景。设计方案可能容易发现，但可能不容易直接执行。</p>
+
+<p>这时候我们的办法是变换我们的设计，改善它的可执行性，包括缓解在执行环节的风险。</p>
+
+<p>在我看来利用设计变换需要注意一些原则 -</p>
+
+<ol>
+<li>设计变换是解空间的事，尽量不要涉及问题空间，也尽量不要干扰到设计本身。</li>
+<li>设计的变换需要有明确的目的。没事不要变换。这个目的要随时验证。</li>
+<li>设计的变换必须是等效的，不论怎么变，需要始终保证能解决最初的问题。</li>
+<li>设计的变换在这里实质是一种折中，跟所有折中一样，需要持续管理其影响。</li>
+</ol>
+
+
+<p>上面几点，比较理想化。实际中，情况要复杂一些，但不影响谈原则。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[涌现中的架构（一）]]></title>
@@ -187,32 +231,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[分布式事务，也谈（之三）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/10/06/transaction3/"/>
-    <updated>2016-10-06T00:43:57+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/10/06/transaction3</id>
-    <content type="html"><![CDATA[<p>继续谈实现模型。按抽象层次分层，设计为知识→操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
-
-<!--more-->
-
-
-<p>最上层为具体业务开发者需要关注的概念，实际上只包括：</p>
-
-<ol>
-<li>各个操作的特征，说明各个操作如何调用、可否回查、可否撤销等等。</li>
-<li>决策表中的具体规则。说明当某某状况发生时，采取某某处置。</li>
-</ol>
-
-
-<p>第二层为事务管理组件，负责组织前面提到的两层嵌套状态机。</p>
-
-<p>第三层和第四层，是两层嵌套状态机本身的实现。</p>
-
-<p><img src="/images/transaction/transaction3.png" width="500"></p>
 ]]></content>
   </entry>
   

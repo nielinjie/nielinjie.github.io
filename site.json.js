@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2017/05/21/complex80/",
+    date:"2017-05-21T14:57:18+08:00",
+    title:"与复杂同行（番外）",
+    categories:[
+      
+        "架构",
+      
+    ],
+    series:[
+      
+        "与复杂同行 2",
+      
+    ]
+  },
+
+  {
     url:"/blog/2017/04/04/emergence/",
     date:"2017-04-04T17:43:06+08:00",
     title:"涌现中的架构（一）",

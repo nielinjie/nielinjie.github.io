@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-04-22T16:54:33+08:00</updated>
+  <updated>2017-05-21T16:12:08+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,28 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[与复杂同行（番外）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/05/21/complex80/"/>
+    <updated>2017-05-21T14:57:18+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/05/21/complex80</id>
+    
+    <category term="/架构"/>
+    
+    <content type="html">
+      <![CDATA[<p>在强制家长培训中，一位小学数学的教学专家谈了一个案例 -</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/05/21/complex80/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[涌现中的架构（一）]]></title>
@@ -461,33 +483,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/03/13/quality2/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[重构，以知识结构为中心（一）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/"/>
-    <updated>2016-02-20T14:17:28+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/02/20/dev-dc</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/领域"/>
-    
-    <category term="/重构"/>
-    
-    <content type="html">
-      <![CDATA[<p>我们意识到系统中存在的大量结构性问题，根源都是我们知识的结构问题。
-在知识结构层面，我们有两个主要问题。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/">Read on &rarr;</a>
         </p>
       
       ]]>

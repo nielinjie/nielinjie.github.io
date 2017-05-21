@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>时事：996 - 聂同学</title>
+  <title>与复杂同行（番外） - 聂同学</title>
   <meta name="author" content="nielinjie">
   
   <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
@@ -17,7 +17,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2016/09/07/996">
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2017/05/21/complex80">
   <!-- <link href="/favicon.png" rel="icon"> -->
 
 
@@ -94,7 +94,7 @@
         
   <header>
     
-      <h1 class="entry-title">时事：996</h1>
+      <h1 class="entry-title">与复杂同行（番外）</h1>
     
     
       <p class="meta">
@@ -111,30 +111,49 @@
 
 
 
-<time datetime="2016-09-07T21:26:15+08:00"  data-updated="true">2016-09-07</time>
+<time datetime="2017-05-21T14:57:18+08:00"  data-updated="true">2017-05-21</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>996或者其他工作制，涉及到几个关系 -</p>
+<div class="entry-content"><p>在强制家长培训中，一位小学数学的教学专家谈了一个案例 -</p>
 
 <!--more-->
 
 
+<blockquote><p>一道应用题，所有的同学都得到了它的解答算式 -</p>
+
+<p>25*(5+7)</p>
+
+<p>但是接下来，不同的同学就有不同的步骤 -</p>
+
+<p>有些同学直接按照运算准则，计算 25 * 12，这是两位数乘法，小朋友无法口算，需要通过笔算竖式乘法。</p>
+
+<p>爱思考的同学通过乘法分配律，计算 25 *5 + 25 * 7，避免了两位数乘两位数，可以口算完成，不用使用竖式。</p>
+
+<p>更爱思考的同学计算 25 * 10 + 25*2，难度进一步降低了。</p>
+
+<p>最爱思考的同学计算 25 * 4 *3 ，非常容易计算。</p></blockquote>
+
+<p>这个案例谈的是，通过变换计算的路径，避免复杂计算。（当然如果有可以秒算两位数乘法的小朋友，他可能会觉得“爱思考”的同学们不太好理解。）</p>
+
+<p>软件开发者和架构师的日常工作中，常常也会遇到这个场景。设计方案可能容易发现，但可能不容易直接执行。</p>
+
+<p>这时候我们的办法是变换我们的设计，改善它的可执行性，包括缓解在执行环节的风险。</p>
+
+<p>在我看来利用设计变换需要注意一些原则 -</p>
+
 <ol>
-<li>工作时间与工作目标的关系。</li>
-<li>工作目标与公司目标的关系。</li>
-<li>公司目标与个人目标的关系。</li>
+<li>设计变换是解空间的事，尽量不要涉及问题空间，也尽量不要干扰到设计本身。</li>
+<li>设计的变换需要有明确的目的。没事不要变换。这个目的要随时验证。</li>
+<li>设计的变换必须是等效的，不论怎么变，需要始终保证能解决最初的问题。</li>
+<li>设计的变换在这里实质是一种折中，跟所有折中一样，需要持续管理其影响。</li>
 </ol>
 
 
-<p>这三个关系能形成一个闭环。</p>
-
-<p>很多时候大家都提到了第三个关系。但前两个关系也同样重要。</p>
-
-<p>不论是要号召、要推行、要拥护，还是要抵制、要逃避，只有讲清楚这几个关系，才能做到有理有据，把说服力落到实处。</p>
+<p>上面几点，比较理想化。实际中，情况要复杂一些，但不影响谈原则。</p>
 </div>
 
 
@@ -158,12 +177,12 @@
 
 
 
-<time datetime="2016-09-07T21:26:15+08:00"  data-updated="true">2016-09-07</time>
+<time datetime="2017-05-21T14:57:18+08:00"  data-updated="true">2017-05-21</time>
                 
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/shi-shi/'>时事</a>, <a class='category' href='/blog/categories/guan-li/'>管理</a>
+    <a class='category' href='/blog/categories/jia-gou/'>架构</a>
   
 </span>
 
@@ -177,6 +196,7 @@
   
 
 
+<div class="post-series" data-series="与复杂同行 2,"></div>
 <script type="text/javascript" charset="utf-8">
   (function(){
     function series(){
