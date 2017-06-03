@@ -2,6 +2,22 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2017/06/03/code-data/",
+    date:"2017-06-03T15:39:24+08:00",
+    title:"Linus的代码与数据结构",
+    categories:[
+      
+        "架构",
+      
+        "开发",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2017/05/21/complex80/",
     date:"2017-05-21T14:57:18+08:00",
     title:"与复杂同行（番外）",

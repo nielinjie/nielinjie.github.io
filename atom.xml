@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-05-21T16:57:26+08:00</updated>
+  <updated>2017-06-03T15:58:29+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linus的代码与数据结构]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/06/03/code-data/"/>
+    <updated>2017-06-03T15:39:24+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/06/03/code-data</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/开发"/>
+    
+    <content type="html">
+      <![CDATA[<p>Linus说： &ldquo;烂程序员关心的是代码。好程序员关心的是数据结构和它们之间的关系。&rdquo;</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/06/03/code-data/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[与复杂同行（番外）]]></title>
@@ -459,30 +483,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/03/19/am/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[“程序员需要工程思维”]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/03/13/quality2/"/>
-    <updated>2016-03-13T19:46:06+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/03/13/quality2</id>
-    
-    <category term="/质量"/>
-    
-    <category term="/过程"/>
-    
-    <content type="html">
-      <![CDATA[<p>有同学提到工程思维，认为借助传统的建筑、机械工程的思考方式，有助于控制软件工程质量<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。这当然是有益的。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/03/13/quality2/">Read on &rarr;</a>
         </p>
       
       ]]>
