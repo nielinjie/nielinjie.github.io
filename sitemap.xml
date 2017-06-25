@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.nietongxue.xyz/blog/2017/06/25/emergence3/</loc>
+    <lastmod>2017-06-25T12:56:59+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/blog/2017/06/11/ms-split/</loc>
+    <lastmod>2017-06-11T16:15:44+08:00</lastmod>
+  </url>
+  <url>
     <loc>http://www.nietongxue.xyz/blog/2017/06/03/code-data/</loc>
     <lastmod>2017-06-03T15:39:24+08:00</lastmod>
   </url>
@@ -11,10 +19,6 @@
   <url>
     <loc>http://www.nietongxue.xyz/blog/2017/04/04/emergence/</loc>
     <lastmod>2017-04-04T17:43:06+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2017/01/31/suibian/</loc>
-    <lastmod>2017-01-31T23:58:19+08:00</lastmod>
   </url>
   <url>
     <loc>http://www.nietongxue.xyz/blog/2016/12/23/tech/</loc>
@@ -59,6 +63,10 @@
   <url>
     <loc>http://www.nietongxue.xyz/blog/2016/05/20/dry/</loc>
     <lastmod>2016-05-20T17:22:12+08:00</lastmod>
+  </url>
+  <url>
+    <loc>http://www.nietongxue.xyz/blog/2016/05/02/3h/</loc>
+    <lastmod>2016-05-02T11:48:26+08:00</lastmod>
   </url>
   <url>
     <loc>http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/</loc>
@@ -521,42 +529,9 @@
     <loc>http://www.nietongxue.xyz/blog/categories/ling-yu/</loc>
   </url>
   <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/shi-shi/</loc>
-  </url>
-  <url>
     <loc>http://www.nietongxue.xyz/blog/categories/guan-li/</loc>
   </url>
   <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/ke-huan/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/2/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/3/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/4/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/5/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/6/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/7/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/8/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/9/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/10/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/posts/11/</loc>
+    <loc>http://www.nietongxue.xyz/blog/categories/shi-shi/</loc>
   </url>
 </urlset>

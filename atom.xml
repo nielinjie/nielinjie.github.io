@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-06-03T15:58:29+08:00</updated>
+  <updated>2017-06-25T16:00:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[涌现中的架构（三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/06/25/emergence3/"/>
+    <updated>2017-06-25T12:56:59+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/06/25/emergence3</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/敏捷"/>
+    
+    <content type="html">
+      <![CDATA[<p>之前有思考过研发团队发展的三个要素<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<p>在敏捷环境中，进一步思考了三个要素和它们之间的关系。
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/06/25/emergence3/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[微服务划分：按业务能力 vs 按子域]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/06/11/ms-split/"/>
+    <updated>2017-06-11T16:15:44+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/06/11/ms-split</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/微服务"/>
+    
+    <content type="html">
+      <![CDATA[<p>微服务的划分方法，常见的是两种，按业务能力和按子域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/06/11/ms-split/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Linus的代码与数据结构]]></title>
@@ -84,30 +130,6 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[随便微科幻]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2017/01/31/suibian/"/>
-    <updated>2017-01-31T23:58:19+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2017/01/31/suibian</id>
-    
-    <category term="/科幻"/>
-    
-    <content type="html">
-      <![CDATA[<h4>（之一）</h4>
-
-<p>— 老大，遗传算法编号E2A5R0TH发展出的智能开始自模拟了。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/01/31/suibian/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[技术的对面]]></title>
     <link href="http://www.nietongxue.xyz/blog/2016/12/23/tech/"/>
     <updated>2016-12-23T09:13:54+08:00</updated>
@@ -116,12 +138,9 @@
     <category term="/架构"/>
     
     <content type="html">
-      <![CDATA[<p><u><strong>技术</strong></u>的对面<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>是什么？
+      <![CDATA[<p>“技术”的对面是“策略”，不是“应用”、“方法”，不是“思想”、“道”，也不是“艺术”或“诗歌”。</p>
+
       
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/12/23/tech/">Read on &rarr;</a>
-        </p>
       
       ]]>
     </content>
@@ -366,6 +385,32 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[团队发展的三要素]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/05/02/3h/"/>
+    <updated>2016-05-02T11:48:26+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/05/02/3h</id>
+    
+    <category term="/管理"/>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
+    <content type="html">
+      <![CDATA[<p>我理解研发团队发展的三要素是：梯队、架构、过程。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/05/02/3h/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[重构，以知识结构为中心（四）]]></title>
     <link href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/"/>
     <updated>2016-04-16T11:10:01+08:00</updated>
@@ -435,54 +480,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/04/09/dev-dc3/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[重构，以知识结构为中心（二）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2/"/>
-    <updated>2016-04-02T15:30:25+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/领域"/>
-    
-    <category term="/重构"/>
-    
-    <content type="html">
-      <![CDATA[<p>我们认为两个方面的措施可以改善我们的知识结构。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构是一种管理手段]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/03/19/am/"/>
-    <updated>2016-03-19T09:59:18+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/03/19/am</id>
-    
-    <category term="/架构"/>
-    
-    <content type="html">
-      <![CDATA[<p>是的。如果不是最重要的那一种的话。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/03/19/am/">Read on &rarr;</a>
         </p>
       
       ]]>

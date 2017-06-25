@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 敏捷 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/min-jie/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-06-03T15:58:29+08:00</updated>
+  <updated>2017-06-25T16:00:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[涌现中的架构（三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/06/25/emergence3/"/>
+    <updated>2017-06-25T12:56:59+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/06/25/emergence3</id>
+    <content type="html"><![CDATA[<p>之前有思考过研发团队发展的三个要素<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
+
+<p>在敏捷环境中，进一步思考了三个要素和它们之间的关系。<!-- more -->如下面的图所示。</p>
+
+<p>每两个元素之间有关系，每个关系上面有一个词。这个词说的不是关系本身。而说的是，要维持好和改善这个关系，需要思考的关键点。</p>
+
+<p><img src="http://www.nietongxue.xyz/images/emergence/3factor.png" width="80%"/></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>见之前的博文：<a href="/blog/2016/05/02/3h/">团队发展的三要素</a>。这个博文的视角更多的还是在团队的内部。在全局、跨团队的视角上，三个要素有一些变化。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[涌现中的架构（一）]]></title>
@@ -198,52 +221,6 @@
 <ol>
 <li id="fn:1">
 <p>该系统敏捷开发过程的用户故事白板。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[敏捷的架构设计（五）：领域地图（一）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2014/04/24/aa3/"/>
-    <updated>2014-04-24T16:36:38+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2014/04/24/aa3</id>
-    <content type="html"><![CDATA[<blockquote><p>敏捷已死，而敏捷性长存。</p></blockquote>
-
-<h3>什么是“领域地图”？是“领域模型”么？</h3>
-
-<!-- more -->
-
-
-<p>基本上，就是的。</p>
-
-<p>这是一个历史悠久的系统，历经多年的进化，长久以来团队不知道它的整体需求是怎样的，也缺少有条理的领域知识积累。风险逐渐积累。</p>
-
-<p>现在到了系统整理领域知识，尝试建立领域模型的适当时机——</p>
-
-<ul>
-<li>事务脚本风格向领域划分风格的重构<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>已经在重点局部取得了阶段性进展，现在到了推广到全局的时间了。既然是“按领域划分”，我们自然需要一个领域模型作为划分原则。</li>
-<li>SA同学正在整理全局“功能地图”、测试同学整理“全量测试案例”，这些东西希望能与代码发生联系，需要一个中枢。在上述的架构风格下，这个中枢只能是领域模型。
-我们画了个图来分析领域模型的中枢地位。如后所示。</li>
-</ul>
-
-
-<p>虽然是一种模型，但叫“地图”不叫“模型”——</p>
-
-<ul>
-<li>尺度大，粒度大，只有宏观结构没有细节。是对领域的全局鸟瞰，感觉就像是面对地图。</li>
-<li>强调它的最高指导意义，类比“军事地图”。感受下。:-D</li>
-<li>SA同学的叫做功能“地图”，我们也叫“地图”。</li>
-</ul>
-
-
-<p><img src="/images/kanban/gongneng.png"></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>关于重构有个系列的blog即将写，届时这里换成一个链接……<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

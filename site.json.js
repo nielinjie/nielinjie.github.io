@@ -2,6 +2,40 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2017/06/25/emergence3/",
+    date:"2017-06-25T12:56:59+08:00",
+    title:"涌现中的架构（三）",
+    categories:[
+      
+        "架构",
+      
+        "敏捷",
+      
+    ],
+    series:[
+      
+        "涌现中的架构 3",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2017/06/11/ms-split/",
+    date:"2017-06-11T16:15:44+08:00",
+    title:"微服务划分：按业务能力 vs 按子域",
+    categories:[
+      
+        "架构",
+      
+        "微服务",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2017/06/03/code-data/",
     date:"2017-06-03T15:39:24+08:00",
     title:"Linus的代码与数据结构",
@@ -47,22 +81,6 @@ window.site={
     series:[
       
         "涌现中的架构 0",
-      
-    ]
-  },
-
-  {
-    url:"/blog/2017/01/31/suibian/",
-    date:"2017-01-31T23:58:19+08:00",
-    title:"随便微科幻",
-    categories:[
-      
-        "科幻",
-      
-    ],
-    series:[
-      
-        "随便微科幻 0",
       
     ]
   },
@@ -240,6 +258,24 @@ window.site={
     categories:[
       
         "时事",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2016/05/02/3h/",
+    date:"2016-05-02T11:48:26+08:00",
+    title:"团队发展的三要素",
+    categories:[
+      
+        "管理",
+      
+        "架构",
+      
+        "过程",
       
     ],
     series:[

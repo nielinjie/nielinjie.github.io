@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 微服务 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/wei-fu-wu/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-06-03T15:58:29+08:00</updated>
+  <updated>2017-06-25T16:00:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,41 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[微服务划分：按业务能力 vs 按子域]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/06/11/ms-split/"/>
+    <updated>2017-06-11T16:15:44+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/06/11/ms-split</id>
+    <content type="html"><![CDATA[<p>微服务的划分方法，常见的是两种，按业务能力和按子域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。<!-- more--></p>
+
+<p>“子域”，就是DDD中的"子域"。</p>
+
+<p>“业务能力”，是一个专用名词，指的是一个连续的业务过程，其中不需要中断，也不需要别的业务过程的参与。这些业务过程自然组织起来，比如首尾相连，或者，由用户参与来自然连接。</p>
+
+<p>两种不同的服务划分风格，反映了对业务本身的不同的描述与划分的风格。</p>
+
+<p>比较形象地讲，按子域划分，就是把业务划成一块一块的。按业务能力划分，就是把业务划成一段一段的。一块一块的，描述业务概念和它们之间的关系。一段一段的，描述业务执行的步骤和过程。</p>
+
+<p>按业务能力划分的优势主要在运行时。各个服务的运行时依赖被尽量减少。在服务性能、可用性方面不会相互牵绊，可以做到最好。</p>
+
+<p>而按子域划分的优势主要在设计时和演进时。有利于应对业务的规模发展、复杂性增加和分别演进。</p>
+
+<p>这样看来，按业务能力划分的微服务是不是类似于一种事务脚本？只不过它的粒度更大，以服务为单元？</p>
+
+<p>是时候又贴出这张图，事务脚本的优势与劣势在图里体现得很明显，按业务能力划分的微服务，是否有同样的优势与劣势？</p>
+
+<p><img src="http://www.nietongxue.xyz/images/domain/domain.gif" width="80%"/></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>有的观点，认为两种划分可以选择。有的观点，认为应该这样划分而不要那样划分。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[一帮成功的微服务]]></title>
@@ -125,39 +160,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Orchestration 和 Choreography]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2015/11/29/oc/"/>
-    <updated>2015-11-29T15:01:02+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2015/11/29/oc</id>
-    <content type="html"><![CDATA[<p>Orchestration 和 Choreography，这个两个词在跟“服务”有关的架构讨论中常有出现。比如微服务和SOA。</p>
-
-<!--more-->
-
-
-<p>如果直译的话，这两个词一个是“编曲”，一个“编舞”。</p>
-
-<p>编曲和编舞都是编。编就是安排、设计。不论是微服务的服务还是SOA的服务，要想沟通协同，合力完成业务请求，都是需要安排设计的。</p>
-
-<p>但二者编排的对象不同，一个是曲一个是舞。特别是，按照词的本意，这里的“曲”指的是“管弦乐曲”，是相对复杂宏大的演奏。</p>
-
-<p>曲和舞有什么区别呢？</p>
-
-<ol>
-<li>曲需要指挥，舞不需要。乐者在演奏时，需要指挥随时指挥协调。而舞者则不需要，按照事前安排做好自己就行。需要跟其他舞者合作时，也由自己直接沟通完成。</li>
-<li>曲分工复杂，舞比较简单。管弦乐曲演奏需要多种不同乐器多种不同乐者，要求彼此配合得当，才能演出成功。而舞蹈没那么多分工，即使是大型舞蹈，台上人多，但角色也就数种而已。</li>
-<li>曲比较严肃，舞比较宽松。乐者的演奏和配合一丝不苟，少有随性。舞者则有较多的个人发挥空间。</li>
-</ol>
-
-
-<p>SOA的理念是自上而下，比较多的依赖于集中安排，运行时也需要明确的中间件进行中央控制协调。边界内有多种类型的服务，相互之间严密配合。SOA的风格类似于编曲。</p>
-
-<p>跟SOA相比，微服务风格更类似于编舞。边界内的服务遵循简单的约定，负责一个特定的领域。他们的地位相似，实现方式和沟通方式由自己选择。</p>
-
-<p>编曲和编舞是一种形象的比喻，并不会完全精确。架构师编排服务的时候不要照抄。</p>
 ]]></content>
   </entry>
   
