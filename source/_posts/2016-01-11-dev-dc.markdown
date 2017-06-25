@@ -50,7 +50,7 @@ published: true
 显然，来自于“产品线”的知识结构，不能满足我们上面谈到的对知识结构的要求。
 
 
-{% img  /images/domain/domain.gif 400 %}
+<img  src="/images/domain/domain.gif" width="80%"/>
 
 
 
