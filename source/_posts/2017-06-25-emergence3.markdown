@@ -14,6 +14,7 @@ published: true
 
 每两个元素之间有关系，每个关系上面有一个词。这个词说的不是关系本身。而说的是，要维持好和改善这个关系，需要思考的关键点。
 
-<img src="/images/emergence/3factor.png" width="80%"/>
+<img src="/images/emergence/3Factor.png" width="80%"/>
 
 [^1]: 见之前的博文：[团队发展的三要素](/blog/2016/05/02/3h/)。这个博文的视角更多的还是在团队的内部。在全局、跨团队的视角上，三个要素有一些变化。
+
