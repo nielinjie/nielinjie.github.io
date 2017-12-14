@@ -1,537 +1,544 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2017/06/25/emergence3/</loc>
-    <lastmod>2017-06-25T12:56:59+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2017/06/11/ms-split/</loc>
-    <lastmod>2017-06-11T16:15:44+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2017/06/03/code-data/</loc>
-    <lastmod>2017-06-03T15:39:24+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2017/05/21/complex80/</loc>
-    <lastmod>2017-05-21T14:57:18+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2017/04/04/emergence/</loc>
-    <lastmod>2017-04-04T17:43:06+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/12/23/tech/</loc>
-    <lastmod>2016-12-23T09:13:54+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/12/11/complex/</loc>
-    <lastmod>2016-12-11T13:21:04+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/10/07/process/</loc>
-    <lastmod>2016-10-07T14:29:52+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/10/06/transaction3/</loc>
-    <lastmod>2016-10-06T00:43:57+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/09/26/transaction2/</loc>
-    <lastmod>2016-09-26T16:08:48+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/09/19/transaction/</loc>
-    <lastmod>2016-09-19T17:16:43+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/09/07/996/</loc>
-    <lastmod>2016-09-07T21:26:15+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/08/14/question2/</loc>
-    <lastmod>2016-08-14T20:29:27+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/08/13/question/</loc>
-    <lastmod>2016-08-13T20:29:27+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/05/28/avst/</loc>
-    <lastmod>2016-05-28T17:15:59+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/05/20/dry/</loc>
-    <lastmod>2016-05-20T17:22:12+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/05/02/3h/</loc>
-    <lastmod>2016-05-02T11:48:26+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/</loc>
-    <lastmod>2016-04-16T11:10:01+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/04/13/good-ms/</loc>
-    <lastmod>2016-04-13T13:39:21+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/04/09/dev-dc3/</loc>
-    <lastmod>2016-04-09T11:09:57+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2/</loc>
-    <lastmod>2016-04-02T15:30:25+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/03/19/am/</loc>
-    <lastmod>2016-03-19T09:59:18+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/03/13/quality2/</loc>
-    <lastmod>2016-03-13T19:46:06+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/</loc>
-    <lastmod>2016-02-20T14:17:28+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/01/24/develop-quality/</loc>
-    <lastmod>2016-01-24T11:44:37+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/01/19/do-die/</loc>
-    <lastmod>2016-01-19T09:21:19+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/</loc>
-    <lastmod>2016-01-05T10:08:59+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/</loc>
-    <lastmod>2015-12-31T09:54:24+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/12/24/3direct/</loc>
-    <lastmod>2015-12-24T13:25:20+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/12/23/md/</loc>
-    <lastmod>2015-12-23T16:31:35+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/12/15/micro2/</loc>
-    <lastmod>2015-12-15T15:16:01+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/12/01/micro/</loc>
-    <lastmod>2015-12-01T15:16:01+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/11/29/oc/</loc>
-    <lastmod>2015-11-29T15:01:02+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/11/20/system-like/</loc>
-    <lastmod>2015-11-20T10:39:55+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm/</loc>
-    <lastmod>2015-11-17T00:05:18+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/11/07/togaf/</loc>
-    <lastmod>2015-11-07T00:05:18+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/10/28/driving2/</loc>
-    <lastmod>2015-10-28T09:06:49+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/10/26/method/</loc>
-    <lastmod>2015-10-26T21:24:20+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/10/24/evolve/</loc>
-    <lastmod>2015-10-24T17:21:53+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/10/09/driving/</loc>
-    <lastmod>2015-10-09T21:31:05+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/10/04/process/</loc>
-    <lastmod>2015-10-04T10:25:03+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/10/02/techstack/</loc>
-    <lastmod>2015-10-02T22:46:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/09/27/nocoolcode/</loc>
-    <lastmod>2015-09-27T16:51:48+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/09/25/fakecode/</loc>
-    <lastmod>2015-09-25T20:51:27+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/08/13/scenario/</loc>
-    <lastmod>2015-08-13T15:15:34+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/08/04/said-xueren4/</loc>
-    <lastmod>2015-08-04T21:10:16+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/07/29/3words/</loc>
-    <lastmod>2015-07-29T10:21:30+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/07/28/typo/</loc>
-    <lastmod>2015-07-28T16:41:56+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/07/25/questions/</loc>
-    <lastmod>2015-07-25T09:57:11+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/06/28/monolithf/</loc>
-    <lastmod>2015-06-28T16:58:26+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/06/07/cloud6/</loc>
-    <lastmod>2015-06-07T11:15:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/06/07/cloud5/</loc>
-    <lastmod>2015-06-07T11:15:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/06/02/cloud4/</loc>
-    <lastmod>2015-06-02T11:15:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/05/29/cloud3/</loc>
-    <lastmod>2015-05-29T11:15:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/05/23/cloud2/</loc>
-    <lastmod>2015-05-23T11:15:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/05/23/cloud/</loc>
-    <lastmod>2015-05-23T11:15:31+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/04/25/chief-programmer/</loc>
-    <lastmod>2015-04-25T13:40:12+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/04/10/resilient3/</loc>
-    <lastmod>2015-04-10T10:18:14+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/04/10/resilient2/</loc>
-    <lastmod>2015-04-10T10:18:14+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/04/09/service/</loc>
-    <lastmod>2015-04-09T11:11:07+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/04/09/resilient/</loc>
-    <lastmod>2015-04-09T10:18:14+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/04/02/move/</loc>
-    <lastmod>2015-04-02T10:48:27+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2015/03/17/pped2kLinks/</loc>
-    <lastmod>2015-03-17T10:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/08/02/pkc/</loc>
-    <lastmod>2014-08-02T16:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/08/02/pkc0/</loc>
-    <lastmod>2014-08-02T14:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/16/feature/</loc>
-    <lastmod>2014-06-16T21:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/16/3d/</loc>
-    <lastmod>2014-06-16T20:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/11/refactory2/</loc>
-    <lastmod>2014-06-11T20:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/09/refactory/</loc>
-    <lastmod>2014-06-09T20:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/07/view3/</loc>
-    <lastmod>2014-06-07T18:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/07/structure/</loc>
-    <lastmod>2014-06-07T17:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/06/view2/</loc>
-    <lastmod>2014-06-06T18:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/05/view/</loc>
-    <lastmod>2014-06-05T20:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/05/social/</loc>
-    <lastmod>2014-06-05T16:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/06/04/time/</loc>
-    <lastmod>2014-06-04T16:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/05/28/huidu/</loc>
-    <lastmod>2014-05-28T20:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/05/26/quality/</loc>
-    <lastmod>2014-05-26T20:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/04/24/aa4/</loc>
-    <lastmod>2014-04-24T17:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/04/24/aa3/</loc>
-    <lastmod>2014-04-24T16:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/04/20/series/</loc>
-    <lastmod>2014-04-20T23:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/04/20/xiaowanyier/</loc>
-    <lastmod>2014-04-20T23:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/04/12/said-xueren4/</loc>
-    <lastmod>2014-04-12T23:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/04/07/aa25/</loc>
-    <lastmod>2014-04-07T16:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/04/03/aa2/</loc>
-    <lastmod>2014-04-03T23:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/03/31/aa1/</loc>
-    <lastmod>2014-03-31T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/03/31/aa/</loc>
-    <lastmod>2014-03-31T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/03/30/said-xueren3/</loc>
-    <lastmod>2014-03-30T15:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/03/22/new-blog-site/</loc>
-    <lastmod>2014-03-22T20:15:27+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/03/20/wa/</loc>
-    <lastmod>2014-03-20T20:06:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/03/09/said-jiagoushi/</loc>
-    <lastmod>2014-03-09T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/03/03/said-yuya/</loc>
-    <lastmod>2014-03-03T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/02/15/said-shouduan/</loc>
-    <lastmod>2014-02-15T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/02/15/said-xueren2/</loc>
-    <lastmod>2014-02-15T15:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2014/02/15/said-xueren1/</loc>
-    <lastmod>2014-02-15T15:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/09/02/dsl-post/</loc>
-    <lastmod>2013-09-02T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/09/01/dsl3/</loc>
-    <lastmod>2013-09-01T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/09/01/dsl2/</loc>
-    <lastmod>2013-09-01T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/09/01/dsl1/</loc>
-    <lastmod>2013-09-01T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/08/20/distribute-saying/</loc>
-    <lastmod>2013-08-20T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end/</loc>
-    <lastmod>2013-02-25T21:27:49+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/01/23/wd-download-machine/</loc>
-    <lastmod>2013-01-23T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/01/23/code/</loc>
-    <lastmod>2013-01-23T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2013/01/01/said-20130101/</loc>
-    <lastmod>2013-01-01T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2012/12/05/said-20121205/</loc>
-    <lastmod>2012-12-05T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2012/12/03/said-20121203/</loc>
-    <lastmod>2012-12-03T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2012/10/29/rest2/</loc>
-    <lastmod>2012-10-29T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2012/10/25/rest/</loc>
-    <lastmod>2012-10-25T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2012/07/10/said-20120710/</loc>
-    <lastmod>2012-07-10T21:36:38+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android3/</loc>
-    <lastmod>2011-11-14T17:04:04+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android/</loc>
-    <lastmod>2011-11-14T16:04:04+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android2/</loc>
-    <lastmod>2011-11-14T15:04:04+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/attachment/app-diff.html</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/filter/filter.html</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/archives/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/pp/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/resume/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/scala/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/android/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/jia-gou/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/rest/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/kai-fa/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/chan-pin/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/ge-ren/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/dsl/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/she-ji/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/mo-shi/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/min-jie/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/guo-cheng/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/octopress/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/zhi-liang/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/gong-ju/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/zhong-gou/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/can-kao/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/fan-yi/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/yun/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/wei-fu-wu/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/togaf/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/ling-yu/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/guan-li/</loc>
-  </url>
-  <url>
-    <loc>http://www.nietongxue.xyz/blog/categories/shi-shi/</loc>
-  </url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2017/12/14/d-o/</loc>
+<lastmod>2017-12-14T22:45:56+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2017/06/25/emergence3/</loc>
+<lastmod>2017-06-25T12:56:59+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2017/06/11/ms-split/</loc>
+<lastmod>2017-06-11T16:15:44+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2017/06/03/code-data/</loc>
+<lastmod>2017-06-03T15:39:24+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2017/05/21/complex80/</loc>
+<lastmod>2017-05-21T14:57:18+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2017/04/04/emergence/</loc>
+<lastmod>2017-04-04T17:43:06+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/12/23/tech/</loc>
+<lastmod>2016-12-23T09:13:54+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/12/11/complex/</loc>
+<lastmod>2016-12-11T13:21:04+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/10/07/process/</loc>
+<lastmod>2016-10-07T14:29:52+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/10/06/transaction3/</loc>
+<lastmod>2016-10-06T00:43:57+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/09/26/transaction2/</loc>
+<lastmod>2016-09-26T16:08:48+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/09/19/transaction/</loc>
+<lastmod>2016-09-19T17:16:43+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/09/07/996/</loc>
+<lastmod>2016-09-07T21:26:15+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/08/14/question2/</loc>
+<lastmod>2016-08-14T20:29:27+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/08/13/question/</loc>
+<lastmod>2016-08-13T20:29:27+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/05/28/avst/</loc>
+<lastmod>2016-05-28T17:15:59+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/05/20/dry/</loc>
+<lastmod>2016-05-20T17:22:12+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/05/02/3h/</loc>
+<lastmod>2016-05-02T11:48:26+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/</loc>
+<lastmod>2016-04-16T11:10:01+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/04/13/good-ms/</loc>
+<lastmod>2016-04-13T13:39:21+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/04/09/dev-dc3/</loc>
+<lastmod>2016-04-09T11:09:57+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/04/02/dev-dc2/</loc>
+<lastmod>2016-04-02T15:30:25+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/03/19/am/</loc>
+<lastmod>2016-03-19T09:59:18+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/03/13/quality2/</loc>
+<lastmod>2016-03-13T19:46:06+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/02/20/dev-dc/</loc>
+<lastmod>2016-02-20T14:17:28+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/01/24/develop-quality/</loc>
+<lastmod>2016-01-24T11:44:37+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/01/19/do-die/</loc>
+<lastmod>2016-01-19T09:21:19+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2016/01/05/dev-micro/</loc>
+<lastmod>2016-01-05T10:08:59+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/12/31/developing-domain/</loc>
+<lastmod>2015-12-31T09:54:24+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/12/24/3direct/</loc>
+<lastmod>2015-12-24T13:25:20+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/12/23/md/</loc>
+<lastmod>2015-12-23T16:31:35+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/12/15/micro2/</loc>
+<lastmod>2015-12-15T15:16:01+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/12/01/micro/</loc>
+<lastmod>2015-12-01T15:16:01+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/11/29/oc/</loc>
+<lastmod>2015-11-29T15:01:02+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/11/20/system-like/</loc>
+<lastmod>2015-11-20T10:39:55+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/11/17/togaf-adm/</loc>
+<lastmod>2015-11-17T00:05:18+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/11/07/togaf/</loc>
+<lastmod>2015-11-07T00:05:18+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/10/28/driving2/</loc>
+<lastmod>2015-10-28T09:06:49+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/10/26/method/</loc>
+<lastmod>2015-10-26T21:24:20+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/10/24/evolve/</loc>
+<lastmod>2015-10-24T17:21:53+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/10/09/driving/</loc>
+<lastmod>2015-10-09T21:31:05+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/10/04/process/</loc>
+<lastmod>2015-10-04T10:25:03+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/10/02/techstack/</loc>
+<lastmod>2015-10-02T22:46:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/09/27/nocoolcode/</loc>
+<lastmod>2015-09-27T16:51:48+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/09/25/fakecode/</loc>
+<lastmod>2015-09-25T20:51:27+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/08/13/scenario/</loc>
+<lastmod>2015-08-13T15:15:34+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/08/04/said-xueren4/</loc>
+<lastmod>2015-08-04T21:10:16+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/07/29/3words/</loc>
+<lastmod>2015-07-29T10:21:30+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/07/28/typo/</loc>
+<lastmod>2015-07-28T16:41:56+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/07/25/questions/</loc>
+<lastmod>2015-07-25T09:57:11+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/06/28/monolithf/</loc>
+<lastmod>2015-06-28T16:58:26+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/06/07/cloud6/</loc>
+<lastmod>2015-06-07T11:15:31+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/06/07/cloud5/</loc>
+<lastmod>2015-06-07T11:15:31+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/06/02/cloud4/</loc>
+<lastmod>2015-06-02T11:15:31+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/05/29/cloud3/</loc>
+<lastmod>2015-05-29T11:15:31+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/05/23/cloud2/</loc>
+<lastmod>2015-05-23T11:15:31+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/05/23/cloud/</loc>
+<lastmod>2015-05-23T11:15:31+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/04/25/chief-programmer/</loc>
+<lastmod>2015-04-25T13:40:12+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/04/10/resilient3/</loc>
+<lastmod>2015-04-10T10:18:14+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/04/10/resilient2/</loc>
+<lastmod>2015-04-10T10:18:14+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/04/09/service/</loc>
+<lastmod>2015-04-09T11:11:07+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/04/09/resilient/</loc>
+<lastmod>2015-04-09T10:18:14+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/04/02/move/</loc>
+<lastmod>2015-04-02T10:48:27+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2015/03/17/pped2kLinks/</loc>
+<lastmod>2015-03-17T10:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/08/02/pkc/</loc>
+<lastmod>2014-08-02T16:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/08/02/pkc0/</loc>
+<lastmod>2014-08-02T14:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/16/feature/</loc>
+<lastmod>2014-06-16T21:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/16/3d/</loc>
+<lastmod>2014-06-16T20:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/11/refactory2/</loc>
+<lastmod>2014-06-11T20:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/09/refactory/</loc>
+<lastmod>2014-06-09T20:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/07/view3/</loc>
+<lastmod>2014-06-07T18:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/07/structure/</loc>
+<lastmod>2014-06-07T17:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/06/view2/</loc>
+<lastmod>2014-06-06T18:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/05/view/</loc>
+<lastmod>2014-06-05T20:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/05/social/</loc>
+<lastmod>2014-06-05T16:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/06/04/time/</loc>
+<lastmod>2014-06-04T16:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/05/28/huidu/</loc>
+<lastmod>2014-05-28T20:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/05/26/quality/</loc>
+<lastmod>2014-05-26T20:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/04/24/aa4/</loc>
+<lastmod>2014-04-24T17:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/04/24/aa3/</loc>
+<lastmod>2014-04-24T16:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/04/20/series/</loc>
+<lastmod>2014-04-20T23:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/04/20/xiaowanyier/</loc>
+<lastmod>2014-04-20T23:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/04/12/said-xueren4/</loc>
+<lastmod>2014-04-12T23:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/04/07/aa25/</loc>
+<lastmod>2014-04-07T16:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/04/03/aa2/</loc>
+<lastmod>2014-04-03T23:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/03/31/aa1/</loc>
+<lastmod>2014-03-31T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/03/31/aa/</loc>
+<lastmod>2014-03-31T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/03/30/said-xueren3/</loc>
+<lastmod>2014-03-30T15:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/03/22/new-blog-site/</loc>
+<lastmod>2014-03-22T20:15:27+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/03/20/wa/</loc>
+<lastmod>2014-03-20T20:06:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/03/09/said-jiagoushi/</loc>
+<lastmod>2014-03-09T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/03/03/said-yuya/</loc>
+<lastmod>2014-03-03T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/02/15/said-shouduan/</loc>
+<lastmod>2014-02-15T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/02/15/said-xueren2/</loc>
+<lastmod>2014-02-15T15:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2014/02/15/said-xueren1/</loc>
+<lastmod>2014-02-15T15:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/09/02/dsl-post/</loc>
+<lastmod>2013-09-02T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/09/01/dsl3/</loc>
+<lastmod>2013-09-01T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/09/01/dsl2/</loc>
+<lastmod>2013-09-01T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/09/01/dsl1/</loc>
+<lastmod>2013-09-01T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/08/20/distribute-saying/</loc>
+<lastmod>2013-08-20T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/02/25/our-new-front-end/</loc>
+<lastmod>2013-02-25T21:27:49+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/01/23/wd-download-machine/</loc>
+<lastmod>2013-01-23T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/01/23/code/</loc>
+<lastmod>2013-01-23T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2013/01/01/said-20130101/</loc>
+<lastmod>2013-01-01T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2012/12/05/said-20121205/</loc>
+<lastmod>2012-12-05T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2012/12/03/said-20121203/</loc>
+<lastmod>2012-12-03T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2012/10/29/rest2/</loc>
+<lastmod>2012-10-29T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2012/10/25/rest/</loc>
+<lastmod>2012-10-25T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2012/07/10/said-20120710/</loc>
+<lastmod>2012-07-10T21:36:38+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android3/</loc>
+<lastmod>2011-11-14T17:04:04+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android/</loc>
+<lastmod>2011-11-14T16:04:04+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/2011/11/14/scala-on-android2/</loc>
+<lastmod>2011-11-14T15:04:04+08:00</lastmod>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/attachment/app-diff.html</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/filter/filter.html</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/archives/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/pp/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/resume/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/scala/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/android/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/jia-gou/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/rest/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/kai-fa/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/chan-pin/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/ge-ren/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/dsl/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/she-ji/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/mo-shi/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/min-jie/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/guo-cheng/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/octopress/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/zhi-liang/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/gong-ju/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/zhong-gou/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/can-kao/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/fan-yi/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/yun/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/wei-fu-wu/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/togaf/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/ling-yu/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/guan-li/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/shi-shi/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/si-wei/</loc>
+</url>
 </urlset>
