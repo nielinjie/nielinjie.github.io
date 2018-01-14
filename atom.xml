@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2017-12-14T22:59:45+08:00</updated>
+  <updated>2018-01-14T17:30:08+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[“驱动者”说]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/01/14/driver/"/>
+    <updated>2018-01-14T23:16:37+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/01/14/driver</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
+    <category term="/思维"/>
+    
+    <content type="html">
+      <![CDATA[<p>之前<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>谈到“驱动”这个概念。说“驱动”讲的是拆分问题的单位，现在尝试讨论下，什么样的东西，适合用来作为这个驱动者，也就是说，什么样的东西，适合用来拆分问题。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2018/01/14/driver/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[“驱动”与“面向”]]></title>
@@ -456,30 +482,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一帮成功的微服务]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/04/13/good-ms/"/>
-    <updated>2016-04-13T13:39:21+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/04/13/good-ms</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/微服务"/>
-    
-    <content type="html">
-      <![CDATA[<p>一帮（可能比较）成功的微服务<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。Enjoy 😂</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/04/13/good-ms/">Read on &rarr;</a>
         </p>
       
       ]]>
