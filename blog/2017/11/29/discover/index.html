@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>发现 - 聂同学</title>
+  <meta name="author" content="nielinjie">
+  
+  <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
+  <meta name="keywords" content="聂同学, 架构师, 架构, 开发, 敏捷, 实践, 思考, 程序员">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2017/11/29/discover">
+  <!-- <link href="/favicon.png" rel="icon"> -->
+
+
+
+
+  <!-- ****** faviconit.com favicons ****** -->
+  	<link rel="shortcut icon" href="/favicon/favicon.ico">
+  	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon/favicon.ico">
+  	<link rel="icon" type="image/png" sizes="196x196" href="/favicon/favicon-192.png">
+  	<link rel="icon" type="image/png" sizes="160x160" href="/favicon/favicon-160.png">
+  	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96.png">
+  	<link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64.png">
+  	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+  	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16.png">
+  	<link rel="apple-touch-icon" href="/favicon/favicon-57.png">
+  	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/favicon-114.png">
+  	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/favicon-72.png">
+  	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/favicon-144.png">
+  	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/favicon-60.png">
+  	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/favicon-120.png">
+  	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/favicon-76.png">
+  	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/favicon-152.png">
+  	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180.png">
+  	<meta name="msapplication-TileColor" content="#FFFFFF">
+  	<meta name="msapplication-TileImage" content="/favicon/favicon-144.png">
+  	<meta name="msapplication-config" content="/browserconfig.xml">
+  	<!-- ****** faviconit.com favicons ****** -->
+
+
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+
+
+
+<script src="/javascripts/libs/d3.min.js" charset="utf-8"></script>
+<script src="/javascripts/d3.tip.v0.6.3.js" charset="utf-8"></script>
+
+<script src="/javascripts/underscore-min.js" charset="utf-8"></script>
+<script src="/javascripts/queryString.js" charset="utf-8"></script>
+<script src="/site.json.js" charset="utf-8"></script>
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">聂同学</a></h1>
+  
+    <h2>一个程序员和架构师的实践与思考</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">发现</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2017-11-29T19:01:41+08:00"  data-updated="true">2017-11-29</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>最近在做一个“架构Review”的事，指的是对他人开发/迭代的系统进行架构方面的检查，以期发现问题/风险（并应对之）。</p>
+
+<p>发现，是比较难工程化的一类事务，依赖个人的经验和灵感。尝试做一个结构化的分析 -</p>
+
+<p>发现就是：（从xx范围中）识别符合xx条件的元素或特征。</p>
+
+<ol>
+<li>之所以“从xx范围”在括号里，是因为很多时候这个范围不是显性的，需要我们先定义出来。</li>
+<li>“范围”常见的有两种 - 一种是元素的集合，其中的元素是可列的。另一种描述的是元素所在的空间。</li>
+<li>元素</li>
+</ol>
+
+
+<p>与之相似的一件事是“搜索”。相对于“发现”，搜索就比较机械，过程比较清楚。我们以搜索为基础来探讨发现的一般过程。</p>
+
+<p>我们尝试设计“发现”类事务的一般过程 -</p>
+
+<ol>
+<li>定义范围，如果没有给定的话。</li>
+<li>遍历范围</li>
+<li>对于范围中的每个点，识别其中的元素，判断是否符合条件。</li>
+</ol>
+
+</div>
+
+
+        <footer>
+            <p class="meta">
+                
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+
+                
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2017-11-29T19:01:41+08:00"  data-updated="true">2017-11-29</time>
+                
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jia-gou/'>架构</a>
+  
+</span>
+
+
+            </p>
+
+
+            <p/>
+            <section>
+                
+  
+
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+    var ss=series()
+    var sers=$("div.post-series").attr("data-series")
+    sers = sers?sers.split(","):[]
+    sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
+      var name=s.split(" ")[0]
+      var index=s.split(" ")[1]
+      return ss.filter(function(ser){
+        return ser.name==name
+      })
+    }).value()
+    _(sers).each(function(s){
+      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      _(s).each(function(sOfP){
+        p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
+      })
+    })
+  })()
+</script>
+
+            </section>
+
+            
+                <section>
+<h2>Sharing</h2>
+
+
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</section>
+
+            
+
+        </footer>
+    </article>
+
+    
+    <section imagesd="comment">
+        <h2>Add a comment</h2>
+        <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2131592"></script>
+<!-- UY END -->
+
+    </section>
+    
+
+</div>
+
+<aside class="sidebar">
+    
+    <section>
+  <h1>About Me</h1>
+  <a href="/resume/"><img id="photo" src="/images/me/photo.jpg"/></a>
+
+    <ul>
+        <li><a href="/resume/">应用架构负责人</a> @
+            <a href="http://www.keruyun.com" target="_blank">客如云</a>
+        </li>
+      <li><a href="/resume/">应用架构专家</a> @
+          <a href="http://baike.baidu.com/view/14415363.htm" target="_blank">平安科技</a>
+      </li>
+      <li><a href="/resume/">Solution Architect</a> @
+          <a href="http://baike.baidu.com/view/4420120.htm" target="_blank">花旗软件</a>
+      </li>
+      <li><a href="mailto:nielinjie@gmail.com">nielinjie@gmail.com</a></li>
+      <li>
+        <div class="qcode">
+        <img src="/images/me/nietongxue.png" style="width:60px">
+        <div class="label">个人网站</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/weixin.jpg" style="width:60px">
+        <div class="label">微信</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/weibo.png" style="width:60px">
+        <div class="label">微博</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/linkedin.PNG" style="width:60px">
+        <div class="label">LinkedIn</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/chitu.PNG" style="width:60px">
+        <div class="label">赤兔</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/maimai.jpg" style="width:60px">
+        <div class="label">脉脉</div>
+        </div>
+
+      </li>
+    </ul>
+</section>
+
+  <link href="/stylesheets/cal-heatmap.css" rel="stylesheet" type="text/css"/>
+
+<script src="/javascripts/libs/cal-heatmap.min.js"></script>
+<style>
+  #cal-pre {
+      cursor:pointer;
+      font-size:1.5em;
+  }
+  #cal-next {
+      cursor:pointer;
+      font-size:1.5em;
+
+  }
+</style>
+<section class="calendar-section">
+  <h1>Calendar</h1>
+<div id="cal-heatmap"></div>
+<span id="cal-pre">←</span><span id="cal-next">→</span><br/>
+
+</section>
+
+<script type="text/javascript">
+(function(){
+  function timestamp(date){
+    return new Date(date).getTime()/1000
+  }
+  function datas(){
+    return _(window.site.posts).chain().countBy(function(p){
+      return timestamp(p.date)
+    }).value()
+  }
+
+  var calendar = new CalHeatMap();
+    calendar.init({
+        data: datas(),
+        //start: new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        start:new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        domain: "month",
+        displayLegend: false,
+        subDomain: "day",
+        range: 4,
+        nextSelector: "#cal-next",
+        previousSelector: "#cal-pre",
+        legend: [1, 2,3,4,5],
+        onClick:function(date,nb){
+          var url="/blog/filter/filter.html"
+          window.location.href=buildUrl(url,{filterName:"week",filterValue:date,filterDes:"Calendar: Week from "+date.toLocaleDateString()})
+        }
+    });
+})()
+
+</script>
+<section class="series">
+  <h1>Series</h1>
+  <ul class="series"></ul>
+</section>
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+
+    var sers=_(series()).chain().groupBy("name").value()
+    _(sers).each(function(v,k){
+      var url="/blog/filter/filter.html"
+      var u = buildUrl(url,{filterName:"series",filterValue:k,filterDes:"Series: "+k})
+      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+" ("+v.length+")")))
+    })
+  })()
+</script>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (95)</a></li><li><a href='/blog/categories/fang-fa-lun'>方法论 (20)</a></li><li><a href='/blog/categories/guo-cheng'>过程 (20)</a></li><li><a href='/blog/categories/kai-fa'>开发 (13)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (10)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (10)</a></li><li><a href='/blog/categories/she-ji'>设计 (9)</a></li><li><a href='/blog/categories/ling-yu'>领域 (8)</a></li><li><a href='/blog/categories/wei-fu-wu'>微服务 (7)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (6)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/si-wei'>思维 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>dsl (5)</a></li><li><a href='/blog/categories/chan-pin'>产品 (5)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/fen-bu-shi'>分布式 (4)</a></li><li><a href='/blog/categories/scala'>scala (3)</a></li><li><a href='/blog/categories/rest'>rest (3)</a></li><li><a href='/blog/categories/android'>android (3)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/mo-shi'>模式 (2)</a></li><li><a href='/blog/categories/shi-shi'>时事 (2)</a></li><li><a href='/blog/categories/guan-li'>管理 (2)</a></li><li><a href='/blog/categories/togaf'>togaf (2)</a></li><li><a href='/blog/categories/ling-yu-qu-dong'>领域驱动 (1)</a></li><li><a href='/blog/categories/ke-huan'>科幻 (1)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li></ul>
+</section>
+<section>
+  <h1>Links</h1>
+
+    <ul>
+        <!-- <li><a href="http://www.gengyuan.xyz">耕远工作室</a>
+        </li> -->
+
+    </ul>
+</section>
+
+    
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo">
+<p>
+  Copyright &copy; 2018 - nielinjie -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1275367e1683bb7323263bc0c06163a0' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=320040675796358319' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

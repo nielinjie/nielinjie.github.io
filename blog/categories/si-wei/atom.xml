@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 思维 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/si-wei/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-20T17:48:48+08:00</updated>
+  <updated>2018-01-20T18:15:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -84,6 +84,92 @@
 <p>类似的观点在之前的博文中已有谈及，但没有明确谈为什么用“驱动”这个词。——<a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%8A%80%E6%9C%AF&amp;filterDes=Series%3A%20%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%8A%80%E6%9C%AF">《架构设计过程的驱动技术》</a>、 <a href="/blog/2016/08/14/question2/">《问题空间与解空间》</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p><a href="/blog/2016/08/14/question2/">《问题空间与解空间》</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linus的代码与数据结构]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/06/03/code-data/"/>
+    <updated>2017-06-03T15:39:24+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/06/03/code-data</id>
+    <content type="html"><![CDATA[<p>Linus说： &ldquo;烂程序员关心的是代码。好程序员关心的是数据结构和它们之间的关系。&rdquo;</p>
+
+<!-- more-->
+
+
+<p>代码体现的是过程。数据结构（和它们之间的关系）体现的是实体。</p>
+
+<p>这里讲的过程和实体，都是模型，是人类思维对现实世界认知进而处理的手段。</p>
+
+<p>相比较而言，人类对实体的掌握，似乎要优于对过程。我们觉得实体比过程更直观和易处理。</p>
+
+<p>所以面对复杂和大规模的过程，人们借助实体，来增强认知和处理能力 -</p>
+
+<ol>
+<li>一方面，我们借助实体，对过程做分割和组合。比如卖个东西，是个复杂的过程，我们借助订单、出库单、送货单等实体，把这个过程分解为相互配合的多个过程，通过分解降低了过程的复杂性。</li>
+<li>另一个方面，我们借助实体，对过程作记录和可视。比如用账目来记录经营过程，用看板来可视化生产。虽然没有直接降低复杂性，但帮助了认知和理解。</li>
+</ol>
+
+
+<p>以上来看，实体是我们对付世界的首选武器，即使不得不处理过程，我们也人为地引入实体来帮忙。</p>
+
+<p>回到Linus的话，说代码与数据结构，实际上说的是程序员如何建模设计的问题。我理解Linus的意见是，多用实体，辅助过程，符合人类思维模式，是聪明的选择。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[技术的对面]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/12/23/tech/"/>
+    <updated>2016-12-23T09:13:54+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/12/23/tech</id>
+    <content type="html"><![CDATA[<p>“技术”的对面是“策略”，不是“应用”、“方法”，不是“思想”、“道”，也不是“艺术”或“诗歌”。</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[与复杂同行（一）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/12/11/complex/"/>
+    <updated>2016-12-11T13:21:04+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/12/11/complex</id>
+    <content type="html"><![CDATA[<p><strong>复杂性平方律</strong></p>
+
+<blockquote><p>系统的复杂性正比于系统规模的平方</p></blockquote>
+
+<p>一、系统的复杂性不仅由节点的数量（即“规模”）带来，更多的是由节点间的关系（包括没有关系）带来。<!--more-->
+这也就是复杂性平方律的原因。系统的复杂性正比于节点数的平方，因为节点间的连接数正比于节点数的平方。
+我们假设节点和连接的复杂度都为1，比如下图所示的系统，总复杂度为14。</p>
+
+<p><img src="/images/complex/complex1.png" width="300"></p>
+
+<p>二、尝试分拆系统。节点被分拆到两个不同的空间，出现了跨空间的连接，这些连接通常成本相对高，带来了相当多额外复杂度。
+所以简单的分割不一定能带来复杂性的改善。
+我们假设跨空间连接的复杂度为k，则两个空间的复杂度分别为7+4k、3+4k，要使分拆后复杂度降低，对k的要求很高 -</p>
+
+<blockquote><p>  7 + 4k &lt; 14 => k &lt; 1.75</p>
+
+<p>  3 + 4k &lt; 14 => k &lt; 2.75</p></blockquote>
+
+<p><img src="/images/complex/complex2.png" width="300"></p>
+
+<p>三、增加一些节点和连接（方块节点和虚线连接）来改变跨空间连接。
+由于方块节点和虚线连接通常是一些技术性的代理元素，不用承载领域内容。它们的复杂性通常小于普通元素。这里我们仍然按1来计算。
+同样计算对k的要求，发现降低了很多。</p>
+
+<blockquote><p>11+ k &lt; 14 => k &lt; 3</p>
+
+<p>6 + k &lt; 14 => k &lt; 8</p></blockquote>
+
+<p><img src="/images/complex/complex3.png" width="300"></p>
+
+<p>（待续） <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>前方坑大。管挖不管填。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-20T17:48:48+08:00</updated>
+  <updated>2018-01-20T18:15:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -143,6 +143,37 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[发现]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2017/11/29/discover/"/>
+    <updated>2017-11-29T19:01:41+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2017/11/29/discover</id>
+    <content type="html"><![CDATA[<p>最近在做一个“架构Review”的事，指的是对他人开发/迭代的系统进行架构方面的检查，以期发现问题/风险（并应对之）。</p>
+
+<p>发现，是比较难工程化的一类事务，依赖个人的经验和灵感。尝试做一个结构化的分析 -</p>
+
+<p>发现就是：（从xx范围中）识别符合xx条件的元素或特征。</p>
+
+<ol>
+<li>之所以“从xx范围”在括号里，是因为很多时候这个范围不是显性的，需要我们先定义出来。</li>
+<li>“范围”常见的有两种 - 一种是元素的集合，其中的元素是可列的。另一种描述的是元素所在的空间。</li>
+<li>元素</li>
+</ol>
+
+
+<p>与之相似的一件事是“搜索”。相对于“发现”，搜索就比较机械，过程比较清楚。我们以搜索为基础来探讨发现的一般过程。</p>
+
+<p>我们尝试设计“发现”类事务的一般过程 -</p>
+
+<ol>
+<li>定义范围，如果没有给定的话。</li>
+<li>遍历范围</li>
+<li>对于范围中的每个点，识别其中的元素，判断是否符合条件。</li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[涌现中的架构（三）]]></title>
     <link href="http://www.nietongxue.xyz/blog/2017/06/25/emergence3/"/>
     <updated>2017-06-25T12:56:59+08:00</updated>
@@ -159,41 +190,6 @@
 <ol>
 <li id="fn:1">
 <p>见之前的博文：<a href="/blog/2016/05/02/3h/">团队发展的三要素</a>。这个博文的视角更多的还是在团队的内部。在全局、跨团队的视角上，三个要素有一些变化。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[微服务划分：按业务能力 vs 按子域]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2017/06/11/ms-split/"/>
-    <updated>2017-06-11T16:15:44+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2017/06/11/ms-split</id>
-    <content type="html"><![CDATA[<p>微服务的划分方法，常见的是两种，按业务能力和按子域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。<!-- more--></p>
-
-<p>“子域”，就是DDD中的"子域"。</p>
-
-<p>“业务能力”，是一个专用名词，指的是一个连续的业务过程，其中不需要中断，也不需要别的业务过程的参与。这些业务过程自然组织起来，比如首尾相连，或者，由用户参与来自然连接。</p>
-
-<p>两种不同的服务划分风格，反映了对业务本身的不同的描述与划分的风格。</p>
-
-<p>比较形象地讲，按子域划分，就是把业务划成一块一块的。按业务能力划分，就是把业务划成一段一段的。一块一块的，描述业务概念和它们之间的关系。一段一段的，描述业务执行的步骤和过程。</p>
-
-<p>按业务能力划分的优势主要在运行时。各个服务的运行时依赖被尽量减少。在服务性能、可用性方面不会相互牵绊，可以做到最好。</p>
-
-<p>而按子域划分的优势主要在设计时和演进时。有利于应对业务的规模发展、复杂性增加和分别演进。</p>
-
-<p>这样看来，按业务能力划分的微服务是不是类似于一种事务脚本？只不过它的粒度更大，以服务为单元？</p>
-
-<p>是时候又贴出这张图，事务脚本的优势与劣势在图里体现得很明显，按业务能力划分的微服务，是否有同样的优势与劣势？</p>
-
-<p><img src="http://www.nietongxue.xyz/images/domain/domain.gif" width="80%"/></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>有的观点，认为两种划分可以根据不同的情况进行选择。而有的观点，认为应该这样划分而不要那样划分。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

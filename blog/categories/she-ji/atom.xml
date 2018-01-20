@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 设计 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/she-ji/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-20T17:48:48+08:00</updated>
+  <updated>2018-01-20T18:15:42+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -89,6 +89,123 @@
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[分布式事务，也谈]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/19/transaction/"/>
+    <updated>2016-09-19T17:16:43+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/19/transaction</id>
+    <content type="html"><![CDATA[<p>近来有挺多文章谈“分布式事务”。
+这些文章主要是从实现模式角度来谈的。比如常见的模式有哪些，哪些个模式适合哪种场景，有什么优点缺点，根据什么选择等等。<!--more-->
+比如附图的这个红绿灯图，是其中的优秀代表。很有指导作用。</p>
+
+<p>这个“也谈”<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>不重复这些，从其他角度谈一些认识。</p>
+
+<h3>一</h3>
+
+<p>“分布式事务”到底是什么<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>？</p>
+
+<ol>
+<li>“分布式事务”本质上是对一个过程进行管理。</li>
+<li>这个过程由一些操作构成，特别是由一些有状况<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>的操作构成。</li>
+<li>管理者的职责是可控地调用这些操作。特别是当某些操作出现状况时，做出决策和处置。</li>
+</ol>
+
+
+<h3>二</h3>
+
+<p>为了完成管理的职责，管理者必须清楚所有操作的两方面特性：一方面，操作的状况如何获知（包括是否需要获知）。另一方面，在特定状况下，可以对操作进行何种处置。比如 -</p>
+
+<ul>
+<li>成功/失败 - 一般操作有这两种基本状况。但并不一定限于此两种。</li>
+<li>超时 - 常见操作状况的一种，一般等于是状况未知。</li>
+<li>回查 - 回查是获取操作状况的手段，即向操作提供者查询某笔操作是否成功。是否可回查，是操作的特性。</li>
+<li>重试 - 处置的一种，即再次尝试。是否可重试，是操作的特性。</li>
+<li>幂等 - 操作的特性，是可重试中的一种情况。</li>
+<li>补偿 - 处置的一种，是对操作进行撤销的一种办法。</li>
+<li>……</li>
+</ul>
+
+
+<h3>三</h3>
+
+<p>根据操作的特性，当某些操作出现状况时，管理者可以决策和处置所有操作。决策和处置的规则，是管理者的核心知识，比如体现为决策表格 -</p>
+
+<table>
+<thead>
+<tr>
+<th> 操作A状况 </th>
+<th> 操作B状况 </th>
+<th> 处置策略      </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 成功    </td>
+<td> 失败    </td>
+<td> 操作A撤销     </td>
+</tr>
+<tr>
+<td> 未知    </td>
+<td> （未尝试） </td>
+<td> 重试操作A     </td>
+</tr>
+<tr>
+<td> 成功    </td>
+<td> 未知    </td>
+<td> 回查操作B     </td>
+</tr>
+<tr>
+<td> 成功    </td>
+<td> 繁忙    </td>
+<td> 等待时间t后重试B </td>
+</tr>
+<tr>
+<td> 成功    </td>
+<td> 已排队   </td>
+<td> 等待时间t后回查B </td>
+</tr>
+<tr>
+<td> ……    </td>
+<td> ……    </td>
+<td> ……        </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>四</h3>
+
+<p>所有常见的实现模式（比如附图的原文所列举的），都是对上述要点的实现，从不同的方面做了特殊化。-</p>
+
+<ol>
+<li>Saga模式 - 比较一般的模型。但仍然有一些特殊要求。比如操作都有反操作。</li>
+<li>补偿模式 - 特殊而简化的模型，一般用于处理按顺序执行的系列操作，一旦某个操作失败，对已经成功的操作全部进行补偿。</li>
+<li>TCC模式 - 特殊模型，可以做到在事务过程中外界对操作不可见，也就是做到“隔离性”，但这个特性并不是由操作的管理者带来的，而是由操作的提供者带来的。通过将一个普通的业务操作分拆为相关联的两个，操作提供者实现了操作对外部的不可见。两个操作之间需要一个状态的维护。</li>
+<li>可靠事件模式 - 特殊模型，该模式重点不在管理，而在管理者调用操作的途径。这个途径的特点是底层机制决定了管理者可以假定操作总会成功（或者说就当它都成功了）。所以对过程的管理就可以比较简单了。管理者不再需要处理操作状况的可知、操作的重试、撤销等问题。</li>
+<li>两段、三段提交模式 - 不谈了。</li>
+</ol>
+
+
+<p>（<a href="/blog/2016/09/26/transaction2/">下一篇</a>，谈一谈实现模型）</p>
+
+<p><img src="/images/transaction/transaction.jpg" width="500"></p>
+
+<p>原文：<a href="http://www.open-open.com/lib/view/open1473404638516.html">分布式事务：不过是在一致性、吞吐量和复杂度之间，做一个选择</a></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>强行音译为Yet Another，嗯，听起来还蛮像的。😂<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>貌似通篇也适合“不分布”式事务。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>“状况”，我自己选择的词汇，区别于“结果”，比如1+1的操作，2（或者3）是“结果”，做完了或者没做完或者不愿意做是“状况”。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[给老爷爷系统（八）：特征机制]]></title>
     <link href="http://www.nietongxue.xyz/blog/2014/06/16/feature/"/>
     <updated>2014-06-16T21:06:38+08:00</updated>
@@ -149,88 +266,6 @@
 <li>层次：元素与另一些元素区别的意义取决于观察的角度。</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[一场似非而是的DSL（后传）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2013/09/02/dsl-post/"/>
-    <updated>2013-09-02T21:36:38+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2013/09/02/dsl-post</id>
-    <content type="html"><![CDATA[<p>这是后传，不是正传，主要写设计结果和实现的一些细节，不喜请无视。</p>
-
-<!-- more -->
-
-
-<p>DSL的一个片段如最后的代码所示，基本上满足了我们的要求——</p>
-
-<ul>
-<li>片段完整地描述了一个特征，包括扩展点、扩展等等各方面的信息。实例中，<code>dynamicProperty</code>、<code>show</code>、<code>mail</code>是三个不同的扩展点，大括号里面的内容是当某个业务差异时填入扩展点的具体扩展逻辑。而这个业务差异，由<code>condition</code>描述。</li>
-<li>不存在片段中和片段间来回引用穿梭等影响阅读完整性的问题。</li>
-<li>不同方面的内容描述形式一致。比如动态属性dynamicProperty和邮件策略mail是不同的特征，背后的业务知识是很不同的，但这里体现为统一的描述形式。</li>
-<li>聚焦于业务概念，噪音很少。这个片段看上去，除了表示范围的大小括号外，基本上全部是业务概念。</li>
-</ul>
-
-
-<p>讲一些实现细节——</p>
-
-<ul>
-<li>DSL的实现基于Groovy的<code>ObjectGraphBuilder</code>。</li>
-<li>示例代码中的<code>dsl</code>就是<code>ObjectGraphBuilder</code>的一个实例，<code>requirement</code>构建顶层的bean。</li>
-<li>类似于<code>requirement{}</code>以及内嵌的<code>dynamicProperty{…}</code>都是一些普通的groovy方法调用，通过groovy的动态调用机制赋予这次调用一些逻辑，以<code>dynamictProperty</code>为例：
-
-<ul>
-<li>实例化一个类，根据方法名计算这个类的类名。这个例子里就是类<code>DynamicProperty</code>。</li>
-<li>将这个实例set到上级bean的适当属性上，这个属性也是根据方法的名字计算得到的。这个例子就是属性<code>dynamicProperty</code>。</li>
-</ul>
-</li>
-<li>上述的根据方法名计算类名和属性的办法是<code>ObjectGraphBuilder</code>原生的，比较简陋，需要做一些定制，<code>ObjectGraphBuilder</code>提供了定制的接口，分别是<code>ClassNameResolver</code>和<code>RelationNameResolver</code>。我们对简单的计算办法做了补充：
-
-<ul>
-<li>类名搜寻策略，原生的计算只有硬匹配，就是只能设置一个包名，每个方法名直接加在包名后面就得出类名。这个策略在我们这里完全行不通，因为我们这里的很多类，不是固定在某个已知的包里面的，比如扩展和扩展点，这些类是具体的，类名来自于具体逻辑所在的包，散布在整个系统。对此我们引入了类名搜索机制，在整个系统的包空间搜索需要的类。另外一方面，我们借助reflection，从上层bean的属性类型，得到需要的类。</li>
-<li>属性搜寻策略，在原生的名字匹配的基础上，我们结合类型匹配，也就是根据类名对应策略得到的类名反过来匹配上层bean的属性类型，找到这个属性。比如<code>dynamicProperty</code>这个方法，上层的bean是没有一个叫“dynamicProperty”的属性的，但有个<code>Feature</code>类型的属性。<code>dynamicProperty</code>方法实例化<code>DynamicProperty</code>类，它是<code>Feature</code>的子类，可以匹配。</li>
-<li>上述两个搜索策略都考虑了集合属性的情况，名字经过简单地单复数转化，读取类型时通过泛型的集合的参数类型读取。</li>
-<li>有一种特殊情况，搜寻类名和搜寻属性的策略会相互影响，我们希望有一种特殊的策略能把两个搜索过程独立开。我们约定一种特殊的方法名字形式：<code>propertya$classb</code>，这样我们根据<code>propertya</code>计算属性，<code>classb</code>计算类名。更特殊的情况比如代码中的<code>$selectorRenderer</code>，只计算类名不计算属性，表示这里只实例化bean，不做上层bean的属性设置。这中特殊策略为DSL的编写带来了方便，但其实不是一种业务策略，在DSL的角度看来其实是一种噪音，我们尽量避免使用。</li>
-</ul>
-</li>
-<li>相关的代码不多，已经放到github，供参考。<a href="https://github.com/nielinjie/dslOGB">https://github.com/nielinjie/dslOGB</a>。其中用于扫描classpath的依赖包<code>com.google.classpath</code>来自于介里：<a href="https://code.google.com/p/classpath-explorer/">https://code.google.com/p/classpath-explorer/</a>。</li>
-</ul>
-
-
-<p>代码：</p>
-
-<pre><code>dsl.requirement{
-    name('isStock')
-    description('是否关联交易')
-    condition(exp:'(owner.sortId==1 || owner.sortId==11 ) &amp;&amp; owner.taskComp.contains("PA002")')
-    dynamicProperty{
-        name('isStockTrade')
-        cName('关联交易')
-        type(java.lang.String.class)
-        stringValidator()
-        stringEditor()
-        maxLength(10)
-        minLength(1)
-        isRequired(true)
-        defaultValue(true)
-        renderMap(key:'writable',value:$selectorRenderer())
-        renderMap(key:'readOnly')
-        activeEvent{
-            change('var ....')
-        }
-    }
-
-    show{
-        flag(function:'submitTask',flag:'writable')
-        flag(function:'approval',flag:'readOnly')
-    }
-
-    mail{
-        handleMap(key:'New_Submit',value:'mailHandle')
-        handleMap(key:'Edit_Submit',value:'mailHandle')
-    }
-}
-</code></pre>
 ]]></content>
   </entry>
   

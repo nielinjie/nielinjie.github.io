@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 分布式 | 聂同学]]></title>
+  <link href="http://www.nietongxue.xyz/blog/categories/fen-bu-shi/atom.xml" rel="self"/>
+  <link href="http://www.nietongxue.xyz/"/>
+  <updated>2018-01-20T18:15:42+08:00</updated>
+  <id>http://www.nietongxue.xyz/</id>
+  <author>
+    <name><![CDATA[nielinjie]]></name>
+    <email><![CDATA[nielinjie@gmail.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（番外）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/10/07/process/"/>
+    <updated>2016-10-07T14:29:52+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/10/07/process</id>
+    <content type="html"><![CDATA[<h3>过程管理，一个基础模式？</h3>
+
+<p>系列中<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>提到，事务管理，实质是一个过程管理。</p>
+
+<!--more-->
+
+
+<p>包括事务管理，过程管理还出现在多个常见的场景中，比如 -</p>
+
+<ul>
+<li>事务管理 - 负责管理各个相关联的操作，对他们的“状况“做出决策应对。</li>
+<li>服务编排 - 负责将小粒度和职责单一的服务组合为复杂的业务过程。</li>
+<li>协调异步 - 负责异步操作之间的步调协调工作。</li>
+<li>交互串联 - 负责将多个业务步骤包装为一个用户友好的交互过程。</li>
+</ul>
+
+
+<p>这几个场景都是一个管理者在对一个过程进行管理。但在不同场景中管理者的职责不同 -</p>
+
+<ul>
+<li>事务管理 - 强调操作状况的可见、可控、可稽核。</li>
+<li>服务编排 - 强调服务间的依赖管理，服务结果的传递和收集。</li>
+<li>协调异步 - 强调操作间的步调协同，与同步的转化，处理等待，处理中间状态。</li>
+<li>交互串联 - 强调与用户的交互，比如处理中间状态的表现，过程中用户的干预等。</li>
+</ul>
+
+
+<p>根据系列中的研究，这些个过程管理都可以考虑实现为分层结构的状态机模型。</p>
+
+<p>这里有一个挑战：实际情况中一个管理组件很有可能兼职，很可能需要同时完成上述职责中的两三项。这种情况下，处理具体业务逻辑的最上层，就需要从各个职责各自的角度，对操作和决策进行描述，然后，如果能做到的话，把它们融合起来。</p>
+
+<p>（也许还有下一篇，研究下如何融合各个职责的操作和决策）</p>
+
+<p><img src="/images/transaction/process.png" width="500"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>系列 - <a href="/blog/2016/09/19/transaction/">分布式事务，也谈</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之三）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/10/06/transaction3/"/>
+    <updated>2016-10-06T00:43:57+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/10/06/transaction3</id>
+    <content type="html"><![CDATA[<p>继续谈实现模型。按抽象层次分层，设计为知识→操作多层结构，每个层针对不同层面的概念、逻辑和开发者。</p>
+
+<!--more-->
+
+
+<p>最上层为具体业务开发者需要关注的概念，实际上只包括：</p>
+
+<ol>
+<li>各个操作的特征，说明各个操作如何调用、可否回查、可否撤销等等。</li>
+<li>决策表中的具体规则。说明当某某状况发生时，采取某某处置。</li>
+</ol>
+
+
+<p>第二层为事务管理组件，负责组织前面提到的两层嵌套状态机。</p>
+
+<p>第三层和第四层，是两层嵌套状态机本身的实现。</p>
+
+<p><img src="/images/transaction/transaction3.png" width="500"></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈（之二）]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/26/transaction2/"/>
+    <updated>2016-09-26T16:08:48+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/26/transaction2</id>
+    <content type="html"><![CDATA[<p>如前一篇提到的 <sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，本篇谈一谈实现模型<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。</p>
+
+<!--more-->
+
+
+<p>过程管理常常被实现为一个状态机，这里顺着这个思路尝试一番。</p>
+
+<ol>
+<li>每个操作实现为一个状态机，称为“操作状态机”。</li>
+<li>使用一个外层状态机处理决策过程，实现决策表。称为“决策状态机”。</li>
+<li>操作状态机嵌入决策状态机，作为内嵌状态<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>。决策状态机和操作状态机分别是外层状态机和内层状态机。</li>
+<li>内层状态机对外层隐藏它自己能够独立处理的逻辑。仅向外暴露最终的对外<strong>状况</strong>和可以被外层<strong>处置</strong>的事件。</li>
+<li>逻辑在内外层之间的分配是最重要的一个权衡。如果内层逻辑太多则外层可以做的处置就太少，控制能力有限。如果内层逻辑太少，就将大量复杂性丢给外层，外层负担太重。这两种情况，层次结构都失效了。</li>
+<li>内外层之间通过事件沟通，内层产生的最终状况通过事件送达外层决策，外层决策做出的处置也通过事件操作内层。</li>
+<li>操作的撤销可以视为另一个操作，实现为一个独立的操作状态机。也可以与操作本身一起实现为同一个状态机。这是内外层的逻辑分布进行权衡的一个例子。</li>
+<li>决策表，是外层逻辑的核心，是一些规则的集合，规则的输入是各个操作的对外状况，输出是对各个操作的处置。<sup id="fnref:4"><a href="#fn:4" rel="footnote">4</a></sup></li>
+<li>决策逻辑可能会很复杂，比如有时候决策逻辑不仅依赖于当前输入，还会依赖于决策历史。此时需要权衡，可以把特别复杂和不太可能发生的情况留给人工解决。</li>
+<li>整个结构还可能继续嵌套，也就是说整个状态机可能还是更外层状态机的一个内嵌状态机。</li>
+<li>上述整个结构，是对应于一个事务的。处理多个事务，就是同时并存的多个状态机实例。</li>
+</ol>
+
+
+<p>（<a href="/blog/2016/10/06/transaction3/">下一篇</a>，继续谈实现模型）</p>
+
+<p>附图：</p>
+
+<p><img src="/images/transaction/transaction2.png" width="500"></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>本篇所有概念和名词都延续自<a href="/blog/2016/09/19/transaction/">前一篇</a>。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>此处并没有任何可以直接应用的结论或代码。“干货”并非是本博的主要内容，参见：<a href="/blog/2016/05/20/dry/">时事：干货</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>Wiki：<a href="https://en.wikipedia.org/wiki/UML_state_machine#Hierarchically_nested_states">Hierarchically_nested_states</a><a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+<li id="fn:4">
+<p>决策表的例子见<a href="/blog/2016/09/19/transaction/">前一篇</a>，但要注意，前一篇的例子中，对操作的处置是很细节的，在很多场景中不一定适合，如上面第5点讨论的。<a href="#fnref:4" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[分布式事务，也谈]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/09/19/transaction/"/>
+    <updated>2016-09-19T17:16:43+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/09/19/transaction</id>
+    <content type="html"><![CDATA[<p>近来有挺多文章谈“分布式事务”。
+这些文章主要是从实现模式角度来谈的。比如常见的模式有哪些，哪些个模式适合哪种场景，有什么优点缺点，根据什么选择等等。<!--more-->
+比如附图的这个红绿灯图，是其中的优秀代表。很有指导作用。</p>
+
+<p>这个“也谈”<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>不重复这些，从其他角度谈一些认识。</p>
+
+<h3>一</h3>
+
+<p>“分布式事务”到底是什么<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>？</p>
+
+<ol>
+<li>“分布式事务”本质上是对一个过程进行管理。</li>
+<li>这个过程由一些操作构成，特别是由一些有状况<sup id="fnref:3"><a href="#fn:3" rel="footnote">3</a></sup>的操作构成。</li>
+<li>管理者的职责是可控地调用这些操作。特别是当某些操作出现状况时，做出决策和处置。</li>
+</ol>
+
+
+<h3>二</h3>
+
+<p>为了完成管理的职责，管理者必须清楚所有操作的两方面特性：一方面，操作的状况如何获知（包括是否需要获知）。另一方面，在特定状况下，可以对操作进行何种处置。比如 -</p>
+
+<ul>
+<li>成功/失败 - 一般操作有这两种基本状况。但并不一定限于此两种。</li>
+<li>超时 - 常见操作状况的一种，一般等于是状况未知。</li>
+<li>回查 - 回查是获取操作状况的手段，即向操作提供者查询某笔操作是否成功。是否可回查，是操作的特性。</li>
+<li>重试 - 处置的一种，即再次尝试。是否可重试，是操作的特性。</li>
+<li>幂等 - 操作的特性，是可重试中的一种情况。</li>
+<li>补偿 - 处置的一种，是对操作进行撤销的一种办法。</li>
+<li>……</li>
+</ul>
+
+
+<h3>三</h3>
+
+<p>根据操作的特性，当某些操作出现状况时，管理者可以决策和处置所有操作。决策和处置的规则，是管理者的核心知识，比如体现为决策表格 -</p>
+
+<table>
+<thead>
+<tr>
+<th> 操作A状况 </th>
+<th> 操作B状况 </th>
+<th> 处置策略      </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 成功    </td>
+<td> 失败    </td>
+<td> 操作A撤销     </td>
+</tr>
+<tr>
+<td> 未知    </td>
+<td> （未尝试） </td>
+<td> 重试操作A     </td>
+</tr>
+<tr>
+<td> 成功    </td>
+<td> 未知    </td>
+<td> 回查操作B     </td>
+</tr>
+<tr>
+<td> 成功    </td>
+<td> 繁忙    </td>
+<td> 等待时间t后重试B </td>
+</tr>
+<tr>
+<td> 成功    </td>
+<td> 已排队   </td>
+<td> 等待时间t后回查B </td>
+</tr>
+<tr>
+<td> ……    </td>
+<td> ……    </td>
+<td> ……        </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>四</h3>
+
+<p>所有常见的实现模式（比如附图的原文所列举的），都是对上述要点的实现，从不同的方面做了特殊化。-</p>
+
+<ol>
+<li>Saga模式 - 比较一般的模型。但仍然有一些特殊要求。比如操作都有反操作。</li>
+<li>补偿模式 - 特殊而简化的模型，一般用于处理按顺序执行的系列操作，一旦某个操作失败，对已经成功的操作全部进行补偿。</li>
+<li>TCC模式 - 特殊模型，可以做到在事务过程中外界对操作不可见，也就是做到“隔离性”，但这个特性并不是由操作的管理者带来的，而是由操作的提供者带来的。通过将一个普通的业务操作分拆为相关联的两个，操作提供者实现了操作对外部的不可见。两个操作之间需要一个状态的维护。</li>
+<li>可靠事件模式 - 特殊模型，该模式重点不在管理，而在管理者调用操作的途径。这个途径的特点是底层机制决定了管理者可以假定操作总会成功（或者说就当它都成功了）。所以对过程的管理就可以比较简单了。管理者不再需要处理操作状况的可知、操作的重试、撤销等问题。</li>
+<li>两段、三段提交模式 - 不谈了。</li>
+</ol>
+
+
+<p>（<a href="/blog/2016/09/26/transaction2/">下一篇</a>，谈一谈实现模型）</p>
+
+<p><img src="/images/transaction/transaction.jpg" width="500"></p>
+
+<p>原文：<a href="http://www.open-open.com/lib/view/open1473404638516.html">分布式事务：不过是在一致性、吞吐量和复杂度之间，做一个选择</a></p>
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>强行音译为Yet Another，嗯，听起来还蛮像的。😂<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+<li id="fn:2">
+<p>貌似通篇也适合“不分布”式事务。<a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
+<li id="fn:3">
+<p>“状况”，我自己选择的词汇，区别于“结果”，比如1+1的操作，2（或者3）是“结果”，做完了或者没做完或者不愿意做是“状况”。<a href="#fnref:3" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+</feed>

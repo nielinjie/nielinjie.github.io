@@ -11,7 +11,11 @@ window.site={
       
         "过程",
       
+        "领域",
+      
         "领域驱动",
+      
+        "方法论",
       
     ],
     series:[
@@ -31,6 +35,8 @@ window.site={
       
         "思维",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -48,6 +54,22 @@ window.site={
         "过程",
       
         "思维",
+      
+        "方法论",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
+    url:"/blog/2017/11/29/discover/",
+    date:"2017-11-29T19:01:41+08:00",
+    title:"发现",
+    categories:[
+      
+        "架构",
       
     ],
     series:[
@@ -83,6 +105,8 @@ window.site={
       
         "微服务",
       
+        "领域",
+      
     ],
     series:[
       
@@ -98,6 +122,8 @@ window.site={
         "架构",
       
         "开发",
+      
+        "思维",
       
     ],
     series:[
@@ -131,10 +157,28 @@ window.site={
       
         "敏捷",
       
+        "方法论",
+      
     ],
     series:[
       
         "涌现中的架构 0",
+      
+    ]
+  },
+
+  {
+    url:"/blog/2017/01/31/suibian/",
+    date:"2017-01-31T23:58:19+08:00",
+    title:"随便微科幻",
+    categories:[
+      
+        "科幻",
+      
+    ],
+    series:[
+      
+        "随便微科幻 0",
       
     ]
   },
@@ -146,6 +190,10 @@ window.site={
     categories:[
       
         "架构",
+      
+        "思维",
+      
+        "方法论",
       
     ],
     series:[
@@ -160,6 +208,8 @@ window.site={
     categories:[
       
         "架构",
+      
+        "思维",
       
     ],
     series:[
@@ -179,6 +229,8 @@ window.site={
       
         "模式",
       
+        "分布式",
+      
     ],
     series:[
       
@@ -196,6 +248,8 @@ window.site={
         "架构",
       
         "设计",
+      
+        "分布式",
       
     ],
     series:[
@@ -215,6 +269,8 @@ window.site={
       
         "设计",
       
+        "分布式",
+      
     ],
     series:[
       
@@ -230,6 +286,10 @@ window.site={
     categories:[
       
         "架构",
+      
+        "设计",
+      
+        "分布式",
       
     ],
     series:[
@@ -265,6 +325,10 @@ window.site={
       
         "过程",
       
+        "思维",
+      
+        "方法论",
+      
     ],
     series:[
       
@@ -280,6 +344,8 @@ window.site={
         "架构",
       
         "过程",
+      
+        "方法论",
       
     ],
     series:[
@@ -312,6 +378,10 @@ window.site={
     categories:[
       
         "时事",
+      
+        "架构",
+      
+        "方法论",
       
     ],
     series:[
@@ -427,6 +497,8 @@ window.site={
       
         "架构",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -442,6 +514,8 @@ window.site={
         "质量",
       
         "过程",
+      
+        "方法论",
       
     ],
     series:[
@@ -557,6 +631,8 @@ window.site={
       
         "质量",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -655,6 +731,8 @@ window.site={
       
         "togaf",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -672,6 +750,8 @@ window.site={
         "架构",
       
         "togaf",
+      
+        "方法论",
       
     ],
     series:[
@@ -691,6 +771,8 @@ window.site={
       
         "过程",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -708,6 +790,8 @@ window.site={
         "架构",
       
         "过程",
+      
+        "方法论",
       
     ],
     series:[
@@ -741,6 +825,8 @@ window.site={
       
         "过程",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -759,6 +845,8 @@ window.site={
       
         "过程",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -772,6 +860,8 @@ window.site={
     categories:[
       
         "架构",
+      
+        "方法论",
       
     ],
     series:[
@@ -825,6 +915,8 @@ window.site={
       
         "过程",
       
+        "方法论",
+      
     ],
     series:[
       
@@ -854,6 +946,8 @@ window.site={
     categories:[
       
         "架构",
+      
+        "方法论",
       
     ],
     series:[
