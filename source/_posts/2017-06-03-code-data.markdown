@@ -3,7 +3,7 @@ layout: post
 title: "Linus的代码与数据结构"
 date: 2017-06-03 15:39:24 +0800
 comments: true
-categories: ["架构","开发"]
+categories: ["架构","开发","思维"]
 published: true
 ---
 

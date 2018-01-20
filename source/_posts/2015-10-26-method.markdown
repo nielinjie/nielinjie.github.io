@@ -3,7 +3,7 @@ layout: post
 title: "方法论"
 date: 2015-10-26 21:24:20 +0800
 comments: true
-categories: ["架构","过程"]
+categories: ["架构","过程","方法论"]
 keywords: "架构, 方法论"
 description: "方法论"
 

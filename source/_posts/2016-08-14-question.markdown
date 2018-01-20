@@ -4,7 +4,7 @@ title: "架构设计过程的驱动技术（三）"
 date: 2016-08-13 20:29:27 +0800
 comments: true
 published: true
-categories: ["架构","过程"]
+categories: ["架构","过程","方法论"]
 series: ["架构设计过程的驱动技术 3"]
 
 ---

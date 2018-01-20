@@ -3,7 +3,7 @@ layout: post
 title: "与复杂同行（一）"
 date: 2016-12-11 13:21:04 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构","思维"]
 series: ["与复杂同行 0"]
 published: true
 ---

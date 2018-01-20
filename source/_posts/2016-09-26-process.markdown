@@ -3,7 +3,7 @@ layout: post
 title: "分布式事务，也谈（番外）"
 date: 2016-10-07 14:29:52 +0800
 comments: true
-categories: ["架构","模式"]
+categories: ["架构","模式","分布式"]
 series: ["分布式事务，也谈 3"]
 published: true
 ---

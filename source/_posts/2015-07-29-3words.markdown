@@ -3,7 +3,7 @@ layout: post
 title: "架构工作中的三个关键词"
 date: 2015-07-29 10:21:30 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构","方法论"]
 
 ---
 

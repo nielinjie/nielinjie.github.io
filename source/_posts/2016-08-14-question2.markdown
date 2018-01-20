@@ -4,7 +4,7 @@ title: "问题空间与解空间"
 date: 2016-08-14 20:29:27 +0800
 comments: true
 published: true
-categories: ["架构","过程"]
+categories: ["架构","过程","思维","方法论"]
 ---
 
 
