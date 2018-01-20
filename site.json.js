@@ -64,20 +64,6 @@ window.site={
   },
 
   {
-    url:"/blog/2017/11/29/discover/",
-    date:"2017-11-29T19:01:41+08:00",
-    title:"发现",
-    categories:[
-      
-        "架构",
-      
-    ],
-    series:[
-      
-    ]
-  },
-
-  {
     url:"/blog/2017/06/25/emergence3/",
     date:"2017-06-25T12:56:59+08:00",
     title:"涌现中的架构（三）",

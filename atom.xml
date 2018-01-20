@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-20T18:15:42+08:00</updated>
+  <updated>2018-01-20T18:20:02+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -94,45 +94,6 @@
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2017/12/14/d-o/">Read on &rarr;</a>
         </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[发现]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2017/11/29/discover/"/>
-    <updated>2017-11-29T19:01:41+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2017/11/29/discover</id>
-    
-    <category term="/架构"/>
-    
-    <content type="html">
-      <![CDATA[<p>最近在做一个“架构Review”的事，指的是对他人开发/迭代的系统进行架构方面的检查，以期发现问题/风险（并应对之）。</p>
-
-<p>发现，是比较难工程化的一类事务，依赖个人的经验和灵感。尝试做一个结构化的分析 -</p>
-
-<p>发现就是：（从xx范围中）识别符合xx条件的元素或特征。</p>
-
-<ol>
-<li>之所以“从xx范围”在括号里，是因为很多时候这个范围不是显性的，需要我们先定义出来。</li>
-<li>“范围”常见的有两种 - 一种是元素的集合，其中的元素是可列的。另一种描述的是元素所在的空间。</li>
-<li>元素</li>
-</ol>
-
-
-<p>与之相似的一件事是“搜索”。相对于“发现”，搜索就比较机械，过程比较清楚。我们以搜索为基础来探讨发现的一般过程。</p>
-
-<p>我们尝试设计“发现”类事务的一般过程 -</p>
-
-<ol>
-<li>定义范围，如果没有给定的话。</li>
-<li>遍历范围</li>
-<li>对于范围中的每个点，识别其中的元素，判断是否符合条件。</li>
-</ol>
-
-
-      
       
       ]]>
     </content>
@@ -533,6 +494,32 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/05/28/avst/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[时事：干货]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2016/05/20/dry/"/>
+    <updated>2016-05-20T17:22:12+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2016/05/20/dry</id>
+    
+    <category term="/时事"/>
+    
+    <category term="/架构"/>
+    
+    <category term="/方法论"/>
+    
+    <content type="html">
+      <![CDATA[<p>最近流行“干货”一词，写博客办论坛的宣称“干货”，读文章找培训的寻求“干货”。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/05/20/dry/">Read on &rarr;</a>
         </p>
       
       ]]>
