@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-14T17:30:08+08:00</updated>
+  <updated>2018-01-20T17:48:48+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[DDD的D、D、D]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/01/20/d-d-d/"/>
+    <updated>2018-01-20T14:34:51+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/01/20/d-d-d</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
+    <category term="/领域驱动"/>
+    
+    <content type="html">
+      <![CDATA[<p>DDD就是领域驱动设计，这里想要分别谈一下DDD里面的三个D。兼谈一点我们实际的开发团队的DDD实践活动，我们的收获和教训。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2018/01/20/d-d-d/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[“驱动者”说]]></title>
@@ -456,32 +482,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/05/02/3h/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[重构，以知识结构为中心（四）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/"/>
-    <updated>2016-04-16T11:10:01+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/领域"/>
-    
-    <category term="/重构"/>
-    
-    <content type="html">
-      <![CDATA[<p>为了帮助领域团队凝聚和守护领域知识，我们设计和使用了一些工具。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/04/16/dev-dc4/">Read on &rarr;</a>
         </p>
       
       ]]>

@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2018/01/20/d-d-d/",
+    date:"2018-01-20T14:34:51+08:00",
+    title:"DDD的D、D、D",
+    categories:[
+      
+        "架构",
+      
+        "过程",
+      
+        "领域驱动",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2018/01/14/driver/",
     date:"2018-01-14T23:16:37+08:00",
     title:"“驱动者”说",

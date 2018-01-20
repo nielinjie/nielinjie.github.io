@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://www.nietongxue.xyz/blog/2018/01/20/d-d-d/</loc>
+<lastmod>2018-01-20T14:34:51+08:00</lastmod>
+</url>
+<url>
 <loc>http://www.nietongxue.xyz/blog/2018/01/14/driver/</loc>
 <lastmod>2018-01-14T23:16:37+08:00</lastmod>
 </url>
@@ -544,5 +548,8 @@
 </url>
 <url>
 <loc>http://www.nietongxue.xyz/blog/categories/si-wei/</loc>
+</url>
+<url>
+<loc>http://www.nietongxue.xyz/blog/categories/ling-yu-qu-dong/</loc>
 </url>
 </urlset>
