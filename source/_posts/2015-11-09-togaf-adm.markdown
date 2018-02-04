@@ -3,7 +3,7 @@ layout: post
 title: "读TOGAF（二）：ADM初瞥"
 date: 2015-11-17 00:05:18 +0800
 comments: true
-categories: ["架构","TOGAF"]
+categories: ["架构","TOGAF","方法论"]
 published: true
 series: ["读TOGAF 2"]
 keywords: "架构, TOGAF, ADM"

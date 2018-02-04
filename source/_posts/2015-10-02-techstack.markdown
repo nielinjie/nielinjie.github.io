@@ -3,7 +3,7 @@ layout: post
 title: "技术栈是架构设计的目的么？"
 date: 2015-10-02 22:46:38 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构","方法论"]
 
 ---
 

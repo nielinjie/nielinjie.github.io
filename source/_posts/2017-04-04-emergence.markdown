@@ -3,7 +3,7 @@ layout: post
 title: "涌现中的架构（一）"
 date: 2017-04-04 17:43:06 +0800
 comments: true
-categories: ["架构","敏捷"]
+categories: ["架构","敏捷","方法论"]
 series: ["涌现中的架构 0"]
 published: true
 ---

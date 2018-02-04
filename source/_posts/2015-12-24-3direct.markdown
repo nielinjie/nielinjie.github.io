@@ -3,7 +3,7 @@ layout: post
 title: "实现质量要求的三个考虑方向"
 date: 2015-12-24 13:25:20 +0800
 comments: true
-categories: ["架构","质量"]
+categories: ["架构","质量","方法论"]
 keywords: "质量,特征"
 description: "考虑质量特征的三个方向"
 

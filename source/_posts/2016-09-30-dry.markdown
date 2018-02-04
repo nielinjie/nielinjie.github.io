@@ -3,7 +3,7 @@ layout: post
 title: "时事：干货"
 date: 2016-05-20 17:22:12 +0800
 comments: true
-categories: ["时事"]
+categories: ["时事","架构","方法论"]
 published: true
 ---
 

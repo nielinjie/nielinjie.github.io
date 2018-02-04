@@ -3,7 +3,7 @@ layout: post
 title: "架构是一种管理手段"
 date: 2016-03-19 09:59:18 +0800
 comments: true
-categories: ["架构"]
+categories: ["架构","方法论"]
 published: true
 
 ---

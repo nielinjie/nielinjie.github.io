@@ -3,7 +3,7 @@ layout: post
 title: "“程序员需要工程思维”"
 date: 2016-03-13 19:46:06 +0800
 comments: true
-categories: ["质量","过程"]
+categories: ["质量","过程","方法论"]
 series: ["同学说 1"]
 published: true
 

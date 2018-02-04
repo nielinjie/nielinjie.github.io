@@ -3,7 +3,7 @@ layout: post
 title: "DDD的D、D、D"
 date: 2018-01-20 14:34:51 +0800
 comments: true
-categories: ["架构","过程","领域","领域驱动"]
+categories: ["架构","过程","领域","领域驱动","方法论"]
 published: true
 ---
 
