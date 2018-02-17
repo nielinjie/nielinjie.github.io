@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 架构 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/jia-gou/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-20T18:20:02+08:00</updated>
+  <updated>2018-02-17T13:09:10+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[蓝图与拼图]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/02/17/deep-wide/"/>
+    <updated>2018-02-17T11:23:47+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/02/17/deep-wide</id>
+    <content type="html"><![CDATA[<p>蓝图与拼图，是类比于分析和解决问题的两种过程模式。联系到前面的文章<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，可以说也是“驱动”的两种模式。</p>
+
+<!-- more -->
+
+
+<p>蓝图模式，指的是从整体出发，逐级分解问题，直至定义出足够具体的子问题，进而解决问题的模式。拼图模式，指的是不从整体分解，而从一个个显而易见的局部问题点出发，各个击破，每个先解决掉，进而自然解决整个问题的模式。</p>
+
+<p>用程序员熟悉的语言，可以大致地对应一下。蓝图模式，类似一种广度优先的过程；而拼图模式，类似于一种深度优先的过程。</p>
+
+<p>可以看到，在蓝图模式下，子问题之间的关系是很明确的，他们组合起来是不是问题的整体，解决以后可不可以解决问题的整体，这些是可以预见的。而在拼图模式下，子问题之间的关系是不明确的，即使解决掉所有识别到的子问题，仍然不能认为，问题的整体被解决了。</p>
+
+<p>蓝图模式可以说是一种理想的模式。高屋建瓴，步步为营，可控性强。</p>
+
+<p>但蓝图模式在实际使用中局限性很明显，很难被真正应用。</p>
+
+<ol>
+<li>蓝图模式依赖于对问题整体的深刻认识。很多时候这是做不到、来不及或者负担不起的。</li>
+<li>蓝图模式依赖于对问题的正确分解。并不是所有问题，都能容易地做到正确分解。特别是，这种分解的技能可能非常依赖于个人经验，难以工程化。</li>
+</ol>
+
+
+<p>实际工作中，我们常常综合应用两种模式。比如一种常见的过程是拼图-蓝图模式。当我们对问题整体认识不足，或者认为认识成本过高，我们就寻找局部的突破点，以拼图的模式来找到一个个的局部问题。找到局部问题以后，我们就可以借助蓝图模式 -</p>
+
+<ul>
+<li>一方面，局部问题的规模和复杂度相对较小，整体容易认识，这时候我们就可以画出“这块拼图的蓝图”，进而可控地完成这块拼图。</li>
+<li>另一方面，随着对各个拼图块的研究，可以帮助我们对整体问题的结构有进一步的认识。就好比说，我们在拼图之前是不知道整体画面的内容的，但拼出几块图之后 ，我们对整体画面就有了一些认识。这既可以帮助我们完成接下来的拼图，也可以帮助我们验证拼图是否已经最终完成。</li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>之前关于驱动的文章 - <a href="/blog/2017/12/14/d-o/">《“驱动”与“面向”》</a><a href="/blog/2018/01/14/driver/">《“驱动者”说》</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[领域驱动作为一种驱动技术]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/02/04/dd-as-d/"/>
+    <updated>2018-02-04T14:35:34+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/02/04/dd-as-d</id>
+    <content type="html"><![CDATA[<p>之前就“驱动”、“领域驱动”这些主题做了一些讨论，现在看看作为一种架构设计的驱动技术，“领域驱动”有何特点。</p>
+
+<!-- more -->
+
+
+<p>乍看之下，领域驱动类似于特征驱动。其实跟一般的特征驱动是不一样的。</p>
+
+<ol>
+<li>一般来说，特征驱动中所谈的特征，也可以说是“需求”。讲的是需要实现的系统的特征，而不是业务问题本身的特征，需求已经是产品同学（或业务分析同学）的设计结果，体现系统的边界和职责。它已经是对业务问题的部分应对了。</li>
+<li>领域驱动所做的，是对业务问题的直接建模与拆分。更多的讲的是业务本身的特征特点，没有涉及到系统，也没有涉及到的系统的边界与职责。</li>
+<li>特征包括功能、质量、约束。领域驱动几乎完全没涉及到质量、约束方面的特征。功能方面，如前所述，也不是直接对应。</li>
+</ol>
+
+
+<p>作为一种驱动技术，我们按照对驱动者的要求，来看一下</p>
+
+<ol>
+<li>​</li>
+</ol>
+
+
+<p>如上特点，决定了使用领域驱动时的一些注意事项</p>
+
+<ol>
+<li>​</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DDD的D、D、D]]></title>
@@ -136,64 +215,6 @@
 <p>类似的观点在之前的博文中已有谈及，但没有明确谈为什么用“驱动”这个词。——<a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%8A%80%E6%9C%AF&amp;filterDes=Series%3A%20%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%8A%80%E6%9C%AF">《架构设计过程的驱动技术》</a>、 <a href="/blog/2016/08/14/question2/">《问题空间与解空间》</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p><a href="/blog/2016/08/14/question2/">《问题空间与解空间》</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[涌现中的架构（三）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2017/06/25/emergence3/"/>
-    <updated>2017-06-25T12:56:59+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2017/06/25/emergence3</id>
-    <content type="html"><![CDATA[<p>之前有思考过研发团队发展的三个要素<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。</p>
-
-<p>在敏捷环境中，进一步思考了三个要素和它们之间的关系。<!-- more -->如下面的图所示。</p>
-
-<p>每两个元素之间有关系，每个关系上面有一个词。这个词说的不是关系本身。而说的是，要维持好和改善这个关系，需要思考的关键点。</p>
-
-<p><img src="http://www.nietongxue.xyz/images/emergence/3Factor.png" width="80%"/></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>见之前的博文：<a href="/blog/2016/05/02/3h/">团队发展的三要素</a>。这个博文的视角更多的还是在团队的内部。在全局、跨团队的视角上，三个要素有一些变化。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[微服务划分：按业务能力 vs 按子域]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2017/06/11/ms-split/"/>
-    <updated>2017-06-11T16:15:44+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2017/06/11/ms-split</id>
-    <content type="html"><![CDATA[<p>微服务的划分方法，常见的是两种，按业务能力和按子域<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。<!-- more--></p>
-
-<p>“子域”，就是DDD中的"子域"。</p>
-
-<p>“业务能力”，是一个专用名词，指的是一个连续的业务过程，其中不需要中断，也不需要别的业务过程的参与。这些业务过程自然组织起来，比如首尾相连，或者，由用户参与来自然连接。</p>
-
-<p>两种不同的服务划分风格，反映了对业务本身的不同的描述与划分的风格。</p>
-
-<p>比较形象地讲，按子域划分，就是把业务划成一块一块的。按业务能力划分，就是把业务划成一段一段的。一块一块的，描述业务概念和它们之间的关系。一段一段的，描述业务执行的步骤和过程。</p>
-
-<p>按业务能力划分的优势主要在运行时。各个服务的运行时依赖被尽量减少。在服务性能、可用性方面不会相互牵绊，可以做到最好。</p>
-
-<p>而按子域划分的优势主要在设计时和演进时。有利于应对业务的规模发展、复杂性增加和分别演进。</p>
-
-<p>这样看来，按业务能力划分的微服务是不是类似于一种事务脚本？只不过它的粒度更大，以服务为单元？</p>
-
-<p>是时候又贴出这张图，事务脚本的优势与劣势在图里体现得很明显，按业务能力划分的微服务，是否有同样的优势与劣势？</p>
-
-<p><img src="http://www.nietongxue.xyz/images/domain/domain.gif" width="80%"/></p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>有的观点，认为两种划分可以根据不同的情况进行选择。而有的观点，认为应该这样划分而不要那样划分。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

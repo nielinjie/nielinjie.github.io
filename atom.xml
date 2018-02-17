@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-20T18:20:02+08:00</updated>
+  <updated>2018-02-17T13:09:10+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,62 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[蓝图与拼图]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/02/17/deep-wide/"/>
+    <updated>2018-02-17T11:23:47+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/02/17/deep-wide</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/方法论"/>
+    
+    <category term="/思维"/>
+    
+    <content type="html">
+      <![CDATA[<p>蓝图与拼图，是类比于分析和解决问题的两种过程模式。联系到前面的文章<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，可以说也是“驱动”的两种模式。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2018/02/17/deep-wide/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[领域驱动作为一种驱动技术]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/02/04/dd-as-d/"/>
+    <updated>2018-02-04T14:35:34+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/02/04/dd-as-d</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/领域驱动"/>
+    
+    <category term="/方法论"/>
+    
+    <category term="/过程"/>
+    
+    <category term="/领域"/>
+    
+    <content type="html">
+      <![CDATA[<p>之前就“驱动”、“领域驱动”这些主题做了一些讨论，现在看看作为一种架构设计的驱动技术，“领域驱动”有何特点。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2018/02/04/dd-as-d/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DDD的D、D、D]]></title>
@@ -470,56 +526,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/08/13/question/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[FAQ：应用架构与技术架构]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/05/28/avst/"/>
-    <updated>2016-05-28T17:15:59+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/05/28/avst</id>
-    
-    <category term="/架构"/>
-    
-    <content type="html">
-      <![CDATA[<p><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>应用架构产出结构。技术架构产出技术。</p>
-
-<p>应用架构的职责是产出并维护一个合理健康的结构。而技术架构所产出技术，则被用作支持这个结构的手段。技术就是手段。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/05/28/avst/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[时事：干货]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/05/20/dry/"/>
-    <updated>2016-05-20T17:22:12+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/05/20/dry</id>
-    
-    <category term="/时事"/>
-    
-    <category term="/架构"/>
-    
-    <category term="/方法论"/>
-    
-    <content type="html">
-      <![CDATA[<p>最近流行“干货”一词，写博客办论坛的宣称“干货”，读文章找培训的寻求“干货”。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/05/20/dry/">Read on &rarr;</a>
         </p>
       
       ]]>

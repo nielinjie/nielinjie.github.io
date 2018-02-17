@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 方法论 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/fang-fa-lun/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-01-20T18:20:02+08:00</updated>
+  <updated>2018-02-17T13:09:10+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,85 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[蓝图与拼图]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/02/17/deep-wide/"/>
+    <updated>2018-02-17T11:23:47+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/02/17/deep-wide</id>
+    <content type="html"><![CDATA[<p>蓝图与拼图，是类比于分析和解决问题的两种过程模式。联系到前面的文章<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，可以说也是“驱动”的两种模式。</p>
+
+<!-- more -->
+
+
+<p>蓝图模式，指的是从整体出发，逐级分解问题，直至定义出足够具体的子问题，进而解决问题的模式。拼图模式，指的是不从整体分解，而从一个个显而易见的局部问题点出发，各个击破，每个先解决掉，进而自然解决整个问题的模式。</p>
+
+<p>用程序员熟悉的语言，可以大致地对应一下。蓝图模式，类似一种广度优先的过程；而拼图模式，类似于一种深度优先的过程。</p>
+
+<p>可以看到，在蓝图模式下，子问题之间的关系是很明确的，他们组合起来是不是问题的整体，解决以后可不可以解决问题的整体，这些是可以预见的。而在拼图模式下，子问题之间的关系是不明确的，即使解决掉所有识别到的子问题，仍然不能认为，问题的整体被解决了。</p>
+
+<p>蓝图模式可以说是一种理想的模式。高屋建瓴，步步为营，可控性强。</p>
+
+<p>但蓝图模式在实际使用中局限性很明显，很难被真正应用。</p>
+
+<ol>
+<li>蓝图模式依赖于对问题整体的深刻认识。很多时候这是做不到、来不及或者负担不起的。</li>
+<li>蓝图模式依赖于对问题的正确分解。并不是所有问题，都能容易地做到正确分解。特别是，这种分解的技能可能非常依赖于个人经验，难以工程化。</li>
+</ol>
+
+
+<p>实际工作中，我们常常综合应用两种模式。比如一种常见的过程是拼图-蓝图模式。当我们对问题整体认识不足，或者认为认识成本过高，我们就寻找局部的突破点，以拼图的模式来找到一个个的局部问题。找到局部问题以后，我们就可以借助蓝图模式 -</p>
+
+<ul>
+<li>一方面，局部问题的规模和复杂度相对较小，整体容易认识，这时候我们就可以画出“这块拼图的蓝图”，进而可控地完成这块拼图。</li>
+<li>另一方面，随着对各个拼图块的研究，可以帮助我们对整体问题的结构有进一步的认识。就好比说，我们在拼图之前是不知道整体画面的内容的，但拼出几块图之后 ，我们对整体画面就有了一些认识。这既可以帮助我们完成接下来的拼图，也可以帮助我们验证拼图是否已经最终完成。</li>
+</ul>
+
+<div class="footnotes">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>之前关于驱动的文章 - <a href="/blog/2017/12/14/d-o/">《“驱动”与“面向”》</a><a href="/blog/2018/01/14/driver/">《“驱动者”说》</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
+</ol>
+</div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[领域驱动作为一种驱动技术]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/02/04/dd-as-d/"/>
+    <updated>2018-02-04T14:35:34+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/02/04/dd-as-d</id>
+    <content type="html"><![CDATA[<p>之前就“驱动”、“领域驱动”这些主题做了一些讨论，现在看看作为一种架构设计的驱动技术，“领域驱动”有何特点。</p>
+
+<!-- more -->
+
+
+<p>乍看之下，领域驱动类似于特征驱动。其实跟一般的特征驱动是不一样的。</p>
+
+<ol>
+<li>一般来说，特征驱动中所谈的特征，也可以说是“需求”。讲的是需要实现的系统的特征，而不是业务问题本身的特征，需求已经是产品同学（或业务分析同学）的设计结果，体现系统的边界和职责。它已经是对业务问题的部分应对了。</li>
+<li>领域驱动所做的，是对业务问题的直接建模与拆分。更多的讲的是业务本身的特征特点，没有涉及到系统，也没有涉及到的系统的边界与职责。</li>
+<li>特征包括功能、质量、约束。领域驱动几乎完全没涉及到质量、约束方面的特征。功能方面，如前所述，也不是直接对应。</li>
+</ol>
+
+
+<p>作为一种驱动技术，我们按照对驱动者的要求，来看一下</p>
+
+<ol>
+<li>​</li>
+</ol>
+
+
+<p>如上特点，决定了使用领域驱动时的一些注意事项</p>
+
+<ol>
+<li>​</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[DDD的D、D、D]]></title>
@@ -139,74 +218,6 @@
 </ol>
 </div>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[涌现中的架构（一）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2017/04/04/emergence/"/>
-    <updated>2017-04-04T17:43:06+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2017/04/04/emergence</id>
-    <content type="html"><![CDATA[<p>之前对敏捷架构的思考和实践主要在敏捷团队内部<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>。这个系列主要探讨在公司级别的敏捷架构实践。</p>
-
-<!--more-->
-
-
-<p>在实行敏捷风格架构的场景中，各个团队将按照自己的实际情况和各自对架构的理解完成架构活动。</p>
-
-<p>作为全局架构师角色，不再进行提前的统一的架构设计。主要工作集中在对架构活动的辅导、服务和审核。</p>
-
-<p>工作主要在几个方面 -</p>
-
-<ol>
-<li><p>架构结果不能相互抵触。</p>
-
-<p>各团队产出各种组件，它们之间必须能够协作。各个团队的设计结果必须遵从协作协议。要么是既有的，要么是及时达成的。</p></li>
-<li><p>上层结构需要持续维护。</p>
-
-<p>跨团队的涌现架构需要一些上层结构的支持<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup>。团队设计的结果随时可能对高层结构产生影响，这时候需要判断这种影响是否是良性的。进而决策是鼓励还是遏制这种影响。</p></li>
-<li><p>架构活动需要保持某种一致。</p>
-
-<p>各个团队解决问题的方式需要某种程度的一致性，如果彼此相差太多，就会造成系统难以理解。对演进和传承都有不良的影响。但如果过于强调一致性，又有僵化的趋势，等于走回到计划型架构的老路。</p></li>
-<li><p>架构设计有时可能需要干预。</p>
-
-<p>敏捷和涌现的架构是我们的目标。但有些团队可能需要一些帮助才能做到。设计能力方面可能有待提高，认识理念方面可能需要统一。这些团队需要比较频密的干预和辅导。</p></li>
-</ol>
-
-
-<p>几个问题需要在实践中探索 -</p>
-
-<ol>
-<li><p>是否要规定架构设计的产出物？</p>
-
-<p>可能需要某种程度的统一产出物，以便全局架构师审核和其他团队参考。</p></li>
-<li><p>如何找到合适的沟通时间点？</p>
-
-<p>架构设计会在团队间产生相互影响，当团队的节奏不同时，如何找到对彼此影响较小的时间点？</p></li>
-<li><p>是否需要集中的架构研讨会议？</p>
-
-<p>团队间的架构沟通是否可以通过一个集中的会议来减少成本？</p></li>
-</ol>
-
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>之前总结的一个系列，时间比较久了。—— <a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1&amp;filterDes=Series%3A%20%E6%95%8F%E6%8D%B7%E7%9A%84%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1">Series: 敏捷的架构设计</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
-<li id="fn:2">
-<p>后续会讨论下这些个结构，其中一个比较明显的可能是：有界上下文。之前也有博文提到过这个结构的应用。—— <a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83&amp;filterDes=Series%3A%20%E9%87%8D%E6%9E%84%EF%BC%8C%E4%BB%A5%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84%E4%B8%BA%E4%B8%AD%E5%BF%83">Series: 重构，以知识结构为中心</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[技术的对面]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/12/23/tech/"/>
-    <updated>2016-12-23T09:13:54+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/12/23/tech</id>
-    <content type="html"><![CDATA[<p>“技术”的对面是“策略”，不是“应用”、“方法”，不是“思想”、“道”，也不是“艺术”或“诗歌”。</p>
 ]]></content>
   </entry>
   
