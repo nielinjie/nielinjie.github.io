@@ -173,12 +173,17 @@
 
 
         <footer>
+                <section style="display: flex;
+                justify-content: center;
+                align-items: center; margin-bottom:32px">
+                            <img class="zanshang" title="“来杯咖啡，激发更多思考。”" src="/images/me/zanshang.jpg" style="width:120px;height:120px"/>            
+                </section>
             <p class="meta">
                 
   
 
 <span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
-
+ 
                 
 
 
@@ -192,7 +197,10 @@
 
 
 
-<time datetime="2016-02-20T14:17:28+08:00"  data-updated="true">2016-02-20</time>
+
+                    
+                        <time datetime="2016-02-20T14:17:28+08:00"  data-updated="true">2016-02-20</time>
+                     
                 
 
 <span class="categories">
@@ -234,7 +242,7 @@
       })
     }).value()
     _(sers).each(function(s){
-      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      var p=$("<p/>").append($("<h3/>").text("系列连载 - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
       _(s).each(function(sOfP){
         p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
       })
@@ -243,37 +251,25 @@
 </script>
 
             </section>
+           
 
-            
+             
                 <section>
-<h2>Sharing</h2>
-
-
+<h4>分享 - </h4>
 <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 </section>
-
+ 
             
 
         </footer>
     </article>
 
-    
-    <section imagesd="comment">
-        <h2>Add a comment</h2>
-        <!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2131592"></script>
-<!-- UY END -->
-
-    </section>
-    
 
 </div>
 
 <aside class="sidebar">
-    
-    <section>
+     <section>
   <h1>About Me</h1>
   <a href="/resume/"><img id="photo" src="/images/me/photo.jpg"/></a>
 
@@ -408,10 +404,8 @@
 
     </ul>
 </section>
-
-    
+ 
 </aside>
-
 
     </div>
   </div>
