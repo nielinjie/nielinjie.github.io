@@ -1,16 +1,26 @@
----
-layout: default
-single: true
+--- 
+layout: default 
+single: true 
 ---
 
 <div>
     <article class="hentry" role="article">
         {% include article.html %}
         <footer>
+                <section style="display: flex;
+                justify-content: center;
+                align-items: center; margin-bottom:32px">
+                            <img class="zanshang" title="“来杯咖啡，激发更多思考。”" src="/images/me/zanshang.jpg" style="width:120px;height:120px"/>            
+                </section>
             <p class="meta">
-                {% include post/author.html %}
-                {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
-                {% include post/categories.html %}
+                {% include post/author.html %} 
+                {% include post/date.html %}
+                    {% if updated %}
+                        {{ updated }}
+                    {% else %}
+                        {{ time }}
+                    {% endif %} 
+                {%include post/categories.html %}
             </p>
 
 
@@ -18,9 +28,10 @@ single: true
             <section>
                 {% include post/series.html %}
             </section>
+           
 
-            {% unless page.sharing == false %}
-                {% include post/sharing.html %}
+            {% unless page.sharing == false %} 
+                {% include post/sharing.html %} 
             {% endunless %}
 
         </footer>
@@ -30,10 +41,6 @@ single: true
 </div>
 {% unless page.sidebar == false %}
 <aside class="sidebar">
-    {% if site.post_asides.size %}
-    {% include_array post_asides %}
-    {% else %}
-    {% include_array default_asides %}
-    {% endif %}
+    {% if site.post_asides.size %} {% include_array post_asides %} {% else %} {% include_array default_asides %} {% endif %}
 </aside>
 {% endunless %}

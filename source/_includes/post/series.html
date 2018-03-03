@@ -29,7 +29,7 @@
       })
     }).value()
     _(sers).each(function(s){
-      var p=$("<p/>").append($("<h2/>").text("Series - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      var p=$("<p/>").append($("<h3/>").text("系列连载 - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
       _(s).each(function(sOfP){
         p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
       })
