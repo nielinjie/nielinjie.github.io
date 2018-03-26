@@ -4,6 +4,7 @@ title: "“驱动”与“面向”"
 date: 2017-12-14 22:45:56 +0800
 comments: true
 categories: ["架构","过程","思维","方法论"]
+series: ["领域驱动设计 1"]
 published: true
 ---
 

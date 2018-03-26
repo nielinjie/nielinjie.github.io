@@ -4,6 +4,7 @@ title: "“驱动者”说"
 date: 2018-01-14 23:16:37 +0800
 comments: true
 categories: ["架构","过程","思维","方法论"]
+series: ["领域驱动设计 2"]
 published: true
 ---
 

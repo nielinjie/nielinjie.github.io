@@ -4,6 +4,7 @@ title: "领域驱动作为一种驱动技术"
 date: 2018-02-04 14:35:34 +0800
 comments: true
 categories: ["架构","领域驱动","方法论","过程","领域"]
+series: ["领域驱动设计 4"]
 published: true
 ---
 
