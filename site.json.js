@@ -38,6 +38,8 @@ window.site={
     ],
     series:[
       
+        "领域驱动设计 4",
+      
     ]
   },
 
@@ -60,6 +62,8 @@ window.site={
     ],
     series:[
       
+        "领域驱动设计 3",
+      
     ]
   },
 
@@ -80,6 +84,8 @@ window.site={
     ],
     series:[
       
+        "领域驱动设计 2",
+      
     ]
   },
 
@@ -99,6 +105,8 @@ window.site={
       
     ],
     series:[
+      
+        "领域驱动设计 1",
       
     ]
   },
