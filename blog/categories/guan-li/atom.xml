@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 管理 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/guan-li/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-09-08T15:31:48+08:00</updated>
+  <updated>2018-09-22T15:51:37+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[架构工作的一个组织模式]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/09/09/work-dimension/"/>
+    <updated>2018-09-09T14:37:13+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/09/09/work-dimension</id>
+    <content type="html"><![CDATA[<p>聊一下架构工作在团队中的组织模式。主要是各个架构角色的分工和协作模式。</p>
+
+<!-- more-->
+
+
+<p>这个组织模式的指导思想是“涌现的架构”，目标有几个 -</p>
+
+<ol>
+<li>架构工作能够系统地持续地运行，无死角地关注到整个开发过程。</li>
+<li>加强架构工作的工程程度，降低对架构师个人能力和经验的依赖。</li>
+<li>既要满足在空间、时间上的架构一致性基本要求，同时又要防止僵硬的固化流程，支持各团队按各自业务节奏敏捷向前。</li>
+</ol>
+
+
+<p>具体描述体现在下面的图里，可以单独打开放大阅读。</p>
+
+<p><img src="http://www.nietongxue.xyz/images/work/work.png" width="80%"/></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[时事：996]]></title>

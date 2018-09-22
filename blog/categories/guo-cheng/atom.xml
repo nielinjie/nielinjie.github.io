@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 过程 | 聂同学]]></title>
   <link href="http://www.nietongxue.xyz/blog/categories/guo-cheng/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-09-08T15:31:48+08:00</updated>
+  <updated>2018-09-22T15:51:37+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[架构工作的一个组织模式]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/09/09/work-dimension/"/>
+    <updated>2018-09-09T14:37:13+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/09/09/work-dimension</id>
+    <content type="html"><![CDATA[<p>聊一下架构工作在团队中的组织模式。主要是各个架构角色的分工和协作模式。</p>
+
+<!-- more-->
+
+
+<p>这个组织模式的指导思想是“涌现的架构”，目标有几个 -</p>
+
+<ol>
+<li>架构工作能够系统地持续地运行，无死角地关注到整个开发过程。</li>
+<li>加强架构工作的工程程度，降低对架构师个人能力和经验的依赖。</li>
+<li>既要满足在空间、时间上的架构一致性基本要求，同时又要防止僵硬的固化流程，支持各团队按各自业务节奏敏捷向前。</li>
+</ol>
+
+
+<p>具体描述体现在下面的图里，可以单独打开放大阅读。</p>
+
+<p><img src="http://www.nietongxue.xyz/images/work/work.png" width="80%"/></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[领域驱动作为一种驱动技术]]></title>
@@ -185,34 +210,6 @@
 <p>类似的观点在之前的博文中已有谈及，但没有明确谈为什么用“驱动”这个词。——<a href="/blog/filter/filter.html?filterName=series&amp;filterValue=%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%8A%80%E6%9C%AF&amp;filterDes=Series%3A%20%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E8%BF%87%E7%A8%8B%E7%9A%84%E9%A9%B1%E5%8A%A8%E6%8A%80%E6%9C%AF">《架构设计过程的驱动技术》</a>、 <a href="/blog/2016/08/14/question2/">《问题空间与解空间》</a><a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 <li id="fn:2">
 <p><a href="/blog/2016/08/14/question2/">《问题空间与解空间》</a><a href="#fnref:2" rev="footnote">&#8617;</a></p></li>
-</ol>
-</div>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[问题空间与解空间]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/08/14/question2/"/>
-    <updated>2016-08-14T20:29:27+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/08/14/question2</id>
-    <content type="html"><![CDATA[<p>问题空间与解空间<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，体现了思考的一般过程，所以在很多方法论中有所表现。</p>
-
-<!--more-->
-
-
-<p>“设计思维”讲到4D过程，Discovery、Define、Design、Delivery。 其中Discovery、Define就是在研究和结构化问题空间，而Design、Delivery则分别是解决问题和归纳整合，属于解空间。</p>
-
-<p>领域驱动设计方法中，子域与上下文是两个看来近似的概念。其实子域在问题空间，是对领域这个大问题的分解，而上下文在解空间，是对子域的解决。研究上下文的关系，则是在归纳整合，使这些解决能互相融洽，共同解决领域这个大问题。</p>
-
-<p>有一类问题，难点和重点在于分析和分解问题，解决问题倒是比较容易。针对这类问题的方法，自然是强调研究问题空间。</p>
-
-<p>威胁建模方法，是一个很好的例子。数据流图，信任空间，STRIDE模型，都是研究问题空间的方法。找到了可能的威胁之后，还要对威胁进行评估排序，这些都是在问题空间。到最后才谈到解空间，也就是如何解决威胁。</p>
-<div class="footnotes">
-<hr/>
-<ol>
-<li id="fn:1">
-<p>在<a href="/blog/2016/08/13/question/">前一篇</a>中首先提及。<a href="#fnref:1" rev="footnote">&#8617;</a></p></li>
 </ol>
 </div>
 

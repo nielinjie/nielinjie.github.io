@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-09-08T15:31:48+08:00</updated>
+  <updated>2018-09-22T15:51:37+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[架构工作的一个组织模式]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2018/09/09/work-dimension/"/>
+    <updated>2018-09-09T14:37:13+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2018/09/09/work-dimension</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
+    <category term="/管理"/>
+    
+    <content type="html">
+      <![CDATA[<p>聊一下架构工作在团队中的组织模式。主要是各个架构角色的分工和协作模式。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2018/09/09/work-dimension/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[蓝图与拼图]]></title>
@@ -499,33 +525,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/08/14/question2/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[架构设计过程的驱动技术（三）]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/08/13/question/"/>
-    <updated>2016-08-13T20:29:27+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/08/13/question</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/过程"/>
-    
-    <category term="/方法论"/>
-    
-    <content type="html">
-      <![CDATA[<p>特征驱动和风险驱动，看来是相对完备的驱动技术；模式驱动，则不是那么完备。
-这两类驱动技术的区别究竟从何而来呢？</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/08/13/question/">Read on &rarr;</a>
         </p>
       
       ]]>

@@ -2,6 +2,24 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2018/09/09/work-dimension/",
+    date:"2018-09-09T14:37:13+08:00",
+    title:"架构工作的一个组织模式",
+    categories:[
+      
+        "架构",
+      
+        "过程",
+      
+        "管理",
+      
+    ],
+    series:[
+      
+    ]
+  },
+
+  {
     url:"/blog/2018/02/17/deep-wide/",
     date:"2018-02-17T11:23:47+08:00",
     title:"蓝图与拼图",
