@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
-  gem 'rake', '~> 10.0'
+  gem 'rake'
   gem 'jekyll', '~> 2.0'
   gem 'octopress-hooks', '~> 2.2'
   gem 'octopress-date-format', '~> 2.0'
@@ -19,4 +19,4 @@ end
 
 gem 'sinatra', '~> 1.4.2'
 gem 'metaweblog', '~> 0.2.0'
-gem 'nokogiri', '~> 1.5.9'
+gem 'nokogiri'

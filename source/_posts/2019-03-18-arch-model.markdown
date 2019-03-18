@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "架构工作的一个组织模式"
-date: 2018-09-09 14:37:13 +0800
+title: "架构的持续演进机制"
+date: 2019-03-18 14:37:13 +0800
 comments: true
 categories: ["架构","过程","管理"]
 published: true
 ---
 
-聊一下架构工作在团队中的组织模式。主要是各个架构角色的分工和协作模式。
+架构的持续演进，是系统和团队成长和成功的关键。将有一个系列来分享一些想法。上一篇，讲了持续演进架构的组织模式，这一部分，讲讲总体机制设计。
 
 <!-- more-->
 
@@ -19,5 +19,5 @@ published: true
 
 具体描述体现在下面的图里，可以单独打开放大阅读。
 
-<img src="/images/work/work.png" width="80%"/>
+<img src="/images/arch/do-model.png" width="80%"/>
 
