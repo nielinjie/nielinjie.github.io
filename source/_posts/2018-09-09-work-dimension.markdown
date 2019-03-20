@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "架构工作的一个组织模式"
+title: "架构的持续演进——一个组织模式"
 date: 2018-09-09 14:37:13 +0800
 comments: true
 categories: ["架构","过程","管理"]
+series: ["架构的持续演进 1"]
 published: true
 ---
 
