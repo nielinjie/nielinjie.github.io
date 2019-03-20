@@ -4,7 +4,7 @@
   <title><![CDATA[聂同学]]></title>
   <link href="http://www.nietongxue.xyz/atom.xml" rel="self"/>
   <link href="http://www.nietongxue.xyz/"/>
-  <updated>2018-09-22T15:51:37+08:00</updated>
+  <updated>2019-03-20T11:49:59+08:00</updated>
   <id>http://www.nietongxue.xyz/</id>
   <author>
     <name><![CDATA[nielinjie]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[架构的持续演进——总体机制]]></title>
+    <link href="http://www.nietongxue.xyz/blog/2019/03/18/arch-model/"/>
+    <updated>2019-03-18T14:37:13+08:00</updated>
+    <id>http://www.nietongxue.xyz/blog/2019/03/18/arch-model</id>
+    
+    <category term="/架构"/>
+    
+    <category term="/过程"/>
+    
+    <category term="/管理"/>
+    
+    <content type="html">
+      <![CDATA[<p>架构的持续演进，是系统和团队成长和成功的关键。将有几篇文章来分享一些想法。上一篇（<a href="http://www.nietongxue.xyz/blog/2018/09/09/work-dimension/">链接</a>），讲了持续演进架构的组织模式，这一部分，讲讲总体机制设计。</p>
+
+
+      
+      
+        <p>
+          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2019/03/18/arch-model/">Read on &rarr;</a>
+        </p>
+      
+      ]]>
+    </content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[架构工作的一个组织模式]]></title>
@@ -497,34 +523,6 @@
       
         <p>
           <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/09/07/996/">Read on &rarr;</a>
-        </p>
-      
-      ]]>
-    </content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[问题空间与解空间]]></title>
-    <link href="http://www.nietongxue.xyz/blog/2016/08/14/question2/"/>
-    <updated>2016-08-14T20:29:27+08:00</updated>
-    <id>http://www.nietongxue.xyz/blog/2016/08/14/question2</id>
-    
-    <category term="/架构"/>
-    
-    <category term="/过程"/>
-    
-    <category term="/思维"/>
-    
-    <category term="/方法论"/>
-    
-    <content type="html">
-      <![CDATA[<p>问题空间与解空间<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup>，体现了思考的一般过程，所以在很多方法论中有所表现。</p>
-
-
-      
-      
-        <p>
-          <a rel="full-article" href="http://www.nietongxue.xyz/blog/2016/08/14/question2/">Read on &rarr;</a>
         </p>
       
       ]]>

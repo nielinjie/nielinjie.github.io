@@ -2,6 +2,26 @@ window.site={
   posts:[
 
   {
+    url:"/blog/2019/03/18/arch-model/",
+    date:"2019-03-18T14:37:13+08:00",
+    title:"架构的持续演进——总体机制",
+    categories:[
+      
+        "架构",
+      
+        "过程",
+      
+        "管理",
+      
+    ],
+    series:[
+      
+        "架构的持续演进 2",
+      
+    ]
+  },
+
+  {
     url:"/blog/2018/09/09/work-dimension/",
     date:"2018-09-09T14:37:13+08:00",
     title:"架构工作的一个组织模式",
@@ -15,6 +35,8 @@ window.site={
       
     ],
     series:[
+      
+        "架构的持续演进 1",
       
     ]
   },

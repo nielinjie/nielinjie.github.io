@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>架构的持续演进——总体机制 - 聂同学</title>
+  <meta name="author" content="nielinjie">
+  
+  <meta name="description" content="聂同学，一个程序员和架构师的实践与思考">
+  <meta name="keywords" content="聂同学, 架构师, 架构, 开发, 敏捷, 实践, 思考, 程序员">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.nietongxue.xyz/blog/2019/03/18/arch-model">
+  <!-- <link href="/favicon.png" rel="icon"> -->
+
+
+
+
+  <!-- ****** faviconit.com favicons ****** -->
+  	<link rel="shortcut icon" href="/favicon/favicon.ico">
+  	<link rel="icon" sizes="16x16 32x32 64x64" href="/favicon/favicon.ico">
+  	<link rel="icon" type="image/png" sizes="196x196" href="/favicon/favicon-192.png">
+  	<link rel="icon" type="image/png" sizes="160x160" href="/favicon/favicon-160.png">
+  	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96.png">
+  	<link rel="icon" type="image/png" sizes="64x64" href="/favicon/favicon-64.png">
+  	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+  	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16.png">
+  	<link rel="apple-touch-icon" href="/favicon/favicon-57.png">
+  	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/favicon-114.png">
+  	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/favicon-72.png">
+  	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/favicon-144.png">
+  	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/favicon-60.png">
+  	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/favicon-120.png">
+  	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/favicon-76.png">
+  	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/favicon-152.png">
+  	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon-180.png">
+  	<meta name="msapplication-TileColor" content="#FFFFFF">
+  	<meta name="msapplication-TileImage" content="/favicon/favicon-144.png">
+  	<meta name="msapplication-config" content="/browserconfig.xml">
+  	<!-- ****** faviconit.com favicons ****** -->
+
+
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="聂同学" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/libs/jquery.min.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+
+
+
+<script src="/javascripts/libs/d3.min.js" charset="utf-8"></script>
+<script src="/javascripts/d3.tip.v0.6.3.js" charset="utf-8"></script>
+
+<script src="/javascripts/underscore-min.js" charset="utf-8"></script>
+<script src="/javascripts/queryString.js" charset="utf-8"></script>
+<script src="/site.json.js" charset="utf-8"></script>
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">聂同学</a></h1>
+  
+    <h2>一个程序员和架构师的实践与思考</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+    <article class="hentry" role="article">
+        
+  <header>
+    
+      <h1 class="entry-title">架构的持续演进——总体机制</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+
+<time datetime="2019-03-18T14:37:13+08:00"  data-updated="true">2019-03-18</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>架构的持续演进，是系统和团队成长和成功的关键。将有几篇文章来分享一些想法。上一篇（<a href="/blog/2018/09/09/work-dimension/">链接</a>），讲了持续演进架构的组织模式，这一部分，讲讲总体机制设计。</p>
+
+<!-- more-->
+
+
+<p>要点都体现在最下面的图里（分辨率足够，打开地址可以放大）。以下文字是对图的一些说明。</p>
+
+<h3>两个维度</h3>
+
+<p>两个维度将整个涉及到领域划分为了四个象限。纵向方面，有执行层和治理层两个层面。横向方面，有设计时和运行时的划分。各个象限的负责人和侧重点不同，跨越象限的信息交流可能有相对高的成本。</p>
+
+<h3>五个箭头</h3>
+
+<p>箭头表示的是信息的流向，同时也是影响力的流向。图上箭头标注了序号，与下面的序号对应。</p>
+
+<ol>
+<li>架构决策的执行，手段上可以是直接下发设计的详细结果。但在”涌现架构“风格下，更多可能是制定设计守则、确立重构行动项等更有空间的方式。</li>
+<li>架构执行的结果在设计时的反馈，可能通过架构治理者的主动review、工具的扫描等手段，对详细设计和系统结构（此时多体现为代码结构）进行观察评价。</li>
+<li>通过一些运行时工具和技术组件，采集系统在运行时的特征，包括结构特征和质量指标。比如通过apm工具和log分析工具采集系统容量、性能指标。通过服务发现平台、配置管理平台采集系统间的动态依赖关系等等。</li>
+<li>运行时观察到的系统特征，对它的评价和应对，成为架构决策的重要依据。3、4两个箭头，共同组成了架构执行的结果在运行时的反馈。</li>
+<li>双向箭头，是具体的架构决策与架构原则架构规划之间的作用。架构决策由架构原则和规划指导，但架构决策的过程中也会将现场诉求反馈到架构原则和规划中，推动原则和规划演进和修正。</li>
+</ol>
+
+
+<h3>三个循环</h3>
+
+<p>上述的五个箭头形成了三个循环。循环是这个机制的要点，只有形成循环，机制才是一个持续运行的机制，才能达到驱动架构持续演进的目的。</p>
+
+<ol>
+<li>最大的和最重要的循环，由箭头1、3、4组成，覆盖了整个领域四个象限。体现了系统最终运行时的特征对架构演进的首要驱动作用。</li>
+<li>第二个循环，横跨在右边的上下两个象限，由箭头1、2组成。体现了设计时在治理层和执行层的互相影响。</li>
+<li>第三个循环，在右下象限，由箭头5完成。体现在治理层内部，架构高层设计也是一个持续演进的过程。</li>
+</ol>
+
+
+<h3>两个角色</h3>
+
+<p>执行层，主要是开发或称现场架构角色来负责。治理层，则是由全局架构角色负责。这里的全局与现场，是相对概念，全局是相对全局，并不是说就一定是整个公司整个系统群。另外，在比较小的团队，两个角色是一个职位也是很有可能的。</p>
+
+<p>（现场架构角色的定义见<a href="/blog/2018/09/09/work-dimension/">前一篇文章</a>。）</p>
+
+<h3>另外</h3>
+
+<p>整个开发过程中，有些活动与图中的活动是有交集的，比如运维/开发同样对运行时指标有密切互动。但这类活动与架构演进的主题关系较弱，图中没有体现。</p>
+
+<p><img src="/images/arch/do-model.png" width="80%"/></p>
+</div>
+
+
+        <footer>
+                <section style="display: flex;
+                justify-content: center;
+                align-items: center; margin-bottom:32px">
+                            <img class="zanshang" title="“来杯咖啡，激发更多思考。”" src="/images/me/zanshang.jpg" style="width:120px;height:120px"/>            
+                </section>
+            <p class="meta">
+                
+  
+
+<span class="byline author vcard">Posted by <span class="fn">nielinjie</span></span>
+ 
+                
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                    
+                        <time datetime="2019-03-18T14:37:13+08:00"  data-updated="true">2019-03-18</time>
+                     
+                
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/jia-gou/'>架构</a>, <a class='category' href='/blog/categories/guan-li/'>管理</a>, <a class='category' href='/blog/categories/guo-cheng/'>过程</a>
+  
+</span>
+
+
+            </p>
+
+
+            <p/>
+            <section>
+                
+  
+
+
+<div class="post-series" data-series="架构的持续演进 2,"></div>
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+    var ss=series()
+    var sers=$("div.post-series").attr("data-series")
+    sers = sers?sers.split(","):[]
+    sers=_(sers).chain().filter(function(s){return s!=""}).map(function(s){
+      var name=s.split(" ")[0]
+      var index=s.split(" ")[1]
+      return ss.filter(function(ser){
+        return ser.name==name
+      })
+    }).value()
+    _(sers).each(function(s){
+      var p=$("<p/>").append($("<h3/>").text("系列连载 - "+s[0].name)).append("<ul/>").appendTo($("div.post-series"))
+      _(s).each(function(sOfP){
+        p.find("ul").append($("<li/>").append($("<a/>").attr("href",sOfP.post.url).text(sOfP.post.title)))
+      })
+    })
+  })()
+</script>
+
+            </section>
+           
+
+             
+                <section>
+<h4>分享 - </h4>
+<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a><a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a><a href="#" class="bds_mail" data-cmd="mail" title="分享到邮件分享"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a><a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a><a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</section>
+ 
+            
+
+        </footer>
+    </article>
+
+
+</div>
+
+<aside class="sidebar">
+     <section>
+  <h1>About Me</h1>
+  <a href="/resume/"><img id="photo" src="/images/me/photo.jpg"/></a>
+
+    <ul>
+            <li><a href="/resume/">总架构师</a> @
+                <a href="/resume/">驹马科技</a>
+            </li>
+        <li><a href="/resume/">应用架构负责人</a> @
+            <a href="http://www.keruyun.com" target="_blank">客如云</a>
+        </li>
+      <li><a href="/resume/">应用架构专家</a> @
+          <a href="http://baike.baidu.com/view/14415363.htm" target="_blank">平安科技</a>
+      </li>
+      <li><a href="/resume/">Solution Architect</a> @
+          <a href="http://baike.baidu.com/view/4420120.htm" target="_blank">花旗软件</a>
+      </li>
+      <li><a href="mailto:nielinjie@outlook.com">nielinjie@outlook.com</a></li>
+      <li>
+        <div class="qcode">
+        <img src="/images/me/nietongxue.png" style="width:60px">
+        <div class="label">个人网站</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/weixin.jpg" style="width:60px">
+        <div class="label">微信</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/weibo.png" style="width:60px">
+        <div class="label">微博</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/linkedin.PNG" style="width:60px">
+        <div class="label">LinkedIn</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/chitu.PNG" style="width:60px">
+        <div class="label">赤兔</div>
+        </div>
+        <div class="qcode">
+        <img src="/images/me/maimai.jpg" style="width:60px">
+        <div class="label">脉脉</div>
+        </div>
+
+      </li>
+    </ul>
+</section>
+
+  <link href="/stylesheets/cal-heatmap.css" rel="stylesheet" type="text/css"/>
+
+<script src="/javascripts/libs/cal-heatmap.min.js"></script>
+<style>
+  #cal-pre {
+      cursor:pointer;
+      font-size:1.5em;
+  }
+  #cal-next {
+      cursor:pointer;
+      font-size:1.5em;
+
+  }
+</style>
+<section class="calendar-section">
+  <h1>Calendar</h1>
+<div id="cal-heatmap"></div>
+<span id="cal-pre">←</span><span id="cal-next">→</span><br/>
+
+</section>
+
+<script type="text/javascript">
+(function(){
+  function timestamp(date){
+    return new Date(date).getTime()/1000
+  }
+  function datas(){
+    return _(window.site.posts).chain().countBy(function(p){
+      return timestamp(p.date)
+    }).value()
+  }
+
+  var calendar = new CalHeatMap();
+    calendar.init({
+        data: datas(),
+        //start: new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        start:new Date(new Date().getFullYear(),new Date().getMonth()-3),
+        domain: "month",
+        displayLegend: false,
+        subDomain: "day",
+        range: 4,
+        nextSelector: "#cal-next",
+        previousSelector: "#cal-pre",
+        legend: [1, 2,3,4,5],
+        onClick:function(date,nb){
+          var url="/blog/filter/filter.html"
+          window.location.href=buildUrl(url,{filterName:"week",filterValue:date,filterDes:"Calendar: Week from "+date.toLocaleDateString()})
+        }
+    });
+})()
+
+</script>
+<section class="series">
+  <h1>Series</h1>
+  <ul class="series"></ul>
+</section>
+
+<script type="text/javascript" charset="utf-8">
+  (function(){
+    function series(){
+      var posts=window.site.posts
+      return _(posts).chain().map(function(p){
+        return _(p.series).map(function(s){
+          var parts=s.split(" ")
+          return {name:parts[0],index:parts[1],post:p}
+        })
+      }).flatten().value()
+    }
+
+    var sers=_(series()).chain().groupBy("name").value()
+    _(sers).each(function(v,k){
+      var url="/blog/filter/filter.html"
+      var u = buildUrl(url,{filterName:"series",filterValue:k,filterDes:"Series: "+k})
+      $("ul.series").append($("<li/>").append($("<a/>").attr("href",u).text(k+" ("+v.length+")")))
+    })
+  })()
+</script>
+<section>
+  <h1>Categories</h1>
+    <ul id="category-list"><li><a href='/blog/categories/jia-gou'>架构 (98)</a></li><li><a href='/blog/categories/guo-cheng'>过程 (23)</a></li><li><a href='/blog/categories/fang-fa-lun'>方法论 (22)</a></li><li><a href='/blog/categories/kai-fa'>开发 (13)</a></li><li><a href='/blog/categories/min-jie'>敏捷 (10)</a></li><li><a href='/blog/categories/zhi-liang'>质量 (10)</a></li><li><a href='/blog/categories/ling-yu'>领域 (9)</a></li><li><a href='/blog/categories/she-ji'>设计 (9)</a></li><li><a href='/blog/categories/si-wei'>思维 (7)</a></li><li><a href='/blog/categories/wei-fu-wu'>微服务 (7)</a></li><li><a href='/blog/categories/fan-yi'>翻译 (6)</a></li><li><a href='/blog/categories/zhong-gou'>重构 (6)</a></li><li><a href='/blog/categories/yun'>云 (6)</a></li><li><a href='/blog/categories/dsl'>dsl (5)</a></li><li><a href='/blog/categories/chan-pin'>产品 (5)</a></li><li><a href='/blog/categories/guan-li'>管理 (4)</a></li><li><a href='/blog/categories/ge-ren'>个人 (4)</a></li><li><a href='/blog/categories/fen-bu-shi'>分布式 (4)</a></li><li><a href='/blog/categories/scala'>scala (3)</a></li><li><a href='/blog/categories/rest'>rest (3)</a></li><li><a href='/blog/categories/android'>android (3)</a></li><li><a href='/blog/categories/gong-ju'>工具 (2)</a></li><li><a href='/blog/categories/mo-shi'>模式 (2)</a></li><li><a href='/blog/categories/shi-shi'>时事 (2)</a></li><li><a href='/blog/categories/togaf'>togaf (2)</a></li><li><a href='/blog/categories/octopress'>octopress (2)</a></li><li><a href='/blog/categories/ling-yu-qu-dong'>领域驱动 (2)</a></li><li><a href='/blog/categories/can-kao'>参考 (1)</a></li><li><a href='/blog/categories/ke-huan'>科幻 (1)</a></li></ul>
+</section>
+<section>
+  <h1>Links</h1>
+
+    <ul>
+        <!-- <li><a href="http://www.gengyuan.xyz">耕远工作室</a>
+        </li> -->
+
+    </ul>
+</section>
+ 
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo">
+<p>
+  Copyright &copy; 2019 - nielinjie -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+<p>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></p>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F1275367e1683bb7323263bc0c06163a0' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">(function(){document.write(unescape('%3Cdiv id="bdcs"%3E%3C/div%3E'));var bdcs = document.createElement('script');bdcs.type = 'text/javascript';bdcs.async = true;bdcs.src = 'http://znsv.baidu.com/customer_search/api/js?sid=320040675796358319' + '&plate_url=' + encodeURIComponent(window.location.href) + '&t=' + Math.ceil(new Date()/3600000);var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bdcs, s);})();</script>
+
+</footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
