@@ -24,7 +24,7 @@ window.site={
   {
     url:"/blog/2018/09/09/work-dimension/",
     date:"2018-09-09T14:37:13+08:00",
-    title:"架构工作的一个组织模式",
+    title:"架构的持续演进——一个组织模式",
     categories:[
       
         "架构",
